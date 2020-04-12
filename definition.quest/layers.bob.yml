@@ -1,0 +1,152 @@
+#-- Radish Quest UI (auto-log) - W2LAYER DUMP -------------------------------------------------
+layers: 
+  after_hag: 
+    world: "bob"
+    #context: ""
+    areas: 
+      bloodarea1: 
+        height: 5.0
+        borderpoints: 
+          - [ 34.4591560364, -2131.0898437500, 125.0499343872 ]
+          - [ 34.6382102966, -2135.8666992188, 125.0499343872 ]
+          - [ 40.9169464111, -2136.3374023438, 125.0499343872 ]
+          - [ 40.8246765137, -2131.1875000000, 125.0499343872 ]
+
+      bloodarea2: 
+        height: 5.0
+        borderpoints: 
+          - [ 37.1793823242, -2122.5056152344, 125.8107528687 ]
+          - [ 37.1793823242, -2129.3337402344, 125.8107528687 ]
+          - [ 44.0078125000, -2129.3337402344, 125.8107528687 ]
+          - [ 44.0078125000, -2122.5056152344, 125.8107528687 ]
+          
+    mappins: 
+      bloodpin1: 
+        #radius for quest instructions: 4
+        pos: [ 36.2515602112, -2133.3125000000, 126.2425689697 ]
+
+      bloodpin2: 
+        #radius for quest instructions: 4
+        pos: [ 40.9638442993, -2127.8557128906, 127.2539672852 ]
+
+      bloodpin3: 
+        #radius for quest instructions: 5
+        pos: [ 39.6486206055, -2116.3056640625, 128.2978515625 ]
+        
+      behind_wall_pin: 
+        #radius for quest instructions: 22
+        pos: [ 19.3040275574, -2102.5336914063, 125.8534545898 ]
+
+      triss_pin: [ 12.3872871399, -2086.8605957031, 125.6447143555 ]
+
+    interactiveentities: 
+      blood1: 
+        template: "W3MonsterClue:quests\\prologue\\quest_files\\living_world\\entities\\clues\\blood\\lw_clue_blood_splat_big.w2ent"
+        pos: [ 33.3048286438, -2133.0900878906, 125.5831909180 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+        valid_interactions: [examine]
+
+      blood2: 
+        template: "W3MonsterClue:quests\\prologue\\quest_files\\living_world\\entities\\clues\\blood\\lw_clue_blood_splat_medium.w2ent"
+        pos: [ 36.9432868958, -2132.6420898438, 126.5789718628 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+        valid_interactions: [examine]
+
+      blood3: 
+        template: "W3MonsterClue:quests\\prologue\\quest_files\\living_world\\entities\\clues\\blood\\lw_clue_blood_splat_medium_3.w2ent"
+        pos: [ 41.2873306274, -2131.4160156250, 127.0562896729 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+        valid_interactions: [examine]
+
+      blood4: 
+        template: "W3MonsterClue:quests\\prologue\\quest_files\\living_world\\entities\\clues\\blood\\lw_clue_blood_splat_big.w2ent"
+        pos: [ 40.9142341614, -2125.2272949219, 127.2321777344 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+        valid_interactions: [examine]
+
+      blood5: 
+        template: "W3MonsterClue:quests\\prologue\\quest_files\\living_world\\entities\\clues\\blood\\lw_clue_blood_splat_medium_2.w2ent"
+        pos: [ 40.8160285950, -2120.6267089844, 127.8547744751 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+        valid_interactions: [examine]
+
+      blood6: 
+        template: "W3MonsterClue:quests\\prologue\\quest_files\\living_world\\entities\\clues\\blood\\lw_clue_blood_splat_big.w2ent"
+        pos: [ 37.9065780640, -2115.8195800781, 128.2326660156 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+        valid_interactions: [examine]
+
+      blood_on_wall: 
+        .preset: .MonsterClue
+        template: "W3MonsterClue:clue_blood"
+        pos: [ 36.1242980957, -2113.2485351563, 129.2463073730 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+        #valid_interactions: [examine]
+
+  nlayer: 
+    world: "bob"
+    #context: ""
+
+    areas: 
+      triss_found: 
+        height: 10.0
+        borderpoints: 
+          - [ 22.4066276550, -2080.5825195313, 124.2145004272 ]
+          - [ 9.7197046280, -2083.9299316406, 124.2145004272 ]
+          - [ 0.6997985840, -2093.5759277344, 124.2145004272 ]
+          - [ 1.0601634979, -2109.3081054688, 124.2145004272 ]
+          - [ 5.4472599030, -2116.4399414063, 124.2145004272 ]
+          - [ 34.8718681335, -2119.1364746094, 124.2145004272 ]
+          - [ 33.1230506897, -2082.2790527344, 124.2145004272 ]
+          
+      triss_contact: 
+        height: 5.0
+        borderpoints:   
+          - [ 8.5914363861, -2083.7521972656, 125.6578979492 ]
+          - [ 8.5914363861, -2091.9943847656, 125.6578979492 ]
+          - [ 17.4185485840, -2090.6774902344, 125.6578979492 ]
+          - [ 16.8341140747, -2083.7521972656, 125.6578979492 ]
+
+    waypoints: 
+      triss_spawn: [ 12.4145784378, -2086.8552246094, 125.6425781250, 34.7600517273 ]
+      
+      hag_spawn: [ 40.1566009521, -2123.7258300781, 127.2539672852, 168.5199584961 ]
+      
+    scenepoints: 
+      introscenes: [ 24.4257621765, -2107.7331542969, 126.1453247070, 0.0 ]
+  after_triss_to_monster: 
+    world: "bob"
+    #context: ""
+
+    areas: 
+      magic_area: 
+        height: 5.0
+        borderpoints: 
+          - [ 18.4057292938, -2082.5747070313, 124.8787918091 ]
+          - [ 8.7484531403, -2086.7949218750, 124.8787918091 ]
+          - [ 5.1855187416, -2097.0126953125, 124.8787918091 ]
+          - [ 9.0696573257, -2106.5974121094, 124.8787918091 ]
+          - [ 19.2151393890, -2109.3098144531, 124.8787918091 ]
+          - [ 27.6792793274, -2105.7822265625, 124.8787918091 ]
+          - [ 32.4871177673, -2097.1892089844, 124.8787918091 ]
+          - [ 28.6761360168, -2086.7429199219, 124.8787918091 ]
+
+    waypoints: 
+      barghest1_spawn: [ 39.8813514709, -2125.9658203125, 127.2539672852, 0.0 ]
+      barghest2_spawn: [ 42.3728370667, -2125.9360351563, 127.2753906250, 0.0 ]
+
+    statics: 
+      magic_barrier: 
+        template: "CGameplayEntity:quests\\generic_quests\\novigrad\\quest_files\\mh306_dao\\entities\\mh306_magic_barrier.w2ent"
+        tags: [NTR_magic_barrier1]
+        pos: [ 18.6173191071, -2096.2687988281, 125.6962280273 ]
+        rot: [ 0.0, 0.0, 31.4599990845 ]
+        scale: [ 10.0, 10.0, 10.0 ]
+
+    #interactiveentities: 
+    #  unicorn: 
+    #    template: "CEntity:items\\quest_items\\q201\\q201_item__fixed_stuffed_unicorn.w2ent"
+    #    pos: [ 11.1196908951, -2088.7634277344, 125.5235595703 ]
+    #    rot: [ 0.0, 0.0, 156.1999969482 ]
+    #    valid_interactions: [examine]
+        

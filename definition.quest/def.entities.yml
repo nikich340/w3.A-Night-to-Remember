@@ -1,0 +1,80 @@
+#
+# definition of entities
+#
+templates:
+  unicorn_triss:
+    includes:
+      - items/quest_items/q201/q201_item__fixed_stuffed_unicorn.w2ent
+    effects:
+        teleport_appear:
+            ".type": CFXDefinition
+            trackGroups:
+              audio:
+                ".type": CFXTrackGroup
+                tracks:
+                  sfx:
+                    ".type": CFXTrack
+                    trackItems:
+                      - ".type": CFXTrackItemSoundEvent
+                        timeBegin: 0.0045584799
+                        soundEventName: magic_triss_teleport_q502
+                        maxDistance: 50.0
+                isExpanded: true
+                trackGroupColor: [ 210, 135, 222, 100 ]
+              material:
+                ".type": CFXTrackGroup
+                tracks:
+                  override:
+                    ".type": CFXTrack
+                    trackItems:
+                      - ".type": CFXTrackItemMaterialOverride
+                        #material: "fx\\cutscenes\\novigrad\\cs305_ciri_disappears\\cs305_ciri_glow.w2mi"
+                        #material: "fx\\quest\\q203\\q203_black_liquid_character_2.w2mi"
+                        material: "fx\\cutscenes\\skellige\\cs501_teleport_glow\\q501_teleport_glow.w2mi"
+                        drawOriginal: true
+                        interpolation:
+                          - [ 0.0, 1.0, 1.0, 1.0 ]
+                          - [ 0.0175438635, 1.0, 1.0, 1.0 ]
+                          - [ 0.0877193063, 1.0, 1.0, 1.0 ]
+                          - [ 0.1578947604, 1.0, 1.0, 1.0 ]
+                          - [ 0.2280701995, 1.0, 1.0, 1.0 ]
+                          - [ 0.2982456088, 1.0, 1.0, 1.0 ]
+                          - [ 0.3684210479, 1.0, 1.0, 1.0 ]
+                          - [ 0.438596487, 1.0, 1.0, 1.0 ]
+                          - [ 0.508771956, 1.0, 1.0, 1.0 ]
+                          - [ 0.5789473653, 1.0, 1.0, 1.0 ]
+                          - [ 0.6491228342, 1.0, 1.0, 1.0 ]
+                          - [ 0.7192982435, 1.0, 1.0, 1.0 ]
+                          - [ 0.7894737124, 1.0, 1.0, 1.0 ]
+                          - [ 0.8596491218, 1.0, 1.0, 1.0 ]
+                          - [ 0.9298245907, 1.0, 1.0, 1.0 ]
+                          - [ 1.0, 1.0, 1.0, 1.0 ]
+                isExpanded: true
+                trackGroupColor: [ 187, 171, 156, 100 ]
+            showDistance: 50.0
+        
+    slots:
+      fx:
+        transform:
+          pos: [0.0, 0.0, 3.0]
+          rot: [0.0, 0.0, 0.0]
+          scale: [0.0, 0.0, 0.0]
+          
+    entityObject:
+      .type: "CEntity"
+      
+  clue_blood:
+    includes:
+      - W3MonsterClue:quests/prologue/quest_files/living_world/entities/clues/blood/lw_clue_blood_claw_slash_big.w2ent
+
+    entityObject:
+      .type: W3MonsterClue
+      testLineOfSight: true
+      components:
+        examine:
+          .type: CInteractionComponent
+          actionName: Examine
+          rangeMin: 0.0
+          rangeMax: 3.0
+          isEnabled: true
+          reportToScript: true

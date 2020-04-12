@@ -1,0 +1,40 @@
+repository:
+  actors:
+    triss:
+      template: "dlc\\dlcntr\\data\\entities\\triss_monster.w2ent"
+      appearance: [ "triss_monster" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 9999
+    strings-idstart: 715
+
+  gameplay: true
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        # tags: [ "PLAYER" ]
+      triss:
+        repo: "triss"
+        by_voicetag: false
+        appearance: "triss_monster"
+        tags: [ "triss_monster" ]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "triss" ]
+
+  section_start:
+    #- PAUSE: 1.0
+    - NEXT: section_power
+
+  section_power:
+    - triss: "[2.3344047]0001041457|You're dead, you're gone!"
+    - NEXT: section_exit
+
+  section_exit:
+    - EXIT

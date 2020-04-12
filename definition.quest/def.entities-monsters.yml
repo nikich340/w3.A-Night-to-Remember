@@ -1,0 +1,15 @@
+#
+# definition of entities
+#
+templates:
+  custom_hag:
+    includes:
+      - characters/npc_entities/monsters/hag_grave_lvl1__barons_wife.w2ent
+
+    usedAppearances:
+      - gravehag_barons_wife
+
+    entityObject:
+      .type: "CHagNPC:CNewNPC"
+      #name: "Water hag"
+      displayName: "Water hag"

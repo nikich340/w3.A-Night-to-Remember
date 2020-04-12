@@ -1,0 +1,19 @@
+;meta[language=en]
+; id      |key(hex)|key(str)| text
+;
+; rename this file to mod<YOUR MODNAME>.speech.csv and
+; add all strings for custom voicelines like the example line below.
+;
+; make sure the XXXX is the string id-space of the project and nnn is unique
+; for every line.
+;
+;211XXXXnnn|||example voiceline text
+;
+2119999700|||Triss?! I should talk to her.
+2119999705|||I've been thinking about us.
+2119999706|||I'm looking for…
+2119999707|||I'm not Yennefer, Geralt. But I can be like Yennefer!
+2119999708|||So, what do you think?
+2119999709|||You don't like me..
+2119999710|||You realize - one word and you'll howl with pain!
+2119999711|||I'm your nightmare!

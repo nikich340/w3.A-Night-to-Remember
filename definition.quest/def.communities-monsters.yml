@@ -1,0 +1,36 @@
+communities:
+  comm_barghests:
+    actors:
+      barghest1_intro:
+        template: dlc/bob/data/characters/npc_entities/monsters/barghest.w2ent
+        tags: [intro_barghest1]
+      barghest2_intro:
+        template: dlc/bob/data/characters/npc_entities/monsters/barghest.w2ent
+        tags: [intro_barghest2]
+      barghest3_intro:
+        template: dlc/bob/data/characters/npc_entities/monsters/barghest.w2ent
+        tags: [intro_barghest3]
+    phases:
+      barghests_fight:
+        barghest1_intro:
+          appearance: barghest
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/barghest1_spawn
+        barghest2_intro:
+          appearance: barghest
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/barghest2_spawn
+  comm_hag:
+    actors:
+      hag_intro:
+        template: dlc/dlcntr/data/entities/custom_hag.w2ent
+        tags: [hag_intro]
+    phases:
+      hag_intro_fight:
+        hag_intro:
+          appearance: gravehag_barons_wife     # [someappearance, only_on_spawn_bool]
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/hag_spawn

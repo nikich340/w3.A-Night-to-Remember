@@ -1,0 +1,87 @@
+#
+# definition of entities
+#
+templates:
+  eredin_vesemir:
+    includes:
+      - quests/main_npcs/eredin.w2ent
+
+    appearances:
+      eredin_vesemir:
+        includedTemplates:
+          - characters/models/main_npc/triss/h_01_wa__triss.w2ent
+          - dlc/dlc6/data/characters/models/main_npc/triss/body_02_wa__triss_dlc.w2ent
+          - characters/models/main_npc/yennefer/c_01_wa__yennefer.w2ent
+
+    usedAppearances:
+      - eredin
+      - eredin_vesemir
+
+    entityObject:
+      .type: "CNewNPC"
+      name: "EREDIN"
+      displayName: "Eredin"
+      
+    #slots:
+    #  fx_point:
+    #    transform:
+    #      pos: [0.0, 0.0, 0.0]
+    #      rot: [250.0, 0.0, 0.0]
+          
+    #templateParams:
+    #  - name: woman
+    #    .type: CAnimAnimsetsParam
+    #    componentName: woman_base
+        # crutch crutch crutch...
+    #    animationSets:
+    #      - dlc/bob/data/animations/animations/monsters/monster_dettlaff_vampire.w2anims
+    #      - dlc/bob/data/animations/animations/monsters/monster_dettlaff.w2anims
+  triss_monster:
+    includes:
+      - quests/main_npcs/triss.w2ent
+
+    appearances:
+      #triss_dlc:
+      #  includedTemplates:
+      #    - characters/models/main_npc/triss/h_01_wa__triss.w2ent
+      #    - dlc/dlc6/data/characters/models/main_npc/triss/b_01_wa__triss_dlc.w2ent
+      #    - characters/models/main_npc/triss/c_01_wa__triss.w2ent
+      triss_yen:
+        includedTemplates:
+          - characters/models/main_npc/triss/h_01_wa__triss.w2ent
+          - dlc/dlc6/data/characters/models/main_npc/triss/body_02_wa__triss_dlc.w2ent
+          - characters/models/main_npc/yennefer/c_01_wa__yennefer.w2ent
+      triss_monster:
+        #voicetag: 'TRISS'
+        #wasIncluded: true
+        includedTemplates:
+          - characters/models/main_npc/triss/h_01_wa__triss.w2ent
+          - dlc/dlc6/data/characters/models/main_npc/triss/body_02_wa__triss_dlc.w2ent
+          - characters/models/main_npc/yennefer/c_01_wa__yennefer.w2ent
+          - dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+
+    usedAppearances:
+      - triss
+      - triss_lingerie
+      - triss_yen
+      - triss_monster
+
+    entityObject:
+      .type: "CTrissNPC:CNewNPC"
+      name: "TRISS"
+      displayName: "Triss"
+      
+    #slots:
+    #  fx_point:
+    #    transform:
+    #      pos: [0.0, 0.0, 0.0]
+    #      rot: [250.0, 0.0, 0.0]
+          
+    #templateParams:
+    #  - name: woman
+    #    .type: CAnimAnimsetsParam
+    #    componentName: woman_base
+        # crutch crutch crutch...
+    #    animationSets:
+    #      - dlc/bob/data/animations/animations/monsters/monster_dettlaff_vampire.w2anims
+    #      - dlc/bob/data/animations/animations/monsters/monster_dettlaff.w2anims

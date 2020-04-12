@@ -1,0 +1,21 @@
+communities:
+  comm_triss:
+    actors:
+      triss_monster:
+        template: dlc/dlcntr/data/entities/triss_monster.w2ent
+        tags: [triss_monster]
+        
+    phases:
+      normal:
+        triss_monster:
+          appearance: triss    # [someappearance, only_on_spawn_bool]
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/triss_spawn
+      fight:
+        triss_monster:
+          appearance: triss_monster    # [someappearance, only_on_spawn_bool]
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/triss_spawn
+          guard: [ bob/magic_area, 0.0 ]

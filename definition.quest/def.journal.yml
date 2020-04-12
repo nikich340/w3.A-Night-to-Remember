@@ -1,0 +1,27 @@
+journals:
+  quests:
+    nighttoremember:
+      title: "A Night to Remember"
+      type: "Side"
+      world: bob                      # optional, if empty every objective requires world
+      description:
+        - intro_hag1: My old friend Geralt was back in the center of events. Although he did not remember how he was among the ruins of Tesham Mutna, at the moment he was busy something completely different - witcher felt the presence of a water hag, and something told him that this would be not an ordinary battle.<br/>Geralt again won in the battle with the monster, but not finally - the water hag escaped, sensing the danger of her miserable slimy life. The witcher decided to follow the footsteps of her blood and finish what was started.<br/>
+      instructions:
+        intro_hag:
+          - blood_tracks:
+              caption: "Use your Witcher Senses to follow the hag's tracks"
+              mappins:
+                - [ bloodpin1, 7 ]
+                - [ bloodpin2, 7 ]
+                - [ bloodpin3, 7 ]
+          - blood_tracks_wall:
+              caption: "Check the place behind the wall"
+              mappins:
+                - [ behind_wall_pin, 22 ]   
+        intro_triss:
+          - talk_triss:
+              caption: "Talk to Triss"
+              mappins: triss_pin
+          - fight_triss:
+              caption: "Defeat Triss"
+                
