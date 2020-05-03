@@ -1,0 +1,132 @@
+#
+# quest structure subsegment: regis_mail
+# 
+# (version: 208, saved: 2020-05-02 21:39:51)
+#
+---
+structure:
+  segments:
+    regis_mail:
+      blocks:
+        in:
+          ".editor": [ -50.3333282471, 247.6666717529 ]
+          next:
+            - script.Undress_geralt
+        
+        scene.10_scene:
+          ".editor":
+            pos: [ 463.8095397949, 274.3333435059 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 10.regis_owl_arrive.yml
+          placement: bob/introscenes
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - changelayers.owl_layer
+            - objective.new_quest_objective: Activate
+        
+        waituntil.mail_looted:
+          looted: bob/regis_mail
+          ".editor":
+            pos: [ 1374.8280029297, 265.9329528809 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - objective.new_quest_objective_1: Success
+            - waituntil.wait_1s
+        
+        waituntil.not_read:
+          factdb: [ regisLetterRead, "=", 0 ]
+          ".editor":
+            pos: [ 1616.9644775391, 239.359664917 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.wait_1s
+        
+        waituntil.read:
+          factdb: [ regisLetterRead, ">=", 1 ]
+          ".editor":
+            pos: [ 1621.2926025391, 349.0728759766 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - out
+        
+        waituntil.wait_1s:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 1616.9644775391, 139.7763214111 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.not_read
+            - waituntil.read
+        
+        waituntil.wait_until_outhome:
+          inside: [ bob/homeout_area, PLAYER ]
+          ".editor":
+            pos: [ 1035.4947509766, 275.5995483398 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.mail_looted
+            - objective.new_quest_objective: Success
+            - objective.new_quest_objective_1: Activate
+        
+        script.Undress_geralt:
+          ".editor":
+            pos: [ 191.8094940186, 273.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: UnequipPlayerItemsQuest
+          parameter:
+            - all: true
+          next:
+            - scene.10_scene: Input
+        
+        changelayers.owl_layer:
+          ".editor":
+            pos: [ 670.1290283203, 275.0562744141 ]
+            hint: show-only
+            in: []
+            out: []
+          sync: true
+          purge: false
+          world: bob
+          show:
+            - owl_layer
+          next:
+            - spawn.spawn_oil
+        
+        spawn.spawn_oil:
+          ".editor":
+            pos: [ 859.4147338867, 274.3420410156 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: normal
+          spawnsets:
+            - comm_regis_owl
+          next:
+            - waituntil.wait_until_outhome
+        
+        objective.new_quest_objective:
+          ".editor": [ 1017.1463623047, 477.3131408691 ]
+          objective: nighttoremember/regis_owl/out_home
+          notify: true
+          track: false
+          next: ".done"
+        
+        objective.new_quest_objective_1:
+          ".editor": [ 1417.9783935547, 460.5590209961 ]
+          objective: nighttoremember/regis_owl/take_letter
+          notify: true
+          track: true
+          next: ".done"
+        
+        out:
+          ".editor": [ 1952.1585693359, 261.1586914062 ]
+          next: ".done"
+        

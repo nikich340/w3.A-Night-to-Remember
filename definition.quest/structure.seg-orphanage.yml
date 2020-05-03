@@ -1,0 +1,27 @@
+#
+# quest structure subsegment: orphanage
+# 
+# (version: 208, saved: 2020-05-02 21:39:51)
+#
+---
+structure:
+  segments:
+    orphanage:
+      blocks:
+        in:
+          ".editor": [ 100.0, 250.0 ]
+          next:
+            - objective.Go_orphanage: Activate
+        
+        objective.Go_orphanage:
+          ".editor": [ 478.0, 306.0 ]
+          objective: nighttoremember/main_quest/go_orphanage
+          notify: true
+          track: false
+          next:
+            - out
+        
+        out:
+          ".editor": [ 926.0, 262.0 ]
+          next: ".done"
+        

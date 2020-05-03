@@ -125,7 +125,7 @@ repository:
 production:
   settings:
     sceneid: 1
-    strings-idspace: 9999
+    strings-idspace: 4670
     strings-idstart: 700
 
   placement: "ntr_bob_introscenes_sp"
@@ -268,7 +268,7 @@ dialogscript:
     # shot Shot2 triss med
     - CUE: shot_4
     # (longest) anim: geralt_neutral_gesture_sceptical_remark_face
-    - geralt: "2119999700|Triss?! I should talk to her."
+    - geralt: "2114670700|Triss?! I should talk to her."
     - PAUSE: 1
     # shot Shot2 triss close
     - CUE: shot_5

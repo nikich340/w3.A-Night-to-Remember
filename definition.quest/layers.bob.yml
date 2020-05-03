@@ -109,11 +109,12 @@ layers:
 
     waypoints: 
       triss_spawn: [ 12.4145784378, -2086.8552246094, 125.6425781250, 34.7600517273 ]
-      
+      regis_owl_spawn: [ -382.2603149414, -804.1660766602, 36.3525694275, 77.0 ]
       hag_spawn: [ 40.1566009521, -2123.7258300781, 127.2539672852, 168.5199584961 ]
       
     scenepoints: 
       introscenes: [ 24.4257621765, -2107.7331542969, 126.1453247070, 0.0 ]
+      homescenes: [ -384.8305358887, -804.3603515625, 35.0772705078, 0.0 ]
   after_triss_to_monster: 
     world: "bob"
     #context: ""
@@ -149,4 +150,27 @@ layers:
     #    pos: [ 11.1196908951, -2088.7634277344, 125.5235595703 ]
     #    rot: [ 0.0, 0.0, 156.1999969482 ]
     #    valid_interactions: [examine]
+  owl_layer: 
+    world: "bob"
+    #context: ""
+
+    areas: 
+      homeout_area: 
+        #height: 2.0
+        borderpoints: 
+          - [ -388.0566406250, -797.3375854492, 35.1047363281 ]
+          - [ -392.9865722656, -804.0444335938, 35.1047363281 ]
+          - [ -388.1853332520, -805.6082763672, 35.1047363281 ]
+          - [ -384.8726196289, -799.5963745117, 35.1047363281 ]
+
+    mappins: 
+      regis_mail_pin: [ -382.2948303223, -804.2601318359, 36.3919868469 ]
+
+    interactiveentities: 
+      regis_mail: 
+        #template: "W3AnimatedContainer:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q702_hunt\\entities\\q702_blackmail_letter.w2ent"
+        template: W3AnimatedContainer:regis_mail
+        valid_interactions: [Loot]
+        pos: [ -382.5950317383, -804.3030395508, 36.1552848816 ]
+        rot: [ 0.0, 0.0, -20.0200023651 ]
         

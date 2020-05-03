@@ -2,6 +2,438 @@
 # definition of entities
 #
 templates:
+  regis_vampire_scene_fix:
+    includes:
+      - dlc/bob/data/quests/main_npcs/regis_terzieff_vampire.w2ent
+    
+    entityObject:
+      .type: "CNewNPC"
+
+    usedAppearances:
+      - regis_human
+      - regis_vampire
+
+    templateParams:
+      - ".type": CAnimBehaviorsParam
+        name: "man"
+        wasIncluded: true
+        componentName: man_base
+        slots:
+          - ".type": SBehaviorGraphInstanceSlot
+            instanceName: StoryScene
+            graph: gameplay\behaviors\pc\behaviorgraph\pc_dialog.w2beh
+
+  dettlaff_vampire_extra_fx:
+    includes:
+      - dlc/bob/data/quests/main_npcs/dettlaff_van_eretein_vampire.w2ent
+    
+    entityObject:
+      .type: "CNewNPC"
+
+    usedAppearances:
+      - dettlaff_human
+      - dettlaff_vampire
+
+    effects:
+      camera_smoke:
+        ".type": CFXDefinition
+        trackGroups:
+          Default:
+            ".type": CFXTrackGroup
+            tracks:
+              Emitter:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParticles
+                    timeDuration: 0.3000000119
+                    particleSystem: "dlc\\bob\\data\\fx\\cutscenes\\cs704_sister_intro\\cs704_camera_smoke.w2p"
+                    #particleSystem: "dlc\\bob\\data\\fx\\cutscenes\\common\\bob_cs_camera_effect.w2p"
+                    spawner:
+                      ".type": CFXSimpleSpawner
+                      slotNames:
+                        - slot
+                    interpolation:
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+            isExpanded: true
+            trackGroupColor: [ 172, 156, 178, 100 ]
+        length: 0.5
+        loopStart: 0.1000000015
+        loopEnd: 0.200000003
+        showDistance: 50.0
+        isLooped: true
+      mist:
+        ".type": CFXDefinition
+        trackGroups:
+          sound:
+            ".type": CFXTrackGroup
+            tracks:
+              sfx:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemSoundEvent
+                    timeBegin: 0.0351867005
+                    soundEventName: q704_regis_mistform_activates
+                    stopFadeTime: 99.0
+                  - ".type": CFXTrackItemSoundEvent
+                    timeBegin: 0.3094822466
+                    soundEventName: q704_regis_mistform_LP
+                    stopFadeTime: 5.0
+                  - ".type": CFXTrackItemSoundEvent
+                    timeBegin: 0.693990469
+                    soundEventName: q704_regis_mistform_LP_stop
+                    stopFadeTime: 99.0
+            isExpanded: true
+            trackGroupColor: [ 157, 250, 183, 100 ]
+          particle:
+            ".type": CFXTrackGroup
+            tracks:
+              fx_02:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParticles
+                    timeBegin: 0.321497947
+                    timeDuration: 1.047206521
+                    particleSystem: "dlc\\bob\\data\\fx\\characters\\regis\\regis_puff_01.w2p"
+                    spawner:
+                      ".type": CFXSimpleSpawner
+                      boneNames:
+                        - l_hand
+                        - r_hand
+                        - r_kneeRoll
+                        - l_kneeRoll
+                        - spine
+                        - head
+                        - neck
+                        - r_shoulderRoll
+                        - l_shoulderRoll
+                        - spine1
+                    interpolation:
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+              material:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemMaterialOverride
+                    timeDuration: 0.200000003
+                    material: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\dettlaff_transparent.w2mg"
+                    drawOriginal: true
+                    interpolation:
+                      - [ 0.0, 0.0, 1.0, 1.0 ]
+                      - [ 0.1333333403, 0.0, 0.9333333373, 1.0 ]
+                      - [ 0.2666666806, 0.0, 0.8666666746, 1.0 ]
+                      - [ 0.4000000358, 0.0, 0.7999999523, 1.0 ]
+                      - [ 0.5333333611, 0.0, 0.7333333492, 1.0 ]
+                      - [ 0.6666666865, 0.0, 0.6666666269, 1.0 ]
+                      - [ 0.8000000119, 0.0, 0.6000000238, 1.0 ]
+                      - [ 0.9333333373, 0.0, 0.5333333015, 1.0 ]
+                      - [ 1.0, 0.0, 0.4666666389, 1.0 ]
+                      - [ 1.0, 0.0, 0.3999999762, 1.0 ]
+                      - [ 1.0, 0.0, 0.3333333135, 1.0 ]
+                      - [ 1.0, 0.0, 0.2666666508, 1.0 ]
+                      - [ 1.0, 0.0, 0.1999999881, 1.0 ]
+                      - [ 1.0, 0.0, 0.1333333254, 1.0 ]
+                      - [ 1.0, 0.0, 0.0666666627, 1.0 ]
+                      - [ 1.0, 0.0, 0.0, 1.0 ]
+                  - ".type": CFXTrackItemMaterialOverride
+                    timeBegin: 0.400000006
+                    timeDuration: 0.1000000015
+                    material: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\dettlaff_transparent.w2mg"
+                    interpolation:
+                      - [ 0.0, 0.0, 1.0, 0.0 ]
+                      - [ 0.0, 0.0, 1.0, 0.0666666701 ]
+                      - [ 0.0, 0.0, 1.0, 0.1333333403 ]
+                      - [ 0.0, 0.0, 1.0, 0.2000000179 ]
+                      - [ 0.0, 0.0, 1.0, 0.2666666806 ]
+                      - [ 0.0, 0.0, 1.0, 0.3333333433 ]
+                      - [ 0.0, 0.0, 1.0, 0.400000006 ]
+                      - [ 0.0, 0.0, 1.0, 0.4666666687 ]
+                      - [ 0.0, 0.0, 1.0, 0.5333333611 ]
+                      - [ 0.0, 0.0, 1.0, 0.6000000238 ]
+                      - [ 0.0, 0.0, 1.0, 0.6666666865 ]
+                      - [ 0.0, 0.0, 1.0, 0.7333333492 ]
+                      - [ 0.0, 0.0, 1.0, 0.8000000119 ]
+                      - [ 0.0, 0.0, 1.0, 0.8666666746 ]
+                      - [ 0.0, 0.0, 1.0, 0.9333333373 ]
+                      - [ 0.0, 0.0, 1.0, 1.0 ]
+                  - ".type": CFXTrackItemMaterialOverride
+                    timeBegin: 0.200000003
+                    timeDuration: 0.200000003
+                    material: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\dettlaff_transparent.w2mg"
+                    interpolation:
+                      - [ 1.0, 0.0, 1.0, 0.0 ]
+                      - [ 0.9333333373, 0.0, 1.0, 0.0666666701 ]
+                      - [ 0.8666666746, 0.0, 1.0, 0.1333333403 ]
+                      - [ 0.7999999523, 0.0, 1.0, 0.2000000179 ]
+                      - [ 0.7333333492, 0.0, 1.0, 0.2666666806 ]
+                      - [ 0.6666666269, 0.0, 1.0, 0.3333333433 ]
+                      - [ 0.6000000238, 0.0, 1.0, 0.400000006 ]
+                      - [ 0.5333333015, 0.0, 1.0, 0.4666666687 ]
+                      - [ 0.4666666389, 0.0, 1.0, 0.5333333611 ]
+                      - [ 0.3999999762, 0.0, 1.0, 0.6000000238 ]
+                      - [ 0.3333333135, 0.0, 1.0, 0.6666666865 ]
+                      - [ 0.2666666508, 0.0, 1.0, 0.7333333492 ]
+                      - [ 0.1999999881, 0.0, 1.0, 0.8000000119 ]
+                      - [ 0.1333333254, 0.0, 1.0, 0.8666666746 ]
+                      - [ 0.0666666627, 0.0, 1.0, 0.9333333373 ]
+                      - [ 0.0, 0.0, 1.0, 1.0 ]
+              fx:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParticles
+                    timeBegin: 0.1539999992
+                    timeDuration: 0.5
+                    particleSystem: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\vampire\\det_vamp_smoke_trail3.w2p"
+                    spawner:
+                      ".type": CFXSimpleSpawner
+                      boneNames:
+                        - head
+                    interpolation:
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+            isExpanded: true
+            trackGroupColor: [ 133, 170, 150, 100 ]
+        length: 2.5
+        loopStart: 0.400000006
+        loopEnd: 0.5
+        showDistance: 100.0
+        isLooped: true
+      mist_fly:
+        ".type": CFXDefinition
+        trackGroups:
+          sounds:
+            ".type": CFXTrackGroup
+            tracks:
+              sfx:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemSoundEvent
+                    timeBegin: 0.0234577991
+                    soundEventName: q704_regis_mistform_LP
+                    speed: 5.0
+                  - ".type": CFXTrackItemSoundEvent
+                    timeBegin: 0.5747160912
+                    soundEventName: q704_regis_mistform_LP_stop
+                    speed: 5.0
+            isExpanded: true
+            trackGroupColor: [ 245, 166, 165, 100 ]
+          particle:
+            ".type": CFXTrackGroup
+            tracks:
+              end:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemMaterialOverride
+                    timeBegin: 0.400000006
+                    timeDuration: 0.200000003
+                    material: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\dettlaff_transparent.w2mg"
+                    drawOriginal: true
+                    interpolation:
+                      - [ 1.0, 0.0, 1.0, 1.0 ]
+                      - [ 0.9259259105, 0.0, 1.0, 1.0 ]
+                      - [ 0.8518518209, 0.0, 1.0, 1.0 ]
+                      - [ 0.7777777314, 0.0, 1.0, 1.0 ]
+                      - [ 0.7037036419, 0.0, 1.0, 1.0 ]
+                      - [ 0.629629612, 0.0, 1.0, 1.0 ]
+                      - [ 0.5555555224, 0.0, 1.0, 1.0 ]
+                      - [ 0.4814814925, 0.0, 1.0, 1.0 ]
+                      - [ 0.4074073434, 0.0, 1.0, 1.0 ]
+                      - [ 0.3333333135, 0.0, 1.0, 1.0 ]
+                      - [ 0.2592592239, 0.0, 1.0, 1.0 ]
+                      - [ 0.1851851344, 0.0, 1.0, 1.0 ]
+                      - [ 0.1111110449, 0.0, 1.0, 1.0 ]
+                      - [ 0.037037015, 0.0, 1.0, 1.0 ]
+                      - [ 0.0, 0.0, 1.0, 1.0 ]
+                      - [ 0.0, 0.0, 1.0, 1.0 ]
+                  - ".type": CFXTrackItemMaterialOverride
+                    timeDuration: 0.200000003
+                    material: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\dettlaff_transparent.w2mg"
+                    interpolation:
+                      - [ 0.0, 1.0, 1.0, 0.0 ]
+                      - [ 0.0, 1.0, 1.0, 0.0666666701 ]
+                      - [ 0.0, 1.0, 1.0, 0.1333333403 ]
+                      - [ 0.0, 1.0, 1.0, 0.2000000179 ]
+                      - [ 0.0, 1.0, 1.0, 0.2666666806 ]
+                      - [ 0.0, 1.0, 1.0, 0.3333333433 ]
+                      - [ 0.0, 1.0, 1.0, 0.400000006 ]
+                      - [ 0.0, 1.0, 1.0, 0.4666666687 ]
+                      - [ 0.0, 1.0, 1.0, 0.5333333611 ]
+                      - [ 0.0, 1.0, 1.0, 0.6000000238 ]
+                      - [ 0.0, 1.0, 1.0, 0.6666666865 ]
+                      - [ 0.0, 1.0, 1.0, 0.7333333492 ]
+                      - [ 0.0, 1.0, 1.0, 0.8000000119 ]
+                      - [ 0.0, 1.0, 1.0, 0.8666666746 ]
+                      - [ 0.0, 1.0, 1.0, 0.9333333373 ]
+                      - [ 0.0, 1.0, 1.0, 1.0 ]
+                  - ".type": CFXTrackItemMaterialOverride
+                    timeBegin: 0.200000003
+                    timeDuration: 0.200000003
+                    material: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\dettlaff_transparent.w2mg"
+                    interpolation:
+                      - [ 0.0, 1.0, 1.0, 0.0 ]
+                      - [ 0.0, 1.0, 1.0, 0.0666666701 ]
+                      - [ 0.0, 1.0, 1.0, 0.1333333403 ]
+                      - [ 0.0, 1.0, 1.0, 0.2000000179 ]
+                      - [ 0.0, 1.0, 1.0, 0.2666666806 ]
+                      - [ 0.0, 1.0, 1.0, 0.3333333433 ]
+                      - [ 0.0, 1.0, 1.0, 0.400000006 ]
+                      - [ 0.0, 1.0, 1.0, 0.4666666687 ]
+                      - [ 0.0, 1.0, 1.0, 0.5333333611 ]
+                      - [ 0.0, 1.0, 1.0, 0.6000000238 ]
+                      - [ 0.0, 1.0, 1.0, 0.6666666865 ]
+                      - [ 0.0, 1.0, 1.0, 0.7333333492 ]
+                      - [ 0.0, 1.0, 1.0, 0.8000000119 ]
+                      - [ 0.0, 1.0, 1.0, 0.8666666746 ]
+                      - [ 0.0, 1.0, 1.0, 0.9333333373 ]
+                      - [ 0.0, 1.0, 1.0, 1.0 ]
+              start:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParticles
+                    timeBegin: 0.1845654249
+                    timeDuration: 0.6000000238
+                    particleSystem: "dlc\\bob\\data\\fx\\characters\\regis\\regis_puff_02.w2p"
+                    spawner:
+                      ".type": CFXSimpleSpawner
+                      boneNames:
+                        - torso2
+                        - pelvis
+                    interpolation:
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 0.9389070272, 1.0, 0.9283961058 ]
+                      - [ 0.8215435743, 1.0, 0.812346518 ]
+                      - [ 0.7041802406, 1.0, 0.6962970495 ]
+                      - [ 0.5868168473, 1.0, 0.5802475214 ]
+                      - [ 0.469453454, 1.0, 0.4641979933 ]
+                      - [ 0.3520901203, 1.0, 0.3481484652 ]
+                      - [ 0.234726727, 1.0, 0.2320989966 ]
+                      - [ 0.1173633933, 1.0, 0.1160494089 ]
+                      - [ 0.0, 1.0, 0.0 ]
+              after:
+                ".type": CFXTrack
+            isExpanded: true
+            trackGroupColor: [ 171, 182, 241, 100 ]
+        length: 4.0120925903
+        loopStart: 0.200000003
+        loopEnd: 0.400000006
+        showDistance: 200.0
+        isLooped: true  
+      smoke_movings:
+        ".type": CFXDefinition
+        trackGroups:
+          Default:
+            ".type": CFXTrackGroup
+            tracks:
+              Emitter:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParticles
+                    particleSystem: "dlc\\bob\\data\\fx\\cutscenes\\cs704_sister_intro\\cs704_smoke_moving.w2p"
+                    spawner:
+                      ".type": CFXSimpleSpawner
+                    interpolation:
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+            isExpanded: true
+            trackGroupColor: [ 210, 205, 157, 100 ]
+        length: 0.5
+        loopStart: 0.200000003
+        loopEnd: 0.3000000119
+        showDistance: 50.0
+        isLooped: true
+  #iorweth:
+  #  includes:
+  #    - quests/main_npcs/vernon_roche.w2ent
+ 
+  #  appearances:
+  #    iowreth:
+  #      voicetag: IORWETH
+  #      includedTemplates:
+  #        - dlc/dlcntr/data/entities/models/iorweth/c_01__iorweth.w2ent
+  #        - dlc/dlcntr/data/entities/models/iorweth/h_01_ma__iorweth.w2ent
+  #        - dlc/dlcntr/data/entities/models/iorweth/body_01__iorweth.w2ent
+
+  #  usedAppearances:
+  #    - iorweth
+
+  #  entityObject:
+  #    .type: "CNewNPC"
+  #    name: "IORWETH"
+  #    displayName: "Iorweth"
+
+    #templateParams:
+    #  - ".type": CInventoryDefinition
+    #    entries:
+    #      - ".type": CInventoryDefinitionEntry
+    #        category: "steelsword"
+    #        isMount: true
+    #        isLootable: false
+    #        initializer:
+    #          .type: CInventoryInitializerUniform
+    #          itemName: "NPC Novigraadan sword 4"
+
   eredin_vesemir:
     includes:
       - quests/main_npcs/eredin.w2ent
@@ -9,12 +441,14 @@ templates:
     appearances:
       eredin_vesemir:
         includedTemplates:
-          - characters/models/main_npc/triss/h_01_wa__triss.w2ent
-          - dlc/dlc6/data/characters/models/main_npc/triss/body_02_wa__triss_dlc.w2ent
-          - characters/models/main_npc/yennefer/c_01_wa__yennefer.w2ent
+          - characters/models/main_npc/eredin/body_01_mw__eredin.w2ent
+          - characters/models/main_npc/eredin/c_14_mw__eredin02.w2ent
+          - characters/models/main_npc/eredin/c_02_mw__eredin.w2ent
+          - characters/models/main_npc/vesemir/h_01_mb__vesemir.w2ent
+          #- characters/models/main_npc/eredin/h_03_wa__eredin_openhelmet.w2ent
 
     usedAppearances:
-      - eredin
+      - eredin_scratched
       - eredin_vesemir
 
     entityObject:
@@ -22,30 +456,12 @@ templates:
       name: "EREDIN"
       displayName: "Eredin"
       
-    #slots:
-    #  fx_point:
-    #    transform:
-    #      pos: [0.0, 0.0, 0.0]
-    #      rot: [250.0, 0.0, 0.0]
-          
-    #templateParams:
-    #  - name: woman
-    #    .type: CAnimAnimsetsParam
-    #    componentName: woman_base
-        # crutch crutch crutch...
-    #    animationSets:
-    #      - dlc/bob/data/animations/animations/monsters/monster_dettlaff_vampire.w2anims
-    #      - dlc/bob/data/animations/animations/monsters/monster_dettlaff.w2anims
   triss_monster:
     includes:
-      - quests/main_npcs/triss.w2ent
+      #- quests/main_npcs/triss.w2ent
+      - dlc/dlcntr/data/entities/triss_color_effect.w2ent
 
     appearances:
-      #triss_dlc:
-      #  includedTemplates:
-      #    - characters/models/main_npc/triss/h_01_wa__triss.w2ent
-      #    - dlc/dlc6/data/characters/models/main_npc/triss/b_01_wa__triss_dlc.w2ent
-      #    - characters/models/main_npc/triss/c_01_wa__triss.w2ent
       triss_yen:
         includedTemplates:
           - characters/models/main_npc/triss/h_01_wa__triss.w2ent

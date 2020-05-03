@@ -4,9 +4,13 @@ repository:
     geralt:
       template: "gameplay\\templates\\characters\\player\\player.w2ent"
 
+    triss_fake:
+      template: "quests\\main_npcs\\triss.w2ent"
+      appearance: [ "triss" ]
+
     triss_monster:
       template: "dlc\\dlcntr\\data\\entities\\triss_monster.w2ent"
-      appearance: [ "triss", "triss_yen", "triss_monster" ]
+      appearance: [ "triss_yen", "triss_monster" ]
 
   props:
     q201_item_fixed_stuffed_unicorn:
@@ -291,7 +295,7 @@ repository:
 production:
   settings:
     sceneid: 1
-    strings-idspace: 9999
+    strings-idspace: 4670
     strings-idstart: 705
 
   placement: "ntr_bob_introscenes_sp"
@@ -306,8 +310,14 @@ production:
       triss_monster:
         repo: "triss_monster"
         by_voicetag: false
-        appearance: "triss"
+        appearance: "triss_yen"
         tags: [ "triss_monster" ]
+
+      triss_fake:
+        repo: "triss_fake"
+        #by_voicetag: false
+        appearance: "triss"
+        tags: [ "triss_fake" ]
 
     props:
       q201_item_fixed_stuffed_unicorn:
@@ -376,8 +386,8 @@ production:
         blendin: 0.0
         blendout: 0.0
 
-      triss_monster_high_standing_bored_to_high_standing_determined:
-        actor: "triss_monster"
+      triss_fake_high_standing_bored_to_high_standing_determined:
+        actor: "triss_fake"
         repo: "anim_12629_high_standing_bored_to_high_standing_determined"
         #duration: 5.1666665077
         #weight: 0.6000000238
@@ -387,8 +397,8 @@ production:
         blendin: 0.0
         blendout: 0.0
 
-      triss_monster_high_standing_neutral_turn180_right:
-        actor: "triss_monster"
+      triss_fake_high_standing_neutral_turn180_right:
+        actor: "triss_fake"
         repo: "anim_1903_high_standing_neutral_turn180_right"
         #duration: 3.4666666985
         #weight: 0.6000000238
@@ -409,8 +419,19 @@ production:
         blendin: 0.0
         blendout: 0.0
 
-      triss_monster_woman_sorceress_taunt_03_rp:
-        actor: "triss_monster"
+      triss_fake_high_standing_determined_idle:
+        actor: "triss_fake"
+        repo: "anim_12673_high_standing_determined_idle"
+        #duration: 27.7666664124
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_fake_woman_sorceress_taunt_03_rp:
+        actor: "triss_fake"
         repo: "anim_12111_woman_sorceress_taunt_03_rp"
         #duration: 4.3666667938
         #weight: 0.6000000238
@@ -465,6 +486,17 @@ production:
         blendout: 0.0
 
     animations.mimic:
+      triss_fake_geralt_neutral_gesture_smile_face:
+        actor: "triss_fake"
+        repo: "mimicsanim_433_geralt_neutral_gesture_smile_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
       triss_monster_geralt_neutral_gesture_smile_face:
         actor: "triss_monster"
         repo: "mimicsanim_433_geralt_neutral_gesture_smile_face"
@@ -525,9 +557,13 @@ production:
         actor: "geralt"
         repo: "pose_0_high_standing_determined_idle"
 
-      triss_monster_High_Standing_Bored:
-        actor: "triss_monster"
+      triss_fake_High_Standing_Bored:
+        actor: "triss_fake"
         repo: "pose_2136_High_Standing_Bored"
+
+      triss_fake_High_Standing_Determined:
+        actor: "triss_fake"
+        repo: "pose_2126_High_Standing_Determined"
 
       triss_monster_High_Standing_Determined:
         actor: "triss_monster"
@@ -551,37 +587,38 @@ storyboard:
     # shot Shot1
     shot_1:
       - actor.placement: [0.0, geralt, [ -10.3464584351, 20.2390136719, -0.7247009277 ], [ 0.0, 0.0, 48.6200218201 ]]
-      - actor.placement: [0.0, triss_monster, [ -12.0957441330, 20.8864746094, -0.4929809570 ], [ 0.0, 0.0, 23.4299888611 ]]
+      - actor.placement: [0.0, triss_fake, [ -12.0957441330, 20.8864746094, -0.4929809570 ], [ 0.0, 0.0, 23.4299888611 ]]
+      - actor.placement: [0.0, triss_monster, [ -12.0957441330, 20.8864746094, -10.4929809570 ], [ 0.0, 0.0, 23.4299888611 ]]
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
-      - actor.pose: [0.0, triss_monster_High_Standing_Bored]
+      - actor.pose: [0.0, triss_fake_High_Standing_Bored]
       - cam: [0.0, cam_1_Shot1]
       - actor.anim: 
           .@pos: [0.0, geralt_high_standing_determined_calm_enter_frontal]
           clipfront: 2.43
       - actor.lookat: [0.0, geralt, [ -0.2818562090, 0.8281164169, 1.7828903198 ]]
-      - actor.lookat: [0.0, triss_monster, [ -0.3426355124, 0.8875857592, 1.6963653564 ]]
+      - actor.lookat: [0.0, triss_fake, [ -0.3426355124, 0.8875857592, 1.6963653564 ]]
 
     # shot Shot2 greetings
     shot_2:
       - actor.anim: [0.0, geralt_high_standing_determined_gesture_greeting_01]
       - actor.anim:
-          .@pos: [0.0, triss_monster_high_standing_bored_to_high_standing_determined]
+          .@pos: [0.0, triss_fake_high_standing_bored_to_high_standing_determined]
           clipend: 3
           blendout: 0.5
           blendin: 0.5
 
     # shot Shot2 greetings
     shot_2_2:
-      - actor.lookat: [0.3, triss_monster, geralt]
-      - actor.pose: [0.3, triss_monster_High_Standing_Determined]
+      - actor.lookat: [0.3, triss_fake, geralt]
+      - actor.pose: [0.3, triss_fake_High_Standing_Determined]
       - actor.anim: 
-          .@pos: [0.27, triss_monster_high_standing_neutral_turn180_right]
+          .@pos: [0.27, triss_fake_high_standing_neutral_turn180_right]
           blendin: 0.5
 
     # shot Shot3 dt1
     shot_3:
       - actor.placement: [0.0, geralt, [ -10.3464584351, 20.2390136719, -0.7247009277 ], [ 0.0, 0.0, 66.3300476074 ]]
-      - actor.placement: [0.0, triss_monster, [ -11.9449052811, 20.6538085938, -0.4905395508 ], [ 0.0, 0.0, 230.0899963379 ]]
+      - actor.placement: [0.0, triss_fake, [ -11.9449052811, 20.6538085938, -0.4905395508 ], [ 0.0, 0.0, 230.0899963379 ]]
       - cam: [0.0, cam_5_triss_looking_cam]
 
     # shot grlt looking cam
@@ -600,35 +637,39 @@ storyboard:
     # shot triss looking cam
     shot_5_2:
       - cam: [0.0, cam_5_triss_looking_cam]
-      - actor.anim.mimic: [0.5, triss_monster_geralt_neutral_gesture_smile_face]
+      - actor.anim.mimic: [0.5, triss_fake_geralt_neutral_gesture_smile_face]
     # shot triss magic to yen
     shot_6:
       #- actor.placement: [0.0, triss_monster, [ -11.9148464203, 20.5771484375, -0.4879150391 ], [ 0.0, 0.0, 230.0899963379 ]]
       - cam.blend.start: [0.0, cam_6_triss_magic_to_yen]
       - cam.blend.end: [0.8, cam_7_triss_magic_to_yen__cloned_]
-      - actor.anim.mimic: [0.0, triss_monster_geralt_neutral_gesture_smile_face]
+      - actor.anim.mimic: [0.0, triss_fake_geralt_neutral_gesture_smile_face]
       - actor.anim: 
-          .@pos: [0.0, triss_monster_high_standing_determined_idle]
+          .@pos: [0.0, triss_fake_high_standing_determined_idle]
           clipend: 1.13
           blendout: 0.5
       - actor.anim: 
-          .@pos: [0.105, triss_monster_woman_sorceress_taunt_03_rp]
+          .@pos: [0.105, triss_fake_woman_sorceress_taunt_03_rp]
           blendin: 0.5
           blendout: 0.5
       - actor.anim: 
-          .@pos: [0.75, triss_monster_high_standing_determined_idle]
+          .@pos: [0.75, triss_fake_high_standing_determined_idle]
           clipend: 1.5
           blendin: 0.5
       - prop.placement: [0.7, q201_item_fixed_stuffed_unicorn, [ -13.3104724884, 19.3742675781, -0.6217651367 ], [ 0.0, 0.0, 163.1300964355 ]]
       - prop.effect.start: [0.7, q201_item_fixed_stuffed_unicorn, teleport_appear]
       - prop.effect.stop: [1.0, q201_item_fixed_stuffed_unicorn, teleport_appear]
-      - actor.lookat: [0.0, triss_monster, geralt]
-      - actor.lookat: [0.6, triss_monster, [ 0.9050639868, 0.1120369434, 1.7322921753 ]]
-      - actor.lookat: [0.8, triss_monster, geralt]
-      - actor.effect.start: [0.1, triss_monster, cast_disspelling]
-      - actor.effect.stop: [0.9, triss_monster, cast_disspelling]
+      - actor.lookat: [0.0, triss_fake, geralt]
+      - actor.lookat: [0.6, triss_fake, [ 0.9050639868, 0.1120369434, 1.7322921753 ]]
+      - actor.lookat: [0.8, triss_fake, geralt]
+      - actor.effect.start: [0.1, triss_fake, cast_disspelling]
+      - actor.effect.stop: [0.9, triss_fake, cast_disspelling]
+      - actor.effect.start: [0.9, triss_fake, q502_teleport_disappear]
       - actor.effect.start: [0.9, triss_monster, q502_teleport_disappear]
-      - actor.appearance: [0.95, triss_monster, triss_yen]
+      - actor.lookat: [0.9, triss_monster, geralt]
+      - actor.placement: [0.92, triss_monster, [ -11.9449052811, 20.6538085938, -0.4905395508 ], [ 0.0, 0.0, 230.0899963379 ]]
+      - actor.placement: [0.92, triss_fake, [ -11.9449052811, 20.6538085938, -10.4905395508 ], [ 0.0, 0.0, 230.0899963379 ]]
+      #- actor.appearance: [0.95, triss_monster, triss_yen]
 
     # shot triss magic to yen (cloned)
     shot_7:
@@ -688,7 +729,7 @@ storyboard:
       - actor.appearance: [0.65, triss_monster, triss_monster]
       - prop.effect.start: [0.6, q201_item_fixed_stuffed_unicorn, teleport_appear]
       - prop.hide: [0.9, q201_item_fixed_stuffed_unicorn]
-      #- actor.anim.mimic: [0.1, triss_monster_geralt_neutral_gesture_impatience_face]
+      - actor.anim.mimic: [0.1, triss_monster_geralt_neutral_gesture_impatience_face]
 
     # shot grlt
     shot_13:
@@ -703,7 +744,7 @@ storyboard:
 
 dialogscript:
   player: "geralt"
-  actors: [ "geralt", "triss_monster" ]
+  actors: [ "geralt", "triss_monster", "triss_fake" ]
   props: [ "q201_item_fixed_stuffed_unicorn" ]
 
   section_start:
@@ -722,7 +763,7 @@ dialogscript:
     - PAUSE: 4.75
     # (longest) anim: high_standing_bored_to_high_standing_determined: 5.166667
     - CUE: shot_3
-    - triss_monster: "[0.8353435397]0000487412|Geralt...?"
+    - triss_fake: "[0.8353435397]0000487412|Geralt...?"
     # (longest) anim: high_standing_determined_gesture_greeting_01: 2.866667
     # shot grlt looking cam
     - CUE: shot_4
@@ -730,20 +771,20 @@ dialogscript:
     #- PAUSE: 2.8666665554
     # shot triss looking cam
     - CUE: shot_5
-    - triss_monster: "2119999705|I've been thinking about us."
+    - triss_fake: "2114670705|I've been thinking about us."
     # grlt again
     - CUE: shot_4_2
-    - geralt: "2119999706|I'm looking for…"
+    - geralt: "2114670706|I'm looking for…"
     # shot triss magic to yen
     - CUE: shot_5_2
-    - triss_monster: "2119999707|I'm not Yennefer, Geralt. But I can be like Yennefer!"
+    - triss_fake: "2114670707|I'm not Yennefer, Geralt. But I can be like Yennefer!"
     # (longest) anim: woman_sorceress_taunt_03_rp
     - CUE: shot_6
     - PAUSE: 6
     # shot triss magic to yen (cloned)
     - CUE: shot_7
     - PAUSE: 2
-    - triss_monster: "2119999708|So, what do you think?"
+    - triss_monster: "2114670708|So, what do you think?"
     # (longest) anim: high_standing_determined_gesture_greeting_01
     # shot grlt triss stop
     - CUE: shot_8
@@ -752,12 +793,12 @@ dialogscript:
     - geralt: "0000490892|Triss, stop."
     # shot triss you dont like me
     - CUE: shot_9
-    - PAUSE: 1.5
-    - triss_monster: "2119999709|You don't like me.."
+    - PAUSE: 5.0
+    - triss_monster: "2114670709|You don't like me.."
     # shot triss realize
     - CUE: shot_10
     - PAUSE: 3.0
-    - triss_monster: "2119999710|You realize - one word and you'll howl with pain!"
+    - triss_monster: "2114670710|You realize - one word and you'll howl with pain!"
     # shot grlt shoked
     - CUE: shot_11
     - PAUSE: 2.0
@@ -765,7 +806,7 @@ dialogscript:
     - PAUSE: 1.0
     # I am your nighmare!
     - CUE: shot_12
-    - triss_monster: "2119999711|I'm your nightmare!"
+    - triss_monster: "2114670711|I'm your nightmare!"
     - PAUSE: 2.0
     # shot grlt
     - CUE: shot_13

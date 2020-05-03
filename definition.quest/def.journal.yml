@@ -24,4 +24,15 @@ journals:
               mappins: triss_pin
           - fight_triss:
               caption: "Defeat Triss"
+
+        regis_owl:
+          - out_home:
+              caption: "Go out of home for some fresh air"
+          - take_letter:
+              caption: "Take letter near owl"
+              mappins: regis_mail_pin
+
+        main_quest:
+          - go_orphanage:
+              caption: "Check Orianna's orphanage"
                 

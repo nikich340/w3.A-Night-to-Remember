@@ -1,7 +1,7 @@
 #
 # production settings
 # 
-# (version: 174, saved: 2020-04-11 23:06:32)
+# (version: 208, saved: 2020-05-02 21:39:51)
 #
 ---
 production:
@@ -11,6 +11,6 @@ production:
     menuvisibile: true
     enabled: true
     storesdata: true
-    strings-idspace: 9999
+    strings-idspace: 4670
     strings-idstart: 13
-    version: 174
+    version: 208

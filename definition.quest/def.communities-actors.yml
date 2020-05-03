@@ -1,4 +1,18 @@
 communities:
+  comm_regis_owl:
+    actors:
+      regis_owl:
+        template: "characters\\npc_entities\\animals\\owl.w2ent"
+        tags: [NTR_regis_owl]
+        
+    phases:
+      normal:
+        regis_owl:
+          appearance: "owl_01"    # [someappearance, only_on_spawn_bool]
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/regis_owl_spawn
+
   comm_triss:
     actors:
       triss_monster:

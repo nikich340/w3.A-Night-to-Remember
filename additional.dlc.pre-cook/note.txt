@@ -1,0 +1,1 @@
+azar.w2ent and iorweth.w2ent are "dummy" for 9.scene be encoded correctly. Real entities are in post-cook!

@@ -1,6 +1,5 @@
 // ----------------------------------------------------------------------------
-quest function NTRDoorChangeState(tag : name, newState : string, optional keyItemName : name, optional removeKeyOnUse : bool, optional smoooth : bool, optional dontBlockInCombat : bool ) 
-{
+quest function NTRDoorChangeState(tag : name, newState : string, optional keyItemName : name, optional removeKeyOnUse : bool, optional smoooth : bool, optional dontBlockInCombat : bool ) {
 	switch(newState) {
 			case "EDQS_Open":
 				DoorChangeState(tag, EDQS_Open, keyItemName, removeKeyOnUse, smoooth, dontBlockInCombat);
@@ -40,8 +39,7 @@ PlayEffectQuest ( entityTag : name, effectName : name, activate : bool, persiste
 	}
 }*/
 // ----------------------------------------------------------------------------
-quest function NTRPlayMusic( areaName : string, eventName : string, optional saveType : string ) 
-{
+quest function NTRPlayMusic( areaName : string, eventName : string, optional saveType : string ) {
 	if ( areaName == "toussaint" )
 		theSound.InitializeAreaMusic( (EAreaName)AN_Dlc_Bob );
 	else
@@ -51,14 +49,54 @@ quest function NTRPlayMusic( areaName : string, eventName : string, optional sav
 		case "SESB_Save":
 			SoundEventQuest(eventName, SESB_Save);
 			break;
-		default:
+		case "SESB_ClearSaved":
 			SoundEventQuest(eventName, SESB_ClearSaved);
+			break;
+		default:
+			SoundEventQuest(eventName, SESB_DontSave);
 			break;
 	}
 }
-// -------------------------------------------------------------------------------
-quest function NTRTuneNPC( tag : name, level : int, optional attitude : string, optional mortality : string, optional finishers : bool, optional npcGroupType : string, optional scale : float )
+// -------------------------------------------------
+exec function playMusic( areaName : string, eventName : string, optional saveType : string ) {
+	if ( areaName == "toussaint" )
+		theSound.InitializeAreaMusic( (EAreaName)AN_Dlc_Bob );
+	else
+		theSound.InitializeAreaMusic( AreaNameToType(areaName) );
+
+	switch (saveType) {
+		case "SESB_Save":
+			SoundEventQuest(eventName, SESB_Save);
+			break;
+		case "SESB_ClearSaved":
+			SoundEventQuest(eventName, SESB_ClearSaved);
+			break;
+		default:
+			SoundEventQuest(eventName, SESB_DontSave);
+			break;
+	}
+}
+// -------------------------------------------------
+exec function playSound( bankName : string, eventName : string ) {
+	if (!theSound.SoundIsBankLoaded(bankName)) {
+		theSound.SoundLoadBank(bankName, true);
+	}
+	thePlayer.SoundEvent(eventName);
+}
+// ----------------------------------------------------------------------------
+quest function NTRGameplayMusic( areaName : string ) 
 {
+	if ( areaName == "toussaint" ) {
+		theSound.InitializeAreaMusic( (EAreaName)AN_Dlc_Bob );
+		SoundEventQuest("mus_loc_toussaint_general_cs_to_gmpl", SESB_ClearSaved);
+	} else {
+		theSound.InitializeAreaMusic( AreaNameToType(areaName) );
+		// todo
+	}
+
+}
+// -------------------------------------------------------------------------------
+quest function NTRTuneNPC( tag : name, level : int, optional attitude : string, optional mortality : string, optional finishers : bool, optional npcGroupType : string, optional scale : float ) {
 	var NPCs   : array <CNewNPC>;
 	var i      : int;
 	var meshh : CMovingPhysicalAgentComponent;
@@ -167,8 +205,7 @@ quest function NTRTuneNPC( tag : name, level : int, optional attitude : string, 
 	}
 }
 
-latent quest function NTR_teleportTriss( tag : CName)
-{	
+latent quest function NTR_teleportTriss( tag : CName) {	
 	var choose : int;
 	var trissNPC   : CNewNPC;
 	

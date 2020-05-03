@@ -18,7 +18,8 @@ repository:
 
   props:
     teleport:
-      template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\entities\\q704_teleport.w2ent"
+      #template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\entities\\q704_teleport.w2ent"
+      template: "dlc/dlcntr/data/entities/q704_teleport_fixed.w2ent"
 
   animations:
     anim_316_high_standing_determined_enter_run_in_frontal:
@@ -141,7 +142,7 @@ repository:
 production:
   settings:
     sceneid: 1
-    strings-idspace: 9999
+    strings-idspace: 4670
     strings-idstart: 715
 
   placement: "ntr_bob_introscenes_sp"
@@ -279,7 +280,7 @@ storyboard:
     # shot from teleport
     shot_1:
       - actor.placement: [0.0, geralt, [ -5.7042903900, 10.1396484375, -0.3926391602 ], [ 0.0, 0.0, 0.0 ]]
-      - actor.placement: [0.0, triss, [ -5.9788436890, 13.0268554688, -0.5366210938 ], [ 0.0, 0.0, 161.9200134277 ]]
+      - actor.placement: [0.0, triss, [ -5.9788436890, 13.0268554688, -0.5191040039 ], [ 0.0, 0.0, 161.9200134277 ]]
       - actor.placement: [0.0, barghest_1, [ -7.3380260468, 13.4687500000, -1.7402343750 ], [ 0.0, 0.0, 204.3499145508 ]]
       - actor.placement: [0.0, barghest_2, [ -4.9032192230, 13.5212402344, -1.7387084961 ], [ 0.0, 0.0, 167.5300140381 ]]
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
@@ -288,15 +289,16 @@ storyboard:
       - actor.pose: [0.0, barghest_2_None]
       #- prop.placement: [0.0, teleport, [ -5.4560375214, 8.5307617188, -0.7273559570 ], [ 0.0, 0.0, 180.9501037598 ]]
       - prop.placement: [0.0, teleport, [ -5.9195747375, 7.7526855469, -0.5273895264 ], [ 0.0, 0.0, 180.9501037598 ]]
+      - prop.effect.start: [0.0, teleport, teleport_fx]
       - prop.effect.start: [0.0, teleport, activate_fx]
       - cam: [0.0, cam_1_from_teleport]
       - actor.anim: 
           .@pos: [0.0, geralt_high_standing_determined_enter_run_in_frontal]
           stretch: 0.8
       ###    blendout: 0.3
-      #- prop.effect.stop: [0.7, teleport, teleport_fx]
-      - prop.placement: [0.7, teleport, [ -5.9195747375, 7.7526855469, -50.5273895264 ], [ 0.0, 0.0, 180.9501037598 ]]
-      - prop.hide: [0.7, teleport]
+      - prop.effect.stop: [0.7, teleport, teleport_fx]
+      #- prop.placement: [0.7, teleport, [ -5.9195747375, 7.7526855469, -50.5273895264 ], [ 0.0, 0.0, 180.9501037598 ]]
+      #- prop.hide: [0.7, teleport]
 
     # shot from teleport look back
     ###shot_2:
@@ -311,7 +313,6 @@ storyboard:
     # shot triss i dont 
     shot_3:
       - actor.placement: [0.0, geralt, [ -5.7042903900, 10.1396484375, -0.5648803711 ], [ 0.0, 0.0, 0.0 ]]
-      - actor.placement: [0.0, triss, [ -5.9788436890, 13.0268554688, -0.5191040039 ], [ 0.0, 0.0, 161.9200134277 ]]
       - cam.blend.start: [0.0, cam_3_triss_i_dont_]
       - actor.anim: 
           .@pos: [0.0, triss_woman_sorceress_idle_lp_02]

@@ -1,26 +1,35 @@
 #
 # quest structure root segment
 # 
-# (version: 174, saved: 2020-04-11 23:06:32)
+# (version: 208, saved: 2020-05-02 21:39:51)
 #
 ---
 structure:
   quest:
     blocks:
       start:
-        ".editor": [ -4.2857055664, 479.7619018555 ]
+        ".editor": [ -235.4636230469, 491.2406005859 ]
         next:
+          - waituntil.wait_quest_allowed
           - changelayers.hide_hide_hide
-          - changelayers.show_main_layer
       
-      subsegment.intro_part3:
+      subsegment.orphanage:
         ".editor":
-          pos: [ 5900.0, 25.0 ]
+          pos: [ 6317.9936523438, 577.3319091797 ]
           in: [ In ]
           out: [ Out ]
-        segment: intro_part3
+        segment: orphanage
         next:
           - end
+      
+      subsegment.regis_mail_subgraph:
+        ".editor":
+          pos: [ 6104.5864257812, 566.7857055664 ]
+          in: [ In ]
+          out: [ Out ]
+        segment: regis_mail
+        next:
+          - subsegment.orphanage
       
       scene.1_intro_hag:
         ".editor":
@@ -111,10 +120,22 @@ structure:
         _fadein: false
         next: ".done"
       
+      scene.9_triss_final:
+        ".editor":
+          pos: [ 5712.1669921875, 569.4588012695 ]
+          in: [ Input ]
+          out: [ Output ]
+        scene: 9.triss_final.yml
+        placement: bob/introscenes
+        interruptable: true
+        _fadein: false
+        next.Output:
+          - despawn.despawn_triss
+      
       waituntil.StopEffects:
         factdb: [ playAllEffectsStop, "=", 0 ]
         ".editor":
-          pos: [ -100.0, -150.0 ]
+          pos: [ -28.3333435059, 88.3332977295 ]
           in: [ In ]
           out: [ Out ]
         next:
@@ -127,7 +148,7 @@ structure:
           in: [ In ]
           out: [ Out ]
         next:
-          - script.teleport_triss
+          - waituntil.if_triss_not_dead_
       
       waituntil.blood_examined:
         examined: bob/blood_on_wall
@@ -179,19 +200,28 @@ structure:
         next:
           - despawn.despawn_old_barghests
       
-      waituntil.new_wait_until_contact_triss:
-        entered: [ bob/triss_contact, PLAYER ]
+      waituntil.if_triss_not_dead_:
+        factdb: [ trissIntroDead, "=", 0 ]
         ".editor":
-          pos: [ 4100.0, 425.0 ]
+          pos: [ 4583.1806640625, -153.1312713623 ]
           in: [ In ]
           out: [ Out ]
         next:
-          - scene.5_triss_to_monster: Input
+          - script.teleport_triss
+      
+      waituntil.new_wait_until_contact_triss:
+        entered: [ bob/triss_contact, PLAYER ]
+        ".editor":
+          pos: [ 4013.8889160156, 428.3333740234 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - script.Triss_monster_yen_app
       
       waituntil.new_wait_until_fact:
         factdb: [ playMusicStop, "=", 0 ]
         ".editor":
-          pos: [ -100.0, -150.0 ]
+          pos: [ -803.3332519531, -149.1666717529 ]
           in: [ In ]
           out: [ Out ]
         next:
@@ -208,7 +238,7 @@ structure:
       waituntil.new_wait_until_talked:
         talked: ~triss_monster_test
         ".editor":
-          pos: [ -100.0, -150.0 ]
+          pos: [ -639.9999389648, 95.8332977295 ]
           in: [ In ]
           out: [ Out ]
         next:
@@ -241,16 +271,7 @@ structure:
         next:
           - script.tune_hag
       
-      waituntil.wait_1s_2:
-        elapsed: "00:00:01"
-        ".editor":
-          pos: [ 5500.0, 425.0 ]
-          in: [ In ]
-          out: [ Out ]
-        next:
-          - subsegment.intro_part3
-      
-      waituntil.wait_1s_3:
+      waituntil.wait_1s_:
         elapsed: "00:00:01"
         ".editor":
           pos: [ 5300.0, 225.0 ]
@@ -264,7 +285,7 @@ structure:
       waituntil.wait_3s:
         elapsed: "00:00:03"
         ".editor":
-          pos: [ -100.0, -150.0 ]
+          pos: [ 130.8332977295, 250.8332824707 ]
           in: [ In ]
           out: [ Out ]
         next:
@@ -279,6 +300,15 @@ structure:
         next:
           - scene.2_hag_runs: Input
       
+      waituntil.wait_quest_allowed:
+        factdb: [ NTRstartquest, ">=", 1 ]
+        ".editor":
+          pos: [ -43.9961013794, 492.9546813965 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - changelayers.show_main_layer
+      
       waituntil.wait_triss_onDeath:
         factdb: [ trissIntroDead, ">=", 1 ]
         ".editor":
@@ -286,18 +316,47 @@ structure:
           in: [ In ]
           out: [ Out ]
         next:
-          - despawn.despawn_triss
           - script.hide_triss_indicator
-          - script.magic_barrier_deactiv
+          - script.Stop_triss_effects
+          - changelayers.hide_barrier
+          - objective.fight_triss: Success
       
       script.PlayAllEffects:
         ".editor":
-          pos: [ -100.0, -150.0 ]
+          pos: [ 281.6666259766, 5.8333129883 ]
           in: [ In ]
           out: [ Out ]
         function: modPlayAllEffects
         next:
           - waituntil.wait_3s
+      
+      script.Stop_triss_effects:
+        ".editor":
+          pos: [ 5308.6000976562, 574.8638916016 ]
+          in: [ In ]
+          out: [ Out ]
+        function: PlayEffectQuest
+        parameter:
+          - entityTag: cname_triss_monster
+          - effectName: cname_a
+          - activate: false
+          - persistentEffect: false
+          - deactivateAll: true
+          - preventEffectStacking: false
+        next:
+          - script.triss_triss_appearance
+      
+      script.Triss_monster_yen_app:
+        ".editor":
+          pos: [ 4162.7065429688, 351.5278015137 ]
+          in: [ In ]
+          out: [ Out ]
+        function: AppearanceChange
+        parameter:
+          - npcsTag: cname_triss_monster
+          - appearanceName: cname_triss_yen
+        next:
+          - scene.5_triss_to_monster: Input
       
       script.hide_triss_indicator:
         ".editor":
@@ -309,23 +368,6 @@ structure:
           - enable: false
           - bossTag: cname_triss_monster
         next: ".done"
-      
-      script.magic_barrier_deactiv:
-        ".editor":
-          pos: [ 5300.0, 425.0 ]
-          in: [ In ]
-          out: [ Out ]
-        function: PlayEffectQuest
-        parameter:
-          - entityTag: cname_NTR_magic_barrier1
-          - effectName: cname_deactivate
-          - activate: true
-          - persistentEffect: false
-          - deactivateAll: false
-          - preventEffectStacking: false
-        next:
-          - waituntil.wait_1s_2
-          - objective.fight_triss: Success
       
       script.magic_barrier_fx:
         ".editor":
@@ -344,7 +386,7 @@ structure:
       
       script.new_scriptcall:
         ".editor":
-          pos: [ -100.0, -150.0 ]
+          pos: [ -560.8333129883, -221.6666259766 ]
           in: [ In ]
           out: [ Out ]
         function: NTRPlayAllMusic
@@ -377,7 +419,7 @@ structure:
       
       script.teleport_triss:
         ".editor":
-          pos: [ 4694.2548828125, -149.6449890137 ]
+          pos: [ 4796.4770507812, -151.8672180176 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_teleportTriss
@@ -396,6 +438,18 @@ structure:
           - enable: true
           - bossTag: cname_triss_monster
         next: ".done"
+      
+      script.triss_triss_appearance:
+        ".editor":
+          pos: [ 5513.8125, 576.9298095703 ]
+          in: [ In ]
+          out: [ Out ]
+        function: AppearanceChange
+        parameter:
+          - npcsTag: cname_triss_monster
+          - appearanceName: cname_triss
+        next:
+          - scene.9_triss_final: Input
       
       script.tune_barghest_1:
         ".editor":
@@ -480,9 +534,9 @@ structure:
           - scale: -1.0
         next: ".done"
       
-      changelayers.hide_after_triss:
+      changelayers.hide_barrier:
         ".editor":
-          pos: [ 4935.0, 138.4999847412 ]
+          pos: [ 5292.0078125, 421.9685058594 ]
           hint: hide-only
           in: []
           out: []
@@ -492,11 +546,11 @@ structure:
         hide:
           - after_triss_to_monster
         next:
-          - subsegment.intro_part3
+          - despawn.despawn_barghests
       
       changelayers.hide_hide_hide:
         ".editor":
-          pos: [ 176.6666717529, 571.6666870117 ]
+          pos: [ -25.2380828857, 583.571472168 ]
           hint: hide-only
           in: []
           out: []
@@ -506,6 +560,7 @@ structure:
         hide:
           - after_hag
           - after_triss_to_monster
+          - owl_layer
         next: ".done"
       
       changelayers.show_blood_tracks:
@@ -545,7 +600,7 @@ structure:
       
       changelayers.show_main_layer:
         ".editor":
-          pos: [ 201.9047698975, 406.4285888672 ]
+          pos: [ 178.4047851562, 467.9285888672 ]
           hint: show-only
           in: []
           out: []
@@ -579,7 +634,7 @@ structure:
         spawnsets:
           - comm_barghests
         next:
-          - waituntil.wait_1s_3
+          - waituntil.wait_1s_
       
       spawn.spawn_triss_normal:
         ".editor":
@@ -603,6 +658,16 @@ structure:
           - comm_triss
         next:
           - script.tune_triss
+      
+      despawn.despawn_barghests:
+        ".editor":
+          pos: [ 5445.1875, 427.6295776367 ]
+          hint: despawn-only
+          in: []
+          out: []
+        spawnsets:
+          - comm_barghests
+        next: ".done"
       
       despawn.despawn_hag:
         ".editor":
@@ -628,13 +693,14 @@ structure:
       
       despawn.despawn_triss:
         ".editor":
-          pos: [ 5300.0, 525.0 ]
+          pos: [ 5889.8676757812, 572.5427246094 ]
           hint: despawn-only
           in: []
           out: []
         spawnsets:
           - comm_triss
-        next: ".done"
+        next:
+          - subsegment.regis_mail_subgraph
       
       journal.journal_entry_intro_hag:
         ".editor": [ 2100.0, 325.0 ]
@@ -690,12 +756,12 @@ structure:
           - waituntil.blood_examined
       
       settime.set_21am:
-        ".editor": [ 312.0238037109, 304.7619018555 ]
+        ".editor": [ 373.66015625, 388.0346374512 ]
         time: "21:00"
         next:
           - spawn.spawn_intro_hag
       
       end:
-        ".editor": [ 6100.0, 25.0 ]
+        ".editor": [ 6545.3364257812, 580.1529541016 ]
         next: ".done"
       

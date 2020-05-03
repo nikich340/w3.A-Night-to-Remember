@@ -141,7 +141,7 @@ repository:
 production:
   settings:
     sceneid: 1
-    strings-idspace: 9999
+    strings-idspace: 4670
     strings-idstart: 700
 
   placement: "ntr_bob_introscenes_sp"
