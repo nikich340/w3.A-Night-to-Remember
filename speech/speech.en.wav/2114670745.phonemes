@@ -1,0 +1,25 @@
+;meta[language=en]
+;meta[version=1]
+;meta[text=Crazy nightmare.]
+;meta[translation=kɹˈeɪzi nˈaɪtmeə]
+;meta[audio-hypothesis=SIL AY HH AY HH IH Z IH T N AY D M AE T]
+;
+;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
+;
+;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
+------------------------------------------------------------------------
+k       |  310|  345|  1.00| -1.00| <- VERIFY! | k  ~  AY [  310 -  345]
+ɹ       |  345|  445|  1.00| -1.00| <- VERIFY! | ɹ  ~  HH [  345 -  445]
+eɪ      |  445|  515|  1.10|  0.25| ok         | eɪ ~  AY [  445 -  515]
+;_       |  515|  595|  1.00| -1.00| <- VERIFY! | _  d  HH [  515 -  595]
+;_       |  595|  625|  1.00| -1.00| <- VERIFY! | _  d  IH [  595 -  625]
+z       |  625|  705|  1.00|  2.00| ok         | z  ~  Z  [  625 -  705]
+i       |  705|  755|  1.00|  1.70| ok         | i  ~  IH [  705 -  755]
+;_       |  755|  815|  1.00| -1.00| <- VERIFY! | _  d  T  [  755 -  815]
+------------------------------------------------------------------------
+n       |  815|  925|  1.00|  2.00| ok         | n  ~  N  [  815 -  925]
+aɪ      |  925| 1025|  1.10|  2.00| ok         | aɪ ~  AY [  925 - 1025]
+t       | 1025| 1085|  1.00|  1.70| ok         | t  ~  D  [ 1025 - 1085]
+m       | 1085| 1185|  1.00|  2.00| ok         | m  ~  M  [ 1085 - 1185]
+eə      | 1185| 1335|  1.00|  1.70| ok         | eə ~  AE [ 1185 - 1335]
+;_       | 1335| 1380|  1.00| -1.00| <- VERIFY! | _  d  T  [ 1335 - 1380]

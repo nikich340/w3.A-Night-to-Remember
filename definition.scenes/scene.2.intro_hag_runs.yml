@@ -416,29 +416,50 @@ storyboard:
       - actor.pose: [0.0, hag_grave_lvl1_barons_wife_idle]
       - prop.placement: [0.0, pc_igni, [ 14.2372856140, -29.0942382813, -1.3010253906 ], [ 0.0, 0.0, 0.0 ]]
       - cam.blend.start: [0.0, cam_1_Shot1]
-      - actor.anim: [0.0, geralt_man_geralt_sword_attack_fast_1_rp_40ms]
-      - actor.anim: [0.3, hag_grave_lvl1_barons_wife_hit_front_left]
-      - actor.effect.start: [0.3, hag_grave_lvl1_barons_wife, light_hit]
+      - actor.anim: 
+          .@pos: [0.0, geralt_man_geralt_sword_attack_fast_1_rp_40ms]
+          blendout: 0.3
+      - actor.anim: 
+          .@pos: [0.37, hag_grave_lvl1_barons_wife_hit_front_left]
+          blendin: 0.3
+          blendout: 0.3
+      - actor.effect.start: [0.23, hag_grave_lvl1_barons_wife, light_hit]
       - actor.effect.stop: [1.0, hag_grave_lvl1_barons_wife, light_hit]
-      - actor.placement: [0.925, hag_grave_lvl1_barons_wife, [ 9.0922508240, -31.0449218750, -1.3558731079 ], [ 0.0, 0.0, 220.0800018311 ]]
-
+      - actor.placement.start: [1.0, geralt, [ 10.9685783386, -35.2314453125, -1.4523925781 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.placement.start: [0.9077, hag_grave_lvl1_barons_wife, [ 10.0777931213, -32.2504882813, -1.3558731079 ], [ 0.0, 0.0, 220.0800018311 ]]
+      
     # shot Shot2
     shot_2:
-      - actor.placement: [0.0, geralt, [ 10.0716934204, -33.7092285156, -1.3896484375 ], [ 0.0, 0.0, 14.9600000381 ]]
+      - actor.placement.end: [0.1385, hag_grave_lvl1_barons_wife, [ 9.0922508240, -31.0449218750, -1.3558731079 ], [ 0.0, 0.0, 220.0800018311 ]]
+      - actor.placement.end: [0.23, geralt, [ 10.0716934204, -33.7092285156, -1.3896484375 ], [ 0.0, 0.0, 14.9600000381 ]]
       - cam.blend.key: [0.33, cam_2_Shot2]
-      - actor.anim: [0.0, geralt_man_geralt_sword_attack_fast_7_lp_40ms]
-      - actor.anim: [0.3, hag_grave_lvl1_barons_wife_hit_front_right_down]
-      - actor.effect.start: [0.3, hag_grave_lvl1_barons_wife, heavy_hit]
+      - actor.anim: 
+          .@pos: [0.0, geralt_man_geralt_sword_attack_fast_7_lp_40ms]
+          blendin: 0.3
+          blendout: 0.3
+      - actor.anim: 
+          .@pos: [0.37, hag_grave_lvl1_barons_wife_hit_front_right_down]
+          blendin: 0.3
+          blendout: 0.3
+      - actor.effect.start: [0.37, hag_grave_lvl1_barons_wife, heavy_hit]
       - actor.effect.stop: [1.0, hag_grave_lvl1_barons_wife, heavy_hit]
-      - actor.placement: [0.925, hag_grave_lvl1_barons_wife, [ 8.0168952942, -29.8359375000, -1.1220703125 ], [ 0.0, 0.0, 219.9699096680 ]]
+      - actor.placement.start: [1.0, geralt, [ 10.0716934204, -33.7092285156, -1.3896484375 ], [ 0.0, 0.0, 14.9600000381 ]]
+      - actor.placement.start: [0.9077, hag_grave_lvl1_barons_wife, [ 9.0922508240, -31.0449218750, -1.3558731079 ], [ 0.0, 0.0, 220.0800018311 ]]
     
     # shot Shot3
     shot_3:
-      - actor.placement: [0.0, geralt, [ 9.3414878845, -31.8808593750, -1.3126831055 ], [ 0.0, 0.0, 14.9600000381 ]]
+      - actor.placement.end: [0.12, hag_grave_lvl1_barons_wife, [ 8.0168952942, -29.8359375000, -1.1220703125 ], [ 0.0, 0.0, 219.9699096680 ]]
+      - actor.placement.end: [0.2, geralt, [ 9.3414878845, -31.8808593750, -1.3126831055 ], [ 0.0, 0.0, 14.9600000381 ]]
       - cam.blend.key: [0.66, cam_3_Shot3]
-      - actor.anim: [0.0, geralt_man_geralt_sword_dodge_right_350m]
-      - actor.anim: [0.0, hag_grave_lvl1_barons_wife_attack_04]
-      - actor.placement: [0.7133, hag_grave_lvl1_barons_wife, [ 9.9419136047, -32.9479980469, -1.3855590820 ], [ 0.0, 0.0, 219.9699096680 ]]
+      - actor.anim: 
+          .@pos: [0.0, geralt_man_geralt_sword_dodge_right_350m]
+          blendin: 0.3
+      - actor.anim: 
+          .@pos: [0.0, hag_grave_lvl1_barons_wife_attack_04]
+          blendin: 0.3
+          blendout: 0.3
+      - actor.placement.start: [0.58, hag_grave_lvl1_barons_wife, [ 8.0168952942, -29.8359375000, -1.1220703125 ], [ 0.0, 0.0, 219.9699096680 ]]
+      - actor.placement.end: [0.7133, hag_grave_lvl1_barons_wife, [ 9.9419136047, -32.9479980469, -1.3855590820 ], [ 0.0, 0.0, 219.9699096680 ]]
 
     # shot Shot4 igni
     shot_4:
@@ -446,24 +467,36 @@ storyboard:
       #&- actor.placement: [0.0, geralt, [ 13.4505882263, -32.7272949219, -1.3126831055 ], [ 0.0, 0.0, 175.7800292969 ]]
       - prop.placement: [0.0, pc_igni, [ 11.9700927734, -33.0529785156, -0.0212402344 ], [ 0.0, 0.0, 180.1800079346 ]]
       - cam.blend.end: [0.4, cam_4_Shot4_igni, rapid]
-      - actor.anim: [0.0, hag_grave_lvl1_barons_wife_step_l90]
-      - actor.anim: [0.25, geralt_man_ger_sword_ignii_front_rp]
-      - actor.placement: [0.37, hag_grave_lvl1_barons_wife, [ 9.9419136047, -32.9479980469, -1.3855590820 ], [ 0.0, 0.0, 297.7399291992 ]]
+      - actor.anim: 
+          .@pos: [0.0, hag_grave_lvl1_barons_wife_step_l90]
+          blendin: 0.3
+          blendout: 0.2
+      - actor.anim: 
+          .@pos: [0.25, geralt_man_ger_sword_ignii_front_rp]
+          blendout: 0.3
+      - actor.placement.start: [0.296, hag_grave_lvl1_barons_wife, [ 9.9419136047, -32.9479980469, -1.3855590820 ], [ 0.0, 0.0, 219.9699096680 ]]
+      - actor.placement.end: [0.37, hag_grave_lvl1_barons_wife, [ 9.9419136047, -32.9479980469, -1.3855590820 ], [ 0.0, 0.0, 297.7399291992 ]]
       #&- actor.placement: [0.7, geralt, [ 13.4505882263, -32.7272949219, -1.3126831055 ], [ 0.0, 0.0, 101.0900344849 ]]
       - prop.effect.start: [0.45, pc_igni, cone_power]
       #- prop.effect.stop: [1.0, pc_igni, cone_power]
       - actor.effect.start: [0.55, hag_grave_lvl1_barons_wife, critical_burning]
-      - actor.anim: [0.55, hag_grave_lvl1_barons_wife_effect_burning_start]
+      - actor.anim: 
+          .@pos: [0.55, hag_grave_lvl1_barons_wife_effect_burning_start]
+          blendin: 0.3
+          blendout: 0.3
     
     # shot Shot5 burn2
     shot_6:
       - cam: [0.0, cam_6_Shot5_burn2]
-      - actor.placement: [0.214, hag_grave_lvl1_barons_wife, [ 8.9629669189, -33.2421875000, -1.3855590820 ], [ 0.0, 0.0, 297.7399291992 ]]
-      - actor.anim: [0.214, hag_grave_lvl1_barons_wife_effect_burning_end]
-
-    # shot Shot6 rotate
-    shot_7:
-      - actor.anim: [0.0, hag_grave_lvl1_barons_wife_walk_start_l135]
+      - actor.placement.start: [0.1533, hag_grave_lvl1_barons_wife, [ 9.9419136047, -32.9479980469, -1.3855590820 ], [ 0.0, 0.0, 297.7399291992 ]]
+      - actor.placement.end: [0.232, hag_grave_lvl1_barons_wife, [ 8.9629669189, -33.2421875000, -1.3855590820 ], [ 0.0, 0.0, 297.7399291992 ]]
+      - actor.anim: 
+          .@pos: [0.154, hag_grave_lvl1_barons_wife_effect_burning_end]
+          blendin: 0.3
+          blendout: 0.2
+      - actor.anim: 
+          .@pos: [0.9476, hag_grave_lvl1_barons_wife_walk_start_l135]
+          blendin: 0.2
 
     # shot Shot8 run1
     shot_8:
@@ -502,11 +535,11 @@ dialogscript:
     # shot Shot1
     - CUE: shot_1
     # (longest) anim: man_geralt_sword_attack_fast_1_rp_40ms
-    - PAUSE: 1.6000000238
+    - PAUSE: 1.3000000238
     # shot Shot2
     - CUE: shot_2
     # (longest) anim: man_geralt_sword_attack_fast_7_lp_40ms
-    - PAUSE: 1.6000000238
+    - PAUSE: 1.3000000238
     # shot Shot3
     - CUE: shot_3
     # (longest) anim: man_geralt_sword_dodge_right_350m
@@ -518,10 +551,10 @@ dialogscript:
     # shot Shot5 burn2
     - CUE: shot_6
     # (longest) anim: effect_burning_end
-    - PAUSE: 4.1174
+    - PAUSE: 3.815
     # shot Shot6 rotate
-    - CUE: shot_7
-    - PAUSE: 0.67
+    ##- CUE: shot_7
+    - PAUSE: 0.47
     # shot Shot8 run1
     - CUE: shot_8
     - PAUSE: 2

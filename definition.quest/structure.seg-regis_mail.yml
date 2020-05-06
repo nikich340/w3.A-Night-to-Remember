@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: regis_mail
 # 
-# (version: 208, saved: 2020-05-02 21:39:51)
+# (version: 218, saved: 2020-05-06 17:51:31)
 #
 ---
 structure:
@@ -24,7 +24,8 @@ structure:
           _fadein: false
           next.Output:
             - changelayers.owl_layer
-            - objective.new_quest_objective: Activate
+            - objective.Fresh_air: Activate
+            - questoutcome.Finish_Night_of_Nightmare: Success
         
         waituntil.mail_looted:
           looted: bob/regis_mail
@@ -33,36 +34,35 @@ structure:
             in: [ In ]
             out: [ Out ]
           next:
-            - objective.new_quest_objective_1: Success
-            - waituntil.wait_1s
+            - objective.Read_letter: Success
+            - waituntil.wait_2s
         
         waituntil.not_read:
           factdb: [ regisLetterRead, "=", 0 ]
           ".editor":
-            pos: [ 1616.9644775391, 239.359664917 ]
+            pos: [ 1764.4644775391, 255.609664917 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - waituntil.wait_1s
+            - waituntil.wait_2s
         
         waituntil.read:
-          factdb: [ regisLetterRead, ">=", 1 ]
+          factdb: [ NTRregisLetterRead, ">=", 1 ]
           ".editor":
-            pos: [ 1621.2926025391, 349.0728759766 ]
+            pos: [ 1783.7926025391, 364.6978759766 ]
             in: [ In ]
             out: [ Out ]
           next:
             - out
         
-        waituntil.wait_1s:
-          elapsed: "00:00:01"
+        waituntil.wait_2s:
+          elapsed: "00:00:02"
           ".editor":
-            pos: [ 1616.9644775391, 139.7763214111 ]
+            pos: [ 1619.4644775391, 77.2763290405 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - waituntil.not_read
-            - waituntil.read
+            - script.Book_read_checker
         
         waituntil.wait_until_outhome:
           inside: [ bob/homeout_area, PLAYER ]
@@ -72,8 +72,21 @@ structure:
             out: [ Out ]
           next:
             - waituntil.mail_looted
-            - objective.new_quest_objective: Success
-            - objective.new_quest_objective_1: Activate
+            - objective.Fresh_air: Success
+            - objective.Read_letter: Activate
+        
+        script.Book_read_checker:
+          ".editor":
+            pos: [ 1565.6571044922, 250.7474975586 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTRBookReadChecker
+          parameter:
+            - bookName: cname_ntr_notices_regis_letter
+            - factName: NTRregisLetterRead
+          next:
+            - waituntil.not_read
+            - waituntil.read
         
         script.Undress_geralt:
           ".editor":
@@ -112,21 +125,27 @@ structure:
           next:
             - waituntil.wait_until_outhome
         
-        objective.new_quest_objective:
+        objective.Fresh_air:
           ".editor": [ 1017.1463623047, 477.3131408691 ]
           objective: nighttoremember/regis_owl/out_home
           notify: true
           track: false
           next: ".done"
         
-        objective.new_quest_objective_1:
+        objective.Read_letter:
           ".editor": [ 1417.9783935547, 460.5590209961 ]
           objective: nighttoremember/regis_owl/take_letter
           notify: true
           track: true
           next: ".done"
         
+        questoutcome.Finish_Night_of_Nightmare:
+          ".editor": [ 762.4936523438, 507.0811767578 ]
+          quest: nightofnightmares
+          notify: true
+          next: ".done"
+        
         out:
-          ".editor": [ 1952.1585693359, 261.1586914062 ]
+          ".editor": [ 2139.0334472656, 298.6586914062 ]
           next: ".done"
         

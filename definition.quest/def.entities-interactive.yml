@@ -13,14 +13,6 @@ templates:
         CAppearanceComponent0:
           ".type": CAppearanceComponent
           forcedAppearance: 1_full
-          #attachmentReplacements:
-          #  ".type": SAttachmentReplacements
-          #  replacements:
-          #    - ".type": SAttachmentReplacement
-          #      oldName: proxy_container_D080CDE3-4BC2F83A-79EF6081-72A479C2
-          #      oldClass: CExternalProxyComponent
-          #      newName: container
-          #      newClass: CInventoryComponent
         container:
           ".type": CInventoryComponent
     appearances:
@@ -33,12 +25,6 @@ templates:
     usedAppearances:
       - 2_empty
       - 1_full
-    #slots:
-    #  fx_point:
-    #    ".type": EntitySlot
-    #    wasIncluded: true
-     #   transform:
-     #     pos: [ 0.0, 0.0, 0.3000000119 ]
     templateParams:
       - ".type": CR4LootParam
         name: "loot"

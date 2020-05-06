@@ -1,3 +1,11 @@
+quest function NTRBookReadChecker(bookName : name, factName : string) {
+	var books : array<SItemUniqueId>;
+	books = thePlayer.inv.GetItemsByName(bookName);
+	if ( books.Size() >= 1 && thePlayer.inv.IsBookRead(books[0]) ) {
+		FactsAdd(factName, 1);
+	}
+}
+
 // ----------------------------------------------------------------------------
 quest function NTRDoorChangeState(tag : name, newState : string, optional keyItemName : name, optional removeKeyOnUse : bool, optional smoooth : bool, optional dontBlockInCombat : bool ) {
 	switch(newState) {

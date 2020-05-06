@@ -181,6 +181,14 @@ repository:
       animation: "geralt_neutral_question_what_face"
       frames: 100
 
+    mimicsanim_122_geralt_neutral_gesture_death_longer_face:
+      animation: "geralt_neutral_gesture_death_longer_face"
+      frames: 300
+
+    mimicsanim_168_geralt_reaction_pain_face:
+      animation: "geralt_reaction_pain_face"
+      frames: 280
+
   actor.poses:
     pose_0_high_standing_determined_idle:
       idle_anim: "high_standing_determined_idle"
@@ -326,6 +334,21 @@ repository:
       transform:
         pos: [ -6.4013252258, 2.8930664063, 1.5077667236 ]
         rot: [ 0.0, 350.0550231934, 316.3636474609 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.8388991356, 7.8388991356 ]
+        focus: [ 5.3388991356, 6.3388991356 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_10_Shot5_who_is_it:
+      fov: 40.0
+      transform:
+        pos: [ -1.7310009003, 5.2707519531, 3.8079071045 ]
+        rot: [ 0.0, 287.4099426270, 115.1486511230 ]
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
@@ -905,6 +928,21 @@ repository:
         plane: "medium"
         tags: [ "ext" ]
 
+    cam_51_Shot_mirror_grlt_pain_start3:
+      fov: 15.0
+      transform:
+        pos: [ 5.8416576385, 6.1687011719, 0.7577209473 ]
+        rot: [ 0.0, 0.6703375578, 68.3631591797 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.1143889427, 7.1143889427 ]
+        focus: [ 4.6143889427, 5.6143889427 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
     cam_48_Shot_mirror_grlt_unseen:
       fov: 30.0
       transform:
@@ -945,6 +983,21 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 3.1029810905, 6.1029810905 ]
         focus: [ 3.6029810905, 4.6029810905 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_52_Shot_mirror_grlt_pain_start4:
+      fov: 15.0
+      transform:
+        pos: [ 3.9740276337, 12.1855468750, 0.9077301025 ]
+        rot: [ 0.0, 359.6253356934, 146.1333618164 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.1143889427, 7.1143889427 ]
+        focus: [ 4.6143889427, 5.6143889427 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -1056,6 +1109,9 @@ production:
 
       cam_10_Shot5_what_the_hell:
         repo: "cam_10_Shot5_what_the_hell"
+
+      cam_10_Shot5_who_is_it:
+        repo: "cam_10_Shot5_who_is_it"
 
       cam_11_Shot6_eredin_appear:
         repo: "cam_11_Shot6_eredin_appear"
@@ -1174,12 +1230,19 @@ production:
       cam_50_Shot_mirror_grlt_unseen_death:
         repo: "cam_50_Shot_mirror_grlt_unseen_death"
 
+      cam_51_Shot_mirror_grlt_pain_start3:
+        repo: "cam_51_Shot_mirror_grlt_pain_start3"
+
+      cam_52_Shot_mirror_grlt_pain_start4:
+        repo: "cam_52_Shot_mirror_grlt_pain_start4"
+
     soundbanks:
       - monster_dettlaff_vampire
       - monster_dettlaff_monster
       - qu_ep2_704_dlg_fairytaleworld
       - qu_ep1_605
       - grunt_vo_geralt
+      - qu_ep2_704_dlg
 
     animations:
       triss_monster_scared_start:
@@ -1491,6 +1554,28 @@ production:
         blendout: 0.0
 
     animations.mimic:
+      geralt_geralt_neutral_gesture_death_longer_face:
+        actor: "geralt"
+        repo: "mimicsanim_122_geralt_neutral_gesture_death_longer_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      geralt_geralt_reaction_pain_face:
+        actor: "geralt"
+        repo: "mimicsanim_168_geralt_reaction_pain_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
       triss_monster_geralt_neutral_gesture_smile_face:
         actor: "triss_monster"
         repo: "mimicsanim_433_geralt_neutral_gesture_smile_face"
@@ -1737,7 +1822,7 @@ storyboard:
       #- actor.placement: [0.0, geralt, [ -2.9319896698, 6.1804199219, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
       - actor.unequip.right: [0.0, geralt]
       - actor.placement: [0.0, triss_monster, [ -2.7775707245, 5.1667480469, -0.2139739990 ], [ 0.0, 0.0, 333.0500183105 ]]
-      - cam: [0.0, cam_10_Shot5_what_the_hell]
+      - cam: [0.0, cam_10_Shot5_who_is_it]
 
     shot_11_kill:
       - actor.placement: [0.0, Eredin_vesemir, [ -3.5768527985, 15.8188476563, -0.3903851318 ], [ 0.0, 0.0, 201.8799591064 ]]
@@ -1865,15 +1950,15 @@ storyboard:
     # shot Shot16 azar appear
     shot_18_phrase:
       - cam.blend.end: [0.3, cam_15_Shot16_azar_appear]
+      - cam.blend.start: [1.0, cam_15_Shot16_azar_appear]
       - prop.effect.stop: [0.4, portal_04, teleport]
 
-    shot_18_2:
-      - cam: [0.0, cam_15_Shot16_azar_appear2]
     # shot Shot17 azar to aggresive
     shot_19:
       #- actor.placement: [0.0, geralt, [ -3.5566349030, 7.2065429688, -0.2647094727 ], [ 0.0, 0.0, 352.2526550293 ]]
       #- actor.placement: [0.0, Azar_Javed, [ -6.6261005402, 12.2111816406, -0.6538085938 ], [ 0.0, 0.0, 209.7400207520 ]]
       - actor.pose: [0.5, Azar_Javed_High_Standing2_Determined]
+      - cam.blend.end: [1.0, cam_15_Shot16_azar_appear2]
       #- cam: [0.0, cam_17_Shot17_azar_to_aggresive]
       - actor.anim: 
           .@pos: [0.0, Azar_Javed_high_standing_determined_to_high_standing_determined2]
@@ -1883,8 +1968,9 @@ storyboard:
     # shot Shot18 iorweth appear
     shot_20:
       - actor.placement: [0.0, Iorweth, [ 1.2958259583, 10.9382324219, -0.2285766602 ], [ 0.0, 0.0, 108.0200119019 ]]
-      - cam: [0.0, cam_18_Shot18_iorweth_appear]
-      - actor.lookat: [0.0, Eredin_vesemir2, Iorweth]
+      - cam: [0.0, cam_14_Shot14_mask_close]
+      - cam: [0.4, cam_19_Shot19_iorewth_phrase]
+      - actor.lookat: [0.2, Eredin_vesemir2, Iorweth]
       - actor.anim: 
           .@pos: [0.0, Iorweth_high_standing_determined_enter_front_45_right]
           clipfront: 2.0
@@ -1896,7 +1982,6 @@ storyboard:
       - actor.lookat: [0.0, Iorweth, geralt]
       - actor.lookat: [0.0, Azar_Javed, geralt]
       - actor.pose: [0.2, Iorweth_High_Standing_Proud]
-      - cam: [0.0, cam_19_Shot19_iorewth_phrase]
       - actor.anim: 
           .@pos: [0.0, Iorweth_high_standing_determined_to_high_standing_proud]
           blendin: 0.5
@@ -2054,6 +2139,7 @@ storyboard:
           .@pos: [0.0, geralt_high_standing_determined_enter_run_in_frontal_left]
           #blendin: 0.3
           clipend: 2.0
+      - prop.effect.start: [0.5, cocoon, growing]
           
     # shot Shot mirror1 GERALT STOP
     shot_40:
@@ -2071,25 +2157,21 @@ storyboard:
     # shot Shot mirror heart keycam1
     shot_41:
       - prop.placement: [0.0, cocoon, [ 6.5678405762, 7.7285156250, 1.5510864258 ], [ 0.0, 0.0, 80.8499832153 ]]
-      - prop.effect.start: [0.0, cocoon, growing]
       - actor.placement: [0.0, mirror, [ 6.0930747986, 9.2265625000, 4.3273620605 ], [ 0.0, 0.0, 83.2402343750 ]]
       - actor.pose: [0.0, mirror_ep1_mirror_sitting_ground_idle]
       - actor.sound: [0.0, mirror, monster_dettlaff_monster_construct_beating_heart_vfx_LP]
-      - cam.blend.start: [0.0, cam_32_Shot_mirror_heart_keycam, smooth]
+      - cam: [0.0, cam_33_Shot_mirror_heart_keycam2]
       - actor.lookat: [0.6, geralt, mirror]
-
-    # shot Shot mirror heart keycam2
-    shot_42:
-      - cam.blend.end: [0.25, cam_33_Shot_mirror_heart_keycam2, smooth]
-      - cam.blend.start: [0.75, cam_33_Shot_mirror_heart_keycam2]
+      - cam.blend.start: [1.0, cam_33_Shot_mirror_heart_keycam2]
 
     # shot Shot mirror heart
     shot_43:
-      - cam.blend.end: [0.5, cam_34_Shot_mirror_heart]
+      - cam.blend.end: [1.0, cam_34_Shot_mirror_heart]
 
     # shot Shot mirror close
     shot_44:
-      - cam: [0.0, cam_35_Shot_mirror_close]
+      - cam.blend.start: [0.2, cam_34_Shot_mirror_heart]
+      - cam.blend.end: [0.8, cam_35_Shot_mirror_close, smooth]
 
   section_choice_mirror:
     CHOICE_1:
@@ -2216,7 +2298,7 @@ storyboard:
       - actor.placement.start: [0.26, mirror, [ 6.0930747986, 9.2265625000, 4.3273620605 ], [ 0.0, 0.0, 83.2402343750 ]]
       - actor.placement.key: [0.5, mirror, [ 6.0930747986, 9.2265625000, 1.2669372559 ], [ 0.0, 0.0, 83.2402343750 ]]
       - actor.placement.end: [1.0, mirror, [ 6.0930747986, 9.2265625000, 0.5670547485 ], [ 0.0, 0.0, 83.2402343750 ], smooth]
-      - cam: [0.4, cam_39_Shot_mirror_slow_fall]
+      #- cam: [0.4, cam_39_Shot_mirror_slow_fall]
 
       - actor.anim:
           actor: geralt
@@ -2255,16 +2337,10 @@ storyboard:
       #- actor.pose: [0.0, geralt_high_standing_determined_idle]
       - prop.placement: [0.0, q605_witcher_sword, [ 1.7568702698, 7.8320312500, 0.0082397461 ], [ 0.0, 0.0, 347.0199890137 ]]
       - actor.unequip.right: [0.4, geralt]
-      - cam.blend.end: [0.5, cam_46_Shot_mirror_grlt_pain_start2]
+      - cam.blend.key: [0.5, cam_46_Shot_mirror_grlt_pain_start2]
       - actor.effect.start: [0.0, geralt, geralt_face_mark]
       - actor.sound: [0.0, geralt, q605_geralt_mark]
-      - actor.anim.mimic:
-          actor: "geralt"
-          .@pos: [0.3, mimicsanim_168_geralt_reaction_pain_face]
-          #weight: 1.0
-          #stretch: 1.0
-          blendin: 0.5
-          blendout: 0.5
+      - actor.anim.mimic: [0.0, geralt_geralt_neutral_gesture_death_longer_face]
       - actor.anim: 
           actor: geralt
           .@pos: [0.0, anim_8407_man_kneeling_on_floor_in_pain_start]
@@ -2277,10 +2353,11 @@ storyboard:
           blendin: 0.23
           blendout: 0.3
           clipend: 7.6
+      - cam.blend.end: [1.0, cam_52_Shot_mirror_grlt_pain_start4]
 
     shot_demon_very_close2:
       - cam: [0.0, cam_41_Shot_mirror_demon_very_close_smile]
-      - cam: [0.5, cam_44_Shot_mirror_grlt_pain_stoop]
+      - cam.blend.start: [0.5, cam_52_Shot_mirror_grlt_pain_start4]
       - actor.placement: [0.0, unseen, [ -4.0275592804, 8.4887695313, -0.2921752930 ], [ 0.0, 0.0, 265.0600280762 ]]
       - actor.pose: [0.0, unseen_q704_truth_07_nolwenn_standing_aggressive_idle]
       - actor.anim: 
@@ -2291,27 +2368,22 @@ storyboard:
 
     shot_pain_end:
       #- actor.placement: [0.0, unseen, [ -3.8350543976, 8.5053710938, -0.2921752930 ], [ 0.0, 0.0, 257.1499938965 ]]
-      - actor.anim.mimic:
-          actor: "geralt"
-          .@pos: [0.3, mimicsanim_168_geralt_reaction_pain_face]
-          #weight: 1.0
-          #stretch: 1.0
-          blendin: 0.5
-          blendout: 0.5
+      - actor.anim.mimic: [0.0, geralt_geralt_neutral_gesture_death_longer_face]
       - anim:
           actor: geralt
           .@pos: [0.0, anim_8408_man_kneeling_on_floor_in_pain_stop_01]
           blendin: 0.3
           blendout: 0.5
       - actor.pose: [0.2, geralt_high_standing_determined_idle]
+      - cam.blend.end: [0.7, cam_44_Shot_mirror_grlt_pain_stoop]
+      - cam.blend.start: [0.8, cam_44_Shot_mirror_grlt_pain_stoop, smooth]
 
     shot_pain_end2:
       - actor.anim: 
           .@pos: [0.6, geralt_high_standing_determined_turn180_left]
           blendin: 0.5
       - actor.lookat: [0.8, geralt, unseen]
-      - cam.blend.start: [0.0, cam_44_Shot_mirror_grlt_pain_stoop, smooth]
-      - cam.blend.end: [0.5, cam_48_Shot_mirror_grlt_unseen]
+      - cam.blend.end: [0.3, cam_48_Shot_mirror_grlt_unseen]
 
     shot_unseen_close:
       - cam: [0.0, cam_49_Shot_mirror_grlt_unseen_kill]
@@ -2322,18 +2394,25 @@ storyboard:
           .@pos: [0.0, anim_482_q704_truth_07_unseen_standing_aggressive_gesture_kill]
           blendin: 0.0
           blendout: 0.0
+      - actor.sound: [0.9, unseen, q704_you_died]
 
     shot_unseen_killing:
       - actor.placement: [0.0, geralt, [ 1.1019706726, 7.9904785156, -0.0100479126 ], [ 0.0, 0.0, 86.9623718262 ]]
       - actor.placement: [0.0, unseen, [ -4.0275592804, 8.4887695313, -0.021752930 ], [ 0.0, 0.0, 265.0600280762 ]]
       #- cam: [0.7, cam_50_Shot_mirror_grlt_unseen_death]
       - cam: [0.0, cam_48_Shot_mirror_grlt_unseen]
-      - actor.pose: [0.3, geralt_Low_Lying_Dead]
       - actor.anim:
           actor: geralt
-          .@pos: [0.0, anim_7608_low_standing_paralyzed_die_to_low_lying_dead] #anim_5737_man_ger_sword_death_1]
-          blendin: 0.3
-      - actor.effect.start: [0.1, geralt, heavy_hit]
+          .@pos: [0.0, anim_471_q704_truth_07_geralt_high_standing_determined_gesture_die]
+          clipfront: 4.5
+          blendout: 0.0
+      #- actor.sound: [0.3, geralt, q704_G_bodyfall]
+      ##- actor.pose: [0.3, geralt_Low_Lying_Dead]
+      ##- actor.anim:
+      #    actor: geralt
+      #    .@pos: [0.0, anim_7608_low_standing_paralyzed_die_to_low_lying_dead] #anim_5737_man_ger_sword_death_1]
+      #    blendin: 0.3
+      - actor.effect.start: [0.05, geralt, heavy_hit]
       - actor.sound: [0.1, geralt, grunt_vo_death]
 
 dialogscript:
@@ -2441,7 +2520,7 @@ dialogscript:
     - CUE: shot_19
     # (longest) anim: high_standing_determined_to_high_standing_determined2
     - Azar_Javed: "[4.7370]2114670730|I warned you. Pissing upwind leads to disaster."
-    - CUE: shot_18_2
+    #- CUE: shot_18_2
     - Azar_Javed: "[2.9032]2114670731|This time you pissed in a tornado."
     - CUE: shot_20
     # (longest) anim: high_standing_determined_enter_front_45_right
@@ -2498,9 +2577,6 @@ dialogscript:
     - PAUSE: 1.67
     # shot Shot mirror heart keycam
     - CUE: shot_41
-    - PAUSE: 4.0
-    # shot Shot mirror heart keycam2
-    - CUE: shot_42
     - PAUSE: 4.0
     # shot Shot mirror heart
     - CUE: shot_43
@@ -2591,7 +2667,16 @@ dialogscript:
     - CUE: shot_unseen_close
     - unseen: "[5.246143]0001156752|You waste my time."
     - CUE: shot_unseen_killing
-    - PAUSE: 8.0
+    - PAUSE: 6.9
+    - NEXT: script_music_stop
+
+  script_music_stop:
+    - SCRIPT:
+            function: NTRPlayMusicScene
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - areaName: "toussaint"
+                #- eventName: "mus_q605_final_standoff"
+                - eventName: "mus_loc_toussaint_unseen_cave"
     - NEXT: script_music_gameplay
 
   script_music_gameplay:

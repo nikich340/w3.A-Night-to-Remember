@@ -222,6 +222,36 @@ repository:
         plane: "medium"
         tags: [ "ext" ]
 
+    cam_13_shot_sky_up:
+      fov: 45.0
+      transform:
+        pos: [ -373.3664245605, 1368.5971679688, -46.4729919434 ]
+        rot: [ 0.0, 290.4350585938, 190.6896972656 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.3098254204, 3.3098254204 ]
+        focus: [ 0.8098254204, 1.8098254204 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_13_shot_sky_up2:
+      fov: 45.0
+      transform:
+        pos: [ -371.6249389648, 1355.1704101563, -46.6230010986 ]
+        rot: [ 0.0, 297.5300903320, 169.8436279297 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.3098254204, 3.3098254204 ]
+        focus: [ 0.8098254204, 1.8098254204 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
     cam_12_shot_to_gp:
       fov: 40.0
       transform:
@@ -240,7 +270,7 @@ repository:
 production:
   settings:
     sceneid: 1
-    strings-idspace: 9999
+    strings-idspace: 4670
     strings-idstart: 750
 
   placement: "ntr_bob_introscenes_sp"
@@ -301,6 +331,12 @@ production:
 
       cam_12_shot_to_gp:
         repo: "cam_12_shot_to_gp"
+
+      cam_13_shot_sky_up:
+        repo: "cam_13_shot_sky_up"
+
+      cam_13_shot_sky_up2:
+        repo: "cam_13_shot_sky_up2"
 
     animations:
       geralt_low_lying_down_happy_sleeping_wake_up_to_low_sitting_sad:
@@ -399,7 +435,7 @@ storyboard:
     shot_2:
       - actor.anim: 
           .@pos: [0.0, geralt_low_lying_down_happy_sleeping_wake_up_to_low_sitting_sad]
-          clipend: 10.0
+          clipend: 12.0
       - actor.pose: [0.5, geralt_Low_Sitting_Sad]
 
     # shot shot sitting
@@ -431,23 +467,37 @@ storyboard:
 
     # shot shot sitting5
     shot_7:
-      - cam.blend.key: [0.75, cam_7_shot_sitting5]
-
-    # shot shot sitting6
-    shot_8:
-      - cam.blend.key: [0.25, cam_8_shot_sitting6]
+      - cam.blend.end: [0.75, cam_7_shot_sitting5]
 
     # shot shot sky
     shot_9:
-      - actor.placement.start: [0.0, owl, [ -385.276, 1400.5283203125, -49.7029876709 ], [ 0.0, 0.0, 199.1800384521 ]]
-      - prop.placement.start: [0.0, q702_blackmail_letter, [ -385.276, 1400.4924316406, -49.7607650757 ], [ 0.0, 0.0, 290.8099975586 ]]
-      - cam.blend.end: [0.0, cam_9_shot_sky]
+      - actor.placement.start: [0.0, owl, [ -403.276, 1450.5283203125, -49.7029876709 ], [ 0.0, 0.0, 199.1800384521 ]]
+      - prop.placement.start: [0.0, q702_blackmail_letter, [ -403.276, 1450.4924316406, -49.7607650757 ], [ 0.0, 0.0, 290.8099975586 ]]
+      #- actor.placement.start: [0.0, owl, [ -385.276, 1400.5283203125, -49.7029876709 ], [ 0.0, 0.0, 199.1800384521 ]]
+      #- prop.placement.start: [0.0, q702_blackmail_letter, [ -385.276, 1400.4924316406, -49.7607650757 ], [ 0.0, 0.0, 290.8099975586 ]]
+      - cam: [0.0, cam_9_shot_sky]
       - actor.anim: 
           .@pos: [0.0, owl_clapping_wings]
-      - actor.placement.key: [0.6, owl, [ -373.2567138672, 1367.5283203125, -49.7029876709 ], [ 0.0, 0.0, 199.1800384521 ]]
-      - prop.placement.key: [0.6, q702_blackmail_letter, [ -373.2544860840, 1367.4924316406, -49.7607650757 ], [ 0.0, 0.0, 290.8099975586 ]]
-      - actor.placement.end: [1.0, owl, [ -366.77, 1350.2436523438, -49.7029876709 ], [ 0.0, 0.0, 199.1800384521 ]]
-      - prop.placement.end: [1.0, q702_blackmail_letter, [ -366.77, 1350.2109375000, -49.7607650757 ], [ 0.0, 0.0, 290.8099975586 ]]
+          clipend: 4.0
+      - actor.placement.end: [1.0, owl, [ -373.2567138672, 1367.5283203125, -49.7029876709 ], [ 0.0, 0.0, 199.1800384521 ]]
+      - prop.placement.end: [1.0, q702_blackmail_letter, [ -373.2544860840, 1367.4924316406, -49.7607650757 ], [ 0.0, 0.0, 290.8099975586 ]]
+      #- actor.placement.end: [1.0, owl, [ -366.77, 1350.2436523438, -49.7029876709 ], [ 0.0, 0.0, 199.1800384521 ]]
+      #- prop.placement.end: [1.0, q702_blackmail_letter, [ -366.77, 1350.2109375000, -49.7607650757 ], [ 0.0, 0.0, 290.8099975586 ]]
+
+    # shot shot sky up2
+    shot_track1:
+      - actor.placement.start: [0.0, owl, [ -373.2567138672, 1367.5283203125, -49.7029876709 ], [ 0.0, 0.0, 199.1800384521 ], rapid]
+      - prop.placement.start: [0.0, q702_blackmail_letter, [ -373.2544860840, 1367.4924316406, -49.7607650757 ], [ 0.0, 0.0, 290.8099975586 ], rapid]
+      - cam.blend.start: [0.0, cam_13_shot_sky_up, smooth]
+      - actor.anim: [0.0, owl_clapping_wings]
+
+    # shot shot sky up3
+    shot_track2:
+      - actor.placement.key: [0.0, owl, [ -371.8262634277, 1353.3715820313, -51.4628601074 ], [ 0.0, 0.0, 172.9999237061 ]]
+      - prop.placement.key: [0.0, q702_blackmail_letter, [ -371.8277587891, 1353.3729248047, -51.4406509399 ], [ 0.0, 0.0, 262.4299316406 ]]
+      - cam.blend.end: [0.2, cam_13_shot_sky_up2, smooth]
+      - actor.placement.end: [1.0, owl, [ -373.3098144531, 1345.4853515625, -53.7426452637 ], [ 0.0, 0.0, 140.5497894287 ]]
+      - prop.placement.end: [1.0, q702_blackmail_letter, [ -373.3547363281, 1345.4343261719, -53.8004226685 ], [ 0.0, 0.0, 229.8699035645 ]]
 
     # shot shot to gp
     shot_12:
@@ -471,7 +521,7 @@ dialogscript:
     # shot shot wakeup
     - CUE: shot_2
     # (longest) anim: low_lying_down_happy_sleeping_wake_up_to_low_sitting_sad
-    - PAUSE: 10.0
+    - PAUSE: 12.0
     # shot shot sitting
     - CUE: shot_3a
     - geralt: "[1.3958]2114670745|Crazy nightmare."
@@ -491,13 +541,14 @@ dialogscript:
     # shot shot sitting5
     - CUE: shot_7
     - PAUSE: 10.0
-    # shot shot sitting6
-    - CUE: shot_8
-    - PAUSE: 10.0
     # shot shot sky
     - CUE: shot_9
     # (longest) anim: clapping_wings
-    - PAUSE: 4.5
+    - PAUSE: 4.0
+    - CUE: shot_track1
+    - PAUSE: 2.0
+    - CUE: shot_track2
+    - PAUSE: 1.0
     # shot shot to gp
     - CUE: shot_12
     # (longest) anim: low_sitting_happy_to_high_standing_determined

@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: orphanage
 # 
-# (version: 208, saved: 2020-05-02 21:39:51)
+# (version: 218, saved: 2020-05-06 17:51:31)
 #
 ---
 structure:
@@ -15,7 +15,7 @@ structure:
         
         objective.Go_orphanage:
           ".editor": [ 478.0, 306.0 ]
-          objective: nighttoremember/main_quest/go_orphanage
+          objective: nighttoremember/orphanage_part/go_orphanage
           notify: true
           track: false
           next:

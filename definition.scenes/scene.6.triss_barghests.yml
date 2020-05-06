@@ -280,9 +280,10 @@ storyboard:
     # shot from teleport
     shot_1:
       - actor.placement: [0.0, geralt, [ -5.7042903900, 10.1396484375, -0.3926391602 ], [ 0.0, 0.0, 0.0 ]]
-      - actor.placement: [0.0, triss, [ -5.9788436890, 13.0268554688, -0.5191040039 ], [ 0.0, 0.0, 161.9200134277 ]]
+      - actor.placement: [0.0, triss, [ -5.9788436890, 13.0268554688, -0.5366210938 ], [ 0.0, 0.0, 161.9200134277 ]]
       - actor.placement: [0.0, barghest_1, [ -7.3380260468, 13.4687500000, -1.7402343750 ], [ 0.0, 0.0, 204.3499145508 ]]
       - actor.placement: [0.0, barghest_2, [ -4.9032192230, 13.5212402344, -1.7387084961 ], [ 0.0, 0.0, 167.5300140381 ]]
+      - actor.lookat: [0.1, geralt, triss]
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
       - actor.pose: [0.0, triss_woman_sorceress_idle_lp_01]
       - actor.pose: [0.0, barghest_1_None]

@@ -1,0 +1,19 @@
+journals:
+  quests:
+    nighttoremember:
+      title: "A Night to Remember"
+      type: "Side"
+      world: bob                      # optional, if empty every objective requires world
+      description:
+        - regis_owl: Descr<br>
+      instructions:
+        regis_owl:
+          - out_home:
+              caption: "Go out of home for some fresh air"
+          - take_letter:
+              caption: "Take letter near owl"
+              mappins: regis_mail_pin
+
+        orphanage_part:
+          - go_orphanage:
+              caption: "Check Orianna's orphanage"
