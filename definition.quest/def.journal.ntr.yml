@@ -5,7 +5,7 @@ journals:
       type: "Side"
       world: bob                      # optional, if empty every objective requires world
       description:
-        - regis_owl: Descr<br>
+        - regis_owl: Description must be here<br>
       instructions:
         regis_owl:
           - out_home:
@@ -13,7 +13,15 @@ journals:
           - take_letter:
               caption: "Take letter near owl"
               mappins: regis_mail_pin
+          - read_letter:
+              caption: "Read a letter from Regis"
 
         orphanage_part:
           - go_orphanage:
               caption: "Check Orianna's orphanage"
+              mappins: 
+                - [ orphanage_pin, 27 ]
+
+          - go_door:
+              caption: "Check Orianna's room"
+              mappins: orphdoor_pin

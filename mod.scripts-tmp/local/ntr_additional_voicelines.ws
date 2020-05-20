@@ -7,6 +7,8 @@ function ntr_addExtraActorVoiceLines(category: String, out lines: array<SSbUiExt
 }
 
 function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>) {
+    lines.PushBack(SSbUiExtraLines(2114670650, category, "group 1", "Well__I_should_check_an_orphanage_first_-_last_tim", 1.6855));
+    lines.PushBack(SSbUiExtraLines(2114670651, category, "group 1", "A_letter____Who's_using_an_owl_for_this_", 3.1468));
     lines.PushBack(SSbUiExtraLines(2114670700, category, "group 1", "Triss_!_I_should_talk_to_her_", 2.1154));
     lines.PushBack(SSbUiExtraLines(2114670705, category, "group 1", "I've_been_thinking_about_us_", 1.8566));
     lines.PushBack(SSbUiExtraLines(2114670706, category, "group 1", "I'm_looking_for___", 1.1954));
@@ -29,5 +31,5 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670738, category, "group 1", "So_you_say__yet_I_wait_and_wait__and_nothing___", 4.993));
     lines.PushBack(SSbUiExtraLines(2114670739, category, "group 1", "Fuck_you!", 1.0363));
     lines.PushBack(SSbUiExtraLines(2114670740, category, "group 1", "Death_mistake_", 1.3369));
-    lines.PushBack(SSbUiExtraLines(2114670745, category, "group 1", "Crazy_nightmare_", 1.3958));
+    lines.PushBack(SSbUiExtraLines(2114670745, category, "group 1", "A_witcher", 1.3958));
 }

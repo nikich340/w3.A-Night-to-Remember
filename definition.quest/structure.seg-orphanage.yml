@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: orphanage
 # 
-# (version: 218, saved: 2020-05-06 17:51:31)
+# (version: 233, saved: 2020-05-19 22:53:18)
 #
 ---
 structure:
@@ -12,16 +12,56 @@ structure:
           ".editor": [ 100.0, 250.0 ]
           next:
             - objective.Go_orphanage: Activate
+            - waituntil.orph_area
         
-        objective.Go_orphanage:
-          ".editor": [ 478.0, 306.0 ]
-          objective: nighttoremember/orphanage_part/go_orphanage
-          notify: true
-          track: false
-          next:
+        scene.orphanage_scene:
+          ".editor":
+            pos: [ 964.4888305664, 268.6024169922 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 11.orphanage.yml
+          placement: bob/orphscenepoint
+          interruptable: true
+          _fadein: false
+          next.Output:
             - out
         
+        waituntil.new_wait_until_entered_area:
+          entered: [ bob/ordphdoor_area, PLAYER ]
+          ".editor":
+            pos: [ 728.5923461914, 263.8149414062 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - objective.go_door: Success
+            - scene.orphanage_scene: Input
+        
+        waituntil.orph_area:
+          entered: [ bob/orphanage_area, PLAYER ]
+          ".editor":
+            pos: [ 455.2590637207, 243.8149108887 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - objective.Go_orphanage: Success
+            - objective.go_door: Activate
+            - waituntil.new_wait_until_entered_area
+        
+        objective.Go_orphanage:
+          ".editor": [ 469.111114502, 454.8888549805 ]
+          objective: nighttoremember/orphanage_part/go_orphanage
+          notify: true
+          track: true
+          next: ".done"
+        
+        objective.go_door:
+          ".editor": [ 790.258972168, 461.5927124023 ]
+          objective: nighttoremember/orphanage_part/go_door
+          notify: true
+          track: true
+          next: ".done"
+        
         out:
-          ".editor": [ 926.0, 262.0 ]
+          ".editor": [ 1189.8889160156, 273.6666564941 ]
           next: ".done"
         

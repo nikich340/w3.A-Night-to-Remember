@@ -1,0 +1,188 @@
+#
+# definition of entities
+#
+templates:
+  orianna_bruxa:
+    includes:
+      - dlc/bob/data/characters/npc_entities/monsters/bruxa.w2ent
+    
+    entityObject:
+      .type: "COriannaBruxaNPC:CNewNPC"
+      displayName: "Orianna bruxa"
+      voiceTag: "ORIANNA BRUXA"
+      streamingDistance: 14
+      #entityStaticFlags:
+      #  - ESF_Streamed
+      #tags:
+      #  - HideHealthBarModule
+
+    appearances:
+      bruxa_monster_gameplay:
+        includedTemplates:
+          #- dlc/bob/data/characters/models/crowd_npc/bob_citizen_woman/torso/t2_04_wa__bob_woman_noble.w2ent
+          - dlc/bob/data/characters/models/monsters/bruxa/t_01__bruxa.w2ent
+          - dlc/bob/data/characters/models/monsters/bruxa/bruxa_merged_body.w2ent
+          - dlc/bob/data/characters/models/monsters/bruxa/bruxa_merged_body_ghost.w2ent
+          - dlc/bob/data/characters/models/monsters/bruxa/c_01__bruxa_poly.w2ent
+          - dlc/bob/data/characters/models/monsters/bruxa/c_01__bruxa_poly_effect.w2ent
+          - dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+          #- dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
+          #- characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
+          #- dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
+          #- dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/h_02_wa__oriana.w2ent
+        voicetag: "ALEKSANDER"
+        usesRobe: true
+        collapsedComponents:
+          - head
+          - h_02_wa__oriana
+          - he_01_wa__oriana
+          - hb_01_ma__orianna
+          #- CMorphedMeshComponent0
+          #- face_morph
+
+    usedAppearances:
+      - bruxa_monster_gameplay
+
+  orianna_bruxa_cloak:
+    includes:
+      #- dlc/bob/data/characters/npc_entities/monsters/bruxa_cloak.w2ent
+      - dlc/dlcntr/data/entities/oriana/bruxa_cloak.w2ent
+    
+    entityObject:
+      .type: "CNewNPC"
+      displayName: "Orianna bruxa cloak"
+      voiceTag: "ORIANNA BRUXA CLOAK"
+      streamingDistance: 14
+      #entityStaticFlags:
+      #  - ESF_Streamed
+      #tags:
+      #  - HideHealthBarModule
+
+    appearances:
+      orianna_bruxa:
+        includedTemplates:
+          #- dlc/bob/data/characters/models/crowd_npc/bob_citizen_woman/torso/t2_04_wa__bob_woman_noble.w2ent
+          - characters/models/crowd_npc/novigrad_citizen_woman/legs/l2_04_wa__novigrad_citizen.w2ent
+          - dlc/bob/data/characters/models/monsters/bruxa/i_01__bruxa_px.w2ent
+          #- dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
+          - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/h_03_wa__oriana.w2ent
+        voicetag: "ORIANNA VAMPIRE"
+        collapsedComponents:
+          - head
+          - h_03_wa__oriana
+          - he_01_wa__oriana
+          - hb_01_ma__orianna
+          #- CMorphedMeshComponent0
+          #- face_morph
+
+    usedAppearances:
+      - orianna_bruxa
+
+  orianna_vampire:
+    includes:
+      #- dlc/bob/data/quests/main_quests/quest_files/q704_truth/characters/q704_dettlaff_vampire.w2ent
+      - dlc/dlcntr/data/entities/oriana/q704_dettlaff_vampire.w2ent
+    
+    entityObject:
+      .type: "COriannaVampireNPC:CNewNPC"
+      displayName: "Orianna vampire"
+      voiceTag: "ORIANNA VAMPIRE"
+      streamingDistance: 14
+      entityStaticFlags:
+        - ESF_Streamed
+      #tags:
+      #  - HideHealthBarModule
+
+    appearances:
+      orianna_human:
+        includedTemplates:
+          - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
+          - characters/models/common/woman_average/body/l_01_wa__body.w2ent
+          #- dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+          #- dlc/bob/data/characters/models/crowd_npc/bob_citizen_woman/torso/t2_04_wa__bob_woman_noble.w2ent
+          #- characters/models/crowd_npc/novigrad_citizen_woman/legs/l2_04_wa__novigrad_citizen.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
+          #- dlc/dlcntr/data/entities/oriana/body_03_wa__oriana.w2ent
+          #- dlc/dlcntr/data/entities/oriana/h_03_wa__oriana_morph.w2ent
+          ###
+          - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/h_01_wa__oriana.w2ent
+        voicetag: "ORIANNA VAMPIRE"
+        collapsedComponents:
+          - head
+          - h_01_wa__oriana
+          - he_01_wa__oriana
+          - hb_01_ma__orianna
+
+      orianna_human_morph:
+        includedTemplates:
+          - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
+          - characters/models/common/woman_average/body/l_01_wa__body.w2ent
+          #- dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+          #- dlc/bob/data/characters/models/crowd_npc/bob_citizen_woman/torso/t2_04_wa__bob_woman_noble.w2ent
+          #- characters/models/crowd_npc/novigrad_citizen_woman/legs/l2_04_wa__novigrad_citizen.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
+          #- dlc/dlcntr/data/entities/oriana/body_03_wa__oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/h_03_wa__oriana_morph.w2ent
+          ###
+          - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
+          #- dlc/bob/data/characters/models/main_npc/oriana/h_02_wa__oriana.w2ent
+        voicetag: "ORIANNA VAMPIRE"
+        collapsedComponents:
+          - head
+          - h_03_wa__oriana
+          - CMorphedMeshComponent1
+          - hb_01_ma__orianna
+          - CMorphedMeshComponent0
+          - face_morph
+
+      orianna_vampire:
+        includedTemplates:
+          #- characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
+          #- characters/models/common/woman_average/body/l_01_wa__body.w2ent
+          - dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+          #- dlc/bob/data/characters/models/crowd_npc/bob_citizen_woman/torso/t2_04_wa__bob_woman_noble.w2ent
+          #- characters/models/crowd_npc/novigrad_citizen_woman/legs/l2_04_wa__novigrad_citizen.w2ent
+          ###- dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/body_03_wa__oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/h_03_wa__oriana.w2ent
+          ###
+          - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
+          #- dlc/bob/data/characters/models/main_npc/oriana/h_02_wa__oriana.w2ent
+        voicetag: "ORIANNA VAMPIRE"
+        collapsedComponents:
+          - head
+          - h_03_wa__oriana
+          - he_02_wa__oriana
+          - hb_01_ma__orianna
+
+    usedAppearances:
+      - orianna_human
+      - orianna_human_morph
+      - orianna_vampire
+
+    #voicetagAppearances:
+    #  - ".type": VoicetagAppearancePair
+    #    voicetag: "ORIANNA VAMPIRE"
+     #   appearance: orianna_vampire_morph
+
+    #templateParams:
+    #  - ".type": CAnimAnimsetsParam
+    #    wasIncluded: true
+     #   name: orianna_vampire
+     #   componentName: dettlaff_vampire_base
+     #  animationSets:
+     #     #- "dlc\\bob\\data\\animations\\animations\\monsters\\monster_dettlaff_vampire.w2anims"
+      #    - "dlc\\dlcntr\\data\\entities\\oriana\\orianna_vampire.w2anims"
+      #dlc\dlcntr\data\entities\oriana\orianna_vampire.w2anims
+      #    - "animations\\man\\movement\\man_movement.w2anims"
+      #    - "animations\\man\\community\\man_work.w2anims"
+      #    - "animations\\man\\community\\man_reactions.w2anims"

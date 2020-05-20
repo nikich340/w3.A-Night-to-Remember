@@ -1,13 +1,28 @@
-quest function NTRBookReadChecker(bookName : name, factName : string) {
+quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	var books : array<SItemUniqueId>;
 	books = thePlayer.inv.GetItemsByName(bookName);
 	if ( books.Size() >= 1 && thePlayer.inv.IsBookRead(books[0]) ) {
-		FactsAdd(factName, 1);
+		return true;
+	}
+	return false;
+}
+
+quest function NTR_FocusSetHighlight(tag : name, highlightType : string, optional overrideCustomLogic : bool ) {
+	switch(highlightType) {
+		case "FMV_Clue":
+			FocusSetHighlight(tag, FMV_Clue, overrideCustomLogic);
+			break;
+		case "FMV_Interactive":
+			FocusSetHighlight(tag, FMV_Interactive, overrideCustomLogic);
+			break;
+		case "FMV_None":
+			FocusSetHighlight(tag, FMV_None, overrideCustomLogic);
+			break;
 	}
 }
 
 // ----------------------------------------------------------------------------
-quest function NTRDoorChangeState(tag : name, newState : string, optional keyItemName : name, optional removeKeyOnUse : bool, optional smoooth : bool, optional dontBlockInCombat : bool ) {
+quest function NTR_DoorChangeState(tag : name, newState : string, optional keyItemName : name, optional removeKeyOnUse : bool, optional smoooth : bool, optional dontBlockInCombat : bool ) {
 	switch(newState) {
 			case "EDQS_Open":
 				DoorChangeState(tag, EDQS_Open, keyItemName, removeKeyOnUse, smoooth, dontBlockInCombat);

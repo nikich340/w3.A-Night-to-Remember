@@ -8,7 +8,7 @@ templates:
     entityObject:
       ".type": W3AnimatedContainer
       streamingDistance: 3
-      focusModeVisibility: FMV_Clue
+      #focusModeVisibility: FMV_Clue   ### Should be set with quest function FocusSetHighlight( tag : name, highlightType : EFocusModeVisibility, optional overrideCustomLogic : bool ) ###
       components:
         CAppearanceComponent0:
           ".type": CAppearanceComponent
@@ -33,34 +33,6 @@ templates:
           regis_mail_loot:
             chance: 100.0
             respawnTime: 0
-
-
-  #regis_mail:
-  #  includes:
-  #    - gameplay\containers\container_template.w2ent #- do not needed for chests  # required instead of interaction component, so "loot" action is removed after looting
-  #    - dlc\bob\data\items\quest_items\q705\q705_item__assasination_letter_closed.w2ent
-      #- dlc\bob\data\quests\main_quests\quest_files\q702_hunt\entities\q702_blackmail_letter.w2ent
-    #usedAppearances: [merchant_corpses_04]
-  #  entityObject:
-  #    .type: W3AnimatedContainer
-  #    streamingDistance: 3
-
-  #  templateParams:
-   #   - ".type": CR4LootParam
-  #      name: "loot"
-  ##      wasIncluded: true
-  #      containers:
-  #        regis_mail_loot:
-  #          chance: 100.0
-  #          respawnTime: 0
-
-items:
-  notices:
-    regis_letter:
-      name: "Regis letter"
-      description: "Letter from Regis, was delivered by owl"
-      text: "Regis is busy. Write me please!"
-      #tags: [NTR_regis_letter]
 
 loot:
   regis_mail_loot:

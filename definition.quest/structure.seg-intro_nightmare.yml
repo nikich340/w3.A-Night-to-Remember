@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 218, saved: 2020-05-06 17:51:31)
+# (version: 233, saved: 2020-05-19 22:53:18)
 #
 ---
 structure:
@@ -36,19 +36,6 @@ structure:
           _fadein: false
           next.Output:
             - despawn.despawn_hag
-        
-        scene.3_gp_wall_scene:
-          ".editor":
-            pos: [ 3300.0, 575.0 ]
-            in: [ Input ]
-            out: [ Output ]
-          scene: 3.gameplay_wall.yml
-          placement: bob/introscenes
-          interruptable: true
-          _fadein: false
-          next.Output:
-            - script.play_music_invest_suspense
-            - objective.blood_tracks: Success
         
         scene.4_triss_appear:
           ".editor":
@@ -114,6 +101,19 @@ structure:
           next.Output:
             - despawn.despawn_triss
         
+        scene.gp_wall:
+          ".editor":
+            pos: [ 3300.0, 575.0 ]
+            in: [ hag_wall ]
+            out: [ Output ]
+          scene: 3.geralt_onelines.yml
+          placement: bob/introscenes
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - script.play_music_invest_suspense
+            - objective.blood_tracks: Success
+        
         waituntil.Triss_out:
           outside: [ bob/magic_area, triss_monster ]
           ".editor":
@@ -131,7 +131,7 @@ structure:
             out: [ Out ]
           next:
             - spawn.spawn_triss_normal
-            - scene.3_gp_wall_scene: Input
+            - scene.gp_wall: hag_wall
         
         waituntil.bloodarea1:
           inside: [ bob/bloodarea1, PLAYER ]

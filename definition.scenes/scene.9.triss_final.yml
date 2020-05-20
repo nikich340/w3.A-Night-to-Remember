@@ -2414,6 +2414,7 @@ storyboard:
       #    blendin: 0.3
       - actor.effect.start: [0.05, geralt, heavy_hit]
       - actor.sound: [0.1, geralt, grunt_vo_death]
+      - fade.in: [0.87, 0.9, [255, 255, 255, 255]]
 
 dialogscript:
   player: "geralt"
@@ -2567,7 +2568,7 @@ dialogscript:
     # REGIS TAUNT
     - CUE: shot_31
     - PAUSE: 2.0
-    - PAUSE: 1.0
+    - PAUSE: 0.5
     # GERALT RUN FAR CAM
     - CUE: shot_32
     - geralt: "[1.6975838]0001061767|Aaaaaaaaargh!!!!"

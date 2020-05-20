@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: regis_mail
 # 
-# (version: 218, saved: 2020-05-06 17:51:31)
+# (version: 233, saved: 2020-05-19 22:53:18)
 #
 ---
 structure:
@@ -24,8 +24,19 @@ structure:
           _fadein: false
           next.Output:
             - changelayers.owl_layer
-            - objective.Fresh_air: Activate
             - questoutcome.Finish_Night_of_Nightmare: Success
+            - waituntil.wait_3s
+        
+        scene.gp_using_owl:
+          ".editor":
+            pos: [ 1172.7955322266, 170.5534057617 ]
+            in: [ using_owl ]
+            out: [ Output ]
+          scene: 3.geralt_onelines.yml
+          placement: bob/homescenes
+          interruptable: true
+          _fadein: false
+          next: ".done"
         
         waituntil.mail_looted:
           looted: bob/regis_mail
@@ -34,35 +45,27 @@ structure:
             in: [ In ]
             out: [ Out ]
           next:
-            - objective.Read_letter: Success
+            - objective.Take_letter: Success
             - waituntil.wait_2s
-        
-        waituntil.not_read:
-          factdb: [ regisLetterRead, "=", 0 ]
-          ".editor":
-            pos: [ 1764.4644775391, 255.609664917 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - waituntil.wait_2s
-        
-        waituntil.read:
-          factdb: [ NTRregisLetterRead, ">=", 1 ]
-          ".editor":
-            pos: [ 1783.7926025391, 364.6978759766 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - out
+            - objective.Read_letter: Activate
         
         waituntil.wait_2s:
           elapsed: "00:00:02"
           ".editor":
-            pos: [ 1619.4644775391, 77.2763290405 ]
+            pos: [ 1631.3692626953, 152.9906005859 ]
             in: [ In ]
             out: [ Out ]
           next:
             - script.Book_read_checker
+        
+        waituntil.wait_3s:
+          elapsed: "00:00:03"
+          ".editor":
+            pos: [ 793.9761352539, 405.6655578613 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - objective.Fresh_air: Activate
         
         waituntil.wait_until_outhome:
           inside: [ bob/homeout_area, PLAYER ]
@@ -73,20 +76,34 @@ structure:
           next:
             - waituntil.mail_looted
             - objective.Fresh_air: Success
-            - objective.Read_letter: Activate
+            - objective.Take_letter: Activate
+            - scene.gp_using_owl: using_owl
         
         script.Book_read_checker:
           ".editor":
-            pos: [ 1565.6571044922, 250.7474975586 ]
+            pos: [ 1641.3184814453, 312.334777832 ]
             in: [ In ]
-            out: [ Out ]
-          function: NTRBookReadChecker
+            out: [ "False", "True" ]
+          function: NTR_BookReadChecker
           parameter:
             - bookName: cname_ntr_notices_regis_letter
-            - factName: NTRregisLetterRead
-          next:
-            - waituntil.not_read
-            - waituntil.read
+          next.False:
+            - waituntil.wait_2s
+          next.True:
+            - out
+            - objective.Read_letter: Success
+        
+        script.Set_FMV_Clue_for_mail:
+          ".editor":
+            pos: [ 853.4244384766, 166.5455169678 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FocusSetHighlight
+          parameter:
+            - tag: cname_NTR_regis_mail
+            - highlightType: FMV_Clue
+            - overrideCustomLogic: true
+          next: ".done"
         
         script.Undress_geralt:
           ".editor":
@@ -112,6 +129,7 @@ structure:
             - owl_layer
           next:
             - spawn.spawn_oil
+            - script.Set_FMV_Clue_for_mail
         
         spawn.spawn_oil:
           ".editor":
@@ -133,7 +151,14 @@ structure:
           next: ".done"
         
         objective.Read_letter:
-          ".editor": [ 1417.9783935547, 460.5590209961 ]
+          ".editor": [ 1665.3332519531, 514.1666870117 ]
+          objective: nighttoremember/regis_owl/read_letter
+          notify: true
+          track: false
+          next: ".done"
+        
+        objective.Take_letter:
+          ".editor": [ 1241.3117675781, 464.5590209961 ]
           objective: nighttoremember/regis_owl/take_letter
           notify: true
           track: true

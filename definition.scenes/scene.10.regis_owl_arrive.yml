@@ -440,7 +440,8 @@ storyboard:
 
     # shot shot sitting
     shot_3a:
-      - cam: [0.0, cam_3_shot_sitting]
+      #- cam: [0.0, cam_3_shot_sitting]
+      - cam: [0.0, cam_4_shot_sitting2]
       - actor.placement: [0.0, geralt, [ -423.4845886230, 1306.4843750000, -90.7299804688 ], [ 0.0, 0.0, 228.6600341797 ]]
       - actor.anim: 
           .@pos: [0.6, geralt_low_sitting_sad_gesture_head_up]
@@ -450,12 +451,9 @@ storyboard:
       - actor.pose: [0.9, geralt_Low_Sitting_Head_Up_Sad]
       - actor.lookat: [0.6, geralt, [ -0.1163679361, 0.6985239983, 1.1548156738 ]]
 
-    shot_3:
-      - cam.blend.start: [0.0, cam_3_shot_sitting]
-
     # shot shot sitting2
     shot_4:
-      - cam.blend.key: [0.33, cam_4_shot_sitting2]
+      - cam.blend.start: [0.0, cam_4_shot_sitting2]
 
     # shot shot sitting3
     shot_5:
@@ -526,8 +524,8 @@ dialogscript:
     - CUE: shot_3a
     - geralt: "[1.3958]2114670745|Crazy nightmare."
     - PAUSE: 2.0
-    - CUE: shot_3
-    - PAUSE: 5.0
+    #- CUE: shot_3
+    #- PAUSE: 5.0
     # shot shot sitting2
     - CUE: shot_4
     # (longest) anim: low_sitting_sad_gesture_head_up
@@ -551,10 +549,11 @@ dialogscript:
     - PAUSE: 1.0
     # shot shot to gp
     - CUE: shot_12
+    - geralt: "2114670650|I need some fresh air."
     # (longest) anim: low_sitting_happy_to_high_standing_determined
-    - PAUSE: 3.0666666031
+    - PAUSE: 1.3811
     - NEXT: section_exit
 
   section_exit:
-    - CAMERA_BLEND: 2.0
+    - CAMERA_BLEND: 1.0
     - EXIT

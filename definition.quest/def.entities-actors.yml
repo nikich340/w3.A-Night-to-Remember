@@ -455,7 +455,15 @@ templates:
       .type: "CNewNPC"
       name: "EREDIN"
       displayName: "Eredin"
-      
+
+    templateParams:
+      - ".type": CAnimAnimsetsParam
+        wasIncluded: true
+        name: eredin_cutscene
+        componentName: wild_hunt_base
+        animationSets:
+          - "animations\\cutscenes\\skellige\\q501_eredin\\cs501_crach_dies\\cs501_crach_dies.w2cutscene"
+                
   triss_monster:
     includes:
       #- quests/main_npcs/triss.w2ent

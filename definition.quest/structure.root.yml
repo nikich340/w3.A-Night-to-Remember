@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 218, saved: 2020-05-06 17:51:31)
+# (version: 233, saved: 2020-05-19 22:53:18)
 #
 ---
 structure:
@@ -24,7 +24,7 @@ structure:
       
       subsegment.orphanage:
         ".editor":
-          pos: [ 766.3270263672, 490.665222168 ]
+          pos: [ 774.3270263672, 694.665222168 ]
           in: [ In ]
           out: [ Out ]
         segment: orphanage
@@ -48,6 +48,14 @@ structure:
           out: [ Out ]
         next:
           - changelayers.show_main_layer
+      
+      script.sounds_dettlaff:
+        ".editor":
+          pos: [ -42.3503417969, 659.1791992188 ]
+          in: [ In ]
+          out: [ Out ]
+        function: playSoundsBruxa
+        next: ".done"
       
       changelayers.hide_hide_hide:
         ".editor":
@@ -76,7 +84,7 @@ structure:
         show:
           - nlayer
         next:
-          - subsegment.intro_nightmare
+          - subsegment.orphanage
       
       end:
         ".editor": [ 985.8920288086, 490.1529541016 ]
