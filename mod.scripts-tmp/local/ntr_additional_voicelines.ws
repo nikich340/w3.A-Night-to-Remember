@@ -31,5 +31,5 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670738, category, "group 1", "So_you_say__yet_I_wait_and_wait__and_nothing___", 4.993));
     lines.PushBack(SSbUiExtraLines(2114670739, category, "group 1", "Fuck_you!", 1.0363));
     lines.PushBack(SSbUiExtraLines(2114670740, category, "group 1", "Death_mistake_", 1.3369));
-    lines.PushBack(SSbUiExtraLines(2114670745, category, "group 1", "A_witcher", 1.3958));
+    lines.PushBack(SSbUiExtraLines(2114670745, category, "group 1", "Crazy_nightmare_", 1.3958));
 }

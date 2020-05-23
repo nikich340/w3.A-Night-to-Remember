@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 233, saved: 2020-05-19 22:53:18)
+# (version: 289, saved: 2020-05-23 18:23:04)
 #
 ---
 structure:
@@ -70,6 +70,7 @@ structure:
           - after_hag
           - after_triss_to_monster
           - owl_layer
+          - orphanage_layer
         next: ".done"
       
       changelayers.show_main_layer:

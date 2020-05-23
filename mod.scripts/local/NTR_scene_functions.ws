@@ -8,10 +8,6 @@
 }
 
 storyscene function NTR_SceneDoorChangeState( player : CStoryScenePlayer, tag : name, newState : string, optional keyItemName : name, optional removeKeyOnUse : bool, optional smoooth : bool, optional dontBlockInCombat : bool ) {
-	if (smoooth)
-		theGame.GetGuiManager().ShowNotification("Smooth!");
-	else
-		theGame.GetGuiManager().ShowNotification("NOT Smooth!");
 	switch(newState) {
 			case "EDQS_Open":
 				DoorChangeState(tag, EDQS_Open, keyItemName, removeKeyOnUse, smoooth, dontBlockInCombat);

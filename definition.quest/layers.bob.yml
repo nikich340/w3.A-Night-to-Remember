@@ -218,6 +218,21 @@ layers:
  
       bandit3: [ -271.4652709961, -998.9135131836, 41.5720863342, 134.8599700928 ] 
 
+    actionpoints: 
+      bandit_2_orph_day: 
+        pos: [ -270.2686767578, -1001.0431518555, 41.5724143982 ]
+        rot: [ 0.0, 0.0, 108.0199966431 ]
+        action: "resting_man/q705_jt_sitting_bored"
+        ignoreCollisions: true
+
+      bandit_3_orph_day: 
+        pos: [ -272.8896789551, -1000.0239868164, 41.5683708191 ]
+        rot: [ 0.0, 0.0, 23.5400028229 ]
+        action: "resting_man/lean_m_fence_on_butt_jt"
+        ignoreCollisions: true
+
+      fat_bandit_orph_day: [ -271.0639953613, -1002.0351562500, 41.5699806213, 86.4600067139, "resting_man/stand_m_bandit_01_jt" ]
+
     scenepoints: 
       orphscenepoint: [ -291.8728637695, -992.0385131836, 41.5070190430, 0.0 ]
         

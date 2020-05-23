@@ -33,3 +33,76 @@ communities:
           start_in_ap: false
           spawn_at: bob/triss_spawn
           guard: [ bob/magic_area, 0.0 ]
+
+  comm_orphanage_bandits:
+    actors:
+      fat_bandit:
+        #template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\exchange_point_bandits\\q703_exchange_point_bandit_melee_sword.w2ent"
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_big.w2ent"
+        tags: [ "ntr_fat_bandit" ]
+
+      bandit_2:
+        #template: "dlc\\bob\\data\\living_world\\quests\\barrens\\poi_bar_a_01\\hansa_bandit_lvl1.w2ent"
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit.w2ent"
+        tags: [ "ntr_bandit_2" ]
+
+      bandit_3:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit.w2ent"
+        #template: "dlc\\bob\\data\\living_world\\quests\\barrens\\poi_bar_a_01\\hansa_bandit_lvl1.w2ent"
+        tags: [ "ntr_bandit_3" ]
+        
+    phases:
+      orphanage:
+        fat_bandit:
+          appearance: [ "bob_thug_lvl2_03", false ]    # [someappearance, only_on_spawn_bool]
+          attitude: neutral
+          use_last_ap: true
+          start_in_ap: false
+          level: 33
+          spawn_at: bob/bandit1
+
+        bandit_2:
+          appearance: [ "bob_thug_lvl1_06", false ]    # [someappearance, only_on_spawn_bool]
+          #appearance: [ "bandit_lvl1_04", false ]    # [someappearance, only_on_spawn_bool]
+          attitude: neutral
+          use_last_ap: true
+          start_in_ap: false
+          level: 33
+          spawn_at: bob/bandit2
+
+        bandit_3:
+          appearance: [ "bob_thug_lvl1_10", false ]    # [someappearance, only_on_spawn_bool]
+          #appearance: [ "bandit_lvl1_09", false ]    # [someappearance, only_on_spawn_bool]
+          attitude: neutral
+          use_last_ap: true
+          start_in_ap: false
+          level: 33
+          spawn_at: bob/bandit3
+
+      orphanage_normal:
+        fat_bandit:
+          appearance: [ "bob_thug_lvl2_03", false ]    # [someappearance, only_on_spawn_bool]
+          attitude: neutral
+          use_last_ap: true
+          start_in_ap: false
+          level: 33
+          actionpoints:
+            "08:00": bob/fat_bandit_orph_day
+
+        bandit_2:
+          appearance: [ "bandit_lvl1_04", false ]    # [someappearance, only_on_spawn_bool]
+          attitude: neutral
+          use_last_ap: true
+          start_in_ap: false
+          level: 33
+          actionpoints:
+            "08:00": bob/bandit_2_orph_day
+
+        bandit_3:
+          appearance: [ "bandit_lvl1_09", false ]    # [someappearance, only_on_spawn_bool]
+          attitude: neutral
+          use_last_ap: true
+          start_in_ap: false
+          level: 33
+          actionpoints:
+            "08:00": bob/bandit_3_orph_day

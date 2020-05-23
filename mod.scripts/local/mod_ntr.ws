@@ -7,6 +7,35 @@ quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	return false;
 }
 
+quest function NTR_FistfightNPC(tag : name, activate : bool) {
+	var NPCs : array <CNewNPC>;
+	var i      : int;
+	
+	theGame.GetNPCsByTag(tag, NPCs);
+	for (i = 0; i < NPCs.Size(); i += 1 )
+	{	
+		if (activate) {
+			NPCs[i].OnStartFistfightMinigame();
+		} else {
+			NPCs[i].OnEndFistfightMinigame();
+		}
+	}
+}
+
+quest function NTR_FistfightPlayer(activate : bool, optional healthMultiplier : float, optional toDeath : bool, optional endsWithBS : bool) {
+	if (activate) {
+		if (!toDeath && !endsWithBS)
+			thePlayer.SetFistFightParams(toDeath, endsWithBS);
+		thePlayer.OnStartFistfightMinigame();
+		if (healthMultiplier) {
+			thePlayer.ClampGeraltMaxHealth( thePlayer.GetStatMax(BCS_Vitality) * healthMultiplier );
+			thePlayer.SetHealthPerc( 100 );
+		}
+	} else {
+		thePlayer.OnEndFistfightMinigame();
+	}
+}
+
 quest function NTR_FocusSetHighlight(tag : name, highlightType : string, optional overrideCustomLogic : bool ) {
 	switch(highlightType) {
 		case "FMV_Clue":
@@ -133,6 +162,8 @@ quest function NTRTuneNPC( tag : name, level : int, optional attitude : string, 
 		// 1005 = playerLvl + 5;
 		// 995 = playerLvl - 5
 		level = GetWitcherPlayer().GetLevel() + (level - 1000);
+		if (level < 1)
+			level = 1;
 	}
 	
 	for (i = 0; i < NPCs.Size(); i += 1 )
