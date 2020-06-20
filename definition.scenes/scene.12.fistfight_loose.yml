@@ -1,0 +1,336 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    fat_bandit:
+      template: "dlc\\dlcntr\\data\\entities\\baron_bandit_big.w2ent"
+      appearance: [ "bob_thug_lvl2_03" ]
+
+    bandit_2:
+      template: "dlc\\dlcntr\\data\\entities\\baron_bandit.w2ent"
+      appearance: [ "bob_thug_lvl1_06" ]
+
+    bandit_3:
+      template: "dlc\\dlcntr\\data\\entities\\baron_bandit.w2ent"
+      appearance: [ "bob_thug_lvl1_10" ]
+
+  animations:
+    anim_2804_ep1_geralt_lying_unconscious_to_low_sitting_ground_leaning_back_bored:
+      animation: "ep1_geralt_lying_unconscious_to_low_sitting_ground_leaning_back_bored"
+      frames: 910
+
+    anim_7461_low_sitting_ground_leaning_back_bored_to_high_standing_leaning_back_determined:
+      animation: "low_sitting_ground_leaning_back_bored_to_high_standing_leaning_back_determined"
+      frames: 269
+
+    anim_7096_high_standing_determined_idle:
+      animation: "high_standing_determined_idle"
+      frames: 288
+
+    anim_6987_high_standing_determined_exit_back:
+      animation: "high_standing_determined_exit_back"
+      frames: 126
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_583_ep1_geralt_lying_unconscious_idle:
+      idle_anim: "ep1_geralt_lying_unconscious_idle"
+
+    pose_0_man_big_ex_idle:
+      idle_anim: "man_big_ex_idle"
+
+  cameras:
+    cam_1_shot1:
+      fov: 35.0
+      transform:
+        pos: [ 14.0148925781, -11.8211669922, 0.9696174622 ]
+        rot: [ 0.0, 340.6499938965, 265.7427978516 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_Shot2:
+      fov: 45.0
+      transform:
+        pos: [ 17.5089111328, -10.3492431641, 1.8696022034 ]
+        rot: [ 0.0, 344.1699829102, 145.6779174805 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_Shot3:
+      fov: 40.0
+      transform:
+        pos: [ 17.5782165527, -10.0505981445, 1.5196075439 ]
+        rot: [ 0.0, 334.7649841309, 161.9027862549 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_4_Shot1:
+      fov: 35.0
+      transform:
+        pos: [ 16.5495910645, -11.3197021484, 1.5196075439 ]
+        rot: [ 0.0, 356.6549987793, 271.6278686523 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 790
+
+  placement: "ntr_bob_orphscenepoint_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -291.8728637695, -992.0385131836, 41.5070190430 ]
+      #rot: [ 0.0, 0.0, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      fat_bandit:
+        repo: "fat_bandit"
+        by_voicetag: false
+        appearance: "bob_thug_lvl2_03"
+        tags: [ "ntr_fat_bandit" ]
+
+      bandit_2:
+        repo: "bandit_2"
+        by_voicetag: false
+        appearance: "bob_thug_lvl1_06"
+        tags: [ "ntr_bandit_2" ]
+
+      bandit_3:
+        repo: "bandit_3"
+        by_voicetag: false
+        appearance: "bob_thug_lvl1_10"
+        tags: [ "ntr_bandit_3" ]
+
+    cameras:
+      cam_1_Shot1:
+        repo: "cam_1_Shot1"
+
+      cam_2_Shot2:
+        repo: "cam_2_Shot2"
+
+      cam_3_Shot3:
+        repo: "cam_3_Shot3"
+
+      cam_4_Shot1:
+        repo: "cam_4_Shot1"
+
+    animations:
+      geralt_ep1_geralt_lying_unconscious_to_low_sitting_ground_leaning_back_bored:
+        actor: "geralt"
+        repo: "anim_2804_ep1_geralt_lying_unconscious_to_low_sitting_ground_leaning_back_bored"
+        #duration: 30.3333339691
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_low_sitting_ground_leaning_back_bored_to_high_standing_leaning_back_determined:
+        actor: "geralt"
+        repo: "anim_7461_low_sitting_ground_leaning_back_bored_to_high_standing_leaning_back_determined"
+        #duration: 8.9666662216
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "anim_7096_high_standing_determined_idle"
+        #duration: 9.6000003815
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      fat_bandit_high_standing_determined_exit_back:
+        actor: "fat_bandit"
+        repo: "anim_6987_high_standing_determined_exit_back"
+        #duration: 4.1999998093
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    actor.poses:
+      fat_bandit_high_standing_determined_idle:
+        actor: "fat_bandit"
+        repo: "pose_0_high_standing_determined_idle"
+
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      geralt_ep1_geralt_lying_unconscious_idle:
+        actor: "geralt"
+        repo: "pose_583_ep1_geralt_lying_unconscious_idle"
+
+      fat_bandit_man_big_ex_idle:
+        actor: "fat_bandit"
+        repo: "pose_0_man_big_ex_idle"
+
+storyboard:
+  #defaults:
+    #placement:
+      #geralt: [[ 17.0295410156, -11.7181396484, 0.0696029663 ], [ 0.0, 0.0, 113.8499908447 ]]
+      #fat_bandit: [[ 22.8741760254, -11.1430664063, 1.1569633484 ], [ 0.0, 0.0, 0.0 ]]
+
+    #actor.pose:
+      #geralt: geralt_high_standing_determined_idle
+      #fat_bandit: fat_bandit_ep1_geralt_lying_unconscious_idle
+
+  section_storyboard_ui:
+    # shot Shot1
+    shot_0:
+      - actor.placement: [0.0, geralt, [ 16.2912902832, -11.9979248047, 0.0696029663 ], [ 0.0, 0.0, 100.5999832153 ]]
+      - actor.placement: [0.0, fat_bandit, [ 18.7664794922, -11.1140747070, 0.0580406189 ], [ 0.0, 0.0, 120.4599838257 ]]
+      - actor.placement: [0.0, bandit_2, [ 21.1300964355, -7.9724121094, 0.0653228760 ], [ 0.0, 0.0, 125.2900009155 ]]
+      - actor.placement: [0.0, bandit_3, [ 19.6573181152, -8.1370849609, 0.0625572205 ], [ 0.0, 0.0, 165.5500335693 ]]
+      
+      - cam: [0.0, cam_4_Shot1]
+      - actor.pose: [0.0, geralt_ep1_geralt_lying_unconscious_idle]
+      - actor.pose: [0.0, fat_bandit_high_standing_determined_idle]
+
+    shot_01:
+      - actor.anim: [0.0, fat_bandit_high_standing_determined_exit_back]
+      - cam.blend.start: [0.0, cam_4_Shot1]
+      #- actor.anim:
+      #    actor: geralt
+      #    .@pos: [0.0, anim_7690_dialogue_man_fistfight_hit_knockdown_f_getup_exploration_2]
+      # 15.1333332062
+
+    # shot Shot1
+    shot_1:
+      - actor.hide: [0.0, fat_bandit]
+      - cam.blend.end: [0.0, cam_1_Shot1]
+      - actor.anim: 
+          .@pos: [0.0, geralt_ep1_geralt_lying_unconscious_to_low_sitting_ground_leaning_back_bored]
+          clipend: 13.5
+          blendin: 0.5
+          blendout: 0.0
+
+    # shot Shot2
+    shot_2:
+      - cam: [0.0, cam_2_Shot2]
+      - actor.placement: [0.0, geralt, [ 16.5278015137, -12.0182495117, 0.0696029663 ], [ 0.0, 0.0, 116.7100067139 ]]
+      - actor.anim: 
+          .@pos: [0.0, geralt_low_sitting_ground_leaning_back_bored_to_high_standing_leaning_back_determined]
+          clipfront: 1.0
+          clipend: 5.0
+          blendout: 1.0
+
+    # shot Shot3
+    shot_3:
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_idle]
+          blendin: 1.0
+          blendout: 0.5
+          clipend: 2.0
+      - actor.pose: [0.5, geralt_high_standing_determined_idle]
+
+    #shot_gameblend:
+    #  - actor.gamestate: [0.0, geralt]
+    #  - cam.blend.togame: [0.0, cam_2_Shot2]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "fat_bandit", "bandit_3", "bandit_2" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: script_open_door
+
+  script_open_door:
+    - SCRIPT:
+        function: NTR_SceneDoorChangeState
+        parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+          - tag: "CNAME_q704_oriana_feeding_room"
+          - newState: "EDQS_Open"
+          - smoooth: false
+         # - dontBlockInCombat: false
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    - CUE: shot_0
+    # (longest) anim: ep1_geralt_lying_unconscious_to_low_sitting_ground_leaning_back_bored
+    - fat_bandit: "Hahaha, shove off, vargant! If you will want to loose again - come in."
+    - CUE: shot_01
+    - PAUSE: 4.0
+    # shot Shot1
+    - CUE: shot_1
+    # (longest) anim: ep1_geralt_lying_unconscious_to_low_sitting_ground_leaning_back_bored
+    - PAUSE: 7.5
+    - geralt: "[0.713903]0001000528|Dammit..."
+    - PAUSE: 5.286097
+    # shot Shot2
+    - CUE: shot_2
+    # (longest) anim: low_sitting_ground_leaning_back_bored_to_high_standing_leaning_back_determined
+    - PAUSE: 3.0
+    # shot Shot3
+    - CUE: shot_3
+    # (longest) anim: high_standing_determined_idle
+    - PAUSE: 2.0
+    #- CUE: shot_gameblend
+    #- PAUSE: 1.0
+    # shot Shot1
+    - NEXT: script_close_door
+
+  script_close_door:
+    - SCRIPT:
+        function: NTR_SceneDoorChangeState
+        parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+          - tag: "CNAME_q704_oriana_feeding_room"
+          - newState: "EDQS_Close"
+          - smoooth: true
+         # - dontBlockInCombat: false
+    - NEXT: section_exit
+
+  section_exit:
+    - CAMERA_BLEND: 1.0
+    - EXIT

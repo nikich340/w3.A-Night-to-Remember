@@ -1,4 +1,28 @@
 communities:
+  comm_orph_wraiths:
+    actors:
+      wraith_1:
+        template: characters/npc_entities/monsters/wraith_mh.w2ent
+        
+      wraith_2:
+        template: characters/npc_entities/monsters/wraith_mh.w2ent
+
+    phases:
+      fight:
+        wraith_1:
+          appearance: wraith_01    # [someappearance, only_on_spawn_bool]
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/orph_wraith_1
+          wanderarea: bob/orphanage_wraitharea
+
+        wraith_2:
+          appearance: wraith_01    # [someappearance, only_on_spawn_bool]
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/orph_wraith_2
+          wanderarea: bob/orphanage_wraitharea
+
   comm_barghests:
     actors:
       barghest1_intro:
@@ -22,6 +46,7 @@ communities:
           use_last_ap: false
           start_in_ap: false
           spawn_at: bob/barghest2_spawn
+
   comm_hag:
     actors:
       hag_intro:

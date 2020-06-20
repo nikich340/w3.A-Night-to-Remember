@@ -485,6 +485,8 @@ storyboard:
       - actor.placement: [0.0, bandit_3, [ 21.6425781250, -8.6456909180, 0.0658645630 ], [ 0.0, 0.0, 153.6699829102 ]]
       - actor.placement: [0.0, bandit_2, [ 22.6160888672, -10.1472167969, 0.0673751831 ], [ 0.0, 0.0, 108.9000167847 ]]
       - cam: [0.0, cam_10_shot9_to_fistfight]
+      #- cam.blend.togame: [0.4, cam_10_shot9_to_fistfight]
+      #- actor.gamestate: [0.4, geralt]
       - actor.anim: 
           .@pos: [0.0, bandit_2_man_fistfight_idle]
           blendin: 0.7
@@ -508,7 +510,15 @@ storyboard:
 
     shot_d7_band:
       - cam: [0.0, cam_9_shot8_bandit]
-      - actor.placement: [1.0, bandit_2, [ 22.6160888672, -10.1472167969, 0.0673751831 ], [ 0.0, 0.0, 108.9000167847 ]]
+      ### Crutch!
+      - actor.placement: [0.0, bandit_2, [ 22.6160888672, -10.1472167969, 0.0673751831 ], [ 0.0, 0.0, 108.9000167847 ]]
+    
+    shot_ger_togame:
+      - actor.gamestate: [0.0, geralt]
+      #- actor.gamestate: [0.0, fat_bandit]
+      #- actor.gamestate: [0.0, bandit_2]
+      #- actor.gamestate: [0.0, bandit_3]
+      - cam.blend.togame: [0.0, cam_9_shot8_bandit]
 
 dialogscript:
   player: "geralt"
@@ -670,6 +680,8 @@ dialogscript:
     - geralt: "It's a deal. Where can I find him?"
     - CUE: shot_d7_band
     - fat_bandit: "We have pitched camp near <place>..."
+    - CUE: shot_ger_togame
+    - geralt: "0001003998|See what I can do."
     - NEXT: section_exit_normal
     #- geralt: "Oughta have a chat with this Baron."
 
@@ -679,6 +691,5 @@ dialogscript:
     - EXIT
 
   section_exit_normal:
-    - CAMERA_BLEND: 1.0
     - OUTPUT: normal
     - EXIT

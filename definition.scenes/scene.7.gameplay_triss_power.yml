@@ -11,6 +11,7 @@ production:
     strings-idstart: 715
 
   gameplay: true
+  cinematic_subtitles: true
 
   assets:
     actors:

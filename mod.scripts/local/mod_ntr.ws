@@ -7,6 +7,72 @@ quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	return false;
 }
 
+quest function NTR_FadeOutQuest( fadeTime : float, r : int, g : int, b : int ) {
+    FadeOutQuest( fadeTime, Color( r, g, b ) );
+}
+
+quest function NTR_FactChecker(factName : string, factCond : string, val : int) : bool {
+	var factVal : int;
+	var ret : bool;
+
+	factVal = FactsQuerySum(factName);
+	
+	switch(factCond) {
+		case "==":
+			ret = (factVal == val);
+			break;
+		case "!=":
+			ret = (factVal != val);
+			break;
+		case ">=":
+			ret = (factVal >= val);
+			break;
+		case "<=":
+			ret = (factVal <= val);
+			break;
+		case ">":
+			ret = (factVal > val);
+			break;
+		case "<":
+			ret = (factVal < val);
+			break;
+	}
+	theGame.GetGuiManager().ShowNotification("factVal = " + factVal + ", supposed val = " + val + ", ret=" + ret);
+	return ret;
+}
+
+quest function NTR_SetMoneyNPC(tag : name, amount : int) {
+	var inv : CInventoryComponent;
+	var NPCs : array <CNewNPC>;
+	var i      : int;
+	
+	theGame.GetNPCsByTag(tag, NPCs);
+
+	for (i = 0; i < NPCs.Size(); i += 1 ) {
+		inv = NPCs[i].GetInventory();
+		inv.SetMoney( amount );
+	}
+}
+quest function NTR_StealGeraltMoney(tag : name, amount : int) {
+	if (amount == -1 || amount > thePlayer.inv.GetMoney()) {
+		amount = thePlayer.inv.GetMoney();
+	}
+	thePlayer.inv.RemoveMoney(amount);
+	NTR_SetMoneyNPC(tag, amount);
+}
+quest function NTR_ReturnGeraltMoney(tag : name) {
+	var NPC : CNewNPC;
+	var inv : CInventoryComponent;
+	var amount : int;
+
+	NPC = theGame.GetNPCByTag(tag);
+	if (NPC) {
+		inv = NPC.GetInventory();
+		amount = inv.GetMoney();
+		inv.RemoveMoney( amount );
+		thePlayer.inv.AddMoney( amount );
+	}
+}
 quest function NTR_FistfightNPC(tag : name, activate : bool) {
 	var NPCs : array <CNewNPC>;
 	var i      : int;
@@ -129,10 +195,16 @@ exec function playMusic( areaName : string, eventName : string, optional saveTyp
 	}
 }
 // -------------------------------------------------
-exec function playSound( bankName : string, eventName : string ) {
+exec function playBank( bankName : string ) {
 	if (!theSound.SoundIsBankLoaded(bankName)) {
 		theSound.SoundLoadBank(bankName, true);
+		theGame.GetGuiManager().ShowNotification("Bank loaded");
+	} else {
+		theGame.GetGuiManager().ShowNotification("Bank was already loaded");
 	}
+}
+
+exec function playEvent( bankName : string, eventName : string ) {
 	thePlayer.SoundEvent(eventName);
 }
 // ----------------------------------------------------------------------------

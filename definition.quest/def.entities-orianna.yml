@@ -140,6 +140,8 @@ templates:
           - h_03_wa__oriana
           - CMorphedMeshComponent1
           - hb_01_ma__orianna
+          - he_02_ma__orianna_premorph
+          - he_03_ma__orianna
           - CMorphedMeshComponent0
           - face_morph
 
@@ -164,10 +166,32 @@ templates:
           - he_02_wa__oriana
           - hb_01_ma__orianna
 
+      orianna_vampire_blood:
+        includedTemplates:
+          #- characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
+          #- characters/models/common/woman_average/body/l_01_wa__body.w2ent
+          - dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+          #- dlc/bob/data/characters/models/crowd_npc/bob_citizen_woman/torso/t2_04_wa__bob_woman_noble.w2ent
+          #- characters/models/crowd_npc/novigrad_citizen_woman/legs/l2_04_wa__novigrad_citizen.w2ent
+          ###- dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/body_03_wa__oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/h_04_wa__oriana.w2ent
+          ###
+          - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
+          #- dlc/bob/data/characters/models/main_npc/oriana/h_02_wa__oriana.w2ent
+        voicetag: "ORIANNA VAMPIRE"
+        collapsedComponents:
+          - head
+          - h_04_wa__oriana
+          - he_02_wa__oriana
+          - hb_01_ma__orianna
+
     usedAppearances:
       - orianna_human
       - orianna_human_morph
       - orianna_vampire
+      - orianna_vampire_blood
 
     #voicetagAppearances:
     #  - ".type": VoicetagAppearancePair

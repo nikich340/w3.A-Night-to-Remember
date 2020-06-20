@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 289, saved: 2020-05-23 18:23:04)
+# (version: 368, saved: 2020-06-20 22:56:17)
 #
 ---
 structure:
@@ -51,10 +51,10 @@ structure:
       
       script.sounds_dettlaff:
         ".editor":
-          pos: [ -42.3503417969, 659.1791992188 ]
+          pos: [ 137.6712799072, 377.7290344238 ]
           in: [ In ]
           out: [ Out ]
-        function: playSoundsBruxa
+        function: playSoundsCustom
         next: ".done"
       
       changelayers.hide_hide_hide:

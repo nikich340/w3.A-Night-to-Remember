@@ -11,7 +11,7 @@ rem ---------------------------------------------------
 :: file "scene.1.examine.corpse.yml"
 :: an empty sceneid is identical to SCENEID=scene.*.yml wildcard and will encode
 :: all scenes matching
-SET SCENEID=intro_hag
+SET SCENEID=11.orphanage
 
 SET INTERACTIVE_BUILD=0
 :: auto execution of every step that is needed (strings, etc)
@@ -24,5 +24,3 @@ SET ENCODE_SCENES=1
 SET START_GAME=1
 
 call "%DIR_PROJECT_BIN%\build.bat"
-
-pause

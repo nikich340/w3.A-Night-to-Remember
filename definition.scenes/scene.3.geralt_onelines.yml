@@ -5,7 +5,7 @@ production:
     strings-idstart: 650
 
   gameplay: true
-  ###hasCinematicOneliners: true
+  cinematic_subtitles: true
 
   assets:
     actors:
@@ -31,7 +31,12 @@ dialogscript:
     - NEXT: section_exit
 
   section_start_check_orphanage:
+    - geralt: "Regis... Trying to avoid a fight and protect her."
     - geralt: "Well, I should check an orphanage first - last time Orianna was there."
+    - NEXT: section_exit
+
+  section_start_after_orphanage:
+    - geralt: "Interesting. The son of a bandit in vampire's claws..."
     - NEXT: section_exit
 
   section_exit:

@@ -1,4 +1,7 @@
 class CNTRBanditNPC extends CNewNPC {
+
+	//editable saved var stolenMoney : int; default stolenMoney = 0;
+
 	/*event OnSpawned( spawnData : SEntitySpawnData )	{
 		super.OnSpawned( spawnData );
 	}*/
@@ -8,6 +11,7 @@ class CNTRBanditNPC extends CNewNPC {
 	//event OnTakeDamage( action : W3DamageAction ) {
 		
 	//}
+
 	function Kill(source : name, optional ignoreImmortalityMode : bool, optional attacker : CGameplayEntity)
 	{
 		theGame.GetGuiManager().ShowNotification("CActor.Kill: called for actor <<" + this + ">> with source <<" + source + ">>");

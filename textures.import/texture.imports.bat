@@ -20,7 +20,21 @@ EXIT /B 1
 :: e.g.:
 ::  %BIN_IMPORT_TEXTURE% data/entities/meshes/ciri_hw_clumping.png data/entities/meshes/ciri_hw_clumping.xbm
 
-:: %BIN_IMPORT_TEXTURE% data_w1_prol/entities/models/azar/cr_rienc1_c1_a.dds data_w1_prol/entities/models/azar/cr_rienc1_c1_a.xbm CharacterDiffuseWithAlpha
+:: dlc\dlcntr\data\fx\orianna_smoke\smoke_front_animated02_ver2.xbm
+:: dlc\dlcntr\data\entities\oriana\model\eye_d03.xbm
+
+:: Orianna
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_03_wa__oriana_d03.png data/entities/oriana/model/h_03_wa__oriana_d03.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_03_wa__oriana_n03.png data/entities/oriana/model/h_03_wa__oriana_n03.xbm NormalmapGloss
+
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/orianna_dress_d03.png data/entities/oriana/model/orianna_dress_d03.xbm WorldDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/orianna_dress_n03.png data/entities/oriana/model/orianna_dress_n03.xbm NormalmapGloss
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/eye_d03.tga data/entities/oriana/model/eye_d03.xbm WorldDiffuse
+
+%BIN_IMPORT_TEXTURE% data/fx/orianna_smoke/water_bubble_no_alpha.tga data/fx/orianna_smoke/water_bubble_no_alpha.xbm WorldDiffuse
+%BIN_IMPORT_TEXTURE% data/fx/orianna_smoke/smoke_front_animated02_ver2.tga data/fx/orianna_smoke/smoke_front_animated02_ver2.xbm WorldDiffuseWithAlpha
+
+:: w1 prol
 %BIN_IMPORT_TEXTURE% data_w1_prol/entities/models/azar/cr_rienc1_c1_d.tga data_w1_prol/entities/models/azar/cr_rienc1_c1_d.xbm CharacterDiffuseWithAlpha
 %BIN_IMPORT_TEXTURE% data_w1_prol/entities/models/azar/cr_rienc1_c1_n.tga data_w1_prol/entities/models/azar/cr_rienc1_c1_n.xbm NormalmapGloss
 %BIN_IMPORT_TEXTURE% data_w1_prol/entities/models/azar/h_01_ma__hakland_mage_d01.tga data_w1_prol/entities/models/azar/h_01_ma__hakland_mage_d01.xbm WorldDiffuse
@@ -29,15 +43,14 @@ EXIT /B 1
 %BIN_IMPORT_TEXTURE% data_w1_prol/entities/models/azar/man_big__n01.tga data_w1_prol/entities/models/azar/man_big__n01.xbm NormalmapGloss
 %BIN_IMPORT_TEXTURE% data_w1_prol/entities/models/savolla/legs_d.tga data_w1_prol/entities/models/savolla/legs_d.xbm WorldDiffuse
 
+:: iorweth
 %BIN_IMPORT_TEXTURE% data/entities/iorwetm/model/iorweth__n.tga data/entities/iorwetm/model/iorweth__n.xbm NormalmapGloss
 %BIN_IMPORT_TEXTURE% data/entities/iorwetm/model/iorweth__a01.tga data/entities/iorwetm/model/iorweth__a01.xbm WorldDiffuse
 %BIN_IMPORT_TEXTURE% data/entities/iorwetm/model/iorweth__d01.tga data/entities/iorwetm/model/iorweth__d01.xbm WorldDiffuse
 %BIN_IMPORT_TEXTURE% data/entities/iorwetm/model/iorweth__hair_d01.tga data/entities/iorwetm/model/iorweth__hair_d01.xbm WorldDiffuse
-
 %BIN_IMPORT_TEXTURE% data/entities/iorwetm/model/iorweth__n.tga data/entities/iorwetm/model/roche_b1_n01.xbm NormalmapGloss
 %BIN_IMPORT_TEXTURE% data/entities/iorwetm/model/iorweth__a01.tga data/entities/iorwetm/model/roche_b1_a01.xbm WorldDiffuse
 %BIN_IMPORT_TEXTURE% data/entities/iorwetm/model/iorweth__d01.tga data/entities/iorwetm/model/roche_b1_d01.xbm WorldDiffuse
-
 %BIN_IMPORT_TEXTURE% data/entities/iorwetm/novigrad_citizen_halfling/c_04_ha__novigrad_citizen_halfling_d01.tga data/entities/iorwetm/novigrad_citizen_halfling/c_04_ha__novigrad_citizen_halfling_d01.xbm WorldDiffuse
 %BIN_IMPORT_TEXTURE% data/entities/iorwetm/novigrad_citizen_halfling/c_04_ha__novigrad_citizen_halfling_n01.tga data/entities/iorwetm/novigrad_citizen_halfling/c_04_ha__novigrad_citizen_halfling_n01.xbm NormalmapGloss
 :: last parameter can be set to define texturegroup if necessary, like this:
