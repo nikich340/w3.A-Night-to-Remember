@@ -7,8 +7,10 @@ function ntr_addExtraActorVoiceLines(category: String, out lines: array<SSbUiExt
 }
 
 function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>) {
-    lines.PushBack(SSbUiExtraLines(2114670650, category, "group 1", "Regis____Trying_to_avoid_a_fight_and_protect_her_", 1.6855));
-    lines.PushBack(SSbUiExtraLines(2114670651, category, "group 1", "Well__I_should_check_an_orphanage_first_-_last_tim", 3.1468));
+    lines.PushBack(SSbUiExtraLines(2114670650, category, "group 1", "I_need_some_fresh_air_", 1.6855));
+    lines.PushBack(SSbUiExtraLines(2114670651, category, "group 1", "A_letter____Who's_using_an_owl_for_this_", 3.1468));
+    lines.PushBack(SSbUiExtraLines(2114670652, category, "group 1", "Regis____Just_trying_to_avoid_a_fight__to_protect_", 4.78));
+    lines.PushBack(SSbUiExtraLines(2114670653, category, "group 1", "Well__I_should_check_an_orphanage_in_a_swamp__Last", 5.3381));
     lines.PushBack(SSbUiExtraLines(2114670700, category, "group 1", "Triss_!_I_should_talk_to_her_", 2.1154));
     lines.PushBack(SSbUiExtraLines(2114670705, category, "group 1", "I've_been_thinking_about_us_", 1.8566));
     lines.PushBack(SSbUiExtraLines(2114670706, category, "group 1", "I'm_looking_for___", 1.1954));
@@ -32,4 +34,11 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670739, category, "group 1", "Fuck_you!", 1.0363));
     lines.PushBack(SSbUiExtraLines(2114670740, category, "group 1", "Death_mistake_", 1.3369));
     lines.PushBack(SSbUiExtraLines(2114670745, category, "group 1", "Crazy_nightmare_", 1.3958));
+    lines.PushBack(SSbUiExtraLines(2114670763, category, "group 1", "Me__Drifter__stranger__mutant____Sometimes_even_by", 7.7509));
+    lines.PushBack(SSbUiExtraLines(2114670768, category, "group 1", "I_suppose_to_find_a_red-haired_woman_here_", 2.7976));
+    lines.PushBack(SSbUiExtraLines(2114670770, category, "group 1", "Our_boss_has_questions_for_her_about_orphanage_and", 1.4995));
+    lines.PushBack(SSbUiExtraLines(2114670772, category, "group 1", "Almost_-_nice_word__So_someone_is_alive__And_we_kn", 4.5639));
+    lines.PushBack(SSbUiExtraLines(2114670775, category, "group 1", "It's_no_concern_of_yours_", 1.7966));
+    lines.PushBack(SSbUiExtraLines(2114670777, category, "group 1", "Do_you_think_we_believe_first_fella__Talk_with_our", 7.8518));
+    lines.PushBack(SSbUiExtraLines(2114670781, category, "group 1", "We_have_pitched_camp_near__place____", 2.322));
 }

@@ -1,0 +1,27 @@
+#
+# quest structure subsegment: camp
+# 
+# (version: 409, saved: 2020-06-22 16:02:49)
+#
+---
+structure:
+  segments:
+    camp:
+      blocks:
+        in:
+          ".editor": [ 100.0, 250.0 ]
+          next:
+            - objective.go_camp: Activate
+        
+        objective.go_camp:
+          ".editor": [ 360.3774414062, 335.4485473633 ]
+          objective: nighttoremember/camp_part/go_camp
+          notify: true
+          track: true
+          next:
+            - out
+        
+        out:
+          ".editor": [ 614.7058105469, 232.9411621094 ]
+          next: ".done"
+        

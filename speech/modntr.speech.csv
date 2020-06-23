@@ -1,0 +1,61 @@
+;meta[language=en]
+; id      |key(hex)|key(str)| text
+;
+; rename this file to mod<YOUR MODNAME>.speech.csv and
+; add all strings for custom voicelines like the example line below.
+;
+; make sure the XXXX is the string id-space of the project and nnn is unique
+; for every line.
+;
+;211XXXXnnn|||example voiceline text
+;
+2114670650|||I need some fresh air.
+2114670651|||A letter... Who's using an owl for this?
+2114670652|00000000||Regis... Just trying to avoid a fight, to protect her.
+2114670653|00000000||Well, I should check an orphanage in a swamp. Last time Orianna was there.
+;
+2114670700|||Triss?! I should talk to her.
+2114670705|||I've been thinking about us.
+2114670706|||I'm looking for...
+2114670707|||I'm not Yennefer, Geralt. But I can be like Yennefer!
+2114670708|||So, what do you think?
+2114670709|||You don't like me..
+2114670710|||You realize - one word and you'll howl with pain!
+2114670711|||I'm your nightmare!
+2114670727|||Geralt, please...
+2114670728|||Show me your face.
+2114670729|||I must be out of my mind... Vesemir!
+2114670730|||I warned you. Pissing upwind leads to disaster.
+2114670731|||This time you pissed in a tornado.
+2114670732|||Do anything stupid and they'll tie you down on an anthill, face coated with honey. You'll scream so loud even the storm riders will hear you.
+2114670733|||Are you ghosts?
+2114670734|||I'm sorry, my friend...
+2114670735|||You wish to give your soul for this?
+2114670736|||Then you don't have what I need.
+2114670737|||Is it your doing?
+2114670738|||So you say, yet I wait and wait, and nothing...
+2114670739|||Fuck you!
+2114670740|||Death mistake.
+2114670745|||Crazy nightmare.
+;2114670762|||Who the foek are you?!
+2114670763|||Me? Drifter, stranger, mutant... Sometimes even by my name. Vampire of Rivia.
+;2114670764|||Very funny, cretin.
+;2114670765|||Just a traveler you say.. And just two swords behind? Looks like you can swing them well.
+;2114670766|||Witcher? So you know how to track down somebody, right?
+;2114670767|||Well, get in here, will talk with you.
+2114670768|||I suppose to find a red-haired woman here.
+;2114670769|||That's interesting. Because we supposed to meet her too.
+2114670770|||Why are you looking for her?
+;2114670771|||Our boss has questions for her about orphanage and children.
+2114670772|||The orphanage was attacked and almost none of the children survived.
+;2114670773|||Almost - nice word. So someone is alive. And we know for sure that Orianna herself is alive too.
+;2114670774|||But she doesn't want to come here. So there's something wrong here. We are few, and we guard the places where she used to be. Perhaps you could help us, and then our leader Baron Edward will give you a decent reward.
+2114670775|||Why are you interested in children?
+;2114670776|||It's no concern of yours.
+2114670777|||Orianna will kill you. She is a monster, not a human. And only I can help. Meaning I need more information.
+;2114670778|||Do you think we believe first fella? Talk with our leader about it.
+;2114670779|||Look at that - vagrant mutt's givin' us orders… Needs to know his place! Fuck 'im up!
+;2114670780|||Three against one - you're dead already.
+2114670781|||It's a deal. Where can I find him?
+;2114670782|||We have pitched camp near...
+;   1003998|||See what I can do.

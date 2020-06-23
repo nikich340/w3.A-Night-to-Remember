@@ -476,6 +476,8 @@ storyboard:
 
     shot_d6_band:
       - cam: [0.0, cam_9_shot8_bandit]
+      - actor.lookat: [0.2, fat_bandit, bandit_2]
+      - actor.lookat: [0.6, fat_bandit, geralt]
       - actor.anim.mimic:
           actor: fat_bandit
           .@pos: [0.0, mimicsanim_117_geralt_neutral_gesture_brows_down_face_nrml]
@@ -491,8 +493,22 @@ storyboard:
           .@pos: [0.0, bandit_2_man_fistfight_idle]
           blendin: 0.7
       - actor.anim: 
-          .@pos: [0.0, bandit_3_man_fistfight_idle]
+          actor: bandit_3
+          .@pos: [0.0, anim_4958_man_fistfight_idle_guarded]
           blendin: 0.7
+          blendout: 0.5
+          stretch: 1.0
+      - actor.anim: 
+          actor: bandit_3
+          .@pos: [0.25, anim_4958_man_fistfight_idle_guarded]
+          blendin: 0.5
+          blendout: 0.5
+          stretch: 1.5
+      - actor.anim: 
+          actor: bandit_3
+          .@pos: [0.7, anim_4958_man_fistfight_idle_guarded]
+          blendin: 0.5
+          stretch: 1.5
 
   section_leader:
     shot_d7_ger:
@@ -615,24 +631,26 @@ dialogscript:
 
   section_storyboard_ui4:
     - CUE: shot_d1_ger
-    - geralt: "I suppose to find red-haired woman here, not bandits."
+    - geralt: "I suppose to find a red-haired woman here."
     # shot shot8 bandit
     - CUE: shot_d1_band
     - fat_bandit: "That's interesting. Because we supposed to meet her too."
     - CUE: shot_d2_ger
-    - geralt: "Why are you looking for her?"
+    - geralt: "[1.4995]2114670770|Why are you looking for her?"
     - CUE: shot_d2_band
     - fat_bandit: "Our boss has questions for her about orphanage and children."
     - CUE: shot_d3_ger
-    - geralt: "The orphanage was attacked by vampires, and almost none of the children survived."
+    - geralt: "The orphanage was attacked and almost none of the children survived."
     - CUE: shot_d3_band
-    - fat_bandit: "Almost - nice word. So someone of them survived. And we know for sure that Orianna herself is alive."
-    - fat_bandit: "But she stubbornly doesn't want to come here. So there's something wrong here. We are few, and we guard the places where she used to be. Perhaps you could help us, and then our leader Baron Edward will give you a decent reward."
+    - fat_bandit: "Almost - nice word. So someone is alive. And we know for sure that Orianna herself is alive too."
+    - fat_bandit: "But she doesn't want to come here. So there's something wrong here. We are few, and we guard the places where she used to be. Perhaps you could help us, and then our leader Baron Edward will give you a decent reward."
     - NEXT: section_choice_details
 
   section_choice_details:
     - CHOICE:
-      - choice: ["Why are you interested in her children?", section_why_children]
+      - choice: ["It's a deal", section_leader]
+        emphasize: true
+      - choice: ["Why are you interested in children?", section_why_children]
         condition: [ NTR_scenefact_whychildren, "!=", 1 ]
         #emphasize: true
       - choice: ["I'll ask again, polite like, and you'll answer, just as politely", section_fight]
@@ -640,12 +658,10 @@ dialogscript:
         emphasize: true
       - choice: ["Orianna will kill you", section_orianna]
         #emphasize: true
-      - choice: ["It's a deal", section_leader]
-        emphasize: true
 
   section_why_children:
     - CUE: shot_d4_ger
-    - geralt: "Why are you interested in her children?"
+    - geralt: "Why are you interested in children?"
     - CUE: shot_d4_band
     - fat_bandit: "It's no concern of yours."
     - NEXT: script_set_whychildren
@@ -661,7 +677,7 @@ dialogscript:
 
   section_orianna:
     - CUE: shot_d5_ger
-    - geralt: "Orianna will kill you. She is not a human, but a vampire. Only I can help. I need every last bit of information available."
+    - geralt: "Orianna will kill you. She is a monster, not a human. And only I can help. Meaning I need more information."
     - CUE: shot_d5_band
     - fat_bandit: "Do you think we believe first fella? Talk with our leader about it."
     - NEXT: section_choice_details

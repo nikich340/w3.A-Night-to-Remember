@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 368, saved: 2020-06-20 22:56:17)
+# (version: 409, saved: 2020-06-22 16:02:49)
 #
 ---
 structure:
@@ -13,36 +13,36 @@ structure:
           next:
             - settime.set_00_00
         
-        scene.1_intro_hag:
+        scene.01_intro_hag:
           ".editor":
             pos: [ 1100.0, 375.0 ]
             in: [ Input ]
             out: [ Output ]
-          scene: 1.intro_hag.yml
+          scene: 01.intro_hag.yml
           placement: bob/introscenes
           interruptable: true
           _fadein: false
           next.Output:
             - waituntil.wait_hag_onDead
         
-        scene.2_hag_runs:
+        scene.02_hag_runs:
           ".editor":
             pos: [ 1500.0, 375.0 ]
             in: [ Input ]
             out: [ Output ]
-          scene: 2.intro_hag_runs.yml
+          scene: 02.intro_hag_runs.yml
           placement: bob/introscenes
           interruptable: true
           _fadein: false
           next.Output:
             - despawn.despawn_hag
         
-        scene.4_triss_appear:
+        scene.04_triss_appear:
           ".editor":
             pos: [ 3900.0, 525.0 ]
             in: [ Input ]
             out: [ Output ]
-          scene: 4.triss_appear.yml
+          scene: 04.triss_appear.yml
           placement: bob/introscenes
           interruptable: true
           _fadein: false
@@ -51,12 +51,12 @@ structure:
             - objective.talk_triss: Activate
             - waituntil.new_wait_until_contact_triss
         
-        scene.5_triss_to_monster:
+        scene.05_triss_to_monster:
           ".editor":
             pos: [ 4300.0, 425.0 ]
             in: [ Input ]
             out: [ Output ]
-          scene: 5.triss_to_monster.yml
+          scene: 05.triss_to_monster.yml
           placement: bob/introscenes
           interruptable: true
           _fadein: false
@@ -66,35 +66,35 @@ structure:
             - objective.fight_triss: Activate
             - spawn.triss_fight_magic_area
         
-        scene.6_triss_barghests:
+        scene.06_triss_barghests:
           ".editor":
             pos: [ 5500.0, 325.0 ]
             in: [ Input ]
             out: [ Output ]
-          scene: 6.triss_barghests.yml
+          scene: 06.triss_barghests.yml
           placement: bob/introscenes
           interruptable: true
           _fadein: false
           next.Output:
             - waituntil.outside_magic_barrier
         
-        scene.7_gameplay_triss_power:
+        scene.07_gameplay_triss_power:
           ".editor":
             pos: [ 5100.0, 325.0 ]
             in: [ Input ]
             out: [ Output ]
-          scene: 7.gameplay_triss_power.yml
+          scene: 07.gameplay_triss_power.yml
           placement: bob/introscenes
           interruptable: false
           _fadein: false
           next: ".done"
         
-        scene.9_triss_final:
+        scene.09_triss_final:
           ".editor":
             pos: [ 5712.1669921875, 569.4588012695 ]
             in: [ Input ]
             out: [ Output ]
-          scene: 9.triss_final.yml
+          scene: 09.triss_final.yml
           placement: bob/introscenes
           interruptable: true
           _fadein: false
@@ -106,7 +106,7 @@ structure:
             pos: [ 3300.0, 575.0 ]
             in: [ hag_wall ]
             out: [ Output ]
-          scene: 3.geralt_onelines.yml
+          scene: 03.geralt_onelines.yml
           placement: bob/introscenes
           interruptable: true
           _fadein: false
@@ -160,7 +160,7 @@ structure:
             in: [ In ]
             out: [ Out ]
           next:
-            - scene.7_gameplay_triss_power: Input
+            - scene.07_gameplay_triss_power: Input
             - waituntil.wait_triss_onDeath
             - script.tune_triss_power
         
@@ -207,7 +207,7 @@ structure:
             in: [ In ]
             out: [ Out ]
           next:
-            - scene.4_triss_appear: Input
+            - scene.04_triss_appear: Input
         
         waituntil.wait_1s:
           elapsed: "00:00:01"
@@ -225,7 +225,7 @@ structure:
             in: [ In ]
             out: [ Out ]
           next:
-            - scene.6_triss_barghests: Input
+            - scene.06_triss_barghests: Input
             - script.tune_barghest_1
             - script.tune_barghest_2
         
@@ -236,7 +236,7 @@ structure:
             in: [ In ]
             out: [ Out ]
           next:
-            - scene.2_hag_runs: Input
+            - scene.02_hag_runs: Input
         
         waituntil.wait_triss_onDeath:
           factdb: [ trissIntroDead, ">=", 1 ]
@@ -276,7 +276,7 @@ structure:
             - npcsTag: cname_triss_monster
             - appearanceName: cname_triss_yen
           next:
-            - scene.5_triss_to_monster: Input
+            - scene.05_triss_to_monster: Input
         
         script.hide_triss_indicator:
           ".editor":
@@ -360,7 +360,7 @@ structure:
             - npcsTag: cname_triss_monster
             - appearanceName: cname_triss
           next:
-            - scene.9_triss_final: Input
+            - scene.09_triss_final: Input
         
         script.tune_barghest_1:
           ".editor":
@@ -409,7 +409,7 @@ structure:
             - npcGroupType: ENGT_Enemy
             - scale: -1.0
           next:
-            - scene.1_intro_hag: Input
+            - scene.01_intro_hag: Input
         
         script.tune_triss:
           ".editor":

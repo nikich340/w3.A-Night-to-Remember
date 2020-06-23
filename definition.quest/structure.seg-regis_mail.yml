@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: regis_mail
 # 
-# (version: 368, saved: 2020-06-20 22:56:17)
+# (version: 409, saved: 2020-06-22 16:02:49)
 #
 ---
 structure:
@@ -32,7 +32,7 @@ structure:
             pos: [ 1172.7955322266, 170.5534057617 ]
             in: [ using_owl ]
             out: [ Output ]
-          scene: 3.geralt_onelines.yml
+          scene: 03.geralt_onelines.yml
           placement: bob/homescenes
           interruptable: true
           _fadein: false

@@ -1,21 +1,30 @@
 #
 # quest structure root segment
 # 
-# (version: 368, saved: 2020-06-20 22:56:17)
+# (version: 409, saved: 2020-06-22 16:02:49)
 #
 ---
 structure:
   quest:
     blocks:
       start:
-        ".editor": [ -235.4636230469, 491.2406005859 ]
+        ".editor": [ -407.4636230469, 482.2406005859 ]
         next:
           - waituntil.wait_quest_allowed
           - changelayers.hide_hide_hide
       
+      subsegment.camp:
+        ".editor":
+          pos: [ 1006.0297851562, 490.3098144531 ]
+          in: [ In ]
+          out: [ Out ]
+        segment: camp
+        next:
+          - end
+      
       subsegment.intro_nightmare:
         ".editor":
-          pos: [ 336.6061401367, 498.0928955078 ]
+          pos: [ 237.6061553955, 504.0928955078 ]
           in: [ In ]
           out: [ Out ]
         segment: intro_nightmare
@@ -24,30 +33,105 @@ structure:
       
       subsegment.orphanage:
         ".editor":
-          pos: [ 774.3270263672, 694.665222168 ]
+          pos: [ 790.9936523438, 491.5223693848 ]
           in: [ In ]
           out: [ Out ]
         segment: orphanage
         next:
-          - end
+          - subsegment.camp
       
       subsegment.regis_mail:
         ".editor":
-          pos: [ 549.4227905273, 492.7007141113 ]
+          pos: [ 452.4227905273, 503.7007141113 ]
           in: [ In ]
           out: [ Out ]
         segment: regis_mail
         next:
-          - subsegment.orphanage
+          - changelayers.show_orphlayer
+      
+      waituntil.night_time:
+        time: [ "00:00", "04:00" ]
+        ".editor":
+          pos: [ 491.9230041504, -245.4349060059 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - addfact.fact_add11
+      
+      waituntil.non_night_time:
+        time: [ "04:01", "23:59" ]
+        ".editor":
+          pos: [ 622.0083618164, -81.7935943604 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - addfact.del_fact11
+      
+      waituntil.outside_area:
+        outside: [ bob/orphanage_wraitharea, PLAYER ]
+        ".editor":
+          pos: [ 754.7053222656, 222.8629760742 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - addfact.del_fact1
       
       waituntil.wait_quest_allowed:
         factdb: [ NTRstartquest, ">=", 1 ]
         ".editor":
-          pos: [ -43.9961013794, 492.9546813965 ]
+          pos: [ -200.99609375, 487.9546813965 ]
           in: [ In ]
           out: [ Out ]
         next:
           - changelayers.show_main_layer
+      
+      waituntil.wraith_area:
+        inside: [ bob/orphanage_wraitharea, PLAYER ]
+        ".editor":
+          pos: [ 636.0413818359, 94.8574752808 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - addfact.fact_add1
+      
+      script.FACT_BRANCH:
+        ".editor":
+          pos: [ 983.391418457, -65.5462341309 ]
+          in: [ In ]
+          out: [ "False", "True" ]
+        function: NTR_FactChecker
+        parameter:
+          - factName: NTR_orphanage_wraith
+          - factCond: "=="
+          - val: 2
+        next.True:
+          - spawn.spawn_wraiths
+      
+      script.FACT_BRANCH1:
+        ".editor":
+          pos: [ 429.0227966309, -69.3067398071 ]
+          in: [ In ]
+          out: [ "False", "True" ]
+        function: NTR_FactChecker
+        parameter:
+          - factName: NTR_orphanage_wraith
+          - factCond: "=="
+          - val: 2
+        next.False:
+          - waituntil.non_night_time
+      
+      script.FACT_BRANCH2:
+        ".editor":
+          pos: [ 541.5682373047, 226.8706359863 ]
+          in: [ In ]
+          out: [ "False", "True" ]
+        function: NTR_FactChecker
+        parameter:
+          - factName: NTR_orphanage_wraith
+          - factCond: "=="
+          - val: 2
+        next.False:
+          - waituntil.outside_area
       
       script.sounds_dettlaff:
         ".editor":
@@ -59,7 +143,7 @@ structure:
       
       changelayers.hide_hide_hide:
         ".editor":
-          pos: [ -25.2380828857, 583.571472168 ]
+          pos: [ -209.238067627, 576.571472168 ]
           hint: hide-only
           in: []
           out: []
@@ -75,7 +159,7 @@ structure:
       
       changelayers.show_main_layer:
         ".editor":
-          pos: [ 143.4925079346, 503.659576416 ]
+          pos: [ 18.4925231934, 490.659576416 ]
           hint: show-only
           in: []
           out: []
@@ -85,9 +169,62 @@ structure:
         show:
           - nlayer
         next:
+          - changelayers.show_orphlayer
+      
+      changelayers.show_orphlayer:
+        ".editor":
+          pos: [ 621.4846801758, 414.8437194824 ]
+          hint: show-only
+          in: []
+          out: []
+        sync: true
+        purge: false
+        world: bob
+        show:
+          - orphanage_layer
+        next:
           - subsegment.orphanage
+          - waituntil.wraith_area
+          - waituntil.night_time
+      
+      spawn.spawn_wraiths:
+        ".editor":
+          pos: [ 1168.5069580078, -23.5438270569 ]
+          hint: spawn-only
+          in: []
+          out: []
+        phase: fight
+        spawnsets:
+          - comm_orph_wraiths
+        next: ".done"
+      
+      addfact.del_fact1:
+        ".editor": [ 952.7802734375, 217.9209899902 ]
+        value: [ NTR_orphanage_wraith, -1 ]
+        next:
+          - waituntil.wraith_area
+      
+      addfact.del_fact11:
+        ".editor": [ 811.9638671875, -80.3769302368 ]
+        value: [ NTR_orphanage_wraith, -1 ]
+        next:
+          - waituntil.night_time
+      
+      addfact.fact_add1:
+        ".editor": [ 824.43359375, 89.9456558228 ]
+        value: [ NTR_orphanage_wraith, 1 ]
+        next:
+          - script.FACT_BRANCH2
+          - script.FACT_BRANCH
+      
+      addfact.fact_add11:
+        ".editor": [ 791.5753173828, -239.6225128174 ]
+        value: [ NTR_orphanage_wraith, 1 ]
+        next:
+          - script.FACT_BRANCH
+          - script.FACT_BRANCH1
       
       end:
-        ".editor": [ 985.8920288086, 490.1529541016 ]
+        ".editor": [ 1224.8920898438, 489.6112976074 ]
         next: ".done"
       

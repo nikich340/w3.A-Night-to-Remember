@@ -283,7 +283,8 @@ storyboard:
 
     # shot Shot3
     shot_3:
-      - actor.placement: [0.0, Big_bandit, [ 19.9732971191, -9.0687866211, 0.0622177124 ], [ 0.0, 0.0, 205.3399505615 ]]
+      #- actor.placement: [0.0, Big_bandit, [ 19.9732971191, -9.0687866211, 0.0622177124 ], [ 0.0, 0.0, 205.3399505615 ]]
+      - actor.placement: [0.0, Big_bandit, [ 20.2732971191, -9.0687866211, 0.0622177124 ], [ 0.0, 0.0, 205.3399505615 ]]
       - cam.blend.start: [0.0, cam_3_Shot3]
       - cam.blend.key: [0.5, cam_4_Shot4]
       - cam.blend.end: [0.8, cam_5_Shot_band]

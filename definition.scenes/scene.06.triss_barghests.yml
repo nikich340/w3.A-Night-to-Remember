@@ -1,0 +1,386 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    triss:
+      template: "dlc\\dlcntr\\data\\entities\\triss_monster.w2ent"
+      appearance: [ "triss_monster" ]
+
+    barghest_1:
+      template: "dlc\\bob\\data\\characters\\npc_entities\\monsters\\barghest.w2ent"
+      appearance: [ "barghest" ]
+
+    barghest_2:
+      template: "dlc\\bob\\data\\characters\\npc_entities\\monsters\\barghest.w2ent"
+      appearance: [ "barghest" ]
+
+  props:
+    teleport:
+      #template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\entities\\q704_teleport.w2ent"
+      template: "dlc/dlcntr/data/entities/q704_teleport_fixed.w2ent"
+
+  animations:
+    anim_316_high_standing_determined_enter_run_in_frontal:
+      animation: "high_standing_determined_enter_run_in_frontal"
+      frames: 210
+
+    anim_7034_high_standing_determined_gesture_look_over_left:
+      animation: "high_standing_determined_gesture_look_over_left"
+      frames: 324
+
+    anim_12075_woman_sorceress_idle_lp_02:
+      animation: "woman_sorceress_idle_lp_02"
+      frames: 113
+
+    anim_12107_woman_sorceress_taunt_01_rp:
+      animation: "woman_sorceress_taunt_01_rp"
+      frames: 90
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_0_woman_sorceress_idle_lp_01:
+      idle_anim: "woman_sorceress_idle_lp_01"
+
+    pose_0_None:
+      idle_anim: "None"
+
+  cameras:
+    cam_1_from_teleport:
+      fov: 30.0
+      transform:
+        pos: [ -6.1188030243, 13.2087402344, 1.4863128662 ]
+        rot: [ 0.0, 348.7900085449, 188.8225708008 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.6223759651, 5.6223759651 ]
+        focus: [ 3.1223759651, 4.1223759651 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_from_teleport_look_back:
+      fov: 40.0
+      transform:
+        pos: [ -6.1188030243, 13.2087402344, 1.4863128662 ]
+        rot: [ 0.0, 348.0199890137, 188.4375915527 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_triss_i_dont_:
+      fov: 30.0
+      transform:
+        pos: [ -6.3779296875, 9.2832031250, 1.3363037109 ]
+        rot: [ 0.0, 348.4049987793, 351.5375671387 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.1972298622, 6.1972298622 ]
+        focus: [ 3.6972298622, 4.6972298622 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_4_triss_burgests:
+      fov: 40.0
+      transform:
+        pos: [ -5.6638107300, 10.0415039063, 0.7362670898 ]
+        rot: [ 0.0, 345.1050109863, 5.6725778580 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.2606463432, 5.2606463432 ]
+        focus: [ 2.7606463432, 3.7606463432 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_6_triss_key_cam:
+      fov: 30.0
+      transform:
+        pos: [ -6.3238449097, 9.7326660156, 0.8862762451 ]
+        rot: [ 0.0, 353.0249938965, 353.6275634766 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.5980279446, 5.5980281830 ]
+        focus: [ 3.0980279446, 4.0980281830 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_7_to_gp:
+      fov: 50.0
+      transform:
+        pos: [ -5.5321674347, 7.9882812500, 2.1863555908 ]
+        rot: [ 0.0, 342.1350097656, 4.6574401855 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.3629186153, 5.3629188538 ]
+        focus: [ 2.8629186153, 3.8629186153 ]
+        intensity: 0.0000000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 715
+
+  placement: "ntr_bob_introscenes_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ 24.4257621765, -2107.7331542969, 126.1453247070 ]
+      #rot: [ 0.0, 0.0, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      triss:
+        repo: "triss"
+        by_voicetag: false
+        appearance: "triss_monster"
+        tags: [ "triss_monster" ]
+
+      barghest_1:
+        repo: "barghest_1"
+        by_voicetag: false
+        appearance: "barghest"
+        tags: [ "intro_barghest1" ]
+
+      barghest_2:
+        repo: "barghest_2"
+        by_voicetag: false
+        appearance: "barghest"
+        tags: [ "intro_barghest2" ]
+
+    props:
+      teleport:
+        repo: "teleport"
+
+    cameras:
+      cam_1_from_teleport:
+        repo: "cam_1_from_teleport"
+
+      cam_2_from_teleport_look_back:
+        repo: "cam_2_from_teleport_look_back"
+
+      cam_3_triss_i_dont_:
+        repo: "cam_3_triss_i_dont_"
+
+      cam_4_triss_burgests:
+        repo: "cam_4_triss_burgests"
+
+      cam_6_triss_key_cam:
+        repo: "cam_6_triss_key_cam"
+      cam_7_to_gp:
+        repo: "cam_7_to_gp"
+
+    #soundbanks:
+    #  - monster_barghest
+      
+    animations:
+      geralt_high_standing_determined_enter_run_in_frontal:
+        actor: "geralt"
+        repo: "anim_316_high_standing_determined_enter_run_in_frontal"
+        #duration: 7.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_look_over_left:
+        actor: "geralt"
+        repo: "anim_7034_high_standing_determined_gesture_look_over_left"
+        #duration: 10.8000001907
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_woman_sorceress_idle_lp_02:
+        actor: "triss"
+        repo: "anim_12075_woman_sorceress_idle_lp_02"
+        #duration: 3.7666666508
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_woman_sorceress_taunt_01_rp:
+        actor: "triss"
+        repo: "anim_12107_woman_sorceress_taunt_01_rp"
+        #duration: 3.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    actor.poses:
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      triss_woman_sorceress_idle_lp_01:
+        actor: "triss"
+        repo: "pose_0_woman_sorceress_idle_lp_01"
+
+      barghest_1_None:
+        actor: "barghest_1"
+        repo: "pose_0_None"
+
+      barghest_2_None:
+        actor: "barghest_2"
+        repo: "pose_0_None"
+
+storyboard:
+  defaults:
+    placement:
+      #geralt: [[ -5.7042903900, 10.1396484375, -0.3926391602 ], [ 0.0, 0.0, 0.0 ]]
+      triss: [[ -5.9788436890, 13.0268554688, -0.5366210938 ], [ 0.0, 0.0, 161.9200134277 ]]
+      #barghest_1: [[ 2.1461620331, 16.3447265625, -0.6447143555 ], [ 0.0, 0.0, 0.0 ]]
+      #barghest_2: [[ 6.1461620331, 16.3447265625, -0.5303955078 ], [ 0.0, 0.0, 0.0 ]]
+
+    #actor.pose:
+      #geralt: geralt_high_standing_determined_idle
+      #triss: triss_woman_sorceress_idle_lp_01
+      #barghest_1: barghest_1_None
+      #barghest_2: barghest_2_None
+
+  section_storyboard_ui:
+    # shot from teleport
+    shot_1:
+      - actor.placement: [0.0, geralt, [ -5.7042903900, 10.1396484375, -0.3926391602 ], [ 0.0, 0.0, 0.0 ]]
+      #- actor.placement: [0.0, triss, [ -5.9788436890, 13.0268554688, -0.5366210938 ], [ 0.0, 0.0, 161.9200134277 ]]
+      #- actor.placement: [0.1, triss, [ -5.9788436890, 13.0268554688, -0.5366210938 ], [ 0.0, 0.0, 161.9200134277 ]]
+      - actor.placement: [0.0, barghest_1, [ -7.3380260468, 13.4687500000, -1.7402343750 ], [ 0.0, 0.0, 204.3499145508 ]]
+      - actor.placement: [0.0, barghest_2, [ -4.9032192230, 13.5212402344, -1.7387084961 ], [ 0.0, 0.0, 167.5300140381 ]]
+      - actor.lookat: [0.1, geralt, triss]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.pose: [0.0, triss_woman_sorceress_idle_lp_01]
+      - actor.pose: [0.0, barghest_1_None]
+      - actor.pose: [0.0, barghest_2_None]
+      #- prop.placement: [0.0, teleport, [ -5.4560375214, 8.5307617188, -0.7273559570 ], [ 0.0, 0.0, 180.9501037598 ]]
+      - prop.placement: [0.0, teleport, [ -5.9195747375, 7.7526855469, -0.5273895264 ], [ 0.0, 0.0, 180.9501037598 ]]
+      - prop.effect.start: [0.0, teleport, teleport_fx]
+      - prop.effect.start: [0.0, teleport, activate_fx]
+      - cam: [0.0, cam_1_from_teleport]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_enter_run_in_frontal]
+          stretch: 0.8
+      ###    blendout: 0.3
+      - prop.effect.stop: [0.7, teleport, teleport_fx]
+      #- prop.placement: [0.7, teleport, [ -5.9195747375, 7.7526855469, -50.5273895264 ], [ 0.0, 0.0, 180.9501037598 ]]
+      #- prop.hide: [0.7, teleport]
+
+    # shot from teleport look back
+    ###shot_2:
+      #- cam: [0.0, cam_2_from_teleport_look_back]
+    ###  - actor.anim: 
+    ###      .@pos: [0.0, geralt_high_standing_determined_gesture_look_over_left]
+    ###      stretch: 0.6666
+    ###      blendin: 0.3
+    ###  - actor.lookat: [0.4, geralt, [ -5.4560375214, 8.5307617188, -0.7273559570 ]]
+    ###  - actor.lookat: [0.8, geralt, triss]
+
+    # shot triss i dont 
+    shot_3:
+      - actor.placement: [0.0, geralt, [ -5.7042903900, 10.1396484375, -0.5648803711 ], [ 0.0, 0.0, 0.0 ]]
+      - cam.blend.start: [0.0, cam_3_triss_i_dont_]
+      - actor.anim: 
+          .@pos: [0.0, triss_woman_sorceress_idle_lp_02]
+          blendout: 0.5
+
+    # shot triss burgests
+    shot_4:
+      #- actor.placement: [0.0, triss, [ -5.9788436890, 13.0268554688, -0.5366210938 ], [ 0.0, 0.0, 161.9200134277 ]]
+      - actor.placement.start: [0.0, barghest_1, [ -7.3380260468, 13.4687500000, -1.7402343750 ], [ 0.0, 0.0, 204.3499145508 ]]
+      - actor.placement.start: [0.0, barghest_2, [ -4.9032192230, 13.5212402344, -1.7387084961 ], [ 0.0, 0.0, 167.5300140381 ]]
+      - cam.blend.key: [0.25, cam_6_triss_key_cam]
+      - cam.blend.end: [0.8, cam_4_triss_burgests]
+      - actor.effect.start: [0.0, triss, summoned_light]
+      - actor.anim: 
+          .@pos: [0.0, triss_woman_sorceress_taunt_01_rp]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.effect.stop: [0.7, triss, summoned_light]
+      - actor.placement.end: [0.75, barghest_1, [ -7.3380260468, 13.4687500000, -0.5903320313 ], [ 0.0, 0.0, 204.3499145508 ]]
+      - actor.placement.end: [0.75, barghest_2, [ -4.9032192230, 13.5212402344, -0.4589233398 ], [ 0.0, 0.0, 167.5300140381 ]]
+      #- actor.sound: [0.7, barghest_1, monster_barghest_voice_attack]
+      #- actor.sound: [0.7, barghest_2, monster_barghest_combat_appear]
+      - actor.anim:
+          .@pos: [0.5, triss_woman_sorceress_idle_lp_02]
+          blendin: 0.5
+          clipend: 2.5
+
+    # shot to gp
+    shot_7:
+      - actor.anim: 
+          .@pos: [0.0, triss_woman_sorceress_taunt_01_rp]
+      - cam: [0.0, cam_7_to_gp]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "triss", "barghest_1", "barghest_2" ]
+  props: [ "teleport" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot from teleport
+    - CUE: shot_1
+    # (longest) anim: high_standing_determined_enter_run_in_frontal
+    - PAUSE: 5.6
+    # shot from teleport look back
+    ###- CUE: shot_2
+    # (longest) anim: high_standing_determined_gesture_look_over_left
+    ###- PAUSE: 7.2
+    # shot triss i dont 
+    - CUE: shot_3
+    # (longest) anim: woman_sorceress_idle_lp_02
+    - triss: "[1.9207871]0001041452|Not_about_to_let_you_off!"
+    - PAUSE: 1.3466
+    # shot triss burgests
+    - CUE: shot_4
+    # (longest) anim: woman_sorceress_taunt_01_rp
+    - PAUSE: 5.0
+    - CUE: shot_7
+    - PAUSE: 0.1
+    # shot triss burgests up
+    - NEXT: section_exit
+
+  section_exit:
+    - CAMERA_BLEND: 1.0
+    - EXIT
+

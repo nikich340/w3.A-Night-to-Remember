@@ -1,0 +1,187 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    Big_bandit:
+      template: "dlc\\dlcntr\\data\\entities\\baron_bandit_big.w2ent"
+      appearance: [ "bob_thug_lvl2_03" ]
+
+  animations.mimic:
+    mimicsanim_112_geralt_happiness_gesture_smile_face:
+      animation: "geralt_happiness_gesture_smile_face"
+      frames: 66
+
+    mimicsanim_258_aggressive_anim_combined_face:
+      animation: "aggressive_anim_combined_face"
+      frames: 650
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_2138_High_Standing_Proud:
+      name: "Standing"
+      emotional_state: "Proud"
+      status: "High"
+      idle_anim: "high_standing_proud_idle"
+
+  cameras:
+    cam_1_Shot1:
+      fov: 20.0
+      transform:
+        pos: [ 18.6550292969, -10.5977783203, 1.7070579529 ]
+        rot: [ 0.0, 0.6700008512, 286.9745483398 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.7155375481, 4.7155375481 ]
+        focus: [ 2.2155375481, 3.2155375481 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_Shot2:
+      fov: 20.0
+      transform:
+        pos: [ 21.8937072754, -11.1725463867, 2.0570526123 ]
+        rot: [ 0.0, 351.0450134277, 63.5097656250 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.7155375481, 4.7155375481 ]
+        focus: [ 2.2155375481, 3.2155375481 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 820
+
+  placement: "ntr_bob_orphscenepoint_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -291.8728637695, -992.0385131836, 41.5070190430 ]
+      #rot: [ 0.0, 0.0, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      Big_bandit:
+        repo: "Big_bandit"
+        by_voicetag: false
+        appearance: "bob_thug_lvl2_03"
+        tags: [ "ntr_fat_bandit" ]
+
+    cameras:
+      cam_1_Shot1:
+        repo: "cam_1_Shot1"
+
+      cam_2_Shot2:
+        repo: "cam_2_Shot2"
+
+    animations.mimic:
+      Big_bandit_geralt_happiness_gesture_smile_face:
+        actor: "Big_bandit"
+        repo: "mimicsanim_112_geralt_happiness_gesture_smile_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      geralt_aggressive_anim_combined_face:
+        actor: "geralt"
+        repo: "mimicsanim_258_aggressive_anim_combined_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+    actor.poses:
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      Big_bandit_High_Standing_Proud:
+        actor: "Big_bandit"
+        repo: "pose_2138_High_Standing_Proud"
+
+storyboard:
+  #defaults:
+    #placement:
+      #geralt: [[ 19.4702148438, -9.8496093750, 0.0605430603 ], [ 0.0, 0.0, 281.3499755859 ]]
+      #Big_bandit: [[ 20.7519531250, -10.0748901367, 0.0627822876 ], [ 0.0, 0.0, 88.8800354004 ]]
+
+    #actor.pose:
+      #geralt: geralt_high_standing_determined_idle
+      #Big_bandit: Big_bandit_High_Standing_Proud
+
+  section_storyboard_ui:
+    # shot Shot1
+    shot_0:
+      - fade.out: [0.0, 0.25]
+    shot_1:
+      - fade.in: [0.0, 1.0]
+      #- actor.placement: [0.0, geralt, [ 19.4702148438, -9.8496093750, 0.0605430603 ], [ 0.0, 0.0, 281.3499755859 ]]
+      - actor.placement: [0.0, geralt, [ 19.4702148438, -9.8496093750, 0.0605430603 ], [ 0.0, 0.0, 263.4199829102 ]]
+      - actor.placement: [0.0, Big_bandit, [ 20.7519531250, -10.0748901367, 0.0627822876 ], [ 0.0, 0.0, 88.8800354004 ]]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.pose: [0.0, Big_bandit_High_Standing_Proud]
+      - cam: [0.0, cam_1_Shot1]
+      - actor.anim.mimic: [0.0, Big_bandit_geralt_happiness_gesture_smile_face]
+
+    # shot Shot2
+    shot_2:
+      - actor.placement: [0.0, geralt, [ 19.4702148438, -9.8496093750, 0.0605430603 ], [ 0.0, 0.0, 263.4199829102 ]]
+      - cam: [0.0, cam_2_Shot2]
+      - actor.anim.mimic: [0.0, geralt_aggressive_anim_combined_face]
+
+    shot_3:
+      - actor.gamestate: [0.0, geralt]
+      - actor.gamestate: [0.0, Big_bandit]
+      - cam.blend.togame: [0.0, cam_1_Shot1]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "Big_bandit" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot Shot1
+    - CUE: shot_0
+    - PAUSE: 0.25
+    - CUE: shot_1
+    - Big_bandit: "Want your face smashed again?"
+    # (longest) anim: geralt_happiness_gesture_smile_face
+    #- PAUSE: 2.2000000477
+    # shot Shot2
+    - CUE: shot_2
+    - geralt: "0000580936|Try me."
+    # (longest) anim: aggressive_anim_combined_face
+    #- PAUSE: 21.6666660309
+    - CUE: shot_3
+    - PAUSE: 1.0
+    - NEXT: section_exit
+
+  section_exit:
+    #- CAMERA_BLEND: 2.0
+    - EXIT
+

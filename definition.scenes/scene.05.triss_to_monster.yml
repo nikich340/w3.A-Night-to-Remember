@@ -1,0 +1,821 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    triss_fake:
+      template: "quests\\main_npcs\\triss.w2ent"
+      appearance: [ "triss" ]
+
+    triss_monster:
+      template: "dlc\\dlcntr\\data\\entities\\triss_monster.w2ent"
+      appearance: [ "triss_yen", "triss_monster" ]
+
+  props:
+    q201_item_fixed_stuffed_unicorn:
+      template: "dlc\\dlcntr\\data\\entities\\unicorn_triss.w2ent"
+
+  animations:
+    anim_6970_high_standing_determined_calm_enter_frontal:
+      animation: "high_standing_determined_calm_enter_frontal"
+      frames: 253
+
+    anim_7022_high_standing_determined_gesture_greeting_01:
+      animation: "high_standing_determined_gesture_greeting_01"
+      frames: 86
+
+    anim_12629_high_standing_bored_to_high_standing_determined:
+      animation: "high_standing_bored_to_high_standing_determined"
+      frames: 155
+
+    anim_12111_woman_sorceress_taunt_03_rp:
+      animation: "woman_sorceress_taunt_03_rp"
+      frames: 131
+
+    anim_12682_high_standing_determined_to_high_standing_aggressive:
+      animation: "high_standing_determined_to_high_standing_aggressive"
+      frames: 102
+
+    anim_12673_high_standing_determined_idle:
+      animation: "high_standing_determined_idle"
+      frames: 833
+
+    anim_7069_high_standing_determined_gesture_step_back:
+      animation: "high_standing_determined_gesture_step_back"
+      frames: 194
+
+    anim_12074_woman_sorceress_idle_lp_01:
+      animation: "woman_sorceress_idle_lp_01"
+      frames: 60
+
+    anim_7102_high_standing_determined_steel_to_gameplay_combat:
+      animation: "high_standing_determined_steel_to_gameplay_combat"
+      frames: 132
+
+  animations.mimic:
+    mimicsanim_433_geralt_neutral_gesture_smile_face:
+      animation: "geralt_neutral_gesture_smile_face"
+      frames: 67
+
+    mimicsanim_117_geralt_neutral_gesture_brows_down_face_nrml:
+      animation: "geralt_neutral_gesture_brows_down_face_nrml"
+      frames: 90
+
+    mimicsanim_505_geralt_reaction_sad_face:
+      animation: "geralt_reaction_sad_face"
+      frames: 180
+
+    mimicsanim_397_geralt_neutral_gesture_impatience_face:
+      animation: "geralt_neutral_gesture_impatience_face"
+      frames: 170
+
+    mimicsanim_118_geralt_neutral_gesture_brows_up_face_lcl:
+      animation: "geralt_neutral_gesture_brows_up_face_lcl"
+      frames: 90
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_2136_High_Standing_Bored:
+      name: "Standing"
+      emotional_state: "Bored"
+      status: "High"
+      idle_anim: "high_standing_bored_idle"
+
+    pose_2126_High_Standing_Determined:
+      name: "Standing"
+      emotional_state: "Determined"
+      status: "High"
+      idle_anim: "high_standing_determined_idle"
+
+    pose_2120_High_Standing_Aggressive:
+      name: "Standing"
+      emotional_state: "Aggressive"
+      status: "High"
+      idle_anim: "high_standing_aggressive_idle"
+
+  cameras:
+    cam_1_Shot1:
+      fov: 40.0
+      transform:
+        pos: [ -12.5241670609, 23.1359863281, 0.8090591431 ]
+        rot: [ 0.0, 354.7272644043, 204.8150024414 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_Shot3_dt1:
+      fov: 40.0
+      transform:
+        pos: [ -9.2722892761, 20.5576171875, 1.0590744019 ]
+        rot: [ 0.0, 351.8122558594, 80.5151672363 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_4_grlt_looking_cam:
+      fov: 20.0
+      transform:
+        pos: [ -12.5787496567, 21.6484375000, 1.2090835571 ]
+        rot: [ 0.0, 351.2072753906, 234.5151824951 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.2724795341, 5.2724795341 ]
+        focus: [ 2.7724795341, 3.7724795341 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_5_triss_looking_cam:
+      fov: 25.0
+      transform:
+        pos: [ -9.9543266296, 19.3671875000, 1.2090835571 ]
+        rot: [ 0.0, 354.6172485352, 46.6904602051 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.1290454865, 5.1290454865 ]
+        focus: [ 1.6290454865, 3.6290454865 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_6_triss_magic_to_yen:
+      fov: 35.0
+      transform:
+        pos: [ -10.9259624481, 18.4428710938, 1.0590744019 ]
+        rot: [ 0.0, 354.5622558594, 25.1302490234 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.1290454865, 5.1290454865 ]
+        focus: [ 2.6290454865, 3.6290454865 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_7_triss_magic_to_yen__cloned_:
+      fov: 35.0
+      transform:
+        pos: [ -8.9536027908, 16.9101562500, 1.0590744019 ]
+        rot: [ 0.0, 356.1572570801, 49.7709655762 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.1290454865, 5.1290454865 ]
+        focus: [ 2.6290454865, 3.6290454865 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_8_grlt_triss_stop:
+      fov: 30.0
+      transform:
+        pos: [ -12.2799978256, 21.6677246094, 0.8590621948 ]
+        rot: [ 0.0, 354.7272644043, 232.5055236816 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.8789052963, 4.8789052963 ]
+        focus: [ 2.3789052963, 3.3789052963 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_9_triss_you_dont_like_me:
+      fov: 30.0
+      transform:
+        pos: [ -10.8044538498, 19.6584472656, 1.1590805054 ]
+        rot: [ 0.0, 352.3622741699, 45.4255371094 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.0789052963, 4.8789052963 ]
+        focus: [ 0.3789052963, 3.3789052963 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_10_triss_realize:
+      fov: 30.0
+      transform:
+        pos: [ -10.8708162308, 19.5007324219, 1.1590805054 ]
+        rot: [ 0.0, 352.8572692871, 36.2405090332 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.8789052963, 4.8789052963 ]
+        focus: [ 2.3789052963, 3.3789052963 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_11_grlt_shoked:
+      fov: 30.0
+      transform:
+        pos: [ -12.0766210556, 21.5427246094, 0.8090591431 ]
+        rot: [ 0.0, 357.5322570801, 233.1103820801 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.8789052963, 4.8789052963 ]
+        focus: [ 2.3789052963, 3.3789052963 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_12_triss_to_combat:
+      fov: 35.0
+      transform:
+        pos: [ -9.7793254852, 21.1384277344, 1.1590805054 ]
+        rot: [ 0.0, 353.5172424316, 109.3908081055 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.7808754444, 4.7808752060 ]
+        focus: [ 2.2808754444, 3.2808754444 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_13_grlt:
+      fov: 30.0
+      transform:
+        pos: [ -11.7897815704, 21.4387207031, 1.1590805054 ]
+        rot: [ 0.0, 348.8422546387, 228.6554870605 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.8789052963, 4.8789052963 ]
+        focus: [ 2.3789052963, 3.3789052963 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_14_to_gp:
+      fov: 50.0
+      transform:
+        pos: [ -7.7296276093, 18.4565429688, 1.7591171265 ]
+        rot: [ 0.0, 337.2922668457, 58.8699340820 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.8789052963, 4.8789052963 ]
+        focus: [ 2.3789052963, 3.3789052963 ]
+        intensity: 0.0000000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 705
+
+  placement: "ntr_bob_introscenes_sp"
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      triss_monster:
+        repo: "triss_monster"
+        by_voicetag: false
+        appearance: "triss_yen"
+        tags: [ "triss_monster" ]
+
+      triss_fake:
+        repo: "triss_fake"
+        #by_voicetag: false
+        appearance: "triss"
+        tags: [ "triss_fake" ]
+
+    props:
+      q201_item_fixed_stuffed_unicorn:
+        repo: "q201_item_fixed_stuffed_unicorn"
+
+    cameras:
+      cam_1_Shot1:
+        repo: "cam_1_Shot1"
+
+      cam_3_Shot3_dt1:
+        repo: "cam_3_Shot3_dt1"
+
+      cam_4_grlt_looking_cam:
+        repo: "cam_4_grlt_looking_cam"
+
+      cam_5_triss_looking_cam:
+        repo: "cam_5_triss_looking_cam"
+
+      cam_6_triss_magic_to_yen:
+        repo: "cam_6_triss_magic_to_yen"
+
+      cam_7_triss_magic_to_yen__cloned_:
+        repo: "cam_7_triss_magic_to_yen__cloned_"
+
+      cam_8_grlt_triss_stop:
+        repo: "cam_8_grlt_triss_stop"
+
+      cam_9_triss_you_dont_like_me:
+        repo: "cam_9_triss_you_dont_like_me"
+
+      cam_10_triss_realize:
+        repo: "cam_10_triss_realize"
+
+      cam_11_grlt_shoked:
+        repo: "cam_11_grlt_shoked"
+
+      cam_12_triss_to_combat:
+        repo: "cam_12_triss_to_combat"
+
+      cam_13_grlt:
+        repo: "cam_13_grlt"
+
+      cam_14_to_gp:
+        repo: "cam_14_to_gp"
+
+    animations:
+      geralt_high_standing_determined_calm_enter_frontal:
+        actor: "geralt"
+        repo: "anim_6970_high_standing_determined_calm_enter_frontal"
+        #duration: 8.4333333969
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_greeting_01:
+        actor: "geralt"
+        repo: "anim_7022_high_standing_determined_gesture_greeting_01"
+        #duration: 2.8666665554
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_fake_high_standing_bored_to_high_standing_determined:
+        actor: "triss_fake"
+        repo: "anim_12629_high_standing_bored_to_high_standing_determined"
+        #duration: 5.1666665077
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_fake_high_standing_neutral_turn180_right:
+        actor: "triss_fake"
+        repo: "anim_1903_high_standing_neutral_turn180_right"
+        #duration: 3.4666666985
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_monster_high_standing_determined_idle:
+        actor: "triss_monster"
+        repo: "anim_12673_high_standing_determined_idle"
+        #duration: 27.7666664124
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_fake_high_standing_determined_idle:
+        actor: "triss_fake"
+        repo: "anim_12673_high_standing_determined_idle"
+        #duration: 27.7666664124
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_fake_woman_sorceress_taunt_03_rp:
+        actor: "triss_fake"
+        repo: "anim_12111_woman_sorceress_taunt_03_rp"
+        #duration: 4.3666667938
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_monster_high_standing_determined_to_high_standing_aggressive:
+        actor: "triss_monster"
+        repo: "anim_12682_high_standing_determined_to_high_standing_aggressive"
+        #duration: 3.4000000954
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_step_back:
+        actor: "geralt"
+        repo: "anim_7069_high_standing_determined_gesture_step_back"
+        #duration: 6.4666666985
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      triss_monster_woman_sorceress_idle_lp_01:
+        actor: "triss_monster"
+        repo: "anim_12074_woman_sorceress_idle_lp_01"
+        #duration: 2.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_steel_to_gameplay_combat:
+        actor: "geralt"
+        repo: "anim_7102_high_standing_determined_steel_to_gameplay_combat"
+        #duration: 4.4000000954
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    animations.mimic:
+      triss_fake_geralt_neutral_gesture_smile_face:
+        actor: "triss_fake"
+        repo: "mimicsanim_433_geralt_neutral_gesture_smile_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      triss_monster_geralt_neutral_gesture_smile_face:
+        actor: "triss_monster"
+        repo: "mimicsanim_433_geralt_neutral_gesture_smile_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      geralt_geralt_neutral_gesture_brows_down_face_nrml:
+        actor: "geralt"
+        repo: "mimicsanim_117_geralt_neutral_gesture_brows_down_face_nrml"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      triss_monster_geralt_reaction_sad_face:
+        actor: "triss_monster"
+        repo: "mimicsanim_505_geralt_reaction_sad_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      triss_monster_geralt_neutral_gesture_impatience_face:
+        actor: "triss_monster"
+        repo: "mimicsanim_397_geralt_neutral_gesture_impatience_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      geralt_geralt_neutral_gesture_brows_up_face_lcl:
+        actor: "geralt"
+        repo: "mimicsanim_118_geralt_neutral_gesture_brows_up_face_lcl"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+    actor.poses:
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      triss_fake_High_Standing_Bored:
+        actor: "triss_fake"
+        repo: "pose_2136_High_Standing_Bored"
+
+      triss_fake_High_Standing_Determined:
+        actor: "triss_fake"
+        repo: "pose_2126_High_Standing_Determined"
+
+      triss_monster_High_Standing_Determined:
+        actor: "triss_monster"
+        repo: "pose_2126_High_Standing_Determined"
+
+      triss_monster_High_Standing_Aggressive:
+        actor: "triss_monster"
+        repo: "pose_2120_High_Standing_Aggressive"
+
+storyboard:
+  #defaults:
+    #placement:
+      #geralt: [[ -10.3464584351, 20.2390136719, -0.7247009277 ], [ 0.0, 0.0, 48.6200218201 ]]
+      #triss_monster: [[ -12.0957441330, 20.8864746094, -0.4929809570 ], [ 0.0, 0.0, 23.4299888611 ]]
+
+    #actor.pose:
+      #geralt: geralt_high_standing_determined_idle
+      #triss_monster: triss_monster_High_Standing_Bored
+
+  section_storyboard_ui:
+    # shot Shot1
+    shot_1:
+      - actor.placement: [0.0, geralt, [ -10.3464584351, 20.2390136719, -0.7247009277 ], [ 0.0, 0.0, 48.6200218201 ]]
+      - actor.placement: [0.0, triss_fake, [ -12.0957441330, 20.8864746094, -0.4929809570 ], [ 0.0, 0.0, 23.4299888611 ]]
+      - actor.placement: [0.0, triss_monster, [ -12.0957441330, 20.8864746094, -10.4929809570 ], [ 0.0, 0.0, 23.4299888611 ]]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.pose: [0.0, triss_fake_High_Standing_Bored]
+      - cam: [0.0, cam_1_Shot1]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_calm_enter_frontal]
+          clipfront: 2.43
+      - actor.lookat: [0.0, geralt, [ -0.2818562090, 0.8281164169, 1.7828903198 ]]
+      - actor.lookat: [0.0, triss_fake, [ -0.3426355124, 0.8875857592, 1.6963653564 ]]
+
+    # shot Shot2 greetings
+    shot_2:
+      - actor.anim: [0.0, geralt_high_standing_determined_gesture_greeting_01]
+      - actor.anim:
+          .@pos: [0.0, triss_fake_high_standing_bored_to_high_standing_determined]
+          clipend: 3
+          blendout: 0.5
+          blendin: 0.5
+
+    # shot Shot2 greetings
+    shot_2_2:
+      - actor.lookat: [0.3, triss_fake, geralt]
+      - actor.pose: [0.3, triss_fake_High_Standing_Determined]
+      - actor.anim: 
+          .@pos: [0.27, triss_fake_high_standing_neutral_turn180_right]
+          blendin: 0.5
+
+    # shot Shot3 dt1
+    shot_3:
+      - actor.placement: [0.0, geralt, [ -10.3464584351, 20.2390136719, -0.7247009277 ], [ 0.0, 0.0, 66.3300476074 ]]
+      - actor.placement: [0.0, triss_fake, [ -11.9449052811, 20.6538085938, -0.4905395508 ], [ 0.0, 0.0, 230.0899963379 ]]
+      - cam: [0.0, cam_5_triss_looking_cam]
+
+    # shot grlt looking cam
+    shot_4:
+      #- actor.placement: [0.0, geralt, [ -10.3464584351, 20.2390136719, -0.7247009277 ], [ 0.0, 0.0, 48.6200218201 ]]
+      - cam: [0.0, cam_4_grlt_looking_cam]
+
+    # shot triss looking cam
+    shot_5:
+      - cam: [0.0, cam_5_triss_looking_cam]
+
+    # shot grlt looking cam
+    shot_4_2:
+      - cam: [0.0, cam_4_grlt_looking_cam]
+
+    # shot triss looking cam
+    shot_5_2:
+      - cam: [0.0, cam_5_triss_looking_cam]
+      - actor.anim.mimic: [0.5, triss_fake_geralt_neutral_gesture_smile_face]
+    # shot triss magic to yen
+    shot_6:
+      #- actor.placement: [0.0, triss_monster, [ -11.9148464203, 20.5771484375, -0.4879150391 ], [ 0.0, 0.0, 230.0899963379 ]]
+      - cam.blend.start: [0.0, cam_6_triss_magic_to_yen]
+      - cam.blend.end: [0.8, cam_7_triss_magic_to_yen__cloned_]
+      - actor.anim.mimic: [0.0, triss_fake_geralt_neutral_gesture_smile_face]
+      - actor.anim: 
+          .@pos: [0.0, triss_fake_high_standing_determined_idle]
+          clipend: 1.13
+          blendout: 0.5
+      - actor.anim: 
+          .@pos: [0.105, triss_fake_woman_sorceress_taunt_03_rp]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.anim: 
+          .@pos: [0.75, triss_fake_high_standing_determined_idle]
+          clipend: 1.5
+          blendin: 0.5
+      - prop.placement: [0.7, q201_item_fixed_stuffed_unicorn, [ -13.3104724884, 19.3742675781, -0.6217651367 ], [ 0.0, 0.0, 163.1300964355 ]]
+      - prop.effect.start: [0.7, q201_item_fixed_stuffed_unicorn, teleport_appear]
+      - prop.effect.stop: [1.0, q201_item_fixed_stuffed_unicorn, teleport_appear]
+      - actor.lookat: [0.0, triss_fake, geralt]
+      - actor.lookat: [0.6, triss_fake, [ 0.9050639868, 0.1120369434, 1.7322921753 ]]
+      - actor.lookat: [0.8, triss_fake, geralt]
+      - actor.effect.start: [0.1, triss_fake, cast_disspelling]
+      - actor.effect.stop: [0.9, triss_fake, cast_disspelling]
+      - actor.effect.start: [0.9, triss_fake, q502_teleport_disappear]
+      - actor.effect.start: [0.9, triss_monster, q502_teleport_disappear]
+      - actor.lookat: [0.9, triss_monster, geralt]
+      - actor.placement: [0.92, triss_monster, [ -11.9449052811, 20.6538085938, -0.4905395508 ], [ 0.0, 0.0, 230.0899963379 ]]
+      - actor.placement: [0.92, triss_fake, [ -11.9449052811, 20.6538085938, -10.4905395508 ], [ 0.0, 0.0, 230.0899963379 ]]
+      #- actor.appearance: [0.95, triss_monster, triss_yen]
+
+    # shot triss magic to yen (cloned)
+    shot_7:
+      - actor.anim.mimic: [0.0, triss_monster_geralt_neutral_gesture_smile_face]
+      - actor.effect.stop: [0.1, triss_monster, q502_teleport_disappear]
+      - actor.lookat: [0.0, triss_monster, geralt]
+      - actor.lookat: [0.0, geralt, triss_monster]
+      - cam.blend.start: [0.0, cam_7_triss_magic_to_yen__cloned_]
+      - cam.blend.end: [1.0, cam_9_triss_you_dont_like_me]
+
+    # shot grlt triss stop
+    shot_8:
+      - cam: [0.0, cam_8_grlt_triss_stop]
+      - actor.anim.mimic: [0.0, geralt_geralt_neutral_gesture_brows_down_face_nrml]
+
+    # shot triss you dont like me
+    shot_9:
+      #- actor.placement: [0.0, triss_monster, [ -11.9781732559, 20.7272949219, -0.4929809570 ], [ 0.0, 0.0, 230.0899963379 ]]
+      - cam: [0.0, cam_9_triss_you_dont_like_me]
+      #- actor.anim: 
+      #    .@pos: [0.75, triss_monster_high_standing_determined_idle]
+      #    clipend: 0.5
+      - actor.anim.mimic: [0.0, triss_monster_geralt_reaction_sad_face]
+
+    # shot triss realize
+    shot_10:
+      - actor.pose: [0.5, triss_monster_High_Standing_Aggressive]
+      - actor.anim: 
+          .@pos: [0.0, triss_monster_high_standing_determined_to_high_standing_aggressive]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.anim.mimic: [0.0, triss_monster_geralt_neutral_gesture_impatience_face]
+
+    # shot grlt shoked
+    shot_11:
+      - cam: [0.0, cam_11_grlt_shoked]
+      - actor.anim: [0.0, geralt_high_standing_determined_gesture_step_back]
+      - actor.anim.mimic: [0.1, geralt_geralt_neutral_gesture_brows_up_face_lcl]
+
+    shot_12:
+      - cam: [0.0, cam_12_triss_to_combat]
+      - actor.anim:
+          .@pos: [0.15, anim_4002_high_standing_aggressive_idle]
+          actor: triss_monster
+          clipend: 1.0
+          blendin: 0.5
+          blendout: 0.5
+      - actor.anim: 
+          .@pos: [0.5, triss_monster_woman_sorceress_idle_lp_01]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.anim: 
+          .@pos: [1.0, triss_monster_woman_sorceress_idle_lp_01]
+          blendin: 0.5
+      - actor.effect.start: [0.5, triss_monster, fx_push]
+      - actor.effect.start: [0.65, triss_monster, critical_burning]
+      - actor.appearance: [0.65, triss_monster, triss_monster]
+      - prop.effect.start: [0.6, q201_item_fixed_stuffed_unicorn, teleport_appear]
+      - prop.hide: [0.9, q201_item_fixed_stuffed_unicorn]
+      - actor.anim.mimic: [0.1, triss_monster_geralt_neutral_gesture_impatience_face]
+
+    # shot grlt
+    shot_13:
+      - actor.placement: [0.0, geralt, [ -9.2644720078, 19.3120117188, -0.7247009277 ], [ 0.0, 0.0, 48.6200218201 ]]
+      - cam: [0.0, cam_13_grlt]
+      - actor.anim: [0.0, geralt_high_standing_determined_steel_to_gameplay_combat]
+      - actor.equip.right: [0.3, geralt, steelsword]
+
+    # shot to gp
+    shot_14:
+      - cam: [0.0, cam_14_to_gp]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "triss_monster", "triss_fake" ]
+  props: [ "q201_item_fixed_stuffed_unicorn" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot Shot1
+    - CUE: shot_1
+    # (longest) anim: high_standing_determined_calm_enter_frontal
+    - PAUSE: 6
+    # shot Shot2 greetings
+    - CUE: shot_2
+    - geralt: "[1.2209100723]0000527056|Greetings, Triss."
+    - CUE: shot_2_2
+    - PAUSE: 4.75
+    # (longest) anim: high_standing_bored_to_high_standing_determined: 5.166667
+    - CUE: shot_3
+    - triss_fake: "[0.8353435397]0000487412|Geralt...?"
+    # (longest) anim: high_standing_determined_gesture_greeting_01: 2.866667
+    # shot grlt looking cam
+    - CUE: shot_4
+    - geralt: "0000562397|What are you doing here?"
+    #- PAUSE: 2.8666665554
+    # shot triss looking cam
+    - CUE: shot_5
+    - triss_fake: "2114670705|I've been thinking about us."
+    # grlt again
+    - CUE: shot_4_2
+    - geralt: "2114670706|I'm looking for…"
+    # shot triss magic to yen
+    - CUE: shot_5_2
+    - triss_fake: "2114670707|I'm not Yennefer, Geralt. But I can be like Yennefer!"
+    # (longest) anim: woman_sorceress_taunt_03_rp
+    - CUE: shot_6
+    - PAUSE: 6
+    # shot triss magic to yen (cloned)
+    - CUE: shot_7
+    - PAUSE: 2
+    - triss_monster: "2114670708|So, what do you think?"
+    # (longest) anim: high_standing_determined_gesture_greeting_01
+    # shot grlt triss stop
+    - CUE: shot_8
+    # (longest) anim: geralt_neutral_gesture_brows_down_face_nrml
+    - PAUSE: 1.0
+    - geralt: "0000490892|Triss, stop."
+    # shot triss you dont like me
+    - CUE: shot_9
+    - PAUSE: 5.0
+    - triss_monster: "2114670709|You don't like me.."
+    # shot triss realize
+    - CUE: shot_10
+    - PAUSE: 3.0
+    - triss_monster: "2114670710|You realize - one word and you'll howl with pain!"
+    # shot grlt shoked
+    - CUE: shot_11
+    - PAUSE: 2.0
+    - geralt: "0001047817|Who are you?!"
+    - PAUSE: 1.0
+    # I am your nighmare!
+    - CUE: shot_12
+    - triss_monster: "2114670711|I'm your nightmare!"
+    - PAUSE: 2.0
+    # shot grlt
+    - CUE: shot_13
+    - PAUSE: 4.4
+    # shot to gp
+    - CUE: shot_14
+    - PAUSE: 0.1
+    - NEXT: section_exit
+
+  section_exit:
+    - CAMERA_BLEND: 1.0
+    - EXIT

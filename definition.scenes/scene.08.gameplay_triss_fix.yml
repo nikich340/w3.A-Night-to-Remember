@@ -1,0 +1,100 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    triss_monster:
+      template: "dlc\\dlcntr\\data\\entities\\triss_monster.w2ent"
+      appearance: [ "triss_monster" ]
+
+  animations:
+    anim_12112_woman_sorceress_teleport_lp:
+      animation: "woman_sorceress_teleport_lp"
+      frames: 75
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 715
+
+  gameplay: true
+
+  placement: "ntr_bob_introscenes_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ 24.4257621765, -2107.7331542969, 126.1453247070 ]
+      #rot: [ 0.0, 0.0, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      triss_monster:
+        repo: "triss_monster"
+        by_voicetag: false
+        appearance: "triss_monster"
+        tags: [ "triss_monster" ]
+
+    animations:
+      triss_monster_woman_sorceress_teleport_lp:
+        actor: "triss_monster"
+        repo: "anim_12112_woman_sorceress_teleport_lp"
+        #duration: 2.5000000000
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+storyboard:
+  #defaults:
+    #placement:
+      #geralt: [[ -4.5409469604, 8.0270996094, -0.2921752930 ], [ 0.0, 0.0, 0.0 ]]
+      #triss_monster: [[ -5.9749526978, 11.5041503906, -0.4548339844 ], [ 0.0, 0.0, 0.0 ]]
+
+    #actor.pose:
+      #geralt: geralt_high_standing_determined_idle
+      #triss_monster: triss_monster_woman_sorceress_idle_lp_01
+
+  section_init:
+    # shot Shot1
+    shot_init:
+      - actor.anim: [0.0, triss_monster_woman_sorceress_teleport_lp]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "triss_monster" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: section_init
+
+  section_init:
+    - CUE: shot_init
+    - PAUSE: 1.25
+    - NEXT: script_call_teleport_triss
+
+  script_call_teleport_triss:
+        - SCRIPT:
+            function: teleportTriss
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - tag: "CNAME_triss_monster"
+                #- stringParam: "string"
+                #- floatParam: 1.1
+                #- intParam: 1
+                #- boolParam: true
+
+        - NEXT: section_finish
+
+  section_finish:
+    - PAUSE: 1.25
+    - NEXT: section_exit
+
+  section_exit:
+    - EXIT
+

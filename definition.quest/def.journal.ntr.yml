@@ -25,3 +25,11 @@ journals:
           - go_door:
               caption: "Check Orianna's room"
               mappins: orphdoor_pin
+
+          - defeat_bandits:
+              caption: "Defeat the bandits in a fistfight"
+              mappins: fatbandit_pin
+
+        camp_part:
+          - go_camp:
+              caption: "Go to bandits' camp and talk with baron Edward"

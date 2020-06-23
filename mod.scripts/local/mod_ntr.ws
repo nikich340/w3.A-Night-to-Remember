@@ -37,7 +37,7 @@ quest function NTR_FactChecker(factName : string, factCond : string, val : int) 
 			ret = (factVal < val);
 			break;
 	}
-	theGame.GetGuiManager().ShowNotification("factVal = " + factVal + ", supposed val = " + val + ", ret=" + ret);
+	//theGame.GetGuiManager().ShowNotification("factVal = " + factVal + ", supposed val = " + val + ", ret=" + ret);
 	return ret;
 }
 
@@ -54,11 +54,14 @@ quest function NTR_SetMoneyNPC(tag : name, amount : int) {
 	}
 }
 quest function NTR_StealGeraltMoney(tag : name, amount : int) {
-	if (amount == -1 || amount > thePlayer.inv.GetMoney()) {
+	if (amount < 0 || amount > thePlayer.inv.GetMoney()) {
 		amount = thePlayer.inv.GetMoney();
 	}
-	thePlayer.inv.RemoveMoney(amount);
-	NTR_SetMoneyNPC(tag, amount);
+	if (amount > 0) {
+		thePlayer.inv.RemoveMoney(amount);
+		NTR_SetMoneyNPC(tag, amount);
+		GetWitcherPlayer().DisplayHudMessage( GetLocStringByKeyExt("panel_hud_message_guards_took_money") );
+	}
 }
 quest function NTR_ReturnGeraltMoney(tag : name) {
 	var NPC : CNewNPC;
@@ -69,8 +72,11 @@ quest function NTR_ReturnGeraltMoney(tag : name) {
 	if (NPC) {
 		inv = NPC.GetInventory();
 		amount = inv.GetMoney();
-		inv.RemoveMoney( amount );
-		thePlayer.inv.AddMoney( amount );
+		if (amount > 0) {
+			inv.RemoveMoney( amount );
+			thePlayer.inv.AddMoney( amount );
+			thePlayer.DisplayItemRewardNotification('Crowns', amount);
+		}
 	}
 }
 quest function NTR_FistfightNPC(tag : name, activate : bool) {

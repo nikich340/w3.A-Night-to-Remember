@@ -287,6 +287,15 @@ exec function playEffGeralt( effect : name, optional stop : bool ) {
 		thePlayer.PlayEffect(effect);
 	}
 }
+exec function tsc() {
+    var scene : CStoryScene;
+    var template: CEntityTemplate;
+    var entity: CEntity;
+
+    // -> SET SCENE PATH
+    scene = (CStoryScene)LoadResource( "dlc\dlcntr\data\scenes\15.fistfight_repeat.w2scene", true);
+    theGame.GetStorySceneSystem().PlayScene(scene, "Input");
+}
 /*quest function <modid>_setFactOnIgnite (tag : name, factName : name) {
 	var gameLightComp : CGameplayLightComponent;        
 	var           ent : CEntity;

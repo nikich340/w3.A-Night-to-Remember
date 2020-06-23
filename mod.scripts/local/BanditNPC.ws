@@ -53,4 +53,17 @@ class CNTRBanditNPC extends CNewNPC {
 		}
 		super.OnTakeDamage( action );
 	}
+	event OnInteraction( actionName : string, activator : CEntity )
+	{
+		//theGame.GetGuiManager().ShowNotification("actionName: " + actionName);
+		/*if (actionName == "Talk") {
+			if (PlayDialog()) {
+				FadeOutQuest(1.0, Color(0, 0, 0));
+				theGame.GetGuiManager().ShowNotification("Dialog!");
+			} else {
+				theGame.GetGuiManager().ShowNotification("Not dialog!");
+			}
+		}*/
+		super.OnInteraction(actionName, activator);
+	}
 }

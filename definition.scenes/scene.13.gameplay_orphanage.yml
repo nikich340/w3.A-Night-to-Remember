@@ -1,0 +1,39 @@
+repository:
+  actors:
+    Big_bandit:
+      template: "dlc\\dlcntr\\data\\entities\\baron_bandit_big.w2ent"
+      appearance: [ "bob_thug_lvl2_03" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 795
+
+  gameplay: true
+  cinematic_subtitles: true
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        # tags: [ "PLAYER" ]
+
+      Big_bandit:
+        repo: "Big_bandit"
+        by_voicetag: false
+        appearance: "bob_thug_lvl2_03"
+        tags: [ "ntr_fat_bandit" ]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "Big_bandit" ]
+
+  section_start_after_orphanage:
+    - geralt: "Interesting. The son of a bandit in vampire's claws..."
+    - Big_bandit: "What's that you're mutterin'? Go and talk with baron."
+    - NEXT: section_exit
+
+  section_exit:
+    - EXIT
