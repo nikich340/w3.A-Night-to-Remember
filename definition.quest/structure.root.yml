@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 409, saved: 2020-06-22 16:02:49)
+# (version: 412, saved: 2020-06-26 17:41:02)
 #
 ---
 structure:
@@ -15,7 +15,7 @@ structure:
       
       subsegment.camp:
         ".editor":
-          pos: [ 1006.0297851562, 490.3098144531 ]
+          pos: [ 1176.6180419922, 485.6039428711 ]
           in: [ In ]
           out: [ Out ]
         segment: camp
@@ -38,7 +38,7 @@ structure:
           out: [ Out ]
         segment: orphanage
         next:
-          - subsegment.camp
+          - changelayers.new_show_layers
       
       subsegment.regis_mail:
         ".editor":
@@ -157,9 +157,23 @@ structure:
           - orphanage_layer
         next: ".done"
       
+      changelayers.new_show_layers:
+        ".editor":
+          pos: [ 994.1068115234, 596.6958618164 ]
+          hint: show-only
+          in: []
+          out: []
+        sync: true
+        purge: false
+        world: bob
+        show:
+          - camp_layer
+        next:
+          - subsegment.camp
+      
       changelayers.show_main_layer:
         ".editor":
-          pos: [ 18.4925231934, 490.659576416 ]
+          pos: [ 35.415599823, 615.2749633789 ]
           hint: show-only
           in: []
           out: []
@@ -169,7 +183,7 @@ structure:
         show:
           - nlayer
         next:
-          - changelayers.show_orphlayer
+          - changelayers.new_show_layers
       
       changelayers.show_orphlayer:
         ".editor":
@@ -225,6 +239,6 @@ structure:
           - script.FACT_BRANCH1
       
       end:
-        ".editor": [ 1224.8920898438, 489.6112976074 ]
+        ".editor": [ 1362.5391845703, 489.6112976074 ]
         next: ".done"
       

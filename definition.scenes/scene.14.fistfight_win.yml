@@ -284,7 +284,7 @@ storyboard:
     # shot Shot3
     shot_3:
       #- actor.placement: [0.0, Big_bandit, [ 19.9732971191, -9.0687866211, 0.0622177124 ], [ 0.0, 0.0, 205.3399505615 ]]
-      - actor.placement: [0.0, Big_bandit, [ 20.2732971191, -9.0687866211, 0.0622177124 ], [ 0.0, 0.0, 205.3399505615 ]]
+      #- actor.placement: [0.0, Big_bandit, [ 20.2732971191, -9.0687866211, 0.0622177124 ], [ 0.0, 0.0, 205.3399505615 ]]
       - cam.blend.start: [0.0, cam_3_Shot3]
       - cam.blend.key: [0.5, cam_4_Shot4]
       - cam.blend.end: [0.8, cam_5_Shot_band]
@@ -386,7 +386,7 @@ dialogscript:
     - PAUSE: 15.1333332062
     # shot Shot ger
     - CUE: shot_6
-    - geralt: "Gonna answer me?"
+    - geralt: "[1.0482]Gonna answer me?"
     - CUE: shot_7
     - Big_bandit: "Baron won't be happy... Alright, I tell you what I know."
     - Big_bandit: "A few years ago, our leader, Baron Edward, visited Toussaint, where he met a beautiful girl."
@@ -405,11 +405,11 @@ dialogscript:
     - Big_bandit: "So we divided into groups and now watching for places where she may appear."
     - CUE: shot_10_ger_listen2
     - Big_bandit: "To be honest, I'm tired of sitting on one place, so if you can help us, it would be great."
-    - geralt: "I see it now. It's a deal."
+    - geralt: "[2.3149]I see it now. It's a deal."
     - CUE: shot_11_band
     - Big_bandit: "Then you should talk with our leader."
     - CUE: shot_12_ger
-    - geralt: "Where can I find him?"
+    - geralt: "[1.1675782]0000499337|Where can I find him?"
     - CUE: shot_13_band
     - Big_bandit: "We have pitched camp near <place>..."
     - CUE: shot_14_togame

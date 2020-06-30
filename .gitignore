@@ -1,2 +1,4 @@
 
 *.scene-timeline
+speech/wwise SFX.lnk
+*.backup

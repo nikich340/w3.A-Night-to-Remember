@@ -134,7 +134,7 @@ storyboard:
   section_storyboard_ui:
     # shot Shot1
     shot_0:
-      - fade.out: [0.0, 0.25]
+      - fade.out: [0.0, 0.2]
     shot_1:
       - fade.in: [0.0, 1.0]
       #- actor.placement: [0.0, geralt, [ 19.4702148438, -9.8496093750, 0.0605430603 ], [ 0.0, 0.0, 281.3499755859 ]]
@@ -167,7 +167,7 @@ dialogscript:
   section_storyboard_ui:
     # shot Shot1
     - CUE: shot_0
-    - PAUSE: 0.25
+    - PAUSE: 0.2
     - CUE: shot_1
     - Big_bandit: "Want your face smashed again?"
     # (longest) anim: geralt_happiness_gesture_smile_face

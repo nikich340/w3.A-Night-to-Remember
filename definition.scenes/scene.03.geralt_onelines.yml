@@ -2,7 +2,7 @@ production:
   settings:
     sceneid: 1
     strings-idspace: 4670
-    strings-idstart: 654
+    strings-idstart: 650
 
   gameplay: true
   cinematic_subtitles: true
@@ -23,16 +23,16 @@ dialogscript:
     - NEXT: section_exit
 
   section_start_fresh_air:
-    - geralt: "[1.6855]2114670650|I need some fresh air."
+    - geralt: "[1.6855]I need some fresh air."
     - NEXT: section_exit
 
   section_start_using_owl:
-    - geralt: "2114670651|A letter... Who's using an owl for this?"
+    - geralt: "[3.1468]A letter... Who's using an owl for this?"
     - NEXT: section_exit
 
   section_start_check_orphanage:
-    - geralt: "2114670652|Regis... Just trying to avoid a fight, to protect her."
-    - geralt: "2114670653|Well, I should check an orphanage in a swamp. Last time Orianna was there."
+    - geralt: "[4.7800]Regis... Just trying to avoid a fight, to protect her."
+    - geralt: "[5.3381]Well, I should check an orphanage in a swamp. Last time Orianna was there."
     - NEXT: section_exit
 
   #section_start_after_orphanage:
@@ -41,3 +41,4 @@ dialogscript:
 
   section_exit:
     - EXIT
+

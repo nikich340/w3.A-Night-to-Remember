@@ -31,9 +31,10 @@ dialogscript:
   actors: [ "geralt", "Big_bandit" ]
 
   section_start_after_orphanage:
-    - geralt: "Interesting. The son of a bandit in vampire's claws..."
+    - geralt: "[4.2789]Interesting. Son of a bandit in the vampire's claws..."
     - Big_bandit: "What's that you're mutterin'? Go and talk with baron."
     - NEXT: section_exit
 
   section_exit:
     - EXIT
+

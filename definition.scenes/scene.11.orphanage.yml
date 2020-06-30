@@ -45,6 +45,9 @@ repository:
     pose_0_high_standing_determined_idle:
       idle_anim: "high_standing_determined_idle"
 
+    pose_0_man_fistfight_idle:
+      idle_anim: "man_fistfight_idle"
+
     pose_2120_High_Standing_Aggressive:
       name: "Standing"
       emotional_state: "Aggressive"
@@ -306,6 +309,10 @@ production:
         actor: "geralt"
         repo: "pose_0_high_standing_determined_idle"
 
+      bandit_3_man_fistfight_idle:
+        actor: "bandit_3"
+        repo: "pose_0_man_fistfight_idle"
+
       fat_bandit_High_Standing_Aggressive:
         actor: "fat_bandit"
         repo: "pose_2120_High_Standing_Aggressive"
@@ -498,6 +505,7 @@ storyboard:
           blendin: 0.7
           blendout: 0.5
           stretch: 1.0
+      - actor.pose: [0.15, bandit_3_man_fistfight_idle]
       - actor.anim: 
           actor: bandit_3
           .@pos: [0.25, anim_4958_man_fistfight_idle_guarded]
@@ -588,7 +596,7 @@ dialogscript:
 
   section_vampire:
     - CUE: shot_vampire_ger
-    - geralt: "Me? Drifter, stranger, mutant... Sometimes even by my name. Vampire of Rivia."
+    - geralt: "[7.7509]Me? Drifter, stranger, mutant... Sometimes even by my name. Vampire of Rivia."
     - CUE: shot_vampire_band
     - fat_bandit: "Very funny, cretin."
     - NEXT: section_storyboard_ui3
@@ -631,16 +639,16 @@ dialogscript:
 
   section_storyboard_ui4:
     - CUE: shot_d1_ger
-    - geralt: "I suppose to find a red-haired woman here."
+    - geralt: "[2.7976]I suppose to find a red-haired woman here."
     # shot shot8 bandit
     - CUE: shot_d1_band
     - fat_bandit: "That's interesting. Because we supposed to meet her too."
     - CUE: shot_d2_ger
-    - geralt: "[1.4995]2114670770|Why are you looking for her?"
+    - geralt: "[1.4995]Why are you looking for her?"
     - CUE: shot_d2_band
     - fat_bandit: "Our boss has questions for her about orphanage and children."
     - CUE: shot_d3_ger
-    - geralt: "The orphanage was attacked and almost none of the children survived."
+    - geralt: "[4.5639]The orphanage was attacked and almost none of the children survived."
     - CUE: shot_d3_band
     - fat_bandit: "Almost - nice word. So someone is alive. And we know for sure that Orianna herself is alive too."
     - fat_bandit: "But she doesn't want to come here. So there's something wrong here. We are few, and we guard the places where she used to be. Perhaps you could help us, and then our leader Baron Edward will give you a decent reward."
@@ -661,7 +669,7 @@ dialogscript:
 
   section_why_children:
     - CUE: shot_d4_ger
-    - geralt: "Why are you interested in children?"
+    - geralt: "[1.7966]Why are you interested in children?"
     - CUE: shot_d4_band
     - fat_bandit: "It's no concern of yours."
     - NEXT: script_set_whychildren
@@ -677,7 +685,7 @@ dialogscript:
 
   section_orianna:
     - CUE: shot_d5_ger
-    - geralt: "Orianna will kill you. She is a monster, not a human. And only I can help. Meaning I need more information."
+    - geralt: "[7.8518]Orianna will kill you. She is a monster, not a human. And only I can help. Meaning I need more information."
     - CUE: shot_d5_band
     - fat_bandit: "Do you think we believe first fella? Talk with our leader about it."
     - NEXT: section_choice_details
@@ -693,7 +701,7 @@ dialogscript:
 
   section_leader:
     - CUE: shot_d7_ger
-    - geralt: "It's a deal. Where can I find him?"
+    - geralt: "[2.3220]It's a deal. Where can I find him?"
     - CUE: shot_d7_band
     - fat_bandit: "We have pitched camp near <place>..."
     - CUE: shot_ger_togame
@@ -709,3 +717,4 @@ dialogscript:
   section_exit_normal:
     - OUTPUT: normal
     - EXIT
+

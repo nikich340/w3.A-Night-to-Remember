@@ -1,4 +1,79 @@
 communities:
+  comm_camp_bandits:
+    actors:
+      bandit_axe:
+        template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_axe_1h.w2ent"
+        appearances: [ "bob_raider_lvl1_03" ]
+
+      bandit_sword_shield:
+        template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_shield_sword.w2ent"
+        appearances: [ "bob_raider_lvl1_21" ]
+
+      bandit_crossbow:
+        template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_crossbow.w2ent"
+        appearances: [ "__q703_nazairi_01" ]
+
+      bandit_spear:
+        template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_spear_2h.w2ent"
+        appearances: [ "bob_raider_lvl1_07" ]
+
+      bandit_baron:
+        template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\guards\\knight.w2ent"
+        appearances: [ "bob_knight_15" ]
+
+    phases:
+      camp_no_baron:
+        bandit_sword_shield:
+          #appearance: [ "bob_thug_lvl1_06", false ]    # [someappearance, only_on_spawn_bool]
+          attitude: neutral
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "08:00": bob/sleep_sword
+            "16:00": bob/guarding_sword
+          #spawn_at: bob/camp_point1
+          #guard: [ bob/camp_area, 5.0 ]
+
+        bandit_axe:
+          #appearance: [ "bob_thug_lvl1_10", false ]    # [someappearance, only_on_spawn_bool]
+          attitude: neutral
+          use_last_ap: true
+          start_in_ap: false
+          #actionpoints:
+          spawn_at: bob/watch1
+          wanderpath:
+            wanderpoints: bob/camp_points
+            movetype: walk  # walk|run|fastrun|sprint|absspeed
+            #speed: 1.0
+            #rightside: false
+
+        bandit_crossbow:
+          #appearance: [ "bob_thug_lvl1_06", false ]    # [someappearance, only_on_spawn_bool]
+          attitude: neutral
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/sleep_crossbow
+          #spawn_at: bob/camp_point1
+          #guard: [ bob/camp_area, 5.0 ]
+
+        bandit_spear:
+          #appearance: [ "bob_thug_lvl1_06", false ]    # [someappearance, only_on_spawn_bool]
+          attitude: neutral
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/sleep_spear
+          #spawn_at: bob/camp_point1
+          #guard: [ bob/camp_area, 5.0 ]
+
+        bandit_baron:
+          attitude: neutral
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/sleep_baron
+
   comm_regis_owl:
     actors:
       regis_owl:

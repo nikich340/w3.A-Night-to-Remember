@@ -268,7 +268,7 @@ dialogscript:
     # shot Shot2 triss med
     - CUE: shot_4
     # (longest) anim: geralt_neutral_gesture_sceptical_remark_face
-    - geralt: "2114670700|Triss?! I should talk to her."
+    - geralt: "[2.1154]2114670700|Triss?! I should talk to her."
     - PAUSE: 1
     # shot Shot2 triss close
     - CUE: shot_5
@@ -282,3 +282,4 @@ dialogscript:
   section_exit:
     - CAMERA_BLEND: 1.0
     - EXIT
+

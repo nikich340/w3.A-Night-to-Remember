@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: camp
 # 
-# (version: 409, saved: 2020-06-22 16:02:49)
+# (version: 412, saved: 2020-06-26 17:41:02)
 #
 ---
 structure:
@@ -12,14 +12,26 @@ structure:
           ".editor": [ 100.0, 250.0 ]
           next:
             - objective.go_camp: Activate
+            - spawn.new_community_spawn
+        
+        spawn.new_community_spawn:
+          ".editor":
+            pos: [ 295.295135498, 230.5400238037 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: camp_no_baron
+          spawnsets:
+            - comm_camp_bandits
+          next:
+            - out
         
         objective.go_camp:
-          ".editor": [ 360.3774414062, 335.4485473633 ]
+          ".editor": [ 333.4543457031, 385.4485473633 ]
           objective: nighttoremember/camp_part/go_camp
           notify: true
           track: true
-          next:
-            - out
+          next: ".done"
         
         out:
           ".editor": [ 614.7058105469, 232.9411621094 ]

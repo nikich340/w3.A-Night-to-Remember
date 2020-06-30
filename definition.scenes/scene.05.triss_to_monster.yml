@@ -771,20 +771,20 @@ dialogscript:
     #- PAUSE: 2.8666665554
     # shot triss looking cam
     - CUE: shot_5
-    - triss_fake: "2114670705|I've been thinking about us."
+    - triss_fake: "[1.8566]2114670705|I've been thinking about us."
     # grlt again
     - CUE: shot_4_2
-    - geralt: "2114670706|I'm looking for…"
+    - geralt: "[1.1954]2114670706|I'm looking for..."
     # shot triss magic to yen
     - CUE: shot_5_2
-    - triss_fake: "2114670707|I'm not Yennefer, Geralt. But I can be like Yennefer!"
+    - triss_fake: "[3.6236]2114670707|I'm not Yennefer, Geralt. But I can be like Yennefer!"
     # (longest) anim: woman_sorceress_taunt_03_rp
     - CUE: shot_6
     - PAUSE: 6
     # shot triss magic to yen (cloned)
     - CUE: shot_7
     - PAUSE: 2
-    - triss_monster: "2114670708|So, what do you think?"
+    - triss_monster: "[1.7747]2114670708|So, what do you think?"
     # (longest) anim: high_standing_determined_gesture_greeting_01
     # shot grlt triss stop
     - CUE: shot_8
@@ -794,11 +794,11 @@ dialogscript:
     # shot triss you dont like me
     - CUE: shot_9
     - PAUSE: 5.0
-    - triss_monster: "2114670709|You don't like me.."
+    - triss_monster: "[1.3926]2114670709|You don't like me.."
     # shot triss realize
     - CUE: shot_10
     - PAUSE: 3.0
-    - triss_monster: "2114670710|You realize - one word and you'll howl with pain!"
+    - triss_monster: "[3.2677]2114670710|You realize - one word and you'll howl with pain!"
     # shot grlt shoked
     - CUE: shot_11
     - PAUSE: 2.0
@@ -806,7 +806,7 @@ dialogscript:
     - PAUSE: 1.0
     # I am your nighmare!
     - CUE: shot_12
-    - triss_monster: "2114670711|I'm your nightmare!"
+    - triss_monster: "[2.2577]2114670711|I'm your nightmare!"
     - PAUSE: 2.0
     # shot grlt
     - CUE: shot_13
@@ -819,3 +819,4 @@ dialogscript:
   section_exit:
     - CAMERA_BLEND: 1.0
     - EXIT
+

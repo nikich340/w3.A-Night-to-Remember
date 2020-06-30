@@ -549,7 +549,7 @@ dialogscript:
     - PAUSE: 1.0
     # shot shot to gp
     - CUE: shot_12
-    - geralt: "2114670650|I need some fresh air."
+    - geralt: "[1.6855]2114670650|I need some fresh air."
     # (longest) anim: low_sitting_happy_to_high_standing_determined
     - PAUSE: 1.3811
     - NEXT: section_exit
@@ -557,3 +557,4 @@ dialogscript:
   section_exit:
     - CAMERA_BLEND: 1.0
     - EXIT
+

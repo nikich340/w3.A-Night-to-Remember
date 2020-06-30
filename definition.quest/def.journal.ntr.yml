@@ -33,3 +33,5 @@ journals:
         camp_part:
           - go_camp:
               caption: "Go to bandits' camp and talk with baron Edward"
+              mappins: 
+                - [ camp_pin, 18 ]
