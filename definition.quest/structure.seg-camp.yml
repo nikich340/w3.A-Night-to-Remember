@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: camp
 # 
-# (version: 412, saved: 2020-06-26 17:41:02)
+# (version: 428, saved: 2020-07-03 12:28:09)
 #
 ---
 structure:
@@ -12,19 +12,43 @@ structure:
           ".editor": [ 100.0, 250.0 ]
           next:
             - objective.go_camp: Activate
-            - spawn.new_community_spawn
+            - spawn.spawn_other_bandits
         
-        spawn.new_community_spawn:
+        spawn.spawn_baron:
+          ".editor":
+            pos: [ 720.0830688477, 253.5339508057 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: usual_day
+          spawnsets:
+            - comm_camp_baron
+          next:
+            - out
+        
+        spawn.spawn_horses:
+          ".editor":
+            pos: [ 507.124786377, 171.4261016846 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: camp_horses_full
+          spawnsets:
+            - comm_camp_horses
+          next:
+            - spawn.spawn_baron
+        
+        spawn.spawn_other_bandits:
           ".editor":
             pos: [ 295.295135498, 230.5400238037 ]
             hint: spawn-only
             in: []
             out: []
-          phase: camp_no_baron
+          phase: camp_full
           spawnsets:
             - comm_camp_bandits
           next:
-            - out
+            - spawn.spawn_horses
         
         objective.go_camp:
           ".editor": [ 333.4543457031, 385.4485473633 ]
@@ -34,6 +58,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 614.7058105469, 232.9411621094 ]
+          ".editor": [ 951.7994384766, 247.5040435791 ]
           next: ".done"
         

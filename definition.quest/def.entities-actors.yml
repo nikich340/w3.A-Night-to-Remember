@@ -2,31 +2,6 @@
 # definition of entities
 #
 templates:
-  baron_bandit_big:
-    includes:
-      - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\exchange_point_bandits\\q703_exchange_point_bandit_melee_sword.w2ent"
-
-    entityObject:
-      .type: "CNTRBanditNPC:CNewNPC"
-      #name: "IORWETH"
-      displayName: "Baron's bandit"
-
-    usedAppearances:
-      - bob_thug_lvl2_03
-
-  baron_bandit:
-    includes:
-      - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\exchange_point_bandits\\q703_exchange_point_bandit_melee_blunt.w2ent"
-
-    entityObject:
-      .type: "CNTRBanditNPC:CNewNPC"
-      #name: "IORWETH"
-      displayName: "Baron's bandit"
-
-    usedAppearances:
-      - bob_thug_lvl1_06
-      - bob_thug_lvl1_10
-
   regis_vampire_scene_fix:
     includes:
       - dlc/bob/data/quests/main_npcs/regis_terzieff_vampire.w2ent

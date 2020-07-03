@@ -1,45 +1,16 @@
 communities:
-  comm_camp_bandits:
+  comm_camp_bandit_axe_night:
     actors:
       bandit_axe:
-        template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_axe_1h.w2ent"
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_axe.w2ent"
         appearances: [ "bob_raider_lvl1_03" ]
 
-      bandit_sword_shield:
-        template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_shield_sword.w2ent"
-        appearances: [ "bob_raider_lvl1_21" ]
-
-      bandit_crossbow:
-        template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_crossbow.w2ent"
-        appearances: [ "__q703_nazairi_01" ]
-
-      bandit_spear:
-        template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_spear_2h.w2ent"
-        appearances: [ "bob_raider_lvl1_07" ]
-
-      bandit_baron:
-        template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\guards\\knight.w2ent"
-        appearances: [ "bob_knight_15" ]
-
     phases:
-      camp_no_baron:
-        bandit_sword_shield:
-          #appearance: [ "bob_thug_lvl1_06", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: neutral
-          use_last_ap: true
-          start_in_ap: true
-          actionpoints:
-            "08:00": bob/sleep_sword
-            "16:00": bob/guarding_sword
-          #spawn_at: bob/camp_point1
-          #guard: [ bob/camp_area, 5.0 ]
-
+      patrolling_night:
         bandit_axe:
-          #appearance: [ "bob_thug_lvl1_10", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: neutral
+          attitude: friendly
           use_last_ap: true
           start_in_ap: false
-          #actionpoints:
           spawn_at: bob/watch1
           wanderpath:
             wanderpoints: bob/camp_points
@@ -47,32 +18,151 @@ communities:
             #speed: 1.0
             #rightside: false
 
-        bandit_crossbow:
-          #appearance: [ "bob_thug_lvl1_06", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: neutral
+  comm_camp_bandit_axe_day:
+    actors:
+      bandit_axe:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_axe.w2ent"
+        appearances: [ "bob_raider_lvl1_03" ]
+
+    phases:
+      usual_day:
+        bandit_axe:
+          attitude: friendly
           use_last_ap: true
           start_in_ap: true
           actionpoints:
-            "00:00": bob/sleep_crossbow
-          #spawn_at: bob/camp_point1
-          #guard: [ bob/camp_area, 5.0 ]
+            "08:00": bob/sleep_axe
+            "16:00": bob/eat_sit_bandit2
+            "18:00": bob/guarding_axe
 
-        bandit_spear:
-          #appearance: [ "bob_thug_lvl1_06", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: neutral
-          use_last_ap: true
-          start_in_ap: true
-          actionpoints:
-            "00:00": bob/sleep_spear
-          #spawn_at: bob/camp_point1
-          #guard: [ bob/camp_area, 5.0 ]
+  comm_camp_baron:
+    actors:
+      bandit_baron:
+        template: "dlc\\dlcntr\\data\\entities\\baron_edward.w2ent"
+        appearances: [ "bob_knight_15" ]
 
+      horse_baron:
+        template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
+        appearances: [ "horse_knight_07" ]
+        tags: [ "ntr_camp_horse_baron" ]
+
+    phases:
+      usual_day:
         bandit_baron:
-          attitude: neutral
+          attitude: friendly
           use_last_ap: true
           start_in_ap: true
           actionpoints:
             "00:00": bob/sleep_baron
+            "08:00": bob/eat_stand_baron
+            "10:00": bob/smoke_baron
+            "12:00": 
+              - bob/sit_read_baron
+              - bob/stand_sharpen_sword_baron
+            "14:00": bob/stand_train_baron
+            "18:00": bob/horse_brush4
+            "20:00": bob/eat_stand_baron
+            "22:00": bob/smoke_baron
+
+        horse_baron:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/horse_baron_still
+            "08:00": bob/horse_baron_parked
+
+  comm_camp_bandits:
+    actors:
+      bandit_sword_shield:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_sword.w2ent"
+        appearances: [ "bob_raider_lvl1_21" ]
+
+      bandit_crossbow:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
+        appearances: [ "__q703_nazairi_01" ]
+
+      bandit_spear:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_spear.w2ent"
+        appearances: [ "bob_raider_lvl1_07" ]
+
+    phases:
+      camp_full:
+        bandit_sword_shield:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/guarding_sword
+            "08:00": bob/sleep_sword
+            "16:00": bob/eat_sit_bandit
+            "18:00": bob/stand_sharpen_sword_baron
+            "19:00": bob/stand_train_bandit1
+            "22:00": bob/horse_brush3
+
+        bandit_crossbow:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/sleep_crossbow
+            "08:00": bob/eat_sit_bandit
+            "10:00": bob/guarding_crossbow
+            "14:00": bob/horse_brush1
+            "16:00": bob/guarding_crossbow
+
+        bandit_spear:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/sleep_spear
+            "08:00": bob/eat_sit_bandit2
+            "10:00": bob/horse_brush2
+            "12:00": bob/guarding_spear
+
+  comm_camp_horses:
+    actors:
+      horse_orange:
+        template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
+        appearances: [ "horse_draft_vehicle_03" ]
+        tags: [ "ntr_camp_horse1" ]
+
+      horse_white:
+        template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
+        appearances: [ "_sq101__white_stallion_02" ]
+        tags: [ "ntr_camp_horse2" ]
+
+      horse_orange2:
+        template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
+        appearances: [ "horse_draft_vehicle_02" ]
+        tags: [ "ntr_camp_horse3" ]
+    
+    phases:
+      camp_horses_full:
+        horse_orange:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/horse1_still
+            "08:00": bob/horse1_parked
+
+        horse_white:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/horse2_still
+            "08:00": bob/horse2_parked
+
+        horse_orange2:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/horse3_still
+            "08:00": bob/horse3_parked
 
   comm_regis_owl:
     actors:

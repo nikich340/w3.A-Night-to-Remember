@@ -273,41 +273,105 @@ layers:
         #radius for quest instructions: 18
         pos: [ -829.0214233398, -1720.6094970703, 95.3092041016 ]
 
-    actionpoints: 
-      guarding_sword: [ -822.2263183594, -1715.7440185547, 95.2491455078, -6.1599931717, "guarding/stand_md_guard_sword_jt" ]
+    # ntr_bob_<name>_ap
+    actionpoints:
+      eat_sit_bandit: 
+        pos: [ -833.8786010742, -1724.2832031250, 95.5729980469 ]
+        rot: [ 0.0, 0.0, -143.8800048828 ]
+        action: "dining_man/drink_sit_jt"
+        ignoreCollisions: true
 
-      guarding2_axe: [ -834.9714965820, -1720.8541259766, 95.3668823242, 52.3600044250, "guarding/stand_md_guard_axe_jt" ]
+      eat_sit_bandit2: 
+        pos: [ -834.0405273438, -1726.5332031250, 95.7468872070 ]
+        rot: [ 0.0, 0.0, -57.4199943542 ]
+        action: "dining_man/sit_m_eating_fish_jt"
+        ignoreCollisions: true
+
+      eat_stand_baron: [ -813.2008056641, -1719.5880126953, 95.4874267578, -128.9199676514, "work_man/stand_mw_drinking_jt" ]
+
+      #guarding_axe: [ -834.9714965820, -1720.8541259766, 95.3668823242, 52.3600082397, "guarding/stand_md_guard_axe_jt" ]
+      guarding_axe: [ -834.9714965820, -1720.8541259766, 95.3668823242, 52.3600082397, "guarding/stand_mw_looking_around_jt" ]
       
+      guarding_crossbow: [ -819.9876098633, -1704.8929443359, 95.4008789063, 48.4000015259, "guarding/stand_m_guard_crossbow_jt" ]
+
+      guarding_spear: [ -828.5811767578, -1727.2153320313, 95.9534912109, 48.4000015259, "guarding/stand_m_guard_spear_r_jt" ]
+
+      guarding_sword: [ -822.2263183594, -1715.7440185547, 95.2491455078, -6.1600008011, "guarding/stand_md_guard_sword_jt" ]
+
+      horse1_parked: [ -833.3779907227, -1711.0632324219, 96.0727539063, 151.3600006104, "horse/horse_parking" ]
+
+      horse1_roaring: [ -833.3779907227, -1711.0632324219, 96.0727539063, 151.3600006104, "horse/q703_horse_rearing" ]
+
+      horse1_still: [ -833.3779907227, -1711.0632324219, 96.0727539063, 151.3600006104, "horse/horse_still_jt" ]
+
+      horse2_parked: [ -830.9440307617, -1709.4661865234, 95.9849243164, 175.9999847412, "horse/horse_parking" ]
+
+      horse2_still: [ -830.9440307617, -1709.4661865234, 95.9849243164, 175.9999847412, "horse/horse_still_jt" ]
+
+      horse3_parked: [ -831.4266357422, -1713.7303466797, 95.4897460938, 152.4599914551, "horse/horse_parking" ]
+
+      horse3_still: [ -831.4266357422, -1713.7303466797, 95.4897460938, 152.4599914551, "horse/horse_still_jt" ]
+
+      horse_baron_parked: [ -828.0842285156, -1710.7614746094, 95.7303466797, 160.1599884033, "horse/horse_parking" ]
+
+      horse_baron_still: [ -828.0842285156, -1710.7614746094, 95.7303466797, 160.1599884033, "horse/horse_still_jt" ]
+
+      horse_brush1: [ -832.6919555664, -1712.4202880859, 95.7223510742, 60.9400100708, "work_man/stand_mw_brushing_horse_jt" ]
+
+      horse_brush2: [ -829.7672119141, -1710.2893066406, 95.8065795898, 91.3000259399, "work_man/stand_mw_brushing_horse_jt" ]
+
+      horse_brush3: [ -830.7824096680, -1715.1651611328, 95.4633789063, 50.8200073242, "work_man/stand_mw_brushing_horse_jt" ]
+      
+      horse_brush4: [ -827.2054443359, -1712.1253662109, 95.7194824219, 55.0000152588, "work_man/stand_mw_brushing_horse_jt" ]
+
+      sit_read_baron: 
+        pos: [ -818.3267211914, -1715.6795654297, 95.4522705078 ]
+        rot: [ 0.0, 0.0, 114.4000244141 ]
+        action: "work_man/sit_m_reading_book_jt"
+        ignoreCollisions: true
+
       sleep_axe: 
-        pos: [ -839.9653320313, -1724.3233642578, 95.1465454102 ]
-        rot: [ 0.0, 0.0, -523.6004638672 ]
+        pos: [ -839.7583618164, -1724.2447509766, 96.0104370117 ]
+        rot: [ 0.0, 0.0, -192.6404571533 ]
         action: "sleeping_man/lie_mwdc_sleep_bed_r_jt"
         ignoreCollisions: true
 
-      sleep_sword: 
-        pos: [ -836.5767822266, -1727.2327880859, 95.8389770508 ]
-        rot: [ 15.0, 0.0, -321.6400756836 ]
-        action: "sleeping_man/lie_mwdc_sleep_bed_l_new_jt"
-        ignoreCollisions: true
-
       sleep_baron: 
-        pos: [ -817.8181762695, -1717.8520507813, 95.4587890625 ]
-        rot: [ 0.0, 0.0, -35.6399917603 ]
+        pos: [ -817.8181762695, -1717.8520507813, 95.4587860107 ]
+        rot: [ 0.0, 0.0, -35.6399421692 ]
         action: "sleeping_man/lie_mwdc_sleep_bed_l_jt"
         ignoreCollisions: true
 
       sleep_crossbow: 
-        pos: [ -830.1755981445, -1733.1790771484, 96.408276367 ]
-        rot: [ 0.0, 0.0, -75.9000396729 ]
+        pos: [ -830.1755981445, -1733.1790771484, 96.4082794189 ]
+        rot: [ 0.0, 0.0, -75.8999481201 ]
         action: "sleeping_man/lie_mwdc_sleep_bed_l_jt"
         ignoreCollisions: true
 
       sleep_spear: 
-        pos: [ -829.5266113281, -1730.6776123047, 96.2143798828 ]
-        rot: [ 0.0, 0.0, -11.6599998474 ]
+        pos: [ -829.5266113281, -1730.6776123047, 96.2143783569 ]
+        rot: [ 0.0, 0.0, -11.6599693298 ]
         action: "sleeping_man/lie_mwdc_sleep_bed_r_jt"
         ignoreCollisions: true
-    
+
+      sleep_sword: 
+        pos: [ -836.5767822266, -1727.2327880859, 95.8389739990 ]
+        rot: [ 15.0, 0.0, 38.3599243164 ]
+        action: "sleeping_man/lie_mwdc_sleep_bed_l_new_jt"
+        ignoreCollisions: true
+
+      smoke_baron: 
+        pos: [ -818.7420043945, -1718.1300048828, 95.4499969482 ]
+        rot: [ 0.0, 0.0, -45.9799766541 ]
+        action: "resting_man/q105_smoke_pipe_sitting"
+        ignoreCollisions: true
+
+      stand_sharpen_sword_baron: [ -825.9270629883, -1723.9586181641, 95.7456665039, -174.3198699951, "work_man/stand_md_sharpening_sword_jt" ]
+
+      stand_train_bandit1: [ -836.9390869141, -1719.1715087891, 95.6705932617, 49.7201309204, "work_man/stand_mw_training_sword_nopushup_dynamic_jt" ]
+
+      stand_train_baron: [ -820.2420654297, -1711.9938964844, 95.5964355469, -29.4798507690, "work_man/stand_mw_training_sword_nopushup_dynamic_jt" ]
+
     wanderpoints:
       camp_points:
         - [ -837.8128051758, -1735.5002441406, 97.1505126953, 2 ]
@@ -348,6 +412,11 @@ layers:
       watch11: [ -844.1801757813, -1727.4954833984, 96.6516723633, -148.0599822998 ]
 
     statics: 
+      fish_basket: 
+        template: "CEntity:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\decoration_set\\food\\deco_picnic_basket_fishes_a.w2ent"
+        pos: [ -832.4114990234, -1725.4385986328, 96.4149780273 ]
+        rot: [ 0.0, 0.0, 29.2599964142 ]
+        
       weapon_rack: 
         template: "CEntity:dlc\\bob\\data\\environment\\decorations\\gameplay\\merchant\\decoration_set\\armor\\deco_mer_weapon_rack_floor_h.w2ent"
         pos: [ -825.7640991211, -1725.9890136719, 95.9786987305 ]
@@ -459,7 +528,7 @@ layers:
         rot: [ 0.0, 0.0, 177.8399353027 ]
 
       chest2_baron_1: 
-        template: "W3AnimatedContainer:dlc\\bob\\data\\gameplay\\container_definitions\\ep2_loot_knight_armor_2__rich_chest_a.w2ent"
+        template: "CEntity:dlc\\bob\\data\\environment\\decorations\\gameplay\\rich_district\\furniture\\containers\\cont_rich_chest_d.w2ent"
         pos: [ -819.1992797852, -1718.3294677734, 95.2681045532 ]
         rot: [ 0.0, 0.0, 131.1999816895 ]
 
@@ -535,7 +604,7 @@ layers:
         rot: [ 0.0, 0.0, 148.9400024414 ]
 
       wall_hack_1: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
         pos: [ -834.3278198242, -1708.5700683594, 96.9514083862 ]
         rot: [ 90.0, -4.9999613762, -121.5199813843 ]
 

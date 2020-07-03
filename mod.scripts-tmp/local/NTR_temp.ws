@@ -2,6 +2,10 @@ exec function startNTR() {
 	FactsAdd("NTRstartquest", 1);
 }
 
+exec function timeScale(timeScale : float) {
+	SetTimeScaleQuest(timeScale);
+}
+
 exec function orianaDoor(newState : string, optional smoooth : bool, optional dontBlockInCombat : bool ) {
 	NTR_DoorChangeState('q704_oriana_feeding_room', newState, , , smoooth, dontBlockInCombat);
 }

@@ -337,6 +337,36 @@ quest function NTRTuneNPC( tag : name, level : int, optional attitude : string, 
 	}
 }
 
+quest function NTR_teleportToNode( tag : CName, tagNode : CName, optional applyRotation : bool ) {	
+	var NPC   : CNewNPC;
+	var node   : CNode;
+	var i      : int;
+	var pos    : Vector;
+	var rot    : EulerAngles;
+
+	NPC = theGame.GetNPCByTag(tag);
+	node = theGame.GetNodeByTag( tagNode );
+
+	if (!NPC) {
+		LogChannel('NTR_teleportNPCs', "[ERROR] Entity <" + tag + "> not found!");
+		return;
+	}
+	if (!node) {
+		LogChannel('NTR_teleportNPCs', "[ERROR] Node <" + tagNode + "> not found!");
+		return;
+	}
+
+	pos = node.GetWorldPosition();
+	rot = node.GetWorldRotation();
+	if (applyRotation) {
+		NPC.TeleportWithRotation(pos, rot);
+	} else {
+		NPC.Teleport(pos);
+	}
+	LogChannel('NTR_teleportNPCs', "[OK] Teleport npc <" + tag + "> to node <" + tagNode + ">");
+	// not working NPC.TeleportToNode( node, applyRotation );
+}
+
 latent quest function NTR_teleportTriss( tag : CName) {	
 	var choose : int;
 	var trissNPC   : CNewNPC;

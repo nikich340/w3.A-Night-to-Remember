@@ -1,0 +1,88 @@
+#
+# definition of entities
+#
+templates:
+  baron_edward:
+    includes:
+      - "dlc\\bob\\data\\gameplay\\community\\community_npcs\\guards\\knight.w2ent"
+
+    entityObject:
+      .type: "CNTRBanditNPC:CNewNPC"
+      #name: "IORWETH"
+      displayName: "Baron Edward"
+
+    usedAppearances:
+      - bob_knight_15
+
+  baron_bandit_big:
+    includes:
+      - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\exchange_point_bandits\\q703_exchange_point_bandit_melee_sword.w2ent"
+
+    entityObject:
+      .type: "CNTRBanditNPC:CNewNPC"
+      #name: "IORWETH"
+      displayName: "Baron's bandit"
+
+    usedAppearances:
+      - bob_thug_lvl2_03
+
+  baron_bandit:
+    includes:
+      - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\exchange_point_bandits\\q703_exchange_point_bandit_melee_blunt.w2ent"
+
+    entityObject:
+      .type: "CNTRBanditNPC:CNewNPC"
+      #name: "IORWETH"
+      displayName: "Baron's bandit"
+
+    usedAppearances:
+      - bob_thug_lvl1_06
+      - bob_thug_lvl1_10
+
+  baron_bandit_axe:
+    includes:
+      - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_axe_1h.w2ent"
+
+    entityObject:
+      .type: "CNTRBanditNPC:CNewNPC"
+      #name: "IORWETH"
+      displayName: "Baron's bandit"
+
+    usedAppearances:
+      - bob_raider_lvl1_03
+
+  baron_bandit_sword:
+    includes:
+      - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_shield_sword.w2ent"
+
+    entityObject:
+      .type: "CNTRBanditNPC:CNewNPC"
+      #name: "IORWETH"
+      displayName: "Baron's bandit"
+
+    usedAppearances:
+      - bob_raider_lvl1_21
+
+  baron_bandit_spear:
+    includes:
+      - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_spear_2h.w2ent"
+
+    entityObject:
+      .type: "CNTRBanditNPC:CNewNPC"
+      #name: "IORWETH"
+      displayName: "Baron's bandit"
+
+    usedAppearances:
+      - bob_raider_lvl1_07
+
+  baron_bandit_crossbow:
+    includes:
+      - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_crossbow.w2ent"
+
+    entityObject:
+      .type: "CNTRBanditNPC:CNewNPC"
+      #name: "IORWETH"
+      displayName: "Baron's bandit"
+
+    usedAppearances:
+      - __q703_nazairi_01

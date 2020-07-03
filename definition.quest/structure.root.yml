@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 412, saved: 2020-06-26 17:41:02)
+# (version: 428, saved: 2020-07-03 12:28:09)
 #
 ---
 structure:
@@ -15,7 +15,7 @@ structure:
       
       subsegment.camp:
         ".editor":
-          pos: [ 1176.6180419922, 485.6039428711 ]
+          pos: [ 1196.6180419922, 486.6039428711 ]
           in: [ In ]
           out: [ Out ]
         segment: camp
@@ -49,6 +49,15 @@ structure:
         next:
           - changelayers.show_orphlayer
       
+      waituntil.midnight:
+        time: [ "00:00", "01:00" ]
+        ".editor":
+          pos: [ 1237.7524414062, 928.6041259766 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - script.check_camp_removed2
+      
       waituntil.night_time:
         time: [ "00:00", "04:00" ]
         ".editor":
@@ -75,6 +84,33 @@ structure:
           out: [ Out ]
         next:
           - addfact.del_fact1
+      
+      waituntil.time_brake:
+        time: [ "01:01", "23:59" ]
+        ".editor":
+          pos: [ 1447.5114746094, 881.4168701172 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - waituntil.midnight
+      
+      waituntil.wait_day:
+        time: [ "08:01", "23:59" ]
+        ".editor":
+          pos: [ 1490.1114501953, 794.9918823242 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - spawnsets.camp_axe_day
+      
+      waituntil.wait_night:
+        time: [ "00:00", "08:00" ]
+        ".editor":
+          pos: [ 1401.6700439453, 671.875 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - script.check_camp_removed
       
       waituntil.wait_quest_allowed:
         factdb: [ NTRstartquest, ">=", 1 ]
@@ -133,12 +169,90 @@ structure:
         next.False:
           - waituntil.outside_area
       
+      script.check_camp_removed:
+        ".editor":
+          pos: [ 1606.5925292969, 669.5978393555 ]
+          in: [ In ]
+          out: [ "False", "True" ]
+        function: NTR_FactChecker
+        parameter:
+          - factName: ntr_remove_camp
+          - factCond: "=="
+          - val: 1
+        next.False:
+          - spawnsets.camp_axe_night
+      
+      script.check_camp_removed2:
+        ".editor":
+          pos: [ 1391.9036865234, 1000.1749267578 ]
+          in: [ In ]
+          out: [ "False", "True" ]
+        function: NTR_FactChecker
+        parameter:
+          - factName: ntr_remove_camp
+          - factCond: "=="
+          - val: 1
+        next.False:
+          - script.teleport_horse1
+          - script.teleport_horse2
+          - script.teleport_horse3
+          - script.teleport_horse_baron
+      
       script.sounds_dettlaff:
         ".editor":
           pos: [ 137.6712799072, 377.7290344238 ]
           in: [ In ]
           out: [ Out ]
         function: playSoundsCustom
+        next: ".done"
+      
+      script.teleport_horse1:
+        ".editor":
+          pos: [ 1611.5767822266, 1104.3579101562 ]
+          in: [ In ]
+          out: [ Out ]
+        function: NTR_teleportToNode
+        parameter:
+          - tag: cname_ntr_camp_horse1
+          - tagNode: cname_ntr_bob_horse1_parked_ap
+          - applyRotation: true
+        next:
+          - waituntil.time_brake
+      
+      script.teleport_horse2:
+        ".editor":
+          pos: [ 1617.9165039062, 1183.7696533203 ]
+          in: [ In ]
+          out: [ Out ]
+        function: NTR_teleportToNode
+        parameter:
+          - tag: cname_ntr_camp_horse2
+          - tagNode: cname_ntr_bob_horse2_parked_ap
+          - applyRotation: true
+        next: ".done"
+      
+      script.teleport_horse3:
+        ".editor":
+          pos: [ 1623.7990722656, 1261.6782226562 ]
+          in: [ In ]
+          out: [ Out ]
+        function: NTR_teleportToNode
+        parameter:
+          - tag: cname_ntr_camp_horse3
+          - tagNode: cname_ntr_bob_horse3_parked_ap
+          - applyRotation: true
+        next: ".done"
+      
+      script.teleport_horse_baron:
+        ".editor":
+          pos: [ 1628.5048828125, 1340.5668945312 ]
+          in: [ In ]
+          out: [ Out ]
+        function: NTR_teleportToNode
+        parameter:
+          - tag: cname_ntr_camp_horse_baron
+          - tagNode: cname_ntr_bob_horse_baron_parked_ap
+          - applyRotation: true
         next: ".done"
       
       changelayers.hide_hide_hide:
@@ -170,6 +284,8 @@ structure:
           - camp_layer
         next:
           - subsegment.camp
+          - spawnsets.camp_axe_day
+          - waituntil.midnight
       
       changelayers.show_main_layer:
         ".editor":
@@ -200,6 +316,34 @@ structure:
           - subsegment.orphanage
           - waituntil.wraith_area
           - waituntil.night_time
+      
+      spawnsets.camp_axe_day:
+        ".editor":
+          pos: [ 1225.2901611328, 660.7208251953 ]
+          hint: both
+          in: []
+          out: []
+        phase: usual_day
+        spawn:
+          - comm_camp_bandit_axe_day
+        despawn:
+          - comm_camp_bandit_axe_night
+        next:
+          - waituntil.wait_night
+      
+      spawnsets.camp_axe_night:
+        ".editor":
+          pos: [ 1249.3333740234, 786.6666259766 ]
+          hint: both
+          in: []
+          out: []
+        phase: patrolling_night
+        spawn:
+          - comm_camp_bandit_axe_night
+        despawn:
+          - comm_camp_bandit_axe_day
+        next:
+          - waituntil.wait_day
       
       spawn.spawn_wraiths:
         ".editor":
@@ -239,6 +383,6 @@ structure:
           - script.FACT_BRANCH1
       
       end:
-        ".editor": [ 1362.5391845703, 489.6112976074 ]
+        ".editor": [ 1442.3725585938, 489.039855957 ]
         next: ".done"
       
