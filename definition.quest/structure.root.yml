@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 428, saved: 2020-07-03 12:28:09)
+# (version: 438, saved: 2020-07-07 22:21:21)
 #
 ---
 structure:
@@ -38,7 +38,7 @@ structure:
           out: [ Out ]
         segment: orphanage
         next:
-          - changelayers.new_show_layers
+          - changelayers.show_camp_maybe_at_start
       
       subsegment.regis_mail:
         ".editor":
@@ -271,7 +271,7 @@ structure:
           - orphanage_layer
         next: ".done"
       
-      changelayers.new_show_layers:
+      changelayers.show_camp_maybe_at_start:
         ".editor":
           pos: [ 994.1068115234, 596.6958618164 ]
           hint: show-only
@@ -299,7 +299,7 @@ structure:
         show:
           - nlayer
         next:
-          - changelayers.new_show_layers
+          - changelayers.show_camp_maybe_at_start
       
       changelayers.show_orphlayer:
         ".editor":
@@ -333,7 +333,7 @@ structure:
       
       spawnsets.camp_axe_night:
         ".editor":
-          pos: [ 1249.3333740234, 786.6666259766 ]
+          pos: [ 1278.619140625, 812.3809204102 ]
           hint: both
           in: []
           out: []

@@ -1,3 +1,7 @@
+function NTR_notify(msg : string) {
+	theGame.GetGuiManager().ShowNotification(msg);
+}
+
 quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	var books : array<SItemUniqueId>;
 	books = thePlayer.inv.GetItemsByName(bookName);
@@ -236,6 +240,10 @@ quest function NTRTuneNPC( tag : name, level : int, optional attitude : string, 
 	theGame.GetNPCsByTag(tag, NPCs);
 	//LogQuest( "<<Tune NPC>>> tag: " + tag + " found npcs: " + NPCs.Size());	//- uncomment it to check if NPCs are found
 	//theGame.GetGuiManager().ShowNotification("Found npcs: " + NPCs.Size() + " nodes: " + nodes.Size());
+	if (NPCs.Size() < 1) {
+		theGame.GetGuiManager().ShowNotification("[ERROR] No NPCs found with tag " + tag);
+		LogChannel('NTRTuneNPC', "[ERROR] No NPCs found with tag " + tag);
+	}
 	if (level > 500) {
 		// 1005 = playerLvl + 5;
 		// 995 = playerLvl - 5

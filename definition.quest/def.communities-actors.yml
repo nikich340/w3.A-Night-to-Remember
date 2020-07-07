@@ -8,7 +8,7 @@ communities:
     phases:
       patrolling_night:
         bandit_axe:
-          attitude: friendly
+          #attitude: friendly
           use_last_ap: true
           start_in_ap: false
           spawn_at: bob/watch1
@@ -27,7 +27,7 @@ communities:
     phases:
       usual_day:
         bandit_axe:
-          attitude: friendly
+          #attitude: friendly
           use_last_ap: true
           start_in_ap: true
           actionpoints:
@@ -40,6 +40,8 @@ communities:
       bandit_baron:
         template: "dlc\\dlcntr\\data\\entities\\baron_edward.w2ent"
         appearances: [ "bob_knight_15" ]
+        #appearances: [ "bob_raider_lvl2_02" ]
+        tags: [ "ntr_baron_edward" ]
 
       horse_baron:
         template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
@@ -47,9 +49,21 @@ communities:
         tags: [ "ntr_camp_horse_baron" ]
 
     phases:
+      before_scene:
+        bandit_baron:
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/spawnpoint_beach1
+
+        horse_baron:
+          attitude: friendly
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/spawnpoint_beach2
+          
       usual_day:
         bandit_baron:
-          attitude: friendly
+          #attitude: friendly
           use_last_ap: true
           start_in_ap: true
           actionpoints:
@@ -77,19 +91,22 @@ communities:
       bandit_sword_shield:
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_sword.w2ent"
         appearances: [ "bob_raider_lvl1_21" ]
+        tags: [ "ntr_camp_bandit_sword" ]
 
       bandit_crossbow:
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
         appearances: [ "__q703_nazairi_01" ]
+        tags: [ "ntr_camp_bandit_crossbow" ]
 
       bandit_spear:
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_spear.w2ent"
         appearances: [ "bob_raider_lvl1_07" ]
+        tags: [ "ntr_camp_bandit_spear" ]
 
     phases:
       camp_full:
         bandit_sword_shield:
-          attitude: friendly
+          #attitude: friendly
           use_last_ap: true
           start_in_ap: true
           actionpoints:
@@ -101,7 +118,7 @@ communities:
             "22:00": bob/horse_brush3
 
         bandit_crossbow:
-          attitude: friendly
+          #attitude: friendly
           use_last_ap: true
           start_in_ap: true
           actionpoints:
@@ -112,7 +129,7 @@ communities:
             "16:00": bob/guarding_crossbow
 
         bandit_spear:
-          attitude: friendly
+          #attitude: friendly
           use_last_ap: true
           start_in_ap: true
           actionpoints:
@@ -220,7 +237,7 @@ communities:
       orphanage:
         fat_bandit:
           appearance: [ "bob_thug_lvl2_03", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: neutral
+          #attitude: neutral
           use_last_ap: true
           start_in_ap: false
           level: 33
@@ -229,7 +246,7 @@ communities:
         bandit_2:
           appearance: [ "bob_thug_lvl1_06", false ]    # [someappearance, only_on_spawn_bool]
           #appearance: [ "bandit_lvl1_04", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: neutral
+          #attitude: neutral
           use_last_ap: true
           start_in_ap: false
           level: 33
@@ -238,7 +255,7 @@ communities:
         bandit_3:
           appearance: [ "bob_thug_lvl1_10", false ]    # [someappearance, only_on_spawn_bool]
           #appearance: [ "bandit_lvl1_09", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: neutral
+          #attitude: neutral
           use_last_ap: true
           start_in_ap: false
           level: 33
@@ -247,7 +264,7 @@ communities:
       orphanage_normal:
         fat_bandit:
           appearance: [ "bob_thug_lvl2_03", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: neutral
+          #attitude: neutral
           use_last_ap: true
           start_in_ap: false
           level: 33
@@ -256,7 +273,7 @@ communities:
 
         bandit_2:
           appearance: [ "bandit_lvl1_04", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: neutral
+          #attitude: neutral
           use_last_ap: true
           start_in_ap: false
           level: 33
@@ -265,7 +282,7 @@ communities:
 
         bandit_3:
           appearance: [ "bandit_lvl1_09", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: neutral
+          #attitude: neutral
           use_last_ap: true
           start_in_ap: false
           level: 33

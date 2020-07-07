@@ -1,0 +1,1548 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    Bandit_camp_crossbow:
+      template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
+      appearance: [ "__q703_nazairi_01" ]
+
+    horse_baron:
+      template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
+      appearance: [ "horse_knight_07" ]
+
+    Baron_Edward:
+      template: "dlc\\dlcntr\\data\\entities\\baron_edward.w2ent"
+      appearance: [ "bob_knight_15" ]
+
+  animations:
+    anim_6981_high_standing_determined_enter_frontal:
+      animation: "high_standing_determined_enter_frontal"
+      frames: 167
+
+    anim_7004_high_standing_determined_gesture_both_hands_stop:
+      animation: "high_standing_determined_gesture_both_hands_stop"
+      frames: 110
+
+    anim_4284_meditation_start_long:
+      animation: "meditation_start_long"
+      frames: 111
+
+    anim_4622_horse_walk:
+      animation: "horse_walk"
+      frames: 38
+
+    anim_4640_horse_walk_stop:
+      animation: "horse_walk_stop"
+      frames: 38
+
+    anim_282_dg_geralt_dismounting:
+      animation: "dg_geralt_dismounting"
+      frames: 531
+
+    anim_4639_horse_walk_start_turn_right:
+      animation: "horse_walk_start_turn_right"
+      frames: 39
+
+    anim_7297_high_standing_sad_exit_frontal:
+      animation: "high_standing_sad_exit_frontal"
+      frames: 273
+
+  animations.mimic:
+    mimicsanim_381_geralt_neutral_gesture_closing_eyes_face:
+      animation: "geralt_neutral_gesture_closing_eyes_face"
+      frames: 170
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_717_meditation_idle01:
+      idle_anim: "meditation_idle01"
+
+    pose_0_horse_standing_idle01:
+      idle_anim: "horse_standing_idle01"
+
+    pose_custom_horse_walk:
+      idle_anim: "horse_walk"
+
+    pose_4_dg_horse_standing_idle02:
+      name: "520"
+      idle_anim: "dg_horse_standing_idle02"
+
+    pose_0_man_big_ex_idle:
+      idle_anim: "man_big_ex_idle"
+
+    pose_0_horse_standing_idle01:
+      idle_anim: "horse_standing_idle01"
+
+    pose_505_horse_standing_idle01:
+      idle_anim: "horse_standing_idle01"
+
+    pose_2139_High_Standing_Sad:
+      name: "Standing"
+      emotional_state: "Sad"
+      status: "High"
+      idle_anim: "high_standing_sad_idle"
+
+    pose_2136_High_Standing_Bored:
+      name: "Standing"
+      emotional_state: "Bored"
+      status: "High"
+      idle_anim: "high_standing_bored_idle"
+
+    pose_2097_High_Sitting_3_Determined:
+      name: "Sitting 3"
+      emotional_state: "Determined"
+      status: "High"
+      idle_anim: "high_sitting3_determined_idle"
+
+  cameras:
+    cam_1_Shot1:
+      fov: 30.0
+      transform:
+        pos: [ -1.9243774414, 11.5433349609, 1.6868515015 ]
+        rot: [ 0.0, 356.6000061035, 224.1968688965 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.9956002235, 7.9956002235 ]
+        focus: [ 5.4956002235, 6.4956002235 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_Shot2_band:
+      fov: 25.0
+      transform:
+        pos: [ 0.6987915039, 10.1040039063, 1.6868515015 ]
+        rot: [ 0.0, 357.2050170898, 219.1371154785 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.6307291985, 6.6307291985 ]
+        focus: [ 4.1307291985, 5.1307291985 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_Shot3_ger:
+      fov: 20.0
+      transform:
+        pos: [ 5.2679443359, 7.8442382813, 2.1868820190 ]
+        rot: [ 0.0, 346.8099975586, 100.9417114258 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.8466396332, 5.8466396332 ]
+        focus: [ 3.3466396332, 4.3466396332 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_4_Shot4_ger_meditate_start:
+      fov: 40.0
+      transform:
+        pos: [ 5.1115722656, 4.3691406250, 1.9867630005 ]
+        rot: [ 0.0, 352.0350036621, 198.0167388916 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.6983821392, 5.6983823776 ]
+        focus: [ 3.1983821392, 4.1983823776 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_6_Shot4_ger_meditate_idle_closeup:
+      fov: 20.0
+      transform:
+        pos: [ 5.9693603516, 2.3562011719, 1.4867324829 ]
+        rot: [ 0.0, 0.0649979562, 213.2518005371 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.6983821392, 5.6983823776 ]
+        focus: [ 3.1983821392, 4.1983823776 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_7_Shot5_barron_arrive:
+      fov: 40.0
+      transform:
+        pos: [ 2.7450561523, 18.2679443359, 2.6368026733 ]
+        rot: [ 0.0, 343.3450012207, 145.7660980225 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.6983821392, 5.6983823776 ]
+        focus: [ 3.1983821392, 4.1983823776 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_8_Shot5_barron_arrive2:
+      fov: 40.0
+      transform:
+        pos: [ 4.2033691406, 18.1593017578, 2.4867935181 ]
+        rot: [ 0.0, 349.0100097656, 168.7009735107 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.6983821392, 5.6983823776 ]
+        focus: [ 3.1983821392, 4.1983823776 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_9_Shot5_barron_dismount:
+      fov: 40.0
+      transform:
+        pos: [ 4.4098510742, 8.8540039063, 1.9367599487 ]
+        rot: [ 0.0, 344.2799987793, 56.1717224121 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.5183155537, 5.5183153152 ]
+        focus: [ 3.0183155537, 4.0183153152 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_10_Shot5_barron_move:
+      fov: 35.0
+      transform:
+        pos: [ 5.2003173828, 7.0791015625, 2.2367782593 ]
+        rot: [ 0.0, 343.4550170898, 58.2067565918 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.2121152878, 7.2121152878 ]
+        focus: [ 4.7121152878, 5.7121152878 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_11_Shot5_barron_move2_backview:
+      fov: 30.0
+      transform:
+        pos: [ -1.3070678711, 9.4182128906, 1.9367599487 ]
+        rot: [ 0.0, 352.4200134277, 255.8216857910 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.2332940102, 7.2332940102 ]
+        focus: [ 4.7332940102, 5.7332940102 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_12_Shot5_barron_move2_horse2:
+      fov: 30.0
+      transform:
+        pos: [ 3.1983032227, 8.9165039063, 2.1867752075 ]
+        rot: [ 0.0, 346.3699951172, 159.6815795898 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.2332940102, 7.2332940102 ]
+        focus: [ 4.7332940102, 5.7332940102 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_13_Shot5_barron_to_crossbow:
+      fov: 30.0
+      transform:
+        pos: [ 2.1567993164, 9.0305175781, 1.6867446899 ]
+        rot: [ 0.0, 0.8900014758, 232.4165649414 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.8924832344, 4.8924832344 ]
+        focus: [ 2.3924832344, 3.3924832344 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_14_Shot5_grlt_go:
+      fov: 30.0
+      transform:
+        pos: [ 2.1574096680, 9.0299072266, 1.8367538452 ]
+        rot: [ 0.0, 355.6650085449, 234.3965454102 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.9694428444, 4.9694428444 ]
+        focus: [ 2.4694428444, 3.4694428444 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_15_Shot5_bow_to_baron:
+      fov: 20.0
+      transform:
+        pos: [ 3.5470581055, 6.1772460938, 2.2367782593 ]
+        rot: [ 0.0, 346.4249877930, 356.0564575195 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.1834886074, 5.1834888458 ]
+        focus: [ 2.6834886074, 3.6834886074 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_16_Shot5_grlt_stay:
+      fov: 25.0
+      transform:
+        pos: [ 2.1495361328, 9.6993408203, 1.8367538452 ]
+        rot: [ 0.0, 358.6900024414, 207.0617065430 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.4147963524, 6.4147963524 ]
+        focus: [ 3.9147963524, 4.9147963524 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_9_Shot5_barron_dismount1:
+      fov: 40.0
+      transform:
+        pos: [ 4.0700683594, 8.8944091797, 1.7367477417 ]
+        rot: [ 0.0, 350.8800048828, 59.3615722656 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.1807174683, 5.1807174683 ]
+        focus: [ 2.6807174683, 3.6807174683 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_17_Shot5_barron_dismount2:
+      fov: 40.0
+      transform:
+        pos: [ 4.1369628906, 9.0296630859, 0.9366989136 ]
+        rot: [ 0.0, 356.3800048828, 53.5316467285 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.5881829262, 4.5881829262 ]
+        focus: [ 2.0881829262, 3.0881829262 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_18_Shot5_bow_to_baron_closeup_sour:
+      fov: 6.0
+      transform:
+        pos: [ 3.5493774414, 5.8168945313, 2.3367843628 ]
+        rot: [ 0.0, 348.4034423828, 0.1142883301 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.5185561180, 5.5185561180 ]
+        focus: [ 3.0185561180, 4.0185561180 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_19_Shot5_barron_arrive_pan:
+      fov: 40.0
+      transform:
+        #pos: [ 2.7450561523, 18.2679443359, 2.6368026733 ]
+        pos: [ 3.2450561523, 16.7679443359, 2.6368026733 ]
+        rot: [ 0.0, 343.3450012207, 145.7660980225 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.6983821392, 5.6983823776 ]
+        focus: [ 3.1983821392, 4.1983823776 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_19_Shot5_baron_to_grlt:
+      fov: 25.0
+      transform:
+        pos: [ 3.0200195313, 4.8198242188, 2.3367843628 ]
+        rot: [ 0.0, 345.7100219727, 346.8163146973 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.3735961914, 6.3735961914 ]
+        focus: [ 3.8735961914, 4.8735961914 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_20_Shot5_baron_with_geralt_go:
+      fov: 25.0
+      transform:
+        pos: [ 2.7902221680, 4.5404052734, 2.3367843628 ]
+        rot: [ 0.0, 346.8650207520, 343.0211486816 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.3735961914, 6.3735961914 ]
+        focus: [ 3.8735961914, 4.8735961914 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_21_Shot5_baron_with_geralt1:
+      fov: 35.0
+      transform:
+        pos: [ 4.6612548828, 4.9718017578, 1.9367599487 ]
+        rot: [ 0.0, 357.0950012207, 80.1512756348 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.3735961914, 6.3735961914 ]
+        focus: [ 3.8735961914, 4.8735961914 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_26_Shot5_baron_with_geralt_pan:
+      fov: 35.0
+      transform:
+        pos: [ 4.6612548828, 4.9718017578, 1.9367599487 ]
+        rot: [ 0.0, 357.2600097656, 71.8462829590 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.3735961914, 6.3735961914 ]
+        focus: [ 3.8735961914, 4.8735961914 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_22_Shot5_baron_with_geralt2:
+      fov: 35.0
+      transform:
+        pos: [ 4.0042114258, 1.9919433594, 2.1367721558 ]
+        rot: [ 0.0, 343.2350158691, 166.5812377930 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.1547803879, 5.1547803879 ]
+        focus: [ 2.6547803879, 3.6547803879 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_23_Shot5_dg_baron:
+      fov: 20.0
+      transform:
+        pos: [ 2.6543579102, 0.5748291016, 2.2367782593 ]
+        rot: [ 0.0, 335.8650207520, 208.8769836426 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.6757323742, 4.6757326126 ]
+        focus: [ 2.1757323742, 3.1757323742 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_24_Shot5_dg_geralt:
+      fov: 15.0
+      transform:
+        pos: [ 4.2470092773, -3.0498046875, 1.2867202759 ]
+        rot: [ 0.0, 7.1050181389, 26.1417236328 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.2341983318, 5.2341985703 ]
+        focus: [ 2.7341983318, 3.7341983318 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_25_Shot5_dg_baron_gesture_show:
+      fov: 40.0
+      transform:
+        pos: [ 5.2412719727, -0.6752929688, 1.5867385864 ]
+        rot: [ 0.0, 359.1300354004, 108.2817993164 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 29.3042526245, 32.3042526245 ]
+        focus: [ 29.8042526245, 30.8042526245 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_25_Shot5_dg_baron_gesture_show_OLD:
+      fov: 40.0
+      transform:
+        pos: [ 3.9212036133, 3.6436767578, 3.1368331909 ]
+        rot: [ 0.0, 344.7200317383, 162.4573974609 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 30.0, 34.4157600403 ]
+        focus: [ 30.0, 32.9157600403 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_26_Shot5_dg_geralt_close:
+      fov: 10.0
+      transform:
+        pos: [ 4.4219360352, -2.6729736328, 1.1367111206 ]
+        rot: [ 0.0, 13.3750162125, 37.2214355469 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.9687418938, 4.9687418938 ]
+        focus: [ 2.4687418938, 3.4687418938 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_27_Shot5_dg_baron_close:
+      fov: 15.0
+      transform:
+        pos: [ 2.9212646484, -0.0463867188, 1.6367416382 ]
+        rot: [ 0.0, 351.2100219727, 216.7414855957 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.7927498817, 3.7927498817 ]
+        focus: [ 1.2927498817, 2.2927498817 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 825
+
+  placement: "ntr_bob_camp_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -823.8561401367, -1713.0549316406, 95.2405395508 ]
+      #rot: [ 0.0, 0.0, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+        mimic:
+          anim: "Determined"
+          emotional_state: "Determined"
+          eyes: "Determined"
+          weight: 0.3
+
+      Bandit_camp_crossbow:
+        repo: "Bandit_camp_crossbow"
+        by_voicetag: false
+        appearance: "__q703_nazairi_01"
+        tags: [ "ntr_camp_bandit_crossbow" ]
+
+      horse_baron:
+        repo: "horse_baron"
+        by_voicetag: false
+        appearance: "horse_knight_07"
+        tags: [ "ntr_camp_horse_baron" ]
+
+      Baron_Edward:
+        repo: "Baron_Edward"
+        by_voicetag: false
+        appearance: "bob_knight_15"
+        tags: [ "ntr_baron_edward" ]
+
+    cameras:
+      cam_1_Shot1:
+        repo: "cam_1_Shot1"
+
+      cam_2_Shot2_band:
+        repo: "cam_2_Shot2_band"
+
+      cam_3_Shot3_ger:
+        repo: "cam_3_Shot3_ger"
+
+      cam_4_Shot4_ger_meditate_start:
+        repo: "cam_4_Shot4_ger_meditate_start"
+
+      cam_6_Shot4_ger_meditate_idle_closeup:
+        repo: "cam_6_Shot4_ger_meditate_idle_closeup"
+
+      cam_7_Shot5_barron_arrive:
+        repo: "cam_7_Shot5_barron_arrive"
+
+      cam_8_Shot5_barron_arrive2:
+        repo: "cam_8_Shot5_barron_arrive2"
+
+      cam_9_Shot5_barron_dismount:
+        repo: "cam_9_Shot5_barron_dismount"
+
+      cam_10_Shot5_barron_move:
+        repo: "cam_10_Shot5_barron_move"
+
+      cam_11_Shot5_barron_move2_backview:
+        repo: "cam_11_Shot5_barron_move2_backview"
+
+      cam_12_Shot5_barron_move2_horse2:
+        repo: "cam_12_Shot5_barron_move2_horse2"
+
+      cam_13_Shot5_barron_to_crossbow:
+        repo: "cam_13_Shot5_barron_to_crossbow"
+
+      cam_14_Shot5_grlt_go:
+        repo: "cam_14_Shot5_grlt_go"
+
+      cam_15_Shot5_bow_to_baron:
+        repo: "cam_15_Shot5_bow_to_baron"
+
+      cam_16_Shot5_grlt_stay:
+        repo: "cam_16_Shot5_grlt_stay"
+
+      cam_9_Shot5_barron_dismount1:
+        repo: "cam_9_Shot5_barron_dismount1"
+
+      cam_17_Shot5_barron_dismount2:
+        repo: "cam_17_Shot5_barron_dismount2"
+
+      cam_18_Shot5_bow_to_baron_closeup_sour:
+        repo: "cam_18_Shot5_bow_to_baron_closeup_sour"
+
+      cam_19_Shot5_barron_arrive_pan:
+        repo: "cam_19_Shot5_barron_arrive_pan"
+
+      cam_19_Shot5_baron_to_grlt:
+        repo: "cam_19_Shot5_baron_to_grlt"
+
+      cam_20_Shot5_baron_with_geralt_go:
+        repo: "cam_20_Shot5_baron_with_geralt_go"
+
+      cam_21_Shot5_baron_with_geralt1:
+        repo: "cam_21_Shot5_baron_with_geralt1"
+
+      cam_26_Shot5_baron_with_geralt_pan:
+        repo: "cam_26_Shot5_baron_with_geralt_pan"
+
+      cam_22_Shot5_baron_with_geralt2:
+        repo: "cam_22_Shot5_baron_with_geralt2"
+
+      cam_23_Shot5_dg_baron:
+        repo: "cam_23_Shot5_dg_baron"
+
+      cam_24_Shot5_dg_geralt:
+        repo: "cam_24_Shot5_dg_geralt"
+
+      cam_25_Shot5_dg_baron_gesture_show:
+        repo: "cam_25_Shot5_dg_baron_gesture_show"
+
+      cam_26_Shot5_dg_geralt_close:
+        repo: "cam_26_Shot5_dg_geralt_close"
+
+      cam_27_Shot5_dg_baron_close:
+        repo: "cam_27_Shot5_dg_baron_close"
+
+    animations:
+      geralt_high_standing_determined_enter_frontal:
+        actor: "geralt"
+        repo: "anim_6981_high_standing_determined_enter_frontal"
+        #duration: 5.5666666031
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Bandit_camp_crossbow_high_standing_determined_gesture_both_hands_stop:
+        actor: "Bandit_camp_crossbow"
+        repo: "anim_7004_high_standing_determined_gesture_both_hands_stop"
+        #duration: 3.6666667461
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_meditation_start_long:
+        actor: "geralt"
+        repo: "anim_4284_meditation_start_long"
+        #duration: 3.7000000477
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      horse_baron_horse_walk:
+        actor: "horse_baron"
+        repo: "anim_4622_horse_walk"
+        #duration: 1.2666666508
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      horse_baron_horse_walk_stop:
+        actor: "horse_baron"
+        repo: "anim_4640_horse_walk_stop"
+        #duration: 1.2666666508
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Baron_Edward_dg_geralt_dismounting:
+        actor: "Baron_Edward"
+        repo: "anim_282_dg_geralt_dismounting"
+        #duration: 17.7000007629
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      horse_baron_horse_walk_start_turn_right:
+        actor: "horse_baron"
+        repo: "anim_4639_horse_walk_start_turn_right"
+        #duration: 1.2999999523
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Baron_Edward_high_standing_sad_exit_frontal:
+        actor: "Baron_Edward"
+        repo: "anim_7297_high_standing_sad_exit_frontal"
+        #duration: 9.1000003815
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    animations.mimic:
+      geralt_geralt_neutral_gesture_closing_eyes_face:
+        actor: "geralt"
+        repo: "mimicsanim_381_geralt_neutral_gesture_closing_eyes_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+    actor.poses:
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      Bandit_camp_crossbow_high_standing_determined_idle:
+        actor: "Bandit_camp_crossbow"
+        repo: "pose_0_high_standing_determined_idle"
+
+      geralt_meditation_idle01:
+        actor: "geralt"
+        repo: "pose_717_meditation_idle01"
+
+      horse_baron_horse_standing_idle01:
+        actor: "horse_baron"
+        repo: "pose_0_horse_standing_idle01"
+
+      horse_baron_horse_walk:
+        actor: "horse_baron"
+        repo: "pose_custom_horse_walk"
+
+      Baron_Edward_dg_horse_standing_idle02:
+        actor: "Baron_Edward"
+        repo: "pose_4_dg_horse_standing_idle02"
+
+      Baron_Edward_man_big_ex_idle:
+        actor: "Baron_Edward"
+        repo: "pose_0_man_big_ex_idle"
+
+      Baron_Edward_horse_standing_idle01:
+        actor: "Baron_Edward"
+        repo: "pose_505_horse_standing_idle01"
+
+      horse_baron_horse_eating_idle01:
+        actor: "horse_baron"
+        repo: "pose_503_horse_eating_idle01"
+
+      Baron_Edward_High_Standing_Sad:
+        actor: "Baron_Edward"
+        repo: "pose_2139_High_Standing_Sad"
+
+      geralt_High_Standing_Bored:
+        actor: "geralt"
+        repo: "pose_2136_High_Standing_Bored"
+
+      Baron_Edward_High_Sitting_3_Determined:
+        actor: "Baron_Edward"
+        repo: "pose_2097_High_Sitting_3_Determined"
+
+storyboard:
+  defaults:
+    placement:
+      geralt: [[ 2.8026733398, -0.3803710938, 0.1695556641 ], [ 0.0, 0.0, 215.6000366211 ]]
+      Baron_Edward: [[ 3.4042968750, -0.9165039063, 0.1455917358 ], [ 0.0, 0.0, 60.4701232910 ]]     
+      horse_baron: [[ -3.1250000000, 1.8463134766, 0.4547119141 ], [ 0.0, 0.0, 152.5397796631 ]]
+      Bandit_camp_crossbow: [[ 3.8784790039, 7.2084960938, 0.2436523438 ], [ 0.0, 0.0, 65.2299880981 ]]
+
+    actor.pose:
+      geralt: geralt_High_Standing_Bored
+      Baron_Edward: Baron_Edward_High_Sitting_3_Determined
+      Bandit_camp_crossbow: Bandit_camp_crossbow_high_standing_determined_idle
+      horse_baron: horse_baron_horse_standing_idle01
+
+  section_storyboard_ui:
+    # shot Shot1
+    shot_1:
+      - actor.placement: [0.0, Baron_Edward, [ 2.1719970703, 7.5355224609, -20.0750732422 ], [ 0.0, 0.0, 252.7500000000 ]]
+      - actor.placement: [0.0, horse_baron, [ 3.1719970703, 8.5355224609, -20.0750732422 ], [ 0.0, 0.0, 252.7500000000 ]]
+      - actor.placement: [0.0, geralt, [ 2.1719970703, 7.5355224609, -0.0750732422 ], [ 0.0, 0.0, 252.7500000000 ]]
+      - actor.placement: [0.0, Bandit_camp_crossbow, [ 3.8784790039, 7.2084960938, 0.2436523438 ], [ 0.0, 0.0, 65.2299880981 ]]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.pose: [0.0, Bandit_camp_crossbow_high_standing_determined_idle]
+      - cam: [0.0, cam_1_Shot1]
+      - cam.blend.start: [0.0, cam_1_Shot1]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_enter_frontal]
+          blendout: 0.5
+      
+    # shot Shot2 band
+    shot_2:
+      - cam.blend.end: [1.0, cam_2_Shot2_band, smooth]
+      - actor.anim: 
+          .@pos: [0.4, Bandit_camp_crossbow_high_standing_determined_gesture_both_hands_stop]
+          blendin: 0.5
+          blendout: 0.5
+
+    # shot Shot3 ger
+    shot_3:
+      - cam: [0.0, cam_3_Shot3_ger]
+
+    # shot Shot2 band
+    shot_3b:
+      - cam: [0.0, cam_2_Shot2_band]
+      - actor.anim.additive:
+          actor: Bandit_camp_crossbow
+          .@pos: [0.0, anim_6730_add_reaction_agreeing_nod_01]
+          blendin: 0.3
+          blendout: 0.3
+
+    shot_4_fadeout:
+      - fade.out: [0.0, 1.0]
+    # shot Shot4 ger meditate start
+    shot_4_fadein:
+      - fade.in: [0.0, 1.0]
+      - actor.placement: [0.0, geralt, [ 6.6931762695, 1.4191894531, 0.4138183594 ], [ 0.0, 0.0, 58.4099998474 ]]
+      - actor.lookat: [0.0, geralt, [ -0.0752691925, 0.8881360888, 1.0789489746 ]]
+      - cam: [0.0, cam_4_Shot4_ger_meditate_start]
+
+    shot_4:
+      - actor.anim: 
+          .@pos: [0.0, geralt_meditation_start_long]
+          blendin: 0.5
+          blendout: 0.5
+          stretch: 1.351 # 3.7 s = 100%
+      - actor.pose: [0.8, geralt_meditation_idle01]
+      - cam: [1.0, cam_6_Shot4_ger_meditate_idle_closeup]
+
+    # shot Shot4 ger meditate idle closeup
+    shot_6:
+      - actor.anim.mimic: 
+          .@pos: [0.0, geralt_geralt_neutral_gesture_closing_eyes_face]
+          clipend: 4.0
+
+    shot_6_fadeout:
+      - fade.out: [0.0, 1.0]
+
+  section_storyboard_ui2:
+    # shot Shot5 barron arrive
+    shot_7:
+      - fade.in: [0.0, 0.5]
+      - actor.placement: [0.0, geralt, [ 6.6931762695, 1.4191894531, 0.4138183594 ], [ 0.0, 0.0, 40.4099998474 ]]
+      - actor.placement: [0.0, Bandit_camp_crossbow, [ 3.8784790039, 7.2084960938, 0.2436523438 ], [ 0.0, 0.0, 65.2299880981 ]]
+      - actor.pose: [0.0, geralt_meditation_idle01]
+      - actor.pose: [0.0, Bandit_camp_crossbow_high_standing_determined_idle]
+      - actor.placement.start: [0.0, horse_baron, [ -0.6237182617, 15.6763916016, -0.4313049316 ], [ 0.0, 0.0, 202.4798431396 ]]
+      - actor.placement.start: [0.0, Baron_Edward, [ -0.5358276367, 15.5667724609, -0.4050609131 ], [ 0.0, 0.0, 208.3099670410 ]]
+      - actor.placement.end: [0.995, horse_baron, [ 1.4154663086, 10.6003417969, -0.6079101563 ], [ 0.0, 0.0, 202.4798431396 ]]
+      - actor.placement.end: [0.995, Baron_Edward, [ 1.3941040039, 10.4510498047, -0.5850307007 ], [ 0.0, 0.0, 208.3099670410 ]]
+      
+     # - actor.pose: [0.0, Baron_Edward_dg_horse_standing_idle02]
+      - actor.pose: [0.0, Baron_Edward_horse_standing_idle01]
+      - actor.pose: [0.0, horse_baron_horse_walk]
+      - cam.blend.start: [0.0, cam_7_Shot5_barron_arrive]
+      - cam.blend.end: [1.0, cam_19_Shot5_barron_arrive_pan]
+      #- actor.anim: [0.0, horse_baron_horse_walk]
+
+    # shot Shot5 barron dismount
+    shot_9:
+      - actor.placement: [0.0, horse_baron, [ 1.5050659180, 10.4676513672, -0.6079711914 ], [ 0.0, 0.0, 202.4798431396 ]]
+      - actor.placement: [0.0, Baron_Edward, [ 2.7631225586, 10.5515136719, -0.6429290771 ], [ 0.0, 0.0, 204.4599456787 ]]
+      #- cam: [0.0, cam_9_Shot5_barron_dismount]
+      - cam.blend.start: [0.0, cam_9_Shot5_barron_dismount1, smooth]
+      - cam.blend.end: [1.0, cam_17_Shot5_barron_dismount2, smooth]
+      - actor.pose: [0.0, horse_baron_horse_standing_idle01]
+      #- actor.anim: [0.0, horse_baron_horse_walk_stop]
+      - actor.anim: 
+          .@pos: [0.0, Baron_Edward_dg_geralt_dismounting]
+          clipfront: 1.0
+          clipend: 5.0
+          blendout: 0.5
+          blendin: 0.0
+      - actor.pose: [0.5, Baron_Edward_High_Standing_Sad]
+
+    # shot Shot5 barron move
+    shot_10:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Bandit_camp_crossbow, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, Bandit_camp_crossbow]
+      - actor.anim: 
+          .@pos: [0.0, horse_baron_horse_walk_start_turn_right]
+          blendin: 0.4
+          blendout: 0.0
+          clipend: 1.29
+      - actor.anim: 
+          .@pos: [0.0, Baron_Edward_high_standing_sad_exit_frontal]
+          clipend: 1.29
+          blendin: 0.3
+          blendout: 0.0
+
+    # shot Shot5 barron move2 backview
+    shot_11:
+      - actor.placement.start: [0.0, horse_baron, [ 1.0351562500, 9.2330322266, -0.6200561523 ], [ 0.0, 0.0, 150.6698303223 ]]
+      - actor.placement: [0.0, Baron_Edward, [ 3.4867553711, 8.4925537109, 0.0526733398 ], [ 0.0, 0.0, 226.4599914551 ]]
+      - actor.placement.end: [0.4, horse_baron, [ 1.0265502930, 5.5823974609, -0.6200561523 ], [ 0.0, 0.0, 143.7397918701 ]]
+      - cam: [0.003, cam_11_Shot5_barron_move2_backview]
+      - actor.pose: [0.0, horse_baron_horse_walk]
+      - actor.anim: 
+          actor: Baron_Edward
+          .@pos: [0.0, anim_7292_high_standing_sad_enter_frontal]
+          clipfront: 2.0
+          blendin: 0.0
+          blendout: 0.3
+
+    # shot Shot5 barron to crossbow
+    shot_13:
+      - actor.placement: [0.0, horse_baron, [ -3.1250000000, 1.8463134766, 0.4547119141 ], [ 0.0, 0.0, 152.5397796631 ]]
+      - cam: [0.0, cam_13_Shot5_barron_to_crossbow]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_4286_meditation_stop_long]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.pose: [0.5, geralt_high_standing_determined_idle]
+      - actor.pose: [0.5, horse_baron_horse_standing_idle01]
+      ### mimic opening!
+
+    # shot Shot5 bow to baron
+    shot_15_baron_sore:
+      - cam: [0.0, cam_18_Shot5_bow_to_baron_closeup_sour]
+      #- actor.lookat: [0.2, Baron_Edward, [ 0.4009866714, 0.9624217153, 0.1898956299 ]]
+      #- actor.lookat: [1.0, Baron_Edward, Bandit_camp_crossbow]
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_159_geralt_reaction_anguish_face]
+          blendin: 0.5000000000
+          blendout: 0.5000000000
+          #weight: 1.0
+    shot_15_geralt_goes:
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.8, anim_6989_high_standing_determined_exit_frontal]
+          blendout: 0.0
+
+    shot_16_bow:
+      - cam: [0.0, cam_13_Shot5_barron_to_crossbow]
+      - actor.anim.mimic:
+          actor: Bandit_camp_crossbow
+          .@pos: [0.0, mimicsanim_171_geralt_reaction_searching_for_words_face]
+          blendin: 0.5000000000
+          blendout: 0.5000000000
+          weight: 0.6
+
+    shot_17_baron:
+      - cam: [0.0, cam_15_Shot5_bow_to_baron]
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_438_geralt_neutral_gesture_sour_face]
+          blendin: 0.5000000000
+          blendout: 0.5000000000
+          weight: 1.0
+      - actor.placement: [0.0, geralt, [ 3.4936523438, 5.7642822266, 0.3538208008 ], [ 0.0, 0.0, 32.3399658203 ]]
+    
+    shot_17_baron_to_geralt:
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - actor.lookat: [0.4, Bandit_camp_crossbow, geralt]
+      #- cam.blend.start: [0.3, cam_13_Shot5_barron_to_crossbow]
+      - cam: [0.3, cam_16_Shot5_grlt_stay]
+
+    # shot Shot5 baron to grlt
+    shot_19:
+      - actor.placement: [0.0, geralt, [ 3.4936523438, 5.7642822266, 0.3538208008 ], [ 0.0, 0.0, 32.3399658203 ]]
+      - actor.placement: [0.0, Baron_Edward, [ 3.5122680664, 8.5169677734, 0.0526733398 ], [ 0.0, 0.0, 240.1000213623 ]]
+      - cam: [0.0, cam_19_Shot5_baron_to_grlt]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.6875, anim_7132_high_standing_determined_turn90_left]
+          blendin: 0.3
+          blendout: 0.0
+          clipend: 2.5
+      - actor.anim: 
+          actor: Baron_Edward
+          .@pos: [0.1, anim_7299_high_standing_sad_exit_rightside]
+          blendin: 0.3
+          blendout: 0.0
+          clipend: 7.2
+      - actor.anim.additive: 
+          actor: Baron_Edward
+          .@pos: [0.0, anim_7310_high_standing_sad_gesture_right_hand_1]
+          blendin: 0.3
+          blendout: 0.3
+
+    # shot Shot5 baron with geralt1
+    shot_21:
+      - actor.placement: [0.0, geralt, [ 2.4562377930, 3.5430908203, 0.3957519531 ], [ 0.0, 0.0, 171.3799896240 ]]
+      - actor.placement: [0.0, Baron_Edward, [ 1.7173461914, 2.3391113281, 0.3237915039 ], [ 0.0, 0.0, 192.3601531982 ]]
+      - cam.blend.start: [0.0, cam_26_Shot5_baron_with_geralt_pan]
+      - cam.blend.end: [0.999, cam_21_Shot5_baron_with_geralt1]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_6970_high_standing_determined_calm_enter_frontal]
+          blendin: 0.0
+          blendout: 0.0
+          clipend: 8.0
+      - actor.anim: 
+          actor: Baron_Edward
+          .@pos: [0.0, anim_7292_high_standing_sad_enter_frontal]
+          clipfront: 1.1
+          blendin: 0.0
+          blendout: 0.0
+
+    # shot Shot5 baron with geralt2
+    shot_22:
+      - actor.placement: [0.0, geralt, [ 2.8026733398, -0.3803710938, 0.1695556641 ], [ 0.0, 0.0, 215.6000366211 ]]
+      - actor.placement: [0.0, Baron_Edward, [ 3.4042968750, -0.9165039063, 0.1455917358 ], [ 0.0, 0.0, 60.4701232910 ]]
+      - actor.pose: [0.5, geralt_High_Standing_Bored]
+      - actor.pose: [0.5, Baron_Edward_High_Sitting_3_Determined]
+      - cam: [0.001, cam_22_Shot5_baron_with_geralt2]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_6945_high_standing_bored_enter_frontal]
+          clipfront: 2.0
+          blendout: 0.3
+          blendin: 0.0
+      - actor.anim: 
+          actor: Baron_Edward
+          .@pos: [0.0, anim_7113_high_standing_determined_to_high_sitting3_determined]
+          blendout: 0.3
+          blendin: 0.0
+
+    shot_23_dg_baron:
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+
+    shot_24_dg_geralt:
+      - actor.anim.mimic: 
+          actor: geralt
+          .@pos: [0.0, mimicsanim_412_geralt_neutral_gesture_nod_face]
+          blendin: 0.5000000000
+          blendout: 0.5000000000
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+
+    # shot Shot5 dg baron gesture show
+    shot_25_dg_baron_gesture:
+      #- actor.placement: [0.0, dof_setter, [ -18.0736083984, -20.0324707031, 1.8394241333 ], [ 0.0, 0.0, 324.5799865723 ]]
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+      #- actor.anim: [0.5, geralt_high_standing_determined_gesture_look_over_right]
+      - actor.lookat: [0.75, Baron_Edward,  [ -18.0736083984, -20.0324707031, 1.8394241333 ]]
+      - actor.anim.additive: 
+          actor: Baron_Edward
+          .@pos: [0.75, anim_6783_high_sitting_aggressive_gesture_left_hand_get_out_1]
+          blendin: 0.3
+          blendout: 0.3
+          stretch: 1.5
+
+    shot_25_show_camp:
+      - cam: [0.0, cam_25_Shot5_dg_baron_gesture_show]
+      - actor.lookat: [0.0, geralt, [ 0.4455222785, 0.0527573824, 1.7058181763 ]]
+
+    shot_26_dg_geralt:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+
+    shot_27_dg_baron:
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+
+    shot_28_dg_geralt:
+      - actor.anim.mimic:
+          actor: geralt
+          .@pos: [0.0, mimicsanim_129_geralt_neutral_gesture_sceptical_remark_face]
+          blendin: 0.5
+          blendout: 0.5
+          stretch: 0.6
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+
+    shot_29_dg_baron:
+      - cam: [0.0, cam_27_Shot5_dg_baron_close]
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_438_geralt_neutral_gesture_sour_face]
+          blendin: 0.5
+          blendout: 0.5
+
+  section_choice_geralt:
+    CHOICE_1:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+
+  section_refuse:
+    shot_30_dg_geralt:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+    shot_31_dg_baron:
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_424_geralt_neutral_gesture_really_face]
+          blendin: 0.5
+          blendout: 0.5
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+
+  section_coins:
+    shot_32_dg_geralt:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+      - cam: [1.0, cam_23_Shot5_dg_baron]
+    #shot_33_dg_baron:
+    #  - cam: [0.0, cam_23_Shot5_dg_baron]
+
+  section_free:
+    shot_34_dg_geralt:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+    shot_35_dg_baron:
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+
+  section_details:
+    shot_36_dg_geralt:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+    shot_37_dg_baron:
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+    shot_37_throat:
+      #- cam: [0.0, cam_27_Shot5_dg_baron_close]
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_169_geralt_reaction_sad_face]
+          blendin: 0.5
+          blendout: 0.5
+          stretch: 0.6
+    shot_37_dg_geralt_close:
+      - cam: [0.0, cam_26_Shot5_dg_geralt_close]
+      - actor.anim.mimic:
+          actor: geralt
+          .@pos: [0.0, mimicsanim_424_geralt_neutral_gesture_really_face]
+          blendin: 0.5
+          blendout: 0.5
+    shot_37_db_baron2:
+      - cam: [0.0, cam_27_Shot5_dg_baron_close]
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_418_geralt_neutral_gesture_question_ver04_face]
+          blendin: 0.5
+          blendout: 0.5
+    shot_38_dg_geralt:
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+      - actor.anim.additive:
+          actor: geralt
+          .@pos: [0.0, anim_6952_high_standing_bored_gesture_explaining_01]
+          blendin: 0.4
+          blendout: 0.4
+    shot_39_dg_baron:
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+    shot_40_dg_geralt:
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+      - actor.anim.mimic:
+          actor: geralt
+          .@pos: [0.0, mimicsanim_516_geralt_neutral_gesture_shout_youre_wrong_face]
+          blendin: 0.5
+          blendout: 0.5
+    shot_41_dg_baron:
+      - cam: [0.0, cam_27_Shot5_dg_baron_close]
+    shot_togame:
+      - actor.gamestate: [0.0, geralt]
+      - cam.blend.togame: [0.0, cam_24_Shot5_dg_geralt]
+
+  #section_choice_negotiate_branch:
+  #  CHOICE_1:
+  #    - actor.lookat: [0.0, geralt, Baron_Edward]
+  #    - actor.lookat: [0.0, Baron_Edward, geralt]
+  #    - cam: [0.0, cam_23_Shot5_dg_baron]
+
+  section_negotiate_toomuch:
+    shot_toomuch:
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_163_geralt_reaction_i_dont_agree_face]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+
+  section_negotiate_prettyclose:
+    shot_prettyclose:
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_425_geralt_neutral_gesture_resentful_face]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+
+  section_negotiate_ok:
+    shot_ok:
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_518_geralt_neutral_yes_ok_face]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+
+  section_negotiate_lost:
+    shot_lost:
+      ## impatience
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_517_geralt_neutral_no_not_a_chance_face]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "Bandit_camp_crossbow", "horse_baron", "Baron_Edward" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot Shot1
+    - CUE: shot_1
+    # (longest) anim: high_standing_determined_enter_frontal
+    - PAUSE: 2.0
+    # shot Shot2 band
+    - CUE: shot_2
+    # (longest) anim: high_standing_determined_gesture_both_hands_stop
+    - PAUSE: 2.5
+    - Bandit_camp_crossbow: "Stay! What are you looking here?"
+    # shot Shot3 ger
+    - CUE: shot_3
+    # (longest) anim: high_standing_determined_gesture_both_hands_stop
+    - geralt: "I'm a witcher. Your friends send me here. Gotta deal with Baron."
+    # shot Shot4 ger meditate start
+    - CUE: shot_3b
+    - PAUSE: 0.5
+    - Bandit_camp_crossbow: "Good. Baron is in Beauclair at the moment, be back soon. Wait a little here."
+    - CUE: shot_4_fadeout
+    - PAUSE: 1.0
+    - CUE: shot_4_fadein
+    - PAUSE: 1.0
+    - CUE: shot_4
+    # (longest) anim: meditation_start_long
+    - PAUSE: 5.0
+    - PAUSE: 1.0
+    # shot Shot4 ger meditate idle closeup
+    - CUE: shot_6
+    # (longest) anim: geralt_neutral_gesture_closing_eyes_face
+    - PAUSE: 3.0
+    - CUE: shot_6_fadeout
+    - PAUSE: 2.0
+    # shot Shot5 barron arrive
+    - NEXT: script_shift_time
+
+  script_shift_time:
+    - SCRIPT:
+            function: NTR_ShiftTime_S
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - days: 0
+                - hours: 2
+    - NEXT: script_timelapse_label
+
+  #script_change_weather:
+  #  - SCRIPT:
+  #          function: NTR_ChangeWeatherQuest_S
+  #          parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+  #              - weatherName: CNAME_WT_Heavy_Clouds
+  #              - blendTime: 1.0
+  #              - randomGen: false
+  #              - questPause: false
+  #  - NEXT: script_timelapse_label
+
+  script_timelapse_label:
+    - SCRIPT:
+            function: NTR_ShowTimeLapse_S
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - showTime: 3.0
+                - timeLapseMessageKey: "ntr_sometime_later"
+                #- timeLapseAdditionalMessageKey: "item_name_ntr_notices_regis_letter"
+    - NEXT: section_storyboard_ui2
+
+  section_storyboard_ui2:
+    - CUE: shot_7
+    # walk fly
+    - PAUSE: 4.0
+
+    # shot Shot5 barron dismount
+    - CUE: shot_9
+    # (longest) anim: dg_geralt_dismounting
+    - PAUSE: 4.0
+
+    # shot Shot5 barron move
+    - CUE: shot_10
+    # (longest) anim: high_standing_sad_exit_frontal
+    - PAUSE: 1.29
+
+    # shot Shot5 barron move2 backview
+    - CUE: shot_11
+    # (longest) anim: high_standing_sad_exit_frontal
+    - PAUSE: 5.0
+
+    - CUE: shot_13
+    - Bandit_camp_crossbow: "Greetings, Baron! Any news? Where is Alfred?"
+    - CUE: shot_15_baron_sore
+    - PAUSE: 4.0
+    - CUE: shot_15_geralt_goes
+    - Baron_Edward: "He is dead. Orianna killed him after we tried to grab her."
+    - CUE: shot_16_bow
+    - Bandit_camp_crossbow: "What?! How? Did you find her?"
+    - CUE: shot_17_baron
+    - Baron_Edward: "She is not just a woman... Maybe witch or monster. I can't understand what happened myself."
+    - CUE: shot_17_baron_to_geralt
+    - Baron_Edward: "And who are.. Witcher! It must be destiny sent you to us."
+    - geralt: "0000575812|Yeah. Geralt."
+
+    - CUE: shot_19
+    - PAUSE: 8.0
+
+    - CUE: shot_21
+    # (longest) anim: high_standing_sad_enter_frontal
+    - PAUSE: 8.0
+
+    - CUE: shot_22
+    # (longest) anim: geralt_neutral_gesture_closing_eyes_face
+    - PAUSE: 4.4
+
+
+    - CUE: shot_23_dg_baron
+    - Baron_Edward: "The famous Geralt of Rivia?"
+
+    - CUE: shot_24_dg_geralt
+    - PAUSE: 1.833
+    
+    - CUE: shot_25_dg_baron_gesture
+    - Baron_Edward: "Great. My name is Edward and I am the leader of..."
+    - CUE: shot_25_show_camp
+    - PAUSE: 2.25
+    # adjust to 5.25 sec
+
+    - CUE: shot_26_dg_geralt
+    - geralt: "Bandits?"
+
+    - CUE: shot_27_dg_baron
+    - Baron_Edward: "Don't be so conservative. We do not rob and kill peaceful merchants."
+
+    - CUE: shot_28_dg_geralt
+    - PAUSE: 1.0
+    - geralt: "I don't believe it. However I'm here about Orianna."
+
+    - CUE: shot_29_dg_baron
+    - Baron_Edward: "Yeah. This whore refused to return my son and killed Alfred."
+    - Baron_Edward: "As she is some kind of monster and you are witcher... Could you find and exterminate her? For a fee of course."
+    - NEXT: section_choice_geralt
+
+  section_choice_geralt:
+    - CHOICE:
+      - choice: ["Let's talk about my fee", script_set_coins, betting]
+        emphasize: true
+      - choice: ["I will make it for free", script_set_free]
+        emphasize: true
+      #- choice: ["What happened to Alfred?", section_alfred]
+      - choice: ["I don't work for bandits", section_refuse]
+        single_use: true
+        emphasize: true
+
+  section_refuse:
+    - CUE: shot_30_dg_geralt
+    - geralt: "I don't work for bandits."
+    - CUE: shot_31_dg_baron
+    - Baron_Edward: "Did you seriously wait for me to say this? Think twice - I'll reward you generously."
+    - Baron_Edward: "And I'm asking for your aid not as bandit, but as father of a boy in distress..."
+    - NEXT: section_choice_geralt
+
+  script_set_coins:
+        - SCRIPT:
+            function: AddFact_S
+            parameter:
+                - factName: ntr_scenefact_coins
+                - value: 1
+        - NEXT: section_coins
+
+  script_set_free:
+        - SCRIPT:
+            function: AddFact_S
+            parameter:
+                - factName: ntr_scenefact_free
+                - value: 1
+        - NEXT: section_free
+
+  section_coins:
+    - CUE: shot_32_dg_geralt
+    - geralt: "0001209328|Need to talk about my fee, first."
+    - NEXT: script_negotiate
+
+  script_negotiate:
+        - SCRIPT:
+            function: NTR_NegotiateMonsterHunt_S
+            parameter:
+                - resultFact: CNAME_ntr_scenefact_negotiate_result
+                - rewardName: CNAME_ntr_baron_coins_reward
+                #- questUniqueScriptTag: CNAME_
+                - alwaysSuccessful: false
+                - isItemReward: false
+        - NEXT: section_negotiate_branch1
+
+  section_negotiate_branch1:
+    - NEXT:
+        condition: [ ntr_scenefact_negotiate_result, "=", 1 ]
+        on_true: section_negotiate_toomuch
+        on_false: section_negotiate_branch2
+
+  section_negotiate_branch2:
+    - NEXT:
+        condition: [ ntr_scenefact_negotiate_result, "=", 2 ]
+        on_true: section_negotiate_prettyclose
+        on_false: section_negotiate_branch3
+
+  section_negotiate_branch3:
+    - NEXT:
+        condition: [ ntr_scenefact_negotiate_result, "=", 3 ]
+        on_true: section_negotiate_ok
+        on_false: section_negotiate_lost
+
+  section_negotiate_toomuch:
+    - CUE: shot_toomuch
+    - Baron_Edward: "I wouldn't pay so much even if you were King Radovid."
+    - NEXT: script_negotiate
+
+  section_negotiate_prettyclose:
+    - CUE: shot_prettyclose
+    - Baron_Edward: "That's just a bit high, witcher."
+    - NEXT: script_negotiate
+
+  section_negotiate_ok:
+    - CUE: shot_ok
+    - Baron_Edward: "Fine."
+    - NEXT: section_details
+
+  section_negotiate_lost:
+    - CUE: shot_lost
+    - Baron_Edward: "My patience ended! We're done blatherin', you'll take the offer!"
+    - NEXT: section_details
+
+  section_free:
+    - CUE: shot_34_dg_geralt
+    - geralt: "Not interested in coins. Will make it for free."
+    - CUE: shot_35_dg_baron
+    - Baron_Edward: "The noble witcher? Just wondering..."
+    - NEXT: section_details
+
+  section_details:
+    - CUE: shot_36_dg_geralt
+    - geralt: "I need more information. What happened to Alfred?"
+    - CUE: shot_37_dg_baron
+    - Baron_Edward: "We were guarding Orianna's house while finally met her."
+    - Baron_Edward: "I called her and asked her where is a boy. She said that it was not my concern and Alfred tried to grab her hand."
+    - CUE: shot_37_throat
+    - Baron_Edward: "After this she moved at once and vanished. And Alfred... His throat was slitted."
+    - CUE: shot_37_dg_geralt_close
+    - PAUSE: 2.0
+    - CUE: shot_37_db_baron2
+    - Baron_Edward: "How? What creature can do such things?"
+    - CUE: shot_38_dg_geralt
+    - geralt: "Must be a bruxa, a kind of vampire."
+    - CUE: shot_39_dg_baron
+    - Baron_Edward: "Vampire? Shit... So my son is in real danger. And I can't help him as even my sword is not silver."
+    - CUE: shot_40_dg_geralt
+    - geralt: "Why do you think a boy is your son?"
+    - CUE: shot_41_dg_baron
+    - Baron_Edward: "I'm not sure, but I hope and believe in this."
+    - CUE: shot_togame
+    - geralt: "0001017072|Fine. See what I can do."
+    - NEXT: section_exit
+
+  section_exit:
+    - EXIT
+

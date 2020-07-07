@@ -2,6 +2,104 @@ exec function startNTR() {
 	FactsAdd("NTRstartquest", 1);
 }
 
+exec function GiveReward( rewardName : name ) : void
+{
+	theGame.GiveReward( rewardName, thePlayer );
+}
+
+function NTR_additem(itemName : name, optional count : int, optional equip : bool)
+{
+	var ids : array<SItemUniqueId>;
+	var i : int;
+
+	if(IsNameValid(itemName))
+	{
+		ids = thePlayer.inv.AddAnItem(itemName, count);
+		if(thePlayer.inv.IsItemSingletonItem(ids[0]))
+		{
+			for(i=0; i<ids.Size(); i+=1)
+				thePlayer.inv.SingletonItemSetAmmo(ids[i], thePlayer.inv.SingletonItemGetMaxAmmo(ids[i]));
+		}
+		
+		if(ids.Size() == 0)
+		{
+			LogItems("exec function additem: failed to add item <<" + itemName + ">>, most likely wrong item name");
+			return;
+		}
+		
+		if(equip)
+			thePlayer.EquipItem(ids[0]);
+	}
+	else
+	{
+		LogItems("exec function additem: Invalid item name <<"+itemName+">>, cannot add");
+	}
+}
+
+exec function getExoticSilver() {
+        NTR_additem('stiletto_silver', 1, false);
+        NTR_additem('hachyar', 1, false);
+        NTR_additem('sickle_silver', 1, false);
+        NTR_additem('machete_silver', 1, false);
+        NTR_additem('silver', 1, false);
+        NTR_additem('roh', 1, false);
+        NTR_additem('talon', 1, false);
+        NTR_additem('sabre', 1, false);
+        NTR_additem('serrator', 1, false);
+        NTR_additem('soul', 1, false);
+        NTR_additem('kama_silver', 1, false);
+        NTR_additem('naginata_silver', 1, false);
+        NTR_additem('glaive_silver', 1, false);
+        NTR_additem('crescent_silver', 1, false);
+        NTR_additem('luani', 1, false);
+        NTR_additem('rapier_silver', 1, false);
+        NTR_additem('hjaven', 1, false);
+        NTR_additem('maltonge', 1, false);
+        NTR_additem('skinner', 1, false);
+        NTR_additem('rachis', 1, false);
+        NTR_additem('dagger1_silver', 1, false);
+        NTR_additem('dagger2_silver', 1, false);
+        NTR_additem('dagger3_silver', 1, false);
+        NTR_additem('shortsword1_silver', 1, false);
+        NTR_additem('shortsword2_silver', 1, false);
+        NTR_additem('shortsword3_silver', 1, false);
+        NTR_additem('greatsword1_silver', 1, false);
+        NTR_additem('greatsword2_silver', 1, false);
+        NTR_additem('greatsword3_silver', 1, false);
+}
+exec function getExoticSteel() {
+        NTR_additem('stiletto', 1, false);
+        NTR_additem('meat', 1, false);
+        NTR_additem('cleaver', 1, false);
+        NTR_additem('sickle', 1, false);
+        NTR_additem('machete', 1, false);
+        NTR_additem('bajinn', 1, false);
+        NTR_additem('roh', 1, false);
+        NTR_additem('claw', 1, false);
+        NTR_additem('sabre', 1, false);
+        NTR_additem('jaggat', 1, false);
+        NTR_additem('spirit', 1, false);
+        NTR_additem('kama', 1, false);
+        NTR_additem('naginata', 1, false);
+        NTR_additem('glaive', 1, false);
+        NTR_additem('crescent', 1, false);
+        NTR_additem('chakram', 1, false);
+        NTR_additem('rapier', 1, false);
+        NTR_additem('venasolak', 1, false);
+        NTR_additem('orkur', 1, false);
+        NTR_additem('wrisp', 1, false);
+        NTR_additem('spinner', 1, false);
+        NTR_additem('dagger1', 1, false);
+        NTR_additem('dagger2', 1, false);
+        NTR_additem('dagger3', 1, false);
+        NTR_additem('shortsword1', 1, false);
+        NTR_additem('shortsword2', 1, false);
+        NTR_additem('shortsword3', 1, false);
+        NTR_additem('greatsword1', 1, false);
+        NTR_additem('greatsword2', 1, false);
+        NTR_additem('greatsword3', 1, false);
+}
+
 exec function timeScale(timeScale : float) {
 	SetTimeScaleQuest(timeScale);
 }

@@ -4,7 +4,8 @@
 templates:
   baron_edward:
     includes:
-      - "dlc\\bob\\data\\gameplay\\community\\community_npcs\\guards\\knight.w2ent"
+      - "dlc\\dlcntr\\data\\entities\\knight_baron_base.w2ent"
+      #- "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_knight\\bob_knight.w2ent"
 
     entityObject:
       .type: "CNTRBanditNPC:CNewNPC"
@@ -13,6 +14,24 @@ templates:
 
     usedAppearances:
       - bob_knight_15
+
+    templateParams:
+      - ".type": CInventoryDefinition
+        entries:
+          - ".type": CInventoryDefinitionEntry
+            category: "steelsword"
+            isMount: true
+            isLootable: false
+            initializer:
+              .type: CInventoryInitializerUniform
+              itemName: "NPC Ardaenye"
+          - ".type": CInventoryDefinitionEntry
+            category: "steelsword"
+            isMount: false
+            isLootable: true
+            initializer:
+              .type: CInventoryInitializerUniform
+              itemName: "Ardaenye"
 
   baron_bandit_big:
     includes:
