@@ -174,7 +174,7 @@ dialogscript:
     #- PAUSE: 2.2000000477
     # shot Shot2
     - CUE: shot_2
-    - geralt: "0000580936|Try me."
+    - geralt: "[0.8601859]0000580936|Try me."
     # (longest) anim: aggressive_anim_combined_face
     #- PAUSE: 21.6666660309
     - CUE: shot_3
@@ -184,4 +184,5 @@ dialogscript:
   section_exit:
     #- CAMERA_BLEND: 2.0
     - EXIT
+
 

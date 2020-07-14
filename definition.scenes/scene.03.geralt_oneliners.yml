@@ -1,0 +1,59 @@
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 650
+
+  gameplay: true
+  cinematic_subtitles: true
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        # tags: [ "PLAYER" ]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt" ]
+
+  section_start_hag_wall:
+    - geralt: "[2.7097228]0000575753|Jumped this wall? Nimble little beast."
+    - NEXT: section_exit
+
+  section_start_fresh_air:
+    - geralt: "[1.6855]I need some fresh air."
+    - NEXT: section_exit
+
+  section_start_using_owl:
+    - geralt: "[3.1468]A letter... Who's using an owl for this?"
+    - NEXT: section_exit
+
+  section_start_check_orphanage:
+    - geralt: "[4.7800]Regis... Just trying to avoid a fight, to protect her."
+    - geralt: "[5.3381]Well, I should check an orphanage in a swamp. Last time Orianna was there."
+    - NEXT: section_exit
+
+  section_start_town_corpse:
+    - geralt: "[4.2495]2114670654|Go home. I'm a witcher. Need to examine the body."
+    - NEXT: section_exit
+
+  section_start_examine_town_corpse:
+    - geralt: "[2.4864898]0001197650|Throat torn open by man-like jaws."
+    - geralt: "[3.299986]0000524136|Severed artery, bled to death in seconds."
+    - NEXT: section_exit
+
+  section_start_town_scent:
+    - geralt: "[2.8847995]0001172622|*Sniff* Clear scent of perfume."
+    - NEXT: section_exit
+
+  #section_start_after_orphanage:
+  #  - geralt: "Interesting. The son of a bandit in vampire's claws..."
+  #  - NEXT: section_exit
+
+  section_exit:
+    - EXIT
+
+
+

@@ -1,0 +1,213 @@
+#
+# quest structure subsegment: town_part
+# 
+# (version: 510, saved: 2020-07-14 23:15:54)
+#
+---
+structure:
+  segments:
+    town_part:
+      blocks:
+        in:
+          ".editor": [ 108.888885498, 287.7777709961 ]
+          next:
+            - objective.Investigate_area: Activate
+            - waituntil.corpse_area
+            - addfact.scent_enabled_0
+            - spawn.spawn_folk
+        
+        scene.geralt_to_folk_gp:
+          ".editor":
+            pos: [ 534.454284668, 136.1072235107 ]
+            in: [ town_corpse ]
+            out: [ Output ]
+          scene: 03.geralt_oneliners.yml
+          placement: bob/camp
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - spawn.folk_far
+        
+        scene.gp_corpse_comments:
+          ".editor":
+            pos: [ 701.2279663086, 14.597946167 ]
+            in: [ examine_town_corpse ]
+            out: [ Output ]
+          scene: 03.geralt_oneliners.yml
+          placement: bob/camp
+          interruptable: true
+          _fadein: false
+          next: ".done"
+        
+        scene.scent_comment:
+          ".editor":
+            pos: [ 996.4085083008, 251.7228240967 ]
+            in: [ town_scent ]
+            out: [ Output ]
+          scene: 03.geralt_oneliners.yml
+          placement: bob/camp
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - script.FocusEffect_ON
+            - waituntil.scent1
+            - objective.Investigate_area: Success
+            - objective.Follow_scent: Activate
+        
+        waituntil.blood_scent_track:
+          examined: bob/blood_track1
+          ".editor":
+            pos: [ 816.0260009766, 216.5226745605 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - addfact.scent_enabled_1
+            - scene.scent_comment: town_scent
+        
+        waituntil.corpse_area:
+          inside: [ bob/corpse_area, PLAYER ]
+          ".editor":
+            pos: [ 383.1271362305, 251.5598449707 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.geralt_to_folk_gp: town_corpse
+            - waituntil.blood_scent_track
+            - waituntil.corpse_examined
+        
+        waituntil.corpse_examined:
+          examined: bob/alfred_corpse
+          ".editor":
+            pos: [ 540.3942871094, 45.9179344177 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.gp_corpse_comments: examine_town_corpse
+        
+        waituntil.scent1:
+          inside: [ bob/scent_area_1, PLAYER ]
+          ".editor":
+            pos: [ 1199.1027832031, 258.7546691895 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.scent2
+            - mappin.scentpin1: Disable
+            - mappin.scentpin2: Enable
+        
+        waituntil.scent2:
+          inside: [ bob/scent_area_2, PLAYER ]
+          ".editor":
+            pos: [ 1425.6857910156, 270.3952331543 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - mappin.scentpin2: Disable
+            - waituntil.scent3
+            - mappin.scentpin3: Enable
+        
+        waituntil.scent3:
+          inside: [ bob/scent_area_3, PLAYER ]
+          ".editor":
+            pos: [ 1636.6995849609, 281.1228637695 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.switch_to_horse
+            - mappin.scentpin3: Disable
+            - mappin.scentpin4: Enable
+        
+        waituntil.switch_to_horse:
+          inside: [ bob/switch_to_horse_area, PLAYER ]
+          ".editor":
+            pos: [ 1841.5648193359, 277.970916748 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - out
+            - mappin.scentpin4: Disable
+            - objective.Follow_scent: Success
+        
+        script.FocusEffect_ON:
+          ".editor":
+            pos: [ 1201.9610595703, 87.9642028809 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FocusEffect
+          parameter:
+            - actionType: FEAA_Enable
+            - effectName: cname_focus_smell
+            - effectEntityTag: cname_ntr_orianna_scents
+            - duration: -1.0
+          next: ".done"
+        
+        spawn.folk_far:
+          ".editor":
+            pos: [ 694.0952758789, 144.8992767334 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: folk_far_corpse
+          spawnsets:
+            - comm_town_corpse_folk
+          next: ".done"
+        
+        spawn.spawn_folk:
+          ".editor":
+            pos: [ 234.8388366699, 68.899307251 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: folk_near_corpse
+          spawnsets:
+            - comm_town_corpse_folk
+          next: ".done"
+        
+        objective.Follow_scent:
+          ".editor": [ 1503.5432128906, 633.7072143555 ]
+          objective: nighttoremember/town_part/follow_scent
+          notify: true
+          track: false
+          next: ".done"
+        
+        objective.Investigate_area:
+          ".editor": [ 502.0, 482.7272644043 ]
+          objective: nighttoremember/town_part/investigate_gates_area
+          notify: true
+          track: true
+          next: ".done"
+        
+        mappin.scentpin1:
+          ".editor": [ 1082.5860595703, 504.875793457 ]
+          mappin: nighttoremember/town_part/follow_scent/scent_pin1
+          next: ".done"
+        
+        mappin.scentpin2:
+          ".editor": [ 1310.7421875, 502.7096252441 ]
+          mappin: nighttoremember/town_part/follow_scent/scent_pin2
+          next: ".done"
+        
+        mappin.scentpin3:
+          ".editor": [ 1537.7866210938, 512.6970825195 ]
+          mappin: nighttoremember/town_part/follow_scent/scent_pin3
+          next: ".done"
+        
+        mappin.scentpin4:
+          ".editor": [ 1786.6099853516, 505.0500183105 ]
+          mappin: nighttoremember/town_part/follow_scent/scent_pin4
+          next: ".done"
+        
+        addfact.scent_enabled_0:
+          ".editor": [ 245.0877685547, 165.9813537598 ]
+          value: [ ntr_town_scent_enabled, 0 ]
+          next: ".done"
+        
+        addfact.scent_enabled_1:
+          ".editor": [ 1009.3527832031, 102.8685836792 ]
+          value: [ ntr_town_scent_enabled, 1 ]
+          next: ".done"
+        
+        out:
+          ".editor": [ 2036.4517822266, 278.5572509766 ]
+          next: ".done"
+        

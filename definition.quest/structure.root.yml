@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 438, saved: 2020-07-07 22:21:21)
+# (version: 510, saved: 2020-07-14 23:15:54)
 #
 ---
 structure:
@@ -20,7 +20,8 @@ structure:
           out: [ Out ]
         segment: camp
         next:
-          - end
+          - changelayers.show_town_blood
+          - script.check_camp_removed3
       
       subsegment.intro_nightmare:
         ".editor":
@@ -38,7 +39,7 @@ structure:
           out: [ Out ]
         segment: orphanage
         next:
-          - changelayers.show_camp_maybe_at_start
+          - subsegment.camp
       
       subsegment.regis_mail:
         ".editor":
@@ -49,10 +50,31 @@ structure:
         next:
           - changelayers.show_orphlayer
       
+      subsegment.town_part:
+        ".editor":
+          pos: [ 1518.2768554688, 444.2366943359 ]
+          in: [ In ]
+          out: [ Out ]
+        segment: town_part
+        next:
+          - end
+      
+      interaction.baron_not_yet_gp:
+        ".editor":
+          pos: [ 1335.203125, 257.7951049805 ]
+          in: [ camp_not_yet ]
+          out: [ Output ]
+        scene: 17.baron_oneliners.yml
+        placement: bob/camp
+        interruptable: true
+        actor: [ ntr_baron_edward ]
+        next.Output:
+          - script.check_camp_removed3
+      
       waituntil.midnight:
         time: [ "00:00", "01:00" ]
         ".editor":
-          pos: [ 1237.7524414062, 928.6041259766 ]
+          pos: [ 654.8952026367, 1004.3184814453 ]
           in: [ In ]
           out: [ Out ]
         next:
@@ -88,7 +110,7 @@ structure:
       waituntil.time_brake:
         time: [ "01:01", "23:59" ]
         ".editor":
-          pos: [ 1447.5114746094, 881.4168701172 ]
+          pos: [ 754.6542358398, 918.5596923828 ]
           in: [ In ]
           out: [ Out ]
         next:
@@ -97,7 +119,7 @@ structure:
       waituntil.wait_day:
         time: [ "08:01", "23:59" ]
         ".editor":
-          pos: [ 1490.1114501953, 794.9918823242 ]
+          pos: [ 1028.6828613281, 812.134765625 ]
           in: [ In ]
           out: [ Out ]
         next:
@@ -106,7 +128,7 @@ structure:
       waituntil.wait_night:
         time: [ "00:00", "08:00" ]
         ".editor":
-          pos: [ 1401.6700439453, 671.875 ]
+          pos: [ 873.0985717773, 673.3035888672 ]
           in: [ In ]
           out: [ Out ]
         next:
@@ -119,7 +141,7 @@ structure:
           in: [ In ]
           out: [ Out ]
         next:
-          - changelayers.show_main_layer
+          - changelayers.show_camp_river_main
       
       waituntil.wraith_area:
         inside: [ bob/orphanage_wraitharea, PLAYER ]
@@ -171,7 +193,7 @@ structure:
       
       script.check_camp_removed:
         ".editor":
-          pos: [ 1606.5925292969, 669.5978393555 ]
+          pos: [ 1099.4495849609, 721.0264282227 ]
           in: [ In ]
           out: [ "False", "True" ]
         function: NTR_FactChecker
@@ -184,7 +206,7 @@ structure:
       
       script.check_camp_removed2:
         ".editor":
-          pos: [ 1391.9036865234, 1000.1749267578 ]
+          pos: [ 863.3322143555, 1003.0321044922 ]
           in: [ In ]
           out: [ "False", "True" ]
         function: NTR_FactChecker
@@ -198,6 +220,19 @@ structure:
           - script.teleport_horse3
           - script.teleport_horse_baron
       
+      script.check_camp_removed3:
+        ".editor":
+          pos: [ 1346.3770751953, 346.690826416 ]
+          in: [ In ]
+          out: [ "False", "True" ]
+        function: NTR_FactChecker
+        parameter:
+          - factName: ntr_remove_camp
+          - factCond: "=="
+          - val: 1
+        next.False:
+          - interaction.baron_not_yet_gp: camp_not_yet
+      
       script.sounds_dettlaff:
         ".editor":
           pos: [ 137.6712799072, 377.7290344238 ]
@@ -208,7 +243,7 @@ structure:
       
       script.teleport_horse1:
         ".editor":
-          pos: [ 1611.5767822266, 1104.3579101562 ]
+          pos: [ 1185.8624267578, 992.9293212891 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_teleportToNode
@@ -221,7 +256,7 @@ structure:
       
       script.teleport_horse2:
         ".editor":
-          pos: [ 1617.9165039062, 1183.7696533203 ]
+          pos: [ 1192.2021484375, 1072.3410644531 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_teleportToNode
@@ -233,7 +268,7 @@ structure:
       
       script.teleport_horse3:
         ".editor":
-          pos: [ 1623.7990722656, 1261.6782226562 ]
+          pos: [ 1202.3704833984, 1153.1068115234 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_teleportToNode
@@ -245,7 +280,7 @@ structure:
       
       script.teleport_horse_baron:
         ".editor":
-          pos: [ 1628.5048828125, 1340.5668945312 ]
+          pos: [ 1205.6477050781, 1231.9954833984 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_teleportToNode
@@ -269,11 +304,12 @@ structure:
           - after_triss_to_monster
           - owl_layer
           - orphanage_layer
+          - town_blood
         next: ".done"
       
-      changelayers.show_camp_maybe_at_start:
+      changelayers.show_camp_river_main:
         ".editor":
-          pos: [ 994.1068115234, 596.6958618164 ]
+          pos: [ 19.7808647156, 637.2651367188 ]
           hint: show-only
           in: []
           out: []
@@ -282,24 +318,14 @@ structure:
         world: bob
         show:
           - camp_layer
-        next:
-          - subsegment.camp
-          - spawnsets.camp_axe_day
-          - waituntil.midnight
-      
-      changelayers.show_main_layer:
-        ".editor":
-          pos: [ 35.415599823, 615.2749633789 ]
-          hint: show-only
-          in: []
-          out: []
-        sync: true
-        purge: false
-        world: bob
-        show:
+          - river
           - nlayer
         next:
-          - changelayers.show_camp_maybe_at_start
+          - spawn.spawn_fisherman
+          - spawn.spawn_bandits_camp
+          - spawn.spawn_horses
+          - spawn.spawn_baron
+          - changelayers.show_town_blood
       
       changelayers.show_orphlayer:
         ".editor":
@@ -317,9 +343,23 @@ structure:
           - waituntil.wraith_area
           - waituntil.night_time
       
+      changelayers.show_town_blood:
+        ".editor":
+          pos: [ 1367.0268554688, 549.1499633789 ]
+          hint: show-only
+          in: []
+          out: []
+        sync: true
+        purge: false
+        world: bob
+        show:
+          - town_blood
+        next:
+          - subsegment.town_part
+      
       spawnsets.camp_axe_day:
         ".editor":
-          pos: [ 1225.2901611328, 660.7208251953 ]
+          pos: [ 669.5758666992, 726.4351196289 ]
           hint: both
           in: []
           out: []
@@ -333,7 +373,7 @@ structure:
       
       spawnsets.camp_axe_night:
         ".editor":
-          pos: [ 1278.619140625, 812.3809204102 ]
+          pos: [ 738.619140625, 833.8095092773 ]
           hint: both
           in: []
           out: []
@@ -344,6 +384,52 @@ structure:
           - comm_camp_bandit_axe_day
         next:
           - waituntil.wait_day
+      
+      spawn.spawn_bandits_camp:
+        ".editor":
+          pos: [ 279.1846313477, 787.2491455078 ]
+          hint: spawn-only
+          in: []
+          out: []
+        phase: camp_full
+        spawnsets:
+          - comm_camp_bandits
+        next:
+          - spawnsets.camp_axe_day
+          - waituntil.midnight
+      
+      spawn.spawn_baron:
+        ".editor":
+          pos: [ 280.1955566406, 936.8741455078 ]
+          hint: spawn-only
+          in: []
+          out: []
+        phase: usual_day
+        spawnsets:
+          - comm_camp_baron
+        next: ".done"
+      
+      spawn.spawn_fisherman:
+        ".editor":
+          pos: [ 279.3647766113, 710.0003662109 ]
+          hint: spawn-only
+          in: []
+          out: []
+        phase: usual
+        spawnsets:
+          - comm_fisherman
+        next: ".done"
+      
+      spawn.spawn_horses:
+        ".editor":
+          pos: [ 281.1846313477, 855.7490844727 ]
+          hint: spawn-only
+          in: []
+          out: []
+        phase: camp_horses_full
+        spawnsets:
+          - comm_camp_horses
+        next: ".done"
       
       spawn.spawn_wraiths:
         ".editor":
@@ -383,6 +469,6 @@ structure:
           - script.FACT_BRANCH1
       
       end:
-        ".editor": [ 1442.3725585938, 489.039855957 ]
+        ".editor": [ 1741.3498535156, 437.2974853516 ]
         next: ".done"
       

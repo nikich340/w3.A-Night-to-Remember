@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 438, saved: 2020-07-07 22:21:21)
+# (version: 510, saved: 2020-07-14 23:15:54)
 #
 ---
 structure:
@@ -106,7 +106,7 @@ structure:
             pos: [ 3300.0, 575.0 ]
             in: [ hag_wall ]
             out: [ Output ]
-          scene: 03.geralt_onelines.yml
+          scene: 03.geralt_oneliners.yml
           placement: bob/introscenes
           interruptable: true
           _fadein: false

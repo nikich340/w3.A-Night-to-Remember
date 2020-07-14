@@ -2456,7 +2456,7 @@ dialogscript:
   section_kill_triss: 
     # shot Shot4a kill
     - CUE: shot_5_pre
-    - geralt: "0001054229|Die!"
+    - geralt: "[0.80523634]0001054229|Die."
     - CUE: shot_5
     # (longest) anim: woman_sorceress_death_front_01
     - PAUSE: 3.3666
@@ -2473,7 +2473,7 @@ dialogscript:
     # shot Shot4b spare
     - CUE: shot_6
     # (longest) anim: geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined
-    - geralt: "0000591259|Tell me what happened."
+    - geralt: "[1.1783265]0000591259|Tell me what happened."
     - CUE: shot_6_2
     - PAUSE: 5.0
     # shot Shot4b laugh
@@ -2497,11 +2497,11 @@ dialogscript:
     - CUE: shot_12
     # (longest) anim: geralt_neutral_gesture_rapid_head_flick_up_face
     - PAUSE: 1.3333333731
-    - geralt: "0000581921|Not in the mood for jokes."
+    - geralt: "[1.7440588]0000581921|Not in the mood for jokes."
     # shot Shot13 haha
     - CUE: shot_13
     - PAUSE: 1.0
-    - Eredin_vesemir: "0000534083|I'd planned to kill Zireael quickly, painlessly... But now... I shall not deny myself the pleasure."
+    - Eredin_vesemir: "[9.934805]0000534083|I'd planned to kill Zireael quickly, painlessly… But now… I shall not deny myself the pleasure."
     # (longest) anim: high_standing_wildhunt_determined_enter_frontal: 6.800000
     - CUE: shot_14
     - geralt: "[1.4235]2114670728|Show me your face."
@@ -2533,7 +2533,7 @@ dialogscript:
     - CUE: shot_22
     # (longest) anim: high_standing_determined_to_high_standing_proud
     - geralt: "[1.4232]2114670733|Are you ghosts?"
-    - geralt: "0000476195|Go away. Or I'll kill you."
+    - geralt: "[2.6906934]0000476195|Go away. Or I'll kill you."
     - CUE: shot_23
     - PAUSE: 1.2
     - NEXT: script_music_hos
@@ -2584,7 +2584,7 @@ dialogscript:
     - PAUSE: 3.0
     # shot Shot mirror close
     - CUE: shot_44
-    - mirror: "0001097874|Greetings, Geralt. Remember me?"
+    - mirror: "[2.7445676]0001097874|Greetings, Geralt. Remember me?"
     - NEXT: section_choice_mirror
 
   section_choice_mirror:
@@ -2614,7 +2614,7 @@ dialogscript:
     - CUE: shot_soul_yes_init
     - geralt: "[0.95819706]0000433763|Yes."
     - CUE: shot_soul_yes_mr
-    - mirror: "0001103255|No, Geralt, you don't. This one time I shall spare you and not grant your wish."
+    - mirror: "[7.2947516]0001103255|No, Geralt, you don't. This one time I shall spare you and not grant your wish."
     - NEXT: section_choice_mirror
 
   section_mirror_soul_no:
@@ -2630,7 +2630,7 @@ dialogscript:
     - CUE: shot_yourdoing_mr
     - mirror: "[3.79388]0001108117|Haha, you like it?"
     - CUE: shot_yourdoing_grlt2
-    - geralt: "0001175865|You crazy?! You're a recovering addict!"
+    - geralt: "[2.5443535]0001175865|You crazy?! You're a recovering addict!"
     - CUE: shot_yourdoing_mr2
     - mirror: "[4.9930]2114670738|So you say, yet I wait and wait, and nothing..." #0001108192
     - NEXT: section_choice_mirror
@@ -2693,3 +2693,4 @@ dialogscript:
     #- CAMERA_BLEND: 5.0
     - BLACKSCREEN: true
     - EXIT
+

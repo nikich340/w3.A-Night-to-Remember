@@ -11,6 +11,17 @@ quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	return false;
 }
 
+quest function NTR_FocusEffect( actionType : string, effectName : name, effectEntityTag : name, duration : float ) {
+	switch(actionType) {
+		case "FEAA_Enable":
+			FocusEffect(FEAA_Enable, effectName, effectEntityTag, duration);
+			break;
+		case "FEAA_Disable":
+			FocusEffect(FEAA_Disable, effectName, effectEntityTag, duration);
+			break;
+	}
+}
+
 quest function NTR_FadeOutQuest( fadeTime : float, r : int, g : int, b : int ) {
     FadeOutQuest( fadeTime, Color( r, g, b ) );
 }
@@ -167,6 +178,12 @@ PlayEffectQuest ( entityTag : name, effectName : name, activate : bool, persiste
 	}
 }*/
 // ----------------------------------------------------------------------------
+/*
+areaName = "novigrad", "skellige", "kaer_morhen", "prolog_village", 
+	"wyzima_castle", "island_of_mist", "spiral", "no_mans_land", "toussaint" 
+	(from which area you want to play music)
+	NMLand = novigrad!!!
+*/
 quest function NTRPlayMusic( areaName : string, eventName : string, optional saveType : string ) {
 	if ( areaName == "toussaint" )
 		theSound.InitializeAreaMusic( (EAreaName)AN_Dlc_Bob );
@@ -186,6 +203,7 @@ quest function NTRPlayMusic( areaName : string, eventName : string, optional sav
 	}
 }
 // -------------------------------------------------
+//playMusic( "no_mans_land", "mus_loc_nml_elven_ruins" )
 exec function playMusic( areaName : string, eventName : string, optional saveType : string ) {
 	if ( areaName == "toussaint" )
 		theSound.InitializeAreaMusic( (EAreaName)AN_Dlc_Bob );

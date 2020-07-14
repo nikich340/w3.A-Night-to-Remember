@@ -35,3 +35,16 @@ journals:
               caption: "Go to bandits' camp and talk with baron Edward"
               mappins: 
                 - [ camp_pin, 22 ]
+        town_part:
+          - investigate_gates_area:
+              caption: "Investigate clues near Orianna's residence"
+              mappins:
+                - [ town_corpse_pin, 5 ]
+
+          - follow_scent:
+              caption: "Using your Witcher Senses, follow the perfume scent"
+              mappins:
+                - [ scent_pin1, 19 ]
+                - [ scent_pin2, 22 ]
+                - [ scent_pin3, 23 ]
+                - [ scent_pin4, 9 ]

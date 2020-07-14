@@ -402,37 +402,6 @@ templates:
         loopEnd: 0.3000000119
         showDistance: 50.0
         isLooped: true
-  #iorweth:
-  #  includes:
-  #    - quests/main_npcs/vernon_roche.w2ent
- 
-  #  appearances:
-  #    iowreth:
-  #      voicetag: IORWETH
-  #      includedTemplates:
-  #        - dlc/dlcntr/data/entities/models/iorweth/c_01__iorweth.w2ent
-  #        - dlc/dlcntr/data/entities/models/iorweth/h_01_ma__iorweth.w2ent
-  #        - dlc/dlcntr/data/entities/models/iorweth/body_01__iorweth.w2ent
-
-  #  usedAppearances:
-  #    - iorweth
-
-  #  entityObject:
-  #    .type: "CNewNPC"
-  #    name: "IORWETH"
-  #    displayName: "Iorweth"
-
-    #templateParams:
-    #  - ".type": CInventoryDefinition
-    #    entries:
-    #      - ".type": CInventoryDefinitionEntry
-    #        category: "steelsword"
-    #        isMount: true
-    #        isLootable: false
-    #        initializer:
-    #          .type: CInventoryInitializerUniform
-    #          itemName: "NPC Novigraadan sword 4"
-
   eredin_vesemir:
     includes:
       - quests/main_npcs/eredin.w2ent
@@ -462,7 +431,7 @@ templates:
         componentName: wild_hunt_base
         animationSets:
           - "animations\\cutscenes\\skellige\\q501_eredin\\cs501_crach_dies\\cs501_crach_dies.w2cutscene"
-                
+  
   triss_monster:
     includes:
       #- quests/main_npcs/triss.w2ent
@@ -475,8 +444,6 @@ templates:
           - dlc/dlc6/data/characters/models/main_npc/triss/body_02_wa__triss_dlc.w2ent
           - characters/models/main_npc/yennefer/c_01_wa__yennefer.w2ent
       triss_monster:
-        #voicetag: 'TRISS'
-        #wasIncluded: true
         includedTemplates:
           - characters/models/main_npc/triss/h_01_wa__triss.w2ent
           - dlc/dlc6/data/characters/models/main_npc/triss/body_02_wa__triss_dlc.w2ent
@@ -493,18 +460,3 @@ templates:
       .type: "CTrissNPC:CNewNPC"
       name: "TRISS"
       displayName: "Triss"
-      
-    #slots:
-    #  fx_point:
-    #    transform:
-    #      pos: [0.0, 0.0, 0.0]
-    #      rot: [250.0, 0.0, 0.0]
-          
-    #templateParams:
-    #  - name: woman
-    #    .type: CAnimAnimsetsParam
-    #    componentName: woman_base
-        # crutch crutch crutch...
-    #    animationSets:
-    #      - dlc/bob/data/animations/animations/monsters/monster_dettlaff_vampire.w2anims
-    #      - dlc/bob/data/animations/animations/monsters/monster_dettlaff.w2anims

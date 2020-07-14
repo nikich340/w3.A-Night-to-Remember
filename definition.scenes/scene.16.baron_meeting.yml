@@ -355,7 +355,7 @@ repository:
         tags: [ "ext" ]
 
     cam_18_Shot5_bow_to_baron_closeup_sour:
-      fov: 6.0
+      fov: 7.0
       transform:
         pos: [ 3.5493774414, 5.8168945313, 2.3367843628 ]
         rot: [ 0.0, 348.4034423828, 0.1142883301 ]
@@ -550,11 +550,26 @@ repository:
         plane: "medium"
         tags: [ "ext" ]
 
+    cam_36_Shot5_to_gp:
+      fov: 30.0
+      transform:
+        pos: [ 2.5902709961, 0.5047607422, 2.1867752075 ]
+        rot: [ 0.0, 334.7650146484, 211.4613342285 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.7927498817, 3.7927498817 ]
+        focus: [ 1.2927498817, 2.2927498817 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
 production:
   settings:
     sceneid: 1
     strings-idspace: 4670
-    strings-idstart: 825
+    strings-idstart: 870
 
   placement: "ntr_bob_camp_sp"
     # INFO: world coordinates of used origin:
@@ -678,6 +693,9 @@ production:
 
       cam_27_Shot5_dg_baron_close:
         repo: "cam_27_Shot5_dg_baron_close"
+
+      cam_36_Shot5_to_gp:
+        repo: "cam_36_Shot5_to_gp"
 
     animations:
       geralt_high_standing_determined_enter_frontal:
@@ -820,6 +838,10 @@ production:
       Baron_Edward_High_Standing_Sad:
         actor: "Baron_Edward"
         repo: "pose_2139_High_Standing_Sad"
+
+      Baron_Edward_High_Standing_Determined:
+        actor: "Baron_Edward"
+        repo: "pose_0_high_standing_determined_idle"
 
       geralt_High_Standing_Bored:
         actor: "geralt"
@@ -1192,7 +1214,8 @@ storyboard:
           .@pos: [0.0, mimicsanim_169_geralt_reaction_sad_face]
           blendin: 0.5
           blendout: 0.5
-          stretch: 0.6
+          stretch: 1.0
+          weight: 1.0
     shot_37_dg_geralt_close:
       - cam: [0.0, cam_26_Shot5_dg_geralt_close]
       - actor.anim.mimic:
@@ -1224,10 +1247,17 @@ storyboard:
           blendin: 0.5
           blendout: 0.5
     shot_41_dg_baron:
-      - cam: [0.0, cam_27_Shot5_dg_baron_close]
+      - cam: [0.0, cam_23_Shot5_dg_baron]
     shot_togame:
-      - actor.gamestate: [0.0, geralt]
-      - cam.blend.togame: [0.0, cam_24_Shot5_dg_geralt]
+      - actor.anim:
+          actor: Baron_Edward
+          .@pos: [0.0, anim_3953_high_sitting_determined_to_high_standing_determined]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.pose: [0.5, Baron_Edward_High_Standing_Determined]
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+      - actor.gamestate: [1.0, geralt]
+      - cam.blend.togame: [1.0, cam_36_Shot5_to_gp]
 
   #section_choice_negotiate_branch:
   #  CHOICE_1:
@@ -1239,9 +1269,14 @@ storyboard:
     shot_toomuch:
       - actor.anim.mimic:
           actor: Baron_Edward
-          .@pos: [0.0, mimicsanim_163_geralt_reaction_i_dont_agree_face]
+          .@pos: [0.0, mimicsanim_411_geralt_neutral_gesture_no_short_face]
           blendin: 0.5
           blendout: 0.5
+      - actor.anim.additive:
+          actor: Baron_Edward
+          .@pos: [0.0, anim_6816_high_sitting_determined_gesture_explaining_2]
+          blendin: 0.3
+          blendout: 0.3
       - actor.lookat: [0.0, geralt, Baron_Edward]
       - actor.lookat: [0.0, Baron_Edward, geralt]
       - cam: [0.0, cam_23_Shot5_dg_baron]
@@ -1250,7 +1285,7 @@ storyboard:
     shot_prettyclose:
       - actor.anim.mimic:
           actor: Baron_Edward
-          .@pos: [0.0, mimicsanim_425_geralt_neutral_gesture_resentful_face]
+          .@pos: [0.0, mimicsanim_487_geralt_reaction_annoyed_face]
           blendin: 0.5
           blendout: 0.5
       - actor.lookat: [0.0, geralt, Baron_Edward]
@@ -1273,12 +1308,56 @@ storyboard:
       ## impatience
       - actor.anim.mimic:
           actor: Baron_Edward
-          .@pos: [0.0, mimicsanim_517_geralt_neutral_no_not_a_chance_face]
+          .@pos: [0.0, mimicsanim_410_geralt_neutral_gesture_no_noface_face]
           blendin: 0.5
           blendout: 0.5
+          weight: 1.0
+      - actor.anim.additive:
+          actor: Baron_Edward
+          .@pos: [0.0, anim_6816_high_sitting_determined_gesture_explaining_2]
+          blendin: 0.3
+          blendout: 0.3
+          stretch: 0.8
+          weight: 1.0
       - actor.lookat: [0.0, geralt, Baron_Edward]
       - actor.lookat: [0.0, Baron_Edward, geralt]
       - cam: [0.0, cam_23_Shot5_dg_baron]
+
+  section_start_greedy:
+    shot_start_greedy:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+
+  section_choice_lost:
+    CHOICE_1:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+
+  section_agree:
+    shot_agree:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+
+  section_dont_agree:
+    shot_dont_agree:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - actor.anim:
+          actor: Baron_Edward
+          .@pos: [0.0, anim_3953_high_sitting_determined_to_high_standing_determined]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.pose: [0.7, Baron_Edward_High_Standing_Determined]
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+      - actor.gamestate: [1.0, geralt]
+      - cam.blend.togame: [1.0, cam_36_Shot5_to_gp]
+
+    #shot_dont_agree2:
+    #  - actor.gamestate: [0.5, geralt]
+    #  - cam.blend.togame: [0.5, cam_36_Shot5_to_gp]
 
 dialogscript:
   player: "geralt"
@@ -1375,14 +1454,14 @@ dialogscript:
     - CUE: shot_15_baron_sore
     - PAUSE: 4.0
     - CUE: shot_15_geralt_goes
-    - Baron_Edward: "He is dead. Orianna killed him after we tried to grab her."
+    - Baron_Edward: "He is dead. Orianna killed him."
     - CUE: shot_16_bow
     - Bandit_camp_crossbow: "What?! How? Did you find her?"
     - CUE: shot_17_baron
     - Baron_Edward: "She is not just a woman... Maybe witch or monster. I can't understand what happened myself."
     - CUE: shot_17_baron_to_geralt
     - Baron_Edward: "And who are.. Witcher! It must be destiny sent you to us."
-    - geralt: "0000575812|Yeah. Geralt."
+    - geralt: "Actually it was your friends. My name is Geralt."
 
     - CUE: shot_19
     - PAUSE: 8.0
@@ -1409,7 +1488,7 @@ dialogscript:
     # adjust to 5.25 sec
 
     - CUE: shot_26_dg_geralt
-    - geralt: "Bandits?"
+    - geralt: "[0.8091046]0001075517|Bandits?"
 
     - CUE: shot_27_dg_baron
     - Baron_Edward: "Don't be so conservative. We do not rob and kill peaceful merchants."
@@ -1439,7 +1518,7 @@ dialogscript:
     - geralt: "I don't work for bandits."
     - CUE: shot_31_dg_baron
     - Baron_Edward: "Did you seriously wait for me to say this? Think twice - I'll reward you generously."
-    - Baron_Edward: "And I'm asking for your aid not as bandit, but as father of a boy in distress..."
+    - Baron_Edward: "And I'm asking for your aid not as bandit, but as father of the boy in distress..."
     - NEXT: section_choice_geralt
 
   script_set_coins:
@@ -1460,7 +1539,7 @@ dialogscript:
 
   section_coins:
     - CUE: shot_32_dg_geralt
-    - geralt: "0001209328|Need to talk about my fee, first."
+    - geralt: "[1.9968964]0001209328|Need to talk about my fee, first."
     - NEXT: script_negotiate
 
   script_negotiate:
@@ -1495,22 +1574,49 @@ dialogscript:
   section_negotiate_toomuch:
     - CUE: shot_toomuch
     - Baron_Edward: "I wouldn't pay so much even if you were King Radovid."
+    - PAUSE: 1.0
     - NEXT: script_negotiate
 
   section_negotiate_prettyclose:
     - CUE: shot_prettyclose
     - Baron_Edward: "That's just a bit high, witcher."
+    - PAUSE: 1.0
     - NEXT: script_negotiate
 
   section_negotiate_ok:
     - CUE: shot_ok
-    - Baron_Edward: "Fine."
+    - Baron_Edward: "[0.87981284]Fine."
+    - PAUSE: 1.0
     - NEXT: section_details
 
   section_negotiate_lost:
     - CUE: shot_lost
-    - Baron_Edward: "My patience ended! We're done blatherin', you'll take the offer!"
+    - Baron_Edward: "My patience have ended! You will take my offer - 3000 orens, or get out of here!"
+    - NEXT: section_choice_lost
+
+  section_start_greedy:
+    - CUE: shot_start_greedy
+    - Baron_Edward: "Changed your mind, witcher?"
+    - NEXT: section_choice_lost
+
+  section_choice_lost:
+    - CHOICE:
+      - choice: ["I agree", section_agree]
+        emphasize: true
+      - choice: ["I don't agree", section_dont_agree, exit]
+        emphasize: true
+
+  section_agree:
+    - CUE: shot_agree
+    - geralt: "[0.8430538]0001007115|All right."
     - NEXT: section_details
+
+  section_dont_agree:
+    - CUE: shot_dont_agree
+    - geralt: "[2.888194]0001030870|Hmm… Need to think about it."
+    #- CUE: shot_dont_agree2
+    - PAUSE: 1.0
+    - NEXT: section_exit_greedy
 
   section_free:
     - CUE: shot_34_dg_geralt
@@ -1524,9 +1630,9 @@ dialogscript:
     - geralt: "I need more information. What happened to Alfred?"
     - CUE: shot_37_dg_baron
     - Baron_Edward: "We were guarding Orianna's house while finally met her."
-    - Baron_Edward: "I called her and asked her where is a boy. She said that it was not my concern and Alfred tried to grab her hand."
+    - Baron_Edward: "I called her and asked her where is the boy. She refused to answer. Alfred began to threaten her and drew his sword."
     - CUE: shot_37_throat
-    - Baron_Edward: "After this she moved at once and vanished. And Alfred... His throat was slitted."
+    - Baron_Edward: "After this she moved at once and vanished. And Alfred... His throat was slit. I could not help him with those..."
     - CUE: shot_37_dg_geralt_close
     - PAUSE: 2.0
     - CUE: shot_37_db_baron2
@@ -1536,13 +1642,19 @@ dialogscript:
     - CUE: shot_39_dg_baron
     - Baron_Edward: "Vampire? Shit... So my son is in real danger. And I can't help him as even my sword is not silver."
     - CUE: shot_40_dg_geralt
-    - geralt: "Why do you think a boy is your son?"
+    - geralt: "Why do you think the boy is your son?"
     - CUE: shot_41_dg_baron
     - Baron_Edward: "I'm not sure, but I hope and believe in this."
     - CUE: shot_togame
-    - geralt: "0001017072|Fine. See what I can do."
+    - geralt: "All right, see if I can find her."
+    - PAUSE: 1.0
     - NEXT: section_exit
+
+  section_exit_greedy:
+    - OUTPUT: greedy
+    - EXIT
 
   section_exit:
     - EXIT
+
 

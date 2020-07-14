@@ -603,14 +603,14 @@ dialogscript:
 
   section_traveler:
     - CUE: shot_traveler_ger
-    - geralt: "0000393630|Just a traveler. Happened to be passing through."
+    - geralt: "[2.9642897]0000393630|Just a traveler. Happened to be passing through."
     - CUE: shot_traveler_band
     - fat_bandit: "Just a traveler you say.. And just two swords behind? Looks like you can swing them well."
     - NEXT: section_storyboard_ui3
 
   section_witcher:
     - CUE: shot_witcher_ger
-    - geralt: "0001094310|Geralt of Rivia. Witcher."
+    - geralt: "[1.7917082]0001094310|Geralt of Rivia. Witcher."
     - CUE: shot_witcher_band
     - fat_bandit: "Witcher? So you know how to track down somebody, right?"
     - NEXT: section_storyboard_ui3
@@ -671,7 +671,7 @@ dialogscript:
     - CUE: shot_d4_ger
     - geralt: "[1.7966]Why are you interested in children?"
     - CUE: shot_d4_band
-    - fat_bandit: "It's no concern of yours."
+    - fat_bandit: "[1.9690865]It's no concern of yours."
     - NEXT: script_set_whychildren
 
   script_set_whychildren:
@@ -692,9 +692,9 @@ dialogscript:
 
   section_fight:
     - CUE: shot_d6_ger
-    - geralt: "0001117735|I'll ask again, polite like, and you'll answer, just as politely."
+    - geralt: "[5.5173635]0001117735|I'll ask again, polite like, and you'll answer, just as politely."
     - CUE: shot_d6_band
-    - fat_bandit: "Look at that - vagrant mutt's givin' us orders… Needs to know his place! Fuck 'im up!"
+    - fat_bandit: "[6.6579437]Look at that - vagrant mutt's givin' us orders… Needs to know his place! Fuck 'im up!"
     - CUE: shot_10
     - bandit_2: "Three against one - you're dead already."
     - NEXT: section_exit_fistfight
@@ -703,9 +703,9 @@ dialogscript:
     - CUE: shot_d7_ger
     - geralt: "[2.3220]It's a deal. Where can I find him?"
     - CUE: shot_d7_band
-    - fat_bandit: "We have pitched camp near <place>..."
+    - fat_bandit: "We have pitched camp on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater."
     - CUE: shot_ger_togame
-    - geralt: "0001003998|See what I can do."
+    - geralt: "[1.3444105]0001003998|See what I can do."
     - NEXT: section_exit_normal
     #- geralt: "Oughta have a chat with this Baron."
 
@@ -717,4 +717,5 @@ dialogscript:
   section_exit_normal:
     - OUTPUT: normal
     - EXIT
+
 

@@ -2,6 +2,62 @@ exec function startNTR() {
 	FactsAdd("NTRstartquest", 1);
 }
 
+exec function getInRange(range : float) {
+    var entities: array<CGameplayEntity>;
+    var actor : CActor;
+    var i, t, maxEntities: int;
+    var tags : array<name>;
+    var pos : Vector;
+        
+    maxEntities = 1000;
+
+    FindGameplayEntitiesInRange(entities, thePlayer, range, maxEntities);
+
+    pos = thePlayer.GetWorldPosition();
+    LogChannel('DEBUG', "player pos: [" + pos.X + ", " + pos.Y + ", " + pos.Z + "]");
+        
+    for (i = 0; i < entities.Size(); i += 1) {
+
+        actor = (CActor)entities[i];
+        if (actor) {
+            LogChannel('DEBUG', "actor " + actor);
+
+            tags = actor.GetTags();
+
+            for (t = 0; t < tags.Size(); t += 1) {
+                LogChannel('DEBUG', "> tag " + tags[t]);
+            }
+        }
+    }
+}
+
+quest function scentOn() {
+	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent1', -1 );
+	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent2', -1 );
+	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent3', -1 );
+	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent4', -1 );
+	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent5', -1 );
+	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scents', -1 );
+	NTR_notify("scentON !");
+}
+exec function enableScent(enable : bool) {
+	var scent : CCustomScent;
+	var points : array<Vector>;
+
+	scent = (CCustomScent) theGame.GetEntityByTag('ntr_orianna_scents');
+	points.PushBack( Vector(-410.2420349121, -1439.0350341797, 87.9959182739) );
+	points.PushBack( Vector(-407.3211975098, -1441.0976562500, 88.1598815918) );
+	points.PushBack( Vector(-406.3743591309, -1443.0831298828, 88.1598815918) );
+	scent.setScentPoints(points);
+	scent.setScentEnabled(enable);
+}
+exec function scentDist(dist : float) {
+	var scent : CCustomScent;
+
+	scent = (CCustomScent) theGame.GetEntityByTag('ntr_orianna_scent_l');
+	scent.setScentDistance(dist);
+}
+
 exec function GiveReward( rewardName : name ) : void
 {
 	theGame.GiveReward( rewardName, thePlayer );

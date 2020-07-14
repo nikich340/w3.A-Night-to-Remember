@@ -2,6 +2,57 @@
 # definition of entities
 #
 templates:
+  alfred_blood_main:
+    includes:
+      - "fx\\blood\\blood_decal\\blood_decal.w2ent"
+    entityObject:
+      .type: W3MonsterClue
+      testLineOfSight: true
+      components:
+        examine:
+          .type: CInteractionComponent
+          actionName: Examine
+          rangeMin: 0.0
+          rangeMax: 3.0
+          isEnabled: true
+          reportToScript: true
+
+  alfred_blood_track:
+    includes:
+      - "dlc\\bob\\data\\quests\\minor_quests\\quest_files\\mq7017_talking_horse\\entities\\mq7017_blood_trail_clue.w2ent"
+    entityObject:
+      .type: W3MonsterClue
+      testLineOfSight: true
+      components:
+        examine:
+          .type: CInteractionComponent
+          actionName: Examine
+          rangeMin: 0.0
+          rangeMax: 3.0
+          isEnabled: true
+          reportToScript: true
+
+  alfred_corpse:
+    includes:
+      - "dlc\\bob\\data\\environment\\decorations\\corpses\\human corpses\\bob_raider_lvl1_corpse\\raider_lvl1_corpse_01.w2ent"
+    entityObject:
+      .type: W3MonsterClue
+      testLineOfSight: true
+      components:
+        examine:
+          .type: CInteractionComponent
+          actionName: Examine
+          rangeMin: 0.0
+          rangeMax: 3.0
+          isEnabled: true
+          reportToScript: true
+
+  ntr_scripted_agent:
+    includes:
+      - quests\sidequests\no_mans_land\quest_files\sq104_werewolf\entities\sq104_niellen_scent_source.w2ent
+    entityObject:
+      .type: "CNTRScriptedAgent:CGameplayEntity" 
+      
   vampire_vision_env:
     #.type: CEntityTemplate
     #properOverrides: true
@@ -102,7 +153,7 @@ templates:
           
     entityObject:
       .type: "CEntity"
-      
+
   clue_blood:
     includes:
       - W3MonsterClue:quests/prologue/quest_files/living_world/entities/clues/blood/lw_clue_blood_claw_slash_big.w2ent

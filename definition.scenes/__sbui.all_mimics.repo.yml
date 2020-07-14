@@ -1,0 +1,2679 @@
+#
+# automatically generated repo with all mimic animations (source sbui actor_mimics.csv)
+#
+repository:
+    animations.mimic:
+        mimicsanim_1_confident_anim_combined_face:
+            animation: "confident_anim_combined_face"
+            frames: 610
+            #duration 20.333334 sec
+
+        mimicsanim_2_head_left02_head_accent_face:
+            animation: "head_left02_head_accent_face"
+            frames: 63
+            #duration 2.1 sec
+
+        mimicsanim_3_head_left03_head_accent_face:
+            animation: "head_left03_head_accent_face"
+            frames: 63
+            #duration 2.1 sec
+
+        mimicsanim_4_head_right01_head_accent_face:
+            animation: "head_right01_head_accent_face"
+            frames: 50
+            #duration 1.6666666 sec
+
+        mimicsanim_5_head_right02_head_accent_face:
+            animation: "head_right02_head_accent_face"
+            frames: 54
+            #duration 1.8 sec
+
+        mimicsanim_6_head_right03_head_accent_face:
+            animation: "head_right03_head_accent_face"
+            frames: 29
+            #duration 0.96666664 sec
+
+        mimicsanim_7_nervous_eyes_face:
+            animation: "nervous_eyes_face"
+            frames: 610
+            #duration 20.333334 sec
+
+        mimicsanim_8_nervous_eyes_soft_face:
+            animation: "nervous_eyes_soft_face"
+            frames: 610
+            #duration 20.333334 sec
+
+        mimicsanim_9_geralt_happiness_gesture_smile_face:
+            animation: "geralt_happiness_gesture_smile_face"
+            frames: 67
+            #duration 2.2333333 sec
+
+        mimicsanim_10_geralt_lick_lips_face:
+            animation: "geralt_lick_lips_face"
+            frames: 31
+            #duration 1.0333333 sec
+
+        mimicsanim_11_geralt_neutral_gesture_death_longer_face:
+            animation: "geralt_neutral_gesture_death_longer_face"
+            frames: 245
+            #duration 8.166667 sec
+
+        mimicsanim_12_geralt_neutral_gesture_eating_face:
+            animation: "geralt_neutral_gesture_eating_face"
+            frames: 259
+            #duration 8.633333 sec
+
+        mimicsanim_13_geralt_neutral_gesture_into_bursting_anger_face:
+            animation: "geralt_neutral_gesture_into_bursting_anger_face"
+            frames: 75
+            #duration 2.5 sec
+
+        mimicsanim_14_geralt_neutral_question_what_did_ya_say_face:
+            animation: "geralt_neutral_question_what_did_ya_say_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_15_geralt_reaction_irritation_face:
+            animation: "geralt_reaction_irritation_face"
+            frames: 243
+            #duration 8.1 sec
+
+        mimicsanim_16_nboy1_q602_01108351_zwrotka1_lipsync:
+            animation: "nboy1_q602_01108351_zwrotka1_lipsync"
+            frames: 358
+            #duration 11.933333 sec
+
+        mimicsanim_17_nboy2_q602_01108355_zwrotka3_lipsync:
+            animation: "nboy2_q602_01108355_zwrotka3_lipsync"
+            frames: 359
+            #duration 11.966666 sec
+
+        mimicsanim_18_ngrl1_q602_01108353_zwrotka2_lipsync:
+            animation: "ngrl1_q602_01108353_zwrotka2_lipsync"
+            frames: 350
+            #duration 11.666667 sec
+
+        mimicsanim_19_ngrl2_q602_01108357_zwrotka4_lipsync:
+            animation: "ngrl2_q602_01108357_zwrotka4_lipsync"
+            frames: 354
+            #duration 11.8 sec
+
+        mimicsanim_20_afraid_anim_combined_face:
+            animation: "afraid_anim_combined_face"
+            frames: 700
+            #duration 23.333334 sec
+
+        mimicsanim_21_afraid_anim_face:
+            animation: "afraid_anim_face"
+            frames: 700
+            #duration 23.333334 sec
+
+        mimicsanim_22_afraid_eyes_face:
+            animation: "afraid_eyes_face"
+            frames: 700
+            #duration 23.333334 sec
+
+        mimicsanim_23_afraid_eyes_soft_face:
+            animation: "afraid_eyes_soft_face"
+            frames: 700
+            #duration 23.333334 sec
+
+        mimicsanim_24_seducing__eyes_face:
+            animation: "seducing__eyes_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_25_test_anim_combined_face:
+            animation: "test_anim_combined_face"
+            frames: 175
+            #duration 5.8333335 sec
+
+        mimicsanim_26_test_anim_face:
+            animation: "test_anim_face"
+            frames: 175
+            #duration 5.8333335 sec
+
+        mimicsanim_27_test_eyes_face:
+            animation: "test_eyes_face"
+            frames: 175
+            #duration 5.8333335 sec
+
+        mimicsanim_28_test_pose_face:
+            animation: "test_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_29_worried_pose_face:
+            animation: "worried_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_30_bob_ending_face:
+            animation: "bob_ending_face"
+            frames: 674
+            #duration 22.466667 sec
+
+        mimicsanim_31_ep1_geralt_neutral_gesture_hearty_spit_face:
+            animation: "ep1_geralt_neutral_gesture_hearty_spit_face"
+            frames: 250
+            #duration 8.333333 sec
+
+        mimicsanim_32_ep1_slow_dance_outro_geralt_face:
+            animation: "ep1_slow_dance_outro_geralt_face"
+            frames: 1095
+            #duration 36.5 sec
+
+        mimicsanim_33_ep1_witold_take_bottle_drink_all__witold_face:
+            animation: "ep1_witold_take_bottle_drink_all__witold_face"
+            frames: 663
+            #duration 22.1 sec
+
+        mimicsanim_34_gameplay_bursting_anger_combined_face:
+            animation: "gameplay_bursting_anger_combined_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_35_gameplay_focused_anim_combined_face:
+            animation: "gameplay_focused_anim_combined_face"
+            frames: 820
+            #duration 27.333334 sec
+
+        mimicsanim_36_gameplay_geralt_pose_damage_01_face:
+            animation: "gameplay_geralt_pose_damage_01_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_37_gameplay_geralt_pose_damage_02_face:
+            animation: "gameplay_geralt_pose_damage_02_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_38_gameplay_geralt_pose_damage_03_face:
+            animation: "gameplay_geralt_pose_damage_03_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_39_gameplay_geralt_pose_damage_04_face:
+            animation: "gameplay_geralt_pose_damage_04_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_40_gameplay_geralt_pose_death_01_face:
+            animation: "gameplay_geralt_pose_death_01_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_41_gameplay_geralt_pose_death_02_face:
+            animation: "gameplay_geralt_pose_death_02_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_42_gameplay_geralt_pose_death_03_face:
+            animation: "gameplay_geralt_pose_death_03_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_43_gameplay_geralt_pose_death_04_face:
+            animation: "gameplay_geralt_pose_death_04_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_44_gameplay_geralt_pose_hit_01_face:
+            animation: "gameplay_geralt_pose_hit_01_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_45_gameplay_geralt_pose_hit_02_face:
+            animation: "gameplay_geralt_pose_hit_02_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_46_gameplay_neutral_anim_combined_face:
+            animation: "gameplay_neutral_anim_combined_face"
+            frames: 820
+            #duration 27.333334 sec
+
+        mimicsanim_47_gameplay_underwater_anim_combined_face:
+            animation: "gameplay_underwater_anim_combined_face"
+            frames: 700
+            #duration 23.333334 sec
+
+        mimicsanim_48_geralt_choice_face:
+            animation: "geralt_choice_face"
+            frames: 973
+            #duration 32.433334 sec
+
+        mimicsanim_49_geralt_neutral_gesture_maybe_face:
+            animation: "geralt_neutral_gesture_maybe_face"
+            frames: 70
+            #duration 2.3333333 sec
+
+        mimicsanim_50_geralt_neutral_gesture_shake_it_off_face:
+            animation: "geralt_neutral_gesture_shake_it_off_face"
+            frames: 70
+            #duration 2.3333333 sec
+
+        mimicsanim_51_geralt_neutral_gesture_shout_no_way_face:
+            animation: "geralt_neutral_gesture_shout_no_way_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_52_geralt_neutral_gesture_shout_out_of_my_sight_face:
+            animation: "geralt_neutral_gesture_shout_out_of_my_sight_face"
+            frames: 175
+            #duration 5.8333335 sec
+
+        mimicsanim_53_geralt_neutral_gesture_shout_outta_my_way_face:
+            animation: "geralt_neutral_gesture_shout_outta_my_way_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_54_geralt_neutral_gesture_shout_shut_up_face:
+            animation: "geralt_neutral_gesture_shout_shut_up_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_55_geralt_neutral_gesture_shout_you_failed_face:
+            animation: "geralt_neutral_gesture_shout_you_failed_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_56_geralt_neutral_gesture_yawn_no_head_anim_face:
+            animation: "geralt_neutral_gesture_yawn_no_head_anim_face"
+            frames: 250
+            #duration 8.333333 sec
+
+        mimicsanim_57_geralt_neutral_question_where_monsters_face:
+            animation: "geralt_neutral_question_where_monsters_face"
+            frames: 105
+            #duration 3.5 sec
+
+        mimicsanim_58_geralt_pose_eye_darts_tired_sleepy_face:
+            animation: "geralt_pose_eye_darts_tired_sleepy_face"
+            frames: 200
+            #duration 6.6666665 sec
+
+        mimicsanim_59_geralt_reaction_anguish_face:
+            animation: "geralt_reaction_anguish_face"
+            frames: 250
+            #duration 8.333333 sec
+
+        mimicsanim_60_geralt_reaction_disgust_face:
+            animation: "geralt_reaction_disgust_face"
+            frames: 160
+            #duration 5.3333335 sec
+
+        mimicsanim_61_geralt_reaction_embarrassment_face:
+            animation: "geralt_reaction_embarrassment_face"
+            frames: 215
+            #duration 7.1666665 sec
+
+        mimicsanim_62_geralt_reaction_i_dont_agree_face:
+            animation: "geralt_reaction_i_dont_agree_face"
+            frames: 160
+            #duration 5.3333335 sec
+
+        mimicsanim_63_geralt_reaction_i_dont_understand_face:
+            animation: "geralt_reaction_i_dont_understand_face"
+            frames: 160
+            #duration 5.3333335 sec
+
+        mimicsanim_64_geralt_reaction_irritation_face:
+            animation: "geralt_reaction_irritation_face"
+            frames: 260
+            #duration 8.666667 sec
+
+        mimicsanim_65_geralt_reaction_mad_face:
+            animation: "geralt_reaction_mad_face"
+            frames: 200
+            #duration 6.6666665 sec
+
+        mimicsanim_66_geralt_reaction_scepticism_face:
+            animation: "geralt_reaction_scepticism_face"
+            frames: 200
+            #duration 6.6666665 sec
+
+        mimicsanim_67_geralt_reaction_searching_for_words_face:
+            animation: "geralt_reaction_searching_for_words_face"
+            frames: 230
+            #duration 7.6666665 sec
+
+        mimicsanim_68_geralt_reaction_tired_face:
+            animation: "geralt_reaction_tired_face"
+            frames: 300
+            #duration 10 sec
+
+        mimicsanim_69_geraltstage_face:
+            animation: "geraltstage_face"
+            frames: 286
+            #duration 9.533334 sec
+
+        mimicsanim_70_inventory_crossbow_check1_face:
+            animation: "inventory_crossbow_check1_face"
+            frames: 166
+            #duration 5.5333333 sec
+
+        mimicsanim_71_inventory_crossbow_idle_face:
+            animation: "inventory_crossbow_idle_face"
+            frames: 150
+            #duration 5 sec
+
+        mimicsanim_72_inventory_crossbow_to_noequipment_face:
+            animation: "inventory_crossbow_to_noequipment_face"
+            frames: 48
+            #duration 1.6 sec
+
+        mimicsanim_73_inventory_heavy_melee_check1_face:
+            animation: "inventory_heavy_melee_check1_face"
+            frames: 168
+            #duration 5.6 sec
+
+        mimicsanim_74_inventory_noequipment_armor_face:
+            animation: "inventory_noequipment_armor_face"
+            frames: 125
+            #duration 4.1666665 sec
+
+        mimicsanim_75_inventory_noequipment_armor_flex1_face:
+            animation: "inventory_noequipment_armor_flex1_face"
+            frames: 190
+            #duration 6.3333335 sec
+
+        mimicsanim_76_inventory_noequipment_armor_flex2_face:
+            animation: "inventory_noequipment_armor_flex2_face"
+            frames: 151
+            #duration 5.0333333 sec
+
+        mimicsanim_77_inventory_noequipment_boots_face:
+            animation: "inventory_noequipment_boots_face"
+            frames: 147
+            #duration 4.9 sec
+
+        mimicsanim_78_inventory_noequipment_gloves_face:
+            animation: "inventory_noequipment_gloves_face"
+            frames: 170
+            #duration 5.6666665 sec
+
+        mimicsanim_79_inventory_noequipment_idle_face:
+            animation: "inventory_noequipment_idle_face"
+            frames: 150
+            #duration 5 sec
+
+        mimicsanim_80_inventory_noequipment_random1_face:
+            animation: "inventory_noequipment_random1_face"
+            frames: 146
+            #duration 4.866667 sec
+
+        mimicsanim_81_inventory_sheathe_crossbow_face:
+            animation: "inventory_sheathe_crossbow_face"
+            frames: 154
+            #duration 5.133333 sec
+
+        mimicsanim_82_inventory_sheathe_silver_face:
+            animation: "inventory_sheathe_silver_face"
+            frames: 63
+            #duration 2.1 sec
+
+        mimicsanim_83_inventory_sheathe_steel_face:
+            animation: "inventory_sheathe_steel_face"
+            frames: 63
+            #duration 2.1 sec
+
+        mimicsanim_84_inventory_sword_check1_face:
+            animation: "inventory_sword_check1_face"
+            frames: 187
+            #duration 6.233333 sec
+
+        mimicsanim_85_inventory_sword_check2_face:
+            animation: "inventory_sword_check2_face"
+            frames: 200
+            #duration 6.6666665 sec
+
+        mimicsanim_86_inventory_sword_idle_face:
+            animation: "inventory_sword_idle_face"
+            frames: 140
+            #duration 4.6666665 sec
+
+        mimicsanim_87_inventory_unsheathe_crossbow_face:
+            animation: "inventory_unsheathe_crossbow_face"
+            frames: 142
+            #duration 4.733333 sec
+
+        mimicsanim_88_inventory_unsheathe_silver_face:
+            animation: "inventory_unsheathe_silver_face"
+            frames: 45
+            #duration 1.5 sec
+
+        mimicsanim_89_inventory_unsheathe_steel_face:
+            animation: "inventory_unsheathe_steel_face"
+            frames: 45
+            #duration 1.5 sec
+
+        mimicsanim_90_man_swimming_drown_face:
+            animation: "man_swimming_drown_face"
+            frames: 300
+            #duration 10 sec
+
+        mimicsanim_91_man_swimming_emerge_face:
+            animation: "man_swimming_emerge_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_92_menu_idle_v1_face:
+            animation: "menu_idle_v1_face"
+            frames: 620
+            #duration 20.666666 sec
+
+        mimicsanim_93_q705_geralt_end_of_blood_and_wine_face:
+            animation: "q705_geralt_end_of_blood_and_wine_face"
+            frames: 622
+            #duration 20.733334 sec
+
+        mimicsanim_94_bursting_anger_eyes_soft_face:
+            animation: "bursting_anger_eyes_soft_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_95_confident_anim_face:
+            animation: "confident_anim_face"
+            frames: 610
+            #duration 20.333334 sec
+
+        mimicsanim_96_confident_eyes_face:
+            animation: "confident_eyes_face"
+            frames: 610
+            #duration 20.333334 sec
+
+        mimicsanim_97_confident_eyes_soft_face:
+            animation: "confident_eyes_soft_face"
+            frames: 610
+            #duration 20.333334 sec
+
+        mimicsanim_98_disgusted_anim_combined_face:
+            animation: "disgusted_anim_combined_face"
+            frames: 715
+            #duration 23.833334 sec
+
+        mimicsanim_99_disgusted_anim_face:
+            animation: "disgusted_anim_face"
+            frames: 715
+            #duration 23.833334 sec
+
+        mimicsanim_100_disgusted_eyes_face:
+            animation: "disgusted_eyes_face"
+            frames: 715
+            #duration 23.833334 sec
+
+        mimicsanim_101_disgusted_eyes_soft_face:
+            animation: "disgusted_eyes_soft_face"
+            frames: 715
+            #duration 23.833334 sec
+
+        mimicsanim_102_drunk_anim_face:
+            animation: "drunk_anim_face"
+            frames: 1050
+            #duration 35 sec
+
+        mimicsanim_103_drunk_combined_face:
+            animation: "drunk_combined_face"
+            frames: 1050
+            #duration 35 sec
+
+        mimicsanim_104_drunk_eyes_face:
+            animation: "drunk_eyes_face"
+            frames: 1050
+            #duration 35 sec
+
+        mimicsanim_105_drunk_pose_face:
+            animation: "drunk_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_106_focused_eyes_face:
+            animation: "focused_eyes_face"
+            frames: 350
+            #duration 11.666667 sec
+
+        mimicsanim_107_sleeping_pose_face:
+            animation: "sleeping_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_108_test_angryface_eyes_layer_face:
+            animation: "TEST_ANGRYFACE_EYES_LAYER_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_109_test_angryface_idle_layer_face:
+            animation: "TEST_ANGRYFACE_IDLE_LAYER_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_110_test_angryface_pose_layer_face:
+            animation: "TEST_ANGRYFACE_POSE_LAYER_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_111_ep2_sniff:
+            animation: "ep2_sniff"
+            frames: 150
+            #duration 5 sec
+
+        mimicsanim_112_geralt_happiness_gesture_smile_face:
+            animation: "geralt_happiness_gesture_smile_face"
+            frames: 66
+            #duration 2.2 sec
+
+        mimicsanim_113_geralt_look_left_impatient_face:
+            animation: "geralt_look_left_impatient_face"
+            frames: 101
+            #duration 3.3666666 sec
+
+        mimicsanim_114_geralt_neutral_gesture_breath_closed_face:
+            animation: "geralt_neutral_gesture_breath_closed_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_115_geralt_neutral_gesture_breath_face:
+            animation: "geralt_neutral_gesture_breath_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_116_geralt_neutral_gesture_brows_down_face_lcl:
+            animation: "geralt_neutral_gesture_brows_down_face_lcl"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_117_geralt_neutral_gesture_brows_down_face_nrml:
+            animation: "geralt_neutral_gesture_brows_down_face_nrml"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_118_geralt_neutral_gesture_brows_up_face_lcl:
+            animation: "geralt_neutral_gesture_brows_up_face_lcl"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_119_geralt_neutral_gesture_brows_up_face_nrml:
+            animation: "geralt_neutral_gesture_brows_up_face_nrml"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_120_geralt_neutral_gesture_chewing_face:
+            animation: "geralt_neutral_gesture_chewing_face"
+            frames: 180
+            #duration 6 sec
+
+        mimicsanim_121_geralt_neutral_gesture_cry_face:
+            animation: "geralt_neutral_gesture_cry_face"
+            frames: 230
+            #duration 7.6666665 sec
+
+        mimicsanim_122_geralt_neutral_gesture_death_longer_face:
+            animation: "geralt_neutral_gesture_death_longer_face"
+            frames: 300
+            #duration 10 sec
+
+        mimicsanim_123_geralt_neutral_gesture_death_shorter_face:
+            animation: "geralt_neutral_gesture_death_shorter_face"
+            frames: 250
+            #duration 8.333333 sec
+
+        mimicsanim_124_geralt_neutral_gesture_diasppointment_face:
+            animation: "geralt_neutral_gesture_diasppointment_face"
+            frames: 183
+            #duration 6.1 sec
+
+        mimicsanim_125_geralt_neutral_gesture_eating_apple_face:
+            animation: "geralt_neutral_gesture_eating_apple_face"
+            frames: 200
+            #duration 6.6666665 sec
+
+        mimicsanim_126_geralt_neutral_gesture_grimace_face:
+            animation: "geralt_neutral_gesture_grimace_face"
+            frames: 170
+            #duration 5.6666665 sec
+
+        mimicsanim_127_geralt_neutral_gesture_interrupted_01_face:
+            animation: "geralt_neutral_gesture_interrupted_01_face"
+            frames: 155
+            #duration 5.1666665 sec
+
+        mimicsanim_128_geralt_neutral_gesture_rapid_head_flick_up_face:
+            animation: "geralt_neutral_gesture_rapid_head_flick_up_face"
+            frames: 40
+            #duration 1.3333334 sec
+
+        mimicsanim_129_geralt_neutral_gesture_sceptical_remark_face:
+            animation: "geralt_neutral_gesture_sceptical_remark_face"
+            frames: 110
+            #duration 3.6666667 sec
+
+        mimicsanim_130_geralt_neutral_gesture_sniffle_face:
+            animation: "geralt_neutral_gesture_sniffle_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_131_geralt_neutral_gesture_whistle_call_face:
+            animation: "geralt_neutral_gesture_whistle_call_face"
+            frames: 73
+            #duration 2.4333334 sec
+
+        mimicsanim_132_geralt_neutral_idle:
+            animation: "geralt_neutral_idle"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_133_geralt_neutral_idle_just_facial_animation:
+            animation: "geralt_neutral_idle_just_facial_animation"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_134_geralt_neutral_no_contempt_face:
+            animation: "geralt_neutral_no_contempt_face"
+            frames: 85
+            #duration 2.8333333 sec
+
+        mimicsanim_135_geralt_neutral_no_fast_face:
+            animation: "geralt_neutral_no_fast_face"
+            frames: 55
+            #duration 1.8333334 sec
+
+        mimicsanim_136_geralt_neutral_no_not_a_chance_face:
+            animation: "geralt_neutral_no_not_a_chance_face"
+            frames: 160
+            #duration 5.3333335 sec
+
+        mimicsanim_137_geralt_neutral_no_slow_face:
+            animation: "geralt_neutral_no_slow_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_138_geralt_neutral_question_how_much_face:
+            animation: "geralt_neutral_question_how_much_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_139_geralt_neutral_question_king_slaughtered_face:
+            animation: "geralt_neutral_question_king_slaughtered_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_140_geralt_neutral_question_problem_face:
+            animation: "geralt_neutral_question_problem_face"
+            frames: 95
+            #duration 3.1666667 sec
+
+        mimicsanim_141_geralt_neutral_question_what_do_we_do_face:
+            animation: "geralt_neutral_question_what_do_we_do_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_142_geralt_neutral_question_what_face:
+            animation: "geralt_neutral_question_what_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_143_geralt_neutral_question_where_face:
+            animation: "geralt_neutral_question_where_face"
+            frames: 160
+            #duration 5.3333335 sec
+
+        mimicsanim_144_geralt_neutral_question_why_face:
+            animation: "geralt_neutral_question_why_face"
+            frames: 120
+            #duration 4 sec
+
+        mimicsanim_145_geralt_neutral_yes_long_face:
+            animation: "geralt_neutral_yes_long_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_146_geralt_neutral_yes_ok_face:
+            animation: "geralt_neutral_yes_ok_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_147_geralt_neutral_yes_slow_face:
+            animation: "geralt_neutral_yes_slow_face"
+            frames: 50
+            #duration 1.6666666 sec
+
+        mimicsanim_148_geralt_pose_damage_01:
+            animation: "geralt_pose_damage_01"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_149_geralt_pose_damage_02:
+            animation: "geralt_pose_damage_02"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_150_geralt_pose_damage_03:
+            animation: "geralt_pose_damage_03"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_151_geralt_pose_damage_04:
+            animation: "geralt_pose_damage_04"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_152_geralt_pose_hit_01:
+            animation: "geralt_pose_hit_01"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_153_geralt_pose_hit_02:
+            animation: "geralt_pose_hit_02"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_154_geralt_pose_hit_03:
+            animation: "geralt_pose_hit_03"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_155_geralt_pose_hit_04:
+            animation: "geralt_pose_hit_04"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_156_geralt_pose_neutral_listening_face:
+            animation: "geralt_pose_neutral_listening_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_157_geralt_quick_nodding_face:
+            animation: "geralt_quick_nodding_face"
+            frames: 92
+            #duration 3.0666666 sec
+
+        mimicsanim_158_geralt_quick_nodding_withlook_face:
+            animation: "geralt_quick_nodding_withlook_face"
+            frames: 92
+            #duration 3.0666666 sec
+
+        mimicsanim_159_geralt_reaction_anguish_face:
+            animation: "geralt_reaction_anguish_face"
+            frames: 230
+            #duration 7.6666665 sec
+
+        mimicsanim_160_geralt_reaction_disgust_face:
+            animation: "geralt_reaction_disgust_face"
+            frames: 199
+            #duration 6.633333 sec
+
+        mimicsanim_161_geralt_reaction_embarrassment_face:
+            animation: "geralt_reaction_embarrassment_face"
+            frames: 200
+            #duration 6.6666665 sec
+
+        mimicsanim_162_geralt_reaction_i_dont_agree_face:
+            animation: "geralt_reaction_I_dont_agree_face"
+            frames: 143
+            #duration 4.766667 sec
+
+        mimicsanim_163_geralt_reaction_i_dont_agree_face:
+            animation: "geralt_reaction_i_dont_agree_face"
+            frames: 143
+            #duration 4.766667 sec
+
+        mimicsanim_164_geralt_reaction_i_dont_understand_face:
+            animation: "geralt_reaction_i_dont_understand_face"
+            frames: 136
+            #duration 4.5333333 sec
+
+        mimicsanim_165_geralt_reaction_irritation_face:
+            animation: "geralt_reaction_irritation_face"
+            frames: 200
+            #duration 6.6666665 sec
+
+        mimicsanim_166_geralt_reaction_listening_new_info_face:
+            animation: "geralt_reaction_listening_new_info_face"
+            frames: 200
+            #duration 6.6666665 sec
+
+        mimicsanim_167_geralt_reaction_mad_face:
+            animation: "geralt_reaction_mad_face"
+            frames: 136
+            #duration 4.5333333 sec
+
+        mimicsanim_168_geralt_reaction_pain_face:
+            animation: "geralt_reaction_pain_face"
+            frames: 280
+            #duration 9.333333 sec
+
+        mimicsanim_169_geralt_reaction_sad_face:
+            animation: "geralt_reaction_sad_face"
+            frames: 225
+            #duration 7.5 sec
+
+        mimicsanim_170_geralt_reaction_scepticism_face:
+            animation: "geralt_reaction_scepticism_face"
+            frames: 264
+            #duration 8.8 sec
+
+        mimicsanim_171_geralt_reaction_searching_for_words_face:
+            animation: "geralt_reaction_searching_for_words_face"
+            frames: 193
+            #duration 6.4333334 sec
+
+        mimicsanim_172_geralt_reaction_tired_face:
+            animation: "geralt_reaction_tired_face"
+            frames: 266
+            #duration 8.866667 sec
+
+        mimicsanim_173_npc_anger_idle:
+            animation: "npc_anger_idle"
+            frames: 640
+            #duration 21.333334 sec
+
+        mimicsanim_174_npc_anger_idle_just_facial_animation:
+            animation: "npc_anger_idle_just_facial_animation"
+            frames: 640
+            #duration 21.333334 sec
+
+        mimicsanim_175_npc_fearful_idle:
+            animation: "npc_fearful_idle"
+            frames: 559
+            #duration 18.633333 sec
+
+        mimicsanim_176_npc_fearful_idle_just_facial_animation:
+            animation: "npc_fearful_idle_just_facial_animation"
+            frames: 559
+            #duration 18.633333 sec
+
+        mimicsanim_177_npc_neutral_idle:
+            animation: "npc_neutral_idle"
+            frames: 549
+            #duration 18.3 sec
+
+        mimicsanim_178_npc_neutral_idle_just_facial_animation:
+            animation: "npc_neutral_idle_just_facial_animation"
+            frames: 549
+            #duration 18.3 sec
+
+        mimicsanim_179_npc_pose_damage_01:
+            animation: "npc_pose_damage_01"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_180_npc_pose_damage_02:
+            animation: "npc_pose_damage_02"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_181_npc_pose_damage_03:
+            animation: "npc_pose_damage_03"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_182_npc_pose_damage_04:
+            animation: "npc_pose_damage_04"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_183_npc_pose_death_01:
+            animation: "npc_pose_death_01"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_184_npc_pose_death_02:
+            animation: "npc_pose_death_02"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_185_npc_pose_death_03:
+            animation: "npc_pose_death_03"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_186_npc_pose_death_04:
+            animation: "npc_pose_death_04"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_187_npc_pose_hit_01:
+            animation: "npc_pose_hit_01"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_188_npc_pose_hit_02:
+            animation: "npc_pose_hit_02"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_189_npc_pose_hit_03:
+            animation: "npc_pose_hit_03"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_190_npc_pose_hit_04:
+            animation: "npc_pose_hit_04"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_191_npc_pose_sleep_01:
+            animation: "npc_pose_sleep_01"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_192_npc_pose_sleep_02:
+            animation: "npc_pose_sleep_02"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_193_npc_work_idle:
+            animation: "npc_work_idle"
+            frames: 578
+            #duration 19.266666 sec
+
+        mimicsanim_194_npc_work_idle_just_mimics:
+            animation: "npc_work_idle_just_mimics"
+            frames: 578
+            #duration 19.266666 sec
+
+        mimicsanim_195_nps_surprised_idle:
+            animation: "nps_surprised_idle"
+            frames: 640
+            #duration 21.333334 sec
+
+        mimicsanim_196_nps_surprised_idle_just_facial_animation:
+            animation: "nps_surprised_idle_just_facial_animation"
+            frames: 640
+            #duration 21.333334 sec
+
+        mimicsanim_197_test:
+            animation: "test"
+            frames: 474
+            #duration 15.8 sec
+
+        mimicsanim_198_blink_fast_offset_face:
+            animation: "blink_fast_offset_face"
+            frames: 16
+            #duration 0.53333336 sec
+
+        mimicsanim_199_blink_long_offset_face:
+            animation: "blink_long_offset_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_200_blink_normal_face:
+            animation: "blink_normal_face"
+            frames: 20
+            #duration 0.6666667 sec
+
+        mimicsanim_201_blink_normal_offset_face:
+            animation: "blink_normal_offset_face"
+            frames: 20
+            #duration 0.6666667 sec
+
+        mimicsanim_202_creepy_anim_combined_face:
+            animation: "creepy_anim_combined_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_203_creepy_anim_face:
+            animation: "creepy_anim_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_204_creepy_eyes_face:
+            animation: "creepy_eyes_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_205_creepy_pose_face:
+            animation: "creepy_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_206_foch_pose_face:
+            animation: "foch_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_207_geralt_neutral_gesture_mouth1_face:
+            animation: "geralt_neutral_gesture_mouth1_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_208_geralt_neutral_gesture_question_ver03_face:
+            animation: "geralt_neutral_gesture_question_ver03_face"
+            frames: 85
+            #duration 2.8333333 sec
+
+        mimicsanim_209_geralt_neutral_gesture_squint_face:
+            animation: "geralt_neutral_gesture_squint_face"
+            frames: 85
+            #duration 2.8333333 sec
+
+        mimicsanim_210_johny_and_bottle_02_whiskey_face:
+            animation: "johny_and_bottle_02_whiskey_face"
+            frames: 1006
+            #duration 33.533333 sec
+
+        mimicsanim_211_johny_and_bottle_03_did_i_ever_face:
+            animation: "johny_and_bottle_03_did_i_ever_face"
+            frames: 530
+            #duration 17.666666 sec
+
+        mimicsanim_212_johny_and_bottle_06_forgive_me_gran_face:
+            animation: "johny_and_bottle_06_forgive_me_gran_face"
+            frames: 1280
+            #duration 42.666668 sec
+
+        mimicsanim_213_q105_johny_regain_voice_forgive_face:
+            animation: "q105_johny_regain_voice_forgive_face"
+            frames: 1440
+            #duration 48 sec
+
+        mimicsanim_214_afraid_anim_combined_face:
+            animation: "afraid_anim_combined_face"
+            frames: 550
+            #duration 18.333334 sec
+
+        mimicsanim_215_afraid_anim_face:
+            animation: "afraid_anim_face"
+            frames: 557
+            #duration 18.566668 sec
+
+        mimicsanim_216_afraid_eyes_face:
+            animation: "afraid_eyes_face"
+            frames: 557
+            #duration 18.566668 sec
+
+        mimicsanim_217_geralt_neutral_gesture_dont_touch_me_face:
+            animation: "geralt_neutral_gesture_dont_touch_me_face"
+            frames: 165
+            #duration 5.5 sec
+
+        mimicsanim_218_happy_anim_combined_face:
+            animation: "happy_anim_combined_face"
+            frames: 650
+            #duration 21.666666 sec
+
+        mimicsanim_219_happy_anim_face:
+            animation: "happy_anim_face"
+            frames: 650
+            #duration 21.666666 sec
+
+        mimicsanim_220_happy_eyes_face:
+            animation: "happy_eyes_face"
+            frames: 650
+            #duration 21.666666 sec
+
+        mimicsanim_221_happy_eyes_soft_face:
+            animation: "happy_eyes_soft_face"
+            frames: 650
+            #duration 21.666666 sec
+
+        mimicsanim_222_neutral_anim_combined_face:
+            animation: "neutral_anim_combined_face"
+            frames: 700
+            #duration 23.333334 sec
+
+        mimicsanim_223_neutral_anim_face:
+            animation: "neutral_anim_face"
+            frames: 700
+            #duration 23.333334 sec
+
+        mimicsanim_224_neutral_eyes_face:
+            animation: "neutral_eyes_face"
+            frames: 700
+            #duration 23.333334 sec
+
+        mimicsanim_225_neutral_eyes_soft_face:
+            animation: "neutral_eyes_soft_face"
+            frames: 700
+            #duration 23.333334 sec
+
+        mimicsanim_226_pain_anim_combined_face:
+            animation: "pain_anim_combined_face"
+            frames: 442
+            #duration 14.733334 sec
+
+        mimicsanim_227_pain_anim_face:
+            animation: "pain_anim_face"
+            frames: 442
+            #duration 14.733334 sec
+
+        mimicsanim_228_pain_eyes_face:
+            animation: "pain_eyes_face"
+            frames: 442
+            #duration 14.733334 sec
+
+        mimicsanim_229_sleeping_pain_anim_combined_face:
+            animation: "sleeping_pain_anim_combined_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_230_sleeping_pain_anim_face:
+            animation: "sleeping_pain_anim_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_231_sleeping_pain_eyes_face:
+            animation: "sleeping_pain_eyes_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_232_sleeping_pain_pose_face:
+            animation: "sleeping_pain_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_233_evil_anim_face:
+            animation: "evil_anim_face"
+            frames: 637
+            #duration 21.233334 sec
+
+        mimicsanim_234_evil_eyes_face:
+            animation: "evil_eyes_face"
+            frames: 637
+            #duration 21.233334 sec
+
+        mimicsanim_235_evil_pose_face:
+            animation: "evil_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_236_geralt_meets_witches_sisters_dialogue_face:
+            animation: "geralt_meets_witches_sisters_dialogue_face"
+            frames: 130
+            #duration 4.3333335 sec
+
+        mimicsanim_237_geralt_neutral_gesture_smile_mocking_face:
+            animation: "geralt_neutral_gesture_smile_mocking_face"
+            frames: 86
+            #duration 2.8666666 sec
+
+        mimicsanim_238_test_face:
+            animation: "test_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_239_aggressive_pose_face:
+            animation: "aggressive_pose_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_240_neutral_pose_face:
+            animation: "neutral_pose_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_241_sad_pose_face:
+            animation: "sad_pose_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_242_sceptic_pose_face:
+            animation: "sceptic_pose_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_243_surprised_pose_face:
+            animation: "surprised_pose_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_244_take_001_face:
+            animation: "take 001_face"
+            frames: 150
+            #duration 5 sec
+
+        mimicsanim_245_geralt_neutral_gesture_diasppointment_sad_face:
+            animation: "geralt_neutral_gesture_diasppointment_sad_face"
+            frames: 160
+            #duration 5.3333335 sec
+
+        mimicsanim_246_geralt_neutral_gesture_eating_face:
+            animation: "geralt_neutral_gesture_eating_face"
+            frames: 184
+            #duration 6.133333 sec
+
+        mimicsanim_247_geralt_neutral_gesture_smile03_face:
+            animation: "geralt_neutral_gesture_smile03_face"
+            frames: 180
+            #duration 6 sec
+
+        mimicsanim_248_geralt_neutral_yes_long_face:
+            animation: "geralt_neutral_yes_long_face"
+            frames: 130
+            #duration 4.3333335 sec
+
+        mimicsanim_249_geralt_reaction_smile_genuine_face:
+            animation: "geralt_reaction_smile_genuine_face"
+            frames: 180
+            #duration 6 sec
+
+        mimicsanim_250_bursting_anger_face:
+            animation: "bursting_anger_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_251_bursting_pose_face:
+            animation: "bursting_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_252_harald_weareancraite_face:
+            animation: "harald_weareancraite_face"
+            frames: 80
+            #duration 2.6666667 sec
+
+        mimicsanim_253_afraid_anim_combined_face:
+            animation: "afraid_anim_combined_face"
+            frames: 500
+            #duration 16.666666 sec
+
+        mimicsanim_254_afraid_anim_face:
+            animation: "afraid_anim_face"
+            frames: 500
+            #duration 16.666666 sec
+
+        mimicsanim_255_afraid_eyes_face:
+            animation: "afraid_eyes_face"
+            frames: 500
+            #duration 16.666666 sec
+
+        mimicsanim_256_afraid_eyes_soft_face:
+            animation: "afraid_eyes_soft_face"
+            frames: 500
+            #duration 16.666666 sec
+
+        mimicsanim_257_afraid_pose_face:
+            animation: "afraid_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_258_aggressive_anim_combined_face:
+            animation: "aggressive_anim_combined_face"
+            frames: 650
+            #duration 21.666666 sec
+
+        mimicsanim_259_aggressive_anim_face:
+            animation: "aggressive_anim_face"
+            frames: 650
+            #duration 21.666666 sec
+
+        mimicsanim_260_aggressive_eyes_face:
+            animation: "aggressive_eyes_face"
+            frames: 650
+            #duration 21.666666 sec
+
+        mimicsanim_261_aggressive_eyes_soft_face:
+            animation: "aggressive_eyes_soft_face"
+            frames: 650
+            #duration 21.666666 sec
+
+        mimicsanim_262_aggressive_pose_face:
+            animation: "aggressive_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_263_blink_fast_face:
+            animation: "blink_fast_face"
+            frames: 16
+            #duration 0.53333336 sec
+
+        mimicsanim_264_blink_long_face:
+            animation: "blink_long_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_265_blink_normal_face:
+            animation: "blink_normal_face"
+            frames: 16
+            #duration 0.53333336 sec
+
+        mimicsanim_266_brows_down_accent_face:
+            animation: "brows_down_accent_face"
+            frames: 26
+            #duration 0.8666667 sec
+
+        mimicsanim_267_brows_up_accent_face:
+            animation: "brows_up_accent_face"
+            frames: 26
+            #duration 0.8666667 sec
+
+        mimicsanim_268_bursting_anger_anim_face:
+            animation: "bursting_anger_anim_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_269_bursting_anger_combined_face:
+            animation: "bursting_anger_combined_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_270_bursting_anger_eyes_face:
+            animation: "bursting_anger_eyes_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_271_bursting_anger_pose_face:
+            animation: "bursting_anger_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_272_confident_anim_combined_face:
+            animation: "confident_anim_combined_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_273_confident_anim_face:
+            animation: "confident_anim_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_274_confident_eyes_face:
+            animation: "confident_eyes_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_275_confident_eyes_soft_face:
+            animation: "confident_eyes_soft_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_276_confident_pose_face:
+            animation: "confident_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_277_confident02_pose_face:
+            animation: "confident02_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_278_constant_brows_down_accent_face:
+            animation: "constant_brows_down_accent_face"
+            frames: 21
+            #duration 0.7 sec
+
+        mimicsanim_279_constant_brows_up_accent_face:
+            animation: "constant_brows_up_accent_face"
+            frames: 21
+            #duration 0.7 sec
+
+        mimicsanim_280_constant_closed_eyes_face:
+            animation: "constant_closed_eyes_face"
+            frames: 21
+            #duration 0.7 sec
+
+        mimicsanim_281_constant_left_brow_up_accent_face:
+            animation: "constant_left_brow_up_accent_face"
+            frames: 21
+            #duration 0.7 sec
+
+        mimicsanim_282_constant_right_brow_up_accent_face:
+            animation: "constant_right_brow_up_accent_face"
+            frames: 21
+            #duration 0.7 sec
+
+        mimicsanim_283_contempt_pose_face:
+            animation: "contempt_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_284_cry_anim_face:
+            animation: "cry_anim_face"
+            frames: 700
+            #duration 23.333334 sec
+
+        mimicsanim_285_cry_combined_face:
+            animation: "cry_combined_face"
+            frames: 700
+            #duration 23.333334 sec
+
+        mimicsanim_286_cry_eyes_face:
+            animation: "cry_eyes_face"
+            frames: 700
+            #duration 23.333334 sec
+
+        mimicsanim_287_cry_pose_face:
+            animation: "cry_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_288_debug_0_percent_face:
+            animation: "debug_0_percent_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_289_debug_10_percent_face:
+            animation: "debug_10_percent_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_290_debug_100_percent_face:
+            animation: "debug_100_percent_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_291_debug_25_percent_face:
+            animation: "debug_25_percent_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_292_debug_50_percent_face:
+            animation: "debug_50_percent_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_293_debug_75_percent_face:
+            animation: "debug_75_percent_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_294_determined_anim_face:
+            animation: "determined_anim_face"
+            frames: 840
+            #duration 28 sec
+
+        mimicsanim_295_determined_combined_face:
+            animation: "determined_combined_face"
+            frames: 840
+            #duration 28 sec
+
+        mimicsanim_296_determined_eyes_face:
+            animation: "determined_eyes_face"
+            frames: 840
+            #duration 28 sec
+
+        mimicsanim_297_determined_pose_face:
+            animation: "determined_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_298_disgusted_anim_combined_face:
+            animation: "disgusted_anim_combined_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_299_disgusted_anim_face:
+            animation: "disgusted_anim_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_300_disgusted_eyes_face:
+            animation: "disgusted_eyes_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_301_disgusted_eyes_soft_face:
+            animation: "disgusted_eyes_soft_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_302_disgusted_pose_face:
+            animation: "disgusted_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_303_fearful_anim_combined_face:
+            animation: "fearful_anim_combined_face"
+            frames: 520
+            #duration 17.333334 sec
+
+        mimicsanim_304_fearful_anim_face:
+            animation: "fearful_anim_face"
+            frames: 520
+            #duration 17.333334 sec
+
+        mimicsanim_305_fearful_eyes_face:
+            animation: "fearful_eyes_face"
+            frames: 520
+            #duration 17.333334 sec
+
+        mimicsanim_306_fearful_eyes_soft_face:
+            animation: "fearful_eyes_soft_face"
+            frames: 520
+            #duration 17.333334 sec
+
+        mimicsanim_307_fearful_pose_face:
+            animation: "fearful_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_308_focused_anim_combined_face:
+            animation: "focused_anim_combined_face"
+            frames: 889
+            #duration 29.633333 sec
+
+        mimicsanim_309_focused_anim_face:
+            animation: "focused_anim_face"
+            frames: 889
+            #duration 29.633333 sec
+
+        mimicsanim_310_focused_eyes_face:
+            animation: "focused_eyes_face"
+            frames: 889
+            #duration 29.633333 sec
+
+        mimicsanim_311_focused_pose_face:
+            animation: "focused_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_312_grin_anim_combined_face:
+            animation: "grin_anim_combined_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_313_grin_anim_face:
+            animation: "grin_anim_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_314_grin_eyes_face:
+            animation: "grin_eyes_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_315_grin_eyes_soft_face:
+            animation: "grin_eyes_soft_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_316_grin_pose_face:
+            animation: "grin_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_317_happy_anim_combined_face:
+            animation: "happy_anim_combined_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_318_happy_anim_face:
+            animation: "happy_anim_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_319_happy_eyes_face:
+            animation: "happy_eyes_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_320_happy_eyes_soft_face:
+            animation: "happy_eyes_soft_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_321_happy_pose_face:
+            animation: "happy_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_322_head_down_head_accent_face:
+            animation: "head_down_head_accent_face"
+            frames: 22
+            #duration 0.73333335 sec
+
+        mimicsanim_323_head_left01_head_accent_face:
+            animation: "head_left01_head_accent_face"
+            frames: 55
+            #duration 1.8333334 sec
+
+        mimicsanim_324_head_right01_head_accent_face:
+            animation: "head_right01_head_accent_face"
+            frames: 57
+            #duration 1.9 sec
+
+        mimicsanim_325_head_up_head_accent_face:
+            animation: "head_up_head_accent_face"
+            frames: 37
+            #duration 1.2333333 sec
+
+        mimicsanim_326_left_brow_up_accent_face:
+            animation: "left_brow_up_accent_face"
+            frames: 28
+            #duration 0.93333334 sec
+
+        mimicsanim_327_nervous_anim_combined_face:
+            animation: "nervous_anim_combined_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_328_nervous_anim_face:
+            animation: "nervous_anim_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_329_nervous_eyes_face:
+            animation: "nervous_eyes_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_330_nervous_eyes_soft_face:
+            animation: "nervous_eyes_soft_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_331_nervous_pose_face:
+            animation: "nervous_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_332_neutral_anim_combined_face:
+            animation: "neutral_anim_combined_face"
+            frames: 610
+            #duration 20.333334 sec
+
+        mimicsanim_333_neutral_anim_face:
+            animation: "neutral_anim_face"
+            frames: 610
+            #duration 20.333334 sec
+
+        mimicsanim_334_neutral_eyes_face:
+            animation: "neutral_eyes_face"
+            frames: 610
+            #duration 20.333334 sec
+
+        mimicsanim_335_neutral_eyes_soft_face:
+            animation: "neutral_eyes_soft_face"
+            frames: 610
+            #duration 20.333334 sec
+
+        mimicsanim_336_neutral_pose_face:
+            animation: "neutral_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_337_no_head_accent_face:
+            animation: "no_head_accent_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_338_nod_head_accent_face:
+            animation: "nod_head_accent_face"
+            frames: 55
+            #duration 1.8333334 sec
+
+        mimicsanim_339_normal_blend_test_face:
+            animation: "normal_blend_test_face"
+            frames: 500
+            #duration 16.666666 sec
+
+        mimicsanim_340_pain_pose_face:
+            animation: "pain_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_341_proud_pose_face:
+            animation: "proud_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_342_quicknod_head_accent_face:
+            animation: "quicknod_head_accent_face"
+            frames: 46
+            #duration 1.5333333 sec
+
+        mimicsanim_343_right_brow_up_accent_face:
+            animation: "right_brow_up_accent_face"
+            frames: 28
+            #duration 0.93333334 sec
+
+        mimicsanim_344_sad_anim_combined_face:
+            animation: "sad_anim_combined_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_345_sad_anim_face:
+            animation: "sad_anim_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_346_sad_eyes_face:
+            animation: "sad_eyes_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_347_sad_eyes_soft_face:
+            animation: "sad_eyes_soft_face"
+            frames: 540
+            #duration 18 sec
+
+        mimicsanim_348_sad_pose_face:
+            animation: "sad_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_349_sceptic_pose_face:
+            animation: "sceptic_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_350_seducing_anim_combined_face:
+            animation: "seducing_anim_combined_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_351_seducing_anim_face:
+            animation: "seducing_anim_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_352_seducing_eyes_face:
+            animation: "seducing_eyes_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_353_seducing_eyes_soft_face:
+            animation: "seducing_eyes_soft_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_354_seducing_pose_face:
+            animation: "seducing_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_355_sleeping_anim_combined_face:
+            animation: "sleeping_anim_combined_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_356_sleeping_anim_face:
+            animation: "sleeping_anim_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_357_sleeping_eyes_face:
+            animation: "sleeping_eyes_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_358_sleeping_pose_face:
+            animation: "sleeping_pose_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_359_sleepy_eyes_face:
+            animation: "sleepy_eyes_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_360_sleepy_eyes_soft_face:
+            animation: "sleepy_eyes_soft_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_361_suprised_shocked_pose_face:
+            animation: "suprised_shocked_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_362_surprised_anim_combined_face:
+            animation: "surprised_anim_combined_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_363_surprised_anim_face:
+            animation: "surprised_anim_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_364_surprised_eyes_face:
+            animation: "surprised_eyes_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_365_surprised_eyes_soft_face:
+            animation: "surprised_eyes_soft_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_366_surprised_pose_face:
+            animation: "surprised_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_367_white_eyes_pose_face:
+            animation: "white_eyes_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_368_yes_head_accent_face:
+            animation: "yes_head_accent_face"
+            frames: 50
+            #duration 1.6666666 sec
+
+        mimicsanim_369_zero_all_face:
+            animation: "zero_all_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_370_zero_all_lookat_face:
+            animation: "zero_all_lookat_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_371_zero_all_pose_face:
+            animation: "zero_all_pose_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_372_anabelleall_face:
+            animation: "anabelleall_face"
+            frames: 850
+            #duration 28.333334 sec
+
+        mimicsanim_373_anabelleallshort_face:
+            animation: "anabelleallshort_face"
+            frames: 400
+            #duration 13.333333 sec
+
+        mimicsanim_374_anabelletest_face:
+            animation: "anabelletest_face"
+            frames: 850
+            #duration 28.333334 sec
+
+        mimicsanim_375_ep1_slow_dance_outro_shani_face:
+            animation: "ep1_slow_dance_outro_shani_face"
+            frames: 1095
+            #duration 36.5 sec
+
+        mimicsanim_376_ep2_q704_diva_breathing_face:
+            animation: "ep2_q704_diva_breathing_face"
+            frames: 140
+            #duration 4.6666665 sec
+
+        mimicsanim_377_ep2_syanna_lip_bite_face:
+            animation: "ep2_syanna_lip_bite_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_378_geralt_neutral_gesture_agreement_face:
+            animation: "geralt_neutral_gesture_agreement_face"
+            frames: 110
+            #duration 3.6666667 sec
+
+        mimicsanim_379_geralt_neutral_gesture_approval_face:
+            animation: "geralt_neutral_gesture_approval_face"
+            frames: 125
+            #duration 4.1666665 sec
+
+        mimicsanim_380_geralt_neutral_gesture_axii_face:
+            animation: "geralt_neutral_gesture_axii_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_381_geralt_neutral_gesture_closing_eyes_face:
+            animation: "geralt_neutral_gesture_closing_eyes_face"
+            frames: 170
+            #duration 5.6666665 sec
+
+        mimicsanim_382_geralt_neutral_gesture_diasppointment_face:
+            animation: "geralt_neutral_gesture_diasppointment_face"
+            frames: 160
+            #duration 5.3333335 sec
+
+        mimicsanim_383_geralt_neutral_gesture_diasppointment_neutral_face:
+            animation: "geralt_neutral_gesture_diasppointment_neutral_face"
+            frames: 160
+            #duration 5.3333335 sec
+
+        mimicsanim_384_geralt_neutral_gesture_disapproval_face:
+            animation: "geralt_neutral_gesture_disapproval_face"
+            frames: 80
+            #duration 2.6666667 sec
+
+        mimicsanim_385_geralt_neutral_gesture_dont_know_face:
+            animation: "geralt_neutral_gesture_dont_know_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_386_geralt_neutral_gesture_drinking_face:
+            animation: "geralt_neutral_gesture_drinking_face"
+            frames: 250
+            #duration 8.333333 sec
+
+        mimicsanim_387_geralt_neutral_gesture_eyeroll_face:
+            animation: "geralt_neutral_gesture_eyeroll_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_388_geralt_neutral_gesture_grimace_face:
+            animation: "geralt_neutral_gesture_grimace_face"
+            frames: 130
+            #duration 4.3333335 sec
+
+        mimicsanim_389_geralt_neutral_gesture_gulp_face:
+            animation: "geralt_neutral_gesture_gulp_face"
+            frames: 35
+            #duration 1.1666666 sec
+
+        mimicsanim_390_geralt_neutral_gesture_gulp_with_eye_blink_face:
+            animation: "geralt_neutral_gesture_gulp_with_eye_blink_face"
+            frames: 35
+            #duration 1.1666666 sec
+
+        mimicsanim_391_geralt_neutral_gesture_head_point_left_back_face:
+            animation: "geralt_neutral_gesture_head_point_left_back_face"
+            frames: 65
+            #duration 2.1666667 sec
+
+        mimicsanim_392_geralt_neutral_gesture_head_point_left_front_face:
+            animation: "geralt_neutral_gesture_head_point_left_front_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_393_geralt_neutral_gesture_head_point_left_side_face:
+            animation: "geralt_neutral_gesture_head_point_left_side_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_394_geralt_neutral_gesture_head_point_right_back_face:
+            animation: "geralt_neutral_gesture_head_point_right_back_face"
+            frames: 65
+            #duration 2.1666667 sec
+
+        mimicsanim_395_geralt_neutral_gesture_head_point_right_front_face:
+            animation: "geralt_neutral_gesture_head_point_right_front_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_396_geralt_neutral_gesture_head_point_right_side_face:
+            animation: "geralt_neutral_gesture_head_point_right_side_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_397_geralt_neutral_gesture_impatience_face:
+            animation: "geralt_neutral_gesture_impatience_face"
+            frames: 170
+            #duration 5.6666665 sec
+
+        mimicsanim_398_geralt_neutral_gesture_impressed01_face:
+            animation: "geralt_neutral_gesture_impressed01_face"
+            frames: 160
+            #duration 5.3333335 sec
+
+        mimicsanim_399_geralt_neutral_gesture_impressed02_face:
+            animation: "geralt_neutral_gesture_impressed02_face"
+            frames: 160
+            #duration 5.3333335 sec
+
+        mimicsanim_400_geralt_neutral_gesture_interrupted_01_face:
+            animation: "geralt_neutral_gesture_interrupted_01_face"
+            frames: 150
+            #duration 5 sec
+
+        mimicsanim_401_geralt_neutral_gesture_kiss_short_face:
+            animation: "geralt_neutral_gesture_kiss_short_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_402_geralt_neutral_gesture_laugh_snort_face:
+            animation: "geralt_neutral_gesture_laugh_snort_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_403_geralt_neutral_gesture_laughter_face:
+            animation: "geralt_neutral_gesture_laughter_face"
+            frames: 135
+            #duration 4.5 sec
+
+        mimicsanim_404_geralt_neutral_gesture_licklips_face:
+            animation: "geralt_neutral_gesture_licklips_face"
+            frames: 75
+            #duration 2.5 sec
+
+        mimicsanim_405_geralt_neutral_gesture_listen_to_me_face:
+            animation: "geralt_neutral_gesture_listen_to_me_face"
+            frames: 170
+            #duration 5.6666665 sec
+
+        mimicsanim_406_geralt_neutral_gesture_look_around_slow_face:
+            animation: "geralt_neutral_gesture_look_around_slow_face"
+            frames: 310
+            #duration 10.333333 sec
+
+        mimicsanim_407_geralt_neutral_gesture_maybe_face:
+            animation: "geralt_neutral_gesture_maybe_face"
+            frames: 85
+            #duration 2.8333333 sec
+
+        mimicsanim_408_geralt_neutral_gesture_no_face:
+            animation: "geralt_neutral_gesture_no_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_409_geralt_neutral_gesture_no_long_face:
+            animation: "geralt_neutral_gesture_no_long_face"
+            frames: 215
+            #duration 7.1666665 sec
+
+        mimicsanim_410_geralt_neutral_gesture_no_noface_face:
+            animation: "geralt_neutral_gesture_no_noface_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_411_geralt_neutral_gesture_no_short_face:
+            animation: "geralt_neutral_gesture_no_short_face"
+            frames: 55
+            #duration 1.8333334 sec
+
+        mimicsanim_412_geralt_neutral_gesture_nod_face:
+            animation: "geralt_neutral_gesture_nod_face"
+            frames: 55
+            #duration 1.8333334 sec
+
+        mimicsanim_413_geralt_neutral_gesture_question_direct_face:
+            animation: "geralt_neutral_gesture_question_direct_face"
+            frames: 37
+            #duration 1.2333333 sec
+
+        mimicsanim_414_geralt_neutral_gesture_question_ver01_not_bad_face:
+            animation: "geralt_neutral_gesture_question_ver01_not_bad_face"
+            frames: 80
+            #duration 2.6666667 sec
+
+        mimicsanim_415_geralt_neutral_gesture_question_ver01_not_bad_with_blink_face:
+            animation: "geralt_neutral_gesture_question_ver01_not_bad_with_blink_face"
+            frames: 80
+            #duration 2.6666667 sec
+
+        mimicsanim_416_geralt_neutral_gesture_question_ver02_happy_face:
+            animation: "geralt_neutral_gesture_question_ver02_happy_face"
+            frames: 80
+            #duration 2.6666667 sec
+
+        mimicsanim_417_geralt_neutral_gesture_question_ver03_face:
+            animation: "geralt_neutral_gesture_question_ver03_face"
+            frames: 80
+            #duration 2.6666667 sec
+
+        mimicsanim_418_geralt_neutral_gesture_question_ver04_face:
+            animation: "geralt_neutral_gesture_question_ver04_face"
+            frames: 85
+            #duration 2.8333333 sec
+
+        mimicsanim_419_geralt_neutral_gesture_question_ver05_face:
+            animation: "geralt_neutral_gesture_question_ver05_face"
+            frames: 70
+            #duration 2.3333333 sec
+
+        mimicsanim_420_geralt_neutral_gesture_quicknod_face:
+            animation: "geralt_neutral_gesture_quicknod_face"
+            frames: 31
+            #duration 1.0333333 sec
+
+        mimicsanim_421_geralt_neutral_gesture_rapid_head_flick_up_face:
+            animation: "geralt_neutral_gesture_rapid_head_flick_up_face"
+            frames: 35
+            #duration 1.1666666 sec
+
+        mimicsanim_422_geralt_neutral_gesture_reaction_01_face:
+            animation: "geralt_neutral_gesture_reaction_01_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_423_geralt_neutral_gesture_reaction_02_face:
+            animation: "geralt_neutral_gesture_reaction_02_face"
+            frames: 150
+            #duration 5 sec
+
+        mimicsanim_424_geralt_neutral_gesture_really_face:
+            animation: "geralt_neutral_gesture_really_face"
+            frames: 85
+            #duration 2.8333333 sec
+
+        mimicsanim_425_geralt_neutral_gesture_resentful_face:
+            animation: "geralt_neutral_gesture_resentful_face"
+            frames: 120
+            #duration 4 sec
+
+        mimicsanim_426_geralt_neutral_gesture_sceptical_remark_face:
+            animation: "geralt_neutral_gesture_sceptical_remark_face"
+            frames: 101
+            #duration 3.3666666 sec
+
+        mimicsanim_427_geralt_neutral_gesture_shake_it_off_face:
+            animation: "geralt_neutral_gesture_shake_it_off_face"
+            frames: 80
+            #duration 2.6666667 sec
+
+        mimicsanim_428_geralt_neutral_gesture_shout_no_way_face:
+            animation: "geralt_neutral_gesture_shout_no_way_face"
+            frames: 87
+            #duration 2.9 sec
+
+        mimicsanim_429_geralt_neutral_gesture_shout_out_of_my_sight_face:
+            animation: "geralt_neutral_gesture_shout_out_of_my_sight_face"
+            frames: 171
+            #duration 5.7 sec
+
+        mimicsanim_430_geralt_neutral_gesture_shout_outta_my_way_face:
+            animation: "geralt_neutral_gesture_shout_outta_my_way_face"
+            frames: 65
+            #duration 2.1666667 sec
+
+        mimicsanim_431_geralt_neutral_gesture_shout_youre_wrong_face:
+            animation: "geralt_neutral_gesture_shout_youre_wrong_face"
+            frames: 75
+            #duration 2.5 sec
+
+        mimicsanim_432_geralt_neutral_gesture_shut_up_face:
+            animation: "geralt_neutral_gesture_shut_up_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_433_geralt_neutral_gesture_smile_face:
+            animation: "geralt_neutral_gesture_smile_face"
+            frames: 67
+            #duration 2.2333333 sec
+
+        mimicsanim_434_geralt_neutral_gesture_smile_syanna_face:
+            animation: "geralt_neutral_gesture_smile_syanna_face"
+            frames: 67
+            #duration 2.2333333 sec
+
+        mimicsanim_435_geralt_neutral_gesture_smile02_face:
+            animation: "geralt_neutral_gesture_smile02_face"
+            frames: 120
+            #duration 4 sec
+
+        mimicsanim_436_geralt_neutral_gesture_smile02_syanna_face:
+            animation: "geralt_neutral_gesture_smile02_syanna_face"
+            frames: 120
+            #duration 4 sec
+
+        mimicsanim_437_geralt_neutral_gesture_smile03_syanna_face:
+            animation: "geralt_neutral_gesture_smile03_syanna_face"
+            frames: 180
+            #duration 6 sec
+
+        mimicsanim_438_geralt_neutral_gesture_sour_face:
+            animation: "geralt_neutral_gesture_sour_face"
+            frames: 180
+            #duration 6 sec
+
+        mimicsanim_439_geralt_neutral_gesture_squint_old_face:
+            animation: "geralt_neutral_gesture_squint old_face"
+            frames: 75
+            #duration 2.5 sec
+
+        mimicsanim_440_geralt_neutral_gesture_squint_face:
+            animation: "geralt_neutral_gesture_squint_face"
+            frames: 73
+            #duration 2.4333334 sec
+
+        mimicsanim_441_geralt_neutral_gesture_supreme_meaning_face:
+            animation: "geralt_neutral_gesture_supreme_meaning_face"
+            frames: 140
+            #duration 4.6666665 sec
+
+        mimicsanim_442_geralt_neutral_gesture_suprised_worried_face:
+            animation: "geralt_neutral_gesture_suprised_worried_face"
+            frames: 95
+            #duration 3.1666667 sec
+
+        mimicsanim_443_geralt_neutral_gesture_sure_sure_face:
+            animation: "geralt_neutral_gesture_sure_sure_face"
+            frames: 132
+            #duration 4.4 sec
+
+        mimicsanim_444_geralt_neutral_gesture_sure_sure_face:
+            animation: "geralt_neutral_gesture_sure_sure_face"
+            frames: 125
+            #duration 4.1666665 sec
+
+        mimicsanim_445_geralt_neutral_gesture_vodka_face:
+            animation: "geralt_neutral_gesture_vodka_face"
+            frames: 200
+            #duration 6.6666665 sec
+
+        mimicsanim_446_geralt_neutral_gesture_warning_face:
+            animation: "geralt_neutral_gesture_warning_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_447_geralt_neutral_gesture_warning_you_taking_to_me_face:
+            animation: "geralt_neutral_gesture_warning_you_taking_to_me_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_448_geralt_neutral_gesture_what_did_you_say_face:
+            animation: "geralt_neutral_gesture_what_did_you_say_face"
+            frames: 135
+            #duration 4.5 sec
+
+        mimicsanim_449_geralt_neutral_gesture_what_face:
+            animation: "geralt_neutral_gesture_what_face"
+            frames: 115
+            #duration 3.8333333 sec
+
+        mimicsanim_450_geralt_neutral_gesture_what_ver02_face:
+            animation: "geralt_neutral_gesture_what_ver02_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_451_geralt_neutral_gesture_whew_face:
+            animation: "geralt_neutral_gesture_whew_face"
+            frames: 130
+            #duration 4.3333335 sec
+
+        mimicsanim_452_geralt_neutral_gesture_white_eyes_face:
+            animation: "geralt_neutral_gesture_white_eyes_face"
+            frames: 185
+            #duration 6.1666665 sec
+
+        mimicsanim_453_geralt_neutral_gesture_wink_face:
+            animation: "geralt_neutral_gesture_wink_face"
+            frames: 30
+            #duration 1 sec
+
+        mimicsanim_454_geralt_neutral_gesture_wondering_face:
+            animation: "geralt_neutral_gesture_wondering_face"
+            frames: 156
+            #duration 5.2 sec
+
+        mimicsanim_455_geralt_neutral_gesture_yawn_face:
+            animation: "geralt_neutral_gesture_yawn_face"
+            frames: 250
+            #duration 8.333333 sec
+
+        mimicsanim_456_geralt_neutral_gesture_yes_face:
+            animation: "geralt_neutral_gesture_yes_face"
+            frames: 71
+            #duration 2.3666666 sec
+
+        mimicsanim_457_geralt_neutral_gesture_yes_noface_face:
+            animation: "geralt_neutral_gesture_yes_noface_face"
+            frames: 71
+            #duration 2.3666666 sec
+
+        mimicsanim_458_geralt_neutral_gesture_yes_slow_face:
+            animation: "geralt_neutral_gesture_yes_slow_face"
+            frames: 98
+            #duration 3.2666667 sec
+
+        mimicsanim_459_geralt_neutral_gesture_you_kiddin_face:
+            animation: "geralt_neutral_gesture_you_kiddin_face"
+            frames: 140
+            #duration 4.6666665 sec
+
+        mimicsanim_460_geralt_neutral_no_contempt_face:
+            animation: "geralt_neutral_no_contempt_face"
+            frames: 135
+            #duration 4.5 sec
+
+        mimicsanim_461_geralt_neutral_no_fast_face:
+            animation: "geralt_neutral_no_fast_face"
+            frames: 80
+            #duration 2.6666667 sec
+
+        mimicsanim_462_geralt_neutral_no_not_a_chance_face:
+            animation: "geralt_neutral_no_not_a_chance_face"
+            frames: 43
+            #duration 1.4333333 sec
+
+        mimicsanim_463_geralt_neutral_no_slow_face:
+            animation: "geralt_neutral_no_slow_face"
+            frames: 132
+            #duration 4.4 sec
+
+        mimicsanim_464_geralt_neutral_question_can_we_beat_them_face:
+            animation: "geralt_neutral_question_can_we_beat_them_face"
+            frames: 75
+            #duration 2.5 sec
+
+        mimicsanim_465_geralt_neutral_question_king_slaughtered_face:
+            animation: "geralt_neutral_question_king_slaughtered_face"
+            frames: 79
+            #duration 2.6333334 sec
+
+        mimicsanim_466_geralt_neutral_question_problem_face:
+            animation: "geralt_neutral_question_problem_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_467_geralt_neutral_question_what_did_ya_say_face:
+            animation: "geralt_neutral_question_what_did_ya_say_face"
+            frames: 70
+            #duration 2.3333333 sec
+
+        mimicsanim_468_geralt_neutral_question_where_face:
+            animation: "geralt_neutral_question_where_face"
+            frames: 95
+            #duration 3.1666667 sec
+
+        mimicsanim_469_geralt_neutral_question_where_monsters_face:
+            animation: "geralt_neutral_question_where_monsters_face"
+            frames: 102
+            #duration 3.4 sec
+
+        mimicsanim_470_geralt_neutral_question_why_face:
+            animation: "geralt_neutral_question_why_face"
+            frames: 51
+            #duration 1.7 sec
+
+        mimicsanim_471_geralt_neutral_question_you_sure_face:
+            animation: "geralt_neutral_question_you_sure_face"
+            frames: 90
+            #duration 3 sec
+
+        mimicsanim_472_geralt_neutral_shout_cheers_face:
+            animation: "geralt_neutral_shout_cheers_face"
+            frames: 75
+            #duration 2.5 sec
+
+        mimicsanim_473_geralt_neutral_shout_hurray_face:
+            animation: "geralt_neutral_shout_hurray_face"
+            frames: 72
+            #duration 2.4 sec
+
+        mimicsanim_474_geralt_neutral_shout_we_won_face:
+            animation: "geralt_neutral_shout_we_won_face"
+            frames: 96
+            #duration 3.2 sec
+
+        mimicsanim_475_geralt_neutral_shout_you_falied_face:
+            animation: "geralt_neutral_shout_you_falied_face"
+            frames: 81
+            #duration 2.7 sec
+
+        mimicsanim_476_geralt_neutral_yes_long_face:
+            animation: "geralt_neutral_yes_long_face"
+            frames: 116
+            #duration 3.8666666 sec
+
+        mimicsanim_477_geralt_neutral_yes_ok_face:
+            animation: "geralt_neutral_yes_ok_face"
+            frames: 40
+            #duration 1.3333334 sec
+
+        mimicsanim_478_geralt_neutral_yes_slow_face:
+            animation: "geralt_neutral_yes_slow_face"
+            frames: 135
+            #duration 4.5 sec
+
+        mimicsanim_479_geralt_passionate_kiss_front_01_face:
+            animation: "geralt_passionate_kiss_front_01_face"
+            frames: 576
+            #duration 19.2 sec
+
+        mimicsanim_480_geralt_pose_eye_darts_nervous_face:
+            animation: "geralt_pose_eye_darts_nervous_face"
+            frames: 550
+            #duration 18.333334 sec
+
+        mimicsanim_481_geralt_pose_eye_darts_normal_face:
+            animation: "geralt_pose_eye_darts_normal_face"
+            frames: 500
+            #duration 16.666666 sec
+
+        mimicsanim_482_geralt_pose_eye_darts_tired_sleepy_face:
+            animation: "geralt_pose_eye_darts_tired_sleepy_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_483_geralt_pose_subtle_gestures_face:
+            animation: "geralt_pose_subtle_gestures_face"
+            frames: 500
+            #duration 16.666666 sec
+
+        mimicsanim_484_geralt_reaction_admiration_face:
+            animation: "geralt_reaction_admiration_face"
+            frames: 381
+            #duration 12.7 sec
+
+        mimicsanim_485_geralt_reaction_anger_restrain_face:
+            animation: "geralt_reaction_anger_restrain_face"
+            frames: 220
+            #duration 7.3333335 sec
+
+        mimicsanim_486_geralt_reaction_anguish_face:
+            animation: "geralt_reaction_anguish_face"
+            frames: 280
+            #duration 9.333333 sec
+
+        mimicsanim_487_geralt_reaction_annoyed_face:
+            animation: "geralt_reaction_annoyed_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_488_geralt_reaction_bored_face:
+            animation: "geralt_reaction_bored_face"
+            frames: 240
+            #duration 8 sec
+
+        mimicsanim_489_geralt_reaction_confidence_face:
+            animation: "geralt_reaction_confidence_face"
+            frames: 210
+            #duration 7 sec
+
+        mimicsanim_490_geralt_reaction_consternation_face:
+            animation: "geralt_reaction_consternation_face"
+            frames: 210
+            #duration 7 sec
+
+        mimicsanim_491_geralt_reaction_disgust_face:
+            animation: "geralt_reaction_disgust_face"
+            frames: 230
+            #duration 7.6666665 sec
+
+        mimicsanim_492_geralt_reaction_embarrassment_face:
+            animation: "geralt_reaction_embarrassment_face"
+            frames: 260
+            #duration 8.666667 sec
+
+        mimicsanim_493_geralt_reaction_eye_smile_face:
+            animation: "geralt_reaction_eye_smile_face"
+            frames: 240
+            #duration 8 sec
+
+        mimicsanim_494_geralt_reaction_eye_smile_syanna_face:
+            animation: "geralt_reaction_eye_smile_syanna_face"
+            frames: 240
+            #duration 8 sec
+
+        mimicsanim_495_geralt_reaction_grief_face:
+            animation: "geralt_reaction_grief_face"
+            frames: 230
+            #duration 7.6666665 sec
+
+        mimicsanim_496_geralt_reaction_horrified_face:
+            animation: "geralt_reaction_horrified_face"
+            frames: 187
+            #duration 6.233333 sec
+
+        mimicsanim_497_geralt_reaction_humiliation_face:
+            animation: "geralt_reaction_humiliation_face"
+            frames: 468
+            #duration 15.6 sec
+
+        mimicsanim_498_geralt_reaction_i_dont_agree_face:
+            animation: "geralt_reaction_i_dont_agree_face"
+            frames: 170
+            #duration 5.6666665 sec
+
+        mimicsanim_499_geralt_reaction_i_dont_understand_face:
+            animation: "geralt_reaction_i_dont_understand_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_500_geralt_reaction_irritation_face:
+            animation: "geralt_reaction_irritation_face"
+            frames: 280
+            #duration 9.333333 sec
+
+        mimicsanim_501_geralt_reaction_listening_new_info_face:
+            animation: "geralt_reaction_listening_new_info_face"
+            frames: 270
+            #duration 9 sec
+
+        mimicsanim_502_geralt_reaction_mad_face:
+            animation: "geralt_reaction_mad_face"
+            frames: 60
+            #duration 2 sec
+
+        mimicsanim_503_geralt_reaction_rage_face:
+            animation: "geralt_reaction_rage_face"
+            frames: 225
+            #duration 7.5 sec
+
+        mimicsanim_504_geralt_reaction_relief_face:
+            animation: "geralt_reaction_relief_face"
+            frames: 180
+            #duration 6 sec
+
+        mimicsanim_505_geralt_reaction_sad_face:
+            animation: "geralt_reaction_sad_face"
+            frames: 180
+            #duration 6 sec
+
+        mimicsanim_506_geralt_reaction_scepticism_face:
+            animation: "geralt_reaction_scepticism_face"
+            frames: 330
+            #duration 11 sec
+
+        mimicsanim_507_geralt_reaction_searching_for_words_face:
+            animation: "geralt_reaction_searching_for_words_face"
+            frames: 160
+            #duration 5.3333335 sec
+
+        mimicsanim_508_geralt_reaction_smile_face:
+            animation: "geralt_reaction_smile_face"
+            frames: 270
+            #duration 9 sec
+
+        mimicsanim_509_geralt_reaction_thankful_face:
+            animation: "geralt_reaction_thankful_face"
+            frames: 140
+            #duration 4.6666665 sec
+
+        mimicsanim_510_geralt_reaction_uncertain_face:
+            animation: "geralt_reaction_uncertain_face"
+            frames: 205
+            #duration 6.8333335 sec
+
+        mimicsanim_511_geralt_reacton_tired_face:
+            animation: "geralt_reacton_tired_face"
+            frames: 180
+            #duration 6 sec
+
+        mimicsanim_512_geralt_neutral_gesture_disapproval_face:
+            animation: "geralt_neutral_gesture_disapproval_face"
+            frames: 72
+            #duration 2.4 sec
+
+        mimicsanim_513_geralt_neutral_gesture_mouth2_face:
+            animation: "geralt_neutral_gesture_mouth2_face"
+            frames: 70
+            #duration 2.3333333 sec
+
+        mimicsanim_514_geralt_neutral_gesture_mouth3_face:
+            animation: "geralt_neutral_gesture_mouth3_face"
+            frames: 75
+            #duration 2.5 sec
+
+        mimicsanim_515_geralt_neutral_gesture_reaction_01_face:
+            animation: "geralt_neutral_gesture_reaction_01_face"
+            frames: 180
+            #duration 6 sec
+
+        mimicsanim_516_geralt_neutral_gesture_shout_youre_wrong_face:
+            animation: "geralt_neutral_gesture_shout_youre_wrong_face"
+            frames: 80
+            #duration 2.6666667 sec
+
+        mimicsanim_517_geralt_neutral_no_not_a_chance_face:
+            animation: "geralt_neutral_no_not_a_chance_face"
+            frames: 40
+            #duration 1.3333334 sec
+
+        mimicsanim_518_geralt_neutral_yes_ok_face:
+            animation: "geralt_neutral_yes_ok_face"
+            frames: 35
+            #duration 1.1666666 sec
+
+        mimicsanim_519_geralt_pose_anger_face:
+            animation: "geralt_pose_anger_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_520_geralt_pose_bursting_anger_listening_face:
+            animation: "geralt_pose_bursting_anger_listening_face"
+            frames: 500
+            #duration 16.666666 sec
+
+        mimicsanim_521_geralt_pose_contempt_face:
+            animation: "geralt_pose_contempt_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_522_geralt_pose_disgust_face:
+            animation: "geralt_pose_disgust_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_523_geralt_pose_fear_face:
+            animation: "geralt_pose_fear_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_524_geralt_pose_focused_face:
+            animation: "geralt_pose_focused_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_525_geralt_pose_happiness_face:
+            animation: "geralt_pose_happiness_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_526_geralt_pose_listening_face:
+            animation: "geralt_pose_listening_face"
+            frames: 127
+            #duration 4.233333 sec
+
+        mimicsanim_527_geralt_pose_neutral_face:
+            animation: "geralt_pose_neutral_face"
+            frames: 600
+            #duration 20 sec
+
+        mimicsanim_528_geralt_pose_pride_face:
+            animation: "geralt_pose_pride_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_529_geralt_pose_sadness_face:
+            animation: "geralt_pose_sadness_face"
+            frames: 300
+            #duration 10 sec
+
+        mimicsanim_530_geralt_pose_sceptic_face:
+            animation: "geralt_pose_sceptic_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_531_geralt_pose_surprise_face:
+            animation: "geralt_pose_surprise_face"
+            frames: 10
+            #duration 0.33333334 sec
+
+        mimicsanim_532_geralt_pose_surprised_face:
+            animation: "geralt_pose_surprised_face"
+            frames: 100
+            #duration 3.3333333 sec
+
+        mimicsanim_533_geralt_reaction_disgust_face:
+            animation: "geralt_reaction_disgust_face"
+            frames: 220
+            #duration 7.3333335 sec
+
+        mimicsanim_534_geralt_reaction_i_dont_agree_face:
+            animation: "geralt_reaction_I_dont_agree_face"
+            frames: 170
+            #duration 5.6666665 sec
+
+        mimicsanim_535_geralt_reaction_mad_face:
+            animation: "geralt_reaction_mad_face"
+            frames: 76
+            #duration 2.5333333 sec

@@ -1,0 +1,45 @@
+repository:
+  actors:
+    Baron_Edward:
+      template: "dlc\\dlcntr\\data\\entities\\baron_edward.w2ent"
+      appearance: [ "bob_knight_15" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 625
+
+  gameplay: true
+  cinematic_subtitles: false
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      Baron_Edward:
+        repo: "Baron_Edward"
+        by_voicetag: false
+        appearance: "bob_knight_15"
+        tags: [ "ntr_baron_edward" ]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "Baron_Edward", "geralt" ]
+
+  section_start_camp_reminder:
+    - Baron_Edward: "Remember, witcher, the boy can't be harmed."
+    - NEXT: section_exit
+
+  section_start_camp_not_yet:
+    - Baron_Edward: "Did you find Orianna?"
+    - geralt: "[0.9865819]0001035069|Not yet."
+    - Baron_Edward: "Then go and work!"
+    - NEXT: section_exit
+
+  section_exit:
+    - EXIT
+

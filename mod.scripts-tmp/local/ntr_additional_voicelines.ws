@@ -11,6 +11,7 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670651, category, "group 1", "A_letter____Who's_using_an_owl_for_this_", 3.1468));
     lines.PushBack(SSbUiExtraLines(2114670652, category, "group 1", "Regis____Just_trying_to_avoid_a_fight__to_protect_", 4.78));
     lines.PushBack(SSbUiExtraLines(2114670653, category, "group 1", "Well__I_should_check_an_orphanage_in_a_swamp__Last", 5.3381));
+    lines.PushBack(SSbUiExtraLines(2114670654, category, "group 1", "Go_home__I'm_a_witcher__Need_to_examine_the_body_", 4.2495));
     lines.PushBack(SSbUiExtraLines(2114670700, category, "group 1", "Triss_!_I_should_talk_to_her_", 2.1154));
     lines.PushBack(SSbUiExtraLines(2114670705, category, "group 1", "I've_been_thinking_about_us_", 1.8566));
     lines.PushBack(SSbUiExtraLines(2114670706, category, "group 1", "I'm_looking_for___", 1.1954));
@@ -34,13 +35,13 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670739, category, "group 1", "Fuck_you!", 1.0363));
     lines.PushBack(SSbUiExtraLines(2114670740, category, "group 1", "Death_mistake_", 1.3369));
     lines.PushBack(SSbUiExtraLines(2114670745, category, "group 1", "Crazy_nightmare_", 1.3958));
-    lines.PushBack(SSbUiExtraLines(2114670763, category, "group 1", "Me__Drifter__stranger__mutant____Sometimes_even_by", 7.7509));
-    lines.PushBack(SSbUiExtraLines(2114670768, category, "group 1", "I_suppose_to_find_a_red-haired_woman_here_", 2.7976));
-    lines.PushBack(SSbUiExtraLines(2114670770, category, "group 1", "Why_are_you_looking_for_her_", 1.4995));
-    lines.PushBack(SSbUiExtraLines(2114670772, category, "group 1", "The_orphanage_was_attacked_and_almost_none_of_the_", 4.5639));
-    lines.PushBack(SSbUiExtraLines(2114670775, category, "group 1", "Why_are_you_interested_in_children_", 1.7966));
-    lines.PushBack(SSbUiExtraLines(2114670777, category, "group 1", "Orianna_will_kill_you__She_is_a_monster__not_a_hum", 7.8518));
-    lines.PushBack(SSbUiExtraLines(2114670781, category, "group 1", "It's_a_deal__Where_can_I_find_him_", 2.322));
+    lines.PushBack(SSbUiExtraLines(2114670763, category, "group 1", "-missing-", 7.7509));
+    lines.PushBack(SSbUiExtraLines(2114670768, category, "group 1", "-missing-", 2.7976));
+    lines.PushBack(SSbUiExtraLines(2114670770, category, "group 1", "-missing-", 1.4995));
+    lines.PushBack(SSbUiExtraLines(2114670772, category, "group 1", "-missing-", 4.5639));
+    lines.PushBack(SSbUiExtraLines(2114670775, category, "group 1", "-missing-", 1.7966));
+    lines.PushBack(SSbUiExtraLines(2114670777, category, "group 1", "-missing-", 7.8518));
+    lines.PushBack(SSbUiExtraLines(2114670781, category, "group 1", "-missing-", 2.322));
     lines.PushBack(SSbUiExtraLines(2114670795, category, "group 1", "Interesting__Son_of_a_bandit_in_the_vampire's_claw", 4.2789));
     lines.PushBack(SSbUiExtraLines(2114670800, category, "group 1", "Gonna_answer_me_", 1.0482));
     lines.PushBack(SSbUiExtraLines(2114670813, category, "group 1", "I_see_it_now__It's_a_deal_", 2.3149));

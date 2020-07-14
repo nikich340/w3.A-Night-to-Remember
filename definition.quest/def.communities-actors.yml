@@ -1,4 +1,113 @@
 communities:
+  comm_town_corpse_folk:
+    actors:
+      bob_noble_female:
+        template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_citizen\\bob_noble_female.w2ent"
+        appearances: [ "bob_noble_female_19" ]
+
+      bob_citizen_female:
+        template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_citizen\\bob_citizen_female.w2ent"
+        appearances: [ "bob_citizen_female_04" ]
+
+      bob_citizen_poor:
+        template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_citizen\\bob_citizen_poor.w2ent"
+        appearances: [ "bob_citizen_poor_08" ]
+
+      bob_citizen:
+        template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_citizen\\bob_citizen.w2ent"
+        appearances: [ "bob_citizen_14" ]
+
+      bob_guard_lvl1_community:
+        template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_guard\\community\\bob_guard_lvl1_community.w2ent"
+        appearances: [ "bob_guard_lvl1_01" ]
+
+    phases:
+      folk_near_corpse:
+        bob_noble_female:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/corpse_folk_ap_upset_woman1
+
+        bob_citizen_female:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/corpse_folk_ap_upset_woman2
+
+        bob_citizen_poor:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/corpse_folk_ap_upset_man1
+
+        bob_citizen:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/corpse_folk_ap_upset_man2
+
+        bob_guard_lvl1_community:
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/corpse_folk_ap_guard
+
+      folk_far_corpse:
+        bob_noble_female:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/corpse_folk_ap_upset_woman1_far
+
+        bob_citizen_female:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/corpse_folk_ap_upset_woman2_far
+
+        bob_citizen_poor:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/corpse_folk_ap_upset_man1_far
+
+        bob_citizen:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/corpse_folk_ap_upset_man2_far
+
+        bob_guard_lvl1_community:
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/corpse_folk_ap_guard
+
+  comm_fisherman:
+    actors:
+      fisherman:
+        template: dlc\bob\data\gameplay\community\community_npcs\vineyard\toussaint_fisherman.w2ent
+        appearances: [ "bob_vineyard_13" ]
+        tags: [ "ntr_fisherman" ]
+
+    phases:
+      usual:
+        fisherman:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/fisherman_sit_fishing
+
   comm_camp_bandit_axe_night:
     actors:
       bandit_axe:
@@ -49,7 +158,7 @@ communities:
         tags: [ "ntr_camp_horse_baron" ]
 
     phases:
-      before_scene:
+      for_scene:
         bandit_baron:
           use_last_ap: false
           start_in_ap: false
@@ -61,6 +170,23 @@ communities:
           start_in_ap: false
           spawn_at: bob/spawnpoint_beach2
           
+      waiting_negotiate:
+        bandit_baron:
+          #attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/baron_sit_bored
+
+        horse_baron:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/horse_baron_still
+            "08:00": bob/horse_baron_parked
+
+
       usual_day:
         bandit_baron:
           #attitude: friendly

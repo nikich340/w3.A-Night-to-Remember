@@ -767,7 +767,7 @@ dialogscript:
     # (longest) anim: high_standing_determined_gesture_greeting_01: 2.866667
     # shot grlt looking cam
     - CUE: shot_4
-    - geralt: "0000562397|What are you doing here?"
+    - geralt: "[1.4869741]0000562397|What're you doing here?"
     #- PAUSE: 2.8666665554
     # shot triss looking cam
     - CUE: shot_5
@@ -790,7 +790,7 @@ dialogscript:
     - CUE: shot_8
     # (longest) anim: geralt_neutral_gesture_brows_down_face_nrml
     - PAUSE: 1.0
-    - geralt: "0000490892|Triss, stop."
+    - geralt: "[1.1725289]0000490892|Triss, stop."
     # shot triss you dont like me
     - CUE: shot_9
     - PAUSE: 5.0
@@ -802,7 +802,7 @@ dialogscript:
     # shot grlt shoked
     - CUE: shot_11
     - PAUSE: 2.0
-    - geralt: "0001047817|Who are you?!"
+    - geralt: "[1.2607484]0001047817|Who are you?!"
     - PAUSE: 1.0
     # I am your nighmare!
     - CUE: shot_12
@@ -819,4 +819,5 @@ dialogscript:
   section_exit:
     - CAMERA_BLEND: 1.0
     - EXIT
+
 
