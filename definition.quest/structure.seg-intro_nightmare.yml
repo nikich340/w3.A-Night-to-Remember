@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 510, saved: 2020-07-14 23:15:54)
+# (version: 538, saved: 2020-07-15 22:37:45)
 #
 ---
 structure:
@@ -309,7 +309,7 @@ structure:
             pos: [ 4700.0, 325.0 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRPlayMusic
+          function: NTR_PlayMusic
           parameter:
             - areaName: toussaint
             - eventName: mus_q701_bruxa_combat_loop
@@ -320,7 +320,7 @@ structure:
             pos: [ 3500.0, 525.0 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRPlayMusic
+          function: NTR_PlayMusic
           parameter:
             - areaName: toussaint
             - eventName: mus_credits_ep2_secondary

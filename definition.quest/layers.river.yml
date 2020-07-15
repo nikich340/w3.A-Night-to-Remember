@@ -1,5 +1,5 @@
 layers: 
-  river: 
+  orianna_house: 
     world: "bob"
     #context: ""
     actionpoints: 
@@ -94,20 +94,67 @@ layers:
       secret_letter: 
         template: "W3AnimatedContainer:dlc\\bob\\data\\gameplay\\interactive_fluff_books\\books_fluff\\ep2_poi_gor_d_06_note02.w2ent"
         pos: [ -181.2409973145, -449.7529907227, 15.9700002670 ]
-        rot: [ 0.0, 0.0, 0.0 ]
+        rot: [ 0.0, 0.0, 0.0 ]      
 
-      footprints_to_cemetery: 
-        template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
-        tags: [ "ntr_footprints_to_cemetery" ]
-        pos: [ -54.9851188660, -1506.3664550781, 16.5360107422 ]
-        rot: [ 0.0, 0.0, 67.7600250244 ]
+  cemetery:
+    world: "bob"
+    #context: ""
 
-      footprints_to_cemetery_1: 
-        template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
-        tags: [ "ntr_footprints_to_cemetery" ]
-        pos: [ -54.2190170288, -1506.7541503906, 16.5019531250 ]
-        rot: [ 0.0, 0.0, 53.6800155640 ]
+    areas: 
+      cemetary_area: 
+        height: 5.0
+        borderpoints: 
+          - [ -33.0157318115, -1523.4197998047, 8.4794301987 ]
+          - [ -34.0157508850, -1521.6878662109, 8.4794301987 ]
+          - [ -36.0157241821, -1521.6878662109, 8.4794301987 ]
+          - [ -37.0156631470, -1523.4197998047, 8.4794301987 ]
+          - [ -37.1171684265, -1525.5489501953, 8.4794301987 ]
+          - [ -34.0157508850, -1525.1517333984, 8.4794301987 ]
 
+      cemetary_area_1: 
+        height: 8.0
+        borderpoints: 
+          - [ -16.2492351532, -1517.5726318359, 5.8709144592 ]
+          - [ -18.7491798401, -1513.2427978516, 5.8709144592 ]
+          - [ -23.7493076324, -1513.2427978516, 5.8709144592 ]
+          - [ -26.2491626740, -1517.5726318359, 5.8709144592 ]
+          - [ -25.4580535889, -1521.8367919922, 5.8709144592 ]
+          - [ -18.7491798401, -1521.9024658203, 5.8709144592 ]
+
+      cemetary_area_2: 
+        height: 8.0
+        borderpoints: 
+          - [ -8.1572933197, -1488.0349121094, 5.0792837143 ]
+          - [ -10.6572380066, -1483.7050781250, 5.0792837143 ]
+          - [ -15.6573705673, -1483.7050781250, 5.0792837143 ]
+          - [ -18.1572189331, -1488.0349121094, 5.0792837143 ]
+          - [ -17.3661117554, -1492.2990722656, 5.0792837143 ]
+          - [ -10.6572380066, -1492.3647460938, 5.0792837143 ]
+
+      cemetary_area_3: 
+        height: 8.0
+        borderpoints: 
+          - [ 12.9637355804, -1436.2973632813, 0.1094337702 ]
+          - [ 10.9637508392, -1432.8334960938, 0.1094337553 ]
+          - [ 6.9637017250, -1432.8334960938, 0.1094337553 ]
+          - [ 4.9638061523, -1436.2973632813, 0.1094337553 ]
+          - [ 5.4573926926, -1439.8498535156, 0.1094337702 ]
+          - [ 10.9637508392, -1439.7612304688, 0.1094337553 ]
+
+    mappins:
+      cemetary_pin: 
+        #radius for quest instructions: 20
+        pos: [ -37.7541007996, -1515.0567626953, 11.0797119141 ]
+
+      cemetary_pin_1: 
+        #radius for quest instructions: 21
+        pos: [ -16.7144412994, -1498.3024902344, 5.6812133789 ]
+
+      cemetary_pin_2: 
+        #radius for quest instructions: 22
+        pos: [ -2.0162007809, -1459.5850830078, 5.7678012848 ]
+
+    statics: 
       footprints_to_cemetery_10: 
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_footprints_to_cemetery" ]
@@ -216,11 +263,7 @@ layers:
         pos: [ -35.5527420044, -1523.2692871094, 10.1160316467 ]
         rot: [ 0.0, 0.0, -34.9799270630 ]
 
-      footprints_to_cemetery_27: 
-        template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
-        tags: [ "ntr_footprints_to_cemetery" ]
-        pos: [ -35.9581184387, -1523.9885253906, 10.2429809570 ]
-        rot: [ 0.0, 0.0, -29.2599258423 ]
+      
 
       footprints_to_cemetery_3: 
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
@@ -264,35 +307,58 @@ layers:
         pos: [ -45.2188110352, -1509.3470458984, 15.0287675858 ]
         rot: [ 0.0, 0.0, 85.8000717163 ]
 
-  fisher_layer: 
+    interactiveEntities:
+      footprints_to_cemetery: 
+        .preset: .MonsterClue
+        template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
+        tags: [ "ntr_footprints_to_cemetery" ]
+        pos: [ -54.9851188660, -1506.3664550781, 16.5360107422 ]
+        rot: [ 0.0, 0.0, 67.7600250244 ]
+        valid_interactions: [examine]
+
+      footprints_to_cemetery_1: 
+        .preset: .MonsterClue
+        template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
+        tags: [ "ntr_footprints_to_cemetery" ]
+        pos: [ -54.2190170288, -1506.7541503906, 16.5019531250 ]
+        rot: [ 0.0, 0.0, 53.6800155640 ]
+        valid_interactions: [examine]
+
+      footprints_to_cemetery_27: 
+        .preset: .MonsterClue
+        template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
+        tags: [ "ntr_footprints_to_cemetery" ]
+        pos: [ -35.9581184387, -1523.9885253906, 10.2429809570 ]
+        rot: [ 0.0, 0.0, -29.2599258423 ]
+        valid_interactions: [examine]
+
+  fisher: 
     world: "bob"
     #context: ""
 
-    areas: 
-      fisher_area: 
-        height: 8.0
-        borderpoints: 
-          - [ -0.4100189209, -1420.5808105469, -1.3338326216 ]
-          - [ -0.4100189209, -1440.1381835938, -1.3338326216 ]
-          - [ 18.7698497772, -1440.5145263672, -1.3338326216 ]
-          - [ 19.1459999084, -1420.5808105469, -1.3338326216 ]
+    mappins: 
+      fisher_pin: 
+        #radius for quest instructions: 11
+        pos: [ 8.1128673553, -1429.7302246094, 0.5744942427 ]
 
-    actionpoints: 
-      fisherman_sit_fishing: [ 7.3530855179, -1423.5301513672, 0.5516042113, 0.8799999356, "work_man/sit_m_ground_fishing_jt" ]
-
-    statics: 
+    interactiveEntities:
       footprint_to_fisher: 
+        .preset: .MonsterClue
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_footprints_to_fisher" ]
         pos: [ -35.4642829895, -1524.4239501953, 10.1962280273 ]
         rot: [ 0.0, 0.0, 136.6199493408 ]
+        valid_interactions: [examine]
 
       footprint_to_fisher_1: 
+        .preset: .MonsterClue
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_footprints_to_fisher" ]
         pos: [ -34.9225120544, -1523.7578125000, 10.0664062500 ]
         rot: [ 0.0, 0.0, 136.6199493408 ]
+        valid_interactions: [examine]
 
+    statics: 
       footprint_to_fisher_10: 
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_footprints_to_fisher" ]

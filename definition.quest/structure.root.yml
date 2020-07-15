@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 510, saved: 2020-07-14 23:15:54)
+# (version: 538, saved: 2020-07-15 22:37:45)
 #
 ---
 structure:
@@ -305,6 +305,8 @@ structure:
           - owl_layer
           - orphanage_layer
           - town_blood
+          - cemetery
+          - fisher
         next: ".done"
       
       changelayers.show_camp_river_main:
@@ -318,14 +320,14 @@ structure:
         world: bob
         show:
           - camp_layer
-          - river
+          - orianna_house
           - nlayer
         next:
           - spawn.spawn_fisherman
           - spawn.spawn_bandits_camp
           - spawn.spawn_horses
           - spawn.spawn_baron
-          - changelayers.show_town_blood
+          - subsegment.intro_nightmare
       
       changelayers.show_orphlayer:
         ".editor":

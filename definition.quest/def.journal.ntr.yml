@@ -47,4 +47,25 @@ journals:
                 - [ scent_pin1, 19 ]
                 - [ scent_pin2, 22 ]
                 - [ scent_pin3, 23 ]
-                - [ scent_pin4, 9 ]
+                - [ scent_pin4, 12 ]
+
+          - follow_horse_tracks:
+              caption: "Using your Witcher Senses, follow the horse tracks"
+              mappins:
+                - [ horse_track_pin, 30 ]
+                - [ horse_track_pin1, 32 ]
+                - [ horse_track_pin2, 33 ]
+                - [ horse_track_pin3, 31 ]
+                - [ horse_track_pin4, 30 ]
+
+          - follow_cemetery_footprints:
+              caption: "Using your Witcher Senses, follow footprints"
+              mappins:
+                - [ cemetary_pin, 20 ]
+                - [ cemetary_pin1, 21 ]
+                - [ cemetary_pin2, 22 ]
+
+          - talk_fisherman:
+              caption: "Ask fisherman about Orianna"
+              mappins:
+                - [ fisher_pin, 11 ]

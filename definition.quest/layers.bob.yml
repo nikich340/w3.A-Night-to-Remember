@@ -115,6 +115,9 @@ layers:
     scenepoints: 
       introscenes: [ 24.4257621765, -2107.7331542969, 126.1453247070, 0.0 ]
       homescenes: [ -384.8305358887, -804.3603515625, 35.0772705078, 0.0 ]
+
+    actionpoints: 
+      fisherman_sit_fishing: [ 7.3530855179, -1423.5301513672, 0.5516042113, 0.8799999356, "work_man/sit_m_ground_fishing_jt" ]
       
   after_triss_to_monster: 
     world: "bob"

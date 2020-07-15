@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: town_part
 # 
-# (version: 510, saved: 2020-07-14 23:15:54)
+# (version: 538, saved: 2020-07-15 22:37:45)
 #
 ---
 structure:
@@ -30,18 +30,19 @@ structure:
         
         scene.gp_corpse_comments:
           ".editor":
-            pos: [ 701.2279663086, 14.597946167 ]
+            pos: [ 541.7042236328, -59.6877593994 ]
             in: [ examine_town_corpse ]
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
           placement: bob/camp
           interruptable: true
           _fadein: false
-          next: ".done"
+          next.Output:
+            - waituntil.corpse_examined
         
         scene.scent_comment:
           ".editor":
-            pos: [ 996.4085083008, 251.7228240967 ]
+            pos: [ 1013.0751953125, 16.7228393555 ]
             in: [ town_scent ]
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
@@ -49,20 +50,71 @@ structure:
           interruptable: true
           _fadein: false
           next.Output:
-            - script.FocusEffect_ON
-            - waituntil.scent1
-            - objective.Investigate_area: Success
-            - objective.Follow_scent: Activate
+            - waituntil.blood_scent_track1
         
         waituntil.blood_scent_track:
           examined: bob/blood_track1
           ".editor":
-            pos: [ 816.0260009766, 216.5226745605 ]
+            pos: [ 683.8435058594, 253.0467376709 ]
             in: [ In ]
             out: [ Out ]
           next:
             - addfact.scent_enabled_1
             - scene.scent_comment: town_scent
+            - waituntil.wait_3s
+        
+        waituntil.blood_scent_track1:
+          examined: bob/blood_track1
+          ".editor":
+            pos: [ 1007.6108398438, -69.4240570068 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.scent_comment: town_scent
+        
+        waituntil.cemetery0_comment:
+          inside: [ bob/cemetary_area, PLAYER ]
+          ".editor":
+            pos: [ 3206.4545898438, 340.5753173828 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.cemetery1
+            - changelayers.show_fisher
+        
+        waituntil.cemetery1:
+          inside: [ bob/cemetary_area_1, PLAYER ]
+          ".editor":
+            pos: [ 3410.2045898438, 346.8620605469 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.cemetery2
+            - mappin.cemetery_footprints0: Disable
+            - mappin.cemetery_footprints1: Enable
+        
+        waituntil.cemetery2:
+          inside: [ bob/cemetary_area_2, PLAYER ]
+          ".editor":
+            pos: [ 3622.7045898438, 348.1120605469 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.cemetery3
+            - mappin.cemetery_footprints1: Disable
+            - mappin.cemetery_footprints2: Enable
+        
+        waituntil.cemetery3:
+          inside: [ bob/cemetary_area_3, PLAYER ]
+          ".editor":
+            pos: [ 3830.8295898438, 351.2370605469 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - out
+            - mappin.cemetery_footprints2: Disable
+            - objective.follow_footprints: Success
+            - objective.talk_fisherman: Activate
         
         waituntil.corpse_area:
           inside: [ bob/corpse_area, PLAYER ]
@@ -83,6 +135,66 @@ structure:
             out: [ Out ]
           next:
             - scene.gp_corpse_comments: examine_town_corpse
+        
+        waituntil.horse_track0:
+          inside: [ bob/horse_track_area, PLAYER ]
+          ".editor":
+            pos: [ 2108.7770996094, 301.7477416992 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.horse_track1
+            - mappin.horse_tracks_pin0: Disable
+            - mappin.horse_tracks_pin1: Enable
+        
+        waituntil.horse_track1:
+          inside: [ bob/horse_track_area_1, PLAYER ]
+          ".editor":
+            pos: [ 2308.15234375, 319.555267334 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.horse_track2
+            - mappin.horse_tracks_pin1: Disable
+            - mappin.horse_tracks_pin2: Enable
+        
+        waituntil.horse_track2:
+          inside: [ bob/horse_track_area_2, PLAYER ]
+          ".editor":
+            pos: [ 2496.0095214844, 323.4838256836 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.horse_track3
+            - mappin.horse_tracks_pin2: Disable
+            - mappin.horse_tracks_pin3: Enable
+        
+        waituntil.horse_track3:
+          inside: [ bob/horse_track_area_3, PLAYER ]
+          ".editor":
+            pos: [ 2709.7595214844, 325.3588256836 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.horse_track4
+            - changelayers.show_cemetery
+            - mappin.horse_tracks_pin3: Disable
+            - mappin.horse_tracks_pin4: Enable
+        
+        waituntil.horse_track4:
+          inside: [ bob/horse_track_area_4, PLAYER ]
+          ".editor":
+            pos: [ 2942.5571289062, 331.7576293945 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - mappin.horse_tracks_pin4: Disable
+            - objective.Follow_horse: Success
+            - objective.follow_footprints: Activate
+            - mappin.cemetery_footprints0: Enable
+            - mappin.cemetery_footprints1: Disable
+            - mappin.cemetery_footprints2: Disable
+            - waituntil.cemetery0_comment
         
         waituntil.scent1:
           inside: [ bob/scent_area_1, PLAYER ]
@@ -124,9 +236,44 @@ structure:
             in: [ In ]
             out: [ Out ]
           next:
-            - out
             - mappin.scentpin4: Disable
             - objective.Follow_scent: Success
+            - objective.Follow_horse: Activate
+            - waituntil.horse_track0
+            - script.FOcus_clue_horse_tracks
+            - mappin.horse_tracks_pin0: Enable
+            - mappin.horse_tracks_pin1: Disable
+            - mappin.horse_tracks_pin2: Disable
+            - mappin.horse_tracks_pin3: Disable
+            - mappin.horse_tracks_pin4: Disable
+        
+        waituntil.wait_3s:
+          elapsed: "00:00:03"
+          ".editor":
+            pos: [ 991.1956787109, 243.4491424561 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - objective.Investigate_area: Success
+            - mappin.scentpin1: Enable
+            - objective.Follow_scent: Activate
+            - waituntil.scent1
+            - script.FocusEffect_ON
+            - mappin.scentpin2: Disable
+            - mappin.scentpin3: Disable
+            - mappin.scentpin4: Disable
+        
+        script.FOcus_clue_horse_tracks:
+          ".editor":
+            pos: [ 2033.9753417969, 185.5 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FocusSetHighlight
+          parameter:
+            - tag: cname_ntr_orianna_horse_tracks
+            - highlightType: FMV_Clue
+            - overrideCustomLogic: false
+          next: ".done"
         
         script.FocusEffect_ON:
           ".editor":
@@ -141,9 +288,61 @@ structure:
             - duration: -1.0
           next: ".done"
         
+        script.focus_clue_footprints_cemetery:
+          ".editor":
+            pos: [ 3086.93359375, 125.6964111328 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FocusSetHighlight
+          parameter:
+            - tag: cname_ntr_footprints_to_cemetery
+            - highlightType: FMV_Clue
+            - overrideCustomLogic: false
+          next: ".done"
+        
+        script.focus_clue_footprints_fisher:
+          ".editor":
+            pos: [ 3511.9633789062, 170.1964111328 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FocusSetHighlight
+          parameter:
+            - tag: cname_ntr_footprints_to_fisher
+            - highlightType: FMV_Clue
+            - overrideCustomLogic: false
+          next: ".done"
+        
+        changelayers.show_cemetery:
+          ".editor":
+            pos: [ 2904.9633789062, 196.3114624023 ]
+            hint: show-only
+            in: []
+            out: []
+          sync: true
+          purge: false
+          world: bob
+          show:
+            - cemetery
+          next:
+            - script.focus_clue_footprints_cemetery
+        
+        changelayers.show_fisher:
+          ".editor":
+            pos: [ 3342.7106933594, 246.954864502 ]
+            hint: show-only
+            in: []
+            out: []
+          sync: true
+          purge: false
+          world: bob
+          show:
+            - fisher
+          next:
+            - script.focus_clue_footprints_fisher
+        
         spawn.folk_far:
           ".editor":
-            pos: [ 694.0952758789, 144.8992767334 ]
+            pos: [ 694.0952758789, 120.3538208008 ]
             hint: spawn-only
             in: []
             out: []
@@ -163,11 +362,18 @@ structure:
             - comm_town_corpse_folk
           next: ".done"
         
+        objective.Follow_horse:
+          ".editor": [ 2417.6806640625, 688.1245117188 ]
+          objective: nighttoremember/town_part/follow_horse_tracks
+          notify: true
+          track: true
+          next: ".done"
+        
         objective.Follow_scent:
           ".editor": [ 1503.5432128906, 633.7072143555 ]
           objective: nighttoremember/town_part/follow_scent
           notify: true
-          track: false
+          track: true
           next: ".done"
         
         objective.Investigate_area:
@@ -175,6 +381,60 @@ structure:
           objective: nighttoremember/town_part/investigate_gates_area
           notify: true
           track: true
+          next: ".done"
+        
+        objective.follow_footprints:
+          ".editor": [ 3545.8811035156, 672.1732788086 ]
+          objective: nighttoremember/town_part/follow_cemetery_footprints
+          notify: true
+          track: true
+          next: ".done"
+        
+        objective.talk_fisherman:
+          ".editor": [ 4085.9235839844, 606.6032104492 ]
+          objective: nighttoremember/town_part/talk_fisherman
+          notify: true
+          track: true
+          next: ".done"
+        
+        mappin.cemetery_footprints0:
+          ".editor": [ 3319.7963867188, 477.0357666016 ]
+          mappin: nighttoremember/town_part/follow_cemetery_footprints/cemetary_pin
+          next: ".done"
+        
+        mappin.cemetery_footprints1:
+          ".editor": [ 3565.5720214844, 484.1260986328 ]
+          mappin: nighttoremember/town_part/follow_cemetery_footprints/cemetary_pin1
+          next: ".done"
+        
+        mappin.cemetery_footprints2:
+          ".editor": [ 3773.6413574219, 485.0318908691 ]
+          mappin: nighttoremember/town_part/follow_cemetery_footprints/cemetary_pin2
+          next: ".done"
+        
+        mappin.horse_tracks_pin0:
+          ".editor": [ 2046.0435791016, 484.4627990723 ]
+          mappin: nighttoremember/town_part/follow_horse_tracks/horse_track_pin
+          next: ".done"
+        
+        mappin.horse_tracks_pin1:
+          ".editor": [ 2258.4580078125, 482.7322998047 ]
+          mappin: nighttoremember/town_part/follow_horse_tracks/horse_track_pin1
+          next: ".done"
+        
+        mappin.horse_tracks_pin2:
+          ".editor": [ 2450.4255371094, 488.619720459 ]
+          mappin: nighttoremember/town_part/follow_horse_tracks/horse_track_pin2
+          next: ".done"
+        
+        mappin.horse_tracks_pin3:
+          ".editor": [ 2647.7697753906, 489.4898071289 ]
+          mappin: nighttoremember/town_part/follow_horse_tracks/horse_track_pin3
+          next: ".done"
+        
+        mappin.horse_tracks_pin4:
+          ".editor": [ 2839.8793945312, 493.8134155273 ]
+          mappin: nighttoremember/town_part/follow_horse_tracks/horse_track_pin4
           next: ".done"
         
         mappin.scentpin1:
@@ -208,6 +468,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 2036.4517822266, 278.5572509766 ]
+          ".editor": [ 4071.3608398438, 349.5726013184 ]
           next: ".done"
         
