@@ -1,0 +1,929 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    toussaint_fisherman:
+      template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\vineyard\\toussaint_fisherman.w2ent"
+      appearance: [ "bob_vineyard_13" ]
+
+    oriana:
+      template: "dlc\\bob\\data\\quests\\secondary_npcs\\vampire_diva.w2ent"
+      appearance: [ "oriana" ]
+
+  props:
+    pc_axii:
+      template: "gameplay\\templates\\signs\\pc_axii.w2ent"
+
+    boat_dest_squared_sail:
+      template: "environment\\decorations\\ships\\basic\\geralt_boat\\apperances\\boat_dest_squared_sail.w2ent"
+
+    memory_vision:
+      template: "dlc\\dlcntr\\data\\entities\\memory_vision_env.w2ent"
+
+  animations:
+    anim_6970_high_standing_determined_calm_enter_frontal:
+      animation: "high_standing_determined_calm_enter_frontal"
+      frames: 253
+
+    anim_9251_man_work_sitting_with_fishing_rod_start:
+      animation: "man_work_sitting_with_fishing_rod_start"
+      frames: 177
+
+    anim_7091_high_standing_determined_gesture_you:
+      animation: "high_standing_determined_gesture_you"
+      frames: 81
+
+    anim_9250_man_work_sitting_with_fishing_rod_loop_01:
+      animation: "man_work_sitting_with_fishing_rod_loop_01"
+      frames: 333
+
+    anim_7066_high_standing_determined_gesture_show_right:
+      animation: "high_standing_determined_gesture_show_right"
+      frames: 81
+
+    anim_7061_high_standing_determined_gesture_show_front:
+      animation: "high_standing_determined_gesture_show_front"
+      frames: 90
+
+    anim_6998_high_standing_determined_gesture_axii_open_right:
+      animation: "high_standing_determined_gesture_axii_open_right"
+      frames: 119
+
+    anim_7021_high_standing_determined_gesture_give:
+      animation: "high_standing_determined_gesture_give"
+      frames: 170
+
+  animations.mimic:
+    mimicsanim_413_geralt_neutral_gesture_question_direct_face:
+      animation: "geralt_neutral_gesture_question_direct_face"
+      frames: 37
+
+    mimicsanim_113_geralt_look_left_impatient_face:
+      animation: "geralt_look_left_impatient_face"
+      frames: 101
+
+    mimicsanim_380_geralt_neutral_gesture_axii_face:
+      animation: "geralt_neutral_gesture_axii_face"
+      frames: 100
+
+    mimicsanim_378_geralt_neutral_gesture_agreement_face:
+      animation: "geralt_neutral_gesture_agreement_face"
+      frames: 110
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_1540_man_work_sitting_with_fishing_rod_loop_01:
+      idle_anim: "man_work_sitting_with_fishing_rod_loop_01"
+
+    pose_521_boat_sail_idle:
+      idle_anim: "boat_sail_idle"
+
+    pose_2094_High_Sitting_Determined:
+      name: "Sitting"
+      emotional_state: "Determined"
+      status: "High"
+      idle_anim: "high_sitting_determined_idle"
+
+    pose_520_boat_passenger_sit_idle:
+      idle_anim: "boat_passenger_sit_idle"
+
+  cameras:
+    cam_1_geralt_walk:
+      fov: 35.0
+      transform:
+        pos: [ 392.1262817383, -615.1247558594, -33.7405471802 ]
+        rot: [ 0.0, 2.3749864101, 188.9083709717 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.9458394051, 5.9458394051 ]
+        focus: [ 3.4458394051, 4.4458394051 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_geralt_ask:
+      fov: 35.0
+      transform:
+        pos: [ 391.6827087402, -616.8334960938, -33.4405479431 ]
+        rot: [ 0.0, 2.1549825668, 206.9483795166 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.6182498932, 4.6182498932 ]
+        focus: [ 2.1182498932, 3.1182498932 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_fisher_answer:
+      fov: 25.0
+      transform:
+        pos: [ 393.4651184082, -617.4625244141, -33.3405494690 ]
+        rot: [ 0.0, 347.1399841309, 141.5533599854 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.3585567474, 4.3585567474 ]
+        focus: [ 1.8585567474, 2.8585567474 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_4_geralt_ask2_boat:
+      fov: 35.0
+      transform:
+        pos: [ 391.7308654785, -616.6397705078, -32.4405517578 ]
+        rot: [ 0.0, 339.1099853516, 205.1333007813 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.5182247162, 5.5182247162 ]
+        focus: [ 3.0182247162, 4.0182247162 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_5_shot_menu_def_impatient_mimic:
+      fov: 35.0
+      transform:
+        pos: [ 391.6349487305, -616.4077148438, -33.1405487061 ]
+        rot: [ 0.0, 353.6849670410, 202.8235778809 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.3134000301, 5.3134002686 ]
+        focus: [ 2.8134000301, 3.8134000301 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_6_shot_want_help:
+      fov: 35.0
+      transform:
+        pos: [ 391.6268920898, -616.3533935547, -32.9905509949 ]
+        rot: [ 0.0, 352.0349731445, 203.1533355713 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.3134000301, 5.3134002686 ]
+        focus: [ 2.8134000301, 3.8134000301 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_7_shot_axii:
+      fov: 35.0
+      transform:
+        pos: [ 391.2714538574, -618.5653076172, -33.2905502319 ]
+        rot: [ 0.0, 4.4099431038, 270.2532653809 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.3384056091, 4.3384056091 ]
+        focus: [ 1.8384056091, 2.8384056091 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_12_fisher_story_appear:
+      fov: 40.0
+      transform:
+        pos: [ 392.2611083984, -637.1302490234, -33.2905502319 ]
+        rot: [ 0.0, 358.0299987793, 340.9533691406 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.3585567474, 4.3585567474 ]
+        focus: [ 1.8585567474, 2.8585567474 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_13_fisher_story_payment:
+      fov: 35.0
+      transform:
+        pos: [ 391.9532470703, -633.5546875000, -33.3405494690 ]
+        rot: [ 0.0, 357.9199829102, 279.2432556152 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.6847593784, 4.6847591400 ]
+        focus: [ 2.1847593784, 3.1847593784 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_14_fisher_story_boat:
+      fov: 35.0
+      transform:
+        pos: [ 373.8013000488, -527.4971923828, -33.2405471802 ]
+        rot: [ 0.0, 356.5449829102, 339.7443237305 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 5.7335767746, 8.7335767746 ]
+        focus: [ 6.2335767746, 7.2335767746 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_16_fisher_story_boat3:
+      fov: 35.0
+      transform:
+        pos: [ 373.8013000488, -527.4971923828, -33.2405471802 ]
+        rot: [ 0.0, 0.5049813986, 350.7440490723 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 5.7335767746, 8.7335767746 ]
+        focus: [ 6.2335767746, 7.2335767746 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_1_fisher_story_inn_cam:
+      fov: 40.0
+      transform:
+        pos: [ 191.8247680664, 179.1038208008, -33.9498023987 ]
+        rot: [ 0.0, 12.5499792099, 259.3880310059 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_fisher_story_boat_cam:
+      fov: 40.0
+      transform:
+        pos: [ 191.8247680664, 179.1038208008, -33.9498023987 ]
+        rot: [ 0.0, 8.2599792480, 319.4480285645 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.2627325058, 7.2627325058 ]
+        focus: [ 4.7627325058, 5.7627325058 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_fisher_story_orianna_cam:
+      fov: 40.0
+      transform:
+        pos: [ 191.8726348877, 179.0894165039, -33.9498023987 ]
+        rot: [ 0.0, 4.6299791336, 346.1780090332 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.2627325058, 7.2627325058 ]
+        focus: [ 4.7627325058, 5.7627325058 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 915
+
+  placement: "ntr_bob_homescenes_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -384.8305358887, -804.3603515625, 35.0772705078 ]
+      #rot: [ 0.0, 0.0, 0.0 ]
+
+  assets:
+    props:
+      pc_axii:
+        repo: "pc_axii"
+      boat_dest_squared_sail:
+        repo: "boat_dest_squared_sail"
+
+      memory_vision:
+        repo: "memory_vision"
+
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      toussaint_fisherman:
+        repo: "toussaint_fisherman"
+        by_voicetag: false
+        appearance: "bob_vineyard_13"
+        tags: [ "ntr_fisherman" ]
+
+      oriana:
+        repo: "oriana"
+        by_voicetag: false
+        appearance: "oriana"
+        tags: [ "scene_oriana" ]
+
+    cameras:
+      cam_1_geralt_walk:
+        repo: "cam_1_geralt_walk"
+
+      cam_2_geralt_ask:
+        repo: "cam_2_geralt_ask"
+
+      cam_3_fisher_answer:
+        repo: "cam_3_fisher_answer"
+
+      cam_4_geralt_ask2_boat:
+        repo: "cam_4_geralt_ask2_boat"
+
+      cam_5_shot_menu_def_impatient_mimic:
+        repo: "cam_5_shot_menu_def_impatient_mimic"
+
+      cam_6_shot_want_help:
+        repo: "cam_6_shot_want_help"
+
+      cam_7_shot_axii:
+        repo: "cam_7_shot_axii"
+
+      cam_12_fisher_story_appear:
+        repo: "cam_12_fisher_story_appear"
+
+      cam_13_fisher_story_payment:
+        repo: "cam_13_fisher_story_payment"
+
+      cam_14_fisher_story_boat:
+        repo: "cam_14_fisher_story_boat"
+
+      cam_16_fisher_story_boat3:
+        repo: "cam_16_fisher_story_boat3"
+
+      cam_1_fisher_story_inn_cam:
+        repo: "cam_1_fisher_story_inn_cam"
+
+      cam_2_fisher_story_boat_cam:
+        repo: "cam_2_fisher_story_boat_cam"
+
+      cam_3_fisher_story_orianna_cam:
+        repo: "cam_3_fisher_story_orianna_cam"
+
+    animations:
+      geralt_high_standing_determined_calm_enter_frontal:
+        actor: "geralt"
+        repo: "anim_6970_high_standing_determined_calm_enter_frontal"
+        #duration: 8.4333333969
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      toussaint_fisherman_man_work_sitting_with_fishing_rod_start:
+        actor: "toussaint_fisherman"
+        repo: "anim_9251_man_work_sitting_with_fishing_rod_start"
+        #duration: 5.9000000954
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_you:
+        actor: "geralt"
+        repo: "anim_7091_high_standing_determined_gesture_you"
+        #duration: 2.7000000477
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      toussaint_fisherman_man_work_sitting_with_fishing_rod_loop_01:
+        actor: "toussaint_fisherman"
+        repo: "anim_9250_man_work_sitting_with_fishing_rod_loop_01"
+        #duration: 11.1000003815
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_show_right:
+        actor: "geralt"
+        repo: "anim_7066_high_standing_determined_gesture_show_right"
+        #duration: 2.7000000477
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_show_front:
+        actor: "geralt"
+        repo: "anim_7061_high_standing_determined_gesture_show_front"
+        #duration: 3.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_axii_open_right:
+        actor: "geralt"
+        repo: "anim_6998_high_standing_determined_gesture_axii_open_right"
+        #duration: 3.9666666985
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_give:
+        actor: "geralt"
+        repo: "anim_7021_high_standing_determined_gesture_give"
+        #duration: 5.6666665077
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    animations.mimic:
+      geralt_geralt_neutral_gesture_question_direct_face:
+        actor: "geralt"
+        repo: "mimicsanim_413_geralt_neutral_gesture_question_direct_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      geralt_geralt_look_left_impatient_face:
+        actor: "geralt"
+        repo: "mimicsanim_113_geralt_look_left_impatient_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      toussaint_fisherman_geralt_neutral_gesture_axii_face:
+        actor: "toussaint_fisherman"
+        repo: "mimicsanim_380_geralt_neutral_gesture_axii_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      toussaint_fisherman_geralt_neutral_gesture_agreement_face:
+        actor: "toussaint_fisherman"
+        repo: "mimicsanim_378_geralt_neutral_gesture_agreement_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+    actor.poses:
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      toussaint_fisherman_man_work_sitting_with_fishing_rod_loop_01:
+        actor: "toussaint_fisherman"
+        repo: "pose_1540_man_work_sitting_with_fishing_rod_loop_01"
+
+      toussaint_fisherman_high_standing_determined_idle:
+        actor: "toussaint_fisherman"
+        repo: "pose_0_high_standing_determined_idle"
+
+      oriana_high_standing_determined_idle:
+        actor: "oriana"
+        repo: "pose_0_high_standing_determined_idle"
+
+      toussaint_fisherman_boat_sail_idle:
+        actor: "toussaint_fisherman"
+        repo: "pose_521_boat_sail_idle"
+
+      oriana_High_Sitting_Determined:
+        actor: "oriana"
+        repo: "pose_2094_High_Sitting_Determined"
+
+      toussaint_fisherman_boat_passenger_sit_idle:
+        actor: "toussaint_fisherman"
+        repo: "pose_520_boat_passenger_sit_idle"
+
+storyboard:
+  defaults:
+    placement:
+      geralt: [[ 393.1834411621, -618.8201904297, -34.5093231201 ], [ 0.0, 0.0, 29.9683418274 ]]
+      toussaint_fisherman: [[ 392.2554626465, -619.1131591797, -34.5131187439 ], [ 0.0, 0.0, 0.0 ]]
+      oriana: [[ 393.1834411621, -618.8201904297, -44.5093231201 ], [ 0.0, 0.0, 29.9683418274 ]]
+      #toussaint_fisherman_story: [[ 392.2554626465, -619.1131591797, -44.5131187439 ], [ 0.0, 0.0, 0.0 ]]
+      memory_vision: [[ 600, -400, 50 ], [ 0.0, 0.0, 0.0 ]]
+
+    actor.pose:
+      geralt: geralt_high_standing_determined_idle
+      toussaint_fisherman: toussaint_fisherman_man_work_sitting_with_fishing_rod_loop_01
+
+  section_storyboard_ui:
+    # shot geralt walk
+    shot_1:
+      - actor.placement: [0.0, geralt, [ 393.1993103027, -618.8432617188, -34.5093231201 ], [ 0.0, 0.0, 357.5183410645 ]]
+      #- actor.placement: [0.0, toussaint_fisherman, [ 392.2554626465, -619.1131591797, -34.5131187439 ], [ 0.0, 0.0, 0.0 ]]
+      - cam: [0.0, cam_1_geralt_walk]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_calm_enter_frontal]
+          blendout: 0.5
+          clipfront: 3.43
+      - actor.equip.right: [0.0, toussaint_fisherman, Fishing_rod]
+      - actor.lookat: [0.0, geralt, [ 1.4765067101, 2.5431234837, 1.1232190132 ]]
+      - actor.lookat: [0.0, toussaint_fisherman, [ 0.7242193222, 4.3288574219, 0.1091415882 ]]
+
+    # shot geralt ask
+    shot_2:
+      - actor.anim.additive: 
+          .@pos: [0.0, geralt_high_standing_determined_gesture_you]
+          blendin: 0.3
+          blendout: 0.3
+      - actor.anim.mimic: [0.5, geralt_geralt_neutral_gesture_question_direct_face]
+      - actor.lookat: [0.3, geralt, toussaint_fisherman]
+
+    # shot fisher answer
+    shot_3:
+      - cam: [0.0, cam_3_fisher_answer]
+
+    # shot geralt ask2 boat
+    shot_4:
+      #- cam: [0.0, cam_4_geralt_ask2_boat]
+      - cam: [0.0, cam_5_shot_menu_def_impatient_mimic]
+      - actor.anim.additive:  
+          .@pos: [0.5, geralt_high_standing_determined_gesture_show_right]
+      - actor.lookat: [0.5, geralt, [ 1.2995334864, -0.0190663598, 1.0143742561 ]]
+      - actor.lookat: [0.9, geralt, toussaint_fisherman]
+      #- actor.anim.mimic: [0.0, geralt_geralt_neutral_gesture_question_direct_face]
+      - actor.lookat: [0.5, toussaint_fisherman, geralt]
+      - actor.lookat: [0.9, toussaint_fisherman, [ 0.7242193222, 4.3288574219, 0.1091415882 ]]
+
+    # shot fisher answer
+    shot_4_answer:
+      - cam: [0.0, cam_3_fisher_answer]
+
+  section_choice_geralt:
+    # shot shot menu def impatient mimic
+    CHOICE_1:
+      #- actor.placement: [0.0, geralt, [ 393.1834411621, -618.8201904297, -34.5093231201 ], [ 0.0, 0.0, 29.9683418274 ]]
+      - cam: [0.0, cam_5_shot_menu_def_impatient_mimic]
+      - actor.anim.mimic: [0.0, geralt_geralt_look_left_impatient_face]
+      - actor.lookat: [0.0, geralt, [ 1.4765067101, 2.5431234837, 1.1232190132 ]]
+      - actor.lookat: [0.0, toussaint_fisherman, [ 0.7242193222, 4.3288574219, 0.1091415882 ]]
+
+  section_help:
+    # shot shot want help
+    shot_help:
+      #- actor.placement: [0.0, geralt, [ 393.1993103027, -618.8432617188, -34.5093231201 ], [ 0.0, 0.0, 21.3883323669 ]]
+      #- cam: [0.0, cam_6_shot_want_help]
+      - actor.anim.additive:  
+          .@pos: [0.0, geralt_high_standing_determined_gesture_show_front]
+          blendin: 0.3
+          blendout: 0.3
+      - actor.lookat: [0.0, geralt, [ 0.8178824186, 2.2110714912, 0.8584817052 ]]
+      - actor.lookat: [0.3, toussaint_fisherman, geralt]
+      - actor.lookat: [0.9, toussaint_fisherman, [ 0.7242193222, 4.3288574219, 0.1091415882 ]]
+
+    shot_help_answer:
+      - cam: [0.0, cam_3_fisher_answer]
+
+  section_axii:
+    # shot shot axii
+    shot_axii:
+      #- actor.placement: [0.0, geralt, [ 393.2528686523, -618.8033447266, -34.5093231201 ], [ 0.0, 0.0, 22.3783416748 ]]
+      - cam: [0.0, cam_7_shot_axii]
+      - prop.placement: [0.0, pc_axii, [ 392.7203063965, -618.6346435547, -33.1614761353 ], [ 0.0, 0.0, 334.8099975586 ]]
+      - actor.anim:
+          actor: geralt
+          .@pos: [0.0, anim_339_high_standing_determined_turn_45_left]
+          blendin: 0.5
+          blendout: 0.5
+
+      - actor.placement.start: [0.37733, geralt, [ 393.1834411621, -618.8201904297, -34.5093231201 ], [ 0.0, 0.0, 29.9683418274 ], smooth]
+      #- actor.placement.end: [0.444, geralt, [ 393.1834411621, -618.8201904297, -34.5093231201 ], [ 0.0, 0.0, 74.9683418274 ], smooth]
+      - actor.placement.end: [0.444, geralt, [ 393.1317443848, -618.7708740234, -34.5093231201 ], [ 0.0, 0.0, 74.9683418274 ], smooth]
+      
+      - actor.anim.additive:  
+          .@pos: [0.6, geralt_high_standing_determined_gesture_axii_open_right]
+          blendin: 0.3
+          blendout: 0.3
+      - prop.effect.start: [0.8, pc_axii, axii_cutscene]
+      - actor.lookat: [0.0, geralt, toussaint_fisherman]
+      - actor.lookat: [0.3, toussaint_fisherman, geralt]
+    
+    # shot fisher answer axii
+    shot_axii_answer:
+      - cam: [0.0, cam_3_fisher_answer]
+      - actor.anim.mimic: [0.1, toussaint_fisherman_geralt_neutral_gesture_axii_face]
+      - actor.effect.start: [0.0, toussaint_fisherman, axii_confusion]
+      - actor.lookat: [0.9, toussaint_fisherman, [ 0.4417657852, 0.1025390625, 0.9237567782 ]]
+
+  section_pay:
+    # shot shot will pay
+    shot_pay:
+      #- actor.placement: [0.0, geralt, [ 393.1993103027, -618.8432617188, -34.5093231201 ], [ 0.0, 0.0, 357.5183410645 ]]
+      #- cam: [0.0, cam_6_shot_want_help
+      - actor.anim:
+          actor: geralt
+          .@pos: [0.0, anim_339_high_standing_determined_turn_45_left]
+          blendin: 0.3
+          blendout: 0.0
+          clipend: 2.5
+      
+      - actor.anim.additive:  
+          .@pos: [0.0, geralt_high_standing_determined_gesture_give]
+          blendin: 0.3
+          blendout: 0.0
+          clipend: 2.5
+      - actor.lookat: [0.0, geralt, [ -1.0286076069, 2.1586582661, 0.8788543344 ]]
+      - actor.lookat: [0.0, toussaint_fisherman, geralt]
+    
+    # shot fisher answer smile
+    shot_pay_answer:
+      #- actor.placement.start: [0.15, geralt, [ 393.1834411621, -618.8201904297, -34.5093231201 ], [ 0.0, 0.0, 29.9683418274 ]]
+      - actor.placement: [0.0, geralt, [ 393.1317443848, -618.7708740234, -34.5093231201 ], [ 0.0, 0.0, 74.9683418274 ]]
+      
+      - cam: [0.0, cam_3_fisher_answer]
+      - actor.anim.additive:
+          actor: toussaint_fisherman
+          .@pos: [0.0, anim_6767_high_kneeling_determined_gesture_take]
+          clipfront: 1.5
+          blendin: 0.0
+          blendout: 0.3
+      - actor.anim.mimic: [0.1, toussaint_fisherman_geralt_neutral_gesture_agreement_face]
+      - actor.lookat: [0.9, toussaint_fisherman, [ 0.4417657852, 0.1025390625, 0.9237567782 ]]
+
+  section_tell:
+    shot_tell:
+      - actor.placement: [0.0, geralt, [ 393.1317443848, -618.7708740234, -34.5093231201 ], [ 0.0, 0.0, 74.9683418274 ]]
+      - cam: [0.0, cam_3_fisher_answer]
+      - actor.lookat: [0.5, toussaint_fisherman, [ 0.7242193222, 4.3288574219, 0.1091415882 ]]
+
+    shot_fadeout:
+      - fade.out: [0.0, 1.0, [255, 255, 255, 255]]
+
+    # shot fisher story appear
+    shot_story_appear:
+      - prop.placement: [0.0, memory_vision, [ 393.2766723633, -633.6269531250, -34.9564208984 ], [ 0.0, 0.0, 265.8400268555 ]]
+      - fade.in: [0.0, 1.0, [255, 255, 255, 255]]
+      - actor.placement: [0.0, geralt, [ 393.0992126465, -618.6407470703, -40.8893203735 ], [ 0.0, 0.0, 357.5183410645 ]]
+      #- actor.placement: [0.0, toussaint_fisherman, [ 391.7644958496, -619.4296875000, -40.1331138611 ], [ 0.0, 0.0, 0.0 ]]
+
+      - actor.placement: [0.0, toussaint_fisherman, [ 393.9678955078, -632.8105468750, -34.9515991211 ], [ 0.0, 0.0, 125.2900238037 ]]
+      - actor.placement: [0.0, oriana, [ 393.2766723633, -633.6269531250, -34.9564208984 ], [ 0.0, 0.0, 265.8400268555 ]]
+      - cam: [0.0, cam_12_fisher_story_appear]
+      - actor.pose: [0.0, oriana_high_standing_determined_idle]
+      - actor.unequip.right: [0.0, toussaint_fisherman]
+      - actor.pose: [0.0, toussaint_fisherman_high_standing_determined_idle]
+      - actor.anim: 
+          actor: oriana
+          .@pos: [0.0, anim_12937_high_standing_determined_enter_frontal]
+          clipfront: 0.633
+          blendin: 0.0
+          clipend: 4.633
+          blendout: 0.5
+
+      - actor.lookat: [0.01, toussaint_fisherman, oriana]
+      - actor.lookat: [0.01, oriana, toussaint_fisherman]
+
+    shot_story_payment:
+      #- actor.placement: [0.0, toussaint_fisherman_story, [ 393.9678955078, -632.8105468750, -34.9515991211 ], [ 0.0, 0.0, 125.2900238037 ]]
+      - cam: [0.0, cam_13_fisher_story_payment]
+      - actor.anim.additive: 
+          actor: toussaint_fisherman
+          .@pos: [0.0, anim_7073_high_standing_determined_gesture_take]
+          blendin: 0.0
+          blendout: 0.3
+          clipfront: 1.5
+      - actor.anim.additive: 
+          actor: oriana
+          .@pos: [0.0, anim_12649_high_standing_determined_gesture_give]
+          clipfront: 2.5
+          blendin: 0.0
+          blendout: 0.3
+
+    shot_story_boat:
+      - prop.placement: [0.0, memory_vision, [ 377.9546203613, -526.9505615234, -35.0315971375 ], [ 0.0, 0.0, 265.8400268555 ]]
+      - actor.placement.start: [0.0, toussaint_fisherman, [ 377.9546203613, -526.9505615234, -35.0315971375 ], [ 0.0, 0.0, 10.2300071716 ]]
+      - actor.placement.start: [0.0, oriana, [ 376.9851989746, -521.8063964844, -34.9564208984 ], [ 0.0, 0.0, 174.9800262451 ]]
+      - prop.placement.start: [0.0, boat_dest_squared_sail, [ 377.5947875977, -524.3315429688, -35.2212715149 ], [ 0.0, 0.0, 12.8700017929 ]]
+      - cam.blend.start: [0.0, cam_14_fisher_story_boat]
+
+      - actor.pose: [0.0, toussaint_fisherman_boat_sail_idle]
+      - actor.pose: [0.0, oriana_High_Sitting_Determined]      
+      - actor.lookat: [0.0, oriana, toussaint_fisherman]
+      - actor.lookat: [0.0, toussaint_fisherman, oriana]
+
+      - actor.placement.end: [0.99, toussaint_fisherman, [ 374.2757, -510.7557, -35.0315971375 ], [ 0.0, 0.0, 10.2300071716 ]]
+      - actor.placement.end: [0.99, oriana, [ 373.3063, -505.6115, -34.9564208984 ], [ 0.0, 0.0, 174.9800262451 ]]
+      - prop.placement.end: [0.99, boat_dest_squared_sail, [ 373.9158935547, -508.1365966797, -35.2212715149 ], [ 0.0, 0.0, 12.8700017929 ]]
+      - cam.blend.end: [1.0, cam_16_fisher_story_boat3]
+
+    shot_story_inn1:
+      - actor.placement: [0.0, geralt, [ 184.6555633545, 253.5484008789, -33.7010726929 ], [ 0.0, 0.0, 0.0 ]]
+      - prop.placement: [0.0, memory_vision, [ 194.2005004883, 195.1776123047, -34.8607788086 ], [ 0.0, 0.0, 265.8400268555 ]]
+      - actor.placement: [0.001, oriana, [ 194.2005004883, 195.1776123047, -34.8607788086 ], [ 0.0, 0.0, 18.9199886322 ]]
+      - actor.placement: [0.001, toussaint_fisherman, [ 195.9719543457, 182.1741943359, -34.9842147827 ], [ 0.0, 0.0, 14.5199794769 ]]
+      - prop.placement: [0.001, boat_dest_squared_sail, [ 195.7590179443, 185.6071777344, -35.2378654480 ], [ 0.0, 0.0, 10.0100173950 ]]
+      - actor.pose: [0.001, oriana_high_standing_determined_idle]
+      - actor.pose: [0.001, toussaint_fisherman_boat_passenger_sit_idle]
+      - cam.blend.start: [0.001, cam_1_fisher_story_inn_cam]
+      - cam.blend.key: [0.75, cam_2_fisher_story_boat_cam]
+      - actor.lookat: [0.01, toussaint_fisherman, oriana]
+      - actor.lookat: [0.01, oriana, geralt]
+      - actor.anim: 
+          actor: oriana
+          .@pos: [0.75, anim_12937_high_standing_determined_enter_frontal]
+          blendin: 0.0
+          blendout: 0.5
+
+    shot_story_inn2:
+      - cam.blend.end: [0.5, cam_3_fisher_story_orianna_cam]
+      - actor.anim:
+          actor: oriana
+          .@pos: [0.4, anim_12941_high_standing_determined_exit_frontal]
+          blendin: 0.5
+          clipfront: 0.5
+          blendout: 0.0
+
+      - fade.out: [0.833, 1.0, [255, 255, 255, 255]]      
+
+  section_togame:
+    shot_fadein:
+      - prop.placement: [0.001, boat_dest_squared_sail, [ 393.1317443848, -618.7708740234, -44.5093231201 ], [ 0.0, 0.0, 74.9683418274 ]]
+      - actor.placement: [0.001, oriana, [ 393.1317443848, -618.7708740234, -44.5093231201 ], [ 0.0, 0.0, 74.9683418274 ]]
+      #- actor.placement: [0.001, toussaint_fisherman_story, [ 392.2554626465, -619.1131591797, -44.5131187439 ], [ 0.0, 0.0, 0.0 ]]
+      - fade.in: [0.0, 1.0]
+      - actor.placement: [0.0, geralt, [ 393.1317443848, -618.7708740234, -34.5093231201 ], [ 0.0, 0.0, 74.9683418274 ]]
+      #- actor.placement: [0.0, toussaint_fisherman, [ 392.2554626465, -619.1131591797, -34.5131187439 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.gamestate: [0.01, geralt]
+      - actor.placement: [0.0, toussaint_fisherman, [ 392.2554626465, -619.1131591797, -34.5131187439 ], [ 0.0, 0.0, 335.0 ]]
+      - actor.gamestate: [0.01, toussaint_fisherman]
+      #- actor.lookat: [0.02, geralt, toussaint_fisherman]
+      #- actor.lookat: [0.02, toussaint_fisherman, geralt]
+
+      #- actor.gamestate: [0.01, toussaint_fisherman]
+      - cam: [0.0, cam_5_shot_menu_def_impatient_mimic]
+
+    shot_togame:
+      - cam.blend.togame: [0.5, cam_5_shot_menu_def_impatient_mimic]
+
+dialogscript:
+  player: "geralt"
+  props: [ "pc_axii", "boat_dest_squared_sail", "memory_vision" ]
+  actors: [ "geralt", "toussaint_fisherman", "oriana" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: script_hide_actors
+
+  script_hide_actors:
+      - SCRIPT:
+          function: NTR_HideActorsFishermanScene_S
+
+      - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot geralt walk
+    - CUE: shot_1
+    - PAUSE: 5.0
+    # shot geralt ask
+    - CUE: shot_2
+    - geralt: "[1.8268262]0001124989|Good day. Fish biting?"
+    # shot fisher answer
+    - CUE: shot_3
+    - toussaint_fisherman: "[1.800683]Better catch in the rain."
+    # shot geralt ask2 boat
+    - CUE: shot_4
+    - geralt: "Did you see a red-haired woman here? Left this site by boat, recently."
+    # shot shot menu def impatient mimic
+    - CUE: shot_4_answer
+    - toussaint_fisherman: "Maybe. Maybe not. Give me a few coins and I'll try to remember."
+    - NEXT: section_choice_geralt
+
+  section_choice_geralt:
+    - CHOICE:
+      - choice: ["I will pay", section_pay, pay, 500, true ]
+        emphasize: true
+      - choice: ["You will help me for free", section_axii, axii]
+        emphasize: true
+      - choice: ["I want to help that woman", section_help]
+        single_use: true
+        emphasize: true
+
+  #script_pay_action:
+  #    - SCRIPT:
+  #        function: NTR_PayStoryScene_PerformAction
+  #        parameter:
+  #            - money: 500
+  #            - dontGrantExp: false
+  #    - NEXT: section_pay
+
+  section_help:
+    - CUE: shot_help
+    - geralt: "[3.4024863]0000400593|I want to help that woman. She could be in danger."
+    - CUE: shot_help_answer
+    - toussaint_fisherman: "I'd believe you if you had satchel with herbs instead of this pointy things stickin' out behind you."
+    - NEXT: section_choice_geralt
+
+  section_axii:
+    - CUE: shot_axii
+    - geralt: "[7.5]0001125802|Asking a lot. Too much. How about you do this free of charge, huh? Out of the kindness of your heart?"
+    - CUE: shot_axii_answer
+    - toussaint_fisherman: "Aye, I'll help. Outta kindness…"
+    - PAUSE: 2.0
+    - NEXT: section_tell
+
+  section_pay:
+    - CUE: shot_pay
+    - geralt: "[1.8677174]0000434805|Fine… I'll pay."
+    - PAUSE: 0.633
+    - CUE: shot_pay_answer
+    - toussaint_fisherman: "I'm lucky to meet rich today."
+    - PAUSE: 2.0
+    - NEXT: section_tell
+
+  section_tell:
+    - CUE: shot_tell
+    - toussaint_fisherman: "Well… listen to me."
+
+    - CUE: shot_fadeout
+    - PAUSE: 1.0
+    - CUE: shot_story_appear
+    - PAUSE: 4.0
+    #- geralt: "The woman came from that direction by the cemetery."
+    - CUE: shot_story_payment
+    - PAUSE: 3.0
+    #- geralt: "Paid me a tidy sum to take her across the river."
+    - CUE: shot_story_boat
+    - PAUSE: 10.0
+    #- geralt: "She was nervous and dirty, but I didn't ask her about it."
+
+    - CUE: shot_story_inn1
+    - PAUSE: 10.0
+    #- geralt: "I dropped her off near the Cockatrice Inn."
+    - CUE: shot_story_inn2
+    - PAUSE: 6.0
+    #- geralt: "She hopped off the boat without saying a word…"
+
+    - NEXT: script_hide_actors2
+
+  script_hide_actors2:
+      - SCRIPT:
+          function: NTR_HideActorsFishermanScene_S
+
+      - NEXT: section_togame
+
+  section_togame:
+    - CUE: shot_fadein
+    - PAUSE: 1.0
+    - CUE: shot_togame
+    - geralt: "0001029815|Hm, interesting. Thanks."
+
+    - NEXT: section_exit
+
+  section_exit:
+    #- CAMERA_BLEND: 2.0
+    - EXIT
+

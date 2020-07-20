@@ -1,4 +1,20 @@
 communities:
+  comm_orianna_horse:
+    actors:
+      orianna_horse:
+        template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
+        appearances: [ "_sq101__white_stallion_02" ]
+        tags: [ "ntr_orianna_horse" ]
+
+    phases:
+      horse_idle:
+        orianna_horse:
+          attitude: friendly
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/orianna_horse_idle
+
   comm_town_corpse_folk:
     actors:
       bob_noble_female:

@@ -11,6 +11,118 @@ quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	return false;
 }
 
+/*quest function NTR_HideActorsFishermanScene() {
+    var acceptedTags : array<name>;
+
+    acceptedTags.PushBack('PLAYER');
+    acceptedTags.PushBack('ntr_fisherman');
+    acceptedTags.PushBack('scene_oriana');
+
+    NTR_HideActorsInRange(30.0, acceptedTags);
+}*/
+
+function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, acceptedVoicetags: array<name>)  {
+    var entities             : array<CGameplayEntity>;
+    var actor                : CActor;
+    var i, j, t, maxEntities : int;
+    var tags                 : array<name>;
+    var accepted             : bool;
+
+    maxEntities = 1000;
+    FindGameplayEntitiesInRange(entities, thePlayer, range, maxEntities);
+            
+    for (i = 0; i < entities.Size(); i += 1) {
+        actor = (CActor)entities[i];
+        if (actor) {
+            LogChannel('DEBUG', "actor " + actor);
+            if (!actor.IsAlive()) {
+            	LogChannel('DEBUG', "* actor dead");
+            	continue;
+            }
+
+            accepted = false;
+            tags = actor.GetTags();
+            LogChannel('DEBUG', "GetVoicetag: " + actor.GetVoicetag());
+            LogChannel('DEBUG', "GetDisplayName: " + actor.GetDisplayName());
+            
+            for (t = 0; t < acceptedVoicetags.Size(); t += 1) {
+            	if (actor.GetVoicetag() == acceptedVoicetags[t]) {
+            		accepted = true;
+            		break;
+            	}
+            }
+
+            for (t = 0; t < tags.Size(); t += 1) {
+                LogChannel('DEBUG', "> tag: " + tags[t]);
+                for (j = 0; j < acceptedTags.Size(); j += 1) {
+                    if (tags[t] == acceptedTags[j]) {
+                        accepted = true;
+                        break;
+                    }
+                }
+            }
+            if (!accepted) {
+            	LogChannel('NTR', "hide actor: " + actor);
+            	actor.AddTag('ntr_hidden_actor');
+            	actor.SetVisibility(false);
+            	actor.SetGameplayVisibility(false);
+            	actor.EnableCollisions(false);
+            	actor.EnableStaticCollisions(false);
+            	actor.EnableDynamicCollisions(false);
+            	actor.EnableCharacterCollisions(false);
+        	}
+        }
+    }
+
+    LogChannel('NTR', "Done HideActorsInRange: " + range);
+}
+
+quest function NTR_UnhideActorsInRange(range : float)  {
+    var entities             : array<CGameplayEntity>;
+    var actor                : CActor;
+    var i, j, t, maxEntities : int;
+    var tags                 : array<name>;
+    var hidden               : bool;
+
+    range = 15.0;
+    maxEntities = 1000;
+    FindGameplayEntitiesInRange(entities, thePlayer, range, maxEntities);
+            
+    for (i = 0; i < entities.Size(); i += 1) {
+        actor = (CActor)entities[i];
+        if (actor) {
+            //LogChannel('DEBUG', "actor " + actor);
+            if (!actor.IsAlive()) {
+            	//LogChannel('DEBUG', "* actor dead");
+            	continue;
+            }
+
+            hidden = false;
+            tags = actor.GetTags();
+
+            for (t = 0; t < tags.Size(); t += 1) {
+                //LogChannel('DEBUG', "> tag: " + tags[t]);
+                if (tags[t] == 'ntr_hidden_actor') {
+                    hidden = true;
+                }
+            }
+            if (hidden) {
+            	LogChannel('NTR', "unhide actor: " + actor);
+            	actor.RemoveTag('ntr_hidden_actor');
+            	actor.SetVisibility(true);
+            	actor.SetGameplayVisibility(true);
+            	actor.EnableCollisions(true);
+            	actor.EnableStaticCollisions(true);
+            	actor.EnableDynamicCollisions(true);
+            	actor.EnableCharacterCollisions(true);
+        	}
+        }
+        
+    }
+
+    LogChannel('NTR', "Done UnhideActorsInRange: " + range);
+}
+
 quest function NTR_FocusEffect( actionType : string, effectName : name, effectEntityTag : name, duration : float ) {
 	switch(actionType) {
 		case "FEAA_Enable":
@@ -184,7 +296,7 @@ areaName = "novigrad", "skellige", "kaer_morhen", "prolog_village",
 	(from which area you want to play music)
 	NMLand = novigrad!!!
 */
-quest function NTRPlayMusic( areaName : string, eventName : string, optional saveType : string ) {
+quest function NTR_PlayMusic( areaName : string, eventName : string, optional saveType : string ) {
 	if ( areaName == "toussaint" )
 		theSound.InitializeAreaMusic( (EAreaName)AN_Dlc_Bob );
 	else
@@ -248,7 +360,7 @@ quest function NTRGameplayMusic( areaName : string )
 
 }
 // -------------------------------------------------------------------------------
-quest function NTRTuneNPC( tag : name, level : int, optional attitude : string, optional mortality : string, optional finishers : bool, optional npcGroupType : string, optional scale : float ) {
+quest function NTR_TuneNPC( tag : name, level : int, optional attitude : string, optional mortality : string, optional finishers : bool, optional npcGroupType : string, optional scale : float ) {
 	var NPCs   : array <CNewNPC>;
 	var i      : int;
 	var meshh : CMovingPhysicalAgentComponent;
@@ -260,7 +372,8 @@ quest function NTRTuneNPC( tag : name, level : int, optional attitude : string, 
 	//theGame.GetGuiManager().ShowNotification("Found npcs: " + NPCs.Size() + " nodes: " + nodes.Size());
 	if (NPCs.Size() < 1) {
 		theGame.GetGuiManager().ShowNotification("[ERROR] No NPCs found with tag " + tag);
-		LogChannel('NTRTuneNPC', "[ERROR] No NPCs found with tag " + tag);
+		LogChannel('NTR_TuneNPC', "[ERROR] No NPCs found with tag " + tag);
+		return;
 	}
 	if (level > 500) {
 		// 1005 = playerLvl + 5;

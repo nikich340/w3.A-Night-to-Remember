@@ -9,40 +9,40 @@ journals:
       instructions:
         regis_owl:
           - out_home:
-              caption: "Go out of home for some fresh air"
+              caption: "Go out of home for some fresh air."
           - take_letter:
-              caption: "Take letter near owl"
+              caption: "Take letter near owl."
               mappins: regis_mail_pin
           - read_letter:
-              caption: "Read a letter from Regis"
+              caption: "Read a letter from Regis."
 
         orphanage_part:
           - go_orphanage:
-              caption: "Check Orianna's orphanage"
+              caption: "Check Orianna's orphanage."
               mappins: 
                 - [ orphanage_pin, 27 ]
 
           - go_door:
-              caption: "Check Orianna's room"
+              caption: "Check Orianna's room."
               mappins: orphdoor_pin
 
           - defeat_bandits:
-              caption: "Defeat the bandits in a fistfight"
+              caption: "Defeat the bandits in a fistfight."
               mappins: fatbandit_pin
 
         camp_part:
           - go_camp:
-              caption: "Go to bandits' camp and talk with baron Edward"
+              caption: "Go to bandits' camp and talk with baron Edward."
               mappins: 
                 - [ camp_pin, 22 ]
         town_part:
           - investigate_gates_area:
-              caption: "Investigate clues near Orianna's residence"
+              caption: "Investigate clues near Orianna's residence."
               mappins:
                 - [ town_corpse_pin, 5 ]
 
           - follow_scent:
-              caption: "Using your Witcher Senses, follow the perfume scent"
+              caption: "Using your Witcher Senses, follow the perfume scent."
               mappins:
                 - [ scent_pin1, 19 ]
                 - [ scent_pin2, 22 ]
@@ -50,7 +50,7 @@ journals:
                 - [ scent_pin4, 12 ]
 
           - follow_horse_tracks:
-              caption: "Using your Witcher Senses, follow the horse tracks"
+              caption: "Using your Witcher Senses, follow the horse tracks."
               mappins:
                 - [ horse_track_pin, 30 ]
                 - [ horse_track_pin1, 32 ]
@@ -59,13 +59,41 @@ journals:
                 - [ horse_track_pin4, 30 ]
 
           - follow_cemetery_footprints:
-              caption: "Using your Witcher Senses, follow footprints"
+              caption: "Using your Witcher Senses, follow footprints."
               mappins:
                 - [ cemetary_pin, 20 ]
                 - [ cemetary_pin1, 21 ]
                 - [ cemetary_pin2, 22 ]
 
           - talk_fisherman:
-              caption: "Ask fisherman about Orianna"
+              caption: "Ask fisherman about Orianna."
               mappins:
                 - [ fisher_pin, 11 ]
+
+        river_part:
+          - find_house:
+              caption: "Search the riverside near Cockatrice Inn."
+              mappins:
+                - [ side_pin, 20 ]
+
+          - follow_tracks:
+              caption: "Using your Witcher Senses, follow footprints."
+              mappins:
+                - [ side_pin, 20 ]
+
+          - check_house:
+              caption: "Use your Witcher Senses to investigate house."
+              mappins:
+                - [ side_pin, 20 ]
+
+          - wait_outside:
+              caption: "Wait for Orianna outside the house."
+
+          - kill_orianna:
+              caption: "Kill Orianna."
+
+          - kill_bandits:
+              caption: "Kill Baron's bandits."
+
+          - kill_baron:
+              caption: "Kill Baron Edward."

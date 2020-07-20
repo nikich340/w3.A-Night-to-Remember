@@ -1170,6 +1170,17 @@ storyboard:
       - actor.lookat: [0.0, Baron_Edward, geralt]
       - cam: [0.0, cam_24_Shot5_dg_geralt]
 
+  section_about_child:
+    shot_40_dg_geralt:
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+      - actor.anim.mimic:
+          actor: geralt
+          .@pos: [0.0, mimicsanim_516_geralt_neutral_gesture_shout_youre_wrong_face]
+          blendin: 0.5
+          blendout: 0.5
+    shot_41_dg_baron:
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+
   section_refuse:
     shot_30_dg_geralt:
       - actor.lookat: [0.0, geralt, Baron_Edward]
@@ -1239,15 +1250,7 @@ storyboard:
           blendout: 0.4
     shot_39_dg_baron:
       - cam: [0.0, cam_23_Shot5_dg_baron]
-    shot_40_dg_geralt:
-      - cam: [0.0, cam_24_Shot5_dg_geralt]
-      - actor.anim.mimic:
-          actor: geralt
-          .@pos: [0.0, mimicsanim_516_geralt_neutral_gesture_shout_youre_wrong_face]
-          blendin: 0.5
-          blendout: 0.5
-    shot_41_dg_baron:
-      - cam: [0.0, cam_23_Shot5_dg_baron]
+
     shot_togame:
       - actor.anim:
           actor: Baron_Edward
@@ -1512,6 +1515,14 @@ dialogscript:
       - choice: ["I don't work for bandits", section_refuse]
         single_use: true
         emphasize: true
+      - choice: ["Why do you wanna take the child?", section_about_child]
+
+  section_about_child:
+    - CUE: shot_40_dg_geralt
+    - geralt: "Why do you wanna take the child?"
+    - CUE: shot_41_dg_baron
+    - Baron_Edward: "I believe that he is my son and I want to raise him."
+    - NEXT: section_choice_geralt
 
   section_refuse:
     - CUE: shot_30_dg_geralt
@@ -1632,7 +1643,7 @@ dialogscript:
     - Baron_Edward: "We were guarding Orianna's house while finally met her."
     - Baron_Edward: "I called her and asked her where is the boy. She refused to answer. Alfred began to threaten her and drew his sword."
     - CUE: shot_37_throat
-    - Baron_Edward: "After this she moved at once and vanished. And Alfred... His throat was slit. I could not help him with those..."
+    - Baron_Edward: "After this she moved at once and vanished. And Alfred... His throat was slit. I could not help him..."
     - CUE: shot_37_dg_geralt_close
     - PAUSE: 2.0
     - CUE: shot_37_db_baron2
@@ -1640,11 +1651,7 @@ dialogscript:
     - CUE: shot_38_dg_geralt
     - geralt: "Must be a bruxa, a kind of vampire."
     - CUE: shot_39_dg_baron
-    - Baron_Edward: "Vampire? Shit... So my son is in real danger. And I can't help him as even my sword is not silver."
-    - CUE: shot_40_dg_geralt
-    - geralt: "Why do you think the boy is your son?"
-    - CUE: shot_41_dg_baron
-    - Baron_Edward: "I'm not sure, but I hope and believe in this."
+    - Baron_Edward: "Vampire? Shit... My son is in real danger. And I can't help him! You're my one hope."
     - CUE: shot_togame
     - geralt: "All right, see if I can find her."
     - PAUSE: 1.0

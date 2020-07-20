@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 538, saved: 2020-07-15 22:37:45)
+# (version: 608, saved: 2020-07-20 21:01:20)
 #
 ---
 structure:
@@ -11,7 +11,7 @@ structure:
         in:
           ".editor": [ 82.444442749, 394.6110839844 ]
           next:
-            - settime.set_00_00
+            - spawn.spawn_intro_hag
         
         scene.01_intro_hag:
           ".editor":
@@ -24,6 +24,7 @@ structure:
           _fadein: false
           next.Output:
             - waituntil.wait_hag_onDead
+            - script.tune_hag2
         
         scene.02_hag_runs:
           ".editor":
@@ -212,11 +213,11 @@ structure:
         waituntil.wait_1s:
           elapsed: "00:00:01"
           ".editor":
-            pos: [ 700.0, 375.0 ]
+            pos: [ 500.0000305176, 383.5714416504 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - script.tune_hag
+            - settime.set_00_00
         
         waituntil.wait_1s_:
           elapsed: "00:00:01"
@@ -367,7 +368,7 @@ structure:
             pos: [ 5500.0, 225.0 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRTuneNPC
+          function: NTR_TuneNPC
           parameter:
             - tag: cname_intro_barghest1
             - level: 990
@@ -383,7 +384,7 @@ structure:
             pos: [ 5500.0, 125.0 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRTuneNPC
+          function: NTR_TuneNPC
           parameter:
             - tag: cname_intro_barghest2
             - level: 990
@@ -399,9 +400,9 @@ structure:
             pos: [ 900.0, 375.0 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRTuneNPC
+          function: NTR_TuneNPC
           parameter:
-            - tag: cname_hag_intro
+            - tag: cname_ntr_hag_intro
             - level: 995
             - attitude: Hostile
             - mortality: None
@@ -411,12 +412,28 @@ structure:
           next:
             - scene.01_intro_hag: Input
         
+        script.tune_hag2:
+          ".editor":
+            pos: [ 1285.625, 460.625 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_TuneNPC
+          parameter:
+            - tag: cname_ntr_hag_intro
+            - level: 995
+            - attitude: Hostile
+            - mortality: None
+            - finishers: false
+            - npcGroupType: ENGT_Enemy
+            - scale: -1.0
+          next: ".done"
+        
         script.tune_triss:
           ".editor":
             pos: [ 4700.0, 475.0 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRTuneNPC
+          function: NTR_TuneNPC
           parameter:
             - tag: cname_triss_monster
             - level: 1005
@@ -434,7 +451,7 @@ structure:
             pos: [ 5100.0, 525.0 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRTuneNPC
+          function: NTR_TuneNPC
           parameter:
             - tag: cname_triss_monster
             - level: 0
@@ -496,7 +513,7 @@ structure:
         
         spawn.spawn_intro_hag:
           ".editor":
-            pos: [ 500.0, 375.0 ]
+            pos: [ 289.2857666016, 383.5714416504 ]
             hint: spawn-only
             in: []
             out: []
@@ -638,10 +655,10 @@ structure:
             - waituntil.blood_examined
         
         settime.set_00_00:
-          ".editor": [ 318.9233398438, 397.5083312988 ]
+          ".editor": [ 694.8756713867, 422.1115112305 ]
           time: "00:00"
           next:
-            - spawn.spawn_intro_hag
+            - script.tune_hag
         
         out:
           ".editor": [ 6078.9921875, 562.825378418 ]

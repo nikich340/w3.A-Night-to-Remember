@@ -346,7 +346,8 @@ storyboard:
     shot_7:
       - actor.anim: 
           .@pos: [0.0, triss_woman_sorceress_taunt_01_rp]
-      - cam: [0.0, cam_7_to_gp]
+      - actor.gamestate: [0.0, geralt, DrawSilver]
+      - cam.blend.togame: [0.0, cam_7_to_gp]
 
 dialogscript:
   player: "geralt"
@@ -376,11 +377,11 @@ dialogscript:
     # (longest) anim: woman_sorceress_taunt_01_rp
     - PAUSE: 5.0
     - CUE: shot_7
-    - PAUSE: 0.1
+    - PAUSE: 1.0
     # shot triss burgests up
     - NEXT: section_exit
 
   section_exit:
-    - CAMERA_BLEND: 1.0
+    #- CAMERA_BLEND: 1.0
     - EXIT
 

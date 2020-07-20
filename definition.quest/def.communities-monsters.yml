@@ -51,11 +51,11 @@ communities:
     actors:
       hag_intro:
         template: dlc/dlcntr/data/entities/custom_hag.w2ent
-        tags: [hag_intro]
+        tags: [ "ntr_hag_intro" ]
+        appearances: [ "gravehag_barons_wife" ]
     phases:
       hag_intro_fight:
         hag_intro:
-          appearance: gravehag_barons_wife     # [someappearance, only_on_spawn_bool]
           use_last_ap: false
           start_in_ap: false
           spawn_at: bob/hag_spawn

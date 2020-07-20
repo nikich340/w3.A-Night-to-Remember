@@ -3,3 +3,4 @@
 speech/wwise SFX.lnk
 *.backup
 *.cr2w
+speech/imgui.ini

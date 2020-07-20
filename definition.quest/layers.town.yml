@@ -2,7 +2,8 @@ layers:
   town_blood: 
     world: "bob"
     #context: ""
-    areas:
+
+    areas:  
       corpse_area: 
         height: 4.0
         borderpoints: 
@@ -128,19 +129,19 @@ layers:
         #radius for quest instructions: 30
         pos: [ -296.3031921387, -1510.4998779297, 43.0381469727 ]
 
-      horse_track_pin_1: 
+      horse_track_pin1: 
         #radius for quest instructions: 32
         pos: [ -238.6333770752, -1504.5407714844, 35.3381347656 ]
 
-      horse_track_pin_2: 
+      horse_track_pin2: 
         #radius for quest instructions: 33
         pos: [ -176.6981048584, -1508.2303466797, 37.1359863281 ]
 
-      horse_track_pin_3: 
+      horse_track_pin3: 
         #radius for quest instructions: 31
         pos: [ -116.8311157227, -1503.0266113281, 25.1397705078 ]
 
-      horse_track_pin_4: 
+      horse_track_pin4: 
         #radius for quest instructions: 30
         pos: [ -59.9838333130, -1506.3393554688, 16.6748657227 ]
 
@@ -204,23 +205,33 @@ layers:
           enabled: true
           noweapon: true
 
-      horse_tracks_1: 
-        .preset: .MonsterClue
-        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
-        tags: [ "ntr_orianna_horse_tracks" ]
-        pos: [ -310.5830078125, -1525.4200439453, 50.1209983826 ]
-        rot: [ 20.0, 0.0, 77.6600036621 ]
-        valid_interactions: [examine]
-
-      horse_tracks_2: 
-        .preset: .MonsterClue
-        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
-        tags: [ "ntr_orianna_horse_tracks" ]
-        pos: [ -311.5570373535, -1525.3411865234, 50.4687500000 ]
-        rot: [ 20.0, 0.0, 115.2800903320 ]
-        valid_interactions: [examine]
-
     statics:
+      corpse_music_area:
+        ".type": CEntity
+        transform: 
+          pos: [ -410.3478088379, -1441.4550781250, 84.4142837524 ]
+          scale: [ 1.0, 1.0, 1.0 ]
+        streamingDistance: 0
+        components:
+          Main:
+            ".type": CSoundAmbientAreaComponent
+            height: 5.0
+            localPoints:
+              - [ 10.0, 0.0, 0.0, 1.0 ]
+              - [ 5.0003051758, 8.6596679688, 0.0, 1.0 ]
+              - [ -5.0003051758, 8.6596679688, 0.0, 1.0 ]
+              - [ -10.0, 0.0, 0.0, 1.0 ]
+              - [ -5.0003051758, -8.6596679688, 0.0, 1.0 ]
+              - [ 5.0003051758, -8.6596679688, 0.0, 1.0 ]
+            triggerPriority: 1   ### 1, 2, 3 in vanilla usually
+            banksDependency:
+              - music_toussaint.bnk
+            soundEventsOnEnter:
+              - mus_mq7017_ambient_dark
+            soundEventsOnExit:
+              - mus_loc_toussaint_general_cs_to_gmpl
+            priorityParameterMusic: true  
+
       blood_sratch_small: 
         template: "W3MonsterClue:quests\\prologue\\quest_files\\living_world\\entities\\clues\\blood\\lw_clue_blood_claw_slash_small.w2ent"
         pos: [ -410.9045410156, -1436.6164550781, 87.3193969727 ]
@@ -237,6 +248,18 @@ layers:
         pos: [ -410.45, -1439.175, 87.065 ]
         rot: [ 0.0, 0.0, 0.0 ]
         tags: [ "ntr_agent_town" ]
+
+      horse_tracks_1: 
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -310.5830078125, -1525.4200439453, 50.1209983826 ]
+        rot: [ 20.0, 0.0, 77.6600036621 ]
+
+      horse_tracks_2: 
+        template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
+        tags: [ "ntr_orianna_horse_tracks" ]
+        pos: [ -311.5570373535, -1525.3411865234, 50.4687500000 ]
+        rot: [ 20.0, 0.0, 115.2800903320 ]
 
       horse_tracks_3: 
         template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
@@ -298,36 +321,41 @@ layers:
                 type: ECurveType_EngineTransform
                 showFlags: SHOW_AnimatedProperties
                 enableAutomaticTimeByDistanceRecalculation: true
-                totalTime: 1.5
                 curves:
                   - ".type": SCurveData
                     Curve Values:
                       - ".type": SCurveDataEntry
                         me: 0.000
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.020
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.167
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.200
+                        me: 0.333
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.994
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.400
+                        me: 0.500
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 4.555
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.600
+                        me: 0.667
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 8.912
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.800
+                        me: 0.833
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 10.337
                         rveTypeL: 3
@@ -346,29 +374,35 @@ layers:
                       - ".type": SCurveDataEntry
                         me: 0.000
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.016
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.167
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.200
+                        me: 0.333
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: -1.954
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.400
+                        me: 0.500
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: -5.159
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.600
+                        me: 0.667
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: -8.265
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.800
+                        me: 0.833
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: -11.387
                         rveTypeL: 3
@@ -387,29 +421,35 @@ layers:
                       - ".type": SCurveDataEntry
                         me: 0.000
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: -0.185
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.167
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 1.500
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.200
+                        me: 0.333
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 1.196
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.400
+                        me: 0.500
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.402
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.600
+                        me: 0.667
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: -1.030
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.800
+                        me: 0.833
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: -1.552
                         rveTypeL: 3
@@ -432,66 +472,31 @@ layers:
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.200
+                        me: 0.167
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.400
+                        me: 0.333
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.600
+                        me: 0.500
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.800
+                        me: 0.667
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 1.000
-                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-                        lue: 0.000
-                        rveTypeL: 3
-                        rveTypeL: 3
-                    value type: CVT_Float
-                    type: CT_Smooth
-                    is looped: false
-                  - ".type": SCurveData
-                    Curve Values:
-                      - ".type": SCurveDataEntry
-                        me: 0.000
-                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-                        lue: 0.000
-                        rveTypeL: 3
-                        rveTypeL: 3
-                      - ".type": SCurveDataEntry
-                        me: 0.200
-                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-                        lue: 0.000
-                        rveTypeL: 3
-                        rveTypeL: 3
-                      - ".type": SCurveDataEntry
-                        me: 0.400
-                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-                        lue: 0.000
-                        rveTypeL: 3
-                        rveTypeL: 3
-                      - ".type": SCurveDataEntry
-                        me: 0.600
-                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-                        lue: 0.000
-                        rveTypeL: 3
-                        rveTypeL: 3
-                      - ".type": SCurveDataEntry
-                        me: 0.800
+                        me: 0.833
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.000
                         rveTypeL: 3
@@ -514,25 +519,78 @@ layers:
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.200
+                        me: 0.167
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.400
+                        me: 0.333
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.600
+                        me: 0.500
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.800
+                        me: 0.667
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.833
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 1.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                    value type: CVT_Float
+                    type: CT_Smooth
+                    is looped: false
+                  - ".type": SCurveData
+                    Curve Values:
+                      - ".type": SCurveDataEntry
+                        me: 0.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 62.920
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.167
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.333
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.500
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.667
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 0.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.833
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 0.000
                         rveTypeL: 3
@@ -555,66 +613,31 @@ layers:
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.200
+                        me: 0.167
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 1.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.400
+                        me: 0.333
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 1.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.600
+                        me: 0.500
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 1.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.800
+                        me: 0.667
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 1.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 1.000
-                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-                        lue: 1.000
-                        rveTypeL: 3
-                        rveTypeL: 3
-                    value type: CVT_Float
-                    type: CT_Smooth
-                    is looped: false
-                  - ".type": SCurveData
-                    Curve Values:
-                      - ".type": SCurveDataEntry
-                        me: 0.000
-                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-                        lue: 1.000
-                        rveTypeL: 3
-                        rveTypeL: 3
-                      - ".type": SCurveDataEntry
-                        me: 0.200
-                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-                        lue: 1.000
-                        rveTypeL: 3
-                        rveTypeL: 3
-                      - ".type": SCurveDataEntry
-                        me: 0.400
-                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-                        lue: 1.000
-                        rveTypeL: 3
-                        rveTypeL: 3
-                      - ".type": SCurveDataEntry
-                        me: 0.600
-                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
-                        lue: 1.000
-                        rveTypeL: 3
-                        rveTypeL: 3
-                      - ".type": SCurveDataEntry
-                        me: 0.800
+                        me: 0.833
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 1.000
                         rveTypeL: 3
@@ -637,25 +660,78 @@ layers:
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.200
+                        me: 0.167
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 1.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.400
+                        me: 0.333
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 1.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.600
+                        me: 0.500
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 1.000
                         rveTypeL: 3
                         rveTypeL: 3
                       - ".type": SCurveDataEntry
-                        me: 0.800
+                        me: 0.667
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.833
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 1.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                    value type: CVT_Float
+                    type: CT_Smooth
+                    is looped: false
+                  - ".type": SCurveData
+                    Curve Values:
+                      - ".type": SCurveDataEntry
+                        me: 0.000
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.167
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.333
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.500
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.667
+                        ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
+                        lue: 1.000
+                        rveTypeL: 3
+                        rveTypeL: 3
+                      - ".type": SCurveDataEntry
+                        me: 0.833
                         ntrolPoint: [ -0.1, 0.0, 0.1, 0.0 ]
                         lue: 1.000
                         rveTypeL: 3

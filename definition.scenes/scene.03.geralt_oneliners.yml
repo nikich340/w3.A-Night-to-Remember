@@ -2,7 +2,7 @@ production:
   settings:
     sceneid: 1
     strings-idspace: 4670
-    strings-idstart: 650
+    strings-idstart: 658
 
   gameplay: true
   cinematic_subtitles: true
@@ -23,16 +23,16 @@ dialogscript:
     - NEXT: section_exit
 
   section_start_fresh_air:
-    - geralt: "[1.6855]I need some fresh air."
+    - geralt: "[1.6855]2114670650|I need some fresh air."
     - NEXT: section_exit
 
   section_start_using_owl:
-    - geralt: "[3.1468]A letter... Who's using an owl for this?"
+    - geralt: "[3.1468]2114670651|A letter... Who's using an owl for this?"
     - NEXT: section_exit
 
   section_start_check_orphanage:
-    - geralt: "[4.7800]Regis... Just trying to avoid a fight, to protect her."
-    - geralt: "[5.3381]Well, I should check an orphanage in a swamp. Last time Orianna was there."
+    - geralt: "[4.7800]2114670652|Regis... Just trying to avoid a fight, to protect her."
+    - geralt: "[5.3381]2114670653|Well, I should check an orphanage in a swamp. Last time Orianna was there."
     - NEXT: section_exit
 
   section_start_town_corpse:
@@ -48,12 +48,48 @@ dialogscript:
     - geralt: "[2.8847995]0001172622|*Sniff* Clear scent of perfume."
     - NEXT: section_exit
 
+  section_start_horse_tracks:
+    - geralt: "[0.88288397]0000499604|Hoof prints…"
+    - NEXT: section_exit
+
+  section_start_cemetery_footprints:
+    - geralt: "[4.1493254]0001038386|Footprints, narrow… a woman's."
+    - NEXT: section_exit
+
+  section_start_cemetery_footprints_end:
+    - geralt: "[1.7081]2114670655|Woman turned back here."
+    - PAUSE: 0.5
+    - geralt: "[2.9464]2114670656|Think she was looking for Regis. But he left."
+    - NEXT: section_exit
+
+  section_start_fisher_footprints_end:
+    - geralt: "[1.3140813]0001091477|Trail ends here."
+    - geralt: "[1.7830]2114670657|Fishermen should know something."
+    - NEXT: section_exit
+
+  section_start_orianna_house_found:
+    - geralt: "Tracks lead to this house."
+    - NEXT: section_exit
+
+  section_start_orianna_house_enter:
+    - geralt: "House looks inhabited… No sign of the dweller, though. Guess I'll look around."
+    - NEXT: section_exit
+
+  section_start_orianna_house_notes:
+    - geralt: "Interesting… Regis might be right."
+    - NEXT: section_exit
+
+  section_start_orianna_house_outside:
+    - geralt: "I'll wait her outside."
+    - NEXT: section_exit
+
   #section_start_after_orphanage:
   #  - geralt: "Interesting. The son of a bandit in vampire's claws..."
   #  - NEXT: section_exit
 
   section_exit:
     - EXIT
+
 
 
 

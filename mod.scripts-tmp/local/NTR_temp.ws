@@ -2,6 +2,23 @@ exec function startNTR() {
 	FactsAdd("NTRstartquest", 1);
 }
 
+exec function musDebug() {
+	theSound.EnableMusicDebug(true);
+}
+
+/*exec function execHide() {
+    var acceptedTags : array<name>;
+
+    acceptedTags.PushBack('PLAYER');
+    acceptedTags.PushBack('ntr_fisherman');
+
+    NTR_HideActorsInRange(15.0, acceptedTags);
+}*/
+
+exec function execUnhide() {
+    NTR_UnhideActorsInRange(15.0);
+}
+
 exec function getInRange(range : float) {
     var entities: array<CGameplayEntity>;
     var actor : CActor;
@@ -21,6 +38,13 @@ exec function getInRange(range : float) {
         actor = (CActor)entities[i];
         if (actor) {
             LogChannel('DEBUG', "actor " + actor);
+            if (!actor.IsAlive()) {
+            	LogChannel('DEBUG', "* actor dead");
+            	continue;
+            }
+
+            LogChannel('DEBUG', "GetVoicetag: " + actor.GetVoicetag());
+            LogChannel('DEBUG', "GetDisplayName: " + actor.GetDisplayName());
 
             tags = actor.GetTags();
 
@@ -468,12 +492,12 @@ exec function tsc() {
 }*/
 
 exec function hostileOrianna() {
-	NTRTuneNPC( 'oriana_test2', 40, "Hostile", "None", false, "ENGT_Enemy", -1 );
+	NTR_TuneNPC( 'oriana_test2', 40, "Hostile", "None", false, "ENGT_Enemy", -1 );
 }
 exec function hostileOrianna2() {
-	NTRTuneNPC2( 'oriana_test2', 40, "Hostile", "None", false, "ENGT_Enemy", -1 );
+	NTR_TuneNPC2( 'oriana_test2', 40, "Hostile", "None", false, "ENGT_Enemy", -1 );
 }
-quest function NTRTuneNPC2( tag : name, level : int, optional attitude : string, optional mortality : string, optional finishers : bool, optional npcGroupType : string, optional scale : float ) {
+quest function NTR_TuneNPC2( tag : name, level : int, optional attitude : string, optional mortality : string, optional finishers : bool, optional npcGroupType : string, optional scale : float ) {
 	var NPCs   : array <CNewNPC>;
 	var i      : int;
 	var meshh : CMovingPhysicalAgentComponent;

@@ -388,23 +388,23 @@ dialogscript:
     - CUE: shot_6
     - geralt: "[1.0482]Gonna answer me?"
     - CUE: shot_7
-    - Big_bandit: "Baron won't be happy... Alright, I tell you what I know."
-    - Big_bandit: "A few years ago, our leader, Baron Edward, visited Toussaint, where he met a beautiful girl."
-    - Big_bandit: "I'm not a master of nice speech, so I'll just say - a boy was born to them."
+    - Big_bandit: "Baron won't be happy... Alright, I'll tell you what I know."
+    - Big_bandit: "A few years ago our leader, Baron Edward, visited Toussaint, where he met a beautiful girl."
+    - Big_bandit: "A boy was born to them."
     - CUE: shot_8_ger_listen_sceptic
     - Big_bandit: "The Baron went with us to the far lands, where we were culled by battalions of Nilfs."
     - CUE: shot_8_band
-    - Big_bandit: "Well, I won't say that the Baron particularly liked that girl, as he left her here, but recently he decided to visit her."
+    - Big_bandit: "Well, I can't say that the Baron liked that girl much, as he left her here. However recently he said we must visit Toussaint again."
     - Big_bandit: "We came here and found out that she had died of some illness about a year ago. And the boy was sent in an orphanage, to this Orianna."
     - CUE: shot_8_ger_listen
     - Big_bandit: "But we didn't manage to find neither boy nor Orianna."
     - CUE: shot_9_band
-    - Big_bandit: "There was some kind of vampire attack and the orphanage is now abandoned, only a mess and a pile of children's old corpses."
-    - Big_bandit: "Well, our Baron was as drooping as he never was. But then we learned that Orianna is alive and well, people saw her in the city with a boy."
-    - Big_bandit: "Now the Baron is sure that this is his son and very much wants to find this woman. However she is... elusive, everyone know her but where she is - no idea."
+    - Big_bandit: "After that vampire attack the orphanage is abandoned, only a mess and a pile of children's old corpses."
+    - Big_bandit: "Baron was quite upset. But then we learned that Orianna is alive and in perfect health, people saw her in the city with the boy."
+    - Big_bandit: "Baron is sure that this is his son and very much wants to find this woman. However she is... elusive, everyone know her but where she is - no idea."
     - Big_bandit: "So we divided into groups and now watching for places where she may appear."
     - CUE: shot_10_ger_listen2
-    - Big_bandit: "To be honest, I'm tired of sitting on one place, so if you can help us, it would be great."
+    - Big_bandit: "To be honest, I'm tired of sitting on one place, so if you could help us, it would be great."
     - geralt: "[2.3149]I see it now. It's a deal."
     - CUE: shot_11_band
     - Big_bandit: "Then you should talk with our leader."

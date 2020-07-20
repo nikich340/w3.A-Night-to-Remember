@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 538, saved: 2020-07-15 22:37:45)
+# (version: 608, saved: 2020-07-20 21:01:20)
 #
 ---
 structure:
@@ -12,6 +12,15 @@ structure:
         next:
           - waituntil.wait_quest_allowed
           - changelayers.hide_hide_hide
+      
+      subsegment.FINALE:
+        ".editor":
+          pos: [ 1718.912109375, 532.5865478516 ]
+          in: [ In ]
+          out: [ Out ]
+        segment: finale
+        next:
+          - end
       
       subsegment.camp:
         ".editor":
@@ -25,7 +34,7 @@ structure:
       
       subsegment.intro_nightmare:
         ".editor":
-          pos: [ 237.6061553955, 504.0928955078 ]
+          pos: [ 204.7490234375, 459.8071899414 ]
           in: [ In ]
           out: [ Out ]
         segment: intro_nightmare
@@ -43,7 +52,7 @@ structure:
       
       subsegment.regis_mail:
         ".editor":
-          pos: [ 452.4227905273, 503.7007141113 ]
+          pos: [ 415.7561340332, 451.3197631836 ]
           in: [ In ]
           out: [ Out ]
         segment: regis_mail
@@ -57,7 +66,7 @@ structure:
           out: [ Out ]
         segment: town_part
         next:
-          - end
+          - subsegment.FINALE
       
       interaction.baron_not_yet_gp:
         ".editor":
@@ -141,7 +150,7 @@ structure:
           in: [ In ]
           out: [ Out ]
         next:
-          - changelayers.show_camp_river_main
+          - changelayers.show_camp_house_main
       
       waituntil.wraith_area:
         inside: [ bob/orphanage_wraitharea, PLAYER ]
@@ -190,6 +199,28 @@ structure:
           - val: 2
         next.False:
           - waituntil.outside_area
+      
+      script.Lock_back_door_house:
+        ".editor":
+          pos: [ 190.8543701172, 540.2079467773 ]
+          in: [ In ]
+          out: [ Out ]
+        function: NTR_DoorChangeState
+        parameter:
+          - tag: cname_ntr_orianna_house_back_door
+          - newState: EDQS_Lock
+        next: ".done"
+      
+      script.Lock_front_door:
+        ".editor":
+          pos: [ 318.3265075684, 546.5277099609 ]
+          in: [ In ]
+          out: [ Out ]
+        function: NTR_DoorChangeState
+        parameter:
+          - tag: cname_ntr_orianna_house_front_door
+          - newState: EDQS_Lock
+        next: ".done"
       
       script.check_camp_removed:
         ".editor":
@@ -309,7 +340,7 @@ structure:
           - fisher
         next: ".done"
       
-      changelayers.show_camp_river_main:
+      changelayers.show_camp_house_main:
         ".editor":
           pos: [ 19.7808647156, 637.2651367188 ]
           hint: show-only
@@ -327,6 +358,10 @@ structure:
           - spawn.spawn_bandits_camp
           - spawn.spawn_horses
           - spawn.spawn_baron
+          - script.Lock_back_door_house
+          - subsegment.FINALE
+          - script.Lock_front_door
+          - spawn.Spawn_orianna_horse
           - subsegment.intro_nightmare
       
       changelayers.show_orphlayer:
@@ -347,7 +382,7 @@ structure:
       
       changelayers.show_town_blood:
         ".editor":
-          pos: [ 1367.0268554688, 549.1499633789 ]
+          pos: [ 1364.8046875, 503.5944213867 ]
           hint: show-only
           in: []
           out: []
@@ -386,6 +421,17 @@ structure:
           - comm_camp_bandit_axe_day
         next:
           - waituntil.wait_day
+      
+      spawn.Spawn_orianna_horse:
+        ".editor":
+          pos: [ 282.2374267578, 1014.0485839844 ]
+          hint: spawn-only
+          in: []
+          out: []
+        phase: horse_idle
+        spawnsets:
+          - comm_orianna_horse
+        next: ".done"
       
       spawn.spawn_bandits_camp:
         ".editor":
@@ -471,6 +517,6 @@ structure:
           - script.FACT_BRANCH1
       
       end:
-        ".editor": [ 1741.3498535156, 437.2974853516 ]
+        ".editor": [ 1936.5690917969, 445.2799377441 ]
         next: ".done"
       

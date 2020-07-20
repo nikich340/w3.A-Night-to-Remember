@@ -238,11 +238,12 @@ storyboard:
     # shot Shot2 triss close
     shot_5:
       - cam.blend.end: [0.5, cam_5_Shot2_triss_close]
-      - cam.blend.start: [1.0, cam_5_Shot2_triss_close, rapid]
+      #- cam.blend.start: [1.0, cam_5_Shot2_triss_close, rapid]
 
     # shot Shot2 to gp
     shot_6:
-      - cam.blend.end: [1.0, cam_6_Shot2_to_gp, rapid]
+      - actor.gamestate: [0.0, geralt]
+      - cam.blend.togame: [0.0, cam_5_Shot2_triss_close]
 
 dialogscript:
   player: "geralt"
@@ -276,10 +277,10 @@ dialogscript:
     - PAUSE: 1
     # shot Shot2 to gp
     - CUE: shot_6
-    - PAUSE: 0.5
+    - PAUSE: 1.0
     - NEXT: section_exit
 
   section_exit:
-    - CAMERA_BLEND: 1.0
+    #- CAMERA_BLEND: 1.0
     - EXIT
 

@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: orphanage
 # 
-# (version: 538, saved: 2020-07-15 22:37:45)
+# (version: 608, saved: 2020-07-20 21:01:20)
 #
 ---
 structure:
@@ -361,7 +361,7 @@ structure:
             pos: [ 1595.3072509766, 422.6904907227 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRTuneNPC
+          function: NTR_TuneNPC
           parameter:
             - tag: cname_ntr_bandit_2
             - level: 980
@@ -374,7 +374,7 @@ structure:
             pos: [ 1597.8072509766, 520.1904296875 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRTuneNPC
+          function: NTR_TuneNPC
           parameter:
             - tag: cname_ntr_bandit_3
             - level: 975
@@ -387,7 +387,7 @@ structure:
             pos: [ 1583.4322509766, 335.8154907227 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRTuneNPC
+          function: NTR_TuneNPC
           parameter:
             - tag: cname_ntr_fat_bandit
             - level: 985
@@ -477,7 +477,7 @@ structure:
             pos: [ 1204.4562988281, 589.6369018555 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRTuneNPC
+          function: NTR_TuneNPC
           parameter:
             - tag: cname_ntr_bandit_2
             - level: 980
@@ -490,7 +490,7 @@ structure:
             pos: [ 1207.2341308594, 680.1923828125 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRTuneNPC
+          function: NTR_TuneNPC
           parameter:
             - tag: cname_ntr_bandit_3
             - level: 975
@@ -503,7 +503,7 @@ structure:
             pos: [ 1188.2995605469, 473.0837097168 ]
             in: [ In ]
             out: [ Out ]
-          function: NTRTuneNPC
+          function: NTR_TuneNPC
           parameter:
             - tag: cname_ntr_fat_bandit
             - level: 985

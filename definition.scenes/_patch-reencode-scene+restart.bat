@@ -11,7 +11,7 @@ rem ---------------------------------------------------
 :: file "scene.1.examine.corpse.yml"
 :: an empty sceneid is identical to SCENEID=scene.*.yml wildcard and will encode
 :: all scenes matching
-SET SCENEID=16.baron_meeting
+SET SCENEID=18.fisherman
 
 SET INTERACTIVE_BUILD=0
 :: auto execution of every step that is needed (strings, etc)

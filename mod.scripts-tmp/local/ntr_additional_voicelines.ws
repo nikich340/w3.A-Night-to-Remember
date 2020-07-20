@@ -12,6 +12,13 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670652, category, "group 1", "Regis____Just_trying_to_avoid_a_fight__to_protect_", 4.78));
     lines.PushBack(SSbUiExtraLines(2114670653, category, "group 1", "Well__I_should_check_an_orphanage_in_a_swamp__Last", 5.3381));
     lines.PushBack(SSbUiExtraLines(2114670654, category, "group 1", "Go_home__I'm_a_witcher__Need_to_examine_the_body_", 4.2495));
+    lines.PushBack(SSbUiExtraLines(2114670655, category, "group 1", "Woman_turned_back_here_", 1.7081));
+    lines.PushBack(SSbUiExtraLines(2114670656, category, "group 1", "Think_she_was_looking_for_Regis__But_he_left_", 2.9464));
+    lines.PushBack(SSbUiExtraLines(2114670657, category, "group 1", "Fishermen_should_know_something_", 1.783));
+    lines.PushBack(SSbUiExtraLines(2114670658, category, "group 1", "Tracks_lead_to_this_house_", 2.0004));
+    lines.PushBack(SSbUiExtraLines(2114670659, category, "group 1", "House_looks_inhabited__No_sign_of_the_dweller__tho", 5.3534));
+    lines.PushBack(SSbUiExtraLines(2114670660, category, "group 1", "Interesting__Regis_might_be_right_", 3.3616));
+    lines.PushBack(SSbUiExtraLines(2114670661, category, "group 1", "I'll_wait_her_outside_", 2.0562));
     lines.PushBack(SSbUiExtraLines(2114670700, category, "group 1", "Triss_!_I_should_talk_to_her_", 2.1154));
     lines.PushBack(SSbUiExtraLines(2114670705, category, "group 1", "I've_been_thinking_about_us_", 1.8566));
     lines.PushBack(SSbUiExtraLines(2114670706, category, "group 1", "I'm_looking_for___", 1.1954));
@@ -45,4 +52,5 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670795, category, "group 1", "Interesting__Son_of_a_bandit_in_the_vampire's_claw", 4.2789));
     lines.PushBack(SSbUiExtraLines(2114670800, category, "group 1", "Gonna_answer_me_", 1.0482));
     lines.PushBack(SSbUiExtraLines(2114670813, category, "group 1", "I_see_it_now__It's_a_deal_", 2.3149));
+    lines.PushBack(SSbUiExtraLines(2114670919, category, "group 1", "Did_you_see_a_red-haired_woman_here__Left_this_sit", 5.4078));
 }

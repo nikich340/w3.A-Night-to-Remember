@@ -1,0 +1,202 @@
+#
+# quest structure subsegment: finale
+# 
+# (version: 608, saved: 2020-07-20 21:01:20)
+#
+---
+structure:
+  segments:
+    finale:
+      blocks:
+        in:
+          ".editor": [ 100.0, 250.0 ]
+          next:
+            - objective.Inv_Inn: Activate
+            - waituntil.side_area
+        
+        scene.house_found_comment:
+          ".editor":
+            pos: [ 1115.8630371094, 153.2471466064 ]
+            in: [ orianna_house_found ]
+            out: [ Output ]
+          scene: 03.geralt_oneliners.yml
+          placement: bob/camp
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - objective.Riverside_tracks: Success
+            - waituntil.room_are
+            - objective.Check_house: Activate
+        
+        scene.notes_comment:
+          ".editor":
+            pos: [ 1810.1135253906, 331.6704101562 ]
+            in: [ orianna_house_notes ]
+            out: [ Output ]
+          scene: 03.geralt_oneliners.yml
+          placement: bob/camp
+          interruptable: true
+          _fadein: false
+          next: ".done"
+        
+        scene.outside_comment:
+          ".editor":
+            pos: [ 1843.9033203125, 8.3915653229 ]
+            in: [ orianna_house_outside ]
+            out: [ Output ]
+          scene: 03.geralt_oneliners.yml
+          placement: bob/camp
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - objective.Check_house: Success
+            - objective.new_quest_objective: Activate
+        
+        scene.room_comment:
+          ".editor":
+            pos: [ 1459.1292724609, 122.3566970825 ]
+            in: [ orianna_house_enter ]
+            out: [ Output ]
+          scene: 03.geralt_oneliners.yml
+          placement: bob/camp
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - waituntil.Notes_were_read
+            - waituntil.Outside_room
+        
+        waituntil.House_area:
+          inside: [ bob/house_area, PLAYER ]
+          ".editor":
+            pos: [ 933.9943237305, 238.903717041 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.house_found_comment: orianna_house_found
+            - script.Unlock_front_door
+        
+        waituntil.Notes_were_read:
+          factdb: [ BookReadState_ntr_notices_orianna_notes, ">=", 1 ]
+          ".editor":
+            pos: [ 1636.0227050781, 323.7727050781 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.notes_comment: orianna_house_notes
+        
+        waituntil.Outside_room:
+          outside: [ bob/room_area, PLAYER ]
+          ".editor":
+            pos: [ 1637.0942382812, 94.9821472168 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.outside_comment: orianna_house_outside
+            - waituntil.Player_outside
+        
+        waituntil.Player_outside:
+          entered: [ bob/outside_orianna_house, PLAYER ]
+          ".editor":
+            pos: [ 2019.2658691406, 109.0693359375 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.new_logmsg
+        
+        waituntil.footprints_found:
+          factdb: [ ntr_orianna_side_footprints_found, ">=", 1 ]
+          ".editor":
+            pos: [ 675.4466552734, 236.4975891113 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - objective.Inv_Inn: Success
+            - objective.Riverside_tracks: Activate
+            - waituntil.House_area
+        
+        waituntil.room_are:
+          inside: [ bob/room_area, PLAYER ]
+          ".editor":
+            pos: [ 1301.6651611328, 196.9281005859 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.room_comment: orianna_house_enter
+        
+        waituntil.side_area:
+          inside: [ bob/side_area, PLAYER ]
+          ".editor":
+            pos: [ 312.7751464844, 249.7742614746 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.focus_footprints
+        
+        script.Unlock_front_door:
+          ".editor":
+            pos: [ 1160.6940917969, 58.4589042664 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_DoorChangeState
+          parameter:
+            - tag: cname_ntr_orianna_house_front_door
+            - newState: EDQS_RemoveLock
+          next: ".done"
+        
+        script.focus_footprints:
+          ".editor":
+            pos: [ 505.6070251465, 242.7822113037 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FocusSetHighlight
+          parameter:
+            - tag: cname_ntr_orianna_footprints_to_house
+            - highlightType: FMV_Clue
+            - overrideCustomLogic: false
+          next:
+            - waituntil.footprints_found
+        
+        script.new_logmsg:
+          ".editor":
+            pos: [ 2216.3247070312, 117.892868042 ]
+            in: [ In ]
+            out: [ Out ]
+          function: radLog
+          parameter:
+            - logChannel: cname_NTR
+            - msg: final scene
+          next:
+            - out
+        
+        objective.Check_house:
+          ".editor": [ 1292.9097900391, 462.9410705566 ]
+          objective: nighttoremember/river_part/check_house
+          notify: true
+          track: true
+          next: ".done"
+        
+        objective.Inv_Inn:
+          ".editor": [ 376.7718811035, 452.561340332 ]
+          objective: nighttoremember/river_part/find_house
+          notify: true
+          track: true
+          next: ".done"
+        
+        objective.Riverside_tracks:
+          ".editor": [ 956.9162597656, 444.2760620117 ]
+          objective: nighttoremember/river_part/follow_tracks
+          notify: true
+          track: false
+          next: ".done"
+        
+        objective.new_quest_objective:
+          ".editor": [ 2071.61328125, 478.4178466797 ]
+          objective: nighttoremember/river_part/wait_outside
+          notify: true
+          track: false
+          next: ".done"
+        
+        out:
+          ".editor": [ 2365.3234863281, 116.3458633423 ]
+          next: ".done"
+        

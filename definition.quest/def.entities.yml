@@ -2,6 +2,21 @@
 # definition of entities
 #
 templates:
+  footprint_clue:
+    includes:
+      - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
+    entityObject:
+      .type: W3MonsterClue
+      testLineOfSight: true
+      components:
+        examine:
+          .type: CInteractionComponent
+          actionName: Examine
+          rangeMin: 0.0
+          rangeMax: 2.0
+          isEnabled: true
+          reportToScript: true
+
   alfred_blood_main:
     includes:
       - "fx\\blood\\blood_decal\\blood_decal.w2ent"
@@ -53,9 +68,7 @@ templates:
     entityObject:
       .type: "CNTRScriptedAgent:CGameplayEntity" 
       
-  vampire_vision_env:
-    #.type: CEntityTemplate
-    #properOverrides: true
+  memory_vision_env:
     entityObject:
       ".type": CEntity
       streamingDistance: 0
@@ -75,13 +88,43 @@ templates:
             - [ 5.5, -5.5, 0.0, 5.0 ]
             - [ 5.5, 5.5, 0.0, 5.0 ]
             - [ -5.5, 5.5, 0.0, 5.0 ]
-          worldPoints:
-            - [ -22.4689807892, -16.4230308533, -0.3485078812, 1.0 ]
-            - [ 24.4689807892, -16.4230308533, -0.3485078812, 1.0 ]
-            - [ 24.4689807892, 18.4230308533, -0.3485078812, 1.0 ]
-            - [ -22.4689807892, 18.4230308533, -0.3485078812, 1.0 ]
+          #worldPoints:
+          #  - [ -22.4689807892, -16.4230308533, -0.3485078812, 1.0 ]
+          #  - [ 24.4689807892, -16.4230308533, -0.3485078812, 1.0 ]
+          #  - [ 24.4689807892, 18.4230308533, -0.3485078812, 1.0 ]
+          #  - [ -22.4689807892, 18.4230308533, -0.3485078812, 1.0 ]
           priority: 1500
-          blendingDistance: 0.1000000015
+          blendingDistance: 0.1
+          blendAboveAndBelow: true
+          environmentDefinition: "dlc\\bob\\data\\environment\\definitions\\quests\\q704\\temp\\q704_detlaff_arena_prod_room.env"
+
+  vampire_vision_env:
+    entityObject:
+      ".type": CEntity
+      streamingDistance: 0
+      components:
+        CAreaEnvironmentComponent0:
+          ".type": CAreaEnvironmentComponent
+          transform:
+            pos: [ 1.0, 1.0, -0.3485078812 ]
+            scale: [ 46.9379615784, 34.8460617065, 6.0959768295 ]
+          #guid: 0640968c-e198-4282-95ea-c0463e6f87b5
+          boundingBox:
+            ".type": Box
+            Min: [ -22.4689807892, -16.4230308533, -0.3485078812, 1.0 ]
+            Max: [ 24.4689807892, 18.4230308533, 11.8434457779, 1.0 ]
+          localPoints:
+            - [ -5.5, -5.5, 0.0, 5.0 ]
+            - [ 5.5, -5.5, 0.0, 5.0 ]
+            - [ 5.5, 5.5, 0.0, 5.0 ]
+            - [ -5.5, 5.5, 0.0, 5.0 ]
+          #worldPoints:
+          #  - [ -22.4689807892, -16.4230308533, -0.3485078812, 1.0 ]
+          #  - [ 24.4689807892, -16.4230308533, -0.3485078812, 1.0 ]
+          #  - [ 24.4689807892, 18.4230308533, -0.3485078812, 1.0 ]
+          #  - [ -22.4689807892, 18.4230308533, -0.3485078812, 1.0 ]
+          priority: 1500
+          blendingDistance: 0.1
           blendAboveAndBelow: true
           environmentDefinition: "dlc\\bob\\data\\fx\\cutscenes\\cs702_vision\\vision_env.env"
 

@@ -7,6 +7,32 @@
 	theSound.SoundEvent( eventName );
 }
 
+storyscene function NTR_PayStoryScene_PerformAction( player : CStoryScenePlayer, money : int, dontGrantExp : bool )
+{
+	if (thePlayer.GetMoney() < money)
+		thePlayer.RemoveMoney( thePlayer.GetMoney() );
+	else
+		thePlayer.RemoveMoney( money );
+	
+	if( !dontGrantExp )
+	{
+		GetWitcherPlayer().AddPoints( EExperiencePoint, CeilF(money / 10), true );
+	}
+	
+	theSound.SoundEvent("gui_bribe");
+}
+
+storyscene function NTR_HideActorsFishermanScene_S( player : CStoryScenePlayer ) {
+    var acceptedTags : array<name>;
+    var acceptedVoicetags : array<name>;
+
+    acceptedTags.PushBack('PLAYER');
+    acceptedTags.PushBack('ntr_fisherman');
+    acceptedVoicetags.PushBack('VAMPIRE DIVA');
+
+    NTR_HideActorsInRange(30.0, acceptedTags, acceptedVoicetags);
+}
+
 latent storyscene function NTR_NegotiateMonsterHunt_S( player: CStoryScenePlayer, resultFact : CName, rewardName : name, alwaysSuccessful : bool, isItemReward : bool ) {
 	var ret : ENegotiationResult;
 	var questUniqueScriptTag : CName;

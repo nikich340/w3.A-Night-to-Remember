@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: regis_mail
 # 
-# (version: 538, saved: 2020-07-15 22:37:45)
+# (version: 608, saved: 2020-07-20 21:01:20)
 #
 ---
 structure:
@@ -27,6 +27,18 @@ structure:
             - questoutcome.Finish_Night_of_Nightmare: Success
             - waituntil.wait_3s
         
+        scene.geralt_comment:
+          ".editor":
+            pos: [ 1932.6650390625, 319.6293640137 ]
+            in: [ check_orphanage ]
+            out: [ Output ]
+          scene: 03.geralt_oneliners.yml
+          placement: bob/camp
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - out
+        
         scene.gp_using_owl:
           ".editor":
             pos: [ 1172.7955322266, 170.5534057617 ]
@@ -38,6 +50,16 @@ structure:
           _fadein: false
           next: ".done"
         
+        waituntil.Letter_read:
+          factdb: [ BookReadState_ntr_notices_regis_letter, ">=", 1 ]
+          ".editor":
+            pos: [ 1674.3376464844, 291.9548950195 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - objective.Read_letter: Success
+            - scene.geralt_comment: check_orphanage
+        
         waituntil.mail_looted:
           looted: bob/regis_mail
           ".editor":
@@ -46,17 +68,8 @@ structure:
             out: [ Out ]
           next:
             - objective.Take_letter: Success
-            - waituntil.wait_2s
             - objective.Read_letter: Activate
-        
-        waituntil.wait_2s:
-          elapsed: "00:00:02"
-          ".editor":
-            pos: [ 1631.3692626953, 152.9906005859 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - script.Book_read_checker
+            - waituntil.Letter_read
         
         waituntil.wait_3s:
           elapsed: "00:00:03"
@@ -78,20 +91,6 @@ structure:
             - objective.Fresh_air: Success
             - objective.Take_letter: Activate
             - scene.gp_using_owl: using_owl
-        
-        script.Book_read_checker:
-          ".editor":
-            pos: [ 1641.3184814453, 312.334777832 ]
-            in: [ In ]
-            out: [ "False", "True" ]
-          function: NTR_BookReadChecker
-          parameter:
-            - bookName: cname_ntr_notices_regis_letter
-          next.False:
-            - waituntil.wait_2s
-          next.True:
-            - out
-            - objective.Read_letter: Success
         
         script.Set_FMV_Clue_for_mail:
           ".editor":

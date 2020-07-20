@@ -299,7 +299,7 @@ dialogscript:
   section_storyboard_ui:
     - CUE: shot_0
     # (longest) anim: ep1_geralt_lying_unconscious_to_low_sitting_ground_leaning_back_bored
-    - fat_bandit: "Hahaha, shove off, vargant! If you will want to loose again - come in."
+    - fat_bandit: "Hahaha, shove off, vargant! If you will decide to help - our camp is on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater."
     - CUE: shot_01
     - PAUSE: 4.0
     # shot Shot1
