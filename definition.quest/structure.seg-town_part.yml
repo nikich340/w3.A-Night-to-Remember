@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: town_part
 # 
-# (version: 608, saved: 2020-07-20 21:01:20)
+# (version: 639, saved: 2020-07-21 23:11:29)
 #
 ---
 structure:
@@ -90,6 +90,8 @@ structure:
             - objective.follow_footprints: Success
             - despawn.despawn_folk
             - interaction.Scene_to_fisherman: Input
+            - script.tune_fisherman
+            - script.HideActors_FishermanScene
         
         scene.woman_footprints_comment:
           ".editor":
@@ -115,7 +117,7 @@ structure:
           actor: [ ntr_fisherman ]
           next.Output:
             - objective.talk_fisherman: Success
-            - script.Unhide_actors
+            - waituntil.2ss
         
         waituntil.1s:
           elapsed: "00:00:01"
@@ -143,6 +145,15 @@ structure:
             out: [ Out ]
           next:
             - scene.tracks_end_comment: fisher_footprints_end
+        
+        waituntil.2ss:
+          elapsed: "00:00:02"
+          ".editor":
+            pos: [ 4512.8618164062, 474.0000305176 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Unhide_actors
         
         waituntil.2sss:
           elapsed: "00:00:02"
@@ -388,7 +399,7 @@ structure:
         
         script.HideActors_FishermanScene:
           ".editor":
-            pos: [ 4321.24609375, 310.2507629395 ]
+            pos: [ 4308.8930664062, 243.7801818848 ]
             in: [ In ]
             out: [ Out ]
           function: HideActorsFishermanScene
@@ -396,12 +407,12 @@ structure:
         
         script.Unhide_actors:
           ".editor":
-            pos: [ 4526.0678710938, 502.4553833008 ]
+            pos: [ 4665.2421875, 552.5714111328 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_UnhideActorsInRange
           parameter:
-            - range: 50.0
+            - range: 40.0
           next:
             - out
         
@@ -427,6 +438,22 @@ structure:
             - tag: cname_ntr_footprints_to_fisher
             - highlightType: FMV_Clue
             - overrideCustomLogic: false
+          next: ".done"
+        
+        script.tune_fisherman:
+          ".editor":
+            pos: [ 4308.3159179688, 326.1184692383 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_TuneNPC
+          parameter:
+            - tag: cname_ntr_fisherman
+            - level: 1000
+            - attitude: Friendly
+            - mortality: Invulnerable
+            - finishers: false
+            - npcGroupType: ENGT_Quest
+            - scale: -1.0
           next: ".done"
         
         changelayers.hide_town_blood:
@@ -609,6 +636,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 4743.9565429688, 463.8349914551 ]
+          ".editor": [ 4845.3852539062, 473.358795166 ]
           next: ".done"
         

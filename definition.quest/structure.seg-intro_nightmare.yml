@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 608, saved: 2020-07-20 21:01:20)
+# (version: 639, saved: 2020-07-21 23:11:29)
 #
 ---
 structure:
@@ -25,6 +25,7 @@ structure:
           next.Output:
             - waituntil.wait_hag_onDead
             - script.tune_hag2
+            - script.Kill_banshee
         
         scene.02_hag_runs:
           ".editor":
@@ -112,8 +113,9 @@ structure:
           interruptable: true
           _fadein: false
           next.Output:
-            - script.play_music_invest_suspense
             - objective.blood_tracks: Success
+            - waituntil.triss_found_area
+            - objective.behind_wall: Activate
         
         waituntil.Triss_out:
           outside: [ bob/magic_area, triss_monster ]
@@ -251,6 +253,14 @@ structure:
             - changelayers.hide_barrier
             - objective.fight_triss: Success
         
+        script.Kill_banshee:
+          ".editor":
+            pos: [ 1260.6649169922, 232.428604126 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_HideActorsHagScene
+          next: ".done"
+        
         script.Stop_triss_effects:
           ".editor":
             pos: [ 5308.6000976562, 574.8638916016 ]
@@ -318,16 +328,14 @@ structure:
         
         script.play_music_invest_suspense:
           ".editor":
-            pos: [ 3500.0, 525.0 ]
+            pos: [ 3495.2631835938, 445.5263366699 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
           parameter:
             - areaName: toussaint
             - eventName: mus_credits_ep2_secondary
-          next:
-            - objective.behind_wall: Activate
-            - waituntil.triss_found_area
+          next: ".done"
         
         script.teleport_triss:
           ".editor":
@@ -394,23 +402,6 @@ structure:
             - npcGroupType: ENGT_Enemy
             - scale: -1.0
           next: ".done"
-        
-        script.tune_hag:
-          ".editor":
-            pos: [ 900.0, 375.0 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_TuneNPC
-          parameter:
-            - tag: cname_ntr_hag_intro
-            - level: 995
-            - attitude: Hostile
-            - mortality: None
-            - finishers: false
-            - npcGroupType: ENGT_Enemy
-            - scale: -1.0
-          next:
-            - scene.01_intro_hag: Input
         
         script.tune_hag2:
           ".editor":
@@ -655,10 +646,10 @@ structure:
             - waituntil.blood_examined
         
         settime.set_00_00:
-          ".editor": [ 694.8756713867, 422.1115112305 ]
+          ".editor": [ 733.69921875, 427.9938659668 ]
           time: "00:00"
           next:
-            - script.tune_hag
+            - scene.01_intro_hag: Input
         
         out:
           ".editor": [ 6078.9921875, 562.825378418 ]

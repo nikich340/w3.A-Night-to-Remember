@@ -6,17 +6,21 @@ exec function musDebug() {
 	theSound.EnableMusicDebug(true);
 }
 
-/*exec function execHide() {
+exec function execHide(range : float) {
     var acceptedTags : array<name>;
+    var acceptedVoicetags : array<name>;
+    var killIfHostile : bool;
 
+    killIfHostile = true;
     acceptedTags.PushBack('PLAYER');
-    acceptedTags.PushBack('ntr_fisherman');
+    //acceptedTags.PushBack('ntr_fisherman');
+    acceptedVoicetags.PushBack('CELINA MONSTER');
 
-    NTR_HideActorsInRange(15.0, acceptedTags);
-}*/
+    NTR_HideActorsInRange(range, acceptedTags, acceptedVoicetags, killIfHostile);
+}
 
-exec function execUnhide() {
-    NTR_UnhideActorsInRange(15.0);
+exec function execUnhide(range : float) {
+    NTR_UnhideActorsInRange(range);
 }
 
 exec function getInRange(range : float) {
@@ -31,25 +35,30 @@ exec function getInRange(range : float) {
     FindGameplayEntitiesInRange(entities, thePlayer, range, maxEntities);
 
     pos = thePlayer.GetWorldPosition();
-    LogChannel('DEBUG', "player pos: [" + pos.X + ", " + pos.Y + ", " + pos.Z + "]");
+    LogChannel('getInRange', "player pos: [" + pos.X + ", " + pos.Y + ", " + pos.Z + "]");
         
     for (i = 0; i < entities.Size(); i += 1) {
 
         actor = (CActor)entities[i];
         if (actor) {
-            LogChannel('DEBUG', "actor " + actor);
+            LogChannel('getInRange', "actor " + actor);
             if (!actor.IsAlive()) {
-            	LogChannel('DEBUG', "* actor dead");
+            	LogChannel('getInRange', "* actor dead");
             	continue;
             }
+            if (actor.HasAttitudeTowards(thePlayer)) {
+            	LogChannel('getInRange', "* GetAttitude to player: " + actor.GetAttitude(thePlayer));
+            }
+			LogChannel('getInRange', "* GetAttitudeGroup: " + actor.GetAttitudeGroup());
+            
 
-            LogChannel('DEBUG', "GetVoicetag: " + actor.GetVoicetag());
-            LogChannel('DEBUG', "GetDisplayName: " + actor.GetDisplayName());
+            LogChannel('getInRange', "* GetVoicetag: " + actor.GetVoicetag());
+            LogChannel('getInRange', "* GetDisplayName: " + actor.GetDisplayName());
 
             tags = actor.GetTags();
 
             for (t = 0; t < tags.Size(); t += 1) {
-                LogChannel('DEBUG', "> tag " + tags[t]);
+                LogChannel('getInRange', "> tag " + tags[t]);
             }
         }
     }
@@ -383,6 +392,29 @@ latent quest function playSoundsBruxa() {
 		Sleep(5.0);
 		idx = idx + 1;
 	}
+}
+
+exec function triss1() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	
+	template = (CEntityTemplate)LoadResource("characters/npc_entities/main_npc/triss.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	//ent.AddTag('oriana_test2');
+	//ent.ApplyAppearance('orianna_vampire');
+}
+exec function triss2() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	
+	template = (CEntityTemplate)LoadResource("characters/base_entities/woman_base/npc_base_w/npc_base_w.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	//ent.AddTag('oriana_test2');
+	//ent.ApplyAppearance('orianna_vampire');
 }
 
 exec function oridet() {

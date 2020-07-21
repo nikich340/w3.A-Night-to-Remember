@@ -1172,6 +1172,8 @@ storyboard:
 
   section_about_child:
     shot_40_dg_geralt:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
       - cam: [0.0, cam_24_Shot5_dg_geralt]
       - actor.anim.mimic:
           actor: geralt
@@ -1362,9 +1364,74 @@ storyboard:
     #  - actor.gamestate: [0.5, geralt]
     #  - cam.blend.togame: [0.5, cam_36_Shot5_to_gp]
 
+  section_start_hurry:
+    shot_hurry_1:
+      - actor.placement: [0.0, Baron_Edward, [ 3.4042968750, -0.9165039063, 0.1455917358 ], [ 0.0, 0.0, 60.4701232910 ]]
+      - actor.placement: [0.0, horse_baron, [ -3.1250000000, 1.8463134766, 0.4547119141 ], [ 0.0, 0.0, 152.5397796631 ]]
+      
+      - actor.placement: [0.0, geralt, [ 2.1719970703, 7.5355224609, -0.0750732422 ], [ 0.0, 0.0, 252.7500000000 ]]
+      - actor.placement: [0.0, Bandit_camp_crossbow, [ 3.8784790039, 7.2084960938, 0.2436523438 ], [ 0.0, 0.0, 65.2299880981 ]]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.pose: [0.0, Bandit_camp_crossbow_high_standing_determined_idle]
+      - cam: [0.0, cam_1_Shot1]
+      - cam.blend.start: [0.0, cam_1_Shot1]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_enter_frontal]
+          blendout: 0.5
+      
+    # shot Shot2 band
+    shot_hurry_2:
+      - cam.blend.end: [1.0, cam_2_Shot2_band, smooth]
+      - actor.anim: 
+          .@pos: [0.4, Bandit_camp_crossbow_high_standing_determined_gesture_both_hands_stop]
+          blendin: 0.5
+          blendout: 0.5
+
+    # shot Shot3 ger
+    shot_hurry_3:
+      - cam: [0.0, cam_3_Shot3_ger]
+
+    # shot Shot2 band
+    shot_hurry_3b:
+      - cam: [0.0, cam_2_Shot2_band]
+      - actor.anim.mimic:
+          actor: Bandit_camp_crossbow
+          .@pos: [0.0, mimicsanim_410_geralt_neutral_gesture_no_noface_face]
+          blendin: 0.3
+          blendout: 0.3
+
+    shot_hurry_togame:
+      - actor.gamestate: [0.0, geralt]
+      - actor.gamestate: [0.0, Bandit_camp_crossbow]
+      - actor.gamestate: [0.0, Baron_Edward]
+      - cam.blend.togame: [0.0, cam_3_Shot3_ger]
+
 dialogscript:
   player: "geralt"
   actors: [ "geralt", "Bandit_camp_crossbow", "horse_baron", "Baron_Edward" ]
+
+  section_start_hurry:
+    # shot Shot1
+    - CUE: shot_hurry_1
+    # (longest) anim: high_standing_determined_enter_frontal
+    - PAUSE: 2.0
+    # shot Shot2 band
+    - CUE: shot_hurry_2
+    # (longest) anim: high_standing_determined_gesture_both_hands_stop
+    - PAUSE: 2.5
+    - Bandit_camp_crossbow: "Stay! What are you looking here?"
+    - CUE: shot_hurry_3
+    - geralt: "[2.9642897]0000393630|Just a traveler. Happened to be passing through."
+    - CUE: shot_hurry_3b
+    - Bandit_camp_crossbow: "Piss off, vagrant. Nothing for you here."
+    # shot Shot4 ger meditate start
+    - CUE: shot_hurry_togame
+    - PAUSE: 1.0
+    - NEXT: section_exit_hurry
+
+  section_exit_hurry:
+    - OUTPUT: hurry
+    - EXIT
 
   section_start:
     - PAUSE: 0.0
@@ -1641,7 +1708,7 @@ dialogscript:
     - geralt: "I need more information. What happened to Alfred?"
     - CUE: shot_37_dg_baron
     - Baron_Edward: "We were guarding Orianna's house while finally met her."
-    - Baron_Edward: "I called her and asked her where is the boy. She refused to answer. Alfred began to threaten her and drew his sword."
+    - Baron_Edward: "I called her and asked where is the boy. She refused to answer. Alfred began to threaten her and drew his sword."
     - CUE: shot_37_throat
     - Baron_Edward: "After this she moved at once and vanished. And Alfred... His throat was slit. I could not help him..."
     - CUE: shot_37_dg_geralt_close

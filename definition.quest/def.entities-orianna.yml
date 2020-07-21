@@ -87,6 +87,9 @@ templates:
     includes:
       #- dlc/bob/data/quests/main_quests/quest_files/q704_truth/characters/q704_dettlaff_vampire.w2ent
       - dlc/dlcntr/data/entities/oriana/q704_dettlaff_vampire.w2ent
+
+    #overrides:
+      
     
     entityObject:
       .type: "COriannaVampireNPC:CNewNPC"

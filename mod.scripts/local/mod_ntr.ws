@@ -11,17 +11,32 @@ quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	return false;
 }
 
-/*quest function NTR_HideActorsFishermanScene() {
+quest function NTR_HideActorsFishermanScene() {
     var acceptedTags : array<name>;
+    var acceptedVoicetags : array<name>;
+    var killIfHostile : bool;
 
     acceptedTags.PushBack('PLAYER');
     acceptedTags.PushBack('ntr_fisherman');
-    acceptedTags.PushBack('scene_oriana');
+    acceptedVoicetags.PushBack('VAMPIRE DIVA');
+    killIfHostile = false;
 
-    NTR_HideActorsInRange(30.0, acceptedTags);
-}*/
+    NTR_HideActorsInRange(30.0, acceptedTags, acceptedVoicetags, killIfHostile);
+}
 
-function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, acceptedVoicetags: array<name>)  {
+quest function NTR_HideActorsHagScene() {
+    var acceptedTags : array<name>;
+    var acceptedVoicetags : array<name>;
+    var killIfHostile : bool;
+
+    acceptedTags.PushBack('PLAYER');
+    acceptedVoicetags.PushBack('CELINA MONSTER');
+    killIfHostile = true;
+
+    NTR_HideActorsInRange(20.0, acceptedTags, acceptedVoicetags, killIfHostile);
+}
+
+function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, acceptedVoicetags: array<name>, killIfHostile : bool)  {
     var entities             : array<CGameplayEntity>;
     var actor                : CActor;
     var i, j, t, maxEntities : int;
@@ -29,21 +44,23 @@ function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, accept
     var accepted             : bool;
 
     maxEntities = 1000;
+
     FindGameplayEntitiesInRange(entities, thePlayer, range, maxEntities);
             
     for (i = 0; i < entities.Size(); i += 1) {
         actor = (CActor)entities[i];
         if (actor) {
-            LogChannel('DEBUG', "actor " + actor);
+            LogChannel('HideInRange', "actor " + actor);
             if (!actor.IsAlive()) {
-            	LogChannel('DEBUG', "* actor dead");
+            	LogChannel('HideInRange', " * actor " + actor);
             	continue;
             }
 
             accepted = false;
             tags = actor.GetTags();
-            LogChannel('DEBUG', "GetVoicetag: " + actor.GetVoicetag());
-            LogChannel('DEBUG', "GetDisplayName: " + actor.GetDisplayName());
+            //LogChannel('DEBUG', "GetVoicetag: " + actor.GetVoicetag());
+            //LogChannel('DEBUG', "GetDisplayName: " + actor.GetDisplayName());
+			//LogChannel('getInRange', "* GetAttitudeGroup: " + actor.GetAttitudeGroup());
             
             for (t = 0; t < acceptedVoicetags.Size(); t += 1) {
             	if (actor.GetVoicetag() == acceptedVoicetags[t]) {
@@ -53,7 +70,7 @@ function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, accept
             }
 
             for (t = 0; t < tags.Size(); t += 1) {
-                LogChannel('DEBUG', "> tag: " + tags[t]);
+                LogChannel('HideInRange', "> tag: " + tags[t]);
                 for (j = 0; j < acceptedTags.Size(); j += 1) {
                     if (tags[t] == acceptedTags[j]) {
                         accepted = true;
@@ -62,14 +79,19 @@ function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, accept
                 }
             }
             if (!accepted) {
-            	LogChannel('NTR', "hide actor: " + actor);
-            	actor.AddTag('ntr_hidden_actor');
-            	actor.SetVisibility(false);
-            	actor.SetGameplayVisibility(false);
-            	actor.EnableCollisions(false);
-            	actor.EnableStaticCollisions(false);
-            	actor.EnableDynamicCollisions(false);
-            	actor.EnableCharacterCollisions(false);
+            	if (killIfHostile && ((actor.HasAttitudeTowards(thePlayer) && actor.GetAttitude(thePlayer) == AIA_Hostile) || actor.GetAttitudeGroup() == 'AG_nightwraith' || actor.GetAttitudeGroup() == 'hostile_to_player')) {
+            		LogChannel('HideInRange', " x KILL");
+            		actor.OnCutsceneDeath();
+            	} else {
+	            	LogChannel('HideInRange', " + HIDE");
+	            	actor.AddTag('ntr_hidden_actor');
+	            	actor.SetVisibility(false);
+	            	actor.SetGameplayVisibility(false);
+	            	actor.EnableCollisions(false);
+	            	actor.EnableStaticCollisions(false);
+	            	actor.EnableDynamicCollisions(false);
+	            	actor.EnableCharacterCollisions(false);
+            	}
         	}
         }
     }
@@ -107,7 +129,7 @@ quest function NTR_UnhideActorsInRange(range : float)  {
                 }
             }
             if (hidden) {
-            	LogChannel('NTR', "unhide actor: " + actor);
+            	LogChannel('UnhideInRange', "UNHIDE: " + actor);
             	actor.RemoveTag('ntr_hidden_actor');
             	actor.SetVisibility(true);
             	actor.SetGameplayVisibility(true);
@@ -371,10 +393,11 @@ quest function NTR_TuneNPC( tag : name, level : int, optional attitude : string,
 	//LogQuest( "<<Tune NPC>>> tag: " + tag + " found npcs: " + NPCs.Size());	//- uncomment it to check if NPCs are found
 	//theGame.GetGuiManager().ShowNotification("Found npcs: " + NPCs.Size() + " nodes: " + nodes.Size());
 	if (NPCs.Size() < 1) {
-		theGame.GetGuiManager().ShowNotification("[ERROR] No NPCs found with tag " + tag);
-		LogChannel('NTR_TuneNPC', "[ERROR] No NPCs found with tag " + tag);
+		theGame.GetGuiManager().ShowNotification("[ERROR] No NPCs found with tag <" + tag + ">");
+		LogChannel('NTR_TuneNPC', "[ERROR] No NPCs found with tag <" + tag + ">");
 		return;
 	}
+	theGame.GetGuiManager().ShowNotification("[OK] Tune npc with tag <" + tag + ">");
 	if (level > 500) {
 		// 1005 = playerLvl + 5;
 		// 995 = playerLvl - 5

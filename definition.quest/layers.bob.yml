@@ -4,6 +4,16 @@ layers:
     world: "bob"
     #context: ""
     areas: 
+      triss_music_area: 
+        height: 5.0
+        borderpoints: 
+          - [ 54.1530036926, -2106.1372070313, 124.7807312012 ]
+          - [ 40.1545028687, -2081.8901367188, 124.7807312012 ]
+          - [ 12.1515207291, -2081.8901367188, 124.7807312012 ]
+          - [ -1.8469791412, -2106.1372070313, 124.7807312012 ]
+          - [ 12.1515207291, -2130.3842773438, 124.7807312012 ]
+          - [ 45.3291053772, -2130.5021972656, 124.7807312012 ]
+
       bloodarea1: 
         height: 5.0
         borderpoints: 
@@ -38,6 +48,33 @@ layers:
         pos: [ 19.3040275574, -2102.5336914063, 125.8534545898 ]
 
       triss_pin: [ 12.3872871399, -2086.8605957031, 125.6447143555 ]
+
+    #statics:
+      #triss_music_area:
+      #  ".type": CEntity
+      #  transform: 
+      #    pos: [ 36.1242980957, -2113.2485351563, 129.2463073730 ]
+      #    rot: [ 0.0, 0.0, 0.0 ]
+      #  streamingDistance: 0
+      #  components:
+      #    Main:
+      #      ".type": CSoundAmbientAreaComponent
+      #      height: 5.0
+      #      localPoints:
+      #        - [ 54.1530036926, -2106.1372070313, 124.7807312012 ]
+      #        - [ 40.1545028687, -2081.8901367188, 124.7807312012 ]
+      #        - [ 12.1515207291, -2081.8901367188, 124.7807312012 ]
+      #        - [ -1.8469791412, -2106.1372070313, 124.7807312012 ]
+      #        - [ 12.1515207291, -2130.3842773438, 124.7807312012 ]
+      #        - [ 45.3291053772, -2130.5021972656, 124.7807312012 ]
+      #      triggerPriority: 1   ### 1, 2, 3 in vanilla usually
+      #      banksDependency:
+      #        - music_toussaint.bnk
+       #     soundEventsOnEnter:
+      #        - mus_credits_ep2_secondary
+      #      soundEventsOnExit:
+      #        - mus_loc_toussaint_general_cs_to_gmpl
+       #     priorityParameterMusic: true  
 
     interactiveentities: 
       blood1: 

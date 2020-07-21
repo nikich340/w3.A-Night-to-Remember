@@ -22,16 +22,30 @@ storyscene function NTR_PayStoryScene_PerformAction( player : CStoryScenePlayer,
 	theSound.SoundEvent("gui_bribe");
 }
 
-storyscene function NTR_HideActorsFishermanScene_S( player : CStoryScenePlayer ) {
+/*storyscene function NTR_HideActorsFishermanScene_S( player : CStoryScenePlayer ) {
     var acceptedTags : array<name>;
     var acceptedVoicetags : array<name>;
+    var killIfHostile : bool;
 
     acceptedTags.PushBack('PLAYER');
     acceptedTags.PushBack('ntr_fisherman');
     acceptedVoicetags.PushBack('VAMPIRE DIVA');
+    killIfHostile = false;
 
-    NTR_HideActorsInRange(30.0, acceptedTags, acceptedVoicetags);
+    NTR_HideActorsInRange(30.0, acceptedTags, acceptedVoicetags, killIfHostile);
 }
+
+storyscene function NTR_HideActorsHagScene_S( player : CStoryScenePlayer ) {
+    var acceptedTags : array<name>;
+    var acceptedVoicetags : array<name>;
+    var killIfHostile : bool;
+
+    acceptedTags.PushBack('PLAYER');
+    acceptedVoicetags.PushBack('CELINA MONSTER');
+    killIfHostile = true;
+
+    NTR_HideActorsInRange(30.0, acceptedTags, acceptedVoicetags, killIfHostile);
+}*/
 
 latent storyscene function NTR_NegotiateMonsterHunt_S( player: CStoryScenePlayer, resultFact : CName, rewardName : name, alwaysSuccessful : bool, isItemReward : bool ) {
 	var ret : ENegotiationResult;

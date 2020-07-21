@@ -286,6 +286,12 @@ dialogscript:
     - PAUSE: 0.0
     - NEXT: section_storyboard_ui
 
+  #script_hide_actors:
+  #    - SCRIPT:
+  #        function: NTR_HideActorsHagScene_S
+
+  #    - NEXT: section_storyboard_ui
+
   section_storyboard_ui:
     # shot start sneak
     - CUE: shot_1

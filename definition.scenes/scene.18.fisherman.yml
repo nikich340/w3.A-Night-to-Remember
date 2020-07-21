@@ -769,7 +769,7 @@ storyboard:
       - actor.pose: [0.001, oriana_high_standing_determined_idle]
       - actor.pose: [0.001, toussaint_fisherman_boat_passenger_sit_idle]
       - cam.blend.start: [0.001, cam_1_fisher_story_inn_cam]
-      - cam.blend.key: [0.75, cam_2_fisher_story_boat_cam]
+      - cam.blend.key: [0.85, cam_2_fisher_story_boat_cam]
       - actor.lookat: [0.01, toussaint_fisherman, oriana]
       - actor.lookat: [0.01, oriana, geralt]
       - actor.anim: 
@@ -789,7 +789,7 @@ storyboard:
 
       - fade.out: [0.833, 1.0, [255, 255, 255, 255]]      
 
-  section_togame:
+  #section_togame:
     shot_fadein:
       - prop.placement: [0.001, boat_dest_squared_sail, [ 393.1317443848, -618.7708740234, -44.5093231201 ], [ 0.0, 0.0, 74.9683418274 ]]
       - actor.placement: [0.001, oriana, [ 393.1317443848, -618.7708740234, -44.5093231201 ], [ 0.0, 0.0, 74.9683418274 ]]
@@ -816,13 +816,13 @@ dialogscript:
 
   section_start:
     - PAUSE: 0.0
-    - NEXT: script_hide_actors
+    - NEXT: section_storyboard_ui
 
-  script_hide_actors:
-      - SCRIPT:
-          function: NTR_HideActorsFishermanScene_S
+  #script_hide_actors:
+  #    - SCRIPT:
+  #        function: NTR_HideActorsFishermanScene_S
 
-      - NEXT: section_storyboard_ui
+  #    - NEXT: section_storyboard_ui
 
   section_storyboard_ui:
     # shot geralt walk
@@ -851,14 +851,6 @@ dialogscript:
       - choice: ["I want to help that woman", section_help]
         single_use: true
         emphasize: true
-
-  #script_pay_action:
-  #    - SCRIPT:
-  #        function: NTR_PayStoryScene_PerformAction
-  #        parameter:
-  #            - money: 500
-  #            - dontGrantExp: false
-  #    - NEXT: section_pay
 
   section_help:
     - CUE: shot_help
@@ -907,15 +899,15 @@ dialogscript:
     - PAUSE: 6.0
     #- geralt: "She hopped off the boat without saying a word…"
 
-    - NEXT: script_hide_actors2
+  #  - NEXT: script_hide_actors2
 
-  script_hide_actors2:
-      - SCRIPT:
-          function: NTR_HideActorsFishermanScene_S
+  #script_hide_actors2:
+  #    - SCRIPT:
+  #        function: NTR_HideActorsFishermanScene_S
 
-      - NEXT: section_togame
+  #    - NEXT: section_togame
 
-  section_togame:
+  #section_togame:
     - CUE: shot_fadein
     - PAUSE: 1.0
     - CUE: shot_togame

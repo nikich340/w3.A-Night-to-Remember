@@ -1,0 +1,19 @@
+- 0001124989|Good day. Fish biting?
+
+- Better catch in the rain.
+
+- Did you see a red-haired woman here? Left this site by boat, recently.
+
+- Maybe. Maybe not. Pay me and I'll try to remember.
+
+    - 0000434805|Fine... I'll pay.
+    - 0001125802|Asking a lot. Too much. How about you do this free of charge, huh? Out of the kindness of your heart?
+    - 0000400593|I want to help that woman. She could be in danger.
+
+- I'm lucky to meet rich today.
+- Aye, I'll help. Outta kindness…
+- I'd believe you if you had satchel with herbs instead of this pointy things stickin' out behind you.
+
+- Well... listen to me.
+
+q702_11_regis_sacrifice_done.w2scene

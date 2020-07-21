@@ -11,10 +11,10 @@ journals:
           - out_home:
               caption: "Go out of home for some fresh air."
           - take_letter:
-              caption: "Take letter near owl."
+              caption: "Take a letter near owl."
               mappins: regis_mail_pin
           - read_letter:
-              caption: "Read a letter from Regis."
+              caption: "Read the letter."
 
         orphanage_part:
           - go_orphanage:

@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: orphanage
 # 
-# (version: 608, saved: 2020-07-20 21:01:20)
+# (version: 639, saved: 2020-07-21 23:11:29)
 #
 ---
 structure:
@@ -56,10 +56,11 @@ structure:
           _fadein: true
           next.Output:
             - spawn.bandits_normal_comm
-            - interaction.scene15_to_bandit: Input
             - script.reset_loose_fact
             - script.reset_win_fact
             - script.Steal_money
+            - waituntil.wait_1sss
+            - objective.defeat_bandits: Failure
         
         scene.scene_win:
           ".editor":
@@ -76,7 +77,7 @@ structure:
             - script.Return_money
             - objective.defeat_bandits: Success
         
-        interaction.scene15_to_bandit:
+        interaction.scene15_to_bandit_REMOVED:
           ".editor":
             pos: [ 1177.3326416016, 903.8959960938 ]
             in: [ Input ]
@@ -309,7 +310,7 @@ structure:
           function: NTR_StealGeraltMoney
           parameter:
             - tag: cname_ntr_fat_bandit
-            - amount: -1
+            - amount: 500
           next: ".done"
         
         script.Unlock_door:
