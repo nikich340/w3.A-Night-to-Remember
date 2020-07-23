@@ -24,6 +24,11 @@ EXIT /B 1
 :: dlc\dlcntr\data\entities\oriana\model\eye_d03.xbm
 
 :: Orianna
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_04_wa__oriana_d04.png data/entities/oriana/model/h_04_wa__oriana_d04.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_04_wa__oriana_d04_bruxa.png data/entities/oriana/model/h_04_wa__oriana_d04_bruxa.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_04_wa__oriana_d04_bruxa_bloody_final.png data/entities/oriana/model/h_04_wa__oriana_d04_bruxa_bloody_final.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_01_wa__oriana_bloody_final.png data/entities/oriana/model/h_01_wa__oriana_bloody_final.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_01_wa__oriana_bloody_d01.png data/entities/oriana/model/h_01_wa__oriana_bloody_d01.xbm CharacterDiffuse
 %BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_03_wa__oriana_d03.png data/entities/oriana/model/h_03_wa__oriana_d03.xbm CharacterDiffuse
 %BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_03_wa__oriana_n03.png data/entities/oriana/model/h_03_wa__oriana_n03.xbm NormalmapGloss
 

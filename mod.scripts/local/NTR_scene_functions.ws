@@ -119,19 +119,38 @@ storyscene function NTR_SceneDoorChangeState( player : CStoryScenePlayer, tag : 
 	}
 }
 
-storyscene function NTR_SceneMorph( player : CStoryScenePlayer, tag : name, managerTag : name, morphRatio : float, blendTime : float ) {
+storyscene function NTR_SceneMorph( player : CStoryScenePlayer, tag : name, managerTag : name, morphRatio : float, blendTime : float, optional managerTag2 : name ) {
 	var           npc : CNewNPC;
+	var   ret : array<CComponent>;
 	var manager : CMorphedMeshManagerComponent;
+	var   i : int;
 	
 	npc = (CNewNPC)theGame.GetNPCByTag(tag);
 	if (npc) {
+		ret = npc.GetComponentsByClassName('CMorphedMeshManagerComponent');
+		NTR_notify("Found " + ret.Size() + " CMorphedMeshManagerComponents");
+		LogChannel('NTR_SceneMorph', "Found " + ret.Size() + " CMorphedMeshManagerComponents");
 		//manager = (CMorphedMeshManagerComponent)npc.GetComponentByClassName('CMorphedMeshManagerComponent');
-		manager = (CMorphedMeshManagerComponent)npc.GetComponent(managerTag);
-		if(manager) {
-			manager.SetMorphBlend( morphRatio, blendTime );
-		} else {
-			theGame.GetGuiManager().ShowNotification("Morph component not found!");
+		//manager = (CMorphedMeshManagerComponent)npc.GetComponent(managerTag);
+		for (i = 0; i < ret.Size(); i += 1) {
+			manager = (CMorphedMeshManagerComponent) ret[i];
+			if (manager) {
+				manager.SetMorphBlend( morphRatio, blendTime );
+				LogChannel('NTR_SceneMorph', "Morph component: " + manager + "");
+			} else {
+				LogChannel('NTR_SceneMorph', "Component " + manager + " is not CMorphedMeshManagerComponent!");
+				NTR_notify("Component " + manager + " is not CMorphedMeshManagerComponent!");
+			}
 		}
+		
+		/*if (managerTag2) {
+			manager = (CMorphedMeshManagerComponent)npc.GetComponent(managerTag2);
+			if(manager) {
+					manager.SetMorphBlend( morphRatio, blendTime );
+			} else {
+					theGame.GetGuiManager().ShowNotification("Morph manager2 not found!");
+			}
+		}*/
 	} else {
 		theGame.GetGuiManager().ShowNotification("Entity " + tag + " not found!");
 	}

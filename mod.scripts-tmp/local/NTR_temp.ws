@@ -410,7 +410,29 @@ exec function triss2() {
 	var           pos : Vector;
 	var           ent : CEntity;
 	
-	template = (CEntityTemplate)LoadResource("characters/base_entities/woman_base/npc_base_w/npc_base_w.w2ent", true);
+	template = (CEntityTemplate)LoadResource("quests/main_npcs/triss.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	ent.AddTag('vip');
+	//ent.ApplyAppearance('orianna_vampire');
+}
+exec function triss3() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	
+	template = (CEntityTemplate)LoadResource("dlc/bob/data/quests/main_quests/quest_files/q705_epilog/characters/triss.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	//ent.AddTag('oriana_test2');
+	//ent.ApplyAppearance('orianna_vampire');
+}
+exec function triss4() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	
+	template = (CEntityTemplate)LoadResource("dlc/bob/data/characters/npc_entities/main_npc/triss.w2ent", true);
 	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
 	ent = (CEntity)theGame.CreateEntity(template, pos);
 	//ent.AddTag('oriana_test2');
@@ -426,6 +448,7 @@ exec function oridet() {
 	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
 	ent = (CEntity)theGame.CreateEntity(template, pos);
 	ent.AddTag('oriana_test2');
+	ent.AddTag('vip');
 	ent.ApplyAppearance('orianna_vampire');
 }
 
@@ -457,6 +480,7 @@ exec function oribru() {
 	ent = (CEntity)theGame.CreateEntity(template, pos);
 	ent.AddTag('oriana_test2');
 	ent.ApplyAppearance('bruxa_monster_gameplay');
+	NTR_TuneNPC( 'oriana_test2', 30, "Friendly", "None", false, "ENGT_Quest", -1 );
 }
 exec function oricloak() {
 	var      template : CEntityTemplate;
