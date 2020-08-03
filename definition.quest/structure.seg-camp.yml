@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: camp
 # 
-# (version: 639, saved: 2020-07-21 23:11:29)
+# (version: 706, saved: 2020-08-02 00:02:52)
 #
 ---
 structure:
@@ -73,11 +73,10 @@ structure:
         waituntil.1ss:
           elapsed: "00:00:01"
           ".editor":
-            pos: [ 1220.5168457031, -0.8399925232 ]
+            pos: [ 1292.8245849609, -4.6861462593 ]
             in: [ In ]
             out: [ Out ]
-          next:
-            - script.tune_baron_invulnerable
+          next: ".done"
         
         waituntil.inside_camp_area:
           inside: [ bob/camp_area, PLAYER ]
@@ -99,7 +98,7 @@ structure:
         
         script.tune_baron_invulnerable:
           ".editor":
-            pos: [ 1433.7806396484, -1.1177639961 ]
+            pos: [ 1476.0883789062, -13.4254550934 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_TuneNPC
@@ -168,7 +167,7 @@ structure:
           next: ".done"
         
         addfact.camp_allowed_fact:
-          ".editor": [ 240.048324585, 110.7657623291 ]
+          ".editor": [ 364.4232788086, 75.1407623291 ]
           value: [ ntr_camp_allowed, 1 ]
           next: ".done"
         

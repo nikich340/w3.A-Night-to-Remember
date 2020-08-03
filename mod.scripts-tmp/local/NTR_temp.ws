@@ -2,8 +2,17 @@ exec function startNTR() {
 	FactsAdd("NTRstartquest", 1);
 }
 
-exec function musDebug() {
-	theSound.EnableMusicDebug(true);
+/*quest function oriDebug() {
+	var           npc : CNewNPC;
+	
+	npc = (CNewNPC)theGame.GetNPCByTag('ntr_orianna_vampire');
+	if (npc)
+		NTR_notify("Appearance: <" + npc.GetAppearance() + ">");
+	else
+		NTR_notify("NOT FOUND!");
+}*/
+quest function NTR_AutoSave() {
+	
 }
 
 exec function execHide(range : float) {
@@ -448,8 +457,9 @@ exec function oridet() {
 	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
 	ent = (CEntity)theGame.CreateEntity(template, pos);
 	ent.AddTag('oriana_test2');
+	ent.AddTag('ntr_orianna_vampire');
 	ent.AddTag('vip');
-	ent.ApplyAppearance('orianna_vampire');
+	ent.ApplyAppearance('orianna_human_morph');
 }
 
 exec function oridress() {
@@ -553,6 +563,22 @@ exec function hostileOrianna() {
 exec function hostileOrianna2() {
 	NTR_TuneNPC2( 'oriana_test2', 40, "Hostile", "None", false, "ENGT_Enemy", -1 );
 }
+exec function hostileOrianna3() {
+	NTR_TuneNPC2( 'oriana_test2', 40, "Friendly", "None", false, "ENGT_Friendly", -1 );
+}
+exec function addAbil(abil : name, add : bool) {
+	var           npc : CNewNPC;
+	
+	npc = (CNewNPC)theGame.GetNPCByTag('oriana_test2');
+	if (npc) {
+		NTR_notify("OK");
+		if (add) {
+			npc.AddAbility(abil);
+		} else {
+			npc.RemoveAbilityAll(abil);
+		}
+	}
+}
 quest function NTR_TuneNPC2( tag : name, level : int, optional attitude : string, optional mortality : string, optional finishers : bool, optional npcGroupType : string, optional scale : float ) {
 	var NPCs   : array <CNewNPC>;
 	var i      : int;
@@ -563,21 +589,37 @@ quest function NTR_TuneNPC2( tag : name, level : int, optional attitude : string
 	theGame.GetNPCsByTag(tag, NPCs);
 	//LogQuest( "<<Tune NPC>>> tag: " + tag + " found npcs: " + NPCs.Size());	//- uncomment it to check if NPCs are found
 	//theGame.GetGuiManager().ShowNotification("Found npcs: " + NPCs.Size() + " nodes: " + nodes.Size());
+	if (NPCs.Size() < 1) {
+		theGame.GetGuiManager().ShowNotification("[ERROR] No NPCs found with tag <" + tag + ">");
+		LogChannel('NTR_TuneNPC', "[ERROR] No NPCs found with tag <" + tag + ">");
+		return;
+	}
+	theGame.GetGuiManager().ShowNotification("[OK] Tune npc with tag <" + tag + ">");
 	if (level > 500) {
 		// 1005 = playerLvl + 5;
 		// 995 = playerLvl - 5
-
 		level = GetWitcherPlayer().GetLevel() + (level - 1000);
+		if (level < 1)
+			level = 1;
 	}
 	
 	for (i = 0; i < NPCs.Size(); i += 1 )
 	{	
-		//ForceTargetQuest('oriana_test2','PLAYER', false);
-		//ModifyNPCAbilityQuest('oriana_test2', 'DettlaffVampire_q704', false);
-		SetGroupAttitudeQuest('player', 'dettlaff', AIA_Hostile);
 		/* SET LEVEL */
 		if (level > 0)
 			NPCs[i].SetLevel(level);
+		//NPCs[i].RemoveAbilityAll('IgnoreLevelDiffForParryTest');
+		//NPCs[i].RemoveAbilityAll('mon_EP2_q704detlaf');
+		//NPCs[i].RemoveAbilityAll('NPCDoNotGainBoost');
+		//NPCs[i].RemoveAbilityAll('NPCLevelBonusDeadly');
+		//NPCs[i].RemoveAbilityAll('VesemirDamage');
+		//NPCs[i].RemoveAbilityAll('BurnIgnore');
+		//NPCs[i].RemoveAbilityAll('_q403Follower');
+		NPCs[i].AddAbility('dettlaff_hardcore');
+		if (finishers)
+			NPCs[i].RemoveAbilityAll('DisableFinishers');
+		else
+			NPCs[i].AddAbility( 'DisableFinishers', false );
 		
 		/* SET ATTITUDE TO PLAYER */
 		switch (attitude) {

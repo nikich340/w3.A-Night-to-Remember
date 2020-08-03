@@ -1,0 +1,780 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    orianna_human:
+      template: "dlc\\bob\\data\\quests\\secondary_npcs\\vampire_diva.w2ent"
+      appearance: [ "oriana" ]
+
+    orianna_vampire:
+      template: "dlc\\dlcntr\\data\\entities\\orianna_vampire.w2ent"
+      appearance: [ "orianna_human_morph", "orianna_vampire" ]
+
+  props:
+    q704_trailer_doll:
+      template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\entities\\q704_trailer_doll.w2ent"
+
+  animations:
+    anim_12985_high_standing_sad_enter_frontal:
+      animation: "high_standing_sad_enter_frontal"
+      frames: 242
+
+    anim_14164_woman_work_searching_ground_start:
+      animation: "woman_work_searching_ground_start"
+      frames: 64
+
+    anim_6923_high_standing_aggressive_gesture_left_hand_flick_1:
+      animation: "high_standing_aggressive_gesture_left_hand_flick_1"
+      frames: 78
+
+    anim_12940_high_standing_determined_exit_back:
+      animation: "high_standing_determined_exit_back"
+      frames: 135
+
+    anim_12937_high_standing_determined_enter_frontal:
+      animation: "high_standing_determined_enter_frontal"
+      frames: 169
+
+    anim_14165_woman_work_searching_ground_stop:
+      animation: "woman_work_searching_ground_stop"
+      frames: 55
+
+  animations.mimic:
+    mimicsanim_493_geralt_reaction_eye_smile_face:
+      animation: "geralt_reaction_eye_smile_face"
+      frames: 240
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_2126_High_Standing_Determined:
+      name: "Standing"
+      emotional_state: "Determined"
+      status: "High"
+      idle_anim: "high_standing_determined_idle"
+
+    pose_2120_High_Standing_Aggressive:
+      name: "Standing"
+      emotional_state: "Aggressive"
+      status: "High"
+      idle_anim: "high_standing_aggressive_idle"
+
+    pose_0_idle_vampire:
+      idle_anim: "idle_vampire"
+
+  cameras:
+    cam_8_Shot0:
+      fov: 35.0
+      transform:
+        pos: [ -144.9864959717, 36.2264747620, -9.6960983276 ]
+        rot: [ 0.0, 3.0900051594, 67.9102783203 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.8093800545, 7.8093800545 ]
+        focus: [ 5.3093800545, 6.3093800545 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_1_Shot1:
+      fov: 35.0
+      transform:
+        pos: [ -144.9864959717, 36.2264747620, -9.6960983276 ]
+        rot: [ 0.0, 1.0, 97.9942016602 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.8093800545, 7.8093800545 ]
+        focus: [ 5.3093800545, 6.3093800545 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_Shot1_pan:
+      fov: 35.0
+      transform:
+        pos: [ -146.1116638184, 36.7217864990, -9.6960983276 ]
+        rot: [ 0.0, 1.3300051689, 100.1390991211 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.8942933083, 6.8942933083 ]
+        focus: [ 4.3942933083, 5.3942933083 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_4_Shot4_to_ger:
+      fov: 10.0
+      transform:
+        pos: [ -154.4893341064, 36.0799636841, -9.4960985184 ]
+        rot: [ 0.0, 357.3700256348, 260.2436218262 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.4155764580, 6.4155764580 ]
+        focus: [ 3.9155764580, 4.9155764580 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_5_Shot5_ori_dg:
+      fov: 11.0
+      transform:
+        pos: [ -141.9603118896, 34.8292579651, -9.3960981369 ]
+        rot: [ 0.0, 357.2600097656, 88.9739379883 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 6.3500685692, 9.3500690460 ]
+        focus: [ 6.8500685692, 7.8500685692 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_6_Shot6_ger_dg:
+      fov: 12.0
+      transform:
+        pos: [ -150.4914398193, 34.8554039001, -9.4460983276 ]
+        rot: [ 0.0, 357.1814575195, 269.0202331543 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 5.5957527161, 8.5957527161 ]
+        focus: [ 6.0957527161, 7.0957527161 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_7_Shot3_show_doll:
+      fov: 10.0
+      transform:
+        pos: [ -149.0456695557, 36.1429710388, -7.8460998535 ]
+        rot: [ 0.0, 308.9149780273, 110.9741821289 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.8942933083, 6.8942933083 ]
+        focus: [ 4.3942933083, 5.3942933083 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_9_Shot_ori_gesture_to_fight:
+      fov: 31.0
+      transform:
+        pos: [ -146.6029968262, 34.5665702820, -9.5460987091 ]
+        rot: [ 0.0, 355.7750244141, 97.8286132813 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.7153055668, 4.7153053284 ]
+        focus: [ 2.2153055668, 3.2153055668 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_10_Shot_ger_sceptic:
+      fov: 21.0
+      transform:
+        pos: [ -145.5168151855, 35.4610023499, -9.5460987091 ]
+        rot: [ 0.0, 357.6450195313, 258.1238403320 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.2271265984, 4.2271265984 ]
+        focus: [ 1.7271265984, 2.7271265984 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_11_Shot_ori_morph_shot:
+      fov: 11.0
+      transform:
+        pos: [ -147.8376159668, 35.0893630981, -9.7460975647 ]
+        rot: [ 0.0, 13.4300136566, 116.7737426758 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.9622094631, 3.9622094631 ]
+        focus: [ 1.4622094631, 2.4622094631 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_12_Shot_ger_draw_sword_cut:
+      fov: 31.0
+      transform:
+        pos: [ -146.6764373779, 35.6549987793, -9.7960977554 ]
+        rot: [ 0.0, 358.6900024414, 248.2238159180 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.9743118286, 4.9743118286 ]
+        focus: [ 2.4743118286, 3.4743118286 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_13_Shot_ori_blend_togame:
+      fov: 36.0
+      transform:
+        pos: [ -147.3962402344, 35.2243423462, -9.5960979462 ]
+        rot: [ 0.0, 349.2850036621, 118.0379638672 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.2632892132, 4.2632894516 ]
+        focus: [ 1.7632892132, 2.7632892132 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 935
+
+  placement: "ntr_bob_orianna_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -180.0365447998, -443.1201477051, 11.4495849609 ]
+      #rot: [ 0.0, 94.1600112915, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      orianna_human:
+        repo: "orianna_human"
+        #by_voicetag: true
+        appearance: "oriana"
+        tags: [ "orianna_human" ]
+
+      orianna_vampire:
+        repo: "orianna_vampire"
+        by_voicetag: false
+        appearance: "orianna_human_morph"
+        tags: [ "ntr_orianna_vampire" ]
+
+    props:
+      q704_trailer_doll:
+        repo: "q704_trailer_doll"
+
+    cameras:
+      cam_8_Shot0:
+        repo: "cam_8_Shot0"
+
+      cam_1_Shot1:
+        repo: "cam_1_Shot1"
+
+      cam_2_Shot1_pan:
+        repo: "cam_2_Shot1_pan"
+
+      cam_4_Shot4_to_ger:
+        repo: "cam_4_Shot4_to_ger"
+
+      cam_5_Shot5_ori_dg:
+        repo: "cam_5_Shot5_ori_dg"
+
+      cam_6_Shot6_ger_dg:
+        repo: "cam_6_Shot6_ger_dg"
+
+      cam_7_Shot3_show_doll:
+        repo: "cam_7_Shot3_show_doll"
+
+      cam_9_Shot_ori_gesture_to_fight:
+        repo: "cam_9_Shot_ori_gesture_to_fight"
+
+      cam_10_Shot_ger_sceptic:
+        repo: "cam_10_Shot_ger_sceptic"
+
+      cam_11_Shot_ori_morph_shot:
+        repo: "cam_11_Shot_ori_morph_shot"
+
+      cam_12_Shot_ger_draw_sword_cut:
+        repo: "cam_12_Shot_ger_draw_sword_cut"
+
+      cam_13_Shot_ori_blend_togame:
+        repo: "cam_13_Shot_ori_blend_togame"
+
+    animations:
+      orianna_human_high_standing_sad_enter_frontal:
+        actor: "orianna_human"
+        repo: "anim_12985_high_standing_sad_enter_frontal"
+        #duration: 8.0666666031
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      orianna_human_woman_work_searching_ground_start:
+        actor: "orianna_human"
+        repo: "anim_14164_woman_work_searching_ground_start"
+        #duration: 2.1333334446
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_aggressive_gesture_left_hand_flick_1:
+        actor: "geralt"
+        repo: "anim_6923_high_standing_aggressive_gesture_left_hand_flick_1"
+        #duration: 2.5999999046
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      orianna_human_high_standing_determined_exit_back:
+        actor: "orianna_human"
+        repo: "anim_12940_high_standing_determined_exit_back"
+        #duration: 4.5000000000
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      orianna_human_high_standing_determined_enter_frontal:
+        actor: "orianna_human"
+        repo: "anim_12937_high_standing_determined_enter_frontal"
+        #duration: 5.6333332062
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      orianna_human_woman_work_searching_ground_stop:
+        actor: "orianna_human"
+        repo: "anim_14165_woman_work_searching_ground_stop"
+        #duration: 1.8333333731
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    animations.mimic:
+      orianna_human_geralt_reaction_eye_smile_face:
+        actor: "orianna_human"
+        repo: "mimicsanim_493_geralt_reaction_eye_smile_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+    actor.poses:
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      orianna_human_high_standing_determined_idle:
+        actor: "orianna_human"
+        repo: "pose_0_high_standing_determined_idle"
+
+      orianna_vampire_High_Standing_Determined:
+        actor: "orianna_vampire"
+        repo: "pose_2126_High_Standing_Determined"
+
+      geralt_High_Standing_Aggressive:
+        actor: "geralt"
+        repo: "pose_2120_High_Standing_Aggressive"
+
+      orianna_vampire_idle_vampire:
+        actor: "orianna_vampire"
+        repo: "pose_0_idle_vampire"
+
+    soundbanks:
+      - monster_dettlaff_vampire
+      - qu_ep2_701_dlg
+
+storyboard:
+  defaults:
+    placement:
+      #q704_trailer_doll: [[ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 90.0, 0.0, 262.9799804688 ]]
+      geralt: [[ -134.7511138916, 29.3421230316, -11.2036132813 ], [ 0.0, 0.0, 123.5300064087 ]]
+      orianna_human: [[ -150.5038757324, 35.1060638428, -11.1286010742 ], [ 0.0, 0.0, 59.1799545288 ]]
+      orianna_vampire: [[ -144.6826934814, 19.7409744263, -13.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
+
+    actor.pose:
+      geralt: geralt_High_Standing_Aggressive
+      orianna_human: orianna_human_high_standing_determined_idle
+      orianna_vampire: orianna_vampire_High_Standing_Determined
+
+  section_storyboard_ui:
+    # shot Shot1
+    shot_init:
+      - actor.placement: [0.0, geralt, [ -134.7511138916, 29.3421230316, -15.2036132813 ], [ 0.0, 0.0, 123.5300064087 ]]
+      - actor.placement: [0.0, orianna_human, [ -150.5038757324, 35.1060638428, -15.1286010742 ], [ 0.0, 0.0, 59.1799545288 ]]
+      - actor.placement: [0.0, orianna_vampire, [ -144.6826934814, 19.7409744263, -15.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
+      - prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
+      - cam: [0.0, cam_8_Shot0]
+
+    shot_0:
+      - cam.blend.start: [0.0, cam_8_Shot0]
+      
+    shot_1: ## 11.98
+      - actor.placement: [0.0, orianna_human, [ -150.5038757324, 35.1060638428, -11.1286010742 ], [ 0.0, 0.0, 59.1799545288 ]]
+      - actor.lookat: [0.01, orianna_human, [ -1.0223956108, 4.8440313339, 1.9122929573 ]]
+      - cam.blend.key: [0.0, cam_1_Shot1]
+      - actor.anim: 
+          .@pos: [0.0, orianna_human_high_standing_sad_enter_frontal] # 8.07
+          blendin: 0.0
+          blendout: 0.47
+      - cam.blend.end: [0.634, cam_2_Shot1_pan]
+      ## lookat doll
+      - actor.lookat: [0.4, orianna_human, [ -0.4227092862, 1.0167566538, 0.0055561066 ]]
+      - actor.anim:
+          .@pos: [0.634, orianna_human_woman_work_searching_ground_start] # 2.13
+          blendin: 0.47
+          blendout: 0.43
+      - cam: [0.75, cam_7_Shot3_show_doll]
+      - actor.anim: # 9.3 start
+          actor: orianna_human
+          .@pos: [0.776, anim_14161_woman_work_searching_ground_loop_01] # 2.0
+          blendin: 0.43
+          clipend: 2.0
+          blendout: 0.5
+      - actor.anim: # 10.8 start
+          .@pos: [0.901, orianna_human_woman_work_searching_ground_stop] # 1.83
+          blendin: 0.5
+          blendout: 0.7
+
+    # shot Shot4 to ger
+    shot_4: ## 2.654
+      - actor.lookat: [0.5, orianna_human, [ -1.0223956108, 4.8440313339, 1.9122929573 ]]
+      - actor.placement: [0.0, geralt, [ -144.1563720703, 35.0813903809, -11.2680664063 ], [ 0.0, 0.0, 106.4800338745 ]]
+      - actor.placement: [0.0, orianna_human, [ -150.5038757324, 35.1060638428, -11.1286010742 ], [ 0.0, 0.0, 91.7400283813 ]]
+      - cam: [0.0, cam_4_Shot4_to_ger]
+      - actor.lookat: [0.0, geralt, orianna_human]
+      - actor.anim.additive: [0.2, geralt_high_standing_aggressive_gesture_left_hand_flick_1]
+
+    shot_4_shrug:
+      - actor.anim.additive:
+          actor: geralt
+          .@pos: [0.2, anim_6928_high_standing_aggressive_gesture_shrug]
+          blendin: 0.3
+          blendout: 0.3
+
+    shot_4_go:
+      - actor.anim.mimic: [0.8, orianna_human_geralt_reaction_eye_smile_face]
+      - actor.anim: 
+          .@pos: [0.0, orianna_human_high_standing_determined_exit_back]
+          blendin: 0.5
+          blendout: 0.0
+          clipend: 2.8
+      - actor.lookat: [0.3, orianna_human, geralt]
+
+    shot_4_go2:
+      ### PREV ENOUGH ?
+      #- actor.anim.mimic: 
+      #    .@pos: [0.0, orianna_human_geralt_reaction_eye_smile_face]
+      #    blendin: 0.0
+      - cam: [0.0, cam_5_Shot5_ori_dg]
+      - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -11.1445922852 ], [ 0.0, 0.0, 274.4501037598 ]]
+      - actor.anim: 
+          .@pos: [0.0, orianna_human_high_standing_determined_enter_frontal]
+          clipfront: 2.0
+          blendin: 0.0
+          blendout: 0.5
+
+      - actor.anim.additive:
+          actor: orianna_human
+          .@pos: [0.0, anim_12659_high_standing_determined_gesture_looking_for_me]
+          blendin: 0.3
+          blendout: 0.3
+
+  section_choice_main:
+    CHOICE_1:
+      - cam: [0.0, cam_6_Shot6_ger_dg]
+      - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -11.1445922852 ], [ 0.0, 0.0, 274.4501037598 ]]
+      - actor.placement: [0.0, geralt, [ -144.1563720703, 35.0813903809, -11.2680664063 ], [ 0.0, 0.0, 106.4800338745 ]]
+      - actor.placement: [0.0, orianna_vampire, [ -144.6826934814, 19.7409744263, -15.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
+      - prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
+
+      - actor.lookat: [0.0, geralt, orianna_human]
+      - actor.lookat: [0.0, orianna_human, geralt]
+
+  section_pre_fight:
+    shot_pre_fight1:
+      - cam: [0.0, cam_6_Shot6_ger_dg]
+      - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -11.1445922852 ], [ 0.0, 0.0, 274.4501037598 ]]
+      - actor.placement: [0.0, geralt, [ -144.1563720703, 35.0813903809, -11.2680664063 ], [ 0.0, 0.0, 106.4800338745 ]]
+      - actor.placement: [0.0, orianna_vampire, [ -144.6826934814, 19.7409744263, -15.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
+      - prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
+      - actor.lookat: [0.0, geralt, orianna_human]
+      - actor.lookat: [0.0, orianna_human, geralt]
+      ### some gesture
+
+    shot_pre_fight2:
+      # change pose
+      - cam: [0.0, cam_6_Shot6_ger_dg]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_6932_high_standing_aggressive_to_high_standing_determined]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.pose: [0.5, geralt_high_standing_determined_idle]
+
+  section_fight:
+    shot_fight1_ori_gesture:
+      - cam: [0.0, cam_9_Shot_ori_gesture_to_fight]
+      - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -11.1445922852 ], [ 0.0, 0.0, 274.4501037598 ]]
+      - actor.placement: [0.0, geralt, [ -144.1563720703, 35.0813903809, -11.2680664063 ], [ 0.0, 0.0, 106.4800338745 ]]
+      - actor.placement: [0.0, orianna_vampire, [ -144.6826934814, 19.7409744263, -15.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
+      - prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.lookat: [0.0, geralt, orianna_human]
+      - actor.lookat: [0.0, orianna_human, geralt]
+
+      - actor.anim: 
+          actor: orianna_human
+          .@pos: [0.0, anim_12714_high_standing_happy_gesture_amazed]
+          blendin: 0.0
+          blendout: 0.0
+          stretch: 1.2
+      - actor.lookat: [0.0, geralt, orianna_human]
+      - actor.lookat: [0.0, orianna_human, geralt]
+
+    shot_fight2_ger_sceptic:
+      - cam: [0.0, cam_10_Shot_ger_sceptic]
+      - actor.anim.mimic: 
+          actor: geralt
+          .@pos: [0.0, mimicsanim_165_geralt_reaction_irritation_face]
+          blendin: 0.5
+          blendout: 0.5
+          stretch: 0.75
+
+  section_fight2:
+    shot_fight3_pre:
+      - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -13.1045913696 ], [ 0.0, 0.0, 274.4501037598 ]]
+      - actor.placement: [0.0, orianna_vampire, [ -149.1020660400, 34.5456390381, -11.1445922852 ], [ 0.0, 0.0, 282.7800292969 ]]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.lookat: [0.0, geralt, orianna_vampire]
+      - actor.lookat: [0.0, orianna_vampire, geralt]
+      - actor.placement: [0.0, geralt, [ -144.1563720703, 35.0813903809, -11.2680664063 ], [ 0.0, 0.0, 106.4800338745 ]]
+      - cam: [0.0, cam_11_Shot_ori_morph_shot]
+
+    shot_fight3_oriana_morph:
+      - actor.sound: [0.0, orianna_vampire, q701_bruxa_skin_morph]
+      - actor.lookat: [0.0, orianna_vampire, [ 0.0038613752, 0.4910137057, 1.5813558102 ]]
+      - actor.lookat: [0.7, orianna_vampire, geralt]
+
+    shot_fight4_geralt_draw_silver:
+      - cam: [0.0, cam_12_Shot_ger_draw_sword_cut]
+      - actor.equip.right: [0.25, geralt, silversword]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_7101_high_standing_determined_silver_to_gameplay_combat]
+          blendin: 0.5
+          blendout: 0.0
+          clipend: 4.0
+      - actor.anim.mimic: 
+          actor: geralt
+          .@pos: [0.0, mimicsanim_117_geralt_neutral_gesture_brows_down_face_nrml]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.appearance: [0.5, orianna_vampire, orianna_vampire]
+      - actor.gamestate: [0.8, orianna_vampire]
+      - actor.pose: [0.9, orianna_vampire_idle_vampire]
+
+  section_fight_togame:
+    shot_fight5_togame:
+      - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -13.1045913696 ], [ 0.0, 0.0, 274.4501037598 ]]
+      - actor.placement: [0.0, orianna_vampire, [ -149.1020660400, 34.5456390381, -11.1445922852 ], [ 0.0, 0.0, 282.7800292969 ]]
+      - actor.placement: [0.0, geralt, [ -144.1563720703, 35.0813903809, -11.2680664063 ], [ 0.0, 0.0, 106.4800338745 ]]
+      - actor.lookat: [0.0, geralt, orianna_vampire]
+      - actor.lookat: [0.0, orianna_vampire, geralt]
+
+      - actor.gamestate: [0.1, geralt, DrawSilver]
+      - cam.blend.togame: [0.0, cam_13_Shot_ori_blend_togame]
+      # 0.47s
+      - actor.sound: [0.235, orianna_vampire, monster_dettlaff_vampire_dialog_claws_scrape]
+      # 0.57s
+      - actor.sound: [0.285, orianna_vampire, monster_dettlaff_vampire_dialog_claws_scrape_sparks_vfx]
+      # 1.28s
+      - actor.sound: [0.64, orianna_vampire, monster_dettlaff_vampire_dialog_claws_scrape]
+      # 1.38s
+      - actor.sound: [0.69, orianna_vampire, monster_dettlaff_vampire_dialog_claws_scrape_sparks_vfx]
+
+      # 0.76s
+      - actor.sound: [0.8, orianna_vampire, monster_dettlaff_vampire_dialog_hiss]
+      - actor.sound: [0.3, orianna_vampire, monster_dettlaff_vampire_dialog_clothes_hard]
+      - actor.sound: [0.7, orianna_vampire, monster_dettlaff_vampire_dialog_clothes_hard]
+      - actor.anim: 
+          actor: orianna_vampire
+          .@pos: [0.0, anim_1671_utility_taunt_01]
+          blendin: 0.0
+          stretch: 1.33
+          blendout: 0.3
+
+  section_try_peacefully:
+    shot_try_peacefully1:
+      - cam: [0.0, cam_6_Shot6_ger_dg]
+      - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -11.1445922852 ], [ 0.0, 0.0, 274.4501037598 ]]
+      - actor.placement: [0.0, geralt, [ -144.1563720703, 35.0813903809, -11.2680664063 ], [ 0.0, 0.0, 106.4800338745 ]]
+      - actor.placement: [0.0, orianna_vampire, [ -144.6826934814, 19.7409744263, -15.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
+      - prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
+
+      - actor.lookat: [0.0, geralt, orianna_human]
+      - actor.lookat: [0.0, orianna_human, geralt]
+
+    shot_try_peacefully2:
+      - cam: [0.0, cam_5_Shot5_ori_dg]
+
+    shot_try_peacefully3:
+      - cam: [0.0, cam_6_Shot6_ger_dg]
+
+    shot_try_peacefully4:
+      - cam: [0.0, cam_5_Shot5_ori_dg]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "orianna_human", "orianna_vampire" ]
+  props: [ "q704_trailer_doll" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: script_music_song
+
+  script_music_song:
+    - SCRIPT:
+            function: NTR_PlayMusicScene
+            parameter:
+                - areaName: "toussaint"
+                - eventName: "mus_loc_toussaint_general_cs_to_gmpl"
+                - saveType: "SESB_DontSave"
+                #- repeatDelay: 0.5
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot Shot1
+    - CUE: shot_init
+    - PAUSE: 1.0
+    - CUE: shot_0
+    - orianna_human: "[9.998902]0001174593|Wolves_asleepin'_'midst_the_trees__bats_all_aswayi"
+    - CUE: shot_1
+    - orianna_human: "[11.980957]0001176970|But_one_soul_lies_anxious__wide_awake__fearin'_all"
+    # shot Shot4 to ger
+    - CUE: shot_4
+    - geralt: "[2.6539567]0000366968|Nice_tune__Damn_sad__though_"
+    - orianna_human: "Folk have forgotten it."
+    - CUE: shot_4_shrug
+    - geralt: "Got... other things on their mind."
+    - CUE: shot_4_go
+    - PAUSE: 2.8
+    - CUE: shot_4_go2
+    - orianna_human: "Things like me?"
+    - PAUSE: 2.0
+    - NEXT: section_choice_main
+
+  section_choice_main:
+    - CHOICE:
+      - choice: ["I came to kill you", section_pre_fight]
+        emphasize: true
+      - choice: ["No need in fight", section_try_peacefully]
+       #condition: [ NTR_scenefact_whychildren, "!=", 1 ]
+        emphasize: true
+
+  section_pre_fight:
+    - CUE: shot_pre_fight1
+    - geralt: "0001187118|Know what…? Don't feel like talking to you anymore. This is pointless."
+    - CUE: shot_pre_fight2
+    - geralt: "Got something for you. My silver sword."
+    #- geralt: "I've come for you."
+    - NEXT: section_fight
+
+  section_fight:
+    - CUE: shot_fight1_ori_gesture
+    - orianna_human: "No witcher's ever died in his own bed."
+    ## replace them!
+    - CUE: shot_fight2_ger_sceptic
+    - orianna_vampire: "You won't be exception."
+    - NEXT: script_call_morph_forward
+
+  script_call_morph_forward:
+    - SCRIPT:
+        function: NTR_MorphNPC_S
+        parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+          - tag: CNAME_ntr_orianna_vampire
+          - morphRatio: 1.0
+          - blendTime: 1.2
+          - pauseBefore: 0.5
+    - NEXT: section_fight2
+
+  section_fight2:
+    - CUE: shot_fight3_pre
+    - PAUSE: 0.4
+    - CUE: shot_fight3_oriana_morph
+    - PAUSE: 1.4
+    - CUE: shot_fight4_geralt_draw_silver
+    - PAUSE: 4.0
+    - NEXT: script_music_beast
+
+  script_music_beast:
+    - SCRIPT:
+            function: NTR_PlayMusicScene
+            parameter:
+                - areaName: "toussaint"
+                #- eventName: "mus_q704_detlaff_combat_stage02"
+                - eventName: "mus_q702_detlaff_combat"
+                - saveType: "SESB_Save"
+                #- repeatDelay: 0.5
+    - NEXT: section_fight_togame
+
+  section_fight_togame:
+    - CUE: shot_fight5_togame
+    - PAUSE: 2.0
+    - NEXT: section_exit_fight
+
+  section_try_peacefully:
+    - CUE: shot_try_peacefully1
+    - geralt: "0001172302|We don't have to fight."
+    - CUE: shot_try_peacefully2
+    - orianna_human: "Really? You've come just to talk to me?"
+    - CUE: shot_try_peacefully3
+    - geralt: "Won't touch you. On one condition. You have to stop drinking children."
+    - CUE: shot_try_peacefully4
+    - orianna_human: "And how shall I feed on in your opinion? I am the vampiress, by the way."
+    - NEXT: section_exit
+
+  section_exit_fight:
+    - OUTPUT: fight
+    - EXIT
+
+  section_exit:
+    - CAMERA_BLEND: 2.0
+    - EXIT

@@ -4,10 +4,14 @@ layers:
     #context: ""
     scenepoints: 
       orianna: [ -180.0365447998, -443.1201477051, 11.4495849609, 94.1600112915 ]
+      
+    waypoints: 
+      orianna_vampire_spawn: [ -202.5288391113, -584.5111083984, 0.1697998047, 162.5800018311 ]
 
     actionpoints: 
       orianna_horse_idle: [ -188.8559722900, -441.6127014160, 11.0527343750, -55.6599960327, "horse/horse_parking" ]
-    
+      orianna_horse_still: [ -188.8559722900, -441.6127014160, 11.0527343750, -55.6599960327, "horse/horse_still_jt" ]
+
     areas: 
       house_area: 
         height: 10.0
@@ -46,6 +50,34 @@ layers:
         rot: [ 0.0, 0.0, 33.6599998474 ]
 
     statics:
+      house_music_area:
+        ".type": CEntity
+        transform: 
+          pos: [ -185.9706573486, -445.7877502441, 8.5445947647 ]
+          scale: [ 1.0, 1.0, 1.0 ]
+        streamingDistance: 0
+        components:
+          Main:
+            ".type": CSoundAmbientAreaComponent
+            height: 10.0
+            localPoints:
+              - [ 4.0065307617, 7.7846069336, 0.0, 1.0 ]
+              - [ 1.2961578369, 10.7863769531, 0.0, 1.0 ]
+              - [ -7.1823883057, 11.1307067871, 0.0, 1.0 ]
+              - [ -12.5571899414, 5.7194519043, 0.0, 1.0 ]
+              - [ -11.1136016846, -7.6995849609, 0.0, 1.0 ]
+              - [ -0.7600097656, -20.0392456055, 0.0, 1.0 ]
+              - [ 14.1759643555, -9.8925170898, 0.0, 1.0 ]
+              - [ 12.1344299316, 2.2101135254, 0.0, 1.0 ]
+            triggerPriority: 1   ### 1, 2, 3 in vanilla usually
+            banksDependency:
+              - music_toussaint.bnk
+            soundEventsOnEnter:
+              - mus_cs704_diva_feeding
+            soundEventsOnExit:
+              - mus_loc_toussaint_general_cs_to_gmpl
+            priorityParameterMusic: true  
+
       orianna_dress_new: 
         template: "CEntity:dlc\\bob\\data\\environment\\decorations\\clothes\\decoration_clothes_bob_woman_2.w2ent"
         pos: [ -181.3866882324, -444.9786682129, 11.9346981049 ]
@@ -137,7 +169,7 @@ layers:
     interactiveEntities:
       orianna_footprints_gen_001:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -194.46495, -609.94873, 0.07318 ]
         rot: [ 0.00000, 0.00000, 188.97996 ]
         .preset: .MonsterClue
@@ -153,7 +185,7 @@ layers:
 
       orianna_footprints_gen_002:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -194.72429, -608.85278, 0.14209 ]
         rot: [ 0.00000, 0.00000, 188.97996 ]
         .preset: .MonsterClue
@@ -169,7 +201,7 @@ layers:
 
       orianna_footprints_gen_003:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -195.23958, -608.06085, 0.16766 ]
         rot: [ 0.00000, 0.00000, 188.97996 ]
         .preset: .MonsterClue
@@ -185,7 +217,7 @@ layers:
 
       orianna_footprints_gen_004:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -195.54526, -607.10504, 0.16766 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue
@@ -201,7 +233,7 @@ layers:
 
       orianna_footprints_gen_005:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -195.87885, -606.18665, 0.23712 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue
@@ -217,7 +249,7 @@ layers:
 
       orianna_footprints_gen_006:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -196.27303, -605.31036, 0.25006 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue
@@ -233,7 +265,7 @@ layers:
 
       orianna_footprints_gen_007:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -196.55083, -604.31708, 0.29523 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue
@@ -249,7 +281,7 @@ layers:
 
       orianna_footprints_gen_008:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -196.85181, -603.39392, 0.30768 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue
@@ -265,7 +297,7 @@ layers:
 
       orianna_footprints_gen_009:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -197.31133, -602.52722, 0.30499 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue
@@ -281,7 +313,7 @@ layers:
 
       orianna_footprints_gen_010:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -197.61706, -601.57135, 0.31268 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue
@@ -297,7 +329,7 @@ layers:
 
       orianna_footprints_gen_011:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -197.95550, -600.62030, 0.34381 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue
@@ -313,7 +345,7 @@ layers:
 
       orianna_footprints_gen_012:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -198.32657, -599.67389, 0.35992 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue
@@ -329,7 +361,7 @@ layers:
 
       orianna_footprints_gen_013:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -198.63704, -598.68530, 0.33246 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue
@@ -345,7 +377,7 @@ layers:
 
       orianna_footprints_gen_014:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -199.00809, -597.73895, 0.33246 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue
@@ -361,7 +393,7 @@ layers:
 
       orianna_footprints_gen_015:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -199.34648, -596.78790, 0.33246 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue
@@ -377,7 +409,7 @@ layers:
 
       orianna_footprints_gen_016:
         template: "W3MonsterClue:footprint_clue"
-        tags: [ "ntr_orianna_footprints_to_house" ]
+        tags: [ "ntr_orianna_footprints_to_house", "ntr_orianna_footprints_to_house_first" ]
         pos: [ -199.68964, -595.80420, 0.30499 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
         .preset: .MonsterClue

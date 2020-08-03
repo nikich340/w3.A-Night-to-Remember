@@ -1,4 +1,26 @@
 communities:
+  comm_orianna_vampire:
+    actors:
+      orianna_vampire:
+        template: "dlc\\dlcntr\\data\\entities\\orianna_vampire.w2ent"
+        appearances: [ "orianna_human_morph" ]
+        tags: [ "ntr_orianna_vampire" ]
+
+    phases:
+      before_scene:
+        orianna_vampire:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: friendly_to_player
+          spawn_at: bob/orianna_vampire_spawn
+
+      fight_hostile:
+        orianna_vampire:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: AG_VAMPIRE
+          spawn_at: bob/orianna_vampire_spawn
+
   comm_orph_wraiths:
     actors:
       wraith_1:
@@ -13,6 +35,7 @@ communities:
           appearance: wraith_01    # [someappearance, only_on_spawn_bool]
           use_last_ap: false
           start_in_ap: false
+          attitude: AG_wraith
           spawn_at: bob/orph_wraith_1
           guard: [ bob/orphanage_wraitharea, 5.0 ]
 
@@ -20,6 +43,7 @@ communities:
           appearance: wraith_01    # [someappearance, only_on_spawn_bool]
           use_last_ap: false
           start_in_ap: false
+          attitude: AG_wraith
           spawn_at: bob/orph_wraith_2
           guard: [ bob/orphanage_wraitharea, 5.0 ]
 
@@ -58,4 +82,5 @@ communities:
         hag_intro:
           use_last_ap: false
           start_in_ap: false
+          attitude: AG_grave_hag
           spawn_at: bob/hag_spawn

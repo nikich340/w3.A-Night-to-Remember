@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 639, saved: 2020-07-21 23:11:29)
+# (version: 706, saved: 2020-08-02 00:02:52)
 #
 ---
 structure:
@@ -15,7 +15,7 @@ structure:
       
       subsegment.FINALE:
         ".editor":
-          pos: [ 1718.912109375, 532.5865478516 ]
+          pos: [ 1852.037109375, 432.5865478516 ]
           in: [ In ]
           out: [ Out ]
         segment: finale
@@ -66,7 +66,7 @@ structure:
           out: [ Out ]
         segment: town_part
         next:
-          - subsegment.FINALE
+          - changelayers.show_river
       
       scene.new_scene:
         ".editor":
@@ -454,7 +454,7 @@ structure:
           - spawn.spawn_horses
           - spawn.spawn_baron
           - spawn.Spawn_orianna_horse
-          - subsegment.FINALE
+          - changelayers.show_river
           - waituntil.inside_camp
           - waituntil.2s
       
@@ -473,6 +473,20 @@ structure:
           - subsegment.orphanage
           - waituntil.wraith_area
           - waituntil.night_time
+      
+      changelayers.show_river:
+        ".editor":
+          pos: [ 1676.3977050781, 537.2164306641 ]
+          hint: show-only
+          in: []
+          out: []
+        sync: true
+        purge: false
+        world: bob
+        show:
+          - river
+        next:
+          - subsegment.FINALE
       
       changelayers.show_town_blood:
         ".editor":
@@ -611,6 +625,6 @@ structure:
           - script.FACT_BRANCH1
       
       end:
-        ".editor": [ 1936.5690917969, 445.2799377441 ]
+        ".editor": [ 2029.0690917969, 539.0299072266 ]
         next: ".done"
       

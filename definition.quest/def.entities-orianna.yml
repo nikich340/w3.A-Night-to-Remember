@@ -93,8 +93,6 @@ templates:
           #- characters/models/crowd_npc/novigrad_citizen_woman/legs/l2_04_wa__novigrad_citizen.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
           #- dlc/dlcntr/data/entities/oriana/body_03_wa__oriana.w2ent
-          #- dlc/dlcntr/data/entities/oriana/h_03_wa__oriana_morph.w2ent
-          ###
           - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/h_01_wa__oriana.w2ent

@@ -1,0 +1,957 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    niellan:
+      template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\citizens\\boy_noble.w2ent"
+      appearance: [ "bob_child_noble_05" ]
+
+    agneta:
+      template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\citizens\\girl_noble.w2ent"
+      appearance: [ "bob_child_noble_female_03" ]
+
+    Orianna_vampire:
+      template: "dlc\\dlcntr\\data\\entities\\orianna_vampire.w2ent"
+      appearance: [ "orianna_human" ]
+
+    Orianna_human:
+      template: "dlc\\bob\\data\\quests\\secondary_npcs\\vampire_diva.w2ent"
+      appearance: [ "oriana" ]
+
+    bob_horse_vehicle_no_interaction:
+      template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
+      appearance: [ "_sq101__white_stallion_02" ]
+
+  animations:
+    anim_3757_low_standing_determined_enter_frontal_playing_happy:
+      animation: "low_standing_determined_enter_frontal_playing_happy"
+      frames: 563
+
+    anim_3756_low_standing_determined_enter_frontal:
+      animation: "low_standing_determined_enter_frontal"
+      frames: 70
+
+    anim_12633_high_standing_determined_enter_frontal:
+      animation: "high_standing_determined_enter_frontal"
+      frames: 349
+
+    anim_12663_high_standing_determined_gesture_pet_horse:
+      animation: "high_standing_determined_gesture_pet_horse"
+      frames: 580
+
+    anim_3578_chid_play_stick_loop_1:
+      animation: "chid_play_stick_loop_1"
+      frames: 710
+
+    anim_3605_child_play_doll_loop_2:
+      animation: "child_play_doll_loop_2"
+      frames: 570
+
+    anim_3604_child_play_doll_loop_1:
+      animation: "child_play_doll_loop_1"
+      frames: 590
+
+    anim_3806_ex_kid_run:
+      animation: "ex_kid_run"
+      frames: 32
+
+    anim_3762_low_standing_determined_exit_frontal:
+      animation: "low_standing_determined_exit_frontal"
+      frames: 80
+
+    anim_3767_low_standing_determined_gesture_beckon:
+      animation: "low_standing_determined_gesture_beckon"
+      frames: 87
+
+    anim_12683_high_standing_determined_to_high_standing_bored:
+      animation: "high_standing_determined_to_high_standing_bored"
+      frames: 128
+
+    anim_12931_high_standing_bored_exit_rightside:
+      animation: "high_standing_bored_exit_rightside"
+      frames: 161
+
+    anim_12941_high_standing_determined_exit_frontal:
+      animation: "high_standing_determined_exit_frontal"
+      frames: 124
+
+  animations.mimic:
+    mimicsanim_440_geralt_neutral_gesture_squint_face:
+      animation: "geralt_neutral_gesture_squint_face"
+      frames: 73
+
+  actor.poses:
+    pose_584_ep1_geralt_sneaking_idle:
+      idle_anim: "ep1_geralt_sneaking_idle"
+
+    pose_0_low_standing_determined_idle:
+      idle_anim: "low_standing_determined_idle"
+
+    pose_2126_High_Standing_Determined:
+      name: "Standing"
+      emotional_state: "Determined"
+      status: "High"
+      idle_anim: "high_standing_determined_idle"
+
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_999_child_sitting_loop_01:
+      idle_anim: "child_sitting_loop_01"
+
+    pose_0_horse_standing_idle01:
+      idle_anim: "horse_standing_idle01"
+
+    pose_505_horse_standing_idle01:
+      idle_anim: "horse_standing_idle01"
+
+    pose_2136_High_Standing_Bored:
+      name: "Standing"
+      emotional_state: "Bored"
+      status: "High"
+      idle_anim: "high_standing_bored_idle"
+
+  cameras:
+    cam_1_Shot1:
+      fov: 40.0
+      transform:
+        pos: [ 4.7119107246, 6.9266662598, 1.3854961395 ]
+        rot: [ 0.0, 356.1600646973, 344.5731506348 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.6611857414, 5.6611857414 ]
+        focus: [ 3.1611857414, 4.1611857414 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_Shot2:
+      fov: 40.0
+      transform:
+        pos: [ 3.5951600075, 7.2391219139, 1.5854969025 ]
+        rot: [ 0.0, 346.2600708008, 36.1635437012 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.1987180710, 4.1987180710 ]
+        focus: [ 1.6987180710, 2.6987180710 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_Shot3_kids:
+      fov: 35.0
+      transform:
+        pos: [ 2.2486355305, 1.0732426643, 1.7354974747 ]
+        rot: [ 0.0, 343.6200866699, 3.7138366699 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.0658349991, 5.0658349991 ]
+        focus: [ 2.5658349991, 3.5658349991 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_4_Shot3_kids_rotate:
+      fov: 35.0
+      transform:
+        pos: [ 2.2486355305, 1.0732426643, 1.7354974747 ]
+        rot: [ 0.0, 336.6350708008, 35.3388977051 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.1387839317, 5.1387839317 ]
+        focus: [ 2.6387839317, 3.6387839317 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_5_Shot4_inside_house:
+      fov: 30.0
+      transform:
+        pos: [ -2.7333354950, 8.7507400513, 1.3354959488 ]
+        rot: [ 0.0, 355.6100463867, 228.9923095703 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 5.5214767456, 8.5214767456 ]
+        focus: [ 6.0214767456, 7.0214767456 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_7_Shot5_sniff:
+      fov: 25.0
+      transform:
+        pos: [ 1.3315280676, 4.8326749802, 1.3854961395 ]
+        rot: [ 0.0, 355.8300781250, 170.1422729492 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.8953037262, 3.8953037262 ]
+        focus: [ 1.3953037262, 2.3953037262 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_8_Shot6_to_children:
+      fov: 35.0
+      transform:
+        pos: [ 0.9848608971, 2.3747389317, 1.2854957581 ]
+        rot: [ 0.0, 357.7000732422, 7.5070190430 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.5142107010, 6.5142107010 ]
+        focus: [ 4.0142107010, 5.0142107010 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_9_Shot6_to_orianna:
+      fov: 30.0
+      transform:
+        pos: [ 1.4023667574, 5.2264924049, 1.1354951859 ]
+        rot: [ 0.0, 3.2000739574, 170.0872802734 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.9204689264, 3.9204688072 ]
+        focus: [ 1.4204689264, 2.4204688072 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_10_Shot7_orianna_go:
+      fov: 40.0
+      transform:
+        pos: [ 0.5383217335, 1.5802093744, 1.3854961395 ]
+        rot: [ 0.0, 353.1900634766, 354.0322570801 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.1231894493, 5.1231894493 ]
+        focus: [ 2.6231894493, 3.6231894493 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_11_Shot7_orianna_go__cloned_:
+      fov: 40.0
+      transform:
+        pos: [ 5.0083832741, 4.4186172485, 1.9354982376 ]
+        rot: [ 0.0, 324.3700866699, 31.7622070313 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.1231894493, 5.1231894493 ]
+        focus: [ 2.6231894493, 3.6231894493 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_12_Shot8_cam2:
+      fov: 40.0
+      transform:
+        pos: [ -1.1503970623, -1.2393014431, 1.4854965210 ]
+        rot: [ 0.0, 353.7400817871, 340.1175842285 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 5.0099959373, 8.0099964142 ]
+        focus: [ 5.5099959373, 6.5099959373 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_13_Shot8_cam3:
+      fov: 40.0
+      transform:
+        pos: [ -6.3249716759, -4.7090210915, 1.4854965210 ]
+        rot: [ 0.0, 357.1500854492, 327.8524475098 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 5.0099959373, 8.0099964142 ]
+        focus: [ 5.5099959373, 6.5099959373 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_14_Shot8_cam4:
+      fov: 40.0
+      transform:
+        pos: [ -7.5844936371, -4.9699635506, 1.4854965210 ]
+        rot: [ 0.0, 357.5350646973, 318.7224121094 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 5.0099959373, 8.0099964142 ]
+        focus: [ 5.5099959373, 6.5099959373 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_15_Shot8_cam5_ger:
+      fov: 40.0
+      transform:
+        pos: [ -8.5995788574, -4.2752652168, 1.4854965210 ]
+        rot: [ 0.0, 355.7750549316, 327.5225524902 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.1497709751, 5.1497707367 ]
+        focus: [ 2.6497709751, 3.6497709751 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_18_Shot2_horse_clip:
+      fov: 35.0
+      transform:
+        pos: [ 3.2766304016, 9.9781856537, 0.8354940414 ]
+        rot: [ 0.0, 14.2000722885, 165.5781860352 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.7945913076, 3.7945914268 ]
+        focus: [ 1.2945913076, 2.2945914268 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 930
+
+  placement: "ntr_bob_orianna_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -180.0365447998, -443.1201477051, 11.4495849609 ]
+      #rot: [ 0.0, 94.1600112915, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      niellan:
+        repo: "niellan"
+        #by_voicetag: true
+        appearance: "bob_child_noble_05"
+        tags: [ "niellan" ]
+
+      agneta:
+        repo: "agneta"
+        #by_voicetag: true
+        appearance: "bob_child_noble_female_03"
+        tags: [ "agneta" ]
+
+      Orianna_vampire:
+        repo: "Orianna_vampire"
+        #by_voicetag: true
+        appearance: "orianna_human"
+        tags: [ "Orianna_vampire" ]
+
+      Orianna_human:
+        repo: "Orianna_human"
+        #by_voicetag: true
+        appearance: "oriana"
+        tags: [ "Orianna_human" ]
+
+      bob_horse_vehicle_no_interaction:
+        repo: "bob_horse_vehicle_no_interaction"
+        by_voicetag: false
+        appearance: "_sq101__white_stallion_02"
+        tags: [ "ntr_orianna_horse" ]
+
+    cameras:
+      cam_1_Shot1:
+        repo: "cam_1_Shot1"
+
+      cam_2_Shot2:
+        repo: "cam_2_Shot2"
+
+      cam_3_Shot3_kids:
+        repo: "cam_3_Shot3_kids"
+
+      cam_4_Shot3_kids_rotate:
+        repo: "cam_4_Shot3_kids_rotate"
+
+      cam_5_Shot4_inside_house:
+        repo: "cam_5_Shot4_inside_house"
+
+      cam_7_Shot5_sniff:
+        repo: "cam_7_Shot5_sniff"
+
+      cam_8_Shot6_to_children:
+        repo: "cam_8_Shot6_to_children"
+
+      cam_9_Shot6_to_orianna:
+        repo: "cam_9_Shot6_to_orianna"
+
+      cam_10_Shot7_orianna_go:
+        repo: "cam_10_Shot7_orianna_go"
+
+      cam_11_Shot7_orianna_go__cloned_:
+        repo: "cam_11_Shot7_orianna_go__cloned_"
+
+      cam_12_Shot8_cam2:
+        repo: "cam_12_Shot8_cam2"
+
+      cam_13_Shot8_cam3:
+        repo: "cam_13_Shot8_cam3"
+
+      cam_14_Shot8_cam4:
+        repo: "cam_14_Shot8_cam4"
+
+      cam_15_Shot8_cam5_ger:
+        repo: "cam_15_Shot8_cam5_ger"
+
+      cam_18_Shot2_horse_clip:
+        repo: "cam_18_Shot2_horse_clip"
+
+    soundbanks:
+      - work_children
+      - qu_ep2_701_dlg
+
+    animations:
+      niellan_low_standing_determined_enter_frontal_playing_happy:
+        actor: "niellan"
+        repo: "anim_3757_low_standing_determined_enter_frontal_playing_happy"
+        #duration: 18.7666664124
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      agneta_low_standing_determined_enter_frontal:
+        actor: "agneta"
+        repo: "anim_3756_low_standing_determined_enter_frontal"
+        #duration: 2.3333332539
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_human_high_standing_determined_enter_frontal:
+        actor: "Orianna_human"
+        repo: "anim_12633_high_standing_determined_enter_frontal"
+        #duration: 11.6333332062
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_human_high_standing_determined_gesture_pet_horse:
+        actor: "Orianna_human"
+        repo: "anim_12663_high_standing_determined_gesture_pet_horse"
+        #duration: 19.3333339691
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      niellan_chid_play_stick_loop_1:
+        actor: "niellan"
+        repo: "anim_3578_chid_play_stick_loop_1"
+        #duration: 23.6666660309
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      agneta_child_play_doll_loop_2:
+        actor: "agneta"
+        repo: "anim_3605_child_play_doll_loop_2"
+        #duration: 19.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      agneta_child_play_doll_loop_1:
+        actor: "agneta"
+        repo: "anim_3604_child_play_doll_loop_1"
+        #duration: 19.6666660309
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      niellan_ex_kid_run:
+        actor: "niellan"
+        repo: "anim_3806_ex_kid_run"
+        #duration: 1.0666667223
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      agneta_low_standing_determined_exit_frontal:
+        actor: "agneta"
+        repo: "anim_3762_low_standing_determined_exit_frontal"
+        #duration: 2.6666667461
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      niellan_low_standing_determined_gesture_beckon:
+        actor: "niellan"
+        repo: "anim_3767_low_standing_determined_gesture_beckon"
+        #duration: 2.9000000954
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_human_high_standing_determined_to_high_standing_bored:
+        actor: "Orianna_human"
+        repo: "anim_12683_high_standing_determined_to_high_standing_bored"
+        #duration: 4.2666668892
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_human_high_standing_bored_exit_rightside:
+        actor: "Orianna_human"
+        repo: "anim_12931_high_standing_bored_exit_rightside"
+        #duration: 5.3666667938
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_human_high_standing_determined_exit_frontal:
+        actor: "Orianna_human"
+        repo: "anim_12941_high_standing_determined_exit_frontal"
+        #duration: 4.1333332062
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    animations.mimic:
+      Orianna_human_geralt_neutral_gesture_squint_face:
+        actor: "Orianna_human"
+        repo: "mimicsanim_440_geralt_neutral_gesture_squint_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+    actor.poses:
+      geralt_ep1_geralt_sneaking_idle:
+        actor: "geralt"
+        repo: "pose_584_ep1_geralt_sneaking_idle"
+
+      niellan_low_standing_determined_idle:
+        actor: "niellan"
+        repo: "pose_0_low_standing_determined_idle"
+
+      agneta_low_standing_determined_idle:
+        actor: "agneta"
+        repo: "pose_0_low_standing_determined_idle"
+
+      Orianna_vampire_High_Standing_Determined:
+        actor: "Orianna_vampire"
+        repo: "pose_2126_High_Standing_Determined"
+
+      Orianna_human_high_standing_determined_idle:
+        actor: "Orianna_human"
+        repo: "pose_0_high_standing_determined_idle"
+
+      agneta_child_sitting_loop_01:
+        actor: "agneta"
+        repo: "pose_999_child_sitting_loop_01"
+
+      Orianna_human_High_Standing_Bored:
+        actor: "Orianna_human"
+        repo: "pose_2136_High_Standing_Bored"
+
+      bob_horse_vehicle_no_interaction_horse_standing_idle01:
+        actor: "bob_horse_vehicle_no_interaction"
+        repo: "pose_0_horse_standing_idle01"
+storyboard:
+  #defaults:
+    #placement:
+      #geralt: [[ -7.8057913780, -1.6908612251, -0.1306152344 ], [ 0.0, 0.0, 200.8300170898 ]]
+      #niellan: [[ 5.9528045654, 8.9630012512, -0.1018676758 ], [ 0.0, 0.0, 156.9700622559 ]]
+      #agneta: [[ 4.7423534393, 10.2286128998, -0.1958007813 ], [ 0.0, 0.0, 167.0900878906 ]]
+      #Orianna_vampire: [[ -14.1832151413, 9.3185987473, -1.9216918945 ], [ 0.0, 0.0, 209.6600646973 ]]
+      #Orianna_human: [[ 5.0344357491, 8.7472534180, -0.1944580078 ], [ 0.0, 0.0, 160.5999145508 ]]
+
+    #actor.pose:
+      #geralt: geralt_ep1_geralt_sneaking_idle
+      #niellan: niellan_low_standing_determined_idle
+      #agneta: agneta_low_standing_determined_idle
+      #Orianna_vampire: Orianna_vampire_High_Standing_Determined
+      #Orianna_human: Orianna_human_high_standing_determined_idle
+
+  section_storyboard_ui:
+    # shot Shot1
+    shot_1:
+      - actor.placement: [0.0, geralt, [ 5.2733459473, 3.8310906887, 0.3104858398 ], [ 0.0, 0.0, 200.8300170898 ]]
+      #- actor.placement: [0.0, geralt, [ -7.8057913780, -1.6908612251, -0.1306152344 ], [ 0.0, 0.0, 200.8300170898 ]]
+      - actor.placement: [0.0, niellan, [ 5.9528045654, 8.9630012512, -0.1018676758 ], [ 0.0, 0.0, 156.9700622559 ]]
+      - actor.placement: [0.0, agneta, [ 4.7423534393, 10.2286128998, -0.1958007813 ], [ 0.0, 0.0, 167.0900878906 ]]
+      - actor.placement: [0.0, Orianna_vampire, [ -14.1832151413, 9.3185987473, -1.9216918945 ], [ 0.0, 0.0, 209.6600646973 ]]
+      - actor.placement: [0.0, Orianna_human, [ 5.0344357491, 8.7472534180, -0.1944580078 ], [ 0.0, 0.0, 160.5999145508 ]]
+      - actor.placement: [0.0, bob_horse_vehicle_no_interaction, [ 1.9292534590, 9.1900167465, -0.4699707031 ], [ 0.0, 0.0, 211.8300170898 ]]
+      - actor.pose: [0.0, geralt_ep1_geralt_sneaking_idle]
+      - actor.pose: [0.0, niellan_low_standing_determined_idle]
+      - actor.pose: [0.0, agneta_low_standing_determined_idle]
+      - actor.pose: [0.0, Orianna_vampire_High_Standing_Determined]
+      - actor.pose: [0.0, Orianna_human_high_standing_determined_idle]
+      - actor.pose: [0.0, bob_horse_vehicle_no_interaction_horse_standing_idle01]
+      - actor.sound: [0.0, niellan, work_child_1_laugh]
+      - cam: [0.0, cam_1_Shot1]
+      - actor.anim: 
+          .@pos: [0.0, niellan_low_standing_determined_enter_frontal_playing_happy]
+          blendin: 0.0
+          clipfront: 0.0
+          clipend: 2.3
+          blendout: 0.0
+      - actor.anim: 
+          .@pos: [0.0, agneta_low_standing_determined_enter_frontal]
+          blendin: 0.0
+          clipfront: 0.0
+          blendout: 0.0
+      - actor.anim: 
+          .@pos: [0.0, Orianna_human_high_standing_determined_enter_frontal]
+          blendin: 0.0
+          clipfront: 0.0
+          clipend: 2.3
+          blendout: 0.0
+      - actor.lookat: [0.0, Orianna_human, geralt]
+      - actor.lookat: [0.0, niellan, geralt]
+      - actor.lookat: [0.0, agneta, geralt]
+
+    # shot Shot2
+    shot_2:
+      - actor.placement: [0.0, geralt, [ -7.8057913780, -1.6908612251, -0.1306152344 ], [ 0.0, 0.0, 200.8300170898 ]]
+      - actor.placement: [0.0, Orianna_human, [ 3.3838450909, 8.5124912262, -0.1944580078 ], [ 0.0, 0.0, 141.1299438477 ]]
+      - cam: [0.0, cam_2_Shot2]
+      - actor.lookat: [0.0, Orianna_human, [ 2.1680443287, 0.3684131503, 1.6294975281 ]]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_human_high_standing_determined_enter_frontal]
+          clipfront: 0.0
+          clipend: 5.5
+          blendin: 0.0
+          blendout: 0.5
+      - cam: [0.6, cam_18_Shot2_horse_clip]
+      - actor.placement: [0.5, niellan, [ 0.4550155997, 2.7629373074, -0.2086791992 ], [ 0.0, 0.0, 248.7101745605 ]]
+      - actor.placement: [0.5, agneta, [ 1.7824206352, 3.4389028549, -0.1580810547 ], [ 0.0, 0.0, 167.0900878906 ]]
+      - actor.anim: 
+          .@pos: [0.5, Orianna_human_high_standing_determined_gesture_pet_horse]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.anim: [0.8, niellan_chid_play_stick_loop_1]
+      - actor.anim: [0.8, agneta_child_play_doll_loop_2]
+      - actor.sound: [0.8, agneta, work_child_3_laugh]
+
+    # shot Shot3 kids
+    shot_3:
+      #- actor.placement: [0.0, niellan, [ 0.4550155997, 2.7629373074, -0.2086791992 ], [ 0.0, 0.0, 248.7101745605 ]]
+      #- actor.placement: [0.0, agneta, [ 1.7824206352, 3.4389028549, -0.1580810547 ], [ 0.0, 0.0, 167.0900878906 ]]
+      - cam.blend.start: [0.0, cam_3_Shot3_kids]
+      #- actor.anim: [0.0, Orianna_human_high_standing_determined_gesture_pet_horse]
+      - cam.blend.end: [1.0, cam_4_Shot3_kids_rotate]
+      - actor.lookat: [0.0, niellan, agneta]
+      - actor.lookat: [0.0, agneta, niellan]      
+
+    shot_3_inside:
+      - cam: [0.0, cam_5_Shot4_inside_house]
+
+  section_storyboard_ui2:
+    # shot Shot4 inside house
+    shot_5_pre:
+      - actor.placement: [0.0, bob_horse_vehicle_no_interaction, [ 1.9292534590, 9.1900167465, -0.4699707031 ], [ 0.0, 0.0, 211.8300170898 ]]
+      - actor.placement: [0.0, geralt, [ -2.6921474934, 9.6762933731, -0.1306152344 ], [ 0.0, 0.0, 200.8300170898 ]]
+      - actor.placement: [0.0, Orianna_vampire, [ -14.1832151413, 9.3185987473, -1.9216918945 ], [ 0.0, 0.0, 209.6600646973 ]]
+      - actor.pose: [0.0, geralt_ep1_geralt_sneaking_idle]
+      - actor.pose: [0.0, niellan_low_standing_determined_idle]
+      - actor.pose: [0.0, agneta_low_standing_determined_idle]
+      - actor.pose: [0.0, Orianna_vampire_High_Standing_Determined]
+      - actor.pose: [0.0, Orianna_human_high_standing_determined_idle]
+      - actor.pose: [0.0, bob_horse_vehicle_no_interaction_horse_standing_idle01]
+      
+      - actor.placement: [0.0, niellan, [ 0.8735722899, 4.0502972603, -0.3079833984 ], [ 0.0, 0.0, 19.5802001953 ]]
+      - actor.placement: [0.0, agneta, [ 1.3313251734, 4.2678470612, -0.2884521484 ], [ 0.0, 0.0, 36.0800094604 ]]
+      - actor.placement: [0.0, Orianna_human, [ 1.3518029451, 3.9313991070, -0.2816772461 ], [ 0.0, 0.0, 0.6599426270 ]]
+      - cam: [0.0, cam_5_Shot4_inside_house]
+      - actor.lookat: [0.0, Orianna_human, geralt]
+      - actor.lookat: [0.0, niellan, geralt]
+      - actor.lookat: [0.0, agneta, geralt]
+      - actor.anim.mimic:
+          actor: Orianna_human
+          .@pos: [0.0, mimicsanim_493_geralt_reaction_eye_smile_face]
+          blendin: 0.3
+          blendout: 0.3
+          #clipend: 1.5
+
+      - actor.anim.additive: 
+          actor: Orianna_human
+          .@pos: [0.8, anim_12650_high_standing_determined_gesture_hair_01]
+          blendin: 0.3
+          blendout: 0.3
+          stretch: 1.0
+
+    shot_5:
+      - actor.anim: 
+          .@pos: [0.0, niellan_ex_kid_run]
+          blendin: 0.3
+          blendout: 0.0
+          stretch: 1.5
+          #clipend: 1.1
+      - actor.anim: 
+          .@pos: [0.0, agneta_low_standing_determined_exit_frontal]
+          blendin: 0.3
+          blendout: 0.0
+          stretch: 0.75
+          #clipend: 1.1
+
+      #- actor.placement: [0.0, niellan, [ 0.2611096799, 5.0055532455, -0.3079833984 ], [ 0.0, 0.0, 19.5802001953 ]]
+
+    # shot Shot5 sniff
+    shot_7:
+
+      - actor.sound: [0.3, Orianna_human, q701_bruxa_sniffs_hand]
+      - actor.placement: [0.0, geralt, [ -7.8057913780, -1.6908612251, -0.1306152344 ], [ 0.0, 0.0, 200.8300170898 ]]
+      - cam: [0.0, cam_7_Shot5_sniff]
+      - actor.anim.mimic: [0.5, Orianna_human_geralt_neutral_gesture_squint_face]
+      - actor.lookat: [0.01, Orianna_human, niellan]
+      - actor.lookat: [0.3, Orianna_human, geralt]
+      - actor.lookat: [0.8, Orianna_human, niellan]
+      - actor.placement: [0.0, niellan, [ -0.5869718790, 6.4313812256, 0.0808820724 ], [ 0.0, 0.0, 212.7402343750 ]]
+      - actor.placement: [0.0, agneta, [ -0.4404255152, 8.6939992905, 0.1484508514 ], [ 0.0, 0.0, 123.3101119995 ]]
+      - actor.pose: [0.0, agneta_child_sitting_loop_01]
+      - actor.lookat: [0.01, niellan, Orianna_human]
+      - actor.lookat: [0.01, agneta, Orianna_human]
+
+    # shot Shot6 to children
+    shot_8:
+      - actor.unequip.right: [0.0, niellan]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_human_high_standing_determined_to_high_standing_bored]
+          blendin: 0.5
+          clipend: 3.0
+      ### CHOOSE
+      #- actor.anim:
+      #    actor: Orianna_human
+      #    .@pos: [0.0, anim_12628_high_standing_bored_idle]
+      #    blendin: 0.5
+      #    blendout: 0.5
+      - actor.pose: [0.5, Orianna_human_High_Standing_Bored]
+      - cam: [0.0, cam_8_Shot6_to_children]
+
+    shot_8_backon:
+      - actor.anim.additive: 
+          .@pos: [0.0, niellan_low_standing_determined_gesture_beckon]
+          blendin: 0.3
+          blendout: 0.3
+
+    # shot Shot6 to orianna
+    shot_9:
+      - actor.anim.mimic:
+          actor: Orianna_human
+          .@pos: [0.0, mimicsanim_488_geralt_reaction_bored_face]
+          blendin: 0.5
+          blendout: 0.5
+      - cam: [0.0, cam_9_Shot6_to_orianna]
+
+    # shot Shot7 orianna go
+    shot_10:
+      - actor.placement: [0.0, Orianna_vampire, [ 11.5731372833, 14.0540857315, -1.2216758728 ], [ 0.0, 0.0, 209.6600646973 ]]
+
+      - actor.placement: [0.0, Orianna_human, [ 1.3518029451, 3.9313991070, -0.2816772461 ], [ 0.0, 0.0, 47.4100418091 ]]
+      - actor.lookat: [0.1, Orianna_human, Orianna_vampire]
+      - cam.blend.start: [0.0, cam_10_Shot7_orianna_go]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_human_high_standing_bored_exit_rightside]
+          blendin: 0.0
+          blendout: 0.0
+      #- actor.placement.start: [0.99, Orianna_human, [ 1.3518029451, 3.9313991070, -0.2816772461 ], [ 0.0, 0.0, 47.4100418091 ], rapid]
+      - cam.blend.key: [0.5, cam_12_Shot8_cam2]
+
+    # shot Shot8 cam2
+    shot_12_cam_blends:
+      - actor.placement: [0.0, Orianna_human, [ 3.2127556801, 5.7109260559, -0.2816772461 ], [ 0.0, 0.0, 315.7799377441 ]]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_human_high_standing_determined_exit_frontal]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 1.0
+      - actor.equip.right: [0.0, geralt, silversword]
+      #- actor.lookat: [0.0, geralt, Orianna_human]
+      - actor.lookat: [0.0, geralt, [ -0.2640164196, 1.0343441963, 0.8515024185 ]]
+      #- cam.blend.start: [0.0, cam_10_Shot7_orianna_go]
+      #- cam.blend.key: [0.5, cam_12_Shot8_cam2]
+      - cam.blend.key: [0.0, cam_13_Shot8_cam3]
+      - cam.blend.key: [1.0, cam_14_Shot8_cam4]
+
+    # shot Shot8 cam5 ger
+    shot_15:
+      - cam.blend.end: [1.0, cam_15_Shot8_cam5_ger]
+      - fade.out: [0.5, 2.0]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "niellan", "agneta", "Orianna_vampire", "Orianna_human", "bob_horse_vehicle_no_interaction" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: script_close_door
+
+  script_close_door:
+    - SCRIPT:
+        function: NTR_SceneDoorChangeState
+        parameter: 
+          - tag: "CNAME_ntr_orianna_house_front_door"
+          - newState: "EDQS_Close"
+          - smoooth: false
+          - dontBlockInCombat: false
+    - NEXT: script_timelapse_label
+
+  script_timelapse_label:
+    - SCRIPT:
+            function: NTR_ShowTimeLapse_S
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - showTime: 3.0
+                - timeLapseMessageKey: "ntr_sometime_later"
+                #- timeLapseAdditionalMessageKey: "item_name_ntr_notices_regis_letter"
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot Shot1
+    - CUE: shot_1
+    # (longest) anim: low_standing_determined_enter_frontal_playing_happy
+    - PAUSE: 2.3
+    # shot Shot2
+    - CUE: shot_2
+    # (longest) anim: high_standing_determined_gesture_pet_horse
+    - PAUSE: 10.0
+    - Orianna_human: "Here we are."
+    # shot Shot3 kids
+    - CUE: shot_3
+    # (longest) anim: chid_play_stick_loop_1
+    - PAUSE: 10.0
+    - CUE: shot_3_inside
+    - PAUSE: 1.5
+    - NEXT: script_open_door
+
+  script_open_door:
+    - SCRIPT:
+        function: NTR_SceneDoorChangeState
+        parameter: 
+          - tag: "CNAME_ntr_orianna_house_front_door"
+          - newState: "EDQS_Open"
+          - smoooth: true
+          - dontBlockInCombat: false
+    - NEXT: section_storyboard_ui2
+
+  section_storyboard_ui2:
+    - CUE: shot_5_pre
+    - PAUSE: 4.0
+    # shot Shot4 inside house
+    - CUE: shot_5
+    # (longest) anim: low_standing_determined_exit_frontal
+    - PAUSE: 1.1
+    # shot Shot4 inside house2 niel pla
+    # shot Shot5 sniff
+    - CUE: shot_7
+    # (longest) anim: low_standing_determined_exit_frontal
+    - PAUSE: 4.0
+    #- Orianna_human: "*sniff*"
+    # shot Shot6 to children
+    - CUE: shot_8
+    # (longest) anim: low_standing_determined_gesture_beckon
+    - agneta: "Lady Orianna..."
+    - CUE: shot_8_backon
+    - niellan: "Go on!"
+    - PAUSE: 1.0
+    # shot Shot6 to orianna
+    - CUE: shot_9
+    - Orianna_human: "Wait me here. I should check something. You are allowed to play in my room."
+    # shot Shot7 orianna go
+    - CUE: shot_10
+    # (longest) anim: high_standing_bored_exit_rightside
+    - PAUSE: 5.37
+    # shot Shot8 cam2
+    - CUE: shot_12_cam_blends
+    # (longest) anim: high_standing_bored_exit_rightside
+    - PAUSE: 3.0
+    # shot Shot8 cam3
+    
+    - CUE: shot_15
+    # (longest) anim: high_standing_bored_exit_rightside
+    - PAUSE: 4.0
+    - NEXT: script_lock_door
+
+  script_lock_door:
+    - SCRIPT:
+        function: NTR_SceneDoorChangeState
+        parameter: 
+          - tag: "CNAME_ntr_orianna_house_front_door"
+          - newState: "EDQS_Lock"
+          - smoooth: false
+          - dontBlockInCombat: false
+    - NEXT: section_exit
+
+  section_exit:
+    #- CAMERA_BLEND: 2.0
+    - BLACKSCREEN: true
+    - EXIT

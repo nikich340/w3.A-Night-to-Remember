@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 639, saved: 2020-07-21 23:11:29)
+# (version: 706, saved: 2020-08-02 00:02:52)
 #
 ---
 structure:
@@ -13,6 +13,7 @@ structure:
           next:
             - objective.Inv_Inn: Activate
             - waituntil.side_area
+            - waituntil.new_wait_until_realtime_elapsed
         
         scene.house_found_comment:
           ".editor":
@@ -28,9 +29,27 @@ structure:
             - waituntil.room_are
             - objective.Check_house: Activate
         
+        scene.main_orianna_scene:
+          ".editor":
+            pos: [ 3052.14453125, -66.2440948486 ]
+            in: [ Input ]
+            out: [ Output, fight ]
+          scene: 20.orianna_main.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: true
+          next.Output:
+            - script.new_logmsg
+            - objective.wait_outside: Success
+          next.fight:
+            - waituntil.wait_50perc_health
+            - objective.wait_outside: Success
+            - objective.KILL_ORIANNA: Activate
+            - spawn.spawn_hostile
+        
         scene.notes_comment:
           ".editor":
-            pos: [ 1810.1135253906, 331.6704101562 ]
+            pos: [ 1958.8635253906, 332.2954101562 ]
             in: [ orianna_house_notes ]
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
@@ -50,11 +69,11 @@ structure:
           _fadein: false
           next.Output:
             - objective.Check_house: Success
-            - objective.new_quest_objective: Activate
+            - objective.wait_outside: Activate
         
         scene.room_comment:
           ".editor":
-            pos: [ 1459.1292724609, 122.3566970825 ]
+            pos: [ 1450.5578613281, 260.9281005859 ]
             in: [ orianna_house_enter ]
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
@@ -63,7 +82,55 @@ structure:
           _fadein: false
           next.Output:
             - waituntil.Notes_were_read
-            - waituntil.Outside_room
+        
+        scene.scene_orianna_appear:
+          ".editor":
+            pos: [ 2594.0305175781, 32.824131012 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 19.orianna_appear.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: true
+          next.Output:
+            - settime.set_1am
+        
+        waituntil.1s:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 2914.1823730469, 30.766834259 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Play_NTR_music
+        
+        waituntil.1ss:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 2804.9228515625, -263.2525634766 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Set_morph_app
+        
+        waituntil.1sss:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 2003.064453125, -70.7478637695 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Suggest_save
+        
+        waituntil.2s:
+          elapsed: "00:00:02"
+          ".editor":
+            pos: [ 2245.5146484375, 113.8040924072 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - settime.Set_11pm
+            - addfact.ntr_finale_started
         
         waituntil.House_area:
           inside: [ bob/house_area, PLAYER ]
@@ -78,16 +145,16 @@ structure:
         waituntil.Notes_were_read:
           factdb: [ BookReadState_ntr_notices_orianna_notes, ">=", 1 ]
           ".editor":
-            pos: [ 1636.0227050781, 323.7727050781 ]
+            pos: [ 1656.0227050781, 329.4869995117 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - scene.notes_comment: orianna_house_notes
+            - script.new_fact_checker_branch
         
         waituntil.Outside_room:
           outside: [ bob/room_area, PLAYER ]
           ".editor":
-            pos: [ 1637.0942382812, 94.9821472168 ]
+            pos: [ 1535.6656494141, 99.9821472168 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -97,11 +164,11 @@ structure:
         waituntil.Player_outside:
           entered: [ bob/outside_orianna_house, PLAYER ]
           ".editor":
-            pos: [ 2019.2658691406, 109.0693359375 ]
+            pos: [ 1948.1547851562, 106.847114563 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - script.new_logmsg
+            - script.fade_out
         
         waituntil.footprints_found:
           factdb: [ ntr_orianna_side_footprints_found, ">=", 1 ]
@@ -113,14 +180,25 @@ structure:
             - objective.Inv_Inn: Success
             - objective.Riverside_tracks: Activate
             - waituntil.House_area
+            - script.focus_ALL_footprints
+        
+        waituntil.new_wait_until_realtime_elapsed:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 1337.1665039062, 610.9909667969 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - waituntil.Player_outside
         
         waituntil.room_are:
           inside: [ bob/room_area, PLAYER ]
           ".editor":
-            pos: [ 1301.6651611328, 196.9281005859 ]
+            pos: [ 1312.3793945312, 175.4995269775 ]
             in: [ In ]
             out: [ Out ]
           next:
+            - waituntil.Outside_room
             - scene.room_comment: orianna_house_enter
         
         waituntil.side_area:
@@ -130,7 +208,80 @@ structure:
             in: [ In ]
             out: [ Out ]
           next:
-            - script.focus_footprints
+            - script.Fcous_first_footprints
+        
+        waituntil.wait_50perc_health:
+          factdb: [ ntr_orianna_vampire_halfhealth, ">=", 1 ]
+          ".editor":
+            pos: [ 3276.5014648438, 77.0497436523 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.new_logmsg_1
+        
+        script.Fcous_first_footprints:
+          ".editor":
+            pos: [ 496.3221130371, 320.4040527344 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FocusSetHighlight
+          parameter:
+            - tag: cname_ntr_orianna_footprints_to_house_first
+            - highlightType: FMV_Clue
+            - overrideCustomLogic: false
+          next:
+            - waituntil.footprints_found
+        
+        script.Play_NTR_music:
+          ".editor":
+            pos: [ 3083.1977539062, 25.3480796814 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_PlayMusic
+          parameter:
+            - areaName: toussaint
+            - eventName: mus_q704_after_feeding
+            - saveType: SESB_DontSave
+          next: ".done"
+        
+        script.Play_beast_music:
+          ".editor":
+            pos: [ 3305.1533203125, 168.9574432373 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_PlayMusic
+          parameter:
+            - areaName: toussaint
+            - eventName: mus_q704_detlaff_combat_stage02
+            - saveType: SESB_Save
+          next: ".done"
+        
+        script.Set_morph_app:
+          ".editor":
+            pos: [ 2954.4443359375, -185.9756622314 ]
+            in: [ In ]
+            out: [ Out ]
+          function: AppearanceChange
+          parameter:
+            - npcsTag: cname_ntr_orianna_vampire
+            - appearanceName: cname_orianna_human_morph
+          next: ".done"
+        
+        script.Suggest_save:
+          ".editor":
+            pos: [ 2202.4763183594, -78.9831542969 ]
+            in: [ In ]
+            out: [ Out ]
+          function: ForceManaualSaveQ
+          next: ".done"
+        
+        script.Tune_Orianna:
+          ".editor":
+            pos: [ 3541.6315917969, 378.7955322266 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_TuneOriannaVampire
+          next: ".done"
         
         script.Unlock_front_door:
           ".editor":
@@ -143,9 +294,23 @@ structure:
             - newState: EDQS_RemoveLock
           next: ".done"
         
-        script.focus_footprints:
+        script.fade_out:
           ".editor":
-            pos: [ 505.6070251465, 242.7822113037 ]
+            pos: [ 2095.1879882812, 23.0984859467 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FadeOutQuest
+          parameter:
+            - fadeTime: 2.0
+            - r: 0
+            - g: 0
+            - b: 0
+          next:
+            - waituntil.2s
+        
+        script.focus_ALL_footprints:
+          ".editor":
+            pos: [ 892.7736816406, 133.1155700684 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_FocusSetHighlight
@@ -153,20 +318,79 @@ structure:
             - tag: cname_ntr_orianna_footprints_to_house
             - highlightType: FMV_Clue
             - overrideCustomLogic: false
-          next:
-            - waituntil.footprints_found
+          next: ".done"
+        
+        script.new_fact_checker_branch:
+          ".editor":
+            pos: [ 1795.6088867188, 408.0973510742 ]
+            in: [ In ]
+            out: [ "False", "True" ]
+          function: NTR_FactChecker
+          parameter:
+            - factName: ntr_finale_started
+            - factCond: "=="
+            - val: 1
+          next.False:
+            - scene.notes_comment: orianna_house_notes
         
         script.new_logmsg:
           ".editor":
-            pos: [ 2216.3247070312, 117.892868042 ]
+            pos: [ 3268.9304199219, -77.7205200195 ]
             in: [ In ]
             out: [ Out ]
           function: radLog
           parameter:
             - logChannel: cname_NTR
-            - msg: final scene
+            - msg: peaceful
           next:
             - out
+        
+        script.new_logmsg_1:
+          ".editor":
+            pos: [ 3497.0014648438, 47.0497322083 ]
+            in: [ In ]
+            out: [ Out ]
+          function: radLog
+          parameter:
+            - logChannel: cname_NTR
+            - msg: HALF HEALTH
+          next:
+            - out
+        
+        script.new_show_bossfight_indicator:
+          ".editor":
+            pos: [ 3301.8051757812, 266.1706237793 ]
+            in: [ In ]
+            out: [ Out ]
+          function: ShowBossFightIndicator
+          parameter:
+            - enable: true
+            - bossTag: cname_ntr_orianna_vampire
+          next: ".done"
+        
+        spawn.Spawn_orianna_vampire:
+          ".editor":
+            pos: [ 2652.8291015625, -176.9574737549 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: before_scene
+          spawnsets:
+            - comm_orianna_vampire
+          next:
+            - waituntil.1ss
+        
+        spawn.spawn_hostile:
+          ".editor":
+            pos: [ 3294.2946777344, 382.1418457031 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: fight_hostile
+          spawnsets:
+            - comm_orianna_vampire
+          next:
+            - script.Tune_Orianna
         
         objective.Check_house:
           ".editor": [ 1292.9097900391, 462.9410705566 ]
@@ -182,6 +406,13 @@ structure:
           track: true
           next: ".done"
         
+        objective.KILL_ORIANNA:
+          ".editor": [ 3301.6025390625, 490.951171875 ]
+          objective: nighttoremember/river_part/kill_orianna
+          notify: true
+          track: false
+          next: ".done"
+        
         objective.Riverside_tracks:
           ".editor": [ 956.9162597656, 444.2760620117 ]
           objective: nighttoremember/river_part/follow_tracks
@@ -189,14 +420,38 @@ structure:
           track: false
           next: ".done"
         
-        objective.new_quest_objective:
-          ".editor": [ 2071.61328125, 478.4178466797 ]
+        objective.wait_outside:
+          ".editor": [ 2276.61328125, 399.2511901855 ]
           objective: nighttoremember/river_part/wait_outside
           notify: true
           track: false
           next: ".done"
         
+        settime.Set_11pm:
+          ".editor": [ 2435.9921875, -41.1022186279 ]
+          time: "22:30"
+          next:
+            - spawn.Spawn_orianna_vampire
+            - scene.scene_orianna_appear: Input
+            - addfact.ntr_finale_started_1
+        
+        settime.set_1am:
+          ".editor": [ 2758.5620117188, -62.9907188416 ]
+          time: "00:30"
+          next:
+            - scene.main_orianna_scene: Input
+        
+        addfact.ntr_finale_started:
+          ".editor": [ 2506.3073730469, 192.5459136963 ]
+          value: [ ntr_finale_started, 1 ]
+          next: ".done"
+        
+        addfact.ntr_finale_started_1:
+          ".editor": [ 2646.1896972656, -358.2792663574 ]
+          value: [ ntr_finale_started, 1 ]
+          next: ".done"
+        
         out:
-          ".editor": [ 2365.3234863281, 116.3458633423 ]
+          ".editor": [ 3832.4758300781, -1.0440104008 ]
           next: ".done"
         

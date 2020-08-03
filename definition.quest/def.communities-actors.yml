@@ -9,11 +9,11 @@ communities:
     phases:
       horse_idle:
         orianna_horse:
-          attitude: friendly
+          attitude: friendly_to_player
           use_last_ap: true
           start_in_ap: true
           actionpoints:
-            "00:00": bob/orianna_horse_idle
+            "00:00": bob/orianna_horse_still
 
   comm_town_corpse_folk:
     actors:
@@ -133,7 +133,8 @@ communities:
     phases:
       patrolling_night:
         bandit_axe:
-          #attitude: friendly
+          attitude: friendly_to_player
+          immortality: invulnerable
           use_last_ap: true
           start_in_ap: false
           spawn_at: bob/watch1
@@ -152,7 +153,8 @@ communities:
     phases:
       usual_day:
         bandit_axe:
-          #attitude: friendly
+          attitude: friendly_to_player
+          immortality: invulnerable
           use_last_ap: true
           start_in_ap: true
           actionpoints:
@@ -178,6 +180,8 @@ communities:
         bandit_baron:
           use_last_ap: false
           start_in_ap: false
+          attitude: poi_bob_knight
+          immortality: invulnerable
           spawn_at: bob/spawnpoint_beach1
 
         horse_baron:
@@ -188,7 +192,8 @@ communities:
           
       waiting_negotiate:
         bandit_baron:
-          #attitude: friendly
+          attitude: poi_bob_knight
+          immortality: invulnerable
           use_last_ap: true
           start_in_ap: true
           actionpoints:
@@ -205,7 +210,8 @@ communities:
 
       usual_day:
         bandit_baron:
-          #attitude: friendly
+          attitude: poi_bob_knight
+          immortality: invulnerable
           use_last_ap: true
           start_in_ap: true
           actionpoints:
@@ -248,7 +254,8 @@ communities:
     phases:
       camp_full:
         bandit_sword_shield:
-          #attitude: friendly
+          attitude: friendly_to_player
+          immortality: invulnerable
           use_last_ap: true
           start_in_ap: true
           actionpoints:
@@ -260,7 +267,8 @@ communities:
             "22:00": bob/horse_brush3
 
         bandit_crossbow:
-          #attitude: friendly
+          attitude: friendly_to_player
+          immortality: invulnerable
           use_last_ap: true
           start_in_ap: true
           actionpoints:
@@ -271,7 +279,8 @@ communities:
             "16:00": bob/guarding_crossbow
 
         bandit_spear:
-          #attitude: friendly
+          attitude: friendly_to_player
+          immortality: invulnerable
           use_last_ap: true
           start_in_ap: true
           actionpoints:
@@ -349,12 +358,14 @@ communities:
           appearance: triss    # [someappearance, only_on_spawn_bool]
           use_last_ap: false
           start_in_ap: false
+          attitude: friendly_to_player
           spawn_at: bob/triss_spawn
       fight:
         triss_monster:
           appearance: triss_monster    # [someappearance, only_on_spawn_bool]
           use_last_ap: false
           start_in_ap: false
+          attitude: hostile_to_player
           spawn_at: bob/triss_spawn
           guard: [ bob/magic_area, 0.0 ]
 
@@ -406,7 +417,8 @@ communities:
       orphanage_normal:
         fat_bandit:
           appearance: [ "bob_thug_lvl2_03", false ]    # [someappearance, only_on_spawn_bool]
-          #attitude: neutral
+          attitude: friendly_to_player
+          immortality: invulnerable
           use_last_ap: true
           start_in_ap: false
           level: 33
@@ -415,7 +427,8 @@ communities:
 
         bandit_2:
           appearance: [ "bandit_lvl1_04", false ]    # [someappearance, only_on_spawn_bool]
-          #attitude: neutral
+          attitude: friendly_to_player
+          immortality: invulnerable
           use_last_ap: true
           start_in_ap: false
           level: 33
@@ -424,7 +437,8 @@ communities:
 
         bandit_3:
           appearance: [ "bandit_lvl1_09", false ]    # [someappearance, only_on_spawn_bool]
-          #attitude: neutral
+          attitude: friendly_to_player
+          immortality: invulnerable
           use_last_ap: true
           start_in_ap: false
           level: 33

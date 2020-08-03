@@ -641,7 +641,6 @@ storyboard:
           blendout: 0.5
 
       - actor.placement.start: [0.37733, geralt, [ 393.1834411621, -618.8201904297, -34.5093231201 ], [ 0.0, 0.0, 29.9683418274 ], smooth]
-      #- actor.placement.end: [0.444, geralt, [ 393.1834411621, -618.8201904297, -34.5093231201 ], [ 0.0, 0.0, 74.9683418274 ], smooth]
       - actor.placement.end: [0.444, geralt, [ 393.1317443848, -618.7708740234, -34.5093231201 ], [ 0.0, 0.0, 74.9683418274 ], smooth]
       
       - actor.anim.additive:  
