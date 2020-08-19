@@ -1,14 +1,14 @@
 #
 # quest structure root segment
 # 
-# (version: 706, saved: 2020-08-02 00:02:52)
+# (version: 757, saved: 2020-08-19 22:13:02)
 #
 ---
 structure:
   quest:
     blocks:
       start:
-        ".editor": [ -613.0191650391, 482.2406005859 ]
+        ".editor": [ -614.2691650391, 506.6156005859 ]
         next:
           - waituntil.wait_quest_allowed
           - changelayers.hide_hide_hide_ALL
@@ -29,8 +29,8 @@ structure:
           out: [ Out ]
         segment: camp
         next:
-          - changelayers.show_town_blood
           - script.check_camp_removed3
+          - changelayers.show_town_blood
       
       subsegment.intro_nightmare:
         ".editor":
@@ -95,7 +95,7 @@ structure:
       waituntil.2s:
         elapsed: "00:00:02"
         ".editor":
-          pos: [ 34.424621582, 572.3175048828 ]
+          pos: [ 77.0912857056, 532.9841918945 ]
           in: [ In ]
           out: [ Out ]
         next:
@@ -252,7 +252,7 @@ structure:
       
       script.Lock_back_door_house:
         ".editor":
-          pos: [ 190.8543701172, 540.2079467773 ]
+          pos: [ 238.8543701172, 526.2079467773 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_DoorChangeState

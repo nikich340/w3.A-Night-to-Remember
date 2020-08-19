@@ -2,6 +2,7 @@
 # definition of entities
 #
 templates:
+  # bruxa
   orianna_bruxa:
     includes:
       - dlc/bob/data/characters/npc_entities/monsters/bruxa.w2ent
@@ -67,10 +68,215 @@ templates:
       - orianna_bruxa_human
       - orianna_bruxa_monster
       - bruxa_monster_gameplay
+  # human bloody
+  orianna_human:
+    includes:
+      - dlc/bob/data/quests/secondary_npcs/vampire_diva.w2ent
 
+    entityObject:
+      .type: "COriannaVampireNPC:CNewNPC"
+      displayName: "Orianna human"
+      voiceTag: "ORIANNA HUMAN"
+      streamingDistance: 14
+
+    appearances:
+      orianna_vampire_bloody_morph:
+        includedTemplates:
+          - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
+          - characters/models/common/woman_average/body/l_01_wa__body.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/h_04_wa__oriana_morph_inverse.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/c_04_wa__oriana.w2ent
+
+        voicetag: "ORIANNA HUMAN"
+        collapsedComponents:
+          - head
+          - h_04_wa__oriana
+          - he_02_wa__oriana
+          - hb_01_ma__orianna
+
+    usedAppearances:
+      - orianna_vampire_bloody_morph
+
+    effects:
+      # disappear_cutscene_fx1 from bruxa
+      disappear_cutscene_fx1:
+        ".type": CFXDefinition
+        trackGroups:
+          fx:
+            ".type": CFXTrackGroup
+            tracks:
+              ad:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemMaterialOverride
+                    timeBegin: -0.0019060709
+                    timeDuration: 0.1991566122
+                    material: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\dettlaff_transparent.w2mg"
+                    drawOriginal: true
+                    excludeList:
+                      - bruxa_merged_body_ghost
+                    interpolation:
+                      - [ 1.0, 0.0, 1.0, 1.0 ]
+                      - [ 0.814814806, 0.0, 1.0, 1.0 ]
+                      - [ 0.629629612, 0.0, 1.0, 1.0 ]
+                      - [ 0.444444418, 0.0, 1.0, 1.0 ]
+                      - [ 0.2592592239, 0.0, 1.0, 1.0 ]
+                      - [ 0.0740740895, 0.0, 1.0, 1.0 ]
+                      - [ 0.0740740672, 0.0, 1.0, 1.0 ]
+                      - [ 0.1975308508, 0.0, 1.0, 1.0 ]
+                      - [ 0.3209877014, 0.0, 1.0, 1.0 ]
+                      - [ 0.4444445074, 0.0, 1.0, 1.0 ]
+                      - [ 0.5679013133, 0.0, 1.0, 1.0 ]
+                      - [ 0.6913580894, 0.0, 1.0, 1.0 ]
+                      - [ 0.8148148656, 0.0, 1.0, 1.0 ]
+                      - [ 0.9382716417, 0.0, 1.0, 1.0 ]
+                      - [ 1.0, 0.0, 1.0, 1.0 ]
+                      - [ 1.0, 0.0, 1.0, 1.0 ]
+                  - ".type": CFXTrackItemMaterialOverride
+                    timeBegin: 0.204193145
+                    timeDuration: 1.4704489708
+                    material: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\dettlaff_transparent.w2mg"
+                    excludeList:
+                      - bruxa_merged_body_ghost
+                    interpolation:
+                      - [ 1.0, 0.0, 1.0, 1.0 ]
+                      - [ 0.9166666865, 0.0, 1.0, 1.0 ]
+                      - [ 0.8333333135, 0.0, 1.0, 1.0 ]
+                      - [ 0.75, 0.0, 1.0, 1.0 ]
+                      - [ 0.6666666269, 0.0, 1.0, 1.0 ]
+                      - [ 0.5833333135, 0.0, 1.0, 1.0 ]
+                      - [ 0.5, 0.0, 1.0, 1.0 ]
+                      - [ 0.3888888955, 0.0, 1.0, 1.0 ]
+                      - [ 0.2777777314, 0.0, 1.0, 1.0 ]
+                      - [ 0.1666666269, 0.0, 1.0, 1.0 ]
+                      - [ 0.0555554926, 0.0, 1.0, 1.0 ]
+                      - [ 0.0, 0.0, 1.0, 1.0 ]
+                      - [ 0.0, 0.0, 1.0, 1.0 ]
+                      - [ 0.0, 0.0, 1.0, 1.0 ]
+                      - [ 0.0, 0.0, 1.0, 1.0 ]
+                      - [ 0.0, 0.0, 1.0, 1.0 ]
+            isExpanded: true
+            trackGroupColor: [ 146, 195, 134, 100 ]
+          smoke:
+            ".type": CFXTrackGroup
+            tracks:
+              fx:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParticles
+                    timeBegin: 0.0826250836
+                    timeDuration: 0.9747108221
+                    particleSystem: "dlc\\bob\\data\\fx\\monsters\\bruxa\\bruxa_disappear_smoke_fx1.w2p"
+                    spawner:
+                      ".type": CFXSpawnerComponent
+                      componentName: noble_woman_base
+                      copyRotation: false
+                      parentSlotName: torso2
+                    interpolation:
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+            isExpanded: true
+            trackGroupColor: [ 185, 188, 168, 100 ]
+          ghostt:
+            ".type": CFXTrackGroup
+            tracks:
+              "3":
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParameterFloat
+                    timeBegin: 0.0017962009
+                    parameterName: MeshEffectScalar2
+                    interpolation:
+                      - 0.0099999998
+                      - 0.0099999998
+                      - 0.0099999998
+                      - 0.0081999991
+                      - 0.0057999995
+                      - 0.0033999998
+                      - 0.001
+                      - 0.001
+                      - 0.001
+                      - 0.001
+                      - 0.001
+                      - 0.001
+                      - 0.001
+                      - 0.001
+                      - 0.001
+                      - 0.001
+              asd:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParameterFloat
+                    timeBegin: 0.0024211989
+                    timeDuration: 0.6230189204
+                    parameterName: MeshEffectScalar1
+                    interpolation:
+                      - 1.0
+                      - 1.0
+                      - 0.8888888955
+                      - 0.6666666269
+                      - 0.4761904478
+                      - 0.3809523582
+                      - 0.2857142985
+                      - 0.1904762089
+                      - 0.0952380896
+                      - 0.0
+                      - 0.0
+                      - 0.0
+                      - 0.0
+                      - 0.0
+                      - 0.0
+                      - 0.0
+              fx:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParameterFloat
+                    timeBegin: 0.0060529988
+                    timeDuration: 0.4908432961
+                    parameterName: MeshEffectScalar0
+                    interpolation:
+                      - -0.0099999998
+                      - -0.0685858577
+                      - -0.127171725
+                      - -0.1857575923
+                      - -0.2443434447
+                      - -0.3029292822
+                      - -0.3615151346
+                      - -0.4201010168
+                      - -0.4786868691
+                      - -0.5372727513
+                      - -0.5958585739
+                      - -0.6544444561
+                      - -0.7130302787
+                      - -0.7716161609
+                      - -0.8302020431
+                      - -0.8799999952
+            isExpanded: true
+            trackGroupColor: [ 146, 193, 158, 100 ]
+            componentName: bruxa_merged_body_ghost
+        length: 1.6445524931
+        loopStart: 0.230517
+        showDistance: 122.0
+  
+  # "higher" form
   orianna_vampire:
     includes:
-      #- dlc/bob/data/quests/main_quests/quest_files/q704_truth/characters/q704_dettlaff_vampire.w2ent
       - dlc/dlcntr/data/entities/oriana/q704_dettlaff_vampire.w2ent
 
     entityObject:
@@ -138,11 +344,13 @@ templates:
 
       orianna_vampire_bloody_morph:
         includedTemplates:
-          - dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
-          - dlc/dlcntr/data/entities/oriana/body_03_wa__oriana.w2ent
-          - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
+          - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
+          - characters/models/common/woman_average/body/l_01_wa__body.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
           - dlc/dlcntr/data/entities/oriana/h_04_wa__oriana_morph_inverse.w2ent
-          - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/c_04_wa__oriana.w2ent
+
         voicetag: "ORIANNA VAMPIRE"
         collapsedComponents:
           - head
@@ -156,7 +364,8 @@ templates:
           - dlc/dlcntr/data/entities/oriana/body_03_wa__oriana.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
           - dlc/dlcntr/data/entities/oriana/h_04_wa__oriana.w2ent
-          - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/c_04_wa__oriana.w2ent
+
         voicetag: "ORIANNA VAMPIRE"
         collapsedComponents:
           - head
@@ -169,6 +378,7 @@ templates:
       - orianna_human_morph
       - orianna_vampire
       - orianna_vampire_bloody
+      - orianna_vampire_bloody_morph
 
     #voicetagAppearances:
     #  - ".type": VoicetagAppearancePair
@@ -187,44 +397,3 @@ templates:
       #    - "animations\\man\\movement\\man_movement.w2anims"
       #    - "animations\\man\\community\\man_work.w2anims"
       #    - "animations\\man\\community\\man_reactions.w2anims"
-
-  #orianna_bruxa_cloak:
-  #  includes:
-  #    #- dlc/bob/data/characters/npc_entities/monsters/bruxa_cloak.w2ent
-  #    - dlc/dlcntr/data/entities/oriana/bruxa_cloak.w2ent
-    
-  #  entityObject:
-  #    .type: "CNewNPC"
-  #    displayName: "Orianna bruxa cloak"
-  #    voiceTag: "ORIANNA BRUXA CLOAK"
-  #    streamingDistance: 14
-      #entityStaticFlags:
-      #  - ESF_Streamed
-      #tags:
-      #  - HideHealthBarModule
-
-  #  appearances:
-  #    orianna_bruxa:
-  #      includedTemplates:
-  #        #- dlc/bob/data/characters/models/crowd_npc/bob_citizen_woman/torso/t2_04_wa__bob_woman_noble.w2ent
-  #        - characters/models/crowd_npc/novigrad_citizen_woman/legs/l2_04_wa__novigrad_citizen.w2ent
-  #        - dlc/bob/data/characters/models/monsters/bruxa/i_01__bruxa_px.w2ent
-  #        #- dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
-  #        - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
-  #        - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
-  #        - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
-  #        - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
-  #        - dlc/dlcntr/data/entities/oriana/h_03_wa__oriana.w2ent
-  #      voicetag: "ORIANNA VAMPIRE"
-  #      collapsedComponents:
-  #        - head
-  #        - h_03_wa__oriana
-  #        - he_01_wa__oriana
-  #        - hb_01_ma__orianna
-  #        #- CMorphedMeshComponent0
-  #        #- face_morph
-
-  #  usedAppearances:
-  #    - orianna_bruxa
-
-  

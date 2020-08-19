@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: town_part
 # 
-# (version: 706, saved: 2020-08-02 00:02:52)
+# (version: 757, saved: 2020-08-19 22:13:02)
 #
 ---
 structure:
@@ -9,12 +9,13 @@ structure:
     town_part:
       blocks:
         in:
-          ".editor": [ 94.2222213745, 290.4444274902 ]
+          ".editor": [ -41.7777786255, 274.4444274902 ]
           next:
             - objective.Investigate_area: Activate
             - waituntil.corpse_area
             - addfact.scent_enabled_0
             - spawn.spawn_folk
+            - waituntil.REM
         
         scene.Comeon_roach:
           ".editor":
@@ -40,6 +41,18 @@ structure:
           _fadein: false
           next.Output:
             - spawn.folk_far
+        
+        scene.good_luck_by_fisherman:
+          ".editor":
+            pos: [ 4616.283203125, 457.3030090332 ]
+            in: [ good_luck ]
+            out: [ Output ]
+          scene: 18_2.fisherman_oneliners.yml
+          placement: bob/camp
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - script.Unhide_actors
         
         scene.gp_corpse_comments:
           ".editor":
@@ -90,8 +103,6 @@ structure:
             - objective.follow_footprints: Success
             - despawn.despawn_folk
             - interaction.Scene_to_fisherman: Input
-            - script.tune_fisherman
-            - script.HideActors_FishermanScene
         
         scene.woman_footprints_comment:
           ".editor":
@@ -117,7 +128,7 @@ structure:
           actor: [ ntr_fisherman ]
           next.Output:
             - objective.talk_fisherman: Success
-            - waituntil.2ss
+            - waituntil.3s
         
         waituntil.1s:
           elapsed: "00:00:01"
@@ -140,20 +151,11 @@ structure:
         waituntil.1ssss:
           elapsed: "00:00:01"
           ".editor":
-            pos: [ 3964.0166015625, 427.6010131836 ]
+            pos: [ 4060.7436523438, 401.7828369141 ]
             in: [ In ]
             out: [ Out ]
           next:
             - scene.tracks_end_comment: fisher_footprints_end
-        
-        waituntil.2ss:
-          elapsed: "00:00:02"
-          ".editor":
-            pos: [ 4512.8618164062, 474.0000305176 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - script.Unhide_actors
         
         waituntil.2sss:
           elapsed: "00:00:02"
@@ -163,6 +165,26 @@ structure:
             out: [ Out ]
           next:
             - scene.tracks_back_comment: cemetery_footprints_end
+        
+        waituntil.3s:
+          elapsed: "00:00:03"
+          ".editor":
+            pos: [ 4481.490234375, 549.2733154297 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.good_luck_by_fisherman: good_luck
+        
+        waituntil.REM:
+          elapsed: "00:00:02"
+          ".editor":
+            pos: [ 2825.6123046875, 1070.9028320312 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - changelayers.show_fisher
+            - waituntil.cemetery3
+            - changelayers.show_cemetery
         
         waituntil.blood_scent_track:
           examined: bob/blood_track1
@@ -216,6 +238,7 @@ structure:
             - waituntil.cemetery3
             - mappin.cemetery_footprints1: Disable
             - mappin.cemetery_footprints2: Enable
+            - script.HideActors_FishermanScene
         
         waituntil.cemetery3:
           inside: [ bob/cemetary_area_3, PLAYER ]
@@ -225,7 +248,7 @@ structure:
             out: [ Out ]
           next:
             - mappin.cemetery_footprints2: Disable
-            - waituntil.1ssss
+            - scene.tracks_end_comment: fisher_footprints_end
         
         waituntil.corpse_area:
           inside: [ bob/corpse_area, PLAYER ]
@@ -399,15 +422,15 @@ structure:
         
         script.HideActors_FishermanScene:
           ".editor":
-            pos: [ 4308.8930664062, 243.7801818848 ]
+            pos: [ 4046.8930664062, 207.1135253906 ]
             in: [ In ]
             out: [ Out ]
-          function: HideActorsFishermanScene
+          function: NTR_HideActorsFishermanScene
           next: ".done"
         
         script.Unhide_actors:
           ".editor":
-            pos: [ 4665.2421875, 552.5714111328 ]
+            pos: [ 4752.8891601562, 560.8067016602 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_UnhideActorsInRange
@@ -440,25 +463,9 @@ structure:
             - overrideCustomLogic: false
           next: ".done"
         
-        script.tune_fisherman:
-          ".editor":
-            pos: [ 4308.3159179688, 326.1184692383 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_TuneNPC
-          parameter:
-            - tag: cname_ntr_fisherman
-            - level: 1000
-            - attitude: Friendly
-            - mortality: Invulnerable
-            - finishers: false
-            - npcGroupType: ENGT_Quest
-            - scale: -1.0
-          next: ".done"
-        
         changelayers.hide_town_blood:
           ".editor":
-            pos: [ 4496.5673828125, 387.2934875488 ]
+            pos: [ 4492.2817382812, 332.2934875488 ]
             hint: hide-only
             in: []
             out: []
@@ -636,6 +643,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 4845.3852539062, 473.358795166 ]
+          ".editor": [ 4901.267578125, 472.1823120117 ]
           next: ".done"
         

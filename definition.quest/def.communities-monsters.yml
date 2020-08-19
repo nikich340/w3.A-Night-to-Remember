@@ -1,14 +1,31 @@
 communities:
+  comm_orianna_bruxa:
+    actors:
+      orianna_vampire:
+        template: "dlc\\dlcntr\\data\\entities\\orianna_bruxa.w2ent"
+        appearances: [ "bruxa_monster_gameplay", "orianna_bruxa_monster" ]
+        tags: [ "ntr_orianna_bruxa" ]
+
+    phases:
+      fight_hostile:
+        orianna_vampire:
+          appearance: "bruxa_monster_gameplay"
+          use_last_ap: false
+          start_in_ap: false
+          attitude: AG_VAMPIRE
+          spawn_at: bob/beach_bruxa_spawn
+
   comm_orianna_vampire:
     actors:
       orianna_vampire:
         template: "dlc\\dlcntr\\data\\entities\\orianna_vampire.w2ent"
-        appearances: [ "orianna_human_morph" ]
+        appearances: [ "orianna_human_morph", "orianna_vampire" ]
         tags: [ "ntr_orianna_vampire" ]
 
     phases:
       before_scene:
         orianna_vampire:
+          appearance: "orianna_human_morph"
           use_last_ap: false
           start_in_ap: false
           attitude: friendly_to_player
@@ -16,6 +33,7 @@ communities:
 
       fight_hostile:
         orianna_vampire:
+          appearance: "orianna_vampire"
           use_last_ap: false
           start_in_ap: false
           attitude: AG_VAMPIRE

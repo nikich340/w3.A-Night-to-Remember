@@ -1,4 +1,20 @@
 communities:
+  comm_orianna_human:
+    actors:
+      orianna_human:
+        template: "dlc\\dlcntr\\data\\entities\\orianna_human.w2ent"
+        appearances: [ "orianna_vampire_bloody_morph" ]
+        tags: [ "ntr_orianna_human" ]
+
+    phases:
+      before_scene:
+        orianna_human:
+          appearance: "orianna_vampire_bloody_morph"
+          use_last_ap: false
+          start_in_ap: false
+          attitude: friendly_to_player
+          spawn_at: bob/house_orihum_spawn
+
   comm_orianna_horse:
     actors:
       orianna_horse:
@@ -113,12 +129,13 @@ communities:
       fisherman:
         template: dlc\bob\data\gameplay\community\community_npcs\vineyard\toussaint_fisherman.w2ent
         appearances: [ "bob_vineyard_13" ]
-        tags: [ "ntr_fisherman" ]
+        tags: [ "ntr_fisherman", "vip" ]
 
     phases:
       usual:
         fisherman:
           attitude: friendly
+          immortality: invulnerable
           use_last_ap: true
           start_in_ap: true
           actionpoints:
