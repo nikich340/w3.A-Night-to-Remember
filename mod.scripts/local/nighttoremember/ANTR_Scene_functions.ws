@@ -8,7 +8,17 @@ latent storyscene function NTR_PlayMusicScene( player : CStoryScenePlayer, areaN
 		NTR_PlayMusic(areaName, eventName, saveType);
 	}
 }
+storyscene function NTR_LeaveSceneState_S( player : CStoryScenePlayer ) {
+	var currentGameState   :   ESoundGameState;
 
+	currentGameState = theSound.GetCurrentGameState();
+	if (currentGameState == ESGS_Dialog || currentGameState == ESGS_DialogNight || currentGameState == ESGS_Cutscene) {
+		theSound.LeaveGameState( currentGameState );
+	}
+}
+storyscene function NTR_PlaySound_S( player : CStoryScenePlayer, bankName : string, eventName : string, optional saveType : string ) {
+	NTR_PlaySound(bankName, eventName, saveType);
+}
 storyscene function NTR_PayStoryScene_PerformAction( player : CStoryScenePlayer, money : int, dontGrantExp : bool )
 {
 	if (thePlayer.GetMoney() < money)

@@ -1,0 +1,40 @@
+repository:
+  actors:
+    toussaint_fisherman:
+      template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\vineyard\\toussaint_fisherman.w2ent"
+      appearance: [ "bob_vineyard_13" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 932
+
+  gameplay: true
+  cinematic_subtitles: false
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      toussaint_fisherman:
+        repo: "toussaint_fisherman"
+        by_voicetag: false
+        appearance: "bob_vineyard_13"
+        tags: [ "ntr_fisherman" ]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "toussaint_fisherman", "geralt" ]
+
+  section_start_good_luck:
+    - toussaint_fisherman: "[1.0967]2114670932|Good luck to you!"
+    - NEXT: section_exit
+
+  section_exit:
+    - EXIT
+
+

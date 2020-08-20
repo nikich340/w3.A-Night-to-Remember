@@ -7,6 +7,7 @@ function ntr_addExtraActorVoiceLines(category: String, out lines: array<SSbUiExt
 }
 
 function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>) {
+    lines.PushBack(SSbUiExtraLines(2114670300, category, "group 1", "-missing-", 2.2554));
     lines.PushBack(SSbUiExtraLines(2114670650, category, "group 1", "I_need_some_fresh_air_", 1.6855));
     lines.PushBack(SSbUiExtraLines(2114670651, category, "group 1", "A_letter____Who's_using_an_owl_for_this_", 3.1468));
     lines.PushBack(SSbUiExtraLines(2114670652, category, "group 1", "Regis____Just_trying_to_avoid_a_fight__to_protect_", 4.78));
@@ -50,7 +51,19 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670777, category, "group 1", "-missing-", 7.8518));
     lines.PushBack(SSbUiExtraLines(2114670781, category, "group 1", "-missing-", 2.322));
     lines.PushBack(SSbUiExtraLines(2114670795, category, "group 1", "Interesting__Son_of_a_bandit_in_the_vampire's_claw", 4.2789));
-    lines.PushBack(SSbUiExtraLines(2114670800, category, "group 1", "Gonna_answer_me_", 1.0482));
-    lines.PushBack(SSbUiExtraLines(2114670813, category, "group 1", "I_see_it_now__It's_a_deal_", 2.3149));
-    lines.PushBack(SSbUiExtraLines(2114670919, category, "group 1", "Did_you_see_a_red-haired_woman_here__Left_this_sit", 5.4078));
+    lines.PushBack(SSbUiExtraLines(2114670800, category, "group 1", "-missing-", 1.0482));
+    lines.PushBack(SSbUiExtraLines(2114670813, category, "group 1", "-missing-", 2.3149));
+    lines.PushBack(SSbUiExtraLines(2114670918, category, "group 1", "-missing-", 2.106));
+    lines.PushBack(SSbUiExtraLines(2114670919, category, "group 1", "-missing-", 5.4078));
+    lines.PushBack(SSbUiExtraLines(2114670920, category, "group 1", "-missing-", 5.7383));
+    lines.PushBack(SSbUiExtraLines(2114670921, category, "group 1", "-missing-", 7.6557));
+    lines.PushBack(SSbUiExtraLines(2114670922, category, "group 1", "-missing-", 4));
+    lines.PushBack(SSbUiExtraLines(2114670923, category, "group 1", "-missing-", 3.1124));
+    lines.PushBack(SSbUiExtraLines(2114670924, category, "group 1", "-missing-", 2.4864));
+    lines.PushBack(SSbUiExtraLines(2114670925, category, "group 1", "-missing-", 3.0157));
+    lines.PushBack(SSbUiExtraLines(2114670926, category, "group 1", "-missing-", 3.676));
+    lines.PushBack(SSbUiExtraLines(2114670927, category, "group 1", "-missing-", 5.0822));
+    lines.PushBack(SSbUiExtraLines(2114670928, category, "group 1", "-missing-", 2.6291));
+    lines.PushBack(SSbUiExtraLines(2114670929, category, "group 1", "-missing-", 3.1736));
+    lines.PushBack(SSbUiExtraLines(2114670932, category, "group 1", "-missing-", 1.0967));
 }

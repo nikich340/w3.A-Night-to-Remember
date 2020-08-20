@@ -5,17 +5,27 @@ templates:
   # bruxa
   orianna_bruxa:
     includes:
-      - dlc/bob/data/characters/npc_entities/monsters/bruxa.w2ent
+      - dlc/bob/data/quests/main_quests/quest_files/q704_truth/characters/q704_bruxa.w2ent
+      #- dlc/bob/data/characters/npc_entities/monsters/bruxa.w2ent
     
     entityObject:
       .type: "COriannaBruxaNPC:CNewNPC"
-      displayName: "Orianna bruxa"
+      displayName: "Orianna"
       voiceTag: "ORIANNA BRUXA"
-      streamingDistance: 14
-      #entityStaticFlags:
-      #  - ESF_Streamed
-      #tags:
-      #  - HideHealthBarModule
+      level: 50
+      tags:
+        - HideHealthBarModule
+      components:
+        CSoundEmitterComponent0:
+          ".type": CSoundEmitterComponent
+          #name: CSoundEmitterComponent0
+          maxDistance: 100.0
+          eventsOnAttach:
+            - Set_Switch_bruxa_state_clean
+          eventsOnDetach:
+            - Set_Switch_bruxa_state_clean
+          banksDependency:
+            - monster_bruxa.bnk
 
     appearances:
       orianna_bruxa_morph:
@@ -68,6 +78,13 @@ templates:
       - orianna_bruxa_human
       - orianna_bruxa_monster
       - bruxa_monster_gameplay
+
+    templateParams:
+      - ".type": CCharacterStatsParam
+        name: ntr_abilities
+        abilities:
+          - ntr_mon_orianna_bruxa
+
   # human bloody
   orianna_human:
     includes:
@@ -277,17 +294,15 @@ templates:
   # "higher" form
   orianna_vampire:
     includes:
-      - dlc/dlcntr/data/entities/oriana/q704_dettlaff_vampire.w2ent
+      - dlc/dlcntr/data/entities/oriana/q704_dettlaff_base.w2ent
 
     entityObject:
       .type: "COriannaVampireNPC:CNewNPC"
-      displayName: "Orianna vampire"
+      displayName: "Orianna"
       voiceTag: "ORIANNA VAMPIRE"
-      streamingDistance: 14
-      entityStaticFlags:
-        - ESF_Streamed
-      #tags:
-      #  - HideHealthBarModule
+      level: 50
+      tags:
+        - HideHealthBarModule
 
     appearances:
       orianna_human:
@@ -385,7 +400,12 @@ templates:
     #    voicetag: "ORIANNA VAMPIRE"
      #   appearance: orianna_vampire_morph
 
-    #templateParams:
+    templateParams:
+      - ".type": CCharacterStatsParam
+        name: ntr_abilities
+        abilities:
+          - ntr_mon_orianna_vampire
+          - NoShadows
     #  - ".type": CAnimAnimsetsParam
     #    wasIncluded: true
      #   name: orianna_vampire

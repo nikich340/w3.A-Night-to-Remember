@@ -12,9 +12,9 @@ repository:
       template: "dlc\\dlcntr\\data\\entities\\orianna_vampire.w2ent"
       appearance: [ "orianna_human_morph", "orianna_vampire" ]
 
-  props:
-    q704_trailer_doll:
-      template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\entities\\q704_trailer_doll.w2ent"
+  #props:
+  #  q704_trailer_doll:
+  #    template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\entities\\q704_trailer_doll.w2ent"
 
   animations:
     anim_12985_high_standing_sad_enter_frontal:
@@ -250,7 +250,7 @@ production:
   settings:
     sceneid: 1
     strings-idspace: 4670
-    strings-idstart: 935
+    strings-idstart: 940
 
   placement: "ntr_bob_orianna_sp"
     # INFO: world coordinates of used origin:
@@ -276,9 +276,9 @@ production:
         appearance: "orianna_human_morph"
         tags: [ "ntr_orianna_vampire" ]
 
-    props:
-      q704_trailer_doll:
-        repo: "q704_trailer_doll"
+    #props:
+    #  q704_trailer_doll:
+    #    repo: "q704_trailer_doll"
 
     cameras:
       cam_8_Shot0:
@@ -440,8 +440,9 @@ storyboard:
       - actor.placement: [0.0, geralt, [ -134.7511138916, 29.3421230316, -15.2036132813 ], [ 0.0, 0.0, 123.5300064087 ]]
       - actor.placement: [0.0, orianna_human, [ -150.5038757324, 35.1060638428, -15.1286010742 ], [ 0.0, 0.0, 59.1799545288 ]]
       - actor.placement: [0.0, orianna_vampire, [ -144.6826934814, 19.7409744263, -15.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
-      - prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
+      #- prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
       - cam: [0.0, cam_8_Shot0]
+      - actor.lookat: [0.01, orianna_human, [ -1.0223956108, 4.8440313339, 1.9122929573 ]]
 
     shot_0:
       - cam.blend.start: [0.0, cam_8_Shot0]
@@ -523,7 +524,7 @@ storyboard:
       - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -11.1445922852 ], [ 0.0, 0.0, 274.4501037598 ]]
       - actor.placement: [0.0, geralt, [ -144.1563720703, 35.0813903809, -11.2680664063 ], [ 0.0, 0.0, 106.4800338745 ]]
       - actor.placement: [0.0, orianna_vampire, [ -144.6826934814, 19.7409744263, -15.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
-      - prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
+      #- prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
 
       - actor.lookat: [0.0, geralt, orianna_human]
       - actor.lookat: [0.0, orianna_human, geralt]
@@ -534,7 +535,7 @@ storyboard:
       - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -11.1445922852 ], [ 0.0, 0.0, 274.4501037598 ]]
       - actor.placement: [0.0, geralt, [ -144.1563720703, 35.0813903809, -11.2680664063 ], [ 0.0, 0.0, 106.4800338745 ]]
       - actor.placement: [0.0, orianna_vampire, [ -144.6826934814, 19.7409744263, -15.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
-      - prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
+      #- prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
       - actor.lookat: [0.0, geralt, orianna_human]
       - actor.lookat: [0.0, orianna_human, geralt]
       ### some gesture
@@ -555,7 +556,7 @@ storyboard:
       - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -11.1445922852 ], [ 0.0, 0.0, 274.4501037598 ]]
       - actor.placement: [0.0, geralt, [ -144.1563720703, 35.0813903809, -11.2680664063 ], [ 0.0, 0.0, 106.4800338745 ]]
       - actor.placement: [0.0, orianna_vampire, [ -144.6826934814, 19.7409744263, -15.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
-      - prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
+      #- prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
       - actor.lookat: [0.0, geralt, orianna_human]
       - actor.lookat: [0.0, orianna_human, geralt]
@@ -565,7 +566,7 @@ storyboard:
           .@pos: [0.0, anim_12714_high_standing_happy_gesture_amazed]
           blendin: 0.0
           blendout: 0.0
-          stretch: 1.2
+          stretch: 0.8
       - actor.lookat: [0.0, geralt, orianna_human]
       - actor.lookat: [0.0, orianna_human, geralt]
 
@@ -647,7 +648,7 @@ storyboard:
       - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -11.1445922852 ], [ 0.0, 0.0, 274.4501037598 ]]
       - actor.placement: [0.0, geralt, [ -144.1563720703, 35.0813903809, -11.2680664063 ], [ 0.0, 0.0, 106.4800338745 ]]
       - actor.placement: [0.0, orianna_vampire, [ -144.6826934814, 19.7409744263, -15.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
-      - prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
+      #- prop.placement: [0.0, q704_trailer_doll, [ -151.5359191895, 35.3615684509, -11.1920585632 ], [ 0.0, 90.0, 262.9799804688 ]]
 
       - actor.lookat: [0.0, geralt, orianna_human]
       - actor.lookat: [0.0, orianna_human, geralt]
@@ -664,7 +665,7 @@ storyboard:
 dialogscript:
   player: "geralt"
   actors: [ "geralt", "orianna_human", "orianna_vampire" ]
-  props: [ "q704_trailer_doll" ]
+  #props: [ "q704_trailer_doll" ]
 
   section_start:
     - PAUSE: 0.0
@@ -675,7 +676,7 @@ dialogscript:
             function: NTR_PlayMusicScene
             parameter:
                 - areaName: "toussaint"
-                - eventName: "mus_loc_toussaint_general_cs_to_gmpl"
+                - eventName: "mus_q704_02_hello_again_regis"
                 - saveType: "SESB_DontSave"
                 #- repeatDelay: 0.5
     - NEXT: section_storyboard_ui
@@ -703,15 +704,15 @@ dialogscript:
 
   section_choice_main:
     - CHOICE:
-      - choice: ["I came to kill you", section_pre_fight]
+      - choice: ["I came to kill you.", section_pre_fight]
         emphasize: true
-      - choice: ["No need in fight", section_try_peacefully]
+      - choice: ["No need in fight.", section_try_peacefully]
        #condition: [ NTR_scenefact_whychildren, "!=", 1 ]
         emphasize: true
 
   section_pre_fight:
     - CUE: shot_pre_fight1
-    - geralt: "0001187118|Know what…? Don't feel like talking to you anymore. This is pointless."
+    - geralt: "[5.53447]0001187118|Know what…? Don't feel like talking to you anymore. This is pointless."
     - CUE: shot_pre_fight2
     - geralt: "Got something for you. My silver sword."
     #- geralt: "I've come for you."
@@ -762,7 +763,7 @@ dialogscript:
 
   section_try_peacefully:
     - CUE: shot_try_peacefully1
-    - geralt: "0001172302|We don't have to fight."
+    - geralt: "[1.605944]0001172302|We don't have to fight."
     - CUE: shot_try_peacefully2
     - orianna_human: "Really? You've come just to talk to me?"
     - CUE: shot_try_peacefully3
@@ -778,3 +779,4 @@ dialogscript:
   section_exit:
     - CAMERA_BLEND: 2.0
     - EXIT
+

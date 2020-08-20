@@ -6,30 +6,39 @@ class COriannaBruxaNPC extends CNewNPC {
 		super.OnSpawned( spawnData );
 	}
 	/*event OnDeath( damageAction : W3DamageAction  )	{
-		FactsAdd("trissIntroDead", 1);
-	}
+		FactsAdd("ntr_orianna_bruxa_dead", 1);
+	}*/
 	event OnTakeDamage( action : W3DamageAction ) {
-		if ( GetHealthPercents() < 0.5 ) {
-			action.processedDmg.vitalityDamage /= 5;
-		}
 		super.OnTakeDamage( action );
 		//theGame.GetGuiManager().ShowNotification("Health %: " + GetHealthPercents());
-		if ( GetHealthPercents() < 0.5 ) {
-			FactsAdd("trissIntroHalf", 1);
+		if ( GetHealthPercents() < 0.05 ) {
+			FactsAdd("ntr_orianna_bruxa_dead", 1);
 		}
-	}*/
-	function PlayEffect( effectName : name, optional target : CNode  ) : bool {
-		LogChannel('Orianna_bruxa', "PlayEffect: " + effectName);
-		return super.PlayEffect(effectName, target);
-	}	
-	function PlayEffectOnBone( effectName : name, boneName : name, optional target : CNode ) : bool {
-		LogChannel('Orianna_bruxa', "PlayEffectOnBone: " + effectName + ", boneName: " + boneName);
-		return super.PlayEffectOnBone(effectName, boneName, target);
 	}
-	function StopEffect( effectName : name ) : bool {
-		LogChannel('Orianna_bruxa', "StopEffect: " + effectName);
-		return super.StopEffect(effectName);
-	}
+	protected function Attack( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity)
+    {
+        var action : W3Action_Attack;
+        
+        if(PrepareAttackAction(hitTarget, animData, weaponId, parried, countered, parriedBy, attackAnimationName, hitTime, weaponEntity, action))
+        {
+            theGame.damageMgr.ProcessAction(action);
+            LogChannel('NTR_MOD', "-----ATTACK ACTION LOG!!!-----");
+            //LogChannel('NTR_MOD', "GetWeaponId: " + action.GetWeaponId() );
+            LogChannel('NTR_MOD', "IsParried: " + action.IsParried() );
+            LogChannel('NTR_MOD', "IsCountered: " + action.IsCountered() );
+            LogChannel('NTR_MOD', "WasDodged: " + action.WasDodged() );
+            LogChannel('NTR_MOD', "GetDamageDealt: " + action.GetDamageDealt() );
+            LogChannel('NTR_MOD', "GetAttackAnimName: " + action.GetAttackAnimName() );
+            NTR_notify("GetAttackAnimName: " + action.GetAttackAnimName() );
+            LogChannel('NTR_MOD', "GetHitTime: " + action.GetHitTime() );
+            LogChannel('NTR_MOD', "GetWeaponSlot: " + action.GetWeaponSlot() );
+            LogChannel('NTR_MOD', "GetSoundAttackType: " + action.GetSoundAttackType() );
+            LogChannel('NTR_MOD', "GetAttackName: " + action.GetAttackName() );
+            LogChannel('NTR_MOD', "GetAttackTypeName: " + action.GetAttackTypeName() );
+            LogChannel('NTR_MOD', "GetHitTime: " + action.GetAttackAnimName() );
+            delete action;
+        }
+    }
 	/*function SetAppearance( appearanceName : CName ) {
 		LogChannel('Orianna_bruxa', "SetAppearance: " + appearanceName);
 		super.SetAppearance(appearanceName);

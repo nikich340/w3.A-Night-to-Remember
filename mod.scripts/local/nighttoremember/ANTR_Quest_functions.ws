@@ -7,14 +7,67 @@ quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	}
 	return false;
 }*/
+quest function NTR_SaveLock(lock : bool) {
+	var saveLockId : int;
+	if (lock) {
+		theGame.CreateNoSaveLock("NightToRemember", saveLockId, true, true);
+		FactsSet("ntr_save_lock_id", saveLockId);
+	} else if ( FactsDoesExist("ntr_save_lock_id") ) {
+		saveLockId = FactsQuerySum("ntr_save_lock_id");
+		theGame.ReleaseNoSaveLock( saveLockId );
+	} else {
+		NTR_notify("ERROR! Save lock id wasn't set!");
+	}
+}
+quest function NTR_SaveGame(type : string, slot : int) {
+	switch (type) {
+		case "SGT_QuickSave":
+			theGame.SaveGame(SGT_QuickSave, slot);
+			break;
+		case "SGT_Manual":
+			theGame.SaveGame(SGT_Manual, slot);
+			break;
+		case "SGT_ForcedCheckPoint":
+			theGame.SaveGame(SGT_ForcedCheckPoint, slot);
+			break;
+		case "SGT_AutoSave":
+			theGame.SaveGame(SGT_AutoSave, slot);
+			break;
+	}
+}
 quest function NTR_TuneOriannaVampire() {
 	var NPC    : CNewNPC;
 	var level  : int;
 	NPC = (CNewNPC)theGame.GetNPCByTag('ntr_orianna_vampire');
 
-	level = GetWitcherPlayer().GetLevel();
+	if (!NPC) {
+		NTR_notify("ERROR! Orianna vampire entity was not found!");
+	}
 
 	NPC.SetAppearance('orianna_vampire');
+	/*NPC.SetTemporaryAttitudeGroup( 'hostile_to_player', AGP_Default );
+	NPC.SetAttitude( thePlayer, AIA_Hostile );
+	thePlayer.SetAttitude( NPC, AIA_Hostile );*/
+
+	NPC.SetImmortalityMode( AIM_None, AIC_Combat );
+	NPC.SetImmortalityMode( AIM_None, AIC_Default );
+	NPC.SetImmortalityMode( AIM_None, AIC_Fistfight );
+	NPC.SetImmortalityMode( AIM_None, AIC_IsAttackableByPlayer );
+
+	NPC.SetNPCType(ENGT_Enemy);
+}
+quest function NTR_TuneOriannaBruxa() {
+	var NPC    : CNewNPC;
+	var level  : int;
+	NPC = (CNewNPC)theGame.GetNPCByTag('ntr_orianna_bruxa');
+
+	if (!NPC) {
+		NTR_notify("ERROR! Orianna bruxa entity was not found!");
+	}
+
+	level = GetWitcherPlayer().GetLevel() + 5;
+
+	NPC.SetAppearance('bruxa_monster_gameplay');
 	NPC.SetLevel(level);
 	/*NPC.SetTemporaryAttitudeGroup( 'hostile_to_player', AGP_Default );
 	NPC.SetAttitude( thePlayer, AIA_Hostile );
@@ -24,6 +77,8 @@ quest function NTR_TuneOriannaVampire() {
 	NPC.SetImmortalityMode( AIM_None, AIC_Default );
 	NPC.SetImmortalityMode( AIM_None, AIC_Fistfight );
 	NPC.SetImmortalityMode( AIM_None, AIC_IsAttackableByPlayer );
+
+	NPC.SetHealthPerc( 0.5 );
 
 	NPC.SetNPCType(ENGT_Enemy);
 }
@@ -249,6 +304,24 @@ quest function NTR_DoorChangeState(tag : name, newState : string, optional keyIt
 	}
 }
 // ----------------------------------------------------------------------------
+quest function NTR_PlaySound( bankName : string, eventName : string, optional saveType : string ) {
+	if ( !theSound.SoundIsBankLoaded(bankName) ) {
+		theSound.SoundLoadBank(bankName, true);
+	}
+
+	switch (saveType) {
+		case "SESB_Save":
+			SoundEventQuest(eventName, SESB_Save);
+			break;
+		case "SESB_ClearSaved":
+			SoundEventQuest(eventName, SESB_ClearSaved);
+			break;
+		default:
+			SoundEventQuest(eventName, SESB_DontSave);
+			break;
+	}
+}
+// ----------------------------------------------------------------------------
 /*
 areaName = "novigrad", "skellige", "kaer_morhen", "prolog_village", 
 	"wyzima_castle", "island_of_mist", "spiral", "no_mans_land", "toussaint" 
@@ -281,7 +354,6 @@ quest function NTR_GameplayMusic( areaName : string )
 		SoundEventQuest("mus_loc_toussaint_general_cs_to_gmpl", SESB_ClearSaved);
 	} else {
 		theSound.InitializeAreaMusic( AreaNameToType(areaName) );
-		// todo
 	}
 
 }

@@ -1,14 +1,14 @@
 communities:
   comm_orianna_bruxa:
     actors:
-      orianna_vampire:
+      orianna_bruxa:
         template: "dlc\\dlcntr\\data\\entities\\orianna_bruxa.w2ent"
         appearances: [ "bruxa_monster_gameplay", "orianna_bruxa_monster" ]
         tags: [ "ntr_orianna_bruxa" ]
 
     phases:
       fight_hostile:
-        orianna_vampire:
+        orianna_bruxa:
           appearance: "bruxa_monster_gameplay"
           use_last_ap: false
           start_in_ap: false

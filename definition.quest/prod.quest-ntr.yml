@@ -1,7 +1,7 @@
 #
 # production settings
 # 
-# (version: 757, saved: 2020-08-19 22:13:02)
+# (version: 783, saved: 2020-08-20 20:13:01)
 #
 ---
 production:
@@ -13,7 +13,11 @@ production:
     storesdata: false
     strings-idspace: 4670
     strings-idstart: 13
-    version: 757
+    version: 783
     mounters:
       - ".type": CR4ResourceDefinitionsDLCMounter
         resourceDefinitionXmlFilePath: "dlc\\dlcntr\\data\\gameplay\\globals\\resources\\gameplay.xml"
+      - ".type": CR4DefinitionsDLCMounter
+        definitionXmlFilePath: "dlc\\dlcntr\\data\\gameplay\\abilities\\"
+      - ".type": CR4DefinitionsNGPlusDLCMounter
+        definitionXmlFilePath: "dlc\\dlcntr\\data\\gameplay\\abilities_plus\\"

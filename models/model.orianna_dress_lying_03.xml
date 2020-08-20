@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<mesh>
+    <mesh_data autohideDistance="30.00" isTwoSided="true" useExtraStreams="false" mergeInGlobalShadowMesh="true" entityProxy="false">
+        <LODs>
+            <LOD_info distance="0.00" />
+            <LOD_info distance="5.00" />
+            <LOD_info distance="12.00" />
+        </LODs>
+    </mesh_data>
+    <materials>
+        <material name="Material0" local="true" base="engine\materials\graphs\pbr_std_tint_mask_2det.w2mg">
+            <param name="Normal" type="handle:ITexture" value="dlc\dlcntr\data\entities\oriana\model\orianna_dress_n03.xbm" />
+            <param name="Diffuse" type="handle:ITexture" value="dlc\dlcntr\data\entities\oriana\model\orianna_dress_d03.xbm" />
+            <param name="Translucency" type="Float" value="0.5" />
+            <param name="DetailPower" type="Float" value="1" />
+            <param name="SpecularColor" type="Color" value="94; 94; 94; 255" />
+            <param name="RSpecScale" type="Float" value="1" />
+            <param name="RSpecBase" type="Float" value="0" />
+            <param name="TintMask" type="handle:ITexture" value="characters\models\main_npc\keira\model\body_02_wa__nml_keira_a01.xbm" />
+            <param name="ColorShift_ BlendColors" type="Float" value="0" />
+            <param name="ColorShift_ KeepGray" type="Float" value="1" />
+            <param name="DetailRange" type="Float" value="5" />
+            <param name="DetailTile1" type="Vector" value="8; 8; 1; 1" />
+            <param name="DetailRotation1" type="Float" value="0" />
+            <param name="DetailNormal1" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_cloth_02.xbm" />
+            <param name="DetailTile2" type="Vector" value="20; 20; 1; 1" />
+            <param name="DetailRotation2" type="Float" value="0" />
+            <param name="DetailNormal2" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_metal_03.xbm" />
+            <param name="AmbientPower" type="Float" value="0.4" />
+        </material>
+        <material name="Material1" local="true" base="engine\materials\graphs\pbr_std_tint_mask_det_pattern.w2mg">
+            <param name="Normal" type="handle:ITexture" value="characters\models\crowd_npc\novigrad_citizen_woman\items\model\i_07_wa__novigrad_citizen_n01.xbm" />
+            <param name="Diffuse" type="handle:ITexture" value="characters\models\crowd_npc\novigrad_citizen_woman\items\model\i_07_wa__novigrad_citizen_d01.xbm" />
+            <param name="Translucency" type="Float" value="0.5" />
+            <param name="DetailPower" type="Float" value="1" />
+            <param name="SpecularColor" type="Color" value="94; 94; 94; 255" />
+            <param name="RSpecScale" type="Float" value="1" />
+            <param name="RSpecBase" type="Float" value="0" />
+            <param name="TintMask" type="handle:ITexture" value="characters\models\crowd_npc\novigrad_citizen_woman\items\model\i_07_wa__novigrad_citizen_a01.xbm" />
+            <param name="ColorShift_ BlendColors" type="Float" value="0" />
+            <param name="ColorShift_ KeepGray" type="Float" value="1" />
+            <param name="AOPower" type="Float" value="0.4" />
+            <param name="DetailRange" type="Float" value="8" />
+            <param name="DetailTile" type="Vector" value="10; 2.5; 1; 1" />
+            <param name="DetailRotation" type="Float" value="0" />
+            <param name="DetailNormal" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_cloth_02.xbm" />
+            <param name="Pattern_Mixer" type="Vector" value="0.8; 0; 0; 0" />
+            <param name="Pattern_Index" type="Float" value="6" />
+            <param name="Pattern_Offset" type="Vector" value="0; 0; 0; 0" />
+            <param name="Pattern_Size" type="Vector" value="0.2; 1.3; 0; 0" />
+            <param name="Pattern_DistortionPower" type="Float" value="0.01" />
+            <param name="Pattern_Rotation" type="Float" value="0" />
+            <param name="Pattern_Array" type="handle:CTextureArray" value="characters\models\common\textures\patterns\pattern_array.texarray" />
+            <param name="Pattern_Roughness_Influence" type="Float" value="2" />
+            <param name="Pattern_Color3" type="Color" value="0; 0; 0; 255" />
+            <param name="Pattern_Color2" type="Color" value="0; 255; 0; 255" />
+            <param name="Pattern_Color1" type="Color" value="107; 17; 17; 255" />
+        </material>
+        <material name="Material2" local="true" base="engine\materials\graphs\pbr_std.w2mg">
+            <param name="Normal" type="handle:ITexture" value="dlc\dlcntr\data\entities\oriana\model\orianna_dress_n03.xbm" />
+            <param name="Diffuse" type="handle:ITexture" value="dlc\dlcntr\data\entities\oriana\model\orianna_dress_d03.xbm" />
+            <param name="Translucency" type="Float" value="0.5" />
+            <param name="DetailPower" type="Float" value="1" />
+            <param name="SpecularColor" type="Color" value="94; 94; 94; 255" />
+            <param name="RSpecScale" type="Float" value="1" />
+            <param name="RSpecBase" type="Float" value="0" />
+            <param name="TintMask" type="handle:ITexture" value="characters\models\main_npc\keira\model\body_02_wa__nml_keira_a01.xbm" />
+            <param name="ColorShift_ BlendColors" type="Float" value="0" />
+            <param name="ColorShift_ KeepGray" type="Float" value="1" />
+            <param name="DetailRange" type="Float" value="5" />
+            <param name="DetailTile1" type="Vector" value="8; 8; 1; 1" />
+            <param name="DetailRotation1" type="Float" value="0" />
+            <param name="DetailNormal1" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_cloth_02.xbm" />
+            <param name="DetailTile2" type="Vector" value="20; 20; 1; 1" />
+            <param name="DetailRotation2" type="Float" value="0" />
+            <param name="DetailNormal2" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_metal_03.xbm" />
+            <param name="AmbientPower" type="Float" value="0.4" />
+        </material>
+        <material name="Material3" local="true" base="engine\materials\graphs\pbr_std.w2mg">
+            <param name="Normal" type="handle:ITexture" value="characters\models\crowd_npc\novigrad_citizen_woman\items\model\i_07_wa__novigrad_citizen_n01.xbm" />
+            <param name="Diffuse" type="handle:ITexture" value="characters\models\crowd_npc\novigrad_citizen_woman\items\model\i_07_wa__novigrad_citizen_d01.xbm" />
+            <param name="Translucency" type="Float" value="0.5" />
+            <param name="DetailPower" type="Float" value="1" />
+            <param name="SpecularColor" type="Color" value="94; 94; 94; 255" />
+            <param name="RSpecScale" type="Float" value="1" />
+            <param name="RSpecBase" type="Float" value="0" />
+            <param name="TintMask" type="handle:ITexture" value="characters\models\crowd_npc\novigrad_citizen_woman\items\model\i_07_wa__novigrad_citizen_a01.xbm" />
+            <param name="ColorShift_ BlendColors" type="Float" value="0" />
+            <param name="ColorShift_ KeepGray" type="Float" value="1" />
+            <param name="AOPower" type="Float" value="0.4" />
+            <param name="DetailRange" type="Float" value="8" />
+            <param name="DetailTile" type="Vector" value="10; 2.5; 1; 1" />
+            <param name="DetailRotation" type="Float" value="0" />
+            <param name="DetailNormal" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_cloth_02.xbm" />
+            <param name="Pattern_Mixer" type="Vector" value="0.8; 0; 0; 0" />
+            <param name="Pattern_Index" type="Float" value="6" />
+            <param name="Pattern_Offset" type="Vector" value="0; 0; 0; 0" />
+            <param name="Pattern_Size" type="Vector" value="0.2; 1.3; 0; 0" />
+            <param name="Pattern_DistortionPower" type="Float" value="0.01" />
+            <param name="Pattern_Rotation" type="Float" value="0" />
+            <param name="Pattern_Array" type="handle:CTextureArray" value="characters\models\common\textures\patterns\pattern_array.texarray" />
+            <param name="Pattern_Roughness_Influence" type="Float" value="2" />
+            <param name="Pattern_Color3" type="Color" value="0; 0; 0; 255" />
+            <param name="Pattern_Color2" type="Color" value="0; 255; 0; 255" />
+            <param name="Pattern_Color1" type="Color" value="107; 17; 17; 255" />
+        </material>
+    </materials>
+</mesh>

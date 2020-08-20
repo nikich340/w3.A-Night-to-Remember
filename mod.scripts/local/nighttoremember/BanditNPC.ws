@@ -12,11 +12,11 @@ class CNTRBanditNPC extends CNewNPC {
 		
 	//}
 
-	function Kill(source : name, optional ignoreImmortalityMode : bool, optional attacker : CGameplayEntity)
+	/*function Kill(source : name, optional ignoreImmortalityMode : bool, optional attacker : CGameplayEntity)
 	{
 		theGame.GetGuiManager().ShowNotification("CActor.Kill: called for actor <<" + this + ">> with source <<" + source + ">>");
 		super.Kill(source, ignoreImmortalityMode, attacker);
-	}
+	}*/
 	/*protected function PrepareAttackAction( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity, out attackAction : W3Action_Attack) : bool
 	{
 		var ret : bool;

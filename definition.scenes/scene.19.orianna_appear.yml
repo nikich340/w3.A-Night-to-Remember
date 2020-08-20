@@ -343,7 +343,7 @@ production:
   settings:
     sceneid: 1
     strings-idspace: 4670
-    strings-idstart: 930
+    strings-idstart: 935
 
   placement: "ntr_bob_orianna_sp"
     # INFO: world coordinates of used origin:
@@ -436,6 +436,7 @@ production:
     soundbanks:
       - work_children
       - qu_ep2_701_dlg
+      - qu_skellige_206
 
     animations:
       niellan_low_standing_determined_enter_frontal_playing_happy:
@@ -657,7 +658,8 @@ storyboard:
       - actor.pose: [0.0, Orianna_vampire_High_Standing_Determined]
       - actor.pose: [0.0, Orianna_human_high_standing_determined_idle]
       - actor.pose: [0.0, bob_horse_vehicle_no_interaction_horse_standing_idle01]
-      - actor.sound: [0.0, niellan, work_child_1_laugh]
+      - actor.sound: [0.1, niellan, work_child_1_laugh]
+      - actor.sound: [0.8, niellan, work_child_1_laugh]
       - cam: [0.0, cam_1_Shot1]
       - actor.anim: 
           .@pos: [0.0, niellan_low_standing_determined_enter_frontal_playing_happy]
@@ -701,7 +703,8 @@ storyboard:
           blendout: 0.5
       - actor.anim: [0.8, niellan_chid_play_stick_loop_1]
       - actor.anim: [0.8, agneta_child_play_doll_loop_2]
-      - actor.sound: [0.8, agneta, work_child_3_laugh]
+      - actor.sound: [0.7, agneta, work_child_1_laugh]
+      - actor.sound: [0.9, niellan, work_child_1_laugh]
 
     # shot Shot3 kids
     shot_3:
@@ -711,7 +714,9 @@ storyboard:
       #- actor.anim: [0.0, Orianna_human_high_standing_determined_gesture_pet_horse]
       - cam.blend.end: [1.0, cam_4_Shot3_kids_rotate]
       - actor.lookat: [0.0, niellan, agneta]
-      - actor.lookat: [0.0, agneta, niellan]      
+      - actor.lookat: [0.0, agneta, niellan]
+      - actor.sound: [0.4, agneta, work_child_1_laugh]
+      - actor.sound: [0.6, niellan, work_child_1_laugh]      
 
     shot_3_inside:
       - cam: [0.0, cam_5_Shot4_inside_house]
@@ -769,7 +774,7 @@ storyboard:
     # shot Shot5 sniff
     shot_7:
 
-      - actor.sound: [0.3, Orianna_human, q701_bruxa_sniffs_hand]
+      - actor.sound: [0.4, Orianna_human, qu_sk_206_becca_sniff_soft]
       - actor.placement: [0.0, geralt, [ -7.8057913780, -1.6908612251, -0.1306152344 ], [ 0.0, 0.0, 200.8300170898 ]]
       - cam: [0.0, cam_7_Shot5_sniff]
       - actor.anim.mimic: [0.5, Orianna_human_geralt_neutral_gesture_squint_face]
@@ -822,14 +827,15 @@ storyboard:
       - cam.blend.start: [0.0, cam_10_Shot7_orianna_go]
       - actor.anim: 
           .@pos: [0.0, Orianna_human_high_standing_bored_exit_rightside]
-          blendin: 0.0
+          blendin: 0.5
           blendout: 0.0
       #- actor.placement.start: [0.99, Orianna_human, [ 1.3518029451, 3.9313991070, -0.2816772461 ], [ 0.0, 0.0, 47.4100418091 ], rapid]
       - cam.blend.key: [0.5, cam_12_Shot8_cam2]
 
     # shot Shot8 cam2
     shot_12_cam_blends:
-      - actor.placement: [0.0, Orianna_human, [ 3.2127556801, 5.7109260559, -0.2816772461 ], [ 0.0, 0.0, 315.7799377441 ]]
+      #- actor.placement: [0.0, Orianna_human, [ 3.2127556801, 5.7109260559, -0.2816772461 ], [ 0.0, 0.0, 315.7799377441 ]]
+      - actor.placement: [0.0, Orianna_human, [ 3.1803605556, 5.6361594200, -0.2534637451 ], [ 0.0, 0.0, 305.3299865723 ]]
       - actor.anim: 
           .@pos: [0.0, Orianna_human_high_standing_determined_exit_frontal]
           blendin: 0.0
@@ -929,7 +935,7 @@ dialogscript:
     # shot Shot7 orianna go
     - CUE: shot_10
     # (longest) anim: high_standing_bored_exit_rightside
-    - PAUSE: 5.37
+    - PAUSE: 5.3666
     # shot Shot8 cam2
     - CUE: shot_12_cam_blends
     # (longest) anim: high_standing_bored_exit_rightside

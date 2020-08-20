@@ -2,6 +2,58 @@ exec function startNTR() {
 	FactsAdd("NTRstartquest", 1);
 }
 
+exec function ulock() {
+	var actionLocks : array<array< SInputActionLock >>;
+	var j,i : int;
+	NTR_notify("TEST!");
+	actionLocks = thePlayer.GetAllActionLocks();
+	for (i = 0; i < actionLocks.Size(); i += 1) {
+		for (j = 0; j < actionLocks[i].Size(); j += 1) {
+			NTR_notify("lock[" + i + "][" + j + "] = " + actionLocks[i][j].sourceName);
+		}
+		
+	}
+	
+}
+exec function getAttr( tag : name ) {
+	var           npc : CNewNPC;
+	var abls, attrs  : array<name>;
+	var i : int;
+	
+	npc = (CNewNPC)theGame.GetNPCByTag(tag);
+	npc.GetCharacterStats().GetAbilities(abls);
+	npc.GetCharacterStats().GetAllAttributesNames(attrs);
+	for (i = 0; i < abls.Size(); i += 1) {
+		NTR_notify("Ability: " + abls[i]);
+	}
+	for (i = 0; i < attrs.Size(); i += 1) {
+		NTR_notify("Attribute: " + attrs[i]);
+	}
+	NTR_notify("Max essence: " + npc.GetStatMax(BCS_Essence));
+	NTR_notify("Cur essence: " + npc.GetStat(BCS_Essence));
+}
+/* 30
+[NTR_MOD] Max essence: 15357.599609
+[NTR_MOD] Cur essence: 14860.817383
+
+50
+[NTR_MOD] Max essence: 25725.601563
+[NTR_MOD] Cur essence: 22860.562500
+*/
+/*[Stats] -      [CALCULATED EXP]        -
+[Stats] - base, without difficulty and -
+[Stats] -   level difference bonuses   -
+[Stats] --------------------------------
+[Stats]  -> for entity : 
+[Stats] --------------------------------
+[Stats] * modDamage : 5380.500488
+[Stats] * modArmor : 4000.000000
+[Stats] * modVitality : 25722.601563
+[Stats] + modOther : 11.000000
+[Stats] --------------------------------
+[Stats]  BASE EXPERIENCE POINTS = [ 40 ]
+[Stats] --------------------------------*/
+
 /*quest function oriDebug() {
 	var           npc : CNewNPC;
 	
@@ -11,10 +63,62 @@ exec function startNTR() {
 	else
 		NTR_notify("NOT FOUND!");
 }*/
-quest function NTR_AutoSave() {
-	
+exec function soundState() {
+	theSound.EnterGameState( ESGS_Default );
 }
-
+exec function soundState2() {
+	theSound.LeaveGameState( ESGS_DialogNight );
+}
+exec function soundState4() {
+	theSound.LeaveGameState( theSound.GetCurrentGameState() );
+}
+exec function soundState3() {
+	NTR_notify( theSound.GetCurrentGameState() );
+}
+/*			case ESGS_Default:
+				return "";
+			case ESGS_Exploration:
+				return "exploration";
+			case ESGS_ExplorationNight:
+				return "exploration_night";
+			case ESGS_Focus:
+				return "focus_exploration";
+			case ESGS_FocusNight:
+				return "focus_exploration_night";
+			case ESGS_Combat:
+				return "combat";
+			case ESGS_CombatMonsterHunt:
+				return "combat_monster_hunt";
+			case ESGS_Dialog:
+				return "dialog_scene";
+			case ESGS_DialogNight:
+				return "dialog_scene_night";
+			case ESGS_Cutscene:
+				return "cutscene";
+			case ESGS_Minigame:
+				return "minigames";
+			case ESGS_Death:
+				return "death";
+			case ESGS_Movie:
+				return "movie";
+			case ESGS_Boat:
+				return "boat";
+			case ESGS_MusicOnly:
+				return "music_only";
+			case ESGS_Underwater:
+				return "underwater";
+			case ESGS_UnderwaterCombat:
+				return "underwater_combat";
+			case ESGS_FocusUnderwater:
+				return "underwater_focus";
+			case ESGS_FocusUnderwaterCombat:
+				return "underwater_combat_focus";
+			case ESGS_Paused:
+				return "pause";
+			case ESGS_Gwent:
+				return "gwent";
+			default:
+				return "";*/
 exec function execHide(range : float) {
     var acceptedTags : array<name>;
     var acceptedVoicetags : array<name>;
@@ -462,6 +566,20 @@ exec function oridet() {
 	ent.ApplyAppearance('orianna_human_morph');
 }
 
+exec function orihum() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	
+	template = (CEntityTemplate)LoadResource("dlc/dlcntr/data/entities/orianna_human.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	ent.AddTag('oriana_test2');
+	ent.AddTag('ntr_orianna_human');
+	ent.AddTag('vip');
+	ent.ApplyAppearance('orianna_vampire_bloody_morph');
+}
+
 exec function oridress() {
 	var      template : CEntityTemplate;
 	var           pos : Vector;
@@ -490,7 +608,7 @@ exec function oribru() {
 	ent = (CEntity)theGame.CreateEntity(template, pos);
 	ent.AddTag('oriana_test2');
 	ent.ApplyAppearance('bruxa_monster_gameplay');
-	NTR_TuneNPC( 'oriana_test2', 30, "Friendly", "None", false, "ENGT_Quest", -1 );
+	NTR_TuneNPC( 'oriana_test2', GetWitcherPlayer().GetLevel() + 5, "Hostile", "None", false, "ENGT_Quest", -1 );
 }
 exec function oricloak() {
 	var      template : CEntityTemplate;

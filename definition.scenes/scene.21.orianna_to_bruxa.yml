@@ -1,4 +1,3 @@
-#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
 repository:
   actors:
     geralt:
@@ -160,8 +159,8 @@ repository:
     cam_4_Shot3_break_quen:
       fov: 35.0
       transform:
-        pos: [ -132.8370361328, 55.8845748901, -9.0220584869 ]
-        rot: [ 0.0, 341.3652038574, 101.3316116333 ]
+        pos: [ -132.8114471436, 55.7367630005, -9.1720581055 ]
+        rot: [ 0.0, 348.5151977539, 99.0767440796 ]
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
@@ -355,8 +354,8 @@ repository:
 production:
   settings:
     sceneid: 1
-    strings-idspace: 9999
-    strings-idstart: 0
+    strings-idspace: 4670
+    strings-idstart: 300
 
   placement: "ntr_bob_orianna_sp"
     # INFO: world coordinates of used origin:
@@ -632,12 +631,11 @@ production:
       - qu_ep2_701_dlg
 
 storyboard:
-  #defaults:
-    #placement:
-      #geralt: [[ -136.3284454346, 54.0372467041, -11.1445922852 ], [ 0.0, 0.0, 331.9499511719 ]]
-      #Orianna_vampire: [[ -135.0148925781, 56.3390159607, -11.1720581055 ], [ 0.0, 0.0, 149.8199157715 ]]
-      #Orianna_human: [[ -130.5420837402, 57.7293014526, -10.9797973633 ], [ 0.0, 0.0, 0.0 ]]
-
+  defaults:
+    placement:
+      geralt: [[ -136.0120086670, 54.6269607544, -11.1443824768 ], [ 0.0, 0.0, 331.9499511719 ]]
+      Orianna_vampire: [[ -134.2037811279, 59.0072212219, -23.5891962051 ], [ 0.0, 0.0, 159.7198791504 ]]
+      Orianna_human: [[ -134.1233978271, 57.1229362488, -11.1664104462 ], [ 0.0, 0.0, 111.3196716309 ]]
     #actor.pose:
       #geralt: geralt_High_Standing_Relaxed_Combat
       #Orianna_vampire: Orianna_vampire_idle_vampire
@@ -645,7 +643,7 @@ storyboard:
 
   section_storyboard_ui:
     # shot Shot1
-    shot_1: # 1.233
+    shot_1: # 1.13
       - actor.equip.right: [0.0, geralt, silversword]
       - actor.placement: [0.0, geralt, [ -136.3284454346, 54.0372467041, -11.1445922852 ], [ 0.0, 0.0, 331.9499511719 ]]
       - actor.placement: [0.0, Orianna_vampire, [ -135.0148925781, 56.3390159607, -11.1720581055 ], [ 0.0, 0.0, 149.8199157715 ]]
@@ -656,14 +654,14 @@ storyboard:
       - prop.placement: [0.0, pc_quen, [ -136.1140747070, 54.7215423584, -10.2344560623 ], [ 0.0, 0.0, 0.0 ]]
       - prop.placement: [0.0, pc_quen_hit, [ -136.1140747070, 54.7215423584, -10.2344560623 ], [ 0.0, 0.0, 0.0 ]]
       - cam: [0.0, cam_1_Shot1]
-      - actor.anim: # 0.4s
+      - actor.anim:
           .@pos: [0.0, geralt_man_geralt_sword_approach_attack_1]
-          clipend: 1.23
+          clipend: 1.13
       #- actor.anim: [0.323, Orianna_vampire_utility_dodge_counter]
       #- actor.placement.start: [0.59, Orianna_vampire, [ -135.0148925781, 56.3390159607, -11.1720581055 ], [ 0.0, 0.0, 149.8199157715 ], smooth]
       #- actor.placement: [0.652, Orianna_vampire, [ -133.1763610840, 59.1904678345, -11.1941738129 ], [ 0.0, 0.0, 150.5898437500 ]]
       - actor.anim: 
-          .@pos: [0.0813, Orianna_vampire_utility_dodge_counter]
+          .@pos: [0.0, Orianna_vampire_utility_dodge_counter]
           blendin: 0.0
           blendout: 0.0
       - actor.lookat: [0.0, geralt, Orianna_vampire]
@@ -684,7 +682,7 @@ storyboard:
     shot_3:
       - actor.placement: [0.0, geralt, [ -136.0120086670, 54.6269607544, -11.1443824768 ], [ 0.0, 0.0, 331.9499511719 ]]
       - actor.placement: [0.0, Orianna_vampire, [ -135.3839721680, 56.7437171936, -11.2128410339 ], [ 0.0, 0.0, 159.7198791504 ]]
-      - cam: [0.0, cam_3_Shot3_start]
+      - cam: [0.0, cam_4_Shot3_break_quen]
       - actor.anim: 
           .@pos: [0.0, geralt_man_ger_sword_quen_start_rp]
           blendin: 0.2
@@ -699,7 +697,7 @@ storyboard:
           clipend: 0.85
           blendin: 0.0
           blendout: 0.0
-      - prop.effect.start: [0.7, pc_quen, shield]
+      - prop.effect.start: [0.6, pc_quen, shield]
 
     # shot Shot3 break quen
     shot_4:
@@ -713,19 +711,20 @@ storyboard:
           .@pos: [0.0, Orianna_vampire_reaction_hit_heavy_f]
           blendin: 0.0
           blendout: 0.0
+          clipend: 1.29
       - prop.effect.stop: [0.0, pc_quen, shield]
-      - prop.effect.start: [0.0, pc_quen_hit, quen_rebound_sphere]
+      - prop.effect.start: [0.0, pc_quen_hit, quen_rebound_sphere_fire]
       - prop.effect.start: [0.0, pc_quen_hit, quen_impulse_explode]
-      - prop.effect.stop: [1.0, pc_quen_hit, quen_rebound_sphere]
+      - prop.effect.stop: [1.0, pc_quen_hit, quen_rebound_sphere_fire]
       - prop.effect.stop: [1.0, pc_quen_hit, quen_impulse_explode]
 
   section_storyboard_ui2:
     # shot Shot4 steps
     shot_5: # 2.2 + 2.5
       - actor.sound: [0.0, Orianna_human, q701_bruxa_skin_morph]
-      - actor.placement: [0.0, geralt, [ -136.0120086670, 54.6269607544, -11.1443824768 ], [ 0.0, 0.0, 331.9499511719 ]]
-      - actor.placement: [0.0, Orianna_vampire, [ -134.2037811279, 59.0072212219, -23.5891962051 ], [ 0.0, 0.0, 159.7198791504 ]]
-      - actor.placement: [0.0, Orianna_human, [ -134.1233978271, 57.1229362488, -11.1664104462 ], [ 0.0, 0.0, 111.3196716309 ]]
+      #- actor.placement: [0.0, geralt, [ -136.0120086670, 54.6269607544, -11.1443824768 ], [ 0.0, 0.0, 331.9499511719 ]]
+      #- actor.placement: [0.0, Orianna_vampire, [ -134.2037811279, 59.0072212219, -23.5891962051 ], [ 0.0, 0.0, 159.7198791504 ]]
+      #- actor.placement: [0.0, Orianna_human, [ -134.1233978271, 57.1229362488, -11.1664104462 ], [ 0.0, 0.0, 111.3196716309 ]]
       - actor.pose: [0.0, Orianna_vampire_High_Standing_Aggressive]
       - actor.pose: [0.0, Orianna_human_High_Standing2_Determined]
       - actor.pose: [0.0, geralt_High_Standing_Relaxed_Combat]
@@ -775,26 +774,24 @@ storyboard:
 
     # shot Shot6 ori smile
     shot_9:
-      - actor.placement: [0.0, geralt, [ -136.0120086670, 54.6269607544, -11.1443824768 ], [ 0.0, 0.0, 224.8099365234 ]]
       - cam: [0.0, cam_9_Shot6_ori_smile]
       - actor.anim.mimic: [0.0, Orianna_human_geralt_reaction_eye_smile_syanna_face]
       - actor.anim: 
           .@pos: [0.4, Orianna_human_add_walk_left_one_step_turn_90]
           blendin: 0.5
-      - actor.effect.start: [0.65, Orianna_human, disappear_cutscene_fx1]
-      #- actor.sound: [0.65, Orianna_human, q701_bruxa_moves]
-      - actor.sound: [0.0, Orianna_human, Set_Switch_bruxa_state_clean]
-      - actor.sound: [0.3, Orianna_human, monster_bruxa_combat_disappear]
-      - actor.sound: [0.6, Orianna_human, monster_bruxa_combat_teleport_trail]
-      - actor.sound: [0.4, geralt, monster_bruxa_combat_disappear]
-      - actor.placement.start: [0.70, Orianna_human, [ -132.9543457031, 54.1202926636, -10.9409799576 ], [ 0.0, 0.0, 111.3197021484 ]]
+      - actor.effect.start: [0.66, Orianna_human, disappear_cutscene_fx1]
+      - actor.sound: [0.66, Orianna_human, monster_bruxa_combat_disappear]
+      - actor.placement.start: [0.7, Orianna_human, [ -132.9543457031, 54.1202926636, -10.9409799576 ], [ 0.0, 0.0, 111.3197021484 ]]
       - actor.placement.end: [0.72, Orianna_human, [ -132.3598632813, 48.1805229187, -10.7468261719 ], [ 0.0, 0.0, 111.3197021484 ]]
       - prop.placement.start: [0.7, orianna_dress, [ -133.1753234863, 53.4491462708, -10.9017944336 ], [ 0.0, 0.0, 137.2800292969 ]] 
-      - prop.placement.end: [0.8, orianna_dress, [ -133.5162811279, 52.5802459717, -11.5617942810 ], [ 0.0, 0.0, 140.1399841309 ]]
-
+      #- prop.placement.end: [0.8, orianna_dress, [ -133.5162811279, 52.5802459717, -11.5617942810 ], [ 0.0, 0.0, 140.1399841309 ]]
+      - prop.placement.end: [0.95, orianna_dress, [ -133.8854675293, 51.5708160400, -12.7217941284 ], [ 0.0, 0.0, 140.1399841309 ]]
+      
     shot_togame:
-      - cam.blend.togame: [0.0, cam_15_Shot_togame]
-      - actor.gamestate: [0.0, geralt, DrawSilver]
+      - actor.placement: [0.0, Orianna_human, [ -198.1342163086, 88.0828628540, -6.5671858788 ], [ 0.0, 0.0, 111.3197021484 ]]
+      - actor.placement: [0.0, geralt, [ -136.0120086670, 54.6269607544, -11.1443824768 ], [ 0.0, 0.0, 224.8099365234 ]]
+      - cam.blend.togame: [0.01, cam_15_Shot_togame]
+      - actor.gamestate: [0.01, geralt, DrawSilver]
 
 dialogscript:
   player: "geralt"
@@ -803,14 +800,20 @@ dialogscript:
 
   section_start:
     - PAUSE: 0.0
-  #  - NEXT: script_call_unmute_sounds
+    - NEXT: script_call_unmute_gameplay
 
-  #script_call_unmute_sounds:
-  #  - SCRIPT:
-  #      function: NTR_PlaySound_S
-  #      parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
-  #        - bankName: "vo_definitions.bnk"
-  #        - eventName: "unmute_sounds"
+  script_call_unmute_gameplay:
+    - SCRIPT:
+        function: NTR_LeaveSceneState_S
+    - NEXT: script_music_investigation
+
+  script_music_investigation:
+    - SCRIPT:
+            function: NTR_PlayMusicScene
+            parameter:
+                - areaName: "toussaint"
+                - eventName: "mus_cs702_regis_intro"
+                - saveType: "SESB_ClearSaved"
     - NEXT: section_storyboard_ui
 
   section_storyboard_ui:
@@ -818,7 +821,7 @@ dialogscript:
     #- geralt: "shot1"
     - CUE: shot_1
     # (longest) anim: man_geralt_sword_approach_attack_1
-    - PAUSE: 1.23
+    - PAUSE: 1.13
     #- geralt: "shot2"
     # shot Shot2
     - CUE: shot_2
@@ -833,7 +836,7 @@ dialogscript:
     #- geralt: "shot4"
     - CUE: shot_4
     # (longest) anim: reaction_hit_heavy_f
-    - PAUSE: 1.3
+    - PAUSE: 1.29
     # shot Shot4 steps
     - NEXT: script_call_morph_forward
 
@@ -843,7 +846,7 @@ dialogscript:
         parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
           - tag: CNAME_ntr_orianna_human
           - morphRatio: 1.0
-          - blendTime: 1.1
+          - blendTime: 1.2
           - pauseBefore: 0.0
     - NEXT: section_storyboard_ui2
 
@@ -875,7 +878,7 @@ dialogscript:
     - PAUSE: 5.0
 
     - CUE: shot_togame
-    - PAUSE: 2.0
+    - PAUSE: 1.0
 
     - NEXT: section_exit
 

@@ -1,4 +1,26 @@
 layers: 
+  beach_doll:
+    world: "bob"
+
+    interactiveEntities:
+      beach_trailer_doll: 
+        template: "CEntity:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\entities\\q704_trailer_doll.w2ent"
+        pos: [ -204.3219604492, -596.7793579102, 0.2775268555 ]
+        rot: [ 0.0, 90.0, 2.8600111008 ]
+        valid_interactions: [ Examine ]
+        tags: [ "ntr_beach_doll" ]  
+
+  beach_orianna_dress:
+    world: "bob"
+
+    interactiveEntities:
+      beach_lying_dress: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\oriana_dress\\orianna_dress_lying_03.w2ent"
+        pos: [ -222.0980072021, -580.3480224609, 0.5529999733 ]
+        rot: [ 0.0, 0.0, 108.6800003052 ]
+        valid_interactions: [ Examine ]
+        tags: [ "ntr_beach_dress" ]
+
   orianna_house: 
     world: "bob"
     #context: ""

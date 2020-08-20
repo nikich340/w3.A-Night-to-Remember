@@ -1,5 +1,6 @@
 function NTR_notify(msg : string) {
 	theGame.GetGuiManager().ShowNotification(msg);
+    LogChannel('NTR_MOD', msg);
 }
 // -------------------------------------------------
 function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, acceptedVoicetags: array<name>, killIfHostile : bool)  {

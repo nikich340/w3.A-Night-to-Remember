@@ -742,7 +742,7 @@ storyboard:
           blendin: 0.0
           blendout: 0.3
 
-    shot_story_boat:
+    shot_story_boat1:
       - prop.placement: [0.0, memory_vision, [ 377.9546203613, -526.9505615234, -35.0315971375 ], [ 0.0, 0.0, 265.8400268555 ]]
       - actor.placement.start: [0.0, toussaint_fisherman, [ 377.9546203613, -526.9505615234, -35.0315971375 ], [ 0.0, 0.0, 10.2300071716 ]]
       - actor.placement.start: [0.0, oriana, [ 376.9851989746, -521.8063964844, -34.9564208984 ], [ 0.0, 0.0, 174.9800262451 ]]
@@ -754,10 +754,11 @@ storyboard:
       - actor.lookat: [0.0, oriana, toussaint_fisherman]
       - actor.lookat: [0.0, toussaint_fisherman, oriana]
 
+    shot_story_boat2:
       - actor.placement.end: [0.99, toussaint_fisherman, [ 374.2757, -510.7557, -35.0315971375 ], [ 0.0, 0.0, 10.2300071716 ]]
       - actor.placement.end: [0.99, oriana, [ 373.3063, -505.6115, -34.9564208984 ], [ 0.0, 0.0, 174.9800262451 ]]
       - prop.placement.end: [0.99, boat_dest_squared_sail, [ 373.9158935547, -508.1365966797, -35.2212715149 ], [ 0.0, 0.0, 12.8700017929 ]]
-      - cam.blend.end: [1.0, cam_16_fisher_story_boat3]
+      - cam.blend.end: [0.999, cam_16_fisher_story_boat3]
 
     shot_story_inn1:
       - actor.placement: [0.0, geralt, [ 184.6555633545, 253.5484008789, -33.7010726929 ], [ 0.0, 0.0, 0.0 ]]
@@ -768,25 +769,28 @@ storyboard:
       - actor.pose: [0.001, oriana_high_standing_determined_idle]
       - actor.pose: [0.001, toussaint_fisherman_boat_passenger_sit_idle]
       - cam.blend.start: [0.001, cam_1_fisher_story_inn_cam]
-      - cam.blend.key: [0.85, cam_2_fisher_story_boat_cam]
       - actor.lookat: [0.01, toussaint_fisherman, oriana]
       - actor.lookat: [0.01, oriana, geralt]
+
+    shot_story_inn2: # 10.0 -> 5.0
+      - cam.blend.key: [0.7, cam_2_fisher_story_boat_cam]
       - actor.anim: 
           actor: oriana
-          .@pos: [0.75, anim_12937_high_standing_determined_enter_frontal]
+          .@pos: [0.5, anim_12937_high_standing_determined_enter_frontal]
           blendin: 0.0
           blendout: 0.5
 
-    shot_story_inn2:
-      - cam.blend.end: [0.5, cam_3_fisher_story_orianna_cam]
+    shot_story_inn3:
+      - cam.blend.end: [0.9453, cam_3_fisher_story_orianna_cam]
       - actor.anim:
           actor: oriana
-          .@pos: [0.4, anim_12941_high_standing_determined_exit_frontal]
+          .@pos: [0.7562, anim_12941_high_standing_determined_exit_frontal]
           blendin: 0.5
           clipfront: 0.5
           blendout: 0.0
 
-      - fade.out: [0.833, 1.0, [255, 255, 255, 255]]      
+    shot_story_inn4:
+      - fade.out: [0.666, 1.0, [255, 255, 255, 255]]      
 
   #section_togame:
     shot_fadein:
@@ -832,13 +836,13 @@ dialogscript:
     - geralt: "[1.8268262]0001124989|Good day. Fish biting?"
     # shot fisher answer
     - CUE: shot_3
-    - toussaint_fisherman: "[1.800683]Better catch in the rain."
+    - toussaint_fisherman: "[2.1060]I catch more when it's raining."
     # shot geralt ask2 boat
     - CUE: shot_4
-    - geralt: "Did you see a red-haired woman here? Left this site by boat, recently."
+    - geralt: "[5.4078]Did you see a red-haired woman here? Left this site by boat, recently."
     # shot shot menu def impatient mimic
     - CUE: shot_4_answer
-    - toussaint_fisherman: "Maybe. Maybe not. Give me a few coins and I'll try to remember."
+    - toussaint_fisherman: "[5.7383]Maybe. Maybe not. Give me a few coins and I'll try to remember."
     - NEXT: section_choice_geralt
 
   section_choice_geralt:
@@ -855,14 +859,14 @@ dialogscript:
     - CUE: shot_help
     - geralt: "[3.4024863]0000400593|I want to help that woman. She could be in danger."
     - CUE: shot_help_answer
-    - toussaint_fisherman: "I'd believe you if you had satchel with herbs instead of this pointy things stickin' out behind you."
+    - toussaint_fisherman: "[7.6557]I would believe you if you had a satchel of herbs instead of those blades sheathed on your back."
     - NEXT: section_choice_geralt
 
   section_axii:
     - CUE: shot_axii
     - geralt: "[7.5]0001125802|Asking a lot. Too much. How about you do this free of charge, huh? Out of the kindness of your heart?"
     - CUE: shot_axii_answer
-    - toussaint_fisherman: "Aye, I'll help. Outta kindness…"
+    - toussaint_fisherman: "[4.4119143]Aye, I'll help. Outta kindness…"
     - PAUSE: 2.0
     - NEXT: section_tell
 
@@ -871,32 +875,39 @@ dialogscript:
     - geralt: "[1.8677174]0000434805|Fine… I'll pay."
     - PAUSE: 0.633
     - CUE: shot_pay_answer
-    - toussaint_fisherman: "I'm lucky to meet rich today."
+    - toussaint_fisherman: "[3.1124]Oh, I'm lucky to stumble across wealth today."
     - PAUSE: 2.0
     - NEXT: section_tell
 
   section_tell:
     - CUE: shot_tell
-    - toussaint_fisherman: "Well… listen to me."
+    - toussaint_fisherman: "[2.4864]Well… you listen up."
 
     - CUE: shot_fadeout
     - PAUSE: 1.0
     - CUE: shot_story_appear
-    - PAUSE: 4.0
-    #- geralt: "The woman came from that direction by the cemetery."
+    - geralt: "[3.0157]The woman came from that direction by the cemetery."
+    - PAUSE: 1.0
+
     - CUE: shot_story_payment
-    - PAUSE: 3.0
-    #- geralt: "Paid me a tidy sum to take her across the river."
-    - CUE: shot_story_boat
-    - PAUSE: 10.0
-    #- geralt: "She was nervous and dirty, but I didn't ask her about it."
+    - geralt: "[3.6760]Paid me a tidy sum to take her across the river."
+
+    - CUE: shot_story_boat1
+    - PAUSE: 2.5
+    - geralt: "[5.0822]She was nervous and dirty, but I didn't ask her about it."
+    - CUE: shot_story_boat2
+    - PAUSE: 2.5
 
     - CUE: shot_story_inn1
-    - PAUSE: 10.0
-    #- geralt: "I dropped her off near the Cockatrice Inn."
+    - PAUSE: 2.3709
+    - geralt: "[2.6291]I dropped her off near the Cockatrice Inn."
     - CUE: shot_story_inn2
-    - PAUSE: 6.0
-    #- geralt: "She hopped off the boat without saying a word…"
+    - PAUSE: 5.0
+    
+    - CUE: shot_story_inn3
+    - geralt: "[3.1736]She hopped off the boat without saying a word…"
+    - CUE: shot_story_inn4
+    - PAUSE: 3.0
 
   #  - NEXT: script_hide_actors2
 
@@ -910,11 +921,12 @@ dialogscript:
     - CUE: shot_fadein
     - PAUSE: 1.0
     - CUE: shot_togame
-    - geralt: "0001029815|Hm, interesting. Thanks."
-
+    - geralt: "[3.0865357]0001029815|Hm, interesting. Thanks."
     - NEXT: section_exit
 
   section_exit:
-    #- CAMERA_BLEND: 2.0
     - EXIT
+
+
+
 

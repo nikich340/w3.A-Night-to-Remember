@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 706, saved: 2020-08-02 00:02:52)
+# (version: 783, saved: 2020-08-20 20:13:01)
 #
 ---
 structure:
@@ -42,10 +42,9 @@ structure:
             - script.new_logmsg
             - objective.wait_outside: Success
           next.fight:
-            - waituntil.wait_50perc_health
             - objective.wait_outside: Success
-            - objective.KILL_ORIANNA: Activate
-            - spawn.spawn_hostile
+            - script.NTR_SaveGame2
+            - waituntil.wait_50perc_health
         
         scene.notes_comment:
           ".editor":
@@ -95,6 +94,21 @@ structure:
           next.Output:
             - settime.set_1am
         
+        scene.to_bruxa_scene:
+          ".editor":
+            pos: [ 3470.9702148438, -45.8725280762 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 21.orianna_to_bruxa.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: true
+          next.Output:
+            - script.Play_fangs_music
+            - spawn.bruxa_spawn
+            - despawn.despawn_orihum
+            - changelayers.show_dress
+        
         waituntil.1s:
           elapsed: "00:00:01"
           ".editor":
@@ -122,6 +136,24 @@ structure:
           next:
             - script.Suggest_save
         
+        waituntil.1ssss:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 3822.0, 128.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Tune_Orianna_bruxa
+        
+        waituntil.1sssss:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 3830.0, 429.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Tune_Orianna
+        
         waituntil.2s:
           elapsed: "00:00:02"
           ".editor":
@@ -131,6 +163,7 @@ structure:
           next:
             - settime.Set_11pm
             - addfact.ntr_finale_started
+            - changelayers.show_doll
         
         waituntil.House_area:
           inside: [ bob/house_area, PLAYER ]
@@ -169,6 +202,16 @@ structure:
             out: [ Out ]
           next:
             - script.fade_out
+            - script.NTR_SaveGame
+        
+        waituntil.Wait_bruxa_dead:
+          factdb: [ ntr_orianna_bruxa_dead, ">=", 1 ]
+          ".editor":
+            pos: [ 4404.0, -8.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.NTR_SaveLock_unlock
         
         waituntil.footprints_found:
           factdb: [ ntr_orianna_side_footprints_found, ">=", 1 ]
@@ -210,14 +253,40 @@ structure:
           next:
             - script.Fcous_first_footprints
         
-        waituntil.wait_50perc_health:
-          factdb: [ ntr_orianna_vampire_halfhealth, ">=", 1 ]
+        waituntil.wait_1s:
+          elapsed: "00:00:01"
           ".editor":
-            pos: [ 3276.5014648438, 77.0497436523 ]
+            pos: [ 3445.7526855469, 439.7662963867 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - script.new_logmsg_1
+            - objective.KILL_ORIANNA: Activate
+            - spawn.orianna_human
+            - script.Orianna_fight_indicator
+            - spawn.spawn_hostile
+        
+        waituntil.wait_50perc_health:
+          factdb: [ ntr_orianna_vampire_halfhealth, ">=", 1 ]
+          ".editor":
+            pos: [ 3268.0, 59.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.to_bruxa_scene: Input
+            - despawn.despawn_vampire
+            - script.Hide_fight_indicator
+        
+        script.Bruxa_fight_indicator:
+          ".editor":
+            pos: [ 4183.0, -5.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: ShowBossFightIndicator
+          parameter:
+            - enable: true
+            - bossTag: cname_ntr_orianna_bruxa
+          next:
+            - waituntil.Wait_bruxa_dead
         
         script.Fcous_first_footprints:
           ".editor":
@@ -232,6 +301,86 @@ structure:
           next:
             - waituntil.footprints_found
         
+        script.Gameplay_music:
+          ".editor":
+            pos: [ 4799.0, -167.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_PlayMusic
+          parameter:
+            - areaName: toussaint
+            - eventName: mus_loc_toussaint_general_cs_to_gmpl
+            - saveType: SESB_ClearSaved
+          next:
+            - out
+        
+        script.Hide_fight_indicator:
+          ".editor":
+            pos: [ 3485.0, 232.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: ShowBossFightIndicator
+          parameter:
+            - enable: false
+            - bossTag: cname_ntr_orianna_vampire
+          next: ".done"
+        
+        script.NTR_SaveGame:
+          ".editor":
+            pos: [ 2127.0910644531, 206.6595611572 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_SaveGame
+          parameter:
+            - type: SGT_ForcedCheckPoint
+            - slot: -1
+          next:
+            - script.NTR_SaveLock
+        
+        script.NTR_SaveGame2:
+          ".editor":
+            pos: [ 3295.7387695312, 357.4479675293 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_SaveGame
+          parameter:
+            - type: SGT_ForcedCheckPoint
+            - slot: -1
+          next:
+            - waituntil.wait_1s
+        
+        script.NTR_SaveLock:
+          ".editor":
+            pos: [ 2310.6860351562, 212.4095611572 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_SaveLock
+          parameter:
+            - lock: true
+          next: ".done"
+        
+        script.NTR_SaveLock_unlock:
+          ".editor":
+            pos: [ 4614.0, -102.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_SaveLock
+          parameter:
+            - lock: false
+          next:
+            - script.Gameplay_music
+        
+        script.Orianna_fight_indicator:
+          ".editor":
+            pos: [ 3620.0, 252.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: ShowBossFightIndicator
+          parameter:
+            - enable: true
+            - bossTag: cname_ntr_orianna_vampire
+          next: ".done"
+        
         script.Play_NTR_music:
           ".editor":
             pos: [ 3083.1977539062, 25.3480796814 ]
@@ -244,15 +393,15 @@ structure:
             - saveType: SESB_DontSave
           next: ".done"
         
-        script.Play_beast_music:
+        script.Play_fangs_music:
           ".editor":
-            pos: [ 3305.1533203125, 168.9574432373 ]
+            pos: [ 3654.2788085938, -151.9602203369 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
           parameter:
             - areaName: toussaint
-            - eventName: mus_q704_detlaff_combat_stage02
+            - eventName: mus_q704_vampire_siege
             - saveType: SESB_Save
           next: ".done"
         
@@ -277,11 +426,20 @@ structure:
         
         script.Tune_Orianna:
           ".editor":
-            pos: [ 3541.6315917969, 378.7955322266 ]
+            pos: [ 4033.0, 342.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_TuneOriannaVampire
           next: ".done"
+        
+        script.Tune_Orianna_bruxa:
+          ".editor":
+            pos: [ 3990.1535644531, 78.6964569092 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_TuneOriannaBruxa
+          next:
+            - script.Bruxa_fight_indicator
         
         script.Unlock_front_door:
           ".editor":
@@ -335,7 +493,7 @@ structure:
         
         script.new_logmsg:
           ".editor":
-            pos: [ 3268.9304199219, -77.7205200195 ]
+            pos: [ 3346.3115234375, -382.1848144531 ]
             in: [ In ]
             out: [ Out ]
           function: radLog
@@ -345,27 +503,30 @@ structure:
           next:
             - out
         
-        script.new_logmsg_1:
+        changelayers.show_doll:
           ".editor":
-            pos: [ 3497.0014648438, 47.0497322083 ]
-            in: [ In ]
-            out: [ Out ]
-          function: radLog
-          parameter:
-            - logChannel: cname_NTR
-            - msg: HALF HEALTH
-          next:
-            - out
+            pos: [ 2426.0, -205.0 ]
+            hint: show-only
+            in: []
+            out: []
+          sync: true
+          purge: false
+          world: bob
+          show:
+            - beach_doll
+          next: ".done"
         
-        script.new_show_bossfight_indicator:
+        changelayers.show_dress:
           ".editor":
-            pos: [ 3301.8051757812, 266.1706237793 ]
-            in: [ In ]
-            out: [ Out ]
-          function: ShowBossFightIndicator
-          parameter:
-            - enable: true
-            - bossTag: cname_ntr_orianna_vampire
+            pos: [ 3647.0, -231.0 ]
+            hint: show-only
+            in: []
+            out: []
+          sync: true
+          purge: false
+          world: bob
+          show:
+            - beach_orianna_dress
           next: ".done"
         
         spawn.Spawn_orianna_vampire:
@@ -380,9 +541,32 @@ structure:
           next:
             - waituntil.1ss
         
+        spawn.bruxa_spawn:
+          ".editor":
+            pos: [ 3650.9697265625, 56.0305709839 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: fight_hostile
+          spawnsets:
+            - comm_orianna_bruxa
+          next:
+            - waituntil.1ssss
+        
+        spawn.orianna_human:
+          ".editor":
+            pos: [ 3635.4763183594, 440.0137329102 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: before_scene
+          spawnsets:
+            - comm_orianna_human
+          next: ".done"
+        
         spawn.spawn_hostile:
           ".editor":
-            pos: [ 3294.2946777344, 382.1418457031 ]
+            pos: [ 3622.7778320312, 345.687713623 ]
             hint: spawn-only
             in: []
             out: []
@@ -390,7 +574,27 @@ structure:
           spawnsets:
             - comm_orianna_vampire
           next:
-            - script.Tune_Orianna
+            - waituntil.1sssss
+        
+        despawn.despawn_orihum:
+          ".editor":
+            pos: [ 3654.7197265625, 142.2805480957 ]
+            hint: despawn-only
+            in: []
+            out: []
+          spawnsets:
+            - comm_orianna_human
+          next: ".done"
+        
+        despawn.despawn_vampire:
+          ".editor":
+            pos: [ 3489.275390625, 151.2270507812 ]
+            hint: despawn-only
+            in: []
+            out: []
+          spawnsets:
+            - comm_orianna_vampire
+          next: ".done"
         
         objective.Check_house:
           ".editor": [ 1292.9097900391, 462.9410705566 ]
@@ -407,7 +611,7 @@ structure:
           next: ".done"
         
         objective.KILL_ORIANNA:
-          ".editor": [ 3301.6025390625, 490.951171875 ]
+          ".editor": [ 3618.9357910156, 534.2844848633 ]
           objective: nighttoremember/river_part/kill_orianna
           notify: true
           track: false
@@ -433,7 +637,6 @@ structure:
           next:
             - spawn.Spawn_orianna_vampire
             - scene.scene_orianna_appear: Input
-            - addfact.ntr_finale_started_1
         
         settime.set_1am:
           ".editor": [ 2758.5620117188, -62.9907188416 ]
@@ -442,16 +645,11 @@ structure:
             - scene.main_orianna_scene: Input
         
         addfact.ntr_finale_started:
-          ".editor": [ 2506.3073730469, 192.5459136963 ]
-          value: [ ntr_finale_started, 1 ]
-          next: ".done"
-        
-        addfact.ntr_finale_started_1:
-          ".editor": [ 2646.1896972656, -358.2792663574 ]
+          ".editor": [ 2483.1254882812, 183.9095458984 ]
           value: [ ntr_finale_started, 1 ]
           next: ".done"
         
         out:
-          ".editor": [ 3832.4758300781, -1.0440104008 ]
+          ".editor": [ 5028.0, -209.0 ]
           next: ".done"
         
