@@ -2,6 +2,46 @@ exec function startNTR() {
 	FactsAdd("NTRstartquest", 1);
 }
 
+exec function sc(num : int, optional input : String) {
+    var scene : CStoryScene;
+    var entity: CEntity;
+    var path  : String;
+	var sceneNames : array<String>;
+	
+	sceneNames.PushBack("00.not_exist.w2scene");             // 0
+	sceneNames.PushBack("01.intro_hag.w2scene");
+	sceneNames.PushBack("02.intro_hag_runs.w2scene");
+	sceneNames.PushBack("03.geralt_oneliners.w2scene");
+	sceneNames.PushBack("04.triss_appear.w2scene");
+	sceneNames.PushBack("05.triss_to_monster.w2scene");
+	sceneNames.PushBack("06.triss_barghests.w2scene");
+	sceneNames.PushBack("07.gameplay_triss_power.w2scene");
+	sceneNames.PushBack("18_2.fisherman_oneliners.w2scene"); // 08
+	sceneNames.PushBack("09.triss_final.w2scene");
+	sceneNames.PushBack("10.regis_owl_arrive.w2scene");
+	sceneNames.PushBack("11.orphanage.w2scene");
+	sceneNames.PushBack("12.fistfight_loose.w2scene");
+	sceneNames.PushBack("13.gameplay_orphanage.w2scene");
+	sceneNames.PushBack("14.fistfight_win.w2scene");
+	sceneNames.PushBack("15.fistfight_repeat.w2scene");
+	sceneNames.PushBack("16.baron_meeting.w2scene");
+	sceneNames.PushBack("17.baron_oneliners.w2scene");
+	sceneNames.PushBack("18.fisherman.w2scene");
+	sceneNames.PushBack("19.orianna_appear.w2scene");
+	sceneNames.PushBack("20.orianna_main.w2scene");
+	sceneNames.PushBack("21.orianna_to_bruxa.w2scene");
+	sceneNames.PushBack("22.orianna_kills_geralt.w2scene");
+	
+	if (!input) {
+		input = "Input";
+	}
+	path = "dlc/dlcntr/data/scenes/" + sceneNames[num];
+	
+    // -> SET SCENE PATH
+    scene = (CStoryScene)LoadResource(path, true);
+    theGame.GetStorySceneSystem().PlayScene(scene, input);
+}
+
 exec function ulock() {
 	var actionLocks : array<array< SInputActionLock >>;
 	var j,i : int;
@@ -652,15 +692,6 @@ exec function playEffGeralt( effect : name, optional stop : bool ) {
 		theGame.GetGuiManager().ShowNotification("Play: " + effect);
 		thePlayer.PlayEffect(effect);
 	}
-}
-exec function tsc() {
-    var scene : CStoryScene;
-    var template: CEntityTemplate;
-    var entity: CEntity;
-
-    // -> SET SCENE PATH
-    scene = (CStoryScene)LoadResource( "dlc\dlcntr\data\scenes\15.fistfight_repeat.w2scene", true);
-    theGame.GetStorySceneSystem().PlayScene(scene, "Input");
 }
 /*quest function <modid>_setFactOnIgnite (tag : name, factName : name) {
 	var gameLightComp : CGameplayLightComponent;        

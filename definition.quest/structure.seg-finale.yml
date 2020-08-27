@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 783, saved: 2020-08-20 20:13:01)
+# (version: 798, saved: 2020-08-27 12:07:49)
 #
 ---
 structure:
@@ -14,6 +14,18 @@ structure:
             - objective.Inv_Inn: Activate
             - waituntil.side_area
             - waituntil.new_wait_until_realtime_elapsed
+        
+        scene.KILL_SCENE:
+          ".editor":
+            pos: [ 3617.0, 848.0 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 22.orianna_kills_geralt.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - script.Kill_Player
         
         scene.house_found_comment:
           ".editor":
@@ -45,6 +57,8 @@ structure:
             - objective.wait_outside: Success
             - script.NTR_SaveGame2
             - waituntil.wait_50perc_health
+            - waituntil.outside_fight_area
+            - addfact.fact_fight_orianna
         
         scene.notes_comment:
           ".editor":
@@ -84,7 +98,7 @@ structure:
         
         scene.scene_orianna_appear:
           ".editor":
-            pos: [ 2594.0305175781, 32.824131012 ]
+            pos: [ 2570.0, 32.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 19.orianna_appear.yml
@@ -92,7 +106,7 @@ structure:
           interruptable: true
           _fadein: true
           next.Output:
-            - settime.set_1am
+            - script.Try_to_reset_music
         
         scene.to_bruxa_scene:
           ".editor":
@@ -118,6 +132,15 @@ structure:
           next:
             - script.Play_NTR_music
         
+        waituntil.1s_repeat:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 3521.0, 774.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.fact_check_fight
+        
         waituntil.1ss:
           elapsed: "00:00:01"
           ".editor":
@@ -126,15 +149,6 @@ structure:
             out: [ Out ]
           next:
             - script.Set_morph_app
-        
-        waituntil.1sss:
-          elapsed: "00:00:01"
-          ".editor":
-            pos: [ 2003.064453125, -70.7478637695 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - script.Suggest_save
         
         waituntil.1ssss:
           elapsed: "00:00:01"
@@ -157,13 +171,13 @@ structure:
         waituntil.2s:
           elapsed: "00:00:02"
           ".editor":
-            pos: [ 2245.5146484375, 113.8040924072 ]
+            pos: [ 2226.0, 104.0 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - settime.Set_11pm
             - addfact.ntr_finale_started
             - changelayers.show_doll
+            - settime.Set_11pm
         
         waituntil.House_area:
           inside: [ bob/house_area, PLAYER ]
@@ -225,6 +239,15 @@ structure:
             - waituntil.House_area
             - script.focus_ALL_footprints
         
+        waituntil.inside_fight_area:
+          inside: [ bob/fight_area, PLAYER ]
+          ".editor":
+            pos: [ 3278.0, 922.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.reset_fact
+        
         waituntil.new_wait_until_realtime_elapsed:
           elapsed: "00:00:01"
           ".editor":
@@ -233,6 +256,15 @@ structure:
             out: [ Out ]
           next:
             - waituntil.Player_outside
+        
+        waituntil.outside_fight_area:
+          outside: [ bob/fight_area, PLAYER ]
+          ".editor":
+            pos: [ 3427.0, 594.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - addfact.ntr_fight_outside_area
         
         waituntil.room_are:
           inside: [ bob/room_area, PLAYER ]
@@ -325,6 +357,27 @@ structure:
             - bossTag: cname_ntr_orianna_vampire
           next: ".done"
         
+        script.Hud_warning:
+          ".editor":
+            pos: [ 3970.0, 677.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: DisplayHudMessage
+          parameter:
+            - localisedStringKey: cname_ntr_outside_fight_warning
+            - localizedStringID: 0
+          next: ".done"
+        
+        script.Kill_Player:
+          ".editor":
+            pos: [ 3807.0, 849.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: KillPlayer
+          parameter:
+            - ignoreImmortalityMode: true
+          next: ".done"
+        
         script.NTR_SaveGame:
           ".editor":
             pos: [ 2127.0910644531, 206.6595611572 ]
@@ -372,7 +425,7 @@ structure:
         
         script.Orianna_fight_indicator:
           ".editor":
-            pos: [ 3620.0, 252.0 ]
+            pos: [ 3620.0, 259.0 ]
             in: [ In ]
             out: [ Out ]
           function: ShowBossFightIndicator
@@ -416,13 +469,18 @@ structure:
             - appearanceName: cname_orianna_human_morph
           next: ".done"
         
-        script.Suggest_save:
+        script.Try_to_reset_music:
           ".editor":
-            pos: [ 2202.4763183594, -78.9831542969 ]
+            pos: [ 2703.0, -68.0 ]
             in: [ In ]
             out: [ Out ]
-          function: ForceManaualSaveQ
-          next: ".done"
+          function: NTR_PlayMusic
+          parameter:
+            - areaName: toussaint
+            - eventName: mus_q704_after_feeding
+            - saveType: SESB_ClearSaved
+          next:
+            - settime.set_1am
         
         script.Tune_Orianna:
           ".editor":
@@ -452,9 +510,52 @@ structure:
             - newState: EDQS_RemoveLock
           next: ".done"
         
+        script.Warning_1st_sec:
+          ".editor":
+            pos: [ 3779.0, 662.0 ]
+            in: [ In ]
+            out: [ "False", "True" ]
+          function: NTR_FactChecker
+          parameter:
+            - factName: ntr_fight_outside_area
+            - factCond: "=="
+            - val: 1
+          next.True:
+            - script.Hud_warning
+        
+        script.branch_fact_7:
+          ".editor":
+            pos: [ 3342.0, 780.0 ]
+            in: [ In ]
+            out: [ "False", "True" ]
+          function: NTR_FactChecker
+          parameter:
+            - factName: ntr_fight_outside_area
+            - factCond: ">="
+            - val: 7
+          next.False:
+            - waituntil.1s_repeat
+            - waituntil.inside_fight_area
+          next.True:
+            - scene.KILL_SCENE: Input
+            - despawn.despawn_vampire_bruxa
+        
+        script.fact_check_fight:
+          ".editor":
+            pos: [ 3268.0, 666.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FactChecker
+          parameter:
+            - factName: ntr_fight_orianna
+            - factCond: "=="
+            - val: 1
+          next:
+            - waituntil.outside_fight_area
+        
         script.fade_out:
           ".editor":
-            pos: [ 2095.1879882812, 23.0984859467 ]
+            pos: [ 2086.0, 23.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_FadeOutQuest
@@ -502,6 +603,16 @@ structure:
             - msg: peaceful
           next:
             - out
+        
+        script.reset_fact:
+          ".editor":
+            pos: [ 3466.0, 923.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: ResetFactQuest
+          parameter:
+            - factID: cname_ntr_fight_outside_area
+          next: ".done"
         
         changelayers.show_doll:
           ".editor":
@@ -596,6 +707,17 @@ structure:
             - comm_orianna_vampire
           next: ".done"
         
+        despawn.despawn_vampire_bruxa:
+          ".editor":
+            pos: [ 3617.0, 929.0 ]
+            hint: despawn-only
+            in: []
+            out: []
+          spawnsets:
+            - comm_orianna_bruxa
+            - comm_orianna_vampire
+          next: ".done"
+        
         objective.Check_house:
           ".editor": [ 1292.9097900391, 462.9410705566 ]
           objective: nighttoremember/river_part/check_house
@@ -632,17 +754,29 @@ structure:
           next: ".done"
         
         settime.Set_11pm:
-          ".editor": [ 2435.9921875, -41.1022186279 ]
+          ".editor": [ 2413.0, -41.0 ]
           time: "22:30"
           next:
             - spawn.Spawn_orianna_vampire
             - scene.scene_orianna_appear: Input
         
         settime.set_1am:
-          ".editor": [ 2758.5620117188, -62.9907188416 ]
+          ".editor": [ 2868.0, -71.0 ]
           time: "00:30"
           next:
             - scene.main_orianna_scene: Input
+        
+        addfact.fact_fight_orianna:
+          ".editor": [ 3264.0, -45.0 ]
+          value: [ ntr_fight_orianna, 1 ]
+          next: ".done"
+        
+        addfact.ntr_fight_outside_area:
+          ".editor": [ 3585.0, 660.0 ]
+          value: [ ntr_fight_outside_area, 1 ]
+          next:
+            - script.branch_fact_7
+            - script.Warning_1st_sec
         
         addfact.ntr_finale_started:
           ".editor": [ 2483.1254882812, 183.9095458984 ]

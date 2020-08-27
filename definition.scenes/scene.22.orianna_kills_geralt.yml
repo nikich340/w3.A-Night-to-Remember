@@ -1,0 +1,429 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    Orianna_bruxa:
+      template: "dlc\\dlcntr\\data\\entities\\orianna_bruxa.w2ent"
+      appearance: [ "orianna_bruxa_monster" ]
+
+  props:
+    vampire_vision:
+      template: "dlc\\dlcntr\\data\\entities\\vampire_vision_env.w2ent"
+
+  animations:
+    anim_7981_locomotion_run_cycle_fast_forward:
+      animation: "locomotion_run_cycle_fast_forward"
+      frames: 19
+
+    anim_7689_dialogue_man_ex_scared_run_loop:
+      animation: "dialogue_man_ex_scared_run_loop"
+      frames: 108
+
+    anim_5231_combat_locomotion_run_cycle_fast_forward_triple_01:
+      animation: "combat_locomotion_run_cycle_fast_forward_triple_01"
+      frames: 60
+
+    anim_471_q704_truth_07_geralt_high_standing_determined_gesture_die:
+      animation: "q704_truth_07_geralt_high_standing_determined_gesture_die"
+      frames: 343
+
+    anim_944_bruxa_attack_01:
+      animation: "bruxa_attack_01"
+      frames: 40
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_1222_dialogue_man_ex_scared_run_loop:
+      idle_anim: "dialogue_man_ex_scared_run_loop"
+
+    pose_0_bruxa_idle:
+      idle_anim: "bruxa_idle"
+
+  cameras:
+    cam_1_run_cycle:
+      fov: 40.0
+      transform:
+        pos: [ -140.0252685547, -26.7836570740, 0.1173114777 ]
+        rot: [ 0.0, 351.4299926758, 172.8252258301 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_4_run_funny_pre:
+      fov: 40.0
+      transform:
+        pos: [ -138.3153076172, -9.1658334732, -2.7826995850 ]
+        rot: [ 0.0, 1.8800007105, 174.1452636719 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_5_run_funny_pre2:
+      fov: 40.0
+      transform:
+        pos: [ -140.5429229736, -27.7235565186, -0.9826927185 ]
+        rot: [ 0.0, 357.3699951172, 172.9352722168 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_6_run_funny_pre3:
+      fov: 40.0
+      transform:
+        pos: [ -143.4516296387, -41.1262817383, -1.2826938629 ]
+        rot: [ 0.0, 351.7600097656, 155.3352508545 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_7_run_funny_killed_cam1:
+      fov: 20.0
+      transform:
+        pos: [ -142.7649383545, -44.1266021729, -1.7826957703 ]
+        rot: [ 0.0, 10.7899646759, 32.7153244019 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_8_run_funny_killed_cam2:
+      fov: 20.0
+      transform:
+        pos: [ -141.8693389893, -45.8167991638, -2.8826999664 ]
+        rot: [ 0.0, 3.5299675465, 20.3953018188 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_9_run_funny_killed_cam2__cloned_:
+      fov: 20.0
+      transform:
+        pos: [ -140.4635314941, -46.2476387024, -0.6826915741 ]
+        rot: [ 0.0, 347.9099731445, 36.3452987671 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_11_run_funny_pre1_cam_walk_end:
+      fov: 40.0
+      transform:
+        pos: [ -140.0038604736, -19.5200233459, -1.6 ]
+        rot: [ 0.0, 2.5400006771, 171.7252502441 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 30.0, 45.4113922119 ]
+        focus: [ 30.0, 43.9113922119 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_12_run_funny_pre2_cam_jump:
+      fov: 40.0
+      transform:
+        pos: [ -141.7275, -30.3225, 2.6173210144 ]
+        rot: [ 0.0, 340.5400085449, 170.5152893066 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.6154289246, 7.6154289246 ]
+        focus: [ 5.1154289246, 6.1154289246 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_13_run_funny_pre3_cam_jump_end:
+      fov: 40.0
+      transform:
+        pos: [ -143.5181732178, -41.2090530396, -0.7826919556 ]
+        rot: [ 0.0, 325.2774963379, 154.5926818848 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.4938540459, 4.4938540459 ]
+        focus: [ 1.9938540459, 2.9938540459 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 305
+
+  placement: "ntr_bob_orianna_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -180.0365447998, -443.1201477051, 11.4495849609 ]
+      #rot: [ 0.0, 94.1600112915, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      Orianna_bruxa:
+        repo: "Orianna_bruxa"
+        #by_voicetag: true
+        appearance: "orianna_bruxa_monster"
+        tags: [ "Orianna_bruxa" ]
+
+    props:
+      vampire_vision:
+        repo: "vampire_vision"
+
+    cameras:
+      cam_1_run_cycle:
+        repo: "cam_1_run_cycle"
+
+      cam_4_run_funny_pre:
+        repo: "cam_4_run_funny_pre"
+
+      cam_5_run_funny_pre2:
+        repo: "cam_5_run_funny_pre2"
+
+      cam_6_run_funny_pre3:
+        repo: "cam_6_run_funny_pre3"
+
+      cam_7_run_funny_killed_cam1:
+        repo: "cam_7_run_funny_killed_cam1"
+
+      cam_8_run_funny_killed_cam2:
+        repo: "cam_8_run_funny_killed_cam2"
+
+      cam_9_run_funny_killed_cam2__cloned_:
+        repo: "cam_9_run_funny_killed_cam2__cloned_"
+
+      cam_11_run_funny_pre1_cam_walk_end:
+        repo: "cam_11_run_funny_pre1_cam_walk_end"
+
+      cam_12_run_funny_pre2_cam_jump:
+        repo: "cam_12_run_funny_pre2_cam_jump"
+
+      cam_13_run_funny_pre3_cam_jump_end:
+        repo: "cam_13_run_funny_pre3_cam_jump_end"
+
+    animations:
+      geralt_locomotion_run_cycle_fast_forward:
+        actor: "geralt"
+        repo: "anim_7981_locomotion_run_cycle_fast_forward"
+        #duration: 0.6333333254
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_dialogue_man_ex_scared_run_loop:
+        actor: "geralt"
+        repo: "anim_7689_dialogue_man_ex_scared_run_loop"
+        #duration: 3.5999999046
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_combat_locomotion_run_cycle_fast_forward_triple_01:
+        actor: "geralt"
+        repo: "anim_5231_combat_locomotion_run_cycle_fast_forward_triple_01"
+        #duration: 2.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_q704_truth_07_geralt_high_standing_determined_gesture_die:
+        actor: "geralt"
+        repo: "anim_471_q704_truth_07_geralt_high_standing_determined_gesture_die"
+        #duration: 11.4333333969
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_bruxa_bruxa_attack_01:
+        actor: "Orianna_bruxa"
+        repo: "anim_944_bruxa_attack_01"
+        #duration: 1.3333333731
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    actor.poses:
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      geralt_dialogue_man_ex_scared_run_loop:
+        actor: "geralt"
+        repo: "pose_1222_dialogue_man_ex_scared_run_loop"
+
+      Orianna_bruxa_bruxa_idle:
+        actor: "Orianna_bruxa"
+        repo: "pose_0_bruxa_idle"
+
+    soundbanks:
+      - grunt_vo_geralt
+      - monster_bruxa
+      - qu_ep2_704_dlg_fairytaleworld
+
+storyboard:
+  #defaults:
+    #placement:
+      #geralt: [[ -141.0027160645, -31.5981483459, -2.1906127930 ], [ 0.0, 0.0, 161.0400695801 ]]
+
+    #actor.pose:
+      #geralt: geralt_high_standing_determined_idle
+
+  section_storyboard_ui:
+    # shot run funny
+    shot_2:
+      - actor.sound: [0.0, Orianna_bruxa, monster_bruxa_voice_breathing_rush]
+      - actor.sound: [0.0, Orianna_bruxa, q704_dettlaff_mistform]
+      #- actor.effect.start: [0.0, Orianna_bruxa, camera_smoke]
+      - actor.placement: [0.0, Orianna_bruxa, [ -143.1136474609, -41.4133186340, -12.8361206055 ], [ 0.0, 0.0, 145.5298767090 ]]
+      - actor.placement.start: [0.0, geralt, [ -140.5775604248, -26.5589027405, -2.5989990234 ], [ 0.0, 0.0, 167.6400756836 ]]
+      - actor.pose: [0.0, geralt_dialogue_man_ex_scared_run_loop]
+      - actor.pose: [0.0, Orianna_bruxa_bruxa_idle]
+      - cam.blend.start: [0.0, cam_4_run_funny_pre]
+      - cam.blend.key: [0.8, cam_11_run_funny_pre1_cam_walk_end]
+      - actor.sound: [0.77, Orianna_bruxa, monster_bruxa_movement_footsteps_jump]
+      - prop.placement.start: [0.0, vampire_vision, [ -138.3153076172, -9.1658334732, -3.7826995850 ], [ 0.0, 0.0, 163.1301879883 ]]
+      - prop.placement.key: [0.8, vampire_vision, [ -140.0038604736, -19.5200233459, -3.0226976776 ], [ 0.0, 0.0, 0.1301879883 ]]
+      #- prop.placement: [0.0, vampire_vision, [ 140.8849334717, 130.9228439331, 120.1906127930 ], [ 0.0, 0.0, 163.1301879883 ]]
+
+    # shot run cycle triple
+    shot_3:
+      - actor.sound: [0.5, Orianna_bruxa, monster_bruxa_voice_feeding_attack]
+      - actor.placement.key: [0.0, geralt, [ -142.2211761475, -35.9799003601, -2.3502807617 ], [ 0.0, 0.0, 163.1301879883 ]]
+      - cam.blend.key: [0.3, cam_12_run_funny_pre2_cam_jump] 
+      - prop.placement.key: [0.3, vampire_vision, [ -140.3508605957, -28.6256999969, 1.6173210144 ], [ 0.0, 0.0, 163.1301879883 ]]
+      - actor.placement.end: [0.999, geralt, [ -143.8766937256, -42.0761642456, -2.8389282227 ], [ 0.0, 0.0, 149.4901733398 ], rapid]
+      - cam.blend.end: [0.999, cam_13_run_funny_pre3_cam_jump_end, rapid]
+      - prop.placement.end: [0.999, vampire_vision, [ -143.4553833008, -41.1247329712, -1.6826915741 ], [ 0.0, 0.0, 163.1301879883 ]]
+
+      - actor.sound: [0.95, Orianna_bruxa, monster_bruxa_combat_bite]
+      - actor.effect.start: [0.8, Orianna_bruxa, blood]
+      - actor.sound: [1.0, Orianna_bruxa, monster_bruxa_voice_breathing_rush_stop]
+      - actor.sound: [1.0, Orianna_bruxa, q704_dettlaff_mistform_stop]
+
+    # shot run funny killed
+    shot_7:
+      - actor.sound: [0.0, Orianna_bruxa, monster_bruxa_voice_breathing_rush_stop]
+      - actor.sound: [0.0, Orianna_bruxa, Stop_monster_bruxa_dialog_human_breath]
+      - actor.sound: [0.0, geralt, grunt_vo_death]
+      - prop.placement: [0.0, vampire_vision, [ 140.8849334717, 130.9228439331, 120.1906127930 ], [ 0.0, 0.0, 163.1301879883 ]]
+      - actor.placement: [0.0, Orianna_bruxa, [ -143.1136474609, -41.4133186340, -2.8361206055 ], [ 0.0, 0.0, 186.2297363281 ]]
+      - actor.lookat: [0.0, Orianna_bruxa, geralt]
+      - actor.placement: [0.001, geralt, [ -143.8766937256, -42.0761642456, -2.9589309692 ], [ 0.0, 0.0, 128.0400695801 ]]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.effect.start: [0.0, geralt, heavy_hit]
+      - actor.effect.start: [0.0, geralt, death_hit]
+      - actor.effect.start: [0.0, Orianna_bruxa, blood_drain]
+      - cam.blend.start: [0.001, cam_7_run_funny_killed_cam1]
+      - actor.anim: 
+          .@pos: [0.0, geralt_q704_truth_07_geralt_high_standing_determined_gesture_die]
+          clipfront: 4.5
+      - cam.blend.end: [0.8, cam_8_run_funny_killed_cam2, smooth]
+      - fade.out: [0.866, 0.93, [0, 0, 0, 255]]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "Orianna_bruxa" ]
+  props: [ "vampire_vision" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: script_call_unmute_gameplay
+
+  script_call_unmute_gameplay:
+    - SCRIPT:
+        function: NTR_LeaveSceneState_S
+    - NEXT: script_music
+
+  script_music:
+    - SCRIPT:
+            function: NTR_PlayMusicScene
+            parameter:
+                - areaName: "toussaint"
+                - eventName: "mus_cs704_sister_lives_teleport"
+                - saveType: "SESB_ClearSaved"
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    - CUE: shot_2
+    # (longest) anim: dialogue_man_ex_scared_run_loop
+    - PAUSE: 2.5
+    # shot run cycle triple
+    - CUE: shot_3
+    - PAUSE: 1.5
+    # shot run funny killed cam1
+    - CUE: shot_7
+    # (longest) anim: q704_truth_07_geralt_high_standing_determined_gesture_die
+    - PAUSE: 6.93
+    # shot run funny killed cam2
+    - NEXT: section_exit
+
+  section_exit:
+    - BLACKSCREEN: true
+    - EXIT

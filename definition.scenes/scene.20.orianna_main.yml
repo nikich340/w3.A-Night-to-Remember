@@ -676,9 +676,9 @@ dialogscript:
             function: NTR_PlayMusicScene
             parameter:
                 - areaName: "toussaint"
-                - eventName: "mus_q704_02_hello_again_regis"
-                - saveType: "SESB_DontSave"
-                #- repeatDelay: 0.5
+                - eventName: "mus_q704_after_feeding"
+                #- eventName: "mus_q704_02_hello_again_regis"
+                - saveType: "SESB_ClearSaved"
     - NEXT: section_storyboard_ui
 
   section_storyboard_ui:

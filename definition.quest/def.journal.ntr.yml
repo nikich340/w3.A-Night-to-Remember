@@ -90,10 +90,12 @@ journals:
               caption: "Wait for Orianna outside the house."
 
           - kill_orianna:
-              caption: "Kill Orianna."
+              caption: "Defeat Orianna."
+              mappins:
+                - [ fight_mappin, 45 ]
 
           - kill_bandits:
-              caption: "Kill Baron's bandits."
+              caption: "Defeat Baron's bandits."
 
           - kill_baron:
-              caption: "Kill Baron Edward."
+              caption: "Defeat Baron Edward."

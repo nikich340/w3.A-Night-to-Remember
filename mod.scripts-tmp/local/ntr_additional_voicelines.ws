@@ -66,4 +66,5 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670928, category, "group 1", "-missing-", 2.6291));
     lines.PushBack(SSbUiExtraLines(2114670929, category, "group 1", "-missing-", 3.1736));
     lines.PushBack(SSbUiExtraLines(2114670932, category, "group 1", "-missing-", 1.0967));
+    lines.PushBack(SSbUiExtraLines(2114670943, category, "group 1", "-missing-", 2.7209));
 }

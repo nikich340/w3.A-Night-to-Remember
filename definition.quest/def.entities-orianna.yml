@@ -85,6 +85,49 @@ templates:
         abilities:
           - ntr_mon_orianna_bruxa
 
+    effects:
+      camera_smoke:
+        ".type": CFXDefinition
+        trackGroups:
+          Default:
+            ".type": CFXTrackGroup
+            tracks:
+              Emitter:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParticles
+                    timeDuration: 0.3000000119
+                    particleSystem: "dlc\\bob\\data\\fx\\cutscenes\\cs704_sister_intro\\cs704_camera_smoke.w2p"
+                    #particleSystem: "dlc\\bob\\data\\fx\\cutscenes\\common\\bob_cs_camera_effect.w2p"
+                    spawner:
+                      ".type": CFXSimpleSpawner
+                      slotNames:
+                        - slot
+                    interpolation:
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+            isExpanded: true
+            trackGroupColor: [ 172, 156, 178, 100 ]
+        length: 0.5
+        loopStart: 0.1000000015
+        loopEnd: 0.200000003
+        showDistance: 50.0
+        isLooped: true
+
   # human bloody
   orianna_human:
     includes:
