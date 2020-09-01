@@ -8,6 +8,58 @@ latent storyscene function NTR_PlayMusicScene( player : CStoryScenePlayer, areaN
 		NTR_PlayMusic(areaName, eventName, saveType);
 	}
 }
+storyscene function NTR_UnequipItemFromSlot_S( player : CStoryScenePlayer, slotName : name  )
+{
+	GetWitcherPlayer().UnequipItemFromSlot( SlotNameToEnum(slotName) );
+}
+storyscene function NTR_TimeScale_S( player : CStoryScenePlayer, timeScale : float ) {
+	SetTimeScaleQuest(timeScale);
+}
+storyscene function NTR_CreateAttachment_S( player : CStoryScenePlayer, id : int ) {
+	var template                 : CEntityTemplate;
+	var entity, attachment       : CEntity;
+	var entityTag, attachmentTag : name;
+	var slotName                 : name;
+	var relativePosition         : Vector;
+	var relativeRotation         : EulerAngles;
+	var result                   : Bool;
+
+	switch (id) {
+		case 1: // bruxa bow 1
+			entityTag = 'ntr_orianna_bruxa';
+			attachmentTag = 'ntr_bruxa_arrow1';
+
+			template = (CEntityTemplate)LoadResource("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
+			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
+			attachment.AddTag(attachmentTag);
+			entity = theGame.GetEntityByTag(entityTag);
+
+			slotName = 'blood_point';
+			relativePosition = Vector(0.05, 0.1, 0);
+			relativeRotation = EulerAngles(0, 200, 0);
+
+			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
+			//NTR_notify("attach = " + result);
+			break;
+
+		case 2: // bruxa bow 2 heart
+			entityTag = 'ntr_orianna_bruxa';
+			attachmentTag = 'ntr_bruxa_arrow2';
+
+			template = (CEntityTemplate)LoadResource("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
+			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
+			attachment.AddTag(attachmentTag);
+			entity = theGame.GetEntityByTag(entityTag);
+
+			slotName = 'blood_point';
+			relativePosition = Vector(0.1, 0.1, 0.1);
+			relativeRotation = EulerAngles(0, 180, 0);
+
+			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
+			//NTR_notify("attach = " + result);
+			break;
+	}
+}
 storyscene function NTR_LeaveSceneState_S( player : CStoryScenePlayer ) {
 	var currentGameState   :   ESoundGameState;
 
@@ -136,4 +188,25 @@ latent storyscene function NTR_MorphNPC_S( player : CStoryScenePlayer, tag : nam
 		Sleep(pauseBefore);
 	}
 	NTR_MorphNPC(tag, morphRatio, blendTime);
+}
+
+latent storyscene function NTR_MorphNPCTimer_S( player : CStoryScenePlayer, tag : name, morphRatio : float, blendTime : float, optional pauseBefore : float ) {
+	var          npcs : array<CNewNPC>;
+	var           npc : CNTROriannaVampireNPC;
+	var             i : int;
+	
+	theGame.GetNPCsByTag(tag, npcs);
+	if (npcs.Size() == 0) {
+		LogChannel('NTR_MorphNPCTimer_S', "[ERROR] NPCs not found by tag <" + tag + ">");
+	}
+	for (i = 0; i < npcs.Size(); i += 1) {
+		npc = (CNTROriannaVampireNPC) npcs[i];
+		if (!npc) {
+			LogChannel('NTR_MorphNPCTimer_S', "[ERROR] NPC does not support timer morph: " + npcs[i]);
+		} else {
+			npc.NTR_morphRatio = morphRatio;
+			npc.NTR_blendTime = blendTime;			
+			npc.AddTimer('morphMe', pauseBefore, false);
+		}
+	}
 }

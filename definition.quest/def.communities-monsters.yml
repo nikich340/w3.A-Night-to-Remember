@@ -14,7 +14,7 @@ communities:
           start_in_ap: false
           attitude: AG_VAMPIRE
           spawn_at: bob/beach_bruxa_spawn
-          guard: [ bob/orianna_guard, 0.0 ]
+          guard: [ bob/orianna_guard, 0.5 ]
 
   comm_orianna_vampire:
     actors:

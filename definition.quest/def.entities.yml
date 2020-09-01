@@ -2,6 +2,21 @@
 # definition of entities
 #
 templates:
+  gaq_nb:
+    includes:
+      - gameplay\board\notice_board_template.w2ent
+
+    entityObject:
+      .type: "W3NoticeBoard"
+      focusModeVisibility: FMV_Interactive
+      streamingDistance: 3
+      entityName: "gaq_noticeboard" 
+      addedNotes:
+        - ".type": ErrandDetailsList
+          errandStringKey: item_name_gaq_notices_gaq_contract1
+          newQuestFact: gaq_contractor
+          addedItemName: gaq_notices_gaq_contract1
+
   footprint_clue:
     includes:
       - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"

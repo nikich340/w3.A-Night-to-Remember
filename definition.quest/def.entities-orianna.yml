@@ -5,11 +5,14 @@ templates:
   # bruxa
   orianna_bruxa:
     includes:
-      - dlc/bob/data/quests/main_quests/quest_files/q704_truth/characters/q704_bruxa.w2ent
-      #- dlc/bob/data/characters/npc_entities/monsters/bruxa.w2ent
+      #- dlc/bob/data/quests/main_quests/quest_files/q704_truth/characters/q704_bruxa.w2ent
+      - dlc/dlcntr/data/entities/oriana/bruxa/q704_bruxa_base.w2ent
     
     entityObject:
-      .type: "COriannaBruxaNPC:CNewNPC"
+      .type: "CNTROriannaVampireNPC"
+      NTR_factOnDeath: "ntr_orianna_bruxa_dead"
+      NTR_factNearlyDead: "ntr_orianna_bruxa_dead"
+      NTR_allowDeathEvent: false
       displayName: "Orianna"
       voiceTag: "ORIANNA BRUXA"
       level: 50
@@ -134,8 +137,8 @@ templates:
       - dlc/bob/data/quests/secondary_npcs/vampire_diva.w2ent
 
     entityObject:
-      .type: "COriannaVampireNPC:CNewNPC"
-      displayName: "Orianna human"
+      .type: "CNTROriannaVampireNPC"
+      displayName: "Orianna"
       voiceTag: "ORIANNA HUMAN"
       streamingDistance: 14
 
@@ -340,7 +343,8 @@ templates:
       - dlc/dlcntr/data/entities/oriana/q704_dettlaff_base.w2ent
 
     entityObject:
-      .type: "COriannaVampireNPC:CNewNPC"
+      .type: "CNTROriannaVampireNPC"
+      NTR_factOnHalfHealth: "ntr_orianna_vampire_halfhealth"
       displayName: "Orianna"
       voiceTag: "ORIANNA VAMPIRE"
       level: 50

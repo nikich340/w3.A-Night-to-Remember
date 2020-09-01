@@ -1,0 +1,1077 @@
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    Orianna_bruxa:
+      template: "dlc\\dlcntr\\data\\entities\\orianna_bruxa.w2ent"
+      appearance: [ "orianna_bruxa_monster" ]
+
+  props:
+    mq7006_item_aerondight_sword:
+      template: "dlc\\bob\\data\\items\\quest_items\\mq7006\\mq7006_item__aerondight_sword.w2ent"
+
+    pc_aard:
+      template: "gameplay\\templates\\signs\\pc_aard.w2ent"
+
+    bolt_01:
+      template: "items\\weapons\\projectiles\\arrows\\bolt_01.w2ent"
+
+  animations:
+    anim_5769_man_geralt_sword_attack_fast_8_rp_40ms:
+      animation: "man_geralt_sword_attack_fast_8_rp_40ms"
+      frames: 48
+
+    anim_979_bruxa_hit_heavy_front:
+      animation: "bruxa_hit_heavy_front"
+      frames: 45
+
+    anim_8196_man_geralt_ex_hit:
+      animation: "man_geralt_ex_hit"
+      frames: 34
+
+    anim_944_bruxa_attack_01:
+      animation: "bruxa_attack_01"
+      frames: 40
+
+    anim_1055_bruxa_walk_cycle_slow_forward:
+      animation: "bruxa_walk_cycle_slow_forward"
+      frames: 30
+
+    anim_5606_man_ger_sword_aard_front_rp:
+      animation: "man_ger_sword_aard_front_rp"
+      frames: 51
+
+    anim_224_bruxa_attack_bite_back_lp:
+      animation: "bruxa_attack_bite_back_lp"
+      frames: 123
+
+    anim_958_bruxa_burning_loop:
+      animation: "bruxa_burning_loop"
+      frames: 188
+
+    anim_1003_bruxa_knockdown_start:
+      animation: "bruxa_knockdown_start"
+      frames: 50
+
+  animations.mimic:
+    mimicsanim_114_geralt_neutral_gesture_breath_closed_face:
+      animation: "geralt_neutral_gesture_breath_closed_face"
+      frames: 90
+
+    mimicsanim_434_geralt_neutral_gesture_smile_syanna_face:
+      animation: "geralt_neutral_gesture_smile_syanna_face"
+      frames: 67
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_245_bruxa_crawl_loop:
+      name: "13"
+      idle_anim: "bruxa_crawl_loop"
+
+    pose_2124_High_Standing_Relaxed_Combat:
+      name: "Standing Relaxed"
+      emotional_state: "Combat"
+      status: "High"
+      idle_anim: "dialogue_witcher_combat_pose_relaxed"
+
+    pose_0_bruxa_idle:
+      idle_anim: "bruxa_idle"
+
+    pose_243_bruxa_burning_loop:
+      name: "188"
+      idle_anim: "bruxa_burning_loop"
+
+    pose_249_bruxa_knockdown_loop:
+      name: "60"
+      idle_anim: "bruxa_knockdown_loop"
+
+    pose_648_man_geralt_gabriel_aim_idle_rp:
+      idle_anim: "man_geralt_gabriel_aim_idle_rp"
+
+  cameras:
+    cam_1_Shot1_cam1:
+      fov: 40.0
+      transform:
+        pos: [ -164.3371124268, 7.6219396591, -9.1122665405 ]
+        rot: [ 0.0, 341.3100280762, 89.5026473999 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.6185245514, 5.6185245514 ]
+        focus: [ 3.1185245514, 4.1185245514 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_Shot1_cam2:
+      fov: 40.0
+      transform:
+        pos: [ -164.4177246094, 8.6290206909, -9.1122665405 ]
+        rot: [ 0.0, 341.5300292969, 85.5426254272 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.4409759045, 5.4409761429 ]
+        focus: [ 2.9409759045, 3.9409759045 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_Shot2_drop_sword:
+      fov: 20.0
+      transform:
+        pos: [ -162.8624725342, 10.2637786865, -8.1122665405 ]
+        rot: [ 0.0, 337.5700378418, 117.9928512573 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.4331789017, 7.4331789017 ]
+        focus: [ 4.9331789017, 5.9331789017 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_4_Shot2_drop_sword_cam2:
+      fov: 25.0
+      transform:
+        pos: [ -163.1058959961, 9.4587440491, -7.7122673988 ]
+        rot: [ 0.0, 334.1600341797, 119.0928573608 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 5.4868078232, 8.4868078232 ]
+        focus: [ 5.9868078232, 6.9868078232 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_5_Shot2_drop_sword_sword1:
+      fov: 25.0
+      transform:
+        pos: [ -164.1367950439, 9.8393239975, -8.3122673035 ]
+        rot: [ 0.0, 337.5700378418, 135.0427246094 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.4331789017, 7.4331789017 ]
+        focus: [ 4.9331789017, 5.9331789017 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_9_Shot2_drop_sword_sword5:
+      fov: 25.0
+      transform:
+        pos: [ -164.7753448486, 7.7928819656, -9.7122659683 ]
+        rot: [ 0.0, 330.8600463867, 143.4026489258 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.4331789017, 7.4331789017 ]
+        focus: [ 4.9331789017, 5.9331789017 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_11_Shot2_drop_sword_sword7_cam:
+      fov: 25.0
+      transform:
+        pos: [ -164.3951263428, 6.5249447823, -10.0872650146 ]
+        rot: [ 0.0, 328.9075927734, 114.4728469849 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.8112092018, 5.8112092018 ]
+        focus: [ 3.3112092018, 4.3112092018 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_12_Shot3_ger:
+      fov: 20.0
+      transform:
+        pos: [ -166.3183898926, 7.2755255699, -9.9872646332 ]
+        rot: [ 0.0, 7.8475975990, 146.7028503418 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.7114243507, 4.7114243507 ]
+        focus: [ 2.2114243507, 3.2114243507 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_13_Shot4_ori_smile:
+      fov: 30.0
+      transform:
+        pos: [ -167.3362579346, 6.6345858574, -9.7872648239 ]
+        rot: [ 0.0, 358.9375915527, 321.5728454590 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.7114243507, 4.7114243507 ]
+        focus: [ 2.2114243507, 3.2114243507 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_14_Shot4_ori_walk:
+      fov: 30.0
+      transform:
+        pos: [ -167.3424377441, 3.4737977982, -9.1872653961 ]
+        rot: [ 0.0, 345.6276245117, 1.7229232788 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.8416147232, 5.8416147232 ]
+        focus: [ 3.3416147232, 4.3416147232 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_15_Shot4_ori_jump:
+      fov: 30.0
+      transform:
+        pos: [ -167.6585845947, 3.2387895584, -9.1872653961 ]
+        rot: [ 0.0, 345.8475952148, 348.6329345703 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.4527990818, 4.4527988434 ]
+        focus: [ 1.9527990818, 2.9527990818 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_17_Shot4_ori_fly2:
+      fov: 30.0
+      transform:
+        pos: [ -167.6585845947, 3.2387895584, -9.1872653961 ]
+        rot: [ 0.0, 0.2576009631, 341.0429077148 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.8265180588, 7.8265180588 ]
+        focus: [ 5.3265180588, 6.3265180588 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_19_Shot4_ori_fly4:
+      fov: 30.0
+      transform:
+        pos: [ -162.8845367432, 13.0030326843, -9.9872646332 ]
+        rot: [ 0.0, 354.7575988770, 339.5028991699 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.8265180588, 7.8265180588 ]
+        focus: [ 5.3265180588, 6.3265180588 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_21_Shot4_ori_walk_fly_cam:
+      fov: 30.0
+      transform:
+        pos: [ -167.3424377441, 3.4737977982, -9.1872653961 ]
+        rot: [ 0.0, 1.0276223421, 342.0328979492 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.8329000473, 5.8329000473 ]
+        focus: [ 3.3329000473, 4.3329000473 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_22_Shot5_take_sword:
+      fov: 30.0
+      transform:
+        pos: [ -165.6503601074, 8.2610788345, -9.9872646332 ]
+        rot: [ 0.0, 346.7276000977, 150.9931335449 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.7366421223, 4.7366418839 ]
+        focus: [ 2.2366421223, 3.2366421223 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_23_Shot5_take_sword_cam2_sheathe:
+      fov: 30.0
+      transform:
+        pos: [ -165.8735046387, 8.2515449524, -9.1872653961 ]
+        rot: [ 0.0, 347.3876037598, 155.5031738281 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.1433367729, 5.1433367729 ]
+        focus: [ 2.6433367729, 3.6433367729 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_24_Shot6_crossbowr:
+      fov: 30.0
+      transform:
+        pos: [ -168.2307128906, 4.3088693619, -9.4872646332 ]
+        rot: [ 0.0, 354.4276123047, 326.3325805664 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 14.2711925507, 17.2711925507 ]
+        focus: [ 14.7711925507, 15.7711925507 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_25_Shot6_crossbow_bow:
+      fov: 30.0
+      transform:
+        pos: [ -161.4688415527, 15.1834707260, -9.9872646332 ]
+        rot: [ 0.0, 345.7376098633, 342.7225036621 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 14.2711925507, 17.2711925507 ]
+        focus: [ 14.7711925507, 15.7711925507 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_26_Shot6_crossbow_pose_anim:
+      fov: 20.0
+      transform:
+        pos: [ -167.3364410400, 5.3693637848, -9.2122659683 ]
+        rot: [ 0.0, 351.0176696777, 329.8250732422 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0954463482, 4.0954465866 ]
+        focus: [ 1.5954463482, 2.5954463482 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_27_Shot6_crossbow_gp_bolt_init:
+      fov: 20.0
+      transform:
+        pos: [ -166.8380584717, 6.3864121437, -9.5122661591 ]
+        rot: [ 0.0, 351.5401916504, 334.6366271973 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 11.7954540253, 14.7954540253 ]
+        focus: [ 12.2954540253, 13.2954540253 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_27_Shot6_crossbow_gp_bolt_init2:
+      fov: 20.0
+      transform:
+        pos: [ -167.3364410400, 5.3693637848, -9.1372661591 ]
+        rot: [ 0.0, 351.0176696777, 329.8250732422 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0954463482, 4.0954465866 ]
+        focus: [ 1.5954463482, 2.5954463482 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_31_Shot6_crossbow_bruxa5:
+      fov: 20.0
+      transform:
+        pos: [ -157.2358856201, 25.5524940491, -10.0622653961 ]
+        rot: [ 0.0, 344.8026733398, 336.7552795410 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.8877428770, 3.8877429962 ]
+        focus: [ 1.3877428770, 2.3877429962 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_32_Shot6_crossbow_bruxa6_ger_walk:
+      fov: 25.0
+      transform:
+        pos: [ -158.6272888184, 21.3468780518, -9.4122657776 ]
+        rot: [ 0.0, 352.7776794434, 151.9551696777 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.8221890926, 4.8221893311 ]
+        focus: [ 2.3221890926, 3.3221890926 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_37_Shot6_crossbow_bruxa6_ger_walk2:
+      fov: 25.0
+      transform:
+        pos: [ -158.0633697510, 22.4059295654, -9.4122657776 ]
+        rot: [ 0.0, 352.7776794434, 151.9551696777 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.0617609024, 6.0617609024 ]
+        focus: [ 3.5617609024, 4.5617609024 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 9999
+    strings-idstart: 0
+
+  placement: "ntr_bob_orianna_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -180.0365447998, -443.1201477051, 11.4495849609 ]
+      #rot: [ 0.0, 94.1600112915, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      Orianna_bruxa:
+        repo: "Orianna_bruxa"
+        by_voicetag: false
+        appearance: "orianna_bruxa_monster"
+        tags: [ "ntr_orianna_bruxa" ]
+
+    props:
+      mq7006_item_aerondight_sword:
+        repo: "mq7006_item_aerondight_sword"
+
+      pc_aard:
+        repo: "pc_aard"
+
+      bolt_01:
+        repo: "bolt_01"
+
+    cameras:
+      cam_1_Shot1_cam1:
+        repo: "cam_1_Shot1_cam1"
+
+      cam_2_Shot1_cam2:
+        repo: "cam_2_Shot1_cam2"
+
+      cam_3_Shot2_drop_sword:
+        repo: "cam_3_Shot2_drop_sword"
+
+      cam_4_Shot2_drop_sword_cam2:
+        repo: "cam_4_Shot2_drop_sword_cam2"
+
+      cam_5_Shot2_drop_sword_sword1:
+        repo: "cam_5_Shot2_drop_sword_sword1"
+
+      cam_9_Shot2_drop_sword_sword5:
+        repo: "cam_9_Shot2_drop_sword_sword5"
+
+      cam_11_Shot2_drop_sword_sword7_cam:
+        repo: "cam_11_Shot2_drop_sword_sword7_cam"
+
+      cam_12_Shot3_ger:
+        repo: "cam_12_Shot3_ger"
+
+      cam_13_Shot4_ori_smile:
+        repo: "cam_13_Shot4_ori_smile"
+
+      cam_14_Shot4_ori_walk:
+        repo: "cam_14_Shot4_ori_walk"
+
+      cam_15_Shot4_ori_jump:
+        repo: "cam_15_Shot4_ori_jump"
+
+      cam_17_Shot4_ori_fly2:
+        repo: "cam_17_Shot4_ori_fly2"
+
+      cam_19_Shot4_ori_fly4:
+        repo: "cam_19_Shot4_ori_fly4"
+
+      cam_21_Shot4_ori_walk_fly_cam:
+        repo: "cam_21_Shot4_ori_walk_fly_cam"
+
+      cam_22_Shot5_take_sword:
+        repo: "cam_22_Shot5_take_sword"
+
+      cam_23_Shot5_take_sword_cam2_sheathe:
+        repo: "cam_23_Shot5_take_sword_cam2_sheathe"
+
+      cam_24_Shot6_crossbowr:
+        repo: "cam_24_Shot6_crossbowr"
+
+      cam_25_Shot6_crossbow_bow:
+        repo: "cam_25_Shot6_crossbow_bow"
+
+      cam_26_Shot6_crossbow_pose_anim:
+        repo: "cam_26_Shot6_crossbow_pose_anim"
+
+      cam_27_Shot6_crossbow_gp_bolt_init:
+        repo: "cam_27_Shot6_crossbow_gp_bolt_init"
+
+      cam_27_Shot6_crossbow_gp_bolt_init2:
+        repo: "cam_27_Shot6_crossbow_gp_bolt_init2"
+
+      cam_31_Shot6_crossbow_bruxa5:
+        repo: "cam_31_Shot6_crossbow_bruxa5"
+
+      cam_32_Shot6_crossbow_bruxa6_ger_walk:
+        repo: "cam_32_Shot6_crossbow_bruxa6_ger_walk"
+
+      cam_37_Shot6_crossbow_bruxa6_ger_walk2:
+        repo: "cam_37_Shot6_crossbow_bruxa6_ger_walk2"
+
+    animations:
+      geralt_man_geralt_sword_attack_fast_8_rp_40ms:
+        actor: "geralt"
+        repo: "anim_5769_man_geralt_sword_attack_fast_8_rp_40ms"
+        #duration: 1.6000000238
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_bruxa_bruxa_hit_heavy_front:
+        actor: "Orianna_bruxa"
+        repo: "anim_979_bruxa_hit_heavy_front"
+        #duration: 1.5000000000
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_man_geralt_ex_hit:
+        actor: "geralt"
+        repo: "anim_8196_man_geralt_ex_hit"
+        #duration: 1.1333333254
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_bruxa_bruxa_attack_01:
+        actor: "Orianna_bruxa"
+        repo: "anim_944_bruxa_attack_01"
+        #duration: 1.3333333731
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_bruxa_bruxa_walk_cycle_slow_forward:
+        actor: "Orianna_bruxa"
+        repo: "anim_1055_bruxa_walk_cycle_slow_forward"
+        #duration: 1.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_man_ger_sword_aard_front_rp:
+        actor: "geralt"
+        repo: "anim_5606_man_ger_sword_aard_front_rp"
+        #duration: 1.7000000477
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_bruxa_bruxa_attack_bite_back_lp:
+        actor: "Orianna_bruxa"
+        repo: "anim_224_bruxa_attack_bite_back_lp"
+        #duration: 4.0999999046
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_bruxa_bruxa_burning_loop:
+        actor: "Orianna_bruxa"
+        repo: "anim_958_bruxa_burning_loop"
+        #duration: 6.2666668892
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_bruxa_bruxa_knockdown_start:
+        actor: "Orianna_bruxa"
+        repo: "anim_1003_bruxa_knockdown_start"
+        #duration: 1.6666666269
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    animations.mimic:
+      geralt_geralt_neutral_gesture_breath_closed_face:
+        actor: "geralt"
+        repo: "mimicsanim_114_geralt_neutral_gesture_breath_closed_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      Orianna_bruxa_geralt_neutral_gesture_smile_syanna_face:
+        actor: "Orianna_bruxa"
+        repo: "mimicsanim_434_geralt_neutral_gesture_smile_syanna_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+    actor.poses:
+      geralt_man_geralt_gabriel_aim_idle_rp:
+        actor: "geralt"
+        repo: "pose_648_man_geralt_gabriel_aim_idle_rp"
+
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      Orianna_bruxa_bruxa_crawl_loop:
+        actor: "Orianna_bruxa"
+        repo: "pose_245_bruxa_crawl_loop"
+
+      geralt_High_Standing_Relaxed_Combat:
+        actor: "geralt"
+        repo: "pose_2124_High_Standing_Relaxed_Combat"
+
+      Orianna_bruxa_bruxa_idle:
+        actor: "Orianna_bruxa"
+        repo: "pose_0_bruxa_idle"
+
+      Orianna_bruxa_bruxa_burning_loop:
+        actor: "Orianna_bruxa"
+        repo: "pose_243_bruxa_burning_loop"
+
+      Orianna_bruxa_bruxa_knockdown_loop:
+        actor: "Orianna_bruxa"
+        repo: "pose_249_bruxa_knockdown_loop"
+
+    soundbanks:
+      - physics_collisions
+      - monster_bruxa
+      - combat
+
+storyboard:
+  #defaults:
+    #placement:
+      #geralt: [[ -166.7066955566, 5.9973936081, -11.1109619141 ], [ 0.0, 0.0, 341.8500061035 ]]
+      #Orianna_bruxa: [[ -166.8043518066, 7.9142222404, -11.0442504883 ], [ 0.0, 0.0, 173.4700622559 ]]
+
+    #actor.pose:
+      #geralt: geralt_man_geralt_gabriel_aim_idle_rp
+      #Orianna_bruxa: Orianna_bruxa_bruxa_crawl_loop
+
+  section_storyboard_ui:
+    # shot Shot1 cam1
+    shot_1:
+      - prop.placement: [0.0, bolt_01, [ -166.5621643066, 6.9380402565, -19.6555137634 ], [ 353.0975036621, 355.2424926758, 340.1174316406 ]]
+      - prop.placement: [0.0, pc_aard, [ -167.4322662354, 4.7720499039, -9.1359071732 ], [ 0.0, 0.0, 333.7099914551 ]]
+      
+      - actor.placement: [0.0, geralt, [ -167.4704437256, 6.1612763405, -11.1381835938 ], [ 0.0, 0.0, 355.2700805664 ]]
+      - actor.placement: [0.0, Orianna_bruxa, [ -166.8043518066, 7.9142222404, -11.0442504883 ], [ 0.0, 0.0, 173.4700622559 ]]
+      - actor.equip.right: [0.0, geralt, silversword]
+      - actor.pose: [0.0, geralt_High_Standing_Relaxed_Combat]
+      - actor.pose: [0.0, Orianna_bruxa_bruxa_idle]
+      - cam.blend.start: [0.0, cam_1_Shot1_cam1]
+      - actor.anim: 
+          .@pos: [0.0, geralt_man_geralt_sword_attack_fast_8_rp_40ms]
+          blendout: 0.6
+      - actor.effect.start: [0.2, Orianna_bruxa, heavy_hit]
+      - actor.anim: 
+          .@pos: [0.2, Orianna_bruxa_bruxa_hit_heavy_front]
+          blendin: 0.3
+          blendout: 0.3
+          clipend: 1.4
+      - actor.lookat: [0.0, geralt, Orianna_bruxa]
+      - actor.lookat: [0.0, Orianna_bruxa, geralt]
+
+    # shot Shot1 cam2
+    shot_2:
+      - actor.placement.start: [0.05, geralt, [ -167.4704437256, 6.1612763405, -11.1381835938 ], [ 0.0, 0.0, 355.2700805664 ]]
+      - actor.placement.end: [0.9, geralt, [ -167.3076629639, 8.1290493011, -11.1655693054 ], [ 0.0, 0.0, 355.2700805664 ]]
+      #- actor.placement: [0.0, geralt, [ -167.3076629639, 8.1290493011, -11.1655693054 ], [ 0.0, 0.0, 355.2700805664 ]]
+      - actor.placement.start: [0.55, Orianna_bruxa, [ -166.8043518066, 7.9142222404, -11.0442504883 ], [ 0.0, 0.0, 173.4700622559 ]]
+      - actor.placement.end: [0.95, Orianna_bruxa, [ -166.6088256836, 9.6232128143, -11.1304063797 ], [ 0.0, 0.0, 173.4700622559 ]]
+      - actor.anim: 
+          .@pos: [0.5, Orianna_bruxa_bruxa_attack_01]
+          blendin: 0.3
+          blendout: 0.3
+
+      - cam.blend.end: [0.0, cam_2_Shot1_cam2, smooth]
+      #- actor.anim: [0.0, geralt_man_geralt_sword_attack_fast_8_rp_40ms]
+      #- actor.anim: [0.0, Orianna_bruxa_bruxa_hit_heavy_front]
+
+    # shot Shot2 drop sword
+    shot_3:
+      - actor.unequip.right: [0.0, geralt]
+      #- actor.placement: [0.0, geralt, [ -167.3076629639, 8.1290493011, -11.1699829102 ], [ 0.0, 0.0, 355.2700805664 ]]
+      #- actor.placement: [0.0, Orianna_bruxa, [ -166.6088256836, 9.6232128143, -11.1276245117 ], [ 0.0, 0.0, 173.4700622559 ]]
+      - cam.blend.start: [0.0, cam_3_Shot2_drop_sword]
+
+      - actor.anim: 
+          .@pos: [0.0, geralt_man_geralt_ex_hit]
+
+      - actor.placement.start: [0.7, Orianna_bruxa, [ -166.6088256836, 9.6232128143, -11.1304063797 ], [ 0.0, 0.0, 173.4700622559 ]]
+      - actor.placement.end: [0.9, Orianna_bruxa, [ -166.7919616699, 8.0196189880, -11.1183967590 ], [ 0.0, 0.0, 173.4700622559 ]]
+      
+      - prop.placement.start: [0.0, mq7006_item_aerondight_sword, [ -166.9454803467, 7.7557840347, -10.1577787399 ], [ 21.8900394440, 20.2399959564, 337.7799682617 ]]
+      - prop.placement.key: [0.25, mq7006_item_aerondight_sword, [ -166.5250549316, 7.3243374825, -10.1577787399 ], [ 50.4900588989, 40.3699989319, 338.4399719238 ]]
+      - prop.placement.key: [0.37, mq7006_item_aerondight_sword, [ -166.4548492432, 6.7760062218, -10.6977787018 ], [ 72.1601181030, 61.8200378418, 344.8199768066 ]]
+      - prop.placement.key: [0.5, mq7006_item_aerondight_sword, [ -166.3493499756, 6.2045001984, -10.9766817093 ], [ 72.1601181030, 86.6800994873, 344.8199768066 ]]
+      - prop.placement.key: [0.55, mq7006_item_aerondight_sword, [ -166.3064880371, 6.1931815147, -11.0272827148 ], [ 71.9401168823, 79.9700775146, 342.2899780273 ]]
+      - prop.placement.key: [0.6, mq7006_item_aerondight_sword, [ -166.2814483643, 6.1437954903, -10.9672832489 ], [ 71.9401168823, 86.6800155640, 342.2899780273 ]]
+      - prop.placement.end: [0.65, mq7006_item_aerondight_sword, [ -166.2728881836, 6.0998306274, -11.0155735016 ], [ 71.9401168823, 77.9625930786, 342.2899780273 ]]
+      - actor.sound: [0.55, geralt, dialog_scene_sword_drop_on_ground]
+
+      - cam.blend.end: [0.999, cam_4_Shot2_drop_sword_cam2]
+
+    # show sword
+    shot_4:
+      - actor.placement: [0.0, geralt, [ -167.7475128174, 5.2594757080, -11.1326293945 ], [ 0.0, 0.0, 1.4300765991 ]]
+      - actor.placement: [0.0, Orianna_bruxa, [ -166.2909851074, 8.2624502182, -11.1190795898 ], [ 0.0, 0.0, 153.1199798584 ]]
+      - cam: [0.0, cam_11_Shot2_drop_sword_sword7_cam]
+
+    shot_5:
+      - cam: [0.0, cam_12_Shot3_ger]
+      - actor.anim.mimic: [0.0, geralt_geralt_neutral_gesture_breath_closed_face]
+      - actor.lookat: 
+          .@pos: [0.0, geralt, [ 1.4851540327, 0.3275219798, 0.1758085489 ]]
+          turn: head
+          speed: 2.0 # instant
+
+      - actor.lookat: 
+          .@pos: [0.2, geralt, Orianna_bruxa]
+          turn: head
+
+    shot_6:
+      - cam: [0.0, cam_13_Shot4_ori_smile]
+      - actor.lookat: 
+          .@pos: [0.0, Orianna_bruxa, [ -1.0758172274, 1.9365570545, 0.0665884018 ]]
+          turn: head
+          speed: 2.0
+      - actor.lookat: 
+          .@pos: [0.2, Orianna_bruxa, geralt]
+          turn: head
+      - actor.anim.mimic: [0.0, Orianna_bruxa_geralt_neutral_gesture_smile_syanna_face]
+
+    # walk
+    shot_7:
+      - cam.blend.start: [0.0, cam_13_Shot4_ori_smile]
+      - cam.blend.end: [0.95, cam_14_Shot4_ori_walk, smooth]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_bruxa_bruxa_walk_cycle_slow_forward]
+          blendin: 0.3
+          stretch: 1.5
+      - actor.anim:
+          .@pos: [0.85, geralt_man_ger_sword_aard_front_rp]
+          blendin: 0.3
+          blendout: 0.4
+
+    shot_8:
+      - actor.placement: [0.0, Orianna_bruxa, [ -167.0606994629, 6.7438063622, -11.1210279465 ], [ 0.0, 0.0, 153.1199951172 ]]
+      - actor.anim:
+          .@pos: [0.0, Orianna_bruxa_bruxa_attack_bite_back_lp]
+          blendin: 0.1
+          blendout: 0.0
+          clipend: 0.4
+          stretch: 1.3
+
+      - prop.effect.start: [0.95, pc_aard, cone_lv3]
+      - cam.blend.start: [0.95, cam_14_Shot4_ori_walk]
+
+    # fly!
+    shot_9:
+      - actor.sound: [0.0, Orianna_bruxa, Set_Switch_bruxa_state_black_blood]
+      - cam.blend.end: [0.2, cam_21_Shot4_ori_walk_fly_cam, smooth]
+
+      - actor.placement.start: [0.0, Orianna_bruxa, [ -167.3654785156, 5.7761363983, -10.3874692917 ], [ 0.0, 0.0, 153.1199951172 ]]
+      - actor.placement.key: [0.6, Orianna_bruxa, [ -165.7564392090, 8.7453308105, -8.9774703979 ], [ 359.2300109863, 40.9199943542, 148.6099548340 ]]
+      - actor.placement.key: [0.8, Orianna_bruxa, [ -164.1976165771, 11.1757316589, -9.4574699402 ], [ 355.8200073242, 48.8399391174, 154.6599578857 ]]
+
+      - actor.pose: [0.5, Orianna_bruxa_bruxa_burning_loop]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_bruxa_bruxa_burning_loop]
+          blendin: 0.1
+          blendout: 0.1
+          clipend: 1.0
+          stretch: 0.5
+
+    shot_10:
+      - actor.anim: 
+          .@pos: [0.0, Orianna_bruxa_bruxa_knockdown_start]
+          blendin: 0.3
+          blendout: 0.0
+      - actor.placement.end: [0.1, Orianna_bruxa, [ -161.0006103516, 17.6725406647, -11.0192651749 ], [ 352.0799865723, 355.6301879883, 118.1400756836 ]]
+      - actor.sound: [0.2, Orianna_bruxa, monster_bruxa_movement_bodyfall]
+      - actor.pose: [0.5, Orianna_bruxa_bruxa_knockdown_loop]
+      - actor.equip.right: [0.9, geralt, silversword]
+
+    # shot Shot5 take sword
+    shot_11:
+      #- actor.equip.right: [0.001, geralt, silversword]
+      - prop.placement: [0.0, mq7006_item_aerondight_sword, [ -166.2728881836, 6.0998306274, -21.0155735016 ], [ 71.9401168823, 77.9625930786, 342.2899780273 ]]
+      - actor.placement: [0.0, geralt, [ -166.7066955566, 5.9973936081, -11.1109619141 ], [ 0.0, 0.0, 341.8500061035 ]]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - cam.blend.start: [0.0, cam_22_Shot5_take_sword]
+      - cam.blend.end: [0.6, cam_23_Shot5_take_sword_cam2_sheathe, smooth]
+      - actor.anim:  # 2.0
+          actor: geralt
+          .@pos: [0.0, anim_8993_man_work_loot_ground_stop]
+          blendin: 0.0
+          blendout: 0.4
+
+      - actor.unequip.right: [0.75, geralt]
+      - actor.anim:  # 2.1
+          actor: geralt
+          .@pos: [0.4324, anim_5898_man_geralt_sword_sheathe_silver_lp]
+          blendin: 0.4
+          blendout: 0.4
+
+      - actor.pose: [0.8, Orianna_bruxa_bruxa_crawl_loop]
+
+    shot_12:
+      - cam: [0.0, cam_24_Shot6_crossbowr]
+      - actor.anim:  # 4.7333
+          actor: geralt
+          .@pos: [0.0, anim_7791_inventory_unsheathe_crossbow]
+          blendin: 0.4
+          clipend: 3.5
+          blendout: 0.7
+
+      - actor.pose: [0.5, geralt_man_geralt_gabriel_aim_idle_rp]
+      - actor.placement.start: [0.0, Orianna_bruxa, [ -161.1207427979, 17.8760528564, -11.0701904297 ], [ 0.0, 0.0, 154.4401245117 ]]
+      ### 4
+      #- actor.placement.end: [1.0, Orianna_bruxa, [ -157.8590240479, 24.6972064972, -11.0896921158 ], [ 0.0, 0.0, 154.4401550293 ]]
+      ### 5
+      - actor.placement.end: [1.0, Orianna_bruxa, [ -156.7319641113, 27.0538616180, -11.0896606445 ], [ 0.0, 0.0, 154.4401550293 ]]
+      
+    shot_13:
+      - cam: [0.0, cam_27_Shot6_crossbow_gp_bolt_init2]
+      - cam.blend.start: [0.1, cam_27_Shot6_crossbow_gp_bolt_init2, rapid]
+      - cam.blend.end: [0.95, cam_31_Shot6_crossbow_bruxa5, rapid]
+
+      - actor.anim:
+          actor: geralt
+          #duration 1.0333333 sec
+          .@pos: [0.0, anim_6342_man_geralt_gabriel_aim_idle_rp]
+          clipend: 0.17
+          stretch: 20.0
+          blendin: 0.0
+          blendout: 0.0
+
+      - actor.anim:
+          actor: Orianna_bruxa
+          #duration 0.43333334 sec
+          .@pos: [0.0, anim_965_bruxa_crawl_loop]
+          clipend: 0.17
+          stretch: 20.0
+          blendin: 0.0
+          blendout: 0.0
+
+      - prop.placement.start: [0.1, bolt_01, [ -166.5621643066, 6.9380402565, -9.6555137634 ], [ 0.0, 0.0, 340.1174316406 ]]
+      #- prop.placement.end: [0.99, bolt_01, [ -156.5714569092, 27.1884765625, -10.6355133057 ], [ 353.0975036621, 355.2424926758, 336.1299743652 ], smooth]
+      - prop.placement.end: [0.95, bolt_01, [ -156.4882965088, 27.3263320923, -10.6355133057 ], [ 0.0, 0.0, 335.2224731445 ]]
+      
+      - actor.sound: [0.95, Orianna_bruxa, monster_bruxa_voice_pain]
+      - actor.effect.start: [1.0, Orianna_bruxa, light_hit]
+      - actor.sound: [0.07, geralt, weapon_crossbow_shot]
+      - actor.anim.mimic:
+          actor: Orianna_bruxa
+          .@pos: [0.0, mimicsanim_496_geralt_reaction_horrified_face]
+          #.@pos: [0.0, mimicsanim_503_geralt_reaction_rage_face]
+          weight: 0.7
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 2.0
+          clipend: 2.34
+          stretch: 10.0
+
+    shot_ger_walk:
+      - actor.placement: [0.0, geralt, [ -160.3209838867, 18.0373783112, -11.0825195313 ], [ 0.0, 0.0, 334.5899353027 ]]
+      - actor.placement: [0.0, Orianna_bruxa, [ -155.6281738281, 29.3619194031, -11.1015014648 ], [ 352.0799865723, 355.6301879883, 154.4401550293 ]]
+      - cam.blend.start: [0.0, cam_32_Shot6_crossbow_bruxa6_ger_walk, rapid]
+      - cam.blend.end: [1.0, cam_37_Shot6_crossbow_bruxa6_ger_walk2, rapid]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_6287_ex_man_gabriel_walk_cycle_fast_forward]
+          blendin: 0.0
+          blendout: 0.0
+          stretch: 1.5
+      - actor.anim.additive:
+          actor: geralt
+          .@pos: [0.0, anim_6382_man_geralt_gabriel_reload_front]
+          #.@pos: [0.0, anim_6384_man_geralt_gabriel_reload_front_2_smooth]
+          blendin: 0.0
+          blendout: 0.0
+      
+#[MOD_SoundEventsUi] SOUND EVENT: [weapon_crossbow_shot], BANK NAME: [combat.bnk]
+#[MOD_SoundEventsUi] SOUND EVENT: [weapon_geralt_crossbow_reload], BANK NAME: [combat.bnk] 
+#[MOD_SoundEventsUi] SOUND EVENT: [weapon_crossbow_reload_stage5], BANK NAME: [combat.bnk]
+#[MOD_SoundEventsUi] SOUND EVENT: [weapon_crossbow_reload_stage6], BANK NAME: [combat.bnk]
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "Orianna_bruxa" ]
+  props: [ "mq7006_item_aerondight_sword", "pc_aard", "bolt_01" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: script_call_unmute_gameplay
+
+  script_call_unmute_gameplay:
+    - SCRIPT:
+        function: NTR_LeaveSceneState_S
+  #  - NEXT: script_music
+
+  #script_music:
+  #  - SCRIPT:
+  #          function: NTR_PlayMusicScene
+  #          parameter:
+  #              - areaName: "toussaint"
+  #              - eventName: "mus_cs704_detalff_destroyed"
+  #              - saveType: "SESB_ClearSaved"
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot Shot1 cam1
+    - CUE: shot_1
+    # (longest) anim: man_geralt_sword_attack_fast_8_rp_40ms
+    - PAUSE: 1.0000000238
+    # shot Shot1 cam2
+    - CUE: shot_2
+    # (longest) anim: man_geralt_sword_attack_fast_8_rp_40ms
+    - PAUSE: 0.6
+    - CUE: shot_3
+    # (longest) anim: bruxa_attack_01
+    - PAUSE: 1.1333333254
+    # sword close
+    - CUE: shot_4
+    - PAUSE: 1.0
+
+    # geralt face
+    - CUE: shot_5
+    - PAUSE: 0.8
+
+    # ori smile
+    - CUE: shot_6
+    # (longest) anim: geralt_neutral_gesture_smile_syanna_face
+    - PAUSE: 1.2
+
+    # ori walk
+    - CUE: shot_7
+    - PAUSE: 1.5
+
+    # ori jump
+    - CUE: shot_8
+    - PAUSE: 0.4
+
+    # ori fly
+    - CUE: shot_9
+    - PAUSE: 1.0
+    - CUE: shot_10
+    - PAUSE: 1.66
+
+    # get sword
+    - CUE: shot_11
+    - PAUSE: 3.7
+
+    # get bow
+    - CUE: shot_12
+    - PAUSE: 3.5
+
+    #  - NEXT: script_start_slowmo
+
+    #script_start_slowmo:
+    #  - SCRIPT:
+    #      function: NTR_TimeScale_S
+    #     parameter:
+    #        - timeScale: 0.1
+
+    #  - NEXT: section_storyboard_ui2
+
+    #section_storyboard_ui2:
+    ### Time Scaled ! ###
+    - CUE: shot_13
+    - PAUSE: 3.0
+    - PAUSE: 0.4
+
+    - CUE: shot_ger_walk
+    - PAUSE: 1.5
+
+    - NEXT: script_attach_arrow1
+
+  script_attach_arrow1:
+    - SCRIPT:
+        function: NTR_CreateAttachment_S
+        parameter:
+          - id: 1
+
+    - NEXT: section_exit
+
+  section_exit:
+    - CAMERA_BLEND: 2.0
+    - EXIT

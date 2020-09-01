@@ -346,6 +346,27 @@ exec function timeScale(timeScale : float) {
 	SetTimeScaleQuest(timeScale);
 }
 
+exec function animScale(entityTag : name, timeScale : float) {
+	var npc : CNewNPC;
+	var slowdownCauserId : int;
+
+	npc = (CNewNPC)theGame.GetNPCByTag(entityTag);
+	if (timeScale != -1) {
+		/*if (FactsQuerySum("ntr_animscale_id") != 0) {
+			NTR_notify("ERROR! animScale already active!");
+			return;
+		}*/
+		slowdownCauserId = npc.SetAnimationSpeedMultiplier( timeScale );
+		FactsAdd("ntr_animscale_id", slowdownCauserId);
+		NTR_notify("OK! slowdownCauserId = " + slowdownCauserId);
+	} else {
+		slowdownCauserId = FactsQuerySum("ntr_animscale_id");
+		npc.ResetAnimationSpeedMultiplier(slowdownCauserId);
+		NTR_notify("OK! Reset slowdownCauserId = " + slowdownCauserId);
+		FactsSet("ntr_animscale_id", 0);
+	}
+}
+
 exec function orianaDoor(newState : string, optional smoooth : bool, optional dontBlockInCombat : bool ) {
 	NTR_DoorChangeState('q704_oriana_feeding_room', newState, , , smoooth, dontBlockInCombat);
 }
@@ -647,8 +668,42 @@ exec function oribru() {
 	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
 	ent = (CEntity)theGame.CreateEntity(template, pos);
 	ent.AddTag('oriana_test2');
-	ent.ApplyAppearance('bruxa_monster_gameplay');
-	NTR_TuneNPC( 'oriana_test2', GetWitcherPlayer().GetLevel() + 5, "Hostile", "None", false, "ENGT_Quest", -1 );
+	ent.AddTag('ntr_orianna_bruxa');
+	ent.ApplyAppearance('orianna_bruxa_morph');
+	NTR_TuneNPC( 'oriana_test2', GetWitcherPlayer().GetLevel(), "Neutral", "None", false, "ENGT_Quest", -1 );
+}
+/*
+scream
+fx - bruxa_base
+dodge_smoke - bruxa_base(pelvis)
+blood_point - bruxa_base(torso2)
+blood_back_point - bruxa_base(torso)
+ground
+fx_cast_push
+*/
+exec function attbru(slotName : name, optional x, y, z, pitch, yaw, roll : float, optional breakE : Bool) {
+	var template                 : CEntityTemplate;
+	var entity, attachment       : CEntity;
+	var entityTag, attachmentTag : name;
+	var relativePosition         : Vector;
+	var relativeRotation         : EulerAngles;
+	var result                   : Bool;
+
+
+			entityTag = 'ntr_orianna_bruxa';
+			attachmentTag = 'ntr_bruxa_arrow2';
+
+			template = (CEntityTemplate)LoadResource("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
+			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
+			attachment.AddTag(attachmentTag);
+			entity = theGame.GetEntityByTag(entityTag);
+
+			slotName = 'blood_point';
+			relativePosition = Vector(0.1, 0.1, 0.1);
+			relativeRotation = EulerAngles(0, 180, 0);
+
+			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
+			NTR_notify("attach = " + result);
 }
 exec function oricloak() {
 	var      template : CEntityTemplate;

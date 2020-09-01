@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 798, saved: 2020-08-27 12:07:49)
+# (version: 805, saved: 2020-08-31 23:23:42)
 #
 ---
 structure:
@@ -14,6 +14,33 @@ structure:
             - objective.Inv_Inn: Activate
             - waituntil.side_area
             - waituntil.new_wait_until_realtime_elapsed
+        
+        scene.21_to_bruxa_scene:
+          ".editor":
+            pos: [ 3544.0, -67.0 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 21.orianna_to_bruxa.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: true
+          next.Output:
+            - script.Play_fangs_music
+            - spawn.bruxa_spawn
+            - despawn.despawn_orihum
+            - changelayers.show_dress
+        
+        scene.23_orianna_bruxa_dies:
+          ".editor":
+            pos: [ 4690.0, 45.0 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 23.orianna_bruxa_dies.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: true
+          next.Output:
+            - script.NTR_SaveLock_unlock
         
         scene.KILL_SCENE:
           ".editor":
@@ -107,21 +134,6 @@ structure:
           _fadein: true
           next.Output:
             - script.Try_to_reset_music
-        
-        scene.to_bruxa_scene:
-          ".editor":
-            pos: [ 3470.9702148438, -45.8725280762 ]
-            in: [ Input ]
-            out: [ Output ]
-          scene: 21.orianna_to_bruxa.yml
-          placement: bob/orianna
-          interruptable: true
-          _fadein: true
-          next.Output:
-            - script.Play_fangs_music
-            - spawn.bruxa_spawn
-            - despawn.despawn_orihum
-            - changelayers.show_dress
         
         waituntil.1s:
           elapsed: "00:00:01"
@@ -221,11 +233,11 @@ structure:
         waituntil.Wait_bruxa_dead:
           factdb: [ ntr_orianna_bruxa_dead, ">=", 1 ]
           ".editor":
-            pos: [ 4404.0, -8.0 ]
+            pos: [ 4308.0, -74.0 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - script.NTR_SaveLock_unlock
+            - script.new_change_appearance
         
         waituntil.footprints_found:
           factdb: [ ntr_orianna_side_footprints_found, ">=", 1 ]
@@ -300,17 +312,17 @@ structure:
         waituntil.wait_50perc_health:
           factdb: [ ntr_orianna_vampire_halfhealth, ">=", 1 ]
           ".editor":
-            pos: [ 3268.0, 59.0 ]
+            pos: [ 3251.0, 74.0 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - scene.to_bruxa_scene: Input
+            - settime.00_30
             - despawn.despawn_vampire
             - script.Hide_fight_indicator
         
         script.Bruxa_fight_indicator:
           ".editor":
-            pos: [ 4183.0, -5.0 ]
+            pos: [ 4147.0, -11.0 ]
             in: [ In ]
             out: [ Out ]
           function: ShowBossFightIndicator
@@ -335,7 +347,7 @@ structure:
         
         script.Gameplay_music:
           ".editor":
-            pos: [ 4799.0, -167.0 ]
+            pos: [ 5016.0, -162.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
@@ -414,7 +426,7 @@ structure:
         
         script.NTR_SaveLock_unlock:
           ".editor":
-            pos: [ 4614.0, -102.0 ]
+            pos: [ 4878.0, -86.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_SaveLock
@@ -448,7 +460,7 @@ structure:
         
         script.Play_fangs_music:
           ".editor":
-            pos: [ 3654.2788085938, -151.9602203369 ]
+            pos: [ 3744.0, -152.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
@@ -579,6 +591,18 @@ structure:
             - overrideCustomLogic: false
           next: ".done"
         
+        script.new_change_appearance:
+          ".editor":
+            pos: [ 4441.0, 6.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: AppearanceChange
+          parameter:
+            - npcsTag: cname_ntr_orianna_bruxa
+            - appearanceName: cname_orianna_bruxa_morph
+          next:
+            - settime.01_00
+        
         script.new_fact_checker_branch:
           ".editor":
             pos: [ 1795.6088867188, 408.0973510742 ]
@@ -602,7 +626,7 @@ structure:
             - logChannel: cname_NTR
             - msg: peaceful
           next:
-            - out
+            - script.NTR_SaveLock_unlock
         
         script.reset_fact:
           ".editor":
@@ -629,7 +653,7 @@ structure:
         
         changelayers.show_dress:
           ".editor":
-            pos: [ 3647.0, -231.0 ]
+            pos: [ 3746.0, -255.0 ]
             hint: show-only
             in: []
             out: []
@@ -654,7 +678,7 @@ structure:
         
         spawn.bruxa_spawn:
           ".editor":
-            pos: [ 3650.9697265625, 56.0305709839 ]
+            pos: [ 3692.0, 44.0 ]
             hint: spawn-only
             in: []
             out: []
@@ -689,7 +713,7 @@ structure:
         
         despawn.despawn_orihum:
           ".editor":
-            pos: [ 3654.7197265625, 142.2805480957 ]
+            pos: [ 3686.0, 157.0 ]
             hint: despawn-only
             in: []
             out: []
@@ -753,6 +777,18 @@ structure:
           track: false
           next: ".done"
         
+        settime.00_30:
+          ".editor": [ 3399.0, 5.0 ]
+          time: "00:30"
+          next:
+            - scene.21_to_bruxa_scene: Input
+        
+        settime.01_00:
+          ".editor": [ 4569.0, 127.0 ]
+          time: "01:00"
+          next:
+            - scene.23_orianna_bruxa_dies: Input
+        
         settime.Set_11pm:
           ".editor": [ 2413.0, -41.0 ]
           time: "22:30"
@@ -762,7 +798,7 @@ structure:
         
         settime.set_1am:
           ".editor": [ 2868.0, -71.0 ]
-          time: "00:30"
+          time: "00:00"
           next:
             - scene.main_orianna_scene: Input
         
@@ -784,6 +820,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 5028.0, -209.0 ]
+          ".editor": [ 5304.0, -168.0 ]
           next: ".done"
         

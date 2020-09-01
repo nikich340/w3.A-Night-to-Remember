@@ -728,12 +728,12 @@ dialogscript:
 
   script_call_morph_forward:
     - SCRIPT:
-        function: NTR_MorphNPC_S
+        function: NTR_MorphNPCTimer_S
         parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
           - tag: CNAME_ntr_orianna_vampire
           - morphRatio: 1.0
-          - blendTime: 1.2
-          - pauseBefore: 0.5
+          - blendTime: 1.1
+          - pauseBefore: 0.4
     - NEXT: section_fight2
 
   section_fight2:

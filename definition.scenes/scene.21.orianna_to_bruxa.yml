@@ -112,30 +112,30 @@ repository:
 
   cameras:
     cam_1_Shot1:
-      fov: 35.0
+      fov: 30.0
       transform:
-        pos: [ -129.4680786133, 59.2078399658, -6.0220546722 ]
-        rot: [ 0.0, 321.2901611328, 107.7915954590 ]
+        pos: [ -130.4902191162, 59.3831253052, -7.9220528603 ]
+        rot: [ 0.0, 329.6501464844, 105.2615966797 ]
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 6.3716602325, 9.3716602325 ]
-        focus: [ 6.8716602325, 7.8716602325 ]
+        blur: [ 4.4042921066, 7.4042921066 ]
+        focus: [ 4.9042921066, 5.9042921066 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
 
     cam_2_Shot2:
-      fov: 30.0
+      fov: 25.0
       transform:
-        pos: [ -137.2444915771, 54.2418746948, -9.1720581055 ]
-        rot: [ 0.0, 346.3701782227, 315.5266113281 ]
+        pos: [ -137.6898651123, 54.0292816162, -9.1720581055 ]
+        rot: [ 0.0, 351.1001892090, 308.5966186523 ]
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.7765238285, 5.7765235901 ]
-        focus: [ 3.2765238285, 4.2765235901 ]
+        blur: [ 3.1903009415, 6.1903009415 ]
+        focus: [ 3.6903009415, 4.6903009415 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -157,15 +157,15 @@ repository:
         tags: [ "ext" ]
 
     cam_4_Shot3_break_quen:
-      fov: 35.0
+      fov: 30.0
       transform:
-        pos: [ -132.8114471436, 55.7367630005, -9.1720581055 ]
-        rot: [ 0.0, 348.5151977539, 99.0767440796 ]
+        pos: [ -132.8472442627, 55.9335556030, -9.0220584869 ]
+        rot: [ 0.0, 343.0151977539, 102.6516952515 ]
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.0207343102, 6.0207343102 ]
-        focus: [ 3.5207343102, 4.5207343102 ]
+        blur: [ 3.0282988548, 6.0282988548 ]
+        focus: [ 3.5282988548, 4.5282988548 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -367,15 +367,15 @@ repository:
         tags: [ "ext" ]
 
     cam_18_Shot1_precam:
-      fov: 35.0
+      fov: 30.0
       transform:
-        pos: [ -130.8962097168, 57.0699958801, -6.0220546722 ]
-        rot: [ 0.0, 319.9701538086, 104.2715759277 ]
+        pos: [ -132.2786254883, 56.8218460083, -7.9220528603 ]
+        rot: [ 0.0, 329.6501464844, 105.2615966797 ]
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 5.2701549530, 8.2701549530 ]
-        focus: [ 5.7701549530, 6.7701549530 ]
+        blur: [ 2.9880967140, 5.9880967140 ]
+        focus: [ 3.4880967140, 4.4880967140 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -397,15 +397,15 @@ repository:
         tags: [ "ext" ]
 
     cam_20_Shot2_precam2:
-      fov: 30.0
+      fov: 25.0
       transform:
-        pos: [ -141.7981872559, 50.3908424377, -8.0720596313 ]
-        rot: [ 0.0, 349.4501953125, 313.7666015625 ]
+        pos: [ -137.1103973389, 55.3873252869, -9.1720581055 ]
+        rot: [ 0.0, 351.1001892090, 308.5966186523 ]
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 6.7992582321, 9.7992582321 ]
-        focus: [ 7.2992582321, 8.2992582321 ]
+        blur: [ 3.1903009415, 6.1903009415 ]
+        focus: [ 3.6903009415, 4.6903009415 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -744,7 +744,7 @@ storyboard:
       - prop.placement: [0.0, pc_quen, [ -136.1140747070, 54.7215423584, -10.2344560623 ], [ 0.0, 0.0, 0.0 ]]
       - prop.placement: [0.0, pc_quen_hit, [ -136.1140747070, 54.7215423584, -10.2344560623 ], [ 0.0, 0.0, 0.0 ]]
       - cam.blend.start: [0.0, cam_18_Shot1_precam, rapid]
-      - cam.blend.end: [1.0, cam_1_Shot1, rapid]
+      - cam.blend.end: [0.999, cam_1_Shot1, rapid]
       - actor.anim:
           .@pos: [0.0, geralt_man_geralt_sword_approach_attack_1]
           clipend: 1.13
@@ -763,7 +763,7 @@ storyboard:
       - actor.placement: [0.0, Orianna_vampire, [ -133.1763610840, 59.1904678345, -11.1941738129 ], [ 0.0, 0.0, 150.5898437500 ]]
       - actor.placement: [0.0, geralt, [ -134.4581604004, 57.5483818054, -11.1819620132 ], [ 0.0, 0.0, 331.9499511719 ]]
       - cam.blend.start: [0.0, cam_20_Shot2_precam2, rapid]
-      - cam.blend.end: [1.0, cam_2_Shot2, rapid]
+      - cam.blend.end: [0.999, cam_2_Shot2, rapid]
       - actor.anim: 
           .@pos: [0.327, geralt_man_geralt_sword_dodge_back_337cm_rp_01]
           blendin: 0.5
@@ -938,7 +938,7 @@ dialogscript:
 
   script_call_morph_forward:
     - SCRIPT:
-        function: NTR_MorphNPC_S
+        function: NTR_MorphNPCTimer_S
         parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
           - tag: CNAME_ntr_orianna_human
           - morphRatio: 1.0

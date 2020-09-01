@@ -10,6 +10,6 @@ templates:
       - gravehag_barons_wife
 
     entityObject:
-      .type: "CHagNPC:CNewNPC"
+      .type: "CNTRCommonNPC"
       #name: "Water hag"
       displayName: "Water hag"
