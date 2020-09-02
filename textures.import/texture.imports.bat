@@ -23,6 +23,9 @@ EXIT /B 1
 :: dlc\dlcntr\data\fx\orianna_smoke\smoke_front_animated02_ver2.xbm
 :: dlc\dlcntr\data\entities\oriana\model\eye_d03.xbm
 
+:: NTR LOGO
+%BIN_IMPORT_TEXTURE% data/gameplay/logos/ntr_logo_en.png data/gameplay/logos/ntr_logo_en.xbm WorldDiffuseWithAlpha
+
 :: Orianna
 %BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_04_wa__oriana_d04.png data/entities/oriana/model/h_04_wa__oriana_d04.xbm CharacterDiffuse
 %BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_04_wa__oriana_d04_bruxa.png data/entities/oriana/model/h_04_wa__oriana_d04_bruxa.xbm CharacterDiffuse

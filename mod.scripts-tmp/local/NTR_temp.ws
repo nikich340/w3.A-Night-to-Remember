@@ -659,6 +659,36 @@ exec function testnpc() {
 	theGame.GetGuiManager().ShowNotification("appearance: " + npc.GetAppearance() + ", alive: " + npc.IsAlive());
 }
 
+
+exec function testLogo() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	
+	template = (CEntityTemplate)LoadResource("dlc/dlcntr/data/entities/ntr_logo_entity.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	ent.AddTag('ntr_logo_test');
+}
+exec function switchLogo(enable : bool) {
+	var           ent : CEntity;
+
+	ent = theGame.GetEntityByTag('ntr_logo_test');
+	if (enable)
+		ent.PlayEffect('ntr_logo_screen_en');
+	else
+		ent.StopEffect('ntr_logo_screen_en');
+}
+exec function switchLogo2(enable : bool) {
+	var           ent : CEntity;
+
+	ent = theGame.GetEntityByTag('ntr_logo_test');
+	if (enable)
+		ent.PlayEffect('ntr_logo_screen_en_baw');
+	else
+		ent.StopEffect('ntr_logo_screen_en_baw');
+}
+
 exec function oribru() {
 	var      template : CEntityTemplate;
 	var           pos : Vector;
@@ -699,8 +729,8 @@ exec function attbru(slotName : name, optional x, y, z, pitch, yaw, roll : float
 			entity = theGame.GetEntityByTag(entityTag);
 
 			slotName = 'blood_point';
-			relativePosition = Vector(0.1, 0.1, 0.1);
-			relativeRotation = EulerAngles(0, 180, 0);
+			relativePosition = Vector(x, y, z);
+			relativeRotation = EulerAngles(pitch, yaw, roll);
 
 			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
 			NTR_notify("attach = " + result);

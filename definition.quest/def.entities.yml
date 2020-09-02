@@ -2,20 +2,56 @@
 # definition of entities
 #
 templates:
-  gaq_nb:
-    includes:
-      - gameplay\board\notice_board_template.w2ent
-
+  ntr_logo_entity:
+    #properOverrides: true
     entityObject:
-      .type: "W3NoticeBoard"
-      focusModeVisibility: FMV_Interactive
-      streamingDistance: 3
-      entityName: "gaq_noticeboard" 
-      addedNotes:
-        - ".type": ErrandDetailsList
-          errandStringKey: item_name_gaq_notices_gaq_contract1
-          newQuestFact: gaq_contractor
-          addedItemName: gaq_notices_gaq_contract1
+      ".type": CEntity
+      #streamingDistance: 0
+      components:
+        CEffectDummyComponent0:
+          ".type": CEffectDummyComponent
+    slots:
+      logo:
+        ".type": EntitySlot
+
+    effects:
+      ntr_logo_screen_en:
+        ".type": CFXDefinition
+        trackGroups:
+          Default:
+            ".type": CFXTrackGroup
+            tracks:
+              Emitter:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParticles
+                    timeDuration: 10.0
+                    particleSystem: "dlc\\dlcntr\\data\\fx\\ntr_logo_en_screen.w2p"
+                    spawner:
+                      ".type": CFXSimpleSpawner
+                      slotNames:
+                        - slot
+                    interpolation:
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+            isExpanded: true
+            trackGroupColor: [ 180, 203, 204, 100 ]
+        length: 10.0
+        showDistance: 150.0
 
   footprint_clue:
     includes:
