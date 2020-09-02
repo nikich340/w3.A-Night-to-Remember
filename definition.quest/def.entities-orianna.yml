@@ -9,10 +9,12 @@ templates:
       - dlc/dlcntr/data/entities/oriana/bruxa/q704_bruxa_base.w2ent
     
     entityObject:
-      .type: "CNTROriannaVampireNPC"
+      .type: "CNTROriannaBruxaNPC"
       NTR_factOnDeath: "ntr_orianna_bruxa_dead"
       NTR_factNearlyDead: "ntr_orianna_bruxa_dead"
-      NTR_allowDeathEvent: false
+      NTR_avoidDeathEvent: true
+      NTR_animationMultiplier: 1.5
+
       displayName: "Orianna"
       voiceTag: "ORIANNA BRUXA"
       level: 50

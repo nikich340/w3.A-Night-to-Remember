@@ -52,8 +52,8 @@ storyscene function NTR_CreateAttachment_S( player : CStoryScenePlayer, id : int
 			entity = theGame.GetEntityByTag(entityTag);
 
 			slotName = 'blood_point';
-			relativePosition = Vector(0.1, 0.1, 0.1);
-			relativeRotation = EulerAngles(0, 180, 0);
+			relativePosition = Vector(0.05, 0.03, 0.07);
+			relativeRotation = EulerAngles(-5, 210, 0);
 
 			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
 			//NTR_notify("attach = " + result);
