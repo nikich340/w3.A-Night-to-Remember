@@ -5,6 +5,11 @@ class CNTRCommonNPC extends CNewNPC {
     editable saved var    NTR_factNearlyDead : String;
     editable saved var   NTR_avoidDeathEvent : Bool;
 
+    editable saved var NTR_animationMultiplier : float;
+    saved var             NTR_slowdownCauserId : int;
+    saved var                  NTR_slowdownSet : Bool;
+    default NTR_slowdownSet = false;
+
     event OnSpawned( spawnData : SEntitySpawnData )	{
 		super.OnSpawned( spawnData );
 		FactsAdd(NTR_factOnSpawn, 1);
@@ -22,10 +27,28 @@ class CNTRCommonNPC extends CNewNPC {
 	}
 	event OnDeath( damageAction : W3DamageAction  )	{
 		FactsAdd(NTR_factOnDeath, 1, -1);
+        ResetAnimMultiplier();
         if (!NTR_avoidDeathEvent) {
             super.OnDeath( damageAction );
         }
 	}
+
+    function SetAnimMultiplier(optional customMultiplier : float) {
+        if (NTR_slowdownSet)
+            return;
+        if (customMultiplier) {
+            NTR_animationMultiplier = customMultiplier;
+        }
+        NTR_slowdownCauserId = SetAnimationSpeedMultiplier( NTR_animationMultiplier );
+        LogChannel('CNTRCommonNPC', "SetAnimationSpeedMultiplier to: " + NTR_animationMultiplier);
+        NTR_slowdownSet = true;
+    }
+    function ResetAnimMultiplier() {
+        if (!NTR_slowdownSet)
+            return;
+        ResetAnimationSpeedMultiplier( NTR_slowdownCauserId );
+        NTR_slowdownSet = false;
+    }
 
 	/*protected function Attack( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity)
     {

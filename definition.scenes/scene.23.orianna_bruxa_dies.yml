@@ -1492,6 +1492,7 @@ dialogscript:
     - SCRIPT:
         function: NTR_UnequipItemFromSlot_S
         parameter:
+          - tag: CNAME_PLAYER
           - slotName: cname_EES_RangedWeapon
     - NEXT: script_stop_music
 
@@ -1539,5 +1540,5 @@ dialogscript:
     - NEXT: section_exit
 
   section_exit:
-    - BLACKSCREEN: true
+    #- BLACKSCREEN: true
     - EXIT

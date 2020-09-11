@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 805, saved: 2020-08-31 23:23:42)
+# (version: 809, saved: 2020-09-03 12:29:08)
 #
 ---
 structure:
@@ -32,7 +32,7 @@ structure:
         
         scene.23_orianna_bruxa_dies:
           ".editor":
-            pos: [ 4690.0, 45.0 ]
+            pos: [ 4721.0, 6.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 23.orianna_bruxa_dies.yml
@@ -41,6 +41,7 @@ structure:
           _fadein: true
           next.Output:
             - script.NTR_SaveLock_unlock
+            - script.Kill_orianna
         
         scene.KILL_SCENE:
           ".editor":
@@ -233,11 +234,11 @@ structure:
         waituntil.Wait_bruxa_dead:
           factdb: [ ntr_orianna_bruxa_dead, ">=", 1 ]
           ".editor":
-            pos: [ 4308.0, -74.0 ]
+            pos: [ 4300.0, -68.0 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - script.new_change_appearance
+            - script.Set_morph_app_bruxa
         
         waituntil.footprints_found:
           factdb: [ ntr_orianna_side_footprints_found, ">=", 1 ]
@@ -355,8 +356,7 @@ structure:
             - areaName: toussaint
             - eventName: mus_loc_toussaint_general_cs_to_gmpl
             - saveType: SESB_ClearSaved
-          next:
-            - out
+          next: ".done"
         
         script.Hide_fight_indicator:
           ".editor":
@@ -389,6 +389,18 @@ structure:
           parameter:
             - ignoreImmortalityMode: true
           next: ".done"
+        
+        script.Kill_orianna:
+          ".editor":
+            pos: [ 4876.0, 102.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_ForceKillNPC
+          parameter:
+            - tag: cname_ntr_orianna_bruxa
+            - playDeath: false
+          next:
+            - out
         
         script.NTR_SaveGame:
           ".editor":
@@ -480,6 +492,18 @@ structure:
             - npcsTag: cname_ntr_orianna_vampire
             - appearanceName: cname_orianna_human_morph
           next: ".done"
+        
+        script.Set_morph_app_bruxa:
+          ".editor":
+            pos: [ 4441.0, 6.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: AppearanceChange
+          parameter:
+            - npcsTag: cname_ntr_orianna_bruxa
+            - appearanceName: cname_orianna_bruxa_morph
+          next:
+            - settime.01_00
         
         script.Try_to_reset_music:
           ".editor":
@@ -590,18 +614,6 @@ structure:
             - highlightType: FMV_Clue
             - overrideCustomLogic: false
           next: ".done"
-        
-        script.new_change_appearance:
-          ".editor":
-            pos: [ 4441.0, 6.0 ]
-            in: [ In ]
-            out: [ Out ]
-          function: AppearanceChange
-          parameter:
-            - npcsTag: cname_ntr_orianna_bruxa
-            - appearanceName: cname_orianna_bruxa_morph
-          next:
-            - settime.01_00
         
         script.new_fact_checker_branch:
           ".editor":
@@ -784,7 +796,7 @@ structure:
             - scene.21_to_bruxa_scene: Input
         
         settime.01_00:
-          ".editor": [ 4569.0, 127.0 ]
+          ".editor": [ 4577.0, 96.0 ]
           time: "01:00"
           next:
             - scene.23_orianna_bruxa_dies: Input

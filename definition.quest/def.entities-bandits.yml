@@ -4,23 +4,99 @@
 templates:
   baron_edward:
     includes:
-      - "dlc\\dlcntr\\data\\entities\\knight_baron_base.w2ent"
+      - "dlc\\dlcntr\\data\\entities\\olgierd_base.w2ent"
+      #- "dlc\\dlcntr\\data\\entities\\knight_baron_base.w2ent"
       #- "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_knight\\bob_knight.w2ent"
 
     entityObject:
-      .type: "CNTRBanditNPC:CNewNPC"
-      #name: "IORWETH"
+      .type: "CNTRBanditNPC"
       displayName: "Baron Edward"
+      NTR_factOnDeath: "ntr_baron_edward_dead"
+      NTR_avoidDeathEvent: true
+      NTR_animationMultiplier: 1.5
+      #tags:
+      #  - olgierd
+      #  - olgierd_gpl
 
+      grantNoExperienceAfterKill: true
+      level: 50
+
+    appearances:
+      baron_edward:
+        includedTemplates:
+          - dlc\bob\data\characters\models\crowd_npc\bob_knight\arms\a_01_mb__bob_knights.w2ent
+          - characters\models\common\man_big\body\g_01_mb__body_dirty_d01.w2ent
+          - dlc\bob\data\characters\models\crowd_npc\bob_knight\items\i_13_mb__bob_knights.w2ent
+          - dlc\bob\data\characters\models\crowd_npc\bob_knight\items\i_01_mb__bob_knights.w2ent
+          - dlc\bob\data\characters\models\crowd_npc\bob_knight\items\i_06_mb__bob_knights.w2ent
+          - characters\models\crowd_npc\skellige_villager\caps\c_04_mb__skellige_villager.w2ent
+          - characters\models\common\man_average\heads\h_24_ma__novigrad_citizen_13_01.w2ent
+          - dlc\bob\data\characters\models\crowd_npc\bob_knight\torso\t2_04_mb__bob_knights.w2ent
+          - dlc\bob\data\characters\models\crowd_npc\bob_knight\legs\l2_04_mb__bob_knights.w2ent
+        #voicetag: "BARON EDWARD2"
+        collapsedComponents:
+          - a_01_mb__bob_knights
+        wasIncluded: true
+         
     usedAppearances:
+      - baron_edward
       - bob_knight_15
+
+    coloringEntries:
+      - ".type": SEntityTemplateColoringEntry
+        appearance: bob_knight_15
+        componentName: a_01_mb__bob_knights
+        colorShift1:
+          hue: 36
+          saturation: -46
+          luminance: -72
+        colorShift2:
+          hue: 50          # int16
+          saturation: -23  # int8
+          luminance: -56   # int8
+
+      - ".type": SEntityTemplateColoringEntry
+        appearance: bob_knight_15
+        componentName: c_10_ma__bob
+        colorShift1:
+          hue: 333
+          saturation: -100
+          luminance: 7
+        colorShift2:
+          hue: 315
+          saturation: -23
+          luminance: -56
+
+      - ".type": SEntityTemplateColoringEntry
+        appearance: bob_knight_15
+        componentName: t2_01_mb__novigrad_guard
+        colorShift1:
+          hue: 65
+          saturation: -41
+          luminance: -44
+        colorShift2:
+          hue: 333
+          saturation: -23
+          luminance: -56
+
+      - ".type": SEntityTemplateColoringEntry
+        appearance: bob_knight_15
+        componentName: l0_02_mb__novigrad_guard
+        colorShift1:
+          hue: 65
+          saturation: -41
+          luminance: -44
+        colorShift2:
+          hue: 333
+          saturation: -23
+          luminance: -56
 
     templateParams:
       - ".type": CInventoryDefinition
         entries:
           - ".type": CInventoryDefinitionEntry
             category: "steelsword"
-            isMount: true
+            isMount: false
             isLootable: false
             initializer:
               .type: CInventoryInitializerUniform
@@ -38,7 +114,7 @@ templates:
       - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\exchange_point_bandits\\q703_exchange_point_bandit_melee_sword.w2ent"
 
     entityObject:
-      .type: "CNTRBanditNPC:CNewNPC"
+      .type: "CNTRBanditNPC"
       #name: "IORWETH"
       displayName: "Baron's bandit"
 
@@ -50,7 +126,7 @@ templates:
       - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\exchange_point_bandits\\q703_exchange_point_bandit_melee_blunt.w2ent"
 
     entityObject:
-      .type: "CNTRBanditNPC:CNewNPC"
+      .type: "CNTRBanditNPC"
       #name: "IORWETH"
       displayName: "Baron's bandit"
 
@@ -63,7 +139,7 @@ templates:
       - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_axe_1h.w2ent"
 
     entityObject:
-      .type: "CNTRBanditNPC:CNewNPC"
+      .type: "CNTRBanditNPC"
       #name: "IORWETH"
       displayName: "Baron's bandit"
 
@@ -75,7 +151,7 @@ templates:
       - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_shield_sword.w2ent"
 
     entityObject:
-      .type: "CNTRBanditNPC:CNewNPC"
+      .type: "CNTRBanditNPC"
       #name: "IORWETH"
       displayName: "Baron's bandit"
 
@@ -87,7 +163,7 @@ templates:
       - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_spear_2h.w2ent"
 
     entityObject:
-      .type: "CNTRBanditNPC:CNewNPC"
+      .type: "CNTRBanditNPC"
       #name: "IORWETH"
       displayName: "Baron's bandit"
 
@@ -99,7 +175,7 @@ templates:
       - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\dun_tynne_bandits\\q703_dt_bandit_crossbow.w2ent"
 
     entityObject:
-      .type: "CNTRBanditNPC:CNewNPC"
+      .type: "CNTRBanditNPC"
       #name: "IORWETH"
       displayName: "Baron's bandit"
 

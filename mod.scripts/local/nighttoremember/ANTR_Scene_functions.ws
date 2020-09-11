@@ -8,9 +8,24 @@ latent storyscene function NTR_PlayMusicScene( player : CStoryScenePlayer, areaN
 		NTR_PlayMusic(areaName, eventName, saveType);
 	}
 }
-storyscene function NTR_UnequipItemFromSlot_S( player : CStoryScenePlayer, slotName : name  )
+storyscene function NTR_UnequipItemFromSlot_S( player : CStoryScenePlayer, tag : name, slotName : name  )
 {
-	GetWitcherPlayer().UnequipItemFromSlot( SlotNameToEnum(slotName) );
+	var     npcs : array<CNewNPC>;
+	var        i : int;
+	var slotItem : SItemUniqueId;
+
+	if (tag == 'PLAYER') {
+		GetWitcherPlayer().UnequipItemFromSlot( SlotNameToEnum(slotName) );
+	} else {
+		theGame.GetNPCsByTag(tag, npcs);
+		for (i = 0; i < npcs.Size(); i += 1) {
+			slotItem = npcs[i].GetInventory().GetItemFromSlot( slotName );
+			//if ( npcs[i].GetInventory().IsIdValid(slotItem) ) {
+			if ( npcs[i].UnequipItem( slotItem ) ) {
+				NTR_notify("Unmount success!");
+			}
+		}
+	}
 }
 storyscene function NTR_TimeScale_S( player : CStoryScenePlayer, timeScale : float ) {
 	SetTimeScaleQuest(timeScale);

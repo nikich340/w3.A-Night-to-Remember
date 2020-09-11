@@ -1,6 +1,78 @@
 exec function startNTR() {
 	FactsAdd("NTRstartquest", 1);
 }
+exec function colorEnt(compN : int, h1 : Uint16, l1 : Int8, s1 : Int8, h2 : Uint16, l2 : Int8, s2 : Int8)
+{
+    var template, temp : CEntityTemplate;
+    var colEntry : SEntityTemplateColoringEntry;
+    var col1 : CColorShift;
+    var col2 : CColorShift;
+    var ent, npcEntity : CEntity;
+    var pos : Vector;
+    var rot : EulerAngles;
+    var comp : CAppearanceComponent;    
+    
+    pos = thePlayer.GetWorldPosition() + VecConeRand(thePlayer.GetHeading(), 0, 2,2);
+    rot = thePlayer.GetWorldRotation();
+    rot.Yaw += 180;
+    
+        
+    npcEntity = theGame.GetEntityByTag('colshifttestnpc');
+    npcEntity.Destroy();
+        
+    //template = (CEntityTemplate)LoadResource( "characters\models\crowd_npc\nml_villager\torso\t1a_04_ma__nml_villager.w2ent", true);
+    temp = (CEntityTemplate)LoadResource( "dlc/dlcntr/data/entities/baron_edward.w2ent", true);
+       
+    colEntry.appearance = 'bob_knight_15';
+    colEntry.componentName = 'a_01_mb__bob_knights';
+
+    col1.hue = h1;
+    col1.saturation = s1;
+    col1.luminance = l1;
+
+    col2.hue = h2;
+    col2.saturation = s2;
+    col2.luminance = l2;
+
+    /*colEntry.colorShift1 = col1;
+    colEntry.colorShift2 = col2;*/
+    
+    if (temp.coloringEntries.Size() <= compN || compN < 0) {
+        NTR_notify("Wrong! Max" + temp.coloringEntries.Size());
+    } else {
+        temp.coloringEntries[compN].colorShift1 = col1;
+        temp.coloringEntries[compN].colorShift2 = col2;
+        NTR_notify("Coloring comp [" + temp.coloringEntries[compN].componentName + "]");
+    }
+
+    npcEntity = theGame.CreateEntity( temp, pos, rot);
+    npcEntity.ApplyAppearance('bob_knight_15');
+    npcEntity.AddTag('colshifttestnpc');    
+}
+
+exec function getPosRot(tag : name) {
+	var ent : CEntity;
+	var pos : Vector;
+	var rot : EulerAngles;
+
+	ent = theGame.GetEntityByTag(tag);
+	pos = ent.GetWorldPosition();
+	rot = ent.GetWorldRotation();
+	NTR_notify("Entity <" + tag + "> pos: [" + pos.X + ", " + pos.Y + ", " + pos.Z + "], rot: [" + rot.Pitch + ", " + rot.Yaw + ", " + rot.Roll + "]");
+}
+exec function shiftPosRot(tag : name, x, y, z, pitch, yaw, roll : float) {
+	var ent : CEntity;
+	var pos : Vector;
+	var rot : EulerAngles;
+
+	ent = theGame.GetEntityByTag(tag);
+	pos = ent.GetWorldPosition() + Vector(x, y, z);
+	rot = ent.GetWorldRotation();
+	rot.Pitch += pitch;
+	rot.Yaw += yaw;
+	rot.Roll += roll;
+	ent.TeleportWithRotation(pos, rot);
+}
 
 exec function sc(num : int, optional input : String) {
     var scene : CStoryScene;
@@ -31,6 +103,7 @@ exec function sc(num : int, optional input : String) {
 	sceneNames.PushBack("20.orianna_main.w2scene");
 	sceneNames.PushBack("21.orianna_to_bruxa.w2scene");
 	sceneNames.PushBack("22.orianna_kills_geralt.w2scene");
+	sceneNames.PushBack("23.orianna_bruxa_dies.w2scene");
 	
 	if (!input) {
 		input = "Input";
@@ -401,173 +474,6 @@ exec function morphOriana( morphRatio : float, blendTime : float ) {
 	}
 }
 
-latent quest function playSoundsCustom() {
-	var snds : array<string>;
-	var idx : int;
-	var bnk : string;
-
-	bnk = "qu_ep2_701_dlg.bnk";
-	idx = 0;
-
-	snds.PushBack("q701_17_shackles");
-	snds.PushBack("q701_bandit_hits_woman");
-	snds.PushBack("q701_bandit_reaction");
-	snds.PushBack("q701_bandits_arrival");
-	snds.PushBack("q701_bandits_arrival_02");
-	snds.PushBack("q701_bandits_arrival_03");
-	snds.PushBack("q701_bandits_arrival_04");
-	snds.PushBack("q701_bandits_have_fun_02");
-	snds.PushBack("q701_bandits_in_da_haus");
-	snds.PushBack("q701_bloody_coins");
-	snds.PushBack("q701_boat_escapes_from_G");
-	snds.PushBack("q701_bruxa_fight_bruxa_dropping_hand");
-	snds.PushBack("q701_bruxa_fight_bruxa_searching_body_01");
-	snds.PushBack("q701_bruxa_fight_bruxa_searching_body_02");
-	snds.PushBack("q701_bruxa_morph");
-	snds.PushBack("q701_bruxa_moves");
-	snds.PushBack("q701_bruxa_puts_hand");
-	snds.PushBack("q701_bruxa_shuts_gate");
-	snds.PushBack("q701_bruxa_skin_morph");
-	snds.PushBack("q701_bruxa_sniffs_hand");
-	snds.PushBack("q701_Damien_hits_table");
-	snds.PushBack("q701_easyboy");
-	snds.PushBack("q701_eating_grass");
-	snds.PushBack("q701_fenix_egg_opened");
-	snds.PushBack("q701_finish_him_01");
-	snds.PushBack("q701_finish_him_02");
-	snds.PushBack("q701_fish_prop");
-	snds.PushBack("q701_G_takes_hand");
-	snds.PushBack("q701_G_unsheathe_sword");
-	snds.PushBack("q701_Geralt_beaten_moans");
-	snds.PushBack("q701_grab_key_paper");
-	snds.PushBack("q701_hand_02");
-	snds.PushBack("q701_hide_hand");
-	snds.PushBack("q701_key");
-	snds.PushBack("q701_LOL_01");
-	snds.PushBack("q701_lol_02");
-	snds.PushBack("q701_milton_lifts_up_guillaume_armor_rattle");
-	snds.PushBack("q701_moving_hand");
-	snds.PushBack("q701_ouch");
-	snds.PushBack("q701_Palmerin_gets_up");
-	snds.PushBack("q701_Palmerin_rolls_DAH_letter");
-	snds.PushBack("q701_Palmerins_sword");
-	snds.PushBack("q701_paper_clue");
-	snds.PushBack("q701_pickup_letter_from_DAH");
-	snds.PushBack("q701_playing_kids_01");
-	snds.PushBack("q701_playing_kids_02");
-	snds.PushBack("q701_sharlei_death");
-	snds.PushBack("q701_sharley_bells_01");
-	snds.PushBack("q701_sharley_bells_02");
-	snds.PushBack("q701_sharley_bells_03");
-	snds.PushBack("q701_sharley_bells_04");
-	snds.PushBack("q701_smash_this_fish");
-	snds.PushBack("q701_splashy_G");
-	snds.PushBack("q701_take_fish");
-	snds.PushBack("q701_taking_sword_from_body");
-	snds.PushBack("q701_torch");
-	snds.PushBack("q701_tournament_gate");
-	snds.PushBack("q701_unicorn_easyboy_02");
-	snds.PushBack("q701_unicorn_with_apple_01");
-	snds.PushBack("q701_unicorn_with_apple_02");
-	snds.PushBack("q701_unicorn_with_carrots_basket");
-	snds.PushBack("q701_won_unicorn_fight");
-	snds.PushBack("Stop_q701_dlg");
-
-	theGame.GetGuiManager().ShowNotification("Loaded events: " + snds.Size());
-	Sleep(10.0);
-
-	while ( idx < snds.Size() ) {
-		if (!theSound.SoundIsBankLoaded(bnk)) {
-			theSound.SoundLoadBank(bnk, false);
-			theGame.GetGuiManager().ShowNotification("SoundEvent[load]: " + snds[idx]);
-		} else {
-			theGame.GetGuiManager().ShowNotification("SoundEvent[ok]: " + snds[idx]);
-		}
-		thePlayer.SoundEvent(snds[idx]);
-		Sleep(7.0);
-		idx = idx + 1;
-	}
-}
-latent quest function playSoundsBruxa() {
-	var snds : array<string>;
-	var idx : int;
-
-	snds.PushBack("monster_alp_voice_scream");
-	snds.PushBack("monster_alp_voice_scream_stop");
-	snds.PushBack("monster_bruxa_combat_appear");
-	snds.PushBack("monster_bruxa_combat_bite");
-	snds.PushBack("monster_bruxa_combat_blast_shockwave");
-	snds.PushBack("monster_bruxa_combat_burning_skin");
-	snds.PushBack("monster_bruxa_combat_disappear");
-	snds.PushBack("monster_bruxa_combat_drinks_blood");
-	snds.PushBack("monster_bruxa_combat_drinks_blood_stop");
-	snds.PushBack("monster_bruxa_combat_drop_cloak");
-	snds.PushBack("monster_bruxa_combat_ears_ringing");
-	snds.PushBack("monster_bruxa_combat_healing_skin");
-	snds.PushBack("monster_bruxa_combat_silver_dust_start");
-	snds.PushBack("monster_bruxa_combat_silver_dust_stop");
-	snds.PushBack("monster_bruxa_combat_teleport_trail");
-	snds.PushBack("monster_bruxa_dialog_human_breath");
-	snds.PushBack("monster_bruxa_geralt_custom_choke_01");
-	snds.PushBack("monster_bruxa_geralt_sword_miss");
-	snds.PushBack("monster_bruxa_geralt_sword_take_out");
-	snds.PushBack("monster_bruxa_missed_by_sword");
-	snds.PushBack("monster_bruxa_movement_bodyfall");
-	snds.PushBack("monster_bruxa_movement_footsteps_jump");
-	snds.PushBack("monster_bruxa_movement_footsteps_land");
-	snds.PushBack("monster_bruxa_movement_footsteps_run");
-	snds.PushBack("monster_bruxa_movement_footsteps_walk");
-	snds.PushBack("monster_bruxa_movement_hand_pat");
-	snds.PushBack("monster_bruxa_movement_whoosh_mid");
-	snds.PushBack("monster_bruxa_movement_whoosh_small");
-	snds.PushBack("monster_bruxa_voice_attack_1");
-	snds.PushBack("monster_bruxa_voice_attack_2");
-	snds.PushBack("monster_bruxa_voice_breath");
-	snds.PushBack("monster_bruxa_voice_breath_cycle");
-	snds.PushBack("monster_bruxa_voice_breathing_rush");
-	snds.PushBack("monster_bruxa_voice_breathing_rush_stop");
-	snds.PushBack("monster_bruxa_voice_breathing_rush_teleport");
-	snds.PushBack("monster_bruxa_voice_burning");
-	snds.PushBack("monster_bruxa_voice_choke");
-	snds.PushBack("monster_bruxa_voice_confused");
-	snds.PushBack("monster_bruxa_voice_death");
-	snds.PushBack("monster_bruxa_voice_death_burning");
-	snds.PushBack("monster_bruxa_voice_death_stop");
-	snds.PushBack("monster_bruxa_voice_feeding_attack");
-	snds.PushBack("monster_bruxa_voice_feeding_pre");
-	snds.PushBack("monster_bruxa_voice_feeding_pre_jump");
-	snds.PushBack("monster_bruxa_voice_feeding_pre_jump_stop");
-	snds.PushBack("monster_bruxa_voice_hiss_scream");
-	snds.PushBack("monster_bruxa_voice_pain");
-	snds.PushBack("monster_bruxa_voice_panting");
-	snds.PushBack("monster_bruxa_voice_panting_scream");
-	snds.PushBack("monster_bruxa_voice_paralysed");
-	snds.PushBack("monster_bruxa_voice_roar");
-	snds.PushBack("monster_bruxa_voice_scream");
-	snds.PushBack("monster_bruxa_voice_scream_stop");
-	snds.PushBack("monster_bruxa_voice_snarl");
-	snds.PushBack("monster_bruxa_voice_taunt_blood");
-	snds.PushBack("Set_Switch_bruxa_state_black_blood");
-	snds.PushBack("Set_Switch_bruxa_state_clean");
-	snds.PushBack("Set_Switch_bruxa_taunt_choke");
-	snds.PushBack("Set_Switch_bruxa_taunt_taunt");
-	snds.PushBack("Stop_monster_bruxa_dialog_human_breath");
-
-	Sleep(10.0);
-
-	while ( idx < snds.Size() ) {
-		if (!theSound.SoundIsBankLoaded("monster_bruxa.bnk")) {
-			theSound.SoundLoadBank("monster_bruxa.bnk", false);
-			theGame.GetGuiManager().ShowNotification("SoundEvent[load]: " + snds[idx]);
-		} else {
-			theGame.GetGuiManager().ShowNotification("SoundEvent[ok]: " + snds[idx]);
-		}
-		thePlayer.SoundEvent(snds[idx]);
-		Sleep(5.0);
-		idx = idx + 1;
-	}
-}
-
 exec function triss1() {
 	var      template : CEntityTemplate;
 	var           pos : Vector;
@@ -639,6 +545,46 @@ exec function orihum() {
 	ent.AddTag('ntr_orianna_human');
 	ent.AddTag('vip');
 	ent.ApplyAppearance('orianna_vampire_bloody_morph');
+}
+
+exec function barolg() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	
+	template = (CEntityTemplate)LoadResource("dlc/dlcntr/data/entities/baron_edward.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	ent.AddTag('baron_test2');
+	ent.AddTag('ntr_baron_edward');
+	ent.AddTag('vip');
+	ent.ApplyAppearance('bob_knight_15');
+	NTR_TuneNPC( 'baron_test2', GetWitcherPlayer().GetLevel(), "Hostile", "None", false, "ENGT_Quest", -1 );
+}
+exec function barolg2() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	
+	template = (CEntityTemplate)LoadResource("dlc\ep1\data\quests\main_npcs\olgierd.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	ent.AddTag('baron_test1');
+	//ent.ApplyAppearance('bob_knight_15');
+	NTR_TuneNPC( 'baron_test1', GetWitcherPlayer().GetLevel(), "Hostile", "None", false, "ENGT_Quest", -1 );
+}
+
+exec function barolg6() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	
+	template = (CEntityTemplate)LoadResource("dlc\bob\data\quests\secondary_npcs\damien.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	ent.AddTag('baron_test6');
+	//ent.ApplyAppearance('bob_knight_15');
+	NTR_TuneNPC( 'baron_test6', GetWitcherPlayer().GetLevel(), "Hostile", "None", false, "ENGT_Quest", -1 );
 }
 
 exec function oridress() {

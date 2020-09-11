@@ -9,12 +9,13 @@ templates:
       - dlc/dlcntr/data/entities/oriana/bruxa/q704_bruxa_base.w2ent
     
     entityObject:
-      .type: "CNTROriannaBruxaNPC"
+      .type: "CNTROriannaVampireNPC"
       NTR_factOnDeath: "ntr_orianna_bruxa_dead"
-      NTR_factNearlyDead: "ntr_orianna_bruxa_dead"
+      #NTR_factNearlyDead: "ntr_orianna_bruxa_dead"
       NTR_avoidDeathEvent: true
       NTR_animationMultiplier: 1.5
 
+      grantNoExperienceAfterKill: true
       displayName: "Orianna"
       voiceTag: "ORIANNA BRUXA"
       level: 50
@@ -35,7 +36,7 @@ templates:
     appearances:
       orianna_bruxa_morph:
         includedTemplates:
-          - dlc/dlcntr/data/entities/oriana/bruxa/h_04_wa__oriana_bruxa_morph_inverse.w2ent
+          - dlc/dlcntr/data/entities/oriana/bruxa/h_oriana_bruxa_morph.w2ent
           - dlc/dlcntr/data/entities/oriana/bruxa/t_04__bruxa_morph.w2ent
           - dlc/bob/data/characters/models/monsters/alp/c_01__alp.w2ent
         voicetag: "ORIANNA BRUXA"
@@ -54,6 +55,7 @@ templates:
         voicetag: "ORIANNA BRUXA"
         usesRobe: true
 
+      # bruxa usual version, for scenes
       orianna_bruxa_monster:
         includedTemplates:
           - dlc/bob/data/characters/models/monsters/bruxa/t_01__bruxa.w2ent
@@ -62,10 +64,11 @@ templates:
           - dlc/bob/data/characters/models/monsters/alp/c_01__alp.w2ent
           - dlc/bob/data/characters/models/monsters/bruxa/c_01__bruxa_poly_effect.w2ent
           #- dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
-          - dlc/dlcntr/data/entities/oriana/bruxa/h_04_wa__oriana_bruxa.w2ent
+          - dlc/dlcntr/data/entities/oriana/bruxa/h_oriana_bruxa_monster.w2ent
         voicetag: "ORIANNA BRUXA"
         usesRobe: true
 
+      # !!!bruxa usual version, for gameplay
       bruxa_monster_gameplay:
         includedTemplates:
           - dlc/bob/data/characters/models/monsters/bruxa/t_01__bruxa.w2ent

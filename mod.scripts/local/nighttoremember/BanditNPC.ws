@@ -1,30 +1,5 @@
-class CNTRBanditNPC extends CNewNPC {
+class CNTRBanditNPC extends CNTRCommonNPC {
 
-	//editable saved var stolenMoney : int; default stolenMoney = 0;
-
-	/*event OnSpawned( spawnData : SEntitySpawnData )	{
-		super.OnSpawned( spawnData );
-	}*/
-	//event OnDeath( damageAction : W3DamageAction  )	{
-		//FactsAdd("trissIntroDead", 1);
-	//}
-	//event OnTakeDamage( action : W3DamageAction ) {
-		
-	//}
-
-	/*function Kill(source : name, optional ignoreImmortalityMode : bool, optional attacker : CGameplayEntity)
-	{
-		theGame.GetGuiManager().ShowNotification("CActor.Kill: called for actor <<" + this + ">> with source <<" + source + ">>");
-		super.Kill(source, ignoreImmortalityMode, attacker);
-	}*/
-	/*protected function PrepareAttackAction( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity, out attackAction : W3Action_Attack) : bool
-	{
-		var ret : bool;
-		ret = super.PrepareAttackAction(hitTarget, animData, weaponId, parried, countered, parriedBy, attackAnimationName, hitTime, weaponEntity, attackAction);
-		//theGame.GetGuiManager().ShowNotification("PrepareAttackAction, damage: " + attackAction.processedDmg.vitalityDamage);
-		
-		return ret;
-	}*/
 	protected function Attack( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity)
     {
         var action : W3Action_Attack;
@@ -32,6 +7,22 @@ class CNTRBanditNPC extends CNewNPC {
         if(PrepareAttackAction(hitTarget, animData, weaponId, parried, countered, parriedBy, attackAnimationName, hitTime, weaponEntity, action))
         {
             theGame.damageMgr.ProcessAction(action);
+
+            LogChannel('NTR_MOD', "-----ATTACK ACTION LOG!!!-----");
+            //LogChannel('NTR_MOD', "GetWeaponId: " + action.GetWeaponId() );
+            LogChannel('NTR_MOD', "IsParried: " + action.IsParried() );
+            LogChannel('NTR_MOD', "IsCountered: " + action.IsCountered() );
+            LogChannel('NTR_MOD', "WasDodged: " + action.WasDodged() );
+            LogChannel('NTR_MOD', "GetDamageDealt: " + action.GetDamageDealt() );
+            LogChannel('NTR_MOD', "GetAttackAnimName: " + action.GetAttackAnimName() );
+            NTR_notify("GetAttackAnimName: " + action.GetAttackAnimName() );
+            LogChannel('NTR_MOD', "GetHitTime: " + action.GetHitTime() );
+            LogChannel('NTR_MOD', "GetWeaponSlot: " + action.GetWeaponSlot() );
+            LogChannel('NTR_MOD', "GetSoundAttackType: " + action.GetSoundAttackType() );
+            LogChannel('NTR_MOD', "GetAttackName: " + action.GetAttackName() );
+            LogChannel('NTR_MOD', "GetAttackTypeName: " + action.GetAttackTypeName() );
+            LogChannel('NTR_MOD', "GetHitTime: " + action.GetAttackAnimName() );
+
             delete action;
             if (thePlayer.GetHealth() < 1.0) {
             	FactsAdd("NTR_fisfightDead");
@@ -52,18 +43,13 @@ class CNTRBanditNPC extends CNewNPC {
 				action.processedDmg.vitalityDamage /= 4;
 		}
 		super.OnTakeDamage( action );
+
+		if ( HasTag('ntr_baron_edward') && GetHealthPercents() < 0.25 ) {
+            SetAnimMultiplier();         
+        }
 	}
-	event OnInteraction( actionName : string, activator : CEntity )
-	{
-		//theGame.GetGuiManager().ShowNotification("actionName: " + actionName);
-		/*if (actionName == "Talk") {
-			if (PlayDialog()) {
-				FadeOutQuest(1.0, Color(0, 0, 0));
-				theGame.GetGuiManager().ShowNotification("Dialog!");
-			} else {
-				theGame.GetGuiManager().ShowNotification("Not dialog!");
-			}
-		}*/
-		super.OnInteraction(actionName, activator);
+	function PlayEffect( effectName : name, optional target : CNode  ) : bool {
+		NTR_notify("Play: " + effectName + ", target: " + target);
+		return super.PlayEffect( effectName, target );
 	}
 }

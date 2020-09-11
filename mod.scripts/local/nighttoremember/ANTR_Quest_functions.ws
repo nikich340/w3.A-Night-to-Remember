@@ -7,6 +7,35 @@ quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	}
 	return false;
 }*/
+
+quest function NTR_ForceKillNPC(tag : name, playDeath : bool) {
+	var npcs : array<CNewNPC>;
+	var NTR_npc : CNTRCommonNPC;
+	var i : int;
+
+	theGame.GetNPCsByTag(tag, npcs);
+	for (i = 0; i < npcs.Size(); i += 1) {
+		NTR_npc = (CNTRCommonNPC) npcs[i];
+		if (NTR_npc) {
+			NTR_npc.NTR_avoidDeathEvent = false;
+		}
+		if (!playDeath) {
+			npcs[i].EnterKnockedUnconscious();
+			// will call DisableDeathAndAgony();
+		}
+		npcs[i].Kill( 'Kill', true );
+	}
+}
+
+exec function NTR_releaseOriannaBruxa() {
+	var npc : CNewNPC;
+
+	npc = theGame.GetNPCByTag('ntr_orianna_bruxa');
+	npc.SetAppearance('orianna_bruxa_human');
+	npc.TeleportWithRotation(Vector(-204.5, -597.8, 0.277527), EulerAngles(0.000000, -110.0, 0.000000));
+	NTR_ForceKillNPC('ntr_orianna_bruxa', false);
+	// ? npc.TeleportWithRotation(Vector(-204.5, -597.8, 0.277527), EulerAngles(0.000000, -110.0, 0.000000));
+}
 quest function NTR_SaveLock(lock : bool) {
 	var saveLockId : int;
 	if (lock) {
@@ -392,10 +421,13 @@ quest function NTR_TuneNPC( tag : name, level : int, optional attitude : string,
 		NPCs[i].RemoveAbilityAll('VesemirDamage');
 		NPCs[i].RemoveAbilityAll('BurnIgnore');
 		NPCs[i].RemoveAbilityAll('_q403Follower');
-		if (finishers)
+		if (finishers) {
 			NPCs[i].RemoveAbilityAll('DisableFinishers');
-		else
+			NPCs[i].RemoveAbilityAll('InstantKillImmune');
+		} else {
 			NPCs[i].AddAbility( 'DisableFinishers', false );
+			NPCs[i].AddAbility( 'InstantKillImmune', false );
+		}
 		
 		/* SET ATTITUDE TO PLAYER */
 		switch (attitude) {
