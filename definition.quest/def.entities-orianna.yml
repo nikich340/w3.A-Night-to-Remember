@@ -34,10 +34,11 @@ templates:
             - monster_bruxa.bnk
 
     appearances:
+      # bloody2 -> human bloody2
       orianna_bruxa_morph:
         includedTemplates:
           - dlc/dlcntr/data/entities/oriana/bruxa/h_oriana_bruxa_morph.w2ent
-          - dlc/dlcntr/data/entities/oriana/bruxa/t_04__bruxa_morph.w2ent
+          - dlc/dlcntr/data/entities/oriana/bruxa/t_oriana_bruxa_morph.w2ent
           - dlc/bob/data/characters/models/monsters/alp/c_01__alp.w2ent
         voicetag: "ORIANNA BRUXA"
         usesRobe: true
@@ -46,19 +47,19 @@ templates:
           - h_01_wa__oriana
           - he_01_wa__oriana
 
-      orianna_bruxa_human:
+      # bruxa human bloody2, post-morten
+      orianna_bruxa_human_bloody2:
         includedTemplates:
-          - dlc/dlcntr/data/entities/oriana/bruxa/h_01_wa__oriana_bloody_final.w2ent
-          - dlc/bob/data/characters/models/monsters/bruxa/t_02__bruxa_bloody.w2ent
+          - dlc/dlcntr/data/entities/oriana/bruxa/t_oriana_bruxa_human_bloody2.w2ent
           - dlc/bob/data/characters/models/monsters/alp/c_01__alp.w2ent
-          - dlc/dlcntr/data/entities/oriana/bruxa/h_01_wa__oriana_bloody_final.w2ent
+          - dlc/dlcntr/data/entities/oriana/bruxa/h_oriana_bruxa_human_bloody2.w2ent
         voicetag: "ORIANNA BRUXA"
         usesRobe: true
 
       # bruxa usual version, for scenes
       orianna_bruxa_monster:
         includedTemplates:
-          - dlc/bob/data/characters/models/monsters/bruxa/t_01__bruxa.w2ent
+          - dlc/dlcntr/data/entities/oriana/bruxa/t_oriana_bruxa_monster.w2ent
           - dlc/bob/data/characters/models/monsters/bruxa/bruxa_merged_body.w2ent
           - dlc/bob/data/characters/models/monsters/bruxa/bruxa_merged_body_ghost.w2ent
           - dlc/bob/data/characters/models/monsters/alp/c_01__alp.w2ent
@@ -77,10 +78,13 @@ templates:
           - dlc/bob/data/characters/models/monsters/alp/c_01__alp.w2ent
           - dlc/bob/data/characters/models/monsters/bruxa/c_01__bruxa_poly_effect.w2ent
           #- dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
-          - dlc/dlcntr/data/entities/oriana/bruxa/h_04_wa__oriana_bruxa_gameplay.w2ent
+          - dlc/dlcntr/data/entities/oriana/bruxa/h_oriana_bruxa_monster_gameplay.w2ent
         voicetag: "ORIANNA BRUXA"
         usesRobe: true
-
+        #collapsedComponents:
+        #  - head
+        #  - h_oriana_bruxa_monster_gameplay
+          
     usedAppearances:
       - orianna_bruxa_morph
       - orianna_bruxa_human
@@ -135,7 +139,7 @@ templates:
         loopEnd: 0.200000003
         showDistance: 50.0
         isLooped: true
-
+        
   # human bloody
   orianna_human:
     includes:

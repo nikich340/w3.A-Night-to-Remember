@@ -14,33 +14,38 @@ templates:
       NTR_factOnDeath: "ntr_baron_edward_dead"
       NTR_avoidDeathEvent: true
       NTR_animationMultiplier: 1.5
-      #tags:
-      #  - olgierd
-      #  - olgierd_gpl
+      tags:
+        - olgierd
+        - olgierd_gpl
 
       grantNoExperienceAfterKill: true
       level: 50
 
     appearances:
-      baron_edward:
+      bob_knight_15:
         includedTemplates:
           - dlc\bob\data\characters\models\crowd_npc\bob_knight\arms\a_01_mb__bob_knights.w2ent
-          - characters\models\common\man_big\body\g_01_mb__body_dirty_d01.w2ent
-          - dlc\bob\data\characters\models\crowd_npc\bob_knight\items\i_13_mb__bob_knights.w2ent
-          - dlc\bob\data\characters\models\crowd_npc\bob_knight\items\i_01_mb__bob_knights.w2ent
+          - dlc\bob\data\characters\models\crowd_npc\bob_citizen\caps\c_10_ma__bob.w2ent
           - dlc\bob\data\characters\models\crowd_npc\bob_knight\items\i_06_mb__bob_knights.w2ent
-          - characters\models\crowd_npc\skellige_villager\caps\c_04_mb__skellige_villager.w2ent
-          - characters\models\common\man_average\heads\h_24_ma__novigrad_citizen_13_01.w2ent
-          - dlc\bob\data\characters\models\crowd_npc\bob_knight\torso\t2_04_mb__bob_knights.w2ent
-          - dlc\bob\data\characters\models\crowd_npc\bob_knight\legs\l2_04_mb__bob_knights.w2ent
+          - dlc\bob\data\characters\models\crowd_npc\bob_knight\items\i_03_mb__bob_knights.w2ent
+          - characters\models\common\man_average\heads\h_10_ma__nml_villager_11_01.w2ent
+          - characters\models\crowd_npc\novigrad_guard\torso\t2_01_mb__novigrad_guard.w2ent
+          - characters\models\crowd_npc\novigrad_guard\legs\l0_02_mb__novigrad_guard.w2ent
+          - characters\models\crowd_npc\inquisitor_soldier_lvl2\shoes\s_01_mb__inquisition_soldier_lvl2.w2ent
+          - dlc\bob\data\characters\models\crowd_npc\bob_knight\gloves\g_02_mb__bob_knights.w2ent
         #voicetag: "BARON EDWARD2"
         collapsedComponents:
           - a_01_mb__bob_knights
-        wasIncluded: true
+          - head
+          - h_10_ma__nml_villager_11_01
+          - he_10_ma__nml_villager
+          - hb_10_ma__beard_11_01
+        #wasIncluded: true
          
     usedAppearances:
       - baron_edward
       - bob_knight_15
+      - olgierd
 
     coloringEntries:
       - ".type": SEntityTemplateColoringEntry
@@ -92,6 +97,13 @@ templates:
           luminance: -56
 
     templateParams:
+      - ".type": CAnimAnimsetsParam
+        name: olgierd
+        componentName: man_base
+        animationSets:
+          - "dlc\\dlcntr\\data\\entities\\baron\\olgierd.w2anims"
+          #- "dlc\\ep1\\data\\animations\\man\\combat\\olgierd.w2anims"
+  
       - ".type": CInventoryDefinition
         entries:
           - ".type": CInventoryDefinitionEntry

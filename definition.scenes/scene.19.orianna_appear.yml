@@ -339,6 +339,21 @@ repository:
         plane: "medium"
         tags: [ "ext" ]
 
+    cam_exit_riverside:
+      fov: 20.0
+      transform:
+        pos: [ -151.0409088135, 35.1206474304, -10.8377122879 ]
+        rot: [ 0.0, 50.5917053223, 166.3198547363 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.7838659286, 3.7838659286 ]
+        focus: [ 1.2838659286, 2.2838659286 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
 production:
   settings:
     sceneid: 1
@@ -432,6 +447,9 @@ production:
 
       cam_18_Shot2_horse_clip:
         repo: "cam_18_Shot2_horse_clip"
+
+      cam_exit_riverside:
+        repo: "cam_exit_riverside"
 
     soundbanks:
       - work_children
@@ -854,6 +872,9 @@ storyboard:
       - cam.blend.end: [1.0, cam_15_Shot8_cam5_ger]
       - fade.out: [0.5, 2.0]
 
+    shot_fix_music:
+      - cam: [0.0, cam_exit_riverside]
+
 dialogscript:
   player: "geralt"
   actors: [ "geralt", "niellan", "agneta", "Orianna_vampire", "Orianna_human", "bob_horse_vehicle_no_interaction" ]
@@ -945,6 +966,9 @@ dialogscript:
     - CUE: shot_15
     # (longest) anim: high_standing_bored_exit_rightside
     - PAUSE: 4.0
+
+    - CUE: shot_fix_music
+    - PAUSE: 0.25
     - NEXT: script_lock_door
 
   script_lock_door:

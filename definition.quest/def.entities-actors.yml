@@ -426,7 +426,6 @@ templates:
 
     templateParams:
       - ".type": CAnimAnimsetsParam
-        wasIncluded: true
         name: eredin_cutscene
         componentName: wild_hunt_base
         animationSets:

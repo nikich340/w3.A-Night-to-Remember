@@ -712,10 +712,11 @@ dialogscript:
 
   section_pre_fight:
     - CUE: shot_pre_fight1
+    ## Not about to parley with monster
+    ## I kill monsters, true - it's my job. But only when they threaten humans.
     - geralt: "[5.53447]0001187118|Know what…? Don't feel like talking to you anymore. This is pointless."
     - CUE: shot_pre_fight2
     - geralt: "Got something for you. My silver sword."
-    #- geralt: "I've come for you."
     - NEXT: section_fight
 
   section_fight:
