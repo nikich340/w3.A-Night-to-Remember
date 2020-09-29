@@ -28,16 +28,4 @@ class CNTROriannaVampireNPC extends CNTRCommonNPC {
             SetAnimMultiplier();         
         }
     }
-
-    event OnAnimEvent_DeactivateSide( animEventName : name, animEventType : EAnimationEventType, animInfo : SAnimationEventAnimInfo )
-    {
-        super.OnAnimEvent_DeactivateSide(animEventName, animEventType, animInfo); 
-        NTR_notify("OnAnimEvent_DeactivateSide");    
-    }
-    
-    event OnAnimEvent_DeactivateUp( animEventName : name, animEventType : EAnimationEventType, animInfo : SAnimationEventAnimInfo )
-    {
-        super.OnAnimEvent_DeactivateUp(animEventName, animEventType, animInfo);
-        NTR_notify("OnAnimEvent_DeactivateUp");      
-    }
 }

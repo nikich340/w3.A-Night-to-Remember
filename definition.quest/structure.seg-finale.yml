@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 809, saved: 2020-09-03 12:29:08)
+# (version: 838, saved: 2020-09-28 17:10:14)
 #
 ---
 structure:
@@ -40,8 +40,34 @@ structure:
           interruptable: true
           _fadein: true
           next.Output:
-            - script.NTR_SaveLock_unlock
+            - scene.24_baron_river_friendly: Input
+        
+        scene.24_baron_river_friendly:
+          ".editor":
+            pos: [ 4879.0, 72.0 ]
+            in: [ Input ]
+            out: [ fight, peaceful ]
+          scene: 24.baron_river_friendly.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: true
+          next.fight:
             - script.Kill_orianna
+            - spawn.spawn_hostile_baron
+          next.peaceful:
+            - script.Kill_orianna
+        
+        scene.25_baron_dies_long:
+          ".editor":
+            pos: [ 6017.0, 243.0 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 25.baron_dies_long.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: true
+          next.Output:
+            - despawn.despawn_bandits_river
         
         scene.KILL_SCENE:
           ".editor":
@@ -134,7 +160,7 @@ structure:
           interruptable: true
           _fadein: true
           next.Output:
-            - script.Try_to_reset_music
+            - settime.set_1am
         
         waituntil.1s:
           elapsed: "00:00:01"
@@ -162,6 +188,15 @@ structure:
             out: [ Out ]
           next:
             - script.Set_morph_app
+        
+        waituntil.1sss:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 5554.0, 135.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Play_baron_music
         
         waituntil.1ssss:
           elapsed: "00:00:01"
@@ -230,6 +265,15 @@ structure:
           next:
             - script.fade_out
             - script.NTR_SaveGame
+        
+        waituntil.Wait_baron_dead:
+          factdb: [ ntr_baron_edward_dead, ">=", 1 ]
+          ".editor":
+            pos: [ 5856.0, 156.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.25_baron_dies_long: Input
         
         waituntil.Wait_bruxa_dead:
           factdb: [ ntr_orianna_bruxa_dead, ">=", 1 ]
@@ -321,6 +365,18 @@ structure:
             - despawn.despawn_vampire
             - script.Hide_fight_indicator
         
+        script.Baron_edward_bossbar:
+          ".editor":
+            pos: [ 5230.0, 123.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: ShowBossFightIndicator
+          parameter:
+            - enable: true
+            - bossTag: cname_ntr_baron_edward
+          next:
+            - script.NTR_SaveGame_2
+        
         script.Bruxa_fight_indicator:
           ".editor":
             pos: [ 4147.0, -11.0 ]
@@ -348,7 +404,7 @@ structure:
         
         script.Gameplay_music:
           ".editor":
-            pos: [ 5016.0, -162.0 ]
+            pos: [ 6004.0, -71.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
@@ -356,7 +412,8 @@ structure:
             - areaName: toussaint
             - eventName: mus_loc_toussaint_general_cs_to_gmpl
             - saveType: SESB_ClearSaved
-          next: ".done"
+          next:
+            - out
         
         script.Hide_fight_indicator:
           ".editor":
@@ -380,6 +437,17 @@ structure:
             - localizedStringID: 0
           next: ".done"
         
+        script.Kill_Baron:
+          ".editor":
+            pos: [ 6284.0, 197.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_ForceKillNPC
+          parameter:
+            - tag: cname_ntr_baron_edward
+            - playDeath: false
+          next: ".done"
+        
         script.Kill_Player:
           ".editor":
             pos: [ 3807.0, 849.0 ]
@@ -392,15 +460,14 @@ structure:
         
         script.Kill_orianna:
           ".editor":
-            pos: [ 4876.0, 102.0 ]
+            pos: [ 5081.0, 176.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_ForceKillNPC
           parameter:
             - tag: cname_ntr_orianna_bruxa
             - playDeath: false
-          next:
-            - out
+          next: ".done"
         
         script.NTR_SaveGame:
           ".editor":
@@ -426,6 +493,18 @@ structure:
           next:
             - waituntil.wait_1s
         
+        script.NTR_SaveGame_2:
+          ".editor":
+            pos: [ 5387.0, 57.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_SaveGame
+          parameter:
+            - type: SGT_ForcedCheckPoint
+            - slot: -1
+          next:
+            - waituntil.1sss
+        
         script.NTR_SaveLock:
           ".editor":
             pos: [ 2310.6860351562, 212.4095611572 ]
@@ -438,7 +517,7 @@ structure:
         
         script.NTR_SaveLock_unlock:
           ".editor":
-            pos: [ 4878.0, -86.0 ]
+            pos: [ 5788.0, -124.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_SaveLock
@@ -469,6 +548,19 @@ structure:
             - eventName: mus_q704_after_feeding
             - saveType: SESB_DontSave
           next: ".done"
+        
+        script.Play_baron_music:
+          ".editor":
+            pos: [ 5683.0, 36.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_PlayMusic
+          parameter:
+            - areaName: novigrad
+            - eventName: mus_q601_combat_with_offir_soldiers
+            - saveType: SESB_Save
+          next:
+            - waituntil.Wait_baron_dead
         
         script.Play_fangs_music:
           ".editor":
@@ -507,7 +599,7 @@ structure:
         
         script.Try_to_reset_music:
           ".editor":
-            pos: [ 2703.0, -68.0 ]
+            pos: [ 2699.0, -108.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
@@ -515,8 +607,7 @@ structure:
             - areaName: toussaint
             - eventName: mus_q704_after_feeding
             - saveType: SESB_ClearSaved
-          next:
-            - settime.set_1am
+          next: ".done"
         
         script.Tune_Orianna:
           ".editor":
@@ -723,6 +814,55 @@ structure:
           next:
             - waituntil.1sssss
         
+        spawn.spawn_hostile_baron:
+          ".editor":
+            pos: [ 5061.0, -51.0 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: fight_only_baron
+          spawnsets:
+            - comm_bandits_river
+          next:
+            - script.Baron_edward_bossbar
+        
+        spawn.spawn_in_inn:
+          ".editor":
+            pos: [ 4929.0, 275.0 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: before_scene
+          spawnsets:
+            - comm_bandits_river
+          next: ".done"
+        
+        despawn.Despawn_all_bandits:
+          ".editor":
+            pos: [ 4748.0, 195.0 ]
+            hint: despawn-only
+            in: []
+            out: []
+          spawnsets:
+            - comm_camp_bandit_axe_day
+            - comm_camp_bandit_axe_night
+            - comm_camp_bandits
+            - comm_camp_baron
+            - comm_orphanage_bandits
+          next:
+            - spawn.spawn_in_inn
+        
+        despawn.despawn_bandits_river:
+          ".editor":
+            pos: [ 6186.0, 147.0 ]
+            hint: despawn-only
+            in: []
+            out: []
+          spawnsets:
+            - comm_bandits_river
+          next:
+            - script.Gameplay_music
+        
         despawn.despawn_orihum:
           ".editor":
             pos: [ 3686.0, 157.0 ]
@@ -800,6 +940,7 @@ structure:
           time: "01:00"
           next:
             - scene.23_orianna_bruxa_dies: Input
+            - despawn.Despawn_all_bandits
         
         settime.Set_11pm:
           ".editor": [ 2413.0, -41.0 ]
@@ -832,6 +973,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 5304.0, -168.0 ]
+          ".editor": [ 6267.0, -63.0 ]
           next: ".done"
         

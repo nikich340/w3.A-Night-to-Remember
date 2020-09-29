@@ -128,6 +128,16 @@ exec function ulock() {
 	}
 	
 }
+exec function addAbl( tag : name, abl : name, optional remove : bool ) {
+	var           npc : CNewNPC;
+	npc = (CNewNPC)theGame.GetNPCByTag(tag);
+	if ( npc.HasAbility(abl) )
+		NTR_notify("Has ability: " + abl);
+	if ( remove )
+		npc.RemoveAbility(abl);
+	else
+		npc.AddAbility(abl);
+}
 exec function getAttr( tag : name ) {
 	var           npc : CNewNPC;
 	var abls, attrs  : array<name>;
@@ -647,6 +657,14 @@ exec function switchLogo2(enable : bool) {
 		ent.PlayEffect('ntr_logo_screen_en_baw');
 	else
 		ent.StopEffect('ntr_logo_screen_en_baw');
+}
+
+exec function playScene(path : string) {
+    var scene : CStoryScene;
+
+    // -> SET SCENE PATH
+    scene = (CStoryScene)LoadResource( path, true);
+    theGame.GetStorySceneSystem().PlayScene(scene, "Input");
 }
 
 exec function oribru() {

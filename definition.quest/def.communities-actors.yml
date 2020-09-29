@@ -141,6 +141,126 @@ communities:
           actionpoints:
             "00:00": bob/fisherman_sit_fishing
 
+  comm_bandits_river:
+    actors:
+      baron_edward:
+        template: "dlc\\dlcntr\\data\\entities\\baron_edward.w2ent"
+        appearances: [ "bob_knight_15" ]
+        tags: [ "ntr_baron_edward" ]
+
+      bandit_axe:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_axe.w2ent"
+        appearances: [ "bob_raider_lvl1_03" ]
+        tags: [ "ntr_camp_bandit_axe" ]
+
+      bandit_sword:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_sword.w2ent"
+        appearances: [ "bob_raider_lvl1_21" ]
+        tags: [ "ntr_camp_bandit_sword" ]
+
+      bandit_spear:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_spear.w2ent"
+        appearances: [ "bob_raider_lvl1_07" ]
+        tags: [ "ntr_camp_bandit_spear" ]
+
+      fat_bandit:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_big.w2ent"
+        appearances: [ "bob_thug_lvl2_03" ]
+        tags: [ "ntr_fat_bandit" ]
+
+      poor_bandit:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit.w2ent"
+        appearances: [ "bob_thug_lvl1_10" ]
+        tags: [ "ntr_poor_bandit" ]
+
+    phases:
+      before_scene:
+        baron_edward:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: humans
+          immortality: invulnerable
+          spawn_at: bob/inn_spawn1
+        bandit_axe:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: humans
+          immortality: invulnerable
+          spawn_at: bob/inn_spawn2
+
+        bandit_sword:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: humans
+          immortality: invulnerable
+          spawn_at: bob/inn_spawn3
+        bandit_spear:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: humans
+          immortality: invulnerable
+          spawn_at: bob/inn_spawn4
+        fat_bandit:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: humans
+          immortality: invulnerable
+          spawn_at: bob/inn_spawn5
+        poor_bandit:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: humans
+          immortality: invulnerable
+          spawn_at: bob/inn_spawn6
+
+      fight_only_baron:
+        baron_edward:
+          attitude: hostile_to_player
+          immortality: none
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/river_spawn1
+
+        bandit_axe:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/river_torch1
+
+        bandit_sword:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/river_upset1
+
+        bandit_spear:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/river_cheer1
+
+        fat_bandit:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/river_cheer2
+
+        poor_bandit:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/river_upset2
+
   comm_camp_bandit_axe_night:
     actors:
       bandit_axe:
@@ -197,7 +317,7 @@ communities:
         bandit_baron:
           use_last_ap: false
           start_in_ap: false
-          attitude: poi_bob_knight
+          attitude: humans
           immortality: invulnerable
           spawn_at: bob/spawnpoint_beach1
 
@@ -209,7 +329,7 @@ communities:
           
       waiting_negotiate:
         bandit_baron:
-          attitude: poi_bob_knight
+          attitude: humans
           immortality: invulnerable
           use_last_ap: true
           start_in_ap: true
@@ -227,7 +347,7 @@ communities:
 
       usual_day:
         bandit_baron:
-          attitude: poi_bob_knight
+          attitude: humans
           immortality: invulnerable
           use_last_ap: true
           start_in_ap: true

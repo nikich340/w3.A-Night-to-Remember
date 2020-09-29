@@ -2,9 +2,11 @@
 # definition of entities
 #
 templates:
+  # !!! dlc\dlcntr\data\entities\baron\npc_tactic_olgierd.w2behtree !!!
   baron_edward:
     includes:
       - "dlc\\dlcntr\\data\\entities\\olgierd_base.w2ent"
+      #- "dlc\\ep1\\data\\quests\\main_npcs\\olgierd.w2ent"
       #- "dlc\\dlcntr\\data\\entities\\knight_baron_base.w2ent"
       #- "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_knight\\bob_knight.w2ent"
 
@@ -13,7 +15,7 @@ templates:
       displayName: "Baron Edward"
       NTR_factOnDeath: "ntr_baron_edward_dead"
       NTR_avoidDeathEvent: true
-      NTR_animationMultiplier: 1.5
+      NTR_animationMultiplier: 1.25
       tags:
         - olgierd
         - olgierd_gpl
@@ -108,7 +110,7 @@ templates:
         entries:
           - ".type": CInventoryDefinitionEntry
             category: "steelsword"
-            isMount: false
+            isMount: true
             isLootable: false
             initializer:
               .type: CInventoryInitializerUniform
@@ -120,6 +122,83 @@ templates:
             initializer:
               .type: CInventoryInitializerUniform
               itemName: "Ardaenye"
+
+    effects:
+      cut_head_fx:
+        ".type": CFXDefinition
+        trackGroups:
+          fx:
+            ".type": CFXTrackGroup
+            tracks:
+              "2":
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParticles
+                    timeBegin: 0.0259074271
+                    timeDuration: 4.516523838
+                    particleSystem: "fx\\blood\\dismemberment\\blood_squirt_line.w2p"
+                    spawner:
+                      ".type": CFXSimpleSpawner
+                      boneNames:
+                        #- Bone21
+                        - neck
+                      relativeRot:
+                        ".type": EulerAngles
+                        Pitch: 0.0
+                        Yaw: 0.0
+                        Roll: 90.0
+                    interpolation:
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+              "1":
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParticles
+                    timeBegin: 0.0172716379
+                    timeDuration: 4.516523838
+                    particleSystem: "fx\\blood\\dismemberment\\dismembement_fx2.w2p"
+                    spawner:
+                      ".type": CFXSimpleSpawner
+                      boneNames:
+                        - neck
+                        #- Bone21
+                    interpolation:
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+            isExpanded: true
+            trackGroupColor: [ 165, 231, 250, 100 ]
+        length: 4.5769743919
+        loopStart: 0.0863580033
+        loopEnd: 0.9931170344
+        showDistance: 30.0
 
   baron_bandit_big:
     includes:

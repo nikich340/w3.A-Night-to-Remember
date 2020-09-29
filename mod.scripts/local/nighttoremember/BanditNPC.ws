@@ -1,6 +1,6 @@
 class CNTRBanditNPC extends CNTRCommonNPC {
 
-	protected function Attack( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity)
+	/*protected function Attack( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity)
     {
         var action : W3Action_Attack;
         
@@ -28,7 +28,7 @@ class CNTRBanditNPC extends CNTRCommonNPC {
             	FactsAdd("NTR_fisfightDead");
             }
         }
-    }
+    }*/
     event OnDeath( damageAction : W3DamageAction  )	{
     	if (IsInFistFightMiniGame()) {
 			FactsAdd("NTR_fisfightDefeat");
@@ -49,7 +49,7 @@ class CNTRBanditNPC extends CNTRCommonNPC {
         }
 	}
 	function PlayEffect( effectName : name, optional target : CNode  ) : bool {
-		NTR_notify("Play: " + effectName + ", target: " + target);
+		//NTR_notify("Play: " + effectName + ", target: " + target);
 		return super.PlayEffect( effectName, target );
 	}
 }

@@ -13,7 +13,7 @@ templates:
       NTR_factOnDeath: "ntr_orianna_bruxa_dead"
       #NTR_factNearlyDead: "ntr_orianna_bruxa_dead"
       NTR_avoidDeathEvent: true
-      NTR_animationMultiplier: 1.5
+      NTR_animationMultiplier: 1.25
 
       grantNoExperienceAfterKill: true
       displayName: "Orianna"
@@ -87,7 +87,7 @@ templates:
           
     usedAppearances:
       - orianna_bruxa_morph
-      - orianna_bruxa_human
+      - orianna_bruxa_human_bloody2
       - orianna_bruxa_monster
       - bruxa_monster_gameplay
 
