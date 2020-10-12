@@ -20,21 +20,45 @@ EXIT /B 1
 :: e.g.:
 ::  %BIN_IMPORT_TEXTURE% data/entities/meshes/ciri_hw_clumping.png data/entities/meshes/ciri_hw_clumping.xbm
 
-:: dlc\dlcntr\data\fx\orianna_smoke\smoke_front_animated02_ver2.xbm
-:: dlc\dlcntr\data\entities\oriana\model\eye_d03.xbm
+:: dlc/dlcntr/data/fx/orianna_smoke/smoke_front_animated02_ver2.xbm
+:: dlc/dlcntr/data/entities/oriana/model/eye_d03.xbm
 
 :: NTR LOGO
 %BIN_IMPORT_TEXTURE% data/gameplay/logos/ntr_logo_en.png data/gameplay/logos/ntr_logo_en.xbm WorldDiffuseWithAlpha
 
-:: Orianna
-%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_04_wa__oriana_d04.png data/entities/oriana/model/h_04_wa__oriana_d04.xbm CharacterDiffuse
-%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_04_wa__oriana_d04_bruxa.png data/entities/oriana/model/h_04_wa__oriana_d04_bruxa.xbm CharacterDiffuse
-%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_04_wa__oriana_d04_bruxa_bloody_final.png data/entities/oriana/model/h_04_wa__oriana_d04_bruxa_bloody_final.xbm CharacterDiffuse
-%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_01_wa__oriana_bloody_final.png data/entities/oriana/model/h_01_wa__oriana_bloody_final.xbm CharacterDiffuse
-%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_01_wa__oriana_bloody_d01.png data/entities/oriana/model/h_01_wa__oriana_bloody_d01.xbm CharacterDiffuse
-%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_03_wa__oriana_d03.png data/entities/oriana/model/h_03_wa__oriana_d03.xbm CharacterDiffuse
-%BIN_IMPORT_TEXTURE% data/entities/oriana/model/h_03_wa__oriana_n03.png data/entities/oriana/model/h_03_wa__oriana_n03.xbm NormalmapGloss
+	:: Bruxa morph torso
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/bruxa/t_02__bruxa_bloody_d01.tga data/entities/oriana/model/bruxa/t_02__bruxa_bloody_d01.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/bruxa/t_02__bruxa_bloody_a01.tga data/entities/oriana/model/bruxa/t_02__bruxa_bloody_a01.xbm CharacterDiffuse
 
+	:: Human bloody2 for bruxa
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/bruxa/oriana_bruxa_human_bloody2_a01.tga data/entities/oriana/model/bruxa/oriana_bruxa_human_bloody2_a01.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/bruxa/oriana_bruxa_human_bloody2_d01.tga data/entities/oriana/model/bruxa/oriana_bruxa_human_bloody2_d01.xbm CharacterDiffuse
+
+	:: Bruxa normal for bruxa (+n for bloody2, +a for vampire_bloody)
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/bruxa/oriana_bruxa_monster_a01.tga data/entities/oriana/model/bruxa/oriana_bruxa_monster_a01.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/bruxa/oriana_bruxa_monster_d01.tga data/entities/oriana/model/bruxa/oriana_bruxa_monster_d01.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/bruxa/oriana_bruxa_monster_n01.tga data/entities/oriana/model/bruxa/oriana_bruxa_monster_n01.xbm NormalmapGloss
+
+	:: Bruxa bloody2 for bruxa
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/bruxa/oriana_bruxa_monster_bloody2_a01.tga data/entities/oriana/model/bruxa/oriana_bruxa_monster_bloody2_a01.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/bruxa/oriana_bruxa_monster_bloody2_d01.tga data/entities/oriana/model/bruxa/oriana_bruxa_monster_bloody2_d01.xbm CharacterDiffuse
+
+  :::: Orianna vampire clean
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/oriana_vampire_clean_d01.tga data/entities/oriana/model/oriana_vampire_clean_d01.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/oriana_vampire_clean_n01.tga data/entities/oriana/model/oriana_vampire_clean_n01.xbm NormalmapGloss
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/oriana_vampire_clean_a01.tga data/entities/oriana/model/oriana_vampire_clean_a01.xbm CharacterDiffuse
+
+  :::: Orianna human bloody
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/oriana_human_bloody_d01.tga data/entities/oriana/model/oriana_human_bloody_d01.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/oriana_human_bloody_a01.tga data/entities/oriana/model/oriana_human_bloody_a01.xbm CharacterDiffuse
+:: Use vanilla a
+
+  :::: Orianna vampire bloody
+%BIN_IMPORT_TEXTURE% data/entities/oriana/model/oriana_vampire_bloody_d01.tga data/entities/oriana/model/oriana_vampire_bloody_d01.xbm CharacterDiffuse
+:: Use vampire clean clean n
+:: Use bruxa monster a
+
+  :: Orianna stuff
 %BIN_IMPORT_TEXTURE% data/entities/oriana/model/orianna_dress_d03.png data/entities/oriana/model/orianna_dress_d03.xbm WorldDiffuse
 %BIN_IMPORT_TEXTURE% data/entities/oriana/model/orianna_dress_n03.png data/entities/oriana/model/orianna_dress_n03.xbm NormalmapGloss
 %BIN_IMPORT_TEXTURE% data/entities/oriana/model/eye_d03.tga data/entities/oriana/model/eye_d03.xbm WorldDiffuse
