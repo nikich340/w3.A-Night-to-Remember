@@ -7,7 +7,7 @@
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
 ;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
-;_       |  280|  335|  1.00| -1.00| <- VERIFY! | _  d  P  [  280 -  335]
+;_       |  270|  335|  1.00| -1.00| <- VERIFY! | _  d  P  [  270 -  335]
 ------------------------------------------------------------------------
 w       |  335|  445|  1.00| -1.00| <- VERIFY! | w  ~  OW [  335 -  445]
 ɛ       |  445|  575|  1.10| -1.00| <- VERIFY! | ɛ  ~  AY [  445 -  575]

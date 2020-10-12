@@ -2,22 +2,22 @@
 ;meta[version=1]
 ;meta[text=House looks inhabited… No sign of the dweller, though. Guess I'll look around.]
 ;meta[translation=hˈaʊs lˈʊks ɪnhˈabɪtɪd nˈəʊ sˈaɪn ɒvðə dwˈɛlə ðˌəʊ ɡˈɛs aɪl lˈʊk ɐɹˈaʊnd]
-;meta[audio-hypothesis=SIL AE M S L UW K S AH N AE V AH D IH T IH P SIL T N AH OW S AH N AH M TH AH D L OY L IH DH OW SIL IH S AH L UW G OW R AW N D SIL]
+;meta[audio-hypothesis=SIL AE B S AH L UH K S IH N AE V AH D IH T IH P SIL T N AH OW S AH N AH M TH AH D L OY L IH DH OW SIL IH S AH L UW G OW R AW N D SIL]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
 ;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
 ------------------------------------------------------------------------
-h       |  300|  445|  1.00| -1.00| <- VERIFY! | h  ~  AE [  300 -  445]
-aʊ      |  445|  485|  1.10| -1.00| <- VERIFY! | aʊ ~  M  [  445 -  485]
-s       |  485|  585|  1.00|  2.00| ok         | s  ~  S  [  485 -  585]
+h       |  290|  455|  1.00| -1.00| <- VERIFY! | h  ~  AE [  290 -  455]
+aʊ      |  455|  505|  1.10| -1.00| <- VERIFY! | aʊ ~  B  [  455 -  505]
+s       |  505|  565|  1.00|  2.00| ok         | s  ~  S  [  505 -  565]
 ------------------------------------------------------------------------
-l       |  585|  665|  1.00|  2.00| ok         | l  ~  L  [  585 -  665]
-ʊ       |  665|  725|  1.10| -1.00| <- VERIFY! | ʊ  ~  UW [  665 -  725]
+l       |  565|  655|  1.00|  1.00| ok         | l  ~> AH [  565 -  615] + L  [  615 -  655]
+ʊ       |  655|  725|  1.10|  2.00| ok         | ʊ  ~  UH [  655 -  725]
 k       |  725|  795|  1.00|  2.00| ok         | k  ~  K  [  725 -  795]
 s       |  795|  855|  1.00|  2.00| ok         | s  ~  S  [  795 -  855]
 ------------------------------------------------------------------------
-ɪ       |  855|  895|  1.00|  0.25| ok         | ɪ  ~  AH [  855 -  895]
+ɪ       |  855|  895|  1.00|  2.00| ok         | ɪ  ~  IH [  855 -  895]
 n       |  895|  965|  1.00|  2.00| ok         | n  ~  N  [  895 -  965]
 ;h       |  965|  965|  1.00| -1.00| <- VERIFY! | h  i
 a       |  965| 1115|  1.10|  1.70| ok         | a  ~  AE [  965 - 1115]
@@ -26,7 +26,7 @@ b       | 1175| 1265|  1.00|  0.00| ok         | b  ~> AH [ 1175 - 1215] + D  [ 
 ɪ       | 1265| 1365|  1.00|  2.00| ok         | ɪ  ~  IH [ 1265 - 1365]
 t       | 1365| 1445|  1.00|  2.00| ok         | t  ~  T  [ 1365 - 1445]
 ɪ       | 1445| 1495|  1.00|  2.00| ok         | ɪ  ~  IH [ 1445 - 1495]
-;_       | 1495| 1630|  1.00| -1.00| <- VERIFY! | _  d  P  [ 1495 - 1630]
+;_       | 1495| 1620|  1.00| -1.00| <- VERIFY! | _  d  P  [ 1495 - 1620]
 d       | 2210| 2265|  1.00|  1.70| ok         | d  ~  T  [ 2210 - 2265]
 ------------------------------------------------------------------------
 n       | 2265| 2315|  1.00|  2.00| ok         | n  ~  N  [ 2265 - 2315]

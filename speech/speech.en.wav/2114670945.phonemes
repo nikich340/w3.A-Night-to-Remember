@@ -2,15 +2,17 @@
 ;meta[version=1]
 ;meta[text=Got... other things on their mind.]
 ;meta[translation=ɡˈɒt ˈʌðə θˈɪŋz ˌɒn ðeə mˈaɪnd]
-;meta[audio-hypothesis=SIL K AH SIL AH DH IH F IH NG Z EH L M AE M AY T M AH T]
+;meta[audio-hypothesis=SIL T IH L AH D SIL AH DH IH F IH NG Z EH L M AE M AY T M AY SIL]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
 ;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
 ------------------------------------------------------------------------
-ɡ       |  260|  325|  1.00|  1.70| ok         | ɡ  ~  K  [  260 -  325]
-ɒ       |  325|  510|  1.10|  1.70| ok         | ɒ  ~  AH [  325 -  510]
-;t       |  510|  510|  1.00| -1.00| <- VERIFY! | t  i
+ɡ       |  270|  315|  1.00|  0.01| ok         | ɡ  ~  T  [  270 -  315]
+;_       |  315|  365|  1.00| -1.00| <- VERIFY! | _  d  IH [  315 -  365]
+;_       |  365|  395|  1.00| -1.00| <- VERIFY! | _  d  L  [  365 -  395]
+ɒ       |  395|  495|  1.10|  1.70| ok         | ɒ  ~  AH [  395 -  495]
+t       |  495|  520|  1.00|  1.70| ok         | t  ~  D  [  495 -  520]
 ------------------------------------------------------------------------
 ʌ       | 1150| 1245|  1.10|  2.00| ok         | ʌ  ~  AH [ 1150 - 1245]
 ð       | 1245| 1305|  1.00|  2.00| ok         | ð  ~  DH [ 1245 - 1305]
@@ -32,4 +34,4 @@ m       | 2055| 2185|  1.00|  2.00| ok         | m  ~  M  [ 2055 - 2185]
 aɪ      | 2185| 2405|  1.10|  2.00| ok         | aɪ ~  AY [ 2185 - 2405]
 ;_       | 2405| 2435|  1.00| -1.00| <- VERIFY! | _  d  T  [ 2405 - 2435]
 n       | 2435| 2575|  1.00|  0.25| ok         | n  ~  M  [ 2435 - 2575]
-d       | 2575| 2700|  1.00|  0.85| ok         | d  ~> AH [ 2575 - 2615] + T  [ 2615 - 2700]
+d       | 2575| 2660|  1.00|  0.01| ok         | d  ~  AY [ 2575 - 2660]

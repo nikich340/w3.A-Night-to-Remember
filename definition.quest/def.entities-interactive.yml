@@ -2,6 +2,37 @@
 # definition of entities
 #
 templates:
+  baron_sword:
+    includes:
+      - gameplay\containers\container_template.w2ent
+    entityObject:
+      ".type": W3AnimatedContainer
+      streamingDistance: 3
+      #focusModeVisibility: FMV_Clue   ### Should be set with quest function FocusSetHighlight( tag : name, highlightType : EFocusModeVisibility, optional overrideCustomLogic : bool ) ###
+      components:
+        CAppearanceComponent0:
+          ".type": CAppearanceComponent
+          forcedAppearance: 1_full
+        container:
+          ".type": CInventoryComponent
+    appearances:
+      1_full:
+        ".type": CEntityAppearance
+        includedTemplates:
+          - "items\\weapons\\swords\\steel_swords_unique\\steel_unique_ardaenye.w2ent"
+      2_empty:
+        ".type": CEntityAppearance
+    usedAppearances:
+      - 2_empty
+      - 1_full
+    templateParams:
+      - ".type": CR4LootParam
+        name: "loot"
+        containers:
+          baron_sword_loot:
+            chance: 100.0
+            respawnTime: 0
+
   regis_mail:
     includes:
       - gameplay\containers\container_template.w2ent
@@ -28,7 +59,6 @@ templates:
     templateParams:
       - ".type": CR4LootParam
         name: "loot"
-        wasIncluded: true
         containers:
           regis_mail_loot:
             chance: 100.0
@@ -71,3 +101,5 @@ loot:
     - notices/orianna_notes
   regis_mail_loot:
     - notices/regis_letter
+  baron_sword_loot:
+    - ~Ardaenye

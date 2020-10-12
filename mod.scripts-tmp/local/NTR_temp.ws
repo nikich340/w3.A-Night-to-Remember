@@ -1,6 +1,46 @@
 exec function startNTR() {
 	FactsAdd("NTRstartquest", 1);
 }
+// not work?
+exec function NTR_MoveNPCsTo(tag : name, targetTag : name, optional speed : float) {
+	var i               : int;
+	var l_npcs 		    : array<CNewNPC>;
+	var l_aiTree		: CAIMoveToAction;
+	
+	theGame.GetNPCsByTag(tag, l_npcs);
+	
+	l_aiTree = new CAIMoveToAction in thePlayer;
+	l_aiTree.OnCreated();
+	
+	l_aiTree.params.targetTag = targetTag;
+	l_aiTree.params.moveSpeed = speed;
+	l_aiTree.params.rotateAfterwards = false;
+	
+	if( speed > 1.0 )
+	{
+		l_aiTree.params.moveType = MT_Run;
+	}
+	
+	for	( i = 0; i < l_npcs.Size(); i+= 1 )
+	{
+		if (l_npcs[i].IsAlive())
+			l_npcs[i].ForceAIBehavior( l_aiTree, BTAP_AboveCombat2);
+		/*
+			BTAP_Unavailable,
+            BTAP_Idle,
+            BTAP_Emergency,
+            BTAP_Combat,
+            BTAP_FullCutscene,
+            BTAP_BelowIdle,
+            BTAP_AboveIdle,
+            BTAP_AboveIdle2,
+            BTAP_AboveEmergency,
+            BTAP_AboveEmergency2,
+            BTAP_AboveCombat,
+            BTAP_AboveCombat2
+        */
+	}
+}
 exec function colorEnt(compN : int, h1 : Uint16, l1 : Int8, s1 : Int8, h2 : Uint16, l2 : Int8, s2 : Int8)
 {
     var template, temp : CEntityTemplate;
@@ -104,6 +144,11 @@ exec function sc(num : int, optional input : String) {
 	sceneNames.PushBack("21.orianna_to_bruxa.w2scene");
 	sceneNames.PushBack("22.orianna_kills_geralt.w2scene");
 	sceneNames.PushBack("23.orianna_bruxa_dies.w2scene");
+	sceneNames.PushBack("24.baron_river_friendly.w2scene");
+	sceneNames.PushBack("25.baron_dies_long.w2scene");
+	sceneNames.PushBack("26.baron_river_aggressive.w2scene");
+	sceneNames.PushBack("27.baron_dies_short.w2scene");
+	sceneNames.PushBack("28.orianna_farewell.w2scene");
 	
 	if (!input) {
 		input = "Input";
@@ -294,7 +339,7 @@ exec function getInRange(range : float) {
             tags = actor.GetTags();
 
             for (t = 0; t < tags.Size(); t += 1) {
-                LogChannel('getInRange', "> tag " + tags[t]);
+                LogChannel('getInRange', "   > tag " + tags[t]);
             }
         }
     }
@@ -554,7 +599,7 @@ exec function orihum() {
 	ent.AddTag('oriana_test2');
 	ent.AddTag('ntr_orianna_human');
 	ent.AddTag('vip');
-	ent.ApplyAppearance('orianna_vampire_bloody_morph');
+	ent.ApplyAppearance('orianna_human_morph');
 }
 
 exec function barolg() {
@@ -659,12 +704,16 @@ exec function switchLogo2(enable : bool) {
 		ent.StopEffect('ntr_logo_screen_en_baw');
 }
 
-exec function playScene(path : string) {
+exec function playScene(path : string, optional input : string) {
     var scene : CStoryScene;
+
+    if (!input) {
+    	input = "Input";
+    }
 
     // -> SET SCENE PATH
     scene = (CStoryScene)LoadResource( path, true);
-    theGame.GetStorySceneSystem().PlayScene(scene, "Input");
+    theGame.GetStorySceneSystem().PlayScene(scene, input);
 }
 
 exec function oribru() {
@@ -702,6 +751,70 @@ blood_back_point - bruxa_base(torso)
 ground
 fx_cast_push
 */
+exec function attle1(slotName : name, optional x, y, z, pitch, yaw, roll : float, optional breakE : Bool) {
+	var template                 : CEntityTemplate;
+	var entity, attachment       : CEntity;
+	var entityTag, attachmentTag : name;
+	var relativePosition         : Vector;
+	var relativeRotation         : EulerAngles;
+	var result                   : Bool;
+	var ents : array<CEntity>;
+	var i : int;
+
+			entityTag = 'PLAYER';
+			attachmentTag = 'ntr_geralt_letter_stamped';
+
+	if (breakE) {
+		theGame.GetEntitiesByTag(attachmentTag, ents);
+		for (i = 0; i < ents.Size(); i += 1) {
+			ents[i].Destroy();
+		}
+	}
+
+			template = (CEntityTemplate)LoadResource("dlc\bob\data\items\quest_items\q705\q705_item__assasination_letter_closed_small.w2ent", true);
+			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
+			attachment.AddTag(attachmentTag);
+			//entity = theGame.GetEntityByTag(entityTag);
+
+			//slotName = 'r_weapon';
+			relativePosition = Vector(x, y, z);
+			relativeRotation = EulerAngles(pitch, yaw, roll);
+
+			result = attachment.CreateAttachment(thePlayer, slotName, relativePosition, relativeRotation);
+			NTR_notify("attach = " + result);
+}
+exec function attle2(slotName : name, optional x, y, z, pitch, yaw, roll : float, optional breakE : Bool) {
+	var template                 : CEntityTemplate;
+	var entity, attachment       : CEntity;
+	var entityTag, attachmentTag : name;
+	var relativePosition         : Vector;
+	var relativeRotation         : EulerAngles;
+	var result                   : Bool;
+	var ents : array<CEntity>;
+	var i : int;
+
+			entityTag = 'ntr_orianna_human';
+			attachmentTag = 'ntr_orianna_letter_opened';
+
+	if (breakE) {
+		theGame.GetEntitiesByTag(attachmentTag, ents);
+		for (i = 0; i < ents.Size(); i += 1) {
+			ents[i].Destroy();
+		}
+	}
+
+			template = (CEntityTemplate)LoadResource("dlc\bob\data\items\quest_items\q705\q705_item__comercial_poster_stamped.w2ent", true);
+			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
+			attachment.AddTag(attachmentTag);
+			entity = theGame.GetEntityByTag(entityTag);
+
+			//slotName = 'r_weapon';
+			relativePosition = Vector(x, y, z);
+			relativeRotation = EulerAngles(pitch, yaw, roll);
+
+			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
+			NTR_notify("attach = " + result);
+}
 exec function attbru(slotName : name, optional x, y, z, pitch, yaw, roll : float, optional breakE : Bool) {
 	var template                 : CEntityTemplate;
 	var entity, attachment       : CEntity;

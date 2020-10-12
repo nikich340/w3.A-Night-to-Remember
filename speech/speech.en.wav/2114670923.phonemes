@@ -2,16 +2,16 @@
 ;meta[version=1]
 ;meta[text=Oh, I'm lucky to stumble across wealth today.]
 ;meta[translation=ˈəʊ aɪm lˈʌki tə stˈʌmbəl əkɹˌɒs wˈɛlθ tədˈeɪ]
-;meta[audio-hypothesis=SIL G AO HH OW SIL AH M N L UH K IY D IH S T AH M B AH L AH K R AO S AH W EH L F DH IH D EY SIL]
+;meta[audio-hypothesis=SIL G AO HH AH SIL AH M N L UH K IY D IH S T AH M B AH L AH K R AO S AH W EH L F DH IH D EY SIL]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
 ;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
 ;_       |  280|  335|  1.00| -1.00| <- VERIFY! | _  d  G  [  280 -  335]
 ;_       |  335|  485|  1.00| -1.00| <- VERIFY! | _  d  AO [  335 -  485]
-;_       |  485|  575|  1.00| -1.00| <- VERIFY! | _  d  HH [  485 -  575]
+;_       |  485|  585|  1.00| -1.00| <- VERIFY! | _  d  HH [  485 -  585]
 ------------------------------------------------------------------------
-əʊ      |  575|  640|  1.10|  2.00| ok         | əʊ ~  OW [  575 -  640]
+əʊ      |  585|  640|  1.10|  0.01| ok         | əʊ ~  AH [  585 -  640]
 ------------------------------------------------------------------------
 aɪ      |  920| 1015|  1.00|  0.25| ok         | aɪ ~  AH [  920 - 1015]
 m       | 1015| 1115|  1.00|  1.00| ok         | m  ~> M  [ 1015 - 1065] + N  [ 1065 - 1115]

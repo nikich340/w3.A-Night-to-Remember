@@ -15,6 +15,9 @@ quest function NTR_ForceKillNPC(tag : name, playDeath : bool) {
 
 	theGame.GetNPCsByTag(tag, npcs);
 	for (i = 0; i < npcs.Size(); i += 1) {
+		if ( !npcs[i].IsAlive() )
+			continue;
+
 		NTR_npc = (CNTRCommonNPC) npcs[i];
 		if (NTR_npc) {
 			NTR_npc.NTR_avoidDeathEvent = false;

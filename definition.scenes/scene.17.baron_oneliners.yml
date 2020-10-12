@@ -31,15 +31,16 @@ dialogscript:
   actors: [ "Baron_Edward", "geralt" ]
 
   section_start_camp_reminder:
-    - Baron_Edward: "Remember, witcher, the boy can't be harmed."
+    - Baron_Edward: "2114670625|Remember, witcher, the boy can't be harmed."
     - NEXT: section_exit
 
   section_start_camp_not_yet:
-    - Baron_Edward: "Did you find Orianna?"
+    - Baron_Edward: "2114670626|Did you find Orianna?"
     - geralt: "[0.9865819]0001035069|Not yet."
-    - Baron_Edward: "Then go and work!"
+    - Baron_Edward: "2114670627|Then go and work!"
     - NEXT: section_exit
 
   section_exit:
     - EXIT
+
 

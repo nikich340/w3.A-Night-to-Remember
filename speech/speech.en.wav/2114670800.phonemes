@@ -2,7 +2,7 @@
 ;meta[version=1]
 ;meta[text=Gonna answer me?]
 ;meta[translation=ɡˌənəɹ ˈansə mˌiː]
-;meta[audio-hypothesis=SIL G AH M AE D S ER M EY]
+;meta[audio-hypothesis=SIL G AH M AE D S ER M EY N]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
@@ -15,9 +15,10 @@ n       |  375|  395|  1.00|  0.25| ok         | n  ~  M  [  375 -  415]
 ;ɹ       |  415|  415|  1.00| -1.00| <- VERIFY! | ɹ  i
 ------------------------------------------------------------------------
 a       |  415|  605|  1.10|  1.70| ok         | a  ~  AE [  415 -  605]
-n       |  605|  645|  1.00| -1.00| <- VERIFY! | n  ~  D  [  605 -  645]
-s       |  645|  725|  1.00|  2.00| ok         | s  ~  S  [  645 -  725]
+n       |  605|  655|  1.00| -1.00| <- VERIFY! | n  ~  D  [  605 -  655]
+s       |  655|  725|  1.00|  2.00| ok         | s  ~  S  [  655 -  725]
 ə       |  725|  785|  1.00|  0.50| ok         | ə  ~  ER [  725 -  785]
 ------------------------------------------------------------------------
 m       |  785|  845|  1.00|  2.00| ok         | m  ~  M  [  785 -  845]
-i       |  845| 1030|  1.05| -1.00| <- VERIFY! | i  ~  EY [  845 - 1030]
+;_       |  845|  995|  1.00| -1.00| <- VERIFY! | _  d  EY [  845 -  995]
+i       |  995| 1030|  1.05| -1.00| <- VERIFY! | i  ~  N  [  995 - 1030]

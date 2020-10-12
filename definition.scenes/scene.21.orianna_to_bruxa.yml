@@ -172,15 +172,15 @@ repository:
         tags: [ "ext" ]
 
     cam_5_Shot4_steps:
-      fov: 25.0
+      fov: 15.0
       transform:
-        pos: [ -135.7154693604, 51.7626724243, -9.6220579147 ]
-        rot: [ 0.0, 355.2802124023, 358.0417785645 ]
+        pos: [ -136.5794525146, 52.0098342896, -9.6220579147 ]
+        rot: [ 0.0, 358.0852050781, 337.3617553711 ]
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 4.0128049850, 7.0128049850 ]
-        focus: [ 4.5128049850, 5.5128049850 ]
+        blur: [ 4.4334068298, 7.4334068298 ]
+        focus: [ 4.9334068298, 5.9334068298 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -967,7 +967,7 @@ dialogscript:
     # (longest) anim: geralt_reaction_tired_face
     - PAUSE: 1.5
     - CUE: shot_8_cam
-    - geralt: "Times have changed."
+    - geralt: "[2.2554]2114670300|Times have changed."
     # shot Shot6 ori smile
     #- geralt: "shot9"
     - CUE: shot_9

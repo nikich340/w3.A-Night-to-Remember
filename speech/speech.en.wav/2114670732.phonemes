@@ -2,7 +2,7 @@
 ;meta[version=1]
 ;meta[text=Do anything stupid and they'll tie you down on an anthill, face coated with honey. You'll scream so loud even the storm riders will hear you.]
 ;meta[translation=dˈuː ˈɛnɪθˌɪŋ stjˈuːpɪd and ðeɪl tˈaɪ juː dˌaʊn ˌɒn ɐn ˈanthɪl fˈeɪs kˈəʊtɪd wɪð hˈʌnɪ juːl skɹˈiːm sˌəʊ lˈaʊd ˈiːvən ðə stˈɔːm ɹˈaɪdəz wɪl hˈiə juː]
-;meta[audio-hypothesis=SIL D IH M EH M EY D IH N SH T Y UW P IH DH AH N OW B T AY Y UW D AH NG AO M AH M HH AH M T EY L K SIL TH EY Z K AH V S IH D W IH D HH AA D L IY SIL IH L S K R IH N SH OW R L AE D IH G M AH S T OW M R AA D AH Z L EY Y IH P SIL]
+;meta[audio-hypothesis=SIL D IH M EH M EY D IH N SH T Y UW P IH DH AH N OW B T AY Y UW D AH NG AO M AH M HH AH M T EY L K SIL TH EY Z K AH V S IH D W IH D HH AA D L IY SIL IH L S K W IY N SH OW R L AE D IH G M AH S T OW M ER AA D AH Z L EY Y IH P SIL]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
@@ -83,12 +83,12 @@ n       | 4435| 4485|  1.00| -1.00| <- VERIFY! | n  ~  L  [ 4435 - 4485]
 ------------------------------------------------------------------------
 j       | 4562| 4640|  1.00|  0.49| ok         | j  \  IY [ 4485 - 4640]
 u       | 5090| 5165|  1.00|  0.01| ok         | u  ~  IH [ 5090 - 5165]
-l       | 5165| 5215|  1.00|  2.00| ok         | l  ~  L  [ 5165 - 5215]
+l       | 5165| 5225|  1.00|  2.00| ok         | l  ~  L  [ 5165 - 5225]
 ------------------------------------------------------------------------
-s       | 5215| 5325|  1.00|  2.00| ok         | s  ~  S  [ 5215 - 5325]
-k       | 5325| 5375|  1.00|  2.00| ok         | k  ~  K  [ 5325 - 5375]
-ɹ       | 5375| 5435|  1.00|  2.00| ok         | ɹ  ~  R  [ 5375 - 5435]
-i       | 5435| 5485|  1.10|  1.70| ok         | i  ~  IH [ 5435 - 5485]
+s       | 5225| 5325|  1.00|  2.00| ok         | s  ~  S  [ 5225 - 5325]
+k       | 5325| 5365|  1.00|  2.00| ok         | k  ~  K  [ 5325 - 5365]
+ɹ       | 5365| 5425|  1.00| -1.00| <- VERIFY! | ɹ  ~  W  [ 5365 - 5425]
+i       | 5425| 5485|  1.10|  2.00| ok         | i  ~  IY [ 5425 - 5485]
 m       | 5485| 5545|  1.00|  0.01| ok         | m  ~  N  [ 5485 - 5545]
 ------------------------------------------------------------------------
 s       | 5545| 5655|  1.00|  0.50| ok         | s  ~  SH [ 5545 - 5655]
@@ -109,10 +109,10 @@ n       | 6145| 6185|  1.00|  0.24| ok         | n  \  M  [ 6105 - 6185]
 s       | 6245| 6375|  1.00|  2.00| ok         | s  ~  S  [ 6245 - 6375]
 t       | 6375| 6435|  1.00|  2.00| ok         | t  ~  T  [ 6375 - 6435]
 ɔ       | 6435| 6545|  1.10| -1.00| <- VERIFY! | ɔ  ~  OW [ 6435 - 6545]
-m       | 6545| 6645|  1.00|  2.00| ok         | m  ~  M  [ 6545 - 6645]
+m       | 6545| 6665|  1.00|  2.00| ok         | m  ~  M  [ 6545 - 6665]
 ------------------------------------------------------------------------
-ɹ       | 6645| 6675|  1.00|  2.00| ok         | ɹ  ~  R  [ 6645 - 6675]
-aɪ      | 6675| 6795|  1.10|  0.01| ok         | aɪ ~  AA [ 6675 - 6795]
+ɹ       | 6665| 6695|  1.00|  0.50| ok         | ɹ  ~  ER [ 6665 - 6695]
+aɪ      | 6695| 6795|  1.10|  0.01| ok         | aɪ ~  AA [ 6695 - 6795]
 d       | 6795| 6845|  1.00|  2.00| ok         | d  ~  D  [ 6795 - 6845]
 ə       | 6845| 6885|  1.00|  2.00| ok         | ə  ~  AH [ 6845 - 6885]
 z       | 6885| 6955|  1.00|  2.00| ok         | z  ~  Z  [ 6885 - 6955]

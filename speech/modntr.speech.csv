@@ -45,6 +45,208 @@
 2114670739|||Fuck you!
 2114670740|||Death mistake.
 2114670745|||Crazy nightmare.
+;
+; scene 11 orphanage main
+;
+2114670755|00000000||A witcher
+2114670756|00000000||Just a traveler
+2114670757|00000000||Vampire of Rivia
+2114670758|00000000||It's a deal
+2114670759|00000000||Why are you interested in children?
+2114670760|00000000||I'll ask again, polite like, and you'll answer, just as politely
+2114670761|00000000||Orianna will kill you
+2114670762|00000000||Who the foek are you?!
+2114670763|00000000||Me? Drifter, stranger, mutant... Sometimes even by my name. Vampire of Rivia.
+2114670764|00000000||Very funny, cretin.
+;    393630|00000000||Just a traveler. Happened to be passing through.
+2114670765|00000000||Just a traveler you say.. And just two swords behind? Looks like you can swing them well.
+;   1094310|00000000||Geralt of Rivia. Witcher.
+2114670766|00000000||Witcher? So you know how to track down somebody, right?
+2114670767|00000000||Well, get in here, will talk with you.
+2114670768|00000000||I suppose to find a red-haired woman here.
+2114670769|00000000||That's interesting. Because we supposed to meet her too.
+2114670770|00000000||Why are you looking for her?
+2114670771|00000000||Our boss has questions for her about orphanage and children.
+2114670772|00000000||The orphanage was attacked and almost none of the children survived.
+2114670773|00000000||Almost - nice word. So someone is alive. And we know for sure that Orianna herself is alive too.
+2114670774|00000000||But she doesn't want to come here. So there's something wrong here. We are few, and we guard the places where she used to be. Perhaps you could help us, and then our leader Baron Edward will give you a decent reward.
+2114670775|00000000||Why are you interested in children?
+2114670776|00000000||It's no concern of yours.
+2114670777|00000000||Orianna will kill you. She is a monster, not a human. And only I can help. Meaning I need more information.
+2114670778|00000000||Do you think we believe first fella? Talk with our leader about it.
+;   1117735|00000000||I'll ask again, polite like, and you'll answer, just as politely.
+2114670779|00000000||Look at that - vagrant mutt's givin' us orders… Needs to know his place! Fuck 'im up!
+2114670780|00000000||Three against one - you're dead already.
+2114670781|00000000||It's a deal. Where can I find him?
+2114670782|00000000||We have pitched camp on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater.
+;   1003998|00000000||See what I can do.
+;
+; scene 12 orphanage loose
+;
+2114670790|00000000||Hahaha, shove off, vargant! If you will decide to help - our camp is on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater.
+;   1000528|00000000||Dammit...
+;
+; scene 14 orphanage win
+;
+;   1195382|00000000||Argh!
+2114670800|00000000||Gonna answer me?
+2114670801|00000000||Baron won't be happy... Alright, I'll tell you what I know.
+2114670802|00000000||A few years ago our leader, Baron Edward, visited Toussaint, where he met a beautiful girl.
+2114670803|00000000||A boy was born to them.
+2114670804|00000000||The Baron went with us to the far lands, where we were culled by battalions of Nilfs.
+2114670805|00000000||Well, I can't say that the Baron liked that girl much, as he left her here. However recently he said we must visit Toussaint again.
+2114670806|00000000||We came here and found out that she had died of some illness about a year ago. And the boy was sent in an orphanage, to this Orianna.
+2114670807|00000000||But we didn't manage to find neither boy nor Orianna.
+2114670808|00000000||After that vampire attack the orphanage is abandoned, only a mess and a pile of children's old corpses.
+2114670809|00000000||Baron was quite upset. But then we learned that Orianna is alive and in perfect health, people saw her in the city with the boy.
+2114670810|00000000||Baron is sure that this is his son and very much wants to find this woman. However she is... elusive, everyone know her but where she is - no idea.
+2114670811|00000000||So we divided into groups and now watching for places where she may appear.
+2114670812|00000000||To be honest, I'm tired of sitting on one place, so if you could help us, it would be great.
+2114670813|00000000||I see it now. It's a deal.
+2114670814|00000000||Then you should talk with our leader.
+;    499337|00000000||Where can I find him?
+2114670815|00000000||We have pitched camp on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater.
+;   1003998|00000000||See what I can do.
+;
+;
+; scene 13 orphanage gp
+;
 2114670795|00000000||Interesting. Son of a bandit in the vampire's claws...
-;2114670943|00000000||Got... other things on their mind.
-;2114670300|00000000||Times have changed.
+2114670796|00000000||What's that you're mutterin'? Go and talk with baron.
+;
+; scene 18
+;
+2114670915|00000000||I will pay
+2114670916|00000000||You will help me for free
+2114670917|00000000||I want to help that woman
+;   1124989|00000000||Good day. Fish biting?
+2114670918|00000000||I catch more when it's raining.
+2114670919|00000000||Did you see a red-haired woman here? Left this site by boat, recently.
+2114670920|00000000||Maybe. Maybe not. Give me a few coins and I'll try to remember.
+;    400593|00000000||I want to help that woman. She could be in danger.
+2114670921|00000000||I would believe you if you had a satchel of herbs instead of those blades sheathed on your back.
+;   1125802|00000000||Asking a lot. Too much. How about you do this free of charge, huh? Out of the kindness of your heart?
+2114670922|00000000||Aye, I'll help. Outta kindness…
+;    434805|00000000||Fine… I'll pay.
+2114670923|00000000||Oh, I'm lucky to stumble across wealth today.
+2114670924|00000000||Well… you listen up.
+2114670925|00000000||The woman came from that direction by the cemetery.
+2114670926|00000000||Paid me a tidy sum to take her across the river.
+2114670927|00000000||She was nervous and dirty, but I didn't ask her about it.
+2114670928|00000000||I dropped her off near the Cockatrice Inn.
+2114670929|00000000||She hopped off the boat without saying a word…
+;   1029815|00000000||Hm, interesting. Thanks.
+2114670932|00000000||Good luck to you!
+;
+; scene 19 - ori appear
+;
+2114670935|00000000||Here we are.
+2114670936|00000000||Lady Orianna...
+2114670937|00000000||Go on!
+2114670938|00000000||Wait me here. I should check something. You are allowed to play in my room.
+;
+; scene 20 - ori main
+;
+2114670940|00000000||I came to kill you.
+2114670941|00000000||No need in fight.
+2114670942|00000000||[Show letter from Regis.]
+2114670943|00000000||Talked enough, let's fight.
+;   1174593|00000000||Wolves_asleepin'_'midst_the_trees__bats_all_aswayi
+;   1176970|00000000||But_one_soul_lies_anxious__wide_awake__fearin'_all
+;    366968|00000000||Nice_tune__Damn_sad__though_
+2114670944|00000000||Folk have forgotten it.
+2114670945|00000000||Got... other things on their mind.
+2114670946|00000000||Things like me?
+;   1187118|00000000||Know what…? Don't feel like talking to you anymore. This is pointless.
+2114670947|00000000||Got something for you. My silver sword.
+2114670948|00000000||No witcher's ever died in his own bed.
+2114670949|00000000||You won't be exception.
+;   1172302|00000000||We don't have to fight.
+2114670950|00000000||Really? You will let me leave again?
+2114670951|00000000||On one condition… Stop drinking the children.
+2114670952|00000000||You know, I am the vampiress. And I can't resist the blood hunger.
+2114670953|00000000||Think you can handle this on your own. Found something interesting in your house.
+2114670954|00000000||So, you snuck in my house and decided to show off with it? You call those manners?
+2114670955|00000000||Orianna, that doesn't change the fact that...
+2114670956|00000000||That I started to change? It's just my guessings.
+2114670957|00000000||Don't deny it.
+2114670958|00000000||That's not enough to convince me.
+;   1007115|00000000||All right.
+2114670959|00000000||Take a look at this.
+2114670960|00000000||Hmm. Regis, Regis… Awfully noble as always.
+;   1101409|00000000||Well, I probably wouldn't 'ave forced myself on you.
+2114670961|00000000||Fine. I've come to a decision - I vow not to hurt kids anymore.
+2114670962|00000000||But they will stay with me. I'll take care of them. And it's not up for discussion.
+2114670963|00000000||If you break your vow I'll come back, and someone'll get hurt.
+2114670964|00000000||I'd sooner drink from vagrant than break my word.
+;   1027471|00000000||Hmm... Guess I believe you...
+2114670965|00000000||Don't intend to pursue me again?
+;   1047894|00000000||Right, leave you to it, then.
+2114670966|00000000||Thanks.
+2114670967|00000000||He would be upset if we tussled, wouldn't he?
+;
+; scene 21 orianna to bruxa
+;
+2114670300|00000000||Times have changed.
+;
+; scene 24
+;
+2114670323|00000000||Glad to hear it. Finally this dirty whore got what she's deserved.
+2114670324|00000000||Now say where is my son.
+2114670325|00000000||I don't know where he is.
+2114670326|00000000||Wrong answer. You think nobody saw you having interesting conversation with Orianna?
+2114670327|00000000||I give you one more try.
+;   1068309|00000000||Your son is dead.
+2114670328|00000000||Where is his body?
+2114670329|00000000||Hmmm…er…well…
+2114670330|00000000||You seek to trick me, witcher.
+2114670331|00000000||Perhaps I have to loosen your tongue with a knife.
+2114670332|00000000||I'll take care of them myself.
+2114670333|00000000||Are you mad, you twit?
+2114670334|00000000||You're common bandits. I don't trust you.
+2114670335|00000000||You'll regret that you got in my way.
+2114670336|00000000||The children are in that house. A young girl with a boy. Alive.
+;   1091952|00000000||You'll look after her?
+2114670337|00000000||All right, I will.
+2114670338|00000000||Sure hope so. Here's my advice, don't show it to them.
+2114670339|00000000||True. In this case here our paths diverge.
+2114670340|00000000||There's your payment. And good luck.
+;   1019171|00000000||Farewell.
+2114670341|00000000||You refused the money. But I have another reward for you.
+;   1130945|00000000||What a surprise.
+2114670342|00000000||My favourite sword. Was made to order by an elven swordsmith.
+;    451753|00000000||Thank you. Farewell.
+;    490004|00000000||That a threat?
+2114670343|00000000||I challenge you to a duel. You and I.
+;
+; scene 25
+;
+2114670355|00000000||No…
+;    373208|00000000||Had enough?
+2114670356|00000000||Good choice.
+;
+; scene 26
+;
+;   1101069|00000000||Greetings.
+2114670360|00000000||What the hell, witcher? Why did you let Orianna leave? Turned yellow?
+;   1174787|00000000||Despite what you might've heard, I don't lunge at every monster I see, sword in hand. Talking gets the job done for some.
+2114670361|00000000||Bullshit. You were to kill her, not help her.
+;   1181655|00000000||Mhm. But I changed my mind.
+2114670362|00000000||I don't have to explain myself to you.
+2114670363|00000000||I think you're just coward and traitor.
+2114670364|00000000||Wanna know what happen to everyone who betrayed my trust?
+;    490004|00000000||That a threat?
+2114670365|00000000||Kill him!
+;
+; scene 27
+;
+; scene 28
+;
+;   1143303|00000000||What's the matter?
+2114670375|00000000||A slayer of monsters slayed people to protect monster. You managed to impress me.
+;    458827|00000000||It was the lesser evil... I think.
+2114670376|00000000||Probably this annoying Baron promised you a huge reward for me, right?
+2114670377|00000000||You can pick up his sword instead of this. I know, you like these sharp things.
+;   1066805|00000000||Mhm. Thanks a bunch.
+2114670378|00000000||Good luck, Geralt of Rivia.
+2114670379|00000000||So long, Orianna.

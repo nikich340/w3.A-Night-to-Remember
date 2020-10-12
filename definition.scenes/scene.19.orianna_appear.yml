@@ -705,7 +705,8 @@ storyboard:
       - actor.placement: [0.0, geralt, [ -7.8057913780, -1.6908612251, -0.1306152344 ], [ 0.0, 0.0, 200.8300170898 ]]
       - actor.placement: [0.0, Orianna_human, [ 3.3838450909, 8.5124912262, -0.1944580078 ], [ 0.0, 0.0, 141.1299438477 ]]
       - cam: [0.0, cam_2_Shot2]
-      - actor.lookat: [0.0, Orianna_human, [ 2.1680443287, 0.3684131503, 1.6294975281 ]]
+      #- actor.lookat: [0.0, Orianna_human, [ 2.1680443287, 0.3684131503, 1.6294975281 ]]
+      - actor.lookat: [0.0, Orianna_human, [ 0.0291278958, 0.7470648289, 1.5327911377 ]]
       - actor.anim: 
           .@pos: [0.0, Orianna_human_high_standing_determined_enter_frontal]
           clipfront: 0.0
@@ -911,7 +912,7 @@ dialogscript:
     - CUE: shot_2
     # (longest) anim: high_standing_determined_gesture_pet_horse
     - PAUSE: 10.0
-    - Orianna_human: "Here we are."
+    - Orianna_human: "2114670935|Here we are."
     # shot Shot3 kids
     - CUE: shot_3
     # (longest) anim: chid_play_stick_loop_1
@@ -946,13 +947,13 @@ dialogscript:
     # shot Shot6 to children
     - CUE: shot_8
     # (longest) anim: low_standing_determined_gesture_beckon
-    - agneta: "Lady Orianna..."
+    - agneta: "2114670936|Lady Orianna..."
     - CUE: shot_8_backon
-    - niellan: "Go on!"
+    - niellan: "2114670937|Go on!"
     - PAUSE: 1.0
     # shot Shot6 to orianna
     - CUE: shot_9
-    - Orianna_human: "Wait me here. I should check something. You are allowed to play in my room."
+    - Orianna_human: "2114670938|Wait me here. I should check something. You are allowed to play in my room."
     # shot Shot7 orianna go
     - CUE: shot_10
     # (longest) anim: high_standing_bored_exit_rightside
@@ -985,3 +986,4 @@ dialogscript:
     #- CAMERA_BLEND: 2.0
     - BLACKSCREEN: true
     - EXIT
+

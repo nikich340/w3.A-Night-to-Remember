@@ -169,7 +169,7 @@ dialogscript:
     - CUE: shot_0
     - PAUSE: 0.2
     - CUE: shot_1
-    - Big_bandit: "Want your face smashed again?"
+    - Big_bandit: "2114670820|Want your face smashed again?"
     # (longest) anim: geralt_happiness_gesture_smile_face
     #- PAUSE: 2.2000000477
     # shot Shot2
@@ -184,5 +184,6 @@ dialogscript:
   section_exit:
     #- CAMERA_BLEND: 2.0
     - EXIT
+
 
 

@@ -1317,11 +1317,11 @@ dialogscript:
     # shot shot1 sky
     - CUE: shot_1
     # (longest) anim: bruxa_death_back
-    - Baron_Edward: "Hey, witcher!"
+    - Baron_Edward: "2114670321|Hey, witcher!"
     # shot shot1 edward
     - CUE: shot_2
     # (longest) anim: man_work_loot_ground_01
-    - Baron_Edward: "You're alive?"
+    - Baron_Edward: "2114670322|You're alive?"
     # shot shot2 overview
     - CUE: shot_3
     # (longest) anim: low_lying_dead_wake_up_to_high_standing_determined
@@ -1334,16 +1334,17 @@ dialogscript:
     # shot shot3 dg ger
     - CUE: shot_5
     - PAUSE: 4.0
-    - geralt: "More or less. Need to drink a healing potion."
+    - geralt: "[1.3408476]0000499994|More_or_less_"
     - CUE: shot_7
     - PAUSE: 6.0
+    - geralt: "[1.1680409]0001209997|That's better."
     # shot shot3 dg baron
 
     - CUE: shot_8
-    - Baron_Edward: "Glad to hear it. Finally this dirty whore got what she's deserved."
+    - Baron_Edward: "2114670323|Glad to hear it. Finally this dirty whore got what she's deserved."
     - CUE: shot_8b
     ###- Baron_Edward: "Your reward… You'll receive it right after saying where is my son."
-    - Baron_Edward: "Now say where is my son."
+    - Baron_Edward: "2114670324|Now say where is my son."
     # shot shot3 dg ger potion
     - NEXT: section_choice_main
 
@@ -1361,52 +1362,52 @@ dialogscript:
 
   section_dont_know:
     - CUE: shot_dont_know_g
-    - geralt: "I don't know where he is."
+    - geralt: "[1.6466]2114670325|I don't know where he is."
     - CUE: shot_dont_know_b
-    - Baron_Edward: "Wrong answer. You think nobody saw you having interesting conversation with Orianna?"
-    - Baron_Edward: "I give you one more try."
+    - Baron_Edward: "2114670326|Wrong answer. You think nobody saw you having interesting conversation with Orianna?"
+    - Baron_Edward: "2114670327|I give you one more try."
     - NEXT: section_choice_main
 
   section_try_trick:
     - CUE: shot_try_trick1_g
     - PAUSE: 2.0
-    - geralt: "Your son is dead."
+    - geralt: "[1.283596]0001068309|Your son is dead."
     - CUE: shot_try_trick1_b
     - PAUSE: 2.0
-    - Baron_Edward: "Where is his body?"
+    - Baron_Edward: "2114670328|Where is his body?"
     - CUE: shot_try_trick2_g
-    - geralt: "Hmmm… Well…" # 1012450
+    - geralt: "[3.0999]2114670329|Hmmm…er…well…" # 1012450
     - PAUSE: 0.5
     - CUE: shot_try_trick2_b
-    - Baron_Edward: "You seek to trick me, witcher."
+    - Baron_Edward: "2114670330|You seek to trick me, witcher."
     - CUE: shot_try_trick3_b
-    - Baron_Edward: "Perhaps I have to loosen your tongue with a knife."
+    - Baron_Edward: "2114670331|Perhaps I have to loosen your tongue with a knife."
     - NEXT: section_fight
 
   section_refuse:
     - CUE: shot_refuse1_g
-    - geralt: "I'll take care of them myself."
+    - geralt: "[1.7974]2114670332|I'll take care of them myself."
     - CUE: shot_refuse1_b
-    - Baron_Edward: "Are you mad, you twit?"
+    - Baron_Edward: "2114670333|Are you mad, you twit?"
     - CUE: shot_refuse2_g
-    - geralt: "You're common bandits. I don't trust you."
+    - geralt: "[3.3848]2114670334|You're common bandits. I don't trust you."
     - CUE: shot_refuse2_b
-    - Baron_Edward: "You'll regret that you got in my way."
+    - Baron_Edward: "2114670335|You'll regret that you got in my way."
     - NEXT: section_fight
 
   section_agree:
     - CUE: shot_agree1_g
-    - geralt: "They are in that house. A young girl with a boy. Alive."
-    - geralt: "You'll look after her too?"
+    - geralt: "[5.3117]2114670336|They are in that house. A young girl with a boy. Alive."
+    - geralt: "[1.0698291]0001091952|You'll look after her?"
     - CUE: shot_agree1_b
     - PAUSE: 2.0
-    - Baron_Edward: "All right, I will."
+    - Baron_Edward: "2114670337|All right, I will."
     - CUE: shot_agree2_g
     ##!!! lookat and cam to orianna
-    - geralt: "Sure hope so. Here's my advice, they can't see this."
+    - geralt: "[4.5026]2114670338|Sure hope so. Here's my advice, don't show it to them."
     - CUE: shot_agree2_b
     ## !!! agree gest
-    - Baron_Edward: "True. In this case here our paths diverge."
+    - Baron_Edward: "2114670339|True. In this case here our paths diverge."
     - NEXT: section_agree_branch
 
   section_agree_branch:
@@ -1422,7 +1423,7 @@ dialogscript:
 
   section_get_coins:
     - CUE: shot_coins1_b
-    - Baron_Edward: "There's your payment. And good luck."
+    - Baron_Edward: "2114670340|There's your payment. And good luck."
     #- PAUSE: 2.0
     - NEXT: script_give_coins_reward
 
@@ -1436,16 +1437,16 @@ dialogscript:
   section_get_coins2:
     - CUE: shot_coins1_g
     - PAUSE: 2.0
-    - geralt: "0001019171|Farewell."
+    - geralt: "[0.7621145]0001019171|Farewell."
     - NEXT: section_peaceful
 
   section_get_sword:
-    - Baron_Edward: "You refused the money. But I have another reward for you."
+    - Baron_Edward: "2114670341|You refused the money. But I have another reward for you."
     - CUE: shot_sword1_b
     - PAUSE: 6.5
 
     - CUE: shot_sword2_g
-    - geralt: "0001130945|What a surprise."
+    - geralt: "[1.3530087]0001130945|What a surprise."
     - PAUSE: 4.0
     - NEXT: script_give_sword_reward
 
@@ -1466,10 +1467,10 @@ dialogscript:
 
   section_get_sword2:
     - CUE: shot_sword2_b
-    - Baron_Edward: "My favourite sword. Was made to order by an elven swordsmith."
+    - Baron_Edward: "2114670342|My favourite sword. Was made to order by an elven swordsmith."
     - CUE: shot_sword4_g
     - PAUSE: 2.0
-    - geralt: "0000451753|Thank you. Farewell."
+    - geralt: "[1.8361323]0000451753|Thank you. Farewell."
     - NEXT: section_peaceful
 
   section_peaceful:
@@ -1496,9 +1497,9 @@ dialogscript:
 
   section_fight:
     - CUE: shot_treat
-    - geralt: "0000490004|That a threat?"
+    - geralt: "[1.0785826]0000490004|That a threat?"
     - CUE: shot_point
-    - Baron_Edward: "I challenge you to a duel. You and I."
+    - Baron_Edward: "2114670343|I challenge you to a duel. You and I."
     - PAUSE: 1.0
     - CUE: shot_togame
     - PAUSE: 0.5
@@ -1507,8 +1508,10 @@ dialogscript:
 
   section_exit_peaceful:
     - OUTPUT: peaceful
+    #- BLACKSCREEN: true
     - EXIT
 
   section_exit_fight:
     - OUTPUT: fight
     - EXIT
+

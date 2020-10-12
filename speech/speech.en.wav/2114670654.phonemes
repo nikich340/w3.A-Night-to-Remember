@@ -2,7 +2,7 @@
 ;meta[version=1]
 ;meta[text=Go home. I'm a witcher. Need to examine the body.]
 ;meta[translation=ɡˌəʊ hˈəʊm aɪm ɐ wˈɪtʃə nˈiːd tʊ ɛɡzˈamɪn ðə bˈɒdi]
-;meta[audio-hypothesis=SIL G OW OW M K R SIL AH M OW N L IH JH ER N AH SIL EY D T IH OW G Z EH M AH N AH B AA D IY K SIL]
+;meta[audio-hypothesis=SIL G OW OW M K R SIL AH M OW N L IH JH ER N AH SIL EY D T IH OW G Z EH M AH N AH B AA D IY AY SIL]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
@@ -50,5 +50,5 @@ n       | 3395| 3465|  1.00|  2.00| ok         | n  ~  N  [ 3395 - 3465]
 b       | 3515| 3595|  1.00|  2.00| ok         | b  ~  B  [ 3515 - 3595]
 ɒ       | 3595| 3745|  1.10|  2.00| ok         | ɒ  ~  AA [ 3595 - 3745]
 d       | 3745| 3805|  1.00|  2.00| ok         | d  ~  D  [ 3745 - 3805]
-i       | 3805| 3915|  1.00|  2.00| ok         | i  ~  IY [ 3805 - 3915]
-;_       | 3915| 4050|  1.00| -1.00| <- VERIFY! | _  d  K  [ 3915 - 4050]
+i       | 3805| 3925|  1.00|  2.00| ok         | i  ~  IY [ 3805 - 3925]
+;_       | 3925| 4030|  1.00| -1.00| <- VERIFY! | _  d  AY [ 3925 - 4030]

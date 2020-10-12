@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 838, saved: 2020-09-28 17:10:14)
+# (version: 878, saved: 2020-10-12 00:27:35)
 #
 ---
 structure:
@@ -23,7 +23,7 @@ structure:
           scene: 21.orianna_to_bruxa.yml
           placement: bob/orianna
           interruptable: true
-          _fadein: true
+          _fadein: false
           next.Output:
             - script.Play_fangs_music
             - spawn.bruxa_spawn
@@ -38,7 +38,7 @@ structure:
           scene: 23.orianna_bruxa_dies.yml
           placement: bob/orianna
           interruptable: true
-          _fadein: true
+          _fadein: false
           next.Output:
             - scene.24_baron_river_friendly: Input
         
@@ -50,16 +50,17 @@ structure:
           scene: 24.baron_river_friendly.yml
           placement: bob/orianna
           interruptable: true
-          _fadein: true
+          _fadein: false
           next.fight:
             - script.Kill_orianna
             - spawn.spawn_hostile_baron
           next.peaceful:
             - script.Kill_orianna
+            - script.TODOOO
         
         scene.25_baron_dies_long:
           ".editor":
-            pos: [ 6017.0, 243.0 ]
+            pos: [ 5508.0, 148.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 25.baron_dies_long.yml
@@ -68,6 +69,33 @@ structure:
           _fadein: true
           next.Output:
             - despawn.despawn_bandits_river
+        
+        scene.26_baron_river_aggressive:
+          ".editor":
+            pos: [ 4410.0, -546.0 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 26.baron_river_aggressive.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - spawn.fight_all_river
+            - waituntil.wait_baron_death
+            - objective.Kill_bandits: Activate
+            - waituntil.bandits_dead
+        
+        scene.28_orianna_farewell:
+          ".editor":
+            pos: [ 6024.7827148438, -538.8959960938 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 28.orianna_farewell.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - out
         
         scene.KILL_SCENE:
           ".editor":
@@ -99,20 +127,19 @@ structure:
           ".editor":
             pos: [ 3052.14453125, -66.2440948486 ]
             in: [ Input ]
-            out: [ Output, fight ]
+            out: [ fight, peaceful ]
           scene: 20.orianna_main.yml
           placement: bob/orianna
           interruptable: true
-          _fadein: true
-          next.Output:
-            - script.new_logmsg
-            - objective.wait_outside: Success
+          _fadein: false
           next.fight:
             - objective.wait_outside: Success
             - script.NTR_SaveGame2
             - waituntil.wait_50perc_health
             - waituntil.outside_fight_area
             - addfact.fact_fight_orianna
+          next.peaceful:
+            - scene.26_baron_river_aggressive: Input
         
         scene.notes_comment:
           ".editor":
@@ -150,6 +177,19 @@ structure:
           next.Output:
             - waituntil.Notes_were_read
         
+        scene.scene_27_baron_dies_short:
+          ".editor":
+            pos: [ 5726.0, -516.0 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 27.baron_dies_short.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - despawn.despawn_bandits_river
+            - scene.28_orianna_farewell: Input
+        
         scene.scene_orianna_appear:
           ".editor":
             pos: [ 2570.0, 32.0 ]
@@ -160,16 +200,8 @@ structure:
           interruptable: true
           _fadein: true
           next.Output:
-            - settime.set_1am
-        
-        waituntil.1s:
-          elapsed: "00:00:01"
-          ".editor":
-            pos: [ 2914.1823730469, 30.766834259 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - script.Play_NTR_music
+            - settime.set_0am
+            - waituntil.2_s
         
         waituntil.1s_repeat:
           elapsed: "00:00:01"
@@ -192,7 +224,7 @@ structure:
         waituntil.1sss:
           elapsed: "00:00:01"
           ".editor":
-            pos: [ 5554.0, 135.0 ]
+            pos: [ 5516.0, -197.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -215,6 +247,15 @@ structure:
             out: [ Out ]
           next:
             - script.Tune_Orianna
+        
+        waituntil.2_s:
+          elapsed: "00:00:02"
+          ".editor":
+            pos: [ 2874.0, 45.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Play_NTR_music
         
         waituntil.2s:
           elapsed: "00:00:02"
@@ -269,11 +310,12 @@ structure:
         waituntil.Wait_baron_dead:
           factdb: [ ntr_baron_edward_dead, ">=", 1 ]
           ".editor":
-            pos: [ 5856.0, 156.0 ]
+            pos: [ 5259.0, 269.0 ]
             in: [ In ]
             out: [ Out ]
           next:
             - scene.25_baron_dies_long: Input
+            - objective.Kill_baron_edward: Success
         
         waituntil.Wait_bruxa_dead:
           factdb: [ ntr_orianna_bruxa_dead, ">=", 1 ]
@@ -283,6 +325,16 @@ structure:
             out: [ Out ]
           next:
             - script.Set_morph_app_bruxa
+            - objective.KILL_ORIANNA: Success
+        
+        waituntil.bandits_dead:
+          factdb: [ ntr_bandit_dead, ">=", 5 ]
+          ".editor":
+            pos: [ 4924.0, -658.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Check_if_baron_alive
         
         waituntil.footprints_found:
           factdb: [ ntr_orianna_side_footprints_found, ">=", 1 ]
@@ -365,9 +417,19 @@ structure:
             - despawn.despawn_vampire
             - script.Hide_fight_indicator
         
+        waituntil.wait_baron_death:
+          factdb: [ ntr_baron_edward_dead, ">=", 1 ]
+          ".editor":
+            pos: [ 5198.0, -510.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - objective.Kill_baron_edward: Success
+            - script.force_kill_alive_bandits
+        
         script.Baron_edward_bossbar:
           ".editor":
-            pos: [ 5230.0, 123.0 ]
+            pos: [ 5224.0, -176.0 ]
             in: [ In ]
             out: [ Out ]
           function: ShowBossFightIndicator
@@ -376,6 +438,7 @@ structure:
             - bossTag: cname_ntr_baron_edward
           next:
             - script.NTR_SaveGame_2
+            - objective.Kill_baron_edward: Activate
         
         script.Bruxa_fight_indicator:
           ".editor":
@@ -388,6 +451,21 @@ structure:
             - bossTag: cname_ntr_orianna_bruxa
           next:
             - waituntil.Wait_bruxa_dead
+        
+        script.Check_if_baron_alive:
+          ".editor":
+            pos: [ 4637.0, -228.0 ]
+            in: [ In ]
+            out: [ "False", "True" ]
+          function: NTR_FactChecker
+          parameter:
+            - factName: ntr_baron_edward_dead
+            - factCond: "=="
+            - val: 1
+          next.False:
+            - objective.Kill_bandits: Success
+          next.True:
+            - objective.Kill_bandits: Failure
         
         script.Fcous_first_footprints:
           ".editor":
@@ -404,7 +482,7 @@ structure:
         
         script.Gameplay_music:
           ".editor":
-            pos: [ 6004.0, -71.0 ]
+            pos: [ 6278.0, -254.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
@@ -412,8 +490,7 @@ structure:
             - areaName: toussaint
             - eventName: mus_loc_toussaint_general_cs_to_gmpl
             - saveType: SESB_ClearSaved
-          next:
-            - out
+          next: ".done"
         
         script.Hide_fight_indicator:
           ".editor":
@@ -439,7 +516,7 @@ structure:
         
         script.Kill_Baron:
           ".editor":
-            pos: [ 6284.0, 197.0 ]
+            pos: [ 5878.0, 106.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_ForceKillNPC
@@ -467,7 +544,8 @@ structure:
           parameter:
             - tag: cname_ntr_orianna_bruxa
             - playDeath: false
-          next: ".done"
+          next:
+            - waituntil.Wait_baron_dead
         
         script.NTR_SaveGame:
           ".editor":
@@ -495,7 +573,7 @@ structure:
         
         script.NTR_SaveGame_2:
           ".editor":
-            pos: [ 5387.0, 57.0 ]
+            pos: [ 5382.0, -274.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_SaveGame
@@ -517,7 +595,7 @@ structure:
         
         script.NTR_SaveLock_unlock:
           ".editor":
-            pos: [ 5788.0, -124.0 ]
+            pos: [ 6120.0, -154.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_SaveLock
@@ -546,12 +624,12 @@ structure:
           parameter:
             - areaName: toussaint
             - eventName: mus_q704_after_feeding
-            - saveType: SESB_DontSave
+            - saveType: SESB_ClearSaved
           next: ".done"
         
         script.Play_baron_music:
           ".editor":
-            pos: [ 5683.0, 36.0 ]
+            pos: [ 5676.0, -296.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
@@ -559,8 +637,7 @@ structure:
             - areaName: novigrad
             - eventName: mus_q601_combat_with_offir_soldiers
             - saveType: SESB_Save
-          next:
-            - waituntil.Wait_baron_dead
+          next: ".done"
         
         script.Play_fangs_music:
           ".editor":
@@ -596,6 +673,17 @@ structure:
             - appearanceName: cname_orianna_bruxa_morph
           next:
             - settime.01_00
+        
+        script.TODOOO:
+          ".editor":
+            pos: [ 5165.0, 57.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: radLog
+          parameter:
+            - logChannel: cname_NTR
+            - msg: PECAEFUL
+          next: ".done"
         
         script.Try_to_reset_music:
           ".editor":
@@ -706,6 +794,18 @@ structure:
             - overrideCustomLogic: false
           next: ".done"
         
+        script.force_kill_alive_bandits:
+          ".editor":
+            pos: [ 5524.0, -638.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_ForceKillNPC
+          parameter:
+            - tag: cname_ntr_baron_bandit
+            - playDeath: true
+          next:
+            - scene.scene_27_baron_dies_short: Input
+        
         script.new_fact_checker_branch:
           ".editor":
             pos: [ 1795.6088867188, 408.0973510742 ]
@@ -719,18 +819,6 @@ structure:
           next.False:
             - scene.notes_comment: orianna_house_notes
         
-        script.new_logmsg:
-          ".editor":
-            pos: [ 3346.3115234375, -382.1848144531 ]
-            in: [ In ]
-            out: [ Out ]
-          function: radLog
-          parameter:
-            - logChannel: cname_NTR
-            - msg: peaceful
-          next:
-            - script.NTR_SaveLock_unlock
-        
         script.reset_fact:
           ".editor":
             pos: [ 3466.0, 923.0 ]
@@ -739,6 +827,19 @@ structure:
           function: ResetFactQuest
           parameter:
             - factID: cname_ntr_fight_outside_area
+          next: ".done"
+        
+        changelayers.show_baron_sword_loot:
+          ".editor":
+            pos: [ 6108.0, -379.0 ]
+            hint: show-only
+            in: []
+            out: []
+          sync: true
+          purge: false
+          world: bob
+          show:
+            - river_sword_loot
           next: ".done"
         
         changelayers.show_doll:
@@ -791,15 +892,38 @@ structure:
           next:
             - waituntil.1ssss
         
+        spawn.fight_all_river:
+          ".editor":
+            pos: [ 5048.0, -318.0 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: fight_all
+          spawnsets:
+            - comm_bandits_river
+          next:
+            - script.Baron_edward_bossbar
+        
         spawn.orianna_human:
           ".editor":
             pos: [ 3635.4763183594, 440.0137329102 ]
             hint: spawn-only
             in: []
             out: []
-          phase: before_scene
+          phase: before_scene_to_bruxa
           spawnsets:
             - comm_orianna_human
+          next: ".done"
+        
+        spawn.river_in_inn:
+          ".editor":
+            pos: [ 3343.0, -525.0 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: before_scene
+          spawnsets:
+            - comm_bandits_river
           next: ".done"
         
         spawn.spawn_hostile:
@@ -826,20 +950,20 @@ structure:
           next:
             - script.Baron_edward_bossbar
         
-        spawn.spawn_in_inn:
+        spawn.spawn_human:
           ".editor":
-            pos: [ 4929.0, 275.0 ]
+            pos: [ 2639.0, -288.0 ]
             hint: spawn-only
             in: []
             out: []
-          phase: before_scene
+          phase: before_scene_peaceful
           spawnsets:
-            - comm_bandits_river
+            - comm_orianna_human
           next: ".done"
         
         despawn.Despawn_all_bandits:
           ".editor":
-            pos: [ 4748.0, 195.0 ]
+            pos: [ 3150.0, -412.0 ]
             hint: despawn-only
             in: []
             out: []
@@ -850,18 +974,19 @@ structure:
             - comm_camp_baron
             - comm_orphanage_bandits
           next:
-            - spawn.spawn_in_inn
+            - spawn.river_in_inn
         
         despawn.despawn_bandits_river:
           ".editor":
-            pos: [ 6186.0, 147.0 ]
+            pos: [ 5955.0, -260.0 ]
             hint: despawn-only
             in: []
             out: []
           spawnsets:
             - comm_bandits_river
           next:
-            - script.Gameplay_music
+            - script.NTR_SaveLock_unlock
+            - changelayers.show_baron_sword_loot
         
         despawn.despawn_orihum:
           ".editor":
@@ -909,10 +1034,24 @@ structure:
           next: ".done"
         
         objective.KILL_ORIANNA:
-          ".editor": [ 3618.9357910156, 534.2844848633 ]
+          ".editor": [ 4234.0, 613.0 ]
           objective: nighttoremember/river_part/kill_orianna
-          notify: true
+          notify: false
+          track: true
+          next: ".done"
+        
+        objective.Kill_bandits:
+          ".editor": [ 4828.0, -245.0 ]
+          objective: nighttoremember/river_part/kill_bandits
+          notify: false
           track: false
+          next: ".done"
+        
+        objective.Kill_baron_edward:
+          ".editor": [ 5491.0, -48.0 ]
+          objective: nighttoremember/river_part/kill_baron
+          notify: false
+          track: true
           next: ".done"
         
         objective.Riverside_tracks:
@@ -923,7 +1062,7 @@ structure:
           next: ".done"
         
         objective.wait_outside:
-          ".editor": [ 2276.61328125, 399.2511901855 ]
+          ".editor": [ 2387.0, 396.0 ]
           objective: nighttoremember/river_part/wait_outside
           notify: true
           track: false
@@ -940,7 +1079,6 @@ structure:
           time: "01:00"
           next:
             - scene.23_orianna_bruxa_dies: Input
-            - despawn.Despawn_all_bandits
         
         settime.Set_11pm:
           ".editor": [ 2413.0, -41.0 ]
@@ -948,12 +1086,14 @@ structure:
           next:
             - spawn.Spawn_orianna_vampire
             - scene.scene_orianna_appear: Input
+            - spawn.spawn_human
         
-        settime.set_1am:
+        settime.set_0am:
           ".editor": [ 2868.0, -71.0 ]
           time: "00:00"
           next:
             - scene.main_orianna_scene: Input
+            - despawn.Despawn_all_bandits
         
         addfact.fact_fight_orianna:
           ".editor": [ 3264.0, -45.0 ]
@@ -973,6 +1113,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 6267.0, -63.0 ]
+          ".editor": [ 6564.0, -199.0 ]
           next: ".done"
         

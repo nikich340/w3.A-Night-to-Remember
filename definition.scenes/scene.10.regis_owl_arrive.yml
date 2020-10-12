@@ -526,7 +526,8 @@ dialogscript:
     - PAUSE: 12.0
     # shot shot sitting
     - CUE: shot_3a
-    - geralt: "[1.3958]2114670745|Crazy nightmare."
+    - geralt: "[2.5379393]0001075881|Damn… What a dream."
+    ###- geralt: "[1.3958]2114670745|Crazy nightmare."
     - PAUSE: 2.0
     #- CUE: shot_3
     #- PAUSE: 5.0
@@ -563,4 +564,5 @@ dialogscript:
   section_exit:
     #- CAMERA_BLEND: 1.0
     - EXIT
+
 

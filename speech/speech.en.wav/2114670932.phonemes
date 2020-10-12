@@ -2,18 +2,18 @@
 ;meta[version=1]
 ;meta[text=Good luck to you!]
 ;meta[translation=ɡˈʊd lˈʌk tə juː]
-;meta[audio-hypothesis=SIL G AO D L AH B AH T IY EH TH]
+;meta[audio-hypothesis=SIL K UH T L AH B AH T IY EH TH]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
 ;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
 ------------------------------------------------------------------------
-ɡ       |  290|  395|  1.00|  2.00| ok         | ɡ  ~  G  [  290 -  395]
-ʊ       |  395|  425|  1.10| -1.00| <- VERIFY! | ʊ  ~  AO [  395 -  425]
-d       |  425|  475|  1.00|  2.00| ok         | d  ~  D  [  425 -  475]
+ɡ       |  280|  345|  1.00|  1.70| ok         | ɡ  ~  K  [  280 -  345]
+ʊ       |  345|  425|  1.10|  2.00| ok         | ʊ  ~  UH [  345 -  425]
+d       |  425|  465|  1.00|  1.70| ok         | d  ~  T  [  425 -  465]
 ------------------------------------------------------------------------
-l       |  475|  535|  1.00|  2.00| ok         | l  ~  L  [  475 -  535]
-ʌ       |  535|  625|  1.10|  1.00| ok         | ʌ  ~> AH [  535 -  585] + B  [  585 -  625]
+l       |  465|  535|  1.00|  2.00| ok         | l  ~  L  [  465 -  535]
+ʌ       |  535|  625|  1.10|  1.00| ok         | ʌ  ~> AH [  535 -  595] + B  [  595 -  625]
 k       |  625|  655|  1.00| -1.00| <- VERIFY! | k  ~  AH [  625 -  655]
 ------------------------------------------------------------------------
 t       |  655|  690|  1.00|  2.00| ok         | t  ~  T  [  655 -  725]

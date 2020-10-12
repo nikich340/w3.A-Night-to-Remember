@@ -2,22 +2,22 @@
 ;meta[version=1]
 ;meta[text=Fishermen should know something.]
 ;meta[translation=fˈɪʃəmˌɛn ʃˌʊd nˈəʊ sˈʌmθɪŋ]
-;meta[audio-hypothesis=SIL T IH SH AH M AH N SH UH D N OW S AH M TH IH NG AA K SIL]
+;meta[audio-hypothesis=SIL P IH SH ER M AH N SH AH D N OW S AH M TH IH NG AA K SIL]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
 ;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
 ------------------------------------------------------------------------
-f       |  270|  335|  1.00| -1.00| <- VERIFY! | f  ~  T  [  270 -  335]
+f       |  190|  335|  1.00| -1.00| <- VERIFY! | f  ~  P  [  190 -  335]
 ɪ       |  335|  395|  1.10|  2.00| ok         | ɪ  ~  IH [  335 -  395]
 ʃ       |  395|  485|  1.00|  2.00| ok         | ʃ  ~  SH [  395 -  485]
-ə       |  485|  515|  1.00|  2.00| ok         | ə  ~  AH [  485 -  515]
+ə       |  485|  515|  1.00|  0.50| ok         | ə  ~  ER [  485 -  515]
 m       |  515|  575|  1.00|  2.00| ok         | m  ~  M  [  515 -  575]
 ɛ       |  575|  615|  1.05|  0.50| ok         | ɛ  ~  AH [  575 -  615]
 n       |  615|  705|  1.00|  2.00| ok         | n  ~  N  [  615 -  705]
 ------------------------------------------------------------------------
-ʃ       |  705|  825|  1.00|  2.00| ok         | ʃ  ~  SH [  705 -  825]
-ʊ       |  825|  895|  1.05|  2.00| ok         | ʊ  ~  UH [  825 -  895]
+ʃ       |  705|  835|  1.00|  2.00| ok         | ʃ  ~  SH [  705 -  835]
+ʊ       |  835|  895|  1.05|  0.01| ok         | ʊ  ~  AH [  835 -  895]
 d       |  895|  955|  1.00|  2.00| ok         | d  ~  D  [  895 -  955]
 ------------------------------------------------------------------------
 n       |  955| 1015|  1.00|  2.00| ok         | n  ~  N  [  955 - 1015]

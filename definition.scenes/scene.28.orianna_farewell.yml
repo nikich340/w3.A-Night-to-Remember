@@ -1,0 +1,564 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    vampire_diva:
+      template: "dlc\\bob\\data\\quests\\secondary_npcs\\vampire_diva.w2ent"
+      appearance: [ "oriana" ]
+
+  animations:
+    anim_6970_high_standing_determined_calm_enter_frontal:
+      animation: "high_standing_determined_calm_enter_frontal"
+      frames: 253
+
+    anim_12851_low_standing_determined_gesture_question_01:
+      animation: "low_standing_determined_gesture_question_01"
+      frames: 180
+
+    anim_7000_high_standing_determined_gesture_both_hands_2:
+      animation: "high_standing_determined_gesture_both_hands_2"
+      frames: 60
+
+    anim_12852_low_standing_determined_gesture_question_02:
+      animation: "low_standing_determined_gesture_question_02"
+      frames: 196
+
+    anim_6730_add_reaction_agreeing_nod_01:
+      animation: "add_reaction_agreeing_nod_01"
+      frames: 92
+
+    anim_12859_low_standing_determined_to_high_standing_determined:
+      animation: "low_standing_determined_to_high_standing_determined"
+      frames: 196
+
+    anim_7026_high_standing_determined_gesture_greeting_geralt_03:
+      animation: "high_standing_determined_gesture_greeting_geralt_03"
+      frames: 118
+
+    anim_6975_high_standing_determined_calm_exit_frontal:
+      animation: "high_standing_determined_calm_exit_frontal"
+      frames: 253
+
+  animations.mimic:
+    mimicsanim_442_geralt_neutral_gesture_suprised_worried_face:
+      animation: "geralt_neutral_gesture_suprised_worried_face"
+      frames: 95
+
+    mimicsanim_140_geralt_neutral_question_problem_face:
+      animation: "geralt_neutral_question_problem_face"
+      frames: 95
+
+    mimicsanim_493_geralt_reaction_eye_smile_face:
+      animation: "geralt_reaction_eye_smile_face"
+      frames: 240
+
+    mimicsanim_494_geralt_reaction_eye_smile_syanna_face:
+      animation: "geralt_reaction_eye_smile_syanna_face"
+      frames: 240
+
+    mimicsanim_318_happy_anim_face:
+      animation: "happy_anim_face"
+      frames: 540
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_2102_High_Sitting_Happy:
+      name: "Sitting"
+      emotional_state: "Happy"
+      status: "High"
+      idle_anim: "high_sitting_happy_idle"
+
+    pose_2200_Low_Standing_Determined:
+      name: "Standing"
+      emotional_state: "Determined"
+      status: "Low"
+      idle_anim: "low_standing_determined_idle"
+
+  cameras:
+    cam_1_Shot0_another_cam1:
+      fov: 25.0
+      transform:
+        pos: [ -15.9538621902, 8.9981575012, 8.1594448090 ]
+        rot: [ 0.0, 353.6299743652, 260.0583801270 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 0.9141753912, 3.9141755104 ]
+        focus: [ 1.4141753912, 2.4141755104 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_Shot0_another_cam2:
+      fov: 25.0
+      transform:
+        pos: [ -19.8882560730, 10.0227317810, 8.3094425201 ]
+        rot: [ 0.0, 352.6399841309, 257.4735717773 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.6692552567, 7.6692552567 ]
+        focus: [ 5.1692552567, 6.1692552567 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_Shot1_cam1:
+      fov: 30.0
+      transform:
+        pos: [ 0.3562310934, 15.0851154327, 0.9594306946 ]
+        rot: [ 0.0, 350.0549926758, 75.0661544800 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 4.6692552567, 7.6692552567 ]
+        focus: [ 5.1692552567, 6.1692552567 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_4_Shot1_cam2:
+      fov: 30.0
+      transform:
+        pos: [ 3.5924425125, 13.6269226074, 0.9594306946 ]
+        rot: [ 0.0, 350.8800048828, 74.9561538696 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.3467600346, 5.3467597961 ]
+        focus: [ 2.8467600346, 3.8467600346 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_5_Shot2_now_you:
+      fov: 30.0
+      transform:
+        pos: [ 3.6651048660, 13.6074552536, 0.9594306946 ]
+        rot: [ 0.0, 350.9349975586, 74.9836502075 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.3467600346, 5.3467597961 ]
+        focus: [ 2.8467600346, 3.8467600346 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_6_Shot2_ori_closeup_+_gest:
+      fov: 25.0
+      transform:
+        pos: [ 1.9809212685, 15.2612075806, 0.7594299316 ]
+        rot: [ 0.0, 359.5700073242, 170.1608581543 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0796320438, 4.0796318054 ]
+        focus: [ 1.5796320438, 2.5796320438 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_7_Shot2_geralt_closeup:
+      fov: 15.0
+      transform:
+        pos: [ 3.3965053558, 12.9830379486, 1.0594291687 ]
+        rot: [ 0.0, 352.8600158691, 56.9986648560 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 2.5406062603, 5.5406064987 ]
+        focus: [ 3.0406062603, 4.0406064987 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_12_Shot2_geralt_so_long2_cam:
+      fov: 15.0
+      transform:
+        pos: [ 3.3965053558, 12.9830379486, 1.0594291687 ]
+        rot: [ 0.0, 353.2999877930, 66.3486709595 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.5975835323, 4.5975837708 ]
+        focus: [ 2.0975835323, 3.0975835323 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 375
+
+  placement: "ntr_bob_orianna_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -180.0365447998, -443.1201477051, 11.4495849609 ]
+      #rot: [ 0.0, 94.1600112915, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      vampire_diva:
+        repo: "vampire_diva"
+        #by_voicetag: true
+        appearance: "oriana"
+        tags: [ "vampire_diva" ]
+
+    cameras:
+      cam_1_Shot0_another_cam1:
+        repo: "cam_1_Shot0_another_cam1"
+
+      cam_2_Shot0_another_cam2:
+        repo: "cam_2_Shot0_another_cam2"
+
+      cam_3_Shot1_cam1:
+        repo: "cam_3_Shot1_cam1"
+
+      cam_4_Shot1_cam2:
+        repo: "cam_4_Shot1_cam2"
+
+      cam_5_Shot2_now_you:
+        repo: "cam_5_Shot2_now_you"
+
+      cam_6_Shot2_ori_closeup_+_gest:
+        repo: "cam_6_Shot2_ori_closeup_+_gest"
+
+      cam_7_Shot2_geralt_closeup:
+        repo: "cam_7_Shot2_geralt_closeup"
+
+      cam_12_Shot2_geralt_so_long2_cam:
+        repo: "cam_12_Shot2_geralt_so_long2_cam"
+
+    animations:
+      geralt_high_standing_determined_calm_enter_frontal:
+        actor: "geralt"
+        repo: "anim_6970_high_standing_determined_calm_enter_frontal"
+        #duration: 8.4333333969
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      vampire_diva_low_standing_determined_gesture_question_01:
+        actor: "vampire_diva"
+        repo: "anim_12851_low_standing_determined_gesture_question_01"
+        #duration: 6.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_both_hands_2:
+        actor: "geralt"
+        repo: "anim_7000_high_standing_determined_gesture_both_hands_2"
+        #duration: 2.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      vampire_diva_low_standing_determined_gesture_question_02:
+        actor: "vampire_diva"
+        repo: "anim_12852_low_standing_determined_gesture_question_02"
+        #duration: 6.5333333015
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_add_reaction_agreeing_nod_01:
+        actor: "geralt"
+        repo: "anim_6730_add_reaction_agreeing_nod_01"
+        #duration: 3.0666666031
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      vampire_diva_low_standing_determined_to_high_standing_determined:
+        actor: "vampire_diva"
+        repo: "anim_12859_low_standing_determined_to_high_standing_determined"
+        #duration: 6.5333333015
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_gesture_greeting_geralt_03:
+        actor: "geralt"
+        repo: "anim_7026_high_standing_determined_gesture_greeting_geralt_03"
+        #duration: 3.9333333969
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_determined_calm_exit_frontal:
+        actor: "geralt"
+        repo: "anim_6975_high_standing_determined_calm_exit_frontal"
+        #duration: 8.4333333969
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    animations.mimic:
+      vampire_diva_geralt_neutral_gesture_suprised_worried_face:
+        actor: "vampire_diva"
+        repo: "mimicsanim_442_geralt_neutral_gesture_suprised_worried_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      geralt_geralt_neutral_question_problem_face:
+        actor: "geralt"
+        repo: "mimicsanim_140_geralt_neutral_question_problem_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      vampire_diva_geralt_reaction_eye_smile_face:
+        actor: "vampire_diva"
+        repo: "mimicsanim_493_geralt_reaction_eye_smile_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      vampire_diva_geralt_reaction_eye_smile_syanna_face:
+        actor: "vampire_diva"
+        repo: "mimicsanim_494_geralt_reaction_eye_smile_syanna_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      vampire_diva_happy_anim_face:
+        actor: "vampire_diva"
+        repo: "mimicsanim_318_happy_anim_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+    actor.poses:
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      vampire_diva_High_Sitting_Happy:
+        actor: "vampire_diva"
+        repo: "pose_2102_High_Sitting_Happy"
+
+      vampire_diva_Low_Standing_Determined:
+        actor: "vampire_diva"
+        repo: "pose_2200_Low_Standing_Determined"
+
+      vampire_diva_high_standing_determined_idle:
+        actor: "vampire_diva"
+        repo: "pose_0_high_standing_determined_idle"
+
+storyboard:
+  #defaults:
+    #placement:
+      #geralt: [[ 1.3289811611, 15.9854269028, -0.8997192383 ], [ 0.0, 0.0, 221.1799926758 ]]
+      #vampire_diva: [[ -14.5838394165, 8.6277923584, 6.8749465942 ], [ 0.0, 0.0, 53.6525344849 ]]
+
+    #actor.pose:
+      #geralt: geralt_high_standing_determined_idle
+      #vampire_diva: vampire_diva_High_Sitting_Happy
+
+  section_storyboard_ui:
+    # shot Shot1 cam1
+    shot_3:
+      - actor.placement: [0.0, geralt, [ 1.0632644892, 14.7847585678, -0.9016113281 ], [ 0.0, 0.0, 246.0399780273 ]]
+      - actor.placement: [0.0, vampire_diva, [ 1.6130012274, 13.5968675613, -0.7265625000 ], [ 0.0, 0.0, 291.7725219727 ]]
+      - actor.pose: [0.0, vampire_diva_Low_Standing_Determined]
+      - cam.blend.start: [0.0, cam_3_Shot1_cam1, rapid]
+      - cam.blend.end: [0.7, cam_4_Shot1_cam2, smooth]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_calm_enter_frontal]
+          blendin: 0.0
+          blendout: 0.5
+          clipfront: 1.0
+      - actor.lookat: 
+          .@pos: [0.0, vampire_diva, geralt]
+          turn: body
+          speed: 2.0
+      - actor.lookat: [0.0, geralt, NONE]
+      - actor.lookat: [0.5, geralt, vampire_diva]
+
+    # shot Shot2 now you
+    shot_5:
+      #- cam: [0.0, cam_5_Shot2_now_you]
+      - actor.anim.mimic: [0.0, geralt_geralt_neutral_question_problem_face]
+
+    # shot Shot2 ori closeup + gest
+    shot_6:
+      - cam: [0.0, cam_6_Shot2_ori_closeup_+_gest]
+      - actor.anim.additive: 
+          .@pos: [0.0, vampire_diva_low_standing_determined_gesture_question_01]
+          blendin: 0.5
+          blendout: 0.5
+
+    # shot Shot2 geralt closeup
+    shot_7:
+      - cam: [0.0, cam_7_Shot2_geralt_closeup]
+      - actor.anim.additive: 
+          .@pos: [0.0, geralt_high_standing_determined_gesture_both_hands_2]
+          blendin: 0.5
+          blendout: 0.5
+
+    # shot Shot2 ori closeup + gest2
+    shot_8:
+      - cam: [0.0, cam_6_Shot2_ori_closeup_+_gest]
+      - actor.anim.additive: 
+          .@pos: [0.0, vampire_diva_low_standing_determined_gesture_question_02]
+          blendin: 0.5
+          blendout: 0.5
+
+    # shot Shot2 geralt thank you
+    shot_9:
+      - cam: [0.0, cam_7_Shot2_geralt_closeup]
+      - actor.anim: 
+          .@pos: [0.0, geralt_add_reaction_agreeing_nod_01]
+          blendin: 0.5
+          blendout: 0.5
+
+    # shot Shot2 ori closeup + smile
+    shot_10:
+      - actor.pose: [0.5, vampire_diva_high_standing_determined_idle]
+      - cam: [0.0, cam_6_Shot2_ori_closeup_+_gest]
+      - actor.anim: 
+          .@pos: [0.0, vampire_diva_low_standing_determined_to_high_standing_determined]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.anim.mimic: [0.0, vampire_diva_geralt_reaction_eye_smile_face]
+
+    # shot Shot2 geralt so long
+    shot_11:
+      - cam: [0.0, cam_7_Shot2_geralt_closeup]
+      - actor.anim.additive: 
+          .@pos: [0.0, geralt_high_standing_determined_gesture_greeting_geralt_03]
+          blendin: 0.5
+          blendout: 0.5
+
+    # shot Shot2 geralt so long2 cam
+    shot_12:
+      - cam.blend.start: [0.0, cam_7_Shot2_geralt_closeup, smooth]
+      - cam.blend.end: [0.999, cam_12_Shot2_geralt_so_long2_cam, rapid]
+      - actor.anim: 
+          .@pos: [0.0, geralt_high_standing_determined_calm_exit_frontal]
+          blendin: 0.5
+          blendout: 0.0
+      - actor.anim.mimic: 
+          .@pos: [0.0, vampire_diva_happy_anim_face]
+          blendin: 0.0
+
+      - actor.lookat: [0.2, geralt, NONE]
+      - fade.out: [0.88, 1.0, [0, 0, 0, 255]]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "vampire_diva" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    - CUE: shot_3
+    # (longest) anim: high_standing_determined_calm_enter_frontal
+    - PAUSE: 7.4333333969
+    # shot Shot1 cam2
+    
+    - CUE: shot_5
+    # (longest) anim: geralt_neutral_question_problem_face
+    - geralt: "0000472239|What's the matter?"
+    # shot Shot2 ori closeup + gest
+    - CUE: shot_6
+    # (longest) anim: low_standing_determined_gesture_question_01
+    - vampire_diva: "2114670375|A slayer of monsters slayed people to protect monster. You managed to impress me."
+    # shot Shot2 geralt closeup
+    - CUE: shot_7
+    # (longest) anim: high_standing_determined_gesture_both_hands_2
+    - geralt: "[3.1951325]0000458827|It was the lesser evil… I think."
+    # shot Shot2 ori closeup + gest2
+    - CUE: shot_8
+    # (longest) anim: low_standing_determined_gesture_question_02
+    - vampire_diva: "2114670376|Probably this annoying Baron promised you a huge reward for me, right?"
+    - vampire_diva: "2114670377|You can pick up his sword instead of this. I know, you like these sharp things."
+    # shot Shot2 geralt thank you
+    - CUE: shot_9
+    # (longest) anim: add_reaction_agreeing_nod_01
+    - geralt: "[2.4873993]0001066805|Mhm. Thanks a bunch."
+    # shot Shot2 ori closeup + smile
+    - CUE: shot_10
+    # (longest) anim: geralt_reaction_eye_smile_face
+    - vampire_diva: "2114670378|Good luck, Geralt of Rivia."
+    - PAUSE: 1.5
+    # shot Shot2 geralt so long
+    - CUE: shot_11
+    # (longest) anim: geralt_reaction_eye_smile_syanna_face
+    - geralt: "2114670379|So long, Orianna."
+    # shot Shot2 geralt so long2 cam
+    - CUE: shot_12
+    # (longest) anim: happy_anim_face
+    - PAUSE: 8.4333
+    - PAUSE: 0.5
+    - NEXT: section_exit
+
+  section_exit:
+    - EXIT

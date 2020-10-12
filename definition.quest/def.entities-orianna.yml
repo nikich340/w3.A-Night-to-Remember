@@ -168,7 +168,28 @@ templates:
           - he_02_wa__oriana
           - hb_01_ma__orianna
 
+      orianna_human_morph:
+        includedTemplates:
+          - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
+          - characters/models/common/woman_average/body/l_01_wa__body.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/h_oriana_vampire_clean_morph.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
+
+        voicetag: "ORIANNA HUMAN"
+        collapsedComponents:
+          - head
+          - h_03_wa__oriana
+          - CMorphedMeshComponent1
+          - hb_01_ma__orianna
+          - he_02_ma__orianna_premorph
+          - he_03_ma__orianna
+          - CMorphedMeshComponent0
+          - face_morph
+
     usedAppearances:
+      - orianna_human_morph
       - orianna_vampire_bloody_morph
 
     effects:
@@ -361,7 +382,7 @@ templates:
         - HideHealthBarModule
 
     appearances:
-      orianna_human:
+      orianna_human: # ok
         includedTemplates:
           - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
           - characters/models/common/woman_average/body/l_01_wa__body.w2ent
@@ -380,12 +401,12 @@ templates:
           - he_01_wa__oriana
           - hb_01_ma__orianna
 
-      orianna_human_morph:
+      orianna_human_morph: # ok
         includedTemplates:
           - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
           - characters/models/common/woman_average/body/l_01_wa__body.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
-          - dlc/dlcntr/data/entities/oriana/h_03_wa__oriana_morph.w2ent
+          - dlc/dlcntr/data/entities/oriana/h_oriana_vampire_clean_morph.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
         voicetag: "ORIANNA VAMPIRE"

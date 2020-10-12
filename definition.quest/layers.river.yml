@@ -1,4 +1,15 @@
 layers: 
+  river_sword_loot:
+    world: "bob"
+    #context: ""
+    interactiveEntities:
+      baron_sword: 
+        template: "W3AnimatedContainer:baron_sword"
+        pos: [ -205.3459930420, -594.5869750977, 0.2922460139 ]
+        rot: [ 0.0, 90.0, 286.2200012207 ]
+        valid_interactions: [ Loot ]
+        tags: [ "ntr_baron_sword" ] 
+
   river_bandits:
     world: "bob"
     actionpoints: 
@@ -7,7 +18,13 @@ layers:
       river_torch1: [ -208.1331329346, -599.3865966797, 0.1456909180, -51.6999855042, "guarding/stand_m_torch_jt" ]
       river_upset1: [ -209.4656219482, -598.5304565430, 0.1405639648, -29.9199943542, "work_man/stand_mw_negative_attitude_jt" ]
       river_upset2: [ -206.0393676758, -601.7857666016, 0.0861206055, -23.7599887848, "work_man/stand_mw_negative_attitude_jt" ]
-    
+
+      riverrun_point1: [ -121.7775192261, -495.8728027344, 7.0689086914, 149.1600189209, "work_man/stand_mw_negative_attitude_jt" ]
+      riverrun_point2: [ -119.5690460205, -496.8356018066, 7.4529418945, 149.1600189209, "work_man/stand_mw_negative_attitude_jt" ]
+      riverrun_point3: [ -124.5249786377, -495.0343322754, 7.0884399414, 149.1600189209, "work_man/stand_mw_negative_attitude_jt" ]
+      riverrun_point4: [ -127.2085800171, -494.0439147949, 6.9188842773, 149.1600189209, "work_man/stand_mw_negative_attitude_jt" ]
+      riverrun_point5: [ -129.8331604004, -492.8277893066, 6.8172607422, 149.1600189209, "work_man/stand_mw_negative_attitude_jt" ]
+
     waypoints: 
       inn_spawn1: [ -133.9816436768, -635.5363769531, 11.1214303970, -6.1599998474 ]
       inn_spawn2: [ -132.6120147705, -636.3775024414, 11.4954223633, 16.5000000000 ]
@@ -16,6 +33,13 @@ layers:
       inn_spawn5: [ -131.9095916748, -632.6487426758, 11.5112304688, 130.6799926758 ]
       inn_spawn6: [ -133.5602111816, -632.0375366211, 11.4724121094, 183.6999511719 ]
       river_spawn1: [ -204.6500091553, -602.4152832031, 0.1163330078, -11.8799905777 ]
+      
+      riverspawn_axe: [ -203.0404357910, -604.7002563477, 0.0735473633, 93.0600128174 ]
+      riverspawn_baron: [ -203.9953155518, -602.9986572266, 0.1203002930, 133.1000213623 ]
+      riverspawn_fat: [ -204.0803527832, -601.7127685547, 0.1867065430, 143.0000152588 ]
+      riverspawn_poor: [ -202.2639312744, -601.8372192383, 0.2225952148, 121.8800125122 ]
+      riverspawn_spear: [ -205.0671691895, -600.7573852539, 0.1860961914, 153.5600128174 ]
+      riverspawn_sword: [ -203.0088806152, -603.4169921875, 0.1303710938, 113.5199966431 ]
 
   beach_doll:
     world: "bob"

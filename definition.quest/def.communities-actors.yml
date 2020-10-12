@@ -3,13 +3,21 @@ communities:
     actors:
       orianna_human:
         template: "dlc\\dlcntr\\data\\entities\\orianna_human.w2ent"
-        appearances: [ "orianna_vampire_bloody_morph" ]
+        appearances: [ "orianna_vampire_bloody_morph", "orianna_human_morph" ]
         tags: [ "ntr_orianna_human" ]
 
     phases:
-      before_scene:
+      before_scene_to_bruxa:
         orianna_human:
           appearance: "orianna_vampire_bloody_morph"
+          use_last_ap: false
+          start_in_ap: false
+          attitude: friendly_to_player
+          spawn_at: bob/house_orihum_spawn
+
+      before_scene_peaceful:
+        orianna_human:
+          appearance: "orianna_human_morph"
           use_last_ap: false
           start_in_ap: false
           attitude: friendly_to_player
@@ -151,27 +159,27 @@ communities:
       bandit_axe:
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_axe.w2ent"
         appearances: [ "bob_raider_lvl1_03" ]
-        tags: [ "ntr_camp_bandit_axe" ]
+        tags: [ "ntr_camp_bandit_axe", "ntr_baron_bandit" ]
 
       bandit_sword:
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_sword.w2ent"
         appearances: [ "bob_raider_lvl1_21" ]
-        tags: [ "ntr_camp_bandit_sword" ]
+        tags: [ "ntr_camp_bandit_sword", "ntr_baron_bandit" ]
 
       bandit_spear:
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_spear.w2ent"
         appearances: [ "bob_raider_lvl1_07" ]
-        tags: [ "ntr_camp_bandit_spear" ]
+        tags: [ "ntr_camp_bandit_spear", "ntr_baron_bandit" ]
 
       fat_bandit:
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_big.w2ent"
         appearances: [ "bob_thug_lvl2_03" ]
-        tags: [ "ntr_fat_bandit" ]
+        tags: [ "ntr_fat_bandit", "ntr_baron_bandit" ]
 
       poor_bandit:
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit.w2ent"
         appearances: [ "bob_thug_lvl1_10" ]
-        tags: [ "ntr_poor_bandit" ]
+        tags: [ "ntr_poor_bandit", "ntr_baron_bandit" ]
 
     phases:
       before_scene:
@@ -260,6 +268,97 @@ communities:
           start_in_ap: true
           actionpoints:
             "00:00": bob/river_upset2
+
+      fight_only_baron_run_bandits:
+        baron_edward:
+          attitude: hostile_to_player
+          immortality: none
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_baron
+
+        bandit_axe:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: false
+          start_in_ap: false
+          actionpoints:
+            "00:00": bob/riverrun_point1
+
+        bandit_sword:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: false
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/riverrun_point2
+
+        bandit_spear:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: false
+          actionpoints:
+            "00:00": bob/riverrun_point3
+
+        fat_bandit:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/riverrun_point4
+
+        poor_bandit:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: false
+          start_in_ap: false
+          actionpoints:
+            "00:00": bob/riverrun_point5
+
+      fight_all:
+        baron_edward:
+          attitude: hostile_to_player
+          immortality: none
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_baron
+
+        bandit_axe:
+          attitude: hostile_to_player
+          immortality: none
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_axe
+
+        bandit_sword:
+          attitude: hostile_to_player
+          immortality: none
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_sword
+
+        bandit_spear:
+          attitude: hostile_to_player
+          immortality: none
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_spear
+
+        fat_bandit:
+          attitude: hostile_to_player
+          immortality: none
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_fat
+
+        poor_bandit:
+          attitude: hostile_to_player
+          immortality: none
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_poor
 
   comm_camp_bandit_axe_night:
     actors:

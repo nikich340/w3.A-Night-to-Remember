@@ -1419,11 +1419,11 @@ dialogscript:
     - CUE: shot_hurry_2
     # (longest) anim: high_standing_determined_gesture_both_hands_stop
     - PAUSE: 2.5
-    - Bandit_camp_crossbow: "Stay! What are you looking here?"
+    - Bandit_camp_crossbow: "2114670878|Stay! What are you looking here?"
     - CUE: shot_hurry_3
     - geralt: "[2.9642897]0000393630|Just a traveler. Happened to be passing through."
     - CUE: shot_hurry_3b
-    - Bandit_camp_crossbow: "Piss off, vagrant. Nothing for you here."
+    - Bandit_camp_crossbow: "2114670877|Piss off, vagrant. Nothing for you here."
     # shot Shot4 ger meditate start
     - CUE: shot_hurry_togame
     - PAUSE: 1.0
@@ -1446,15 +1446,15 @@ dialogscript:
     - CUE: shot_2
     # (longest) anim: high_standing_determined_gesture_both_hands_stop
     - PAUSE: 2.5
-    - Bandit_camp_crossbow: "Stay! What are you looking here?"
+    - Bandit_camp_crossbow: "2114670878|Stay! What are you looking here?"
     # shot Shot3 ger
     - CUE: shot_3
     # (longest) anim: high_standing_determined_gesture_both_hands_stop
-    - geralt: "I'm a witcher. Your friends send me here. Gotta deal with Baron."
+    - geralt: "2114670879|I'm a witcher. Your friends send me here. Gotta deal with Baron."
     # shot Shot4 ger meditate start
     - CUE: shot_3b
     - PAUSE: 0.5
-    - Bandit_camp_crossbow: "Good. Baron is in Beauclair at the moment, be back soon. Wait a little here."
+    - Bandit_camp_crossbow: "2114670880|Good. Baron is in Beauclair at the moment, be back soon. Wait a little here."
     - CUE: shot_4_fadeout
     - PAUSE: 1.0
     - CUE: shot_4_fadein
@@ -1520,18 +1520,18 @@ dialogscript:
     - PAUSE: 5.0
 
     - CUE: shot_13
-    - Bandit_camp_crossbow: "Greetings, Baron! Any news? Where is Alfred?"
+    - Bandit_camp_crossbow: "2114670881|Greetings, Baron! Any news? Where is Alfred?"
     - CUE: shot_15_baron_sore
     - PAUSE: 4.0
     - CUE: shot_15_geralt_goes
-    - Baron_Edward: "He is dead. Orianna killed him."
+    - Baron_Edward: "2114670882|He is dead. Orianna killed him."
     - CUE: shot_16_bow
-    - Bandit_camp_crossbow: "What?! How? Did you find her?"
+    - Bandit_camp_crossbow: "2114670883|What?! How? Did you find her?"
     - CUE: shot_17_baron
-    - Baron_Edward: "She is not just a woman... Maybe witch or monster. I can't understand what happened myself."
+    - Baron_Edward: "2114670884|She is not just a woman... Maybe witch or monster. I can't understand what happened myself."
     - CUE: shot_17_baron_to_geralt
-    - Baron_Edward: "And who are.. Witcher! It must be destiny sent you to us."
-    - geralt: "Actually it was your friends. My name is Geralt."
+    - Baron_Edward: "2114670885|And who are.. Witcher! It must be destiny sent you to us."
+    - geralt: "2114670886|Actually it was your friends. My name is Geralt."
 
     - CUE: shot_19
     - PAUSE: 8.0
@@ -1546,13 +1546,13 @@ dialogscript:
 
 
     - CUE: shot_23_dg_baron
-    - Baron_Edward: "The famous Geralt of Rivia?"
+    - Baron_Edward: "2114670887|The famous Geralt of Rivia?"
 
     - CUE: shot_24_dg_geralt
     - PAUSE: 1.833
     
     - CUE: shot_25_dg_baron_gesture
-    - Baron_Edward: "Great. My name is Edward and I am the leader of..."
+    - Baron_Edward: "2114670888|Great. My name is Edward and I am the leader of..."
     - CUE: shot_25_show_camp
     - PAUSE: 2.25
     # adjust to 5.25 sec
@@ -1561,15 +1561,15 @@ dialogscript:
     - geralt: "[0.8091046]0001075517|Bandits?"
 
     - CUE: shot_27_dg_baron
-    - Baron_Edward: "Don't be so conservative. We do not rob and kill peaceful merchants."
+    - Baron_Edward: "2114670889|Don't be so conservative. We do not rob and kill peaceful merchants."
 
     - CUE: shot_28_dg_geralt
     - PAUSE: 1.0
-    - geralt: "I don't believe it. However I'm here about Orianna."
+    - geralt: "2114670890|I don't believe it. However I'm here about Orianna."
 
     - CUE: shot_29_dg_baron
-    - Baron_Edward: "Yeah. This whore refused to return my son and killed Alfred."
-    - Baron_Edward: "As she is some kind of monster and you are witcher... Could you find and exterminate her? For a fee of course."
+    - Baron_Edward: "2114670891|Yeah. This whore refused to return my son and killed Alfred."
+    - Baron_Edward: "2114670892|As she is some kind of monster and you are witcher... Could you find and exterminate her? For a fee of course."
     - NEXT: section_choice_geralt
 
   section_choice_geralt:
@@ -1586,17 +1586,17 @@ dialogscript:
 
   section_about_child:
     - CUE: shot_40_dg_geralt
-    - geralt: "Why do you wanna take the child?"
+    - geralt: "2114670893|Why do you wanna take the child?"
     - CUE: shot_41_dg_baron
-    - Baron_Edward: "I believe that he is my son and I want to raise him."
+    - Baron_Edward: "2114670894|I believe that he is my son and I want to raise him."
     - NEXT: section_choice_geralt
 
   section_refuse:
     - CUE: shot_30_dg_geralt
-    - geralt: "I don't work for bandits."
+    - geralt: "2114670895|I don't work for bandits."
     - CUE: shot_31_dg_baron
-    - Baron_Edward: "Did you seriously wait for me to say this? Think twice - I'll reward you generously."
-    - Baron_Edward: "And I'm asking for your aid not as bandit, but as father of the boy in distress..."
+    - Baron_Edward: "2114670896|Did you seriously wait for me to say this? Think twice - I'll reward you generously."
+    - Baron_Edward: "2114670897|And I'm asking for your aid not as bandit, but as father of the boy in distress..."
     - NEXT: section_choice_geralt
 
   script_set_coins:
@@ -1651,30 +1651,30 @@ dialogscript:
 
   section_negotiate_toomuch:
     - CUE: shot_toomuch
-    - Baron_Edward: "I wouldn't pay so much even if you were King Radovid."
+    - Baron_Edward: "2114670898|I wouldn't pay so much even if you were King Radovid."
     - PAUSE: 1.0
     - NEXT: script_negotiate
 
   section_negotiate_prettyclose:
     - CUE: shot_prettyclose
-    - Baron_Edward: "That's just a bit high, witcher."
+    - Baron_Edward: "2114670899|That's just a bit high, witcher."
     - PAUSE: 1.0
     - NEXT: script_negotiate
 
   section_negotiate_ok:
     - CUE: shot_ok
-    - Baron_Edward: "[0.87981284]Fine."
+    - Baron_Edward: "2114670900|Fine."
     - PAUSE: 1.0
     - NEXT: section_details
 
   section_negotiate_lost:
     - CUE: shot_lost
-    - Baron_Edward: "My patience have ended! You will take my offer - 3000 orens, or get out of here!"
+    - Baron_Edward: "2114670901|My patience have ended! You will take my offer - 3000 orens, or get out of here!"
     - NEXT: section_choice_lost
 
   section_start_greedy:
     - CUE: shot_start_greedy
-    - Baron_Edward: "Changed your mind, witcher?"
+    - Baron_Edward: "2114670902|Changed your mind, witcher?"
     - NEXT: section_choice_lost
 
   section_choice_lost:
@@ -1698,29 +1698,29 @@ dialogscript:
 
   section_free:
     - CUE: shot_34_dg_geralt
-    - geralt: "Not interested in coins. Will make it for free."
+    - geralt: "2114670903|Not interested in coins. Will make it for free."
     - CUE: shot_35_dg_baron
-    - Baron_Edward: "The noble witcher? Just wondering..."
+    - Baron_Edward: "2114670904|The noble witcher? Just wondering..."
     - NEXT: section_details
 
   section_details:
     - CUE: shot_36_dg_geralt
-    - geralt: "I need more information. What happened to Alfred?"
+    - geralt: "2114670905|I need more information. What happened to Alfred?"
     - CUE: shot_37_dg_baron
-    - Baron_Edward: "We were guarding Orianna's house while finally met her."
-    - Baron_Edward: "I called her and asked where is the boy. She refused to answer. Alfred began to threaten her and drew his sword."
+    - Baron_Edward: "2114670906|We were guarding Orianna's house while finally met her."
+    - Baron_Edward: "2114670907|I called her and asked where is the boy. She refused to answer. Alfred began to threaten her and drew his sword."
     - CUE: shot_37_throat
-    - Baron_Edward: "After this she moved at once and vanished. And Alfred... His throat was slit. I could not help him..."
+    - Baron_Edward: "2114670908|After this she moved at once and vanished. And Alfred... His throat was slit. I could not help him..."
     - CUE: shot_37_dg_geralt_close
     - PAUSE: 2.0
     - CUE: shot_37_db_baron2
-    - Baron_Edward: "How? What creature can do such things?"
+    - Baron_Edward: "2114670909|How? What creature can do such things?"
     - CUE: shot_38_dg_geralt
-    - geralt: "Must be a bruxa, a kind of vampire."
+    - geralt: "2114670910|Must be a bruxa, a kind of vampire."
     - CUE: shot_39_dg_baron
-    - Baron_Edward: "Vampire? Shit... My son is in real danger. And I can't help him! You're my one hope."
+    - Baron_Edward: "2114670911|Vampire? Shit... My son is in real danger. And I can't help him! You're my one hope."
     - CUE: shot_togame
-    - geralt: "All right, see if I can find her."
+    - geralt: "2114670912|All right, see if I can find her."
     - PAUSE: 1.0
     - NEXT: section_exit
 
@@ -1730,5 +1730,6 @@ dialogscript:
 
   section_exit:
     - EXIT
+
 
 

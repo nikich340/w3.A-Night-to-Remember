@@ -68,19 +68,19 @@ dialogscript:
     - NEXT: section_exit
 
   section_start_orianna_house_found:
-    - geralt: "[2.0004]Tracks lead to this house."
+    - geralt: "[2.0004]2114670658|Tracks lead to this house."
     - NEXT: section_exit
 
   section_start_orianna_house_enter:
-    - geralt: "[5.3534]House looks inhabited… No sign of the dweller, though. Guess I'll look around."
+    - geralt: "[5.3534]2114670659|House looks inhabited… No sign of the dweller, though. Guess I'll look around."
     - NEXT: section_exit
 
   section_start_orianna_house_notes:
-    - geralt: "[3.3616]Interesting… Regis might be right."
+    - geralt: "[3.3616]2114670660|Interesting… Regis might be right."
     - NEXT: section_exit
 
   section_start_orianna_house_outside:
-    - geralt: "[2.0562]I'll wait her outside."
+    - geralt: "[2.0562]2114670661|I'll wait her outside."
     - NEXT: section_exit
 
   #section_start_after_orphanage:
@@ -89,6 +89,7 @@ dialogscript:
 
   section_exit:
     - EXIT
+
 
 
 

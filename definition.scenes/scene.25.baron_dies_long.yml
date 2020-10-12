@@ -810,6 +810,8 @@ storyboard:
     shot_1:
       - actor.equip.right: [0.0, geralt, steelsword]
       - actor.equip.right: [0.0, Baron_Edward, steelsword]
+      - actor.equip.left: [0.0, Bandit_camp_sword, Torch_work]
+      
       ##- actor.placement: [0.0, Baron_Edward, [ -150.0639038086, 36.8245124817, -11.1720581055 ], [ 0.0, 0.0, 224.3226013184 ]]
       - actor.placement: [0.0, Big_bandit, [ -153.5352020264, 37.9748649597, -11.2609252930 ], [ 0.0, 0.0, 231.3623352051 ]]
       - actor.placement: [0.0, Bandit_camp_sword, [ -151.8777465820, 39.6358909607, -11.2471923828 ], [ 0.0, 0.0, 236.6424255371 ]]
@@ -1078,7 +1080,7 @@ dialogscript:
     - PAUSE: 3.1
 
     - CUE: shot_3a
-    - Big_bandit: "[1.5]No…"
+    - Big_bandit: "[1.5]2114670355|No…"
     #- PAUSE: 1.5
     - CUE: shot_3b
     - PAUSE: 3.0
@@ -1099,9 +1101,11 @@ dialogscript:
     - PAUSE: 2.5
 
     - CUE: shot_8a
-    - geralt: "[0.74837637]0000459147|Good."
+    #- geralt: "[0.74837637]0000459147|Good."
+    # 1.1
+    - geralt: "2114670356|Good choice."
     - CUE: shot_8b
-    - PAUSE: 4.0
+    - PAUSE: 3.65
 
     - CUE: shot_8c
     - PAUSE: 8.0
@@ -1109,5 +1113,5 @@ dialogscript:
     - NEXT: section_exit
 
   section_exit:
-    - CAMERA_BLEND: 1.0
+    - BLACKSCREEN: true
     - EXIT

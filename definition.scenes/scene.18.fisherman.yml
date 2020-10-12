@@ -836,13 +836,13 @@ dialogscript:
     - geralt: "[1.8268262]0001124989|Good day. Fish biting?"
     # shot fisher answer
     - CUE: shot_3
-    - toussaint_fisherman: "[2.1060]I catch more when it's raining."
+    - toussaint_fisherman: "[2.1060]2114670918|I catch more when it's raining."
     # shot geralt ask2 boat
     - CUE: shot_4
-    - geralt: "[5.4078]Did you see a red-haired woman here? Left this site by boat, recently."
+    - geralt: "[5.4078]2114670919|Did you see a red-haired woman here? Left this site by boat, recently."
     # shot shot menu def impatient mimic
     - CUE: shot_4_answer
-    - toussaint_fisherman: "[5.7383]Maybe. Maybe not. Give me a few coins and I'll try to remember."
+    - toussaint_fisherman: "[5.7383]2114670920|Maybe. Maybe not. Give me a few coins and I'll try to remember."
     - NEXT: section_choice_geralt
 
   section_choice_geralt:
@@ -859,14 +859,14 @@ dialogscript:
     - CUE: shot_help
     - geralt: "[3.4024863]0000400593|I want to help that woman. She could be in danger."
     - CUE: shot_help_answer
-    - toussaint_fisherman: "[7.6557]I would believe you if you had a satchel of herbs instead of those blades sheathed on your back."
+    - toussaint_fisherman: "[7.6557]2114670921|I would believe you if you had a satchel of herbs instead of those blades sheathed on your back."
     - NEXT: section_choice_geralt
 
   section_axii:
     - CUE: shot_axii
     - geralt: "[7.5]0001125802|Asking a lot. Too much. How about you do this free of charge, huh? Out of the kindness of your heart?"
     - CUE: shot_axii_answer
-    - toussaint_fisherman: "[4.4119143]Aye, I'll help. Outta kindness…"
+    - toussaint_fisherman: "[4.0000]2114670922|Aye, I'll help. Outta kindness…"
     - PAUSE: 2.0
     - NEXT: section_tell
 
@@ -875,37 +875,37 @@ dialogscript:
     - geralt: "[1.8677174]0000434805|Fine… I'll pay."
     - PAUSE: 0.633
     - CUE: shot_pay_answer
-    - toussaint_fisherman: "[3.1124]Oh, I'm lucky to stumble across wealth today."
+    - toussaint_fisherman: "[3.1124]2114670923|Oh, I'm lucky to stumble across wealth today."
     - PAUSE: 2.0
     - NEXT: section_tell
 
   section_tell:
     - CUE: shot_tell
-    - toussaint_fisherman: "[2.4864]Well… you listen up."
+    - toussaint_fisherman: "[2.4864]2114670924|Well… you listen up."
 
     - CUE: shot_fadeout
     - PAUSE: 1.0
     - CUE: shot_story_appear
-    - geralt: "[3.0157]The woman came from that direction by the cemetery."
+    - geralt: "[3.0157]2114670925|The woman came from that direction by the cemetery."
     - PAUSE: 1.0
 
     - CUE: shot_story_payment
-    - geralt: "[3.6760]Paid me a tidy sum to take her across the river."
+    - geralt: "[3.6760]2114670926|Paid me a tidy sum to take her across the river."
 
     - CUE: shot_story_boat1
     - PAUSE: 2.5
-    - geralt: "[5.0822]She was nervous and dirty, but I didn't ask her about it."
+    - geralt: "[5.0822]2114670927|She was nervous and dirty, but I didn't ask her about it."
     - CUE: shot_story_boat2
     - PAUSE: 2.5
 
     - CUE: shot_story_inn1
     - PAUSE: 2.3709
-    - geralt: "[2.6291]I dropped her off near the Cockatrice Inn."
+    - geralt: "[2.6291]2114670928|I dropped her off near the Cockatrice Inn."
     - CUE: shot_story_inn2
     - PAUSE: 5.0
     
     - CUE: shot_story_inn3
-    - geralt: "[3.1736]She hopped off the boat without saying a word…"
+    - geralt: "[3.1736]2114670929|She hopped off the boat without saying a word…"
     - CUE: shot_story_inn4
     - PAUSE: 3.0
 
@@ -926,6 +926,7 @@ dialogscript:
 
   section_exit:
     - EXIT
+
 
 
 

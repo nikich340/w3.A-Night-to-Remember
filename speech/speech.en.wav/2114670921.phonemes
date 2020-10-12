@@ -2,13 +2,12 @@
 ;meta[version=1]
 ;meta[text=I would believe you if you had a satchel of herbs instead of those blades sheathed on your back.]
 ;meta[translation=aɪ wʊd bɪlˈiːv juː ɪf juː hɐd ɐ sˈatʃəl ɒv hˈɜːbz ɪnstˈɛd ɒv ðəʊz blˈeɪdz ʃˈiːðd ˌɒn jɔː bˈak]
-;meta[audio-hypothesis=SIL T N AH SIL AA W UH D B OW L IY F IY UW SIL K IH F IY EH N AH S AE SH AH L AH V TH AH D Z +NSN+ P IH Z AH V DH OW Z B AH L EY EY D T S SH IY F D OW N Y UH D B AE K SIL]
+;meta[audio-hypothesis=SIL N AH SIL AA W UH D B OW L IY F IY UW SIL K IH F IY EH N AH S AE SH AH L AH V TH AH D Z +NSN+ P IH Z S AH V DH OW Z B AH L EY EY D T S SH IY F D OW N Y IH P AE K SIL]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
 ;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
-;_       |  260|  305|  1.00| -1.00| <- VERIFY! | _  d  T  [  260 -  305]
-;_       |  305|  375|  1.00| -1.00| <- VERIFY! | _  d  N  [  305 -  375]
+;_       |  300|  375|  1.00| -1.00| <- VERIFY! | _  d  N  [  300 -  375]
 ------------------------------------------------------------------------
 aɪ      |  375|  780|  1.00|  0.25| ok         | aɪ ~  AH [  375 -  780]
 ;_       | 1450| 1665|  1.00| -1.00| <- VERIFY! | _  d  AA [ 1450 - 1665]
@@ -52,12 +51,12 @@ v       | 4095| 4125|  1.00|  2.00| ok         | v  ~  V  [ 4095 - 4125]
 h       | 4165| 4300|  1.00|  0.25| ok         | h  ~  AH [ 4165 - 4435]
 ɜ       | 4300| 4435|  1.10|  0.00| ok         | ɜ  \  AH [ 4165 - 4435]
 b       | 4435| 4495|  1.00|  0.01| ok         | b  ~  D  [ 4435 - 4495]
-z       | 4495| 4635|  1.00|  2.00| ok         | z  ~  Z  [ 4495 - 4635]
-;_       | 4735| 5005|  1.00| -1.00| <- VERIFY! | _  d  P  [ 4735 - 5005]
+z       | 4495| 4625|  1.00|  2.00| ok         | z  ~  Z  [ 4495 - 4625]
+;_       | 4715| 5005|  1.00| -1.00| <- VERIFY! | _  d  P  [ 4715 - 5005]
 ------------------------------------------------------------------------
 ɪ       | 5005| 5095|  1.00|  2.00| ok         | ɪ  ~  IH [ 5005 - 5095]
 ;n       | 5095| 5095|  1.00| -1.00| <- VERIFY! | n  i
-s       | 5095| 5185|  1.00|  1.70| ok         | s  ~  Z  [ 5095 - 5185]
+s       | 5095| 5185|  1.00|  1.85| ok         | s  ~> Z  [ 5095 - 5135] + S  [ 5135 - 5185]
 ;t       | 5185| 5185|  1.00| -1.00| <- VERIFY! | t  i
 ;ɛ       | 5185| 5185|  1.10| -1.00| <- VERIFY! | ɛ  i
 ;d       | 5185| 5185|  1.00| -1.00| <- VERIFY! | d  i
@@ -84,9 +83,9 @@ d       | 6785| 6815|  1.00|  1.99| ok         | d  \  D  [ 6755 - 6815]
 ɒ       | 6815| 6915|  1.05|  0.01| ok         | ɒ  ~  OW [ 6815 - 6915]
 n       | 6915| 6965|  1.00|  2.00| ok         | n  ~  N  [ 6915 - 6965]
 ------------------------------------------------------------------------
-j       | 6965| 7075|  1.00|  1.00| ok         | j  ~> Y  [ 6965 - 7035] + UH [ 7035 - 7075]
-ɔ       | 7075| 7105|  1.00| -1.00| <- VERIFY! | ɔ  ~  D  [ 7075 - 7105]
+j       | 6965| 7075|  1.00|  1.25| ok         | j  ~> Y  [ 6965 - 7025] + IH [ 7025 - 7075]
+;ɔ       | 7075| 7075|  1.00| -1.00| <- VERIFY! | ɔ  i
 ------------------------------------------------------------------------
-b       | 7105| 7165|  1.00|  2.00| ok         | b  ~  B  [ 7105 - 7165]
+b       | 7075| 7165|  1.00|  1.70| ok         | b  ~  P  [ 7075 - 7165]
 a       | 7165| 7285|  1.10|  1.70| ok         | a  ~  AE [ 7165 - 7285]
 k       | 7285| 7460|  1.00|  2.00| ok         | k  ~  K  [ 7285 - 7460]

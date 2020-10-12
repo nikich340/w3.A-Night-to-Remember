@@ -2,19 +2,19 @@
 ;meta[version=1]
 ;meta[text=The orphanage was attacked and almost none of the children survived.]
 ;meta[translation=ðɪ ˈɔːfənɪdʒ wɒz ɐtˈakt and ˈɔːlməʊst nˈʌn ɒvðə tʃˈɪldɹən səvˈaɪvd]
-;meta[audio-hypothesis=SIL D IY AO R F AH M IH N SH K L AH Z AH T EH M AE K T AH N AO L M OW S T N AH M AH B IH T CH UW L G EH N CH S ER V AY V D SIL]
+;meta[audio-hypothesis=SIL B IY AO R F AH M IH N SH K L AH Z AH T EH M AE K T AH N AO L M OW S T N AH M AH B IH T CH UW L G EH N CH S ER V AY V D SIL]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
 ;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
 ------------------------------------------------------------------------
-ð       |  320|  365|  1.00|  1.70| ok         | ð  ~  D  [  320 -  365]
-ɪ       |  365|  535|  1.00|  1.70| ok         | ɪ  ~  IY [  365 -  535]
+ð       |  280|  375|  1.00| -1.00| <- VERIFY! | ð  ~  B  [  280 -  375]
+ɪ       |  375|  535|  1.00|  1.70| ok         | ɪ  ~  IY [  375 -  535]
 ------------------------------------------------------------------------
 ɔ       |  535|  655|  1.10|  1.00| ok         | ɔ  ~> AO [  535 -  615] + R  [  615 -  655]
 f       |  655|  775|  1.00|  2.00| ok         | f  ~  F  [  655 -  775]
-ə       |  775|  815|  1.00|  2.00| ok         | ə  ~  AH [  775 -  815]
-n       |  815|  885|  1.00|  0.25| ok         | n  ~  M  [  815 -  885]
+ə       |  775|  825|  1.00|  2.00| ok         | ə  ~  AH [  775 -  825]
+n       |  825|  885|  1.00|  0.25| ok         | n  ~  M  [  825 -  885]
 ɪ       |  885|  975|  1.00|  2.00| ok         | ɪ  ~  IH [  885 -  975]
 ;_       |  975| 1025|  1.00| -1.00| <- VERIFY! | _  d  N  [  975 - 1025]
 ;_       | 1025| 1175|  1.00| -1.00| <- VERIFY! | _  d  SH [ 1025 - 1175]
@@ -65,4 +65,4 @@ s       | 3235| 3315|  1.00|  2.00| ok         | s  ~  S  [ 3235 - 3315]
 v       | 3375| 3495|  1.00|  2.00| ok         | v  ~  V  [ 3375 - 3495]
 aɪ      | 3495| 3785|  1.10|  2.00| ok         | aɪ ~  AY [ 3495 - 3785]
 v       | 3785| 3875|  1.00|  2.00| ok         | v  ~  V  [ 3785 - 3875]
-d       | 3875| 3970|  1.00|  2.00| ok         | d  ~  D  [ 3875 - 3970]
+d       | 3875| 3960|  1.00|  2.00| ok         | d  ~  D  [ 3875 - 3960]
