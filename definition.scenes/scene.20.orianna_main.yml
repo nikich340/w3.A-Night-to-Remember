@@ -1283,13 +1283,13 @@ storyboard:
 
     shot_try_peacefully_ori_leaving3:
       - cam: [0.0, cam_49_Shot_p6_relax2_cam1]
-      - actor.placement: [0.0, geralt, [ -158.8006744385, 37.5481987000, -11.4092578125 ], [ 0.0, 0.0, 71.9399032593 ]]
+      - actor.placement: [0.0, geralt, [ -158.8006744385, 37.5481987000, -11.57 ], [ 0.0, 0.0, 71.9399032593 ]]
       - actor.anim:
           actor: geralt # 8.4333
           .@pos: [0.0, anim_6970_high_standing_determined_calm_enter_frontal]
           blendin: 0.0
-          blendout: 0.5
-          clipend: 6.0
+          blendout: 0.6
+          #clipend: 6.0
 
     shot_try_peacefully_ori_leaving4:
       - cam.blend.start: [0.0, cam_49_Shot_p6_relax2_cam1, smooth]

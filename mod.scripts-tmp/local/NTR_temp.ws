@@ -1,6 +1,7 @@
 exec function startNTR() {
 	FactsAdd("NTRstartquest", 1);
 }
+
 // not work?
 exec function NTR_MoveNPCsTo(tag : name, targetTag : name, optional speed : float) {
 	var i               : int;

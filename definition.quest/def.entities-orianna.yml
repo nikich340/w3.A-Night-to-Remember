@@ -157,7 +157,7 @@ templates:
           - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
           - characters/models/common/woman_average/body/l_01_wa__body.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
-          - dlc/dlcntr/data/entities/oriana/h_04_wa__oriana_morph_inverse.w2ent
+          - dlc/dlcntr/data/entities/oriana/h_oriana_vampire_bloody_morph_inverse.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
           - dlc/dlcntr/data/entities/oriana/c_04_wa__oriana.w2ent
 
@@ -420,11 +420,11 @@ templates:
           - CMorphedMeshComponent0
           - face_morph
 
-      orianna_vampire:
+      orianna_vampire: # ok
         includedTemplates:
           - dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
           - dlc/dlcntr/data/entities/oriana/body_03_wa__oriana.w2ent
-          - dlc/dlcntr/data/entities/oriana/h_03_wa__oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/h_oriana_vampire_clean.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
         voicetag: "ORIANNA VAMPIRE"
@@ -434,12 +434,12 @@ templates:
           - he_02_wa__oriana
           - hb_01_ma__orianna
 
-      orianna_vampire_bloody_morph:
+      orianna_vampire_bloody_morph: # ok
         includedTemplates:
           - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
           - characters/models/common/woman_average/body/l_01_wa__body.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
-          - dlc/dlcntr/data/entities/oriana/h_04_wa__oriana_morph_inverse.w2ent
+          - dlc/dlcntr/data/entities/oriana/h_oriana_vampire_bloody_morph_inverse.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
           - dlc/dlcntr/data/entities/oriana/c_04_wa__oriana.w2ent
 
@@ -450,12 +450,12 @@ templates:
           - he_02_wa__oriana
           - hb_01_ma__orianna
 
-      orianna_vampire_bloody:
+      orianna_vampire_bloody: # ok
         includedTemplates:
           - dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
           - dlc/dlcntr/data/entities/oriana/body_03_wa__oriana.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
-          - dlc/dlcntr/data/entities/oriana/h_04_wa__oriana.w2ent
+          - dlc/dlcntr/data/entities/oriana/h_oriana_vampire_bloody.w2ent
           - dlc/dlcntr/data/entities/oriana/c_04_wa__oriana.w2ent
 
         voicetag: "ORIANNA VAMPIRE"

@@ -1039,7 +1039,7 @@ storyboard:
 
     shot_8c:
       - cam.blend.start: [0.0, cam_14_Shot8, smooth]
-      - cam.blend.end: [1.0, cam_16_Shot9_cam_corpse, smooth]
+      - cam.blend.end: [0.9, cam_16_Shot9_cam_corpse, smooth]
 
       - actor.lookat: [0.1, geralt, NONE]
       - actor.anim: 
@@ -1108,7 +1108,7 @@ dialogscript:
     - PAUSE: 3.65
 
     - CUE: shot_8c
-    - PAUSE: 8.0
+    - PAUSE: 7.5
     - PAUSE: 0.5
     - NEXT: section_exit
 

@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 878, saved: 2020-10-12 00:27:35)
+# (version: 883, saved: 2020-10-12 20:59:57)
 #
 ---
 structure:
@@ -323,7 +323,7 @@ structure:
           function: NTR_PlayMusic
           parameter:
             - areaName: toussaint
-            - eventName: mus_q701_bruxa_combat_loop
+            - eventName: mus_mq7017_combat
           next: ".done"
         
         script.play_music_invest_suspense:

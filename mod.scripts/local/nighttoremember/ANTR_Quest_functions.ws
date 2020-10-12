@@ -398,10 +398,9 @@ quest function NTR_TuneNPC( tag : name, level : int, optional attitude : string,
 	var j : int;
 	
 	theGame.GetNPCsByTag(tag, NPCs);
-	//LogQuest( "<<Tune NPC>>> tag: " + tag + " found npcs: " + NPCs.Size());	//- uncomment it to check if NPCs are found
-	//theGame.GetGuiManager().ShowNotification("Found npcs: " + NPCs.Size() + " nodes: " + nodes.Size());
+	theGame.GetGuiManager().ShowNotification("TUNE npcs by tag <" + tag + ">: " + NPCs.Size());
 	if (NPCs.Size() < 1) {
-		theGame.GetGuiManager().ShowNotification("[ERROR] No NPCs found with tag <" + tag + ">");
+		//theGame.GetGuiManager().ShowNotification("[ERROR] No NPCs found with tag <" + tag + ">");
 		LogChannel('NTR_TuneNPC', "[ERROR] No NPCs found with tag <" + tag + ">");
 		return;
 	}

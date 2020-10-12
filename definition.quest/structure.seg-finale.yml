@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 878, saved: 2020-10-12 00:27:35)
+# (version: 883, saved: 2020-10-12 20:59:57)
 #
 ---
 structure:
@@ -50,10 +50,11 @@ structure:
           scene: 24.baron_river_friendly.yml
           placement: bob/orianna
           interruptable: true
-          _fadein: false
+          _fadein: true
           next.fight:
             - script.Kill_orianna
             - spawn.spawn_hostile_baron
+            - waituntil.Wait_baron_dead
           next.peaceful:
             - script.Kill_orianna
             - script.TODOOO
@@ -66,7 +67,7 @@ structure:
           scene: 25.baron_dies_long.yml
           placement: bob/orianna
           interruptable: true
-          _fadein: true
+          _fadein: false
           next.Output:
             - despawn.despawn_bandits_river
         
@@ -78,7 +79,7 @@ structure:
           scene: 26.baron_river_aggressive.yml
           placement: bob/orianna
           interruptable: true
-          _fadein: false
+          _fadein: true
           next.Output:
             - spawn.fight_all_river
             - waituntil.wait_baron_death
@@ -93,7 +94,7 @@ structure:
           scene: 28.orianna_farewell.yml
           placement: bob/orianna
           interruptable: true
-          _fadein: false
+          _fadein: true
           next.Output:
             - out
         
@@ -310,7 +311,7 @@ structure:
         waituntil.Wait_baron_dead:
           factdb: [ ntr_baron_edward_dead, ">=", 1 ]
           ".editor":
-            pos: [ 5259.0, 269.0 ]
+            pos: [ 5168.0, 177.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -492,6 +493,17 @@ structure:
             - saveType: SESB_ClearSaved
           next: ".done"
         
+        script.Hide_bruxa_indicator:
+          ".editor":
+            pos: [ 4765.0, 172.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: ShowBossFightIndicator
+          parameter:
+            - enable: false
+            - bossTag: cname_ntr_orianna_bruxa
+          next: ".done"
+        
         script.Hide_fight_indicator:
           ".editor":
             pos: [ 3485.0, 232.0 ]
@@ -537,15 +549,14 @@ structure:
         
         script.Kill_orianna:
           ".editor":
-            pos: [ 5081.0, 176.0 ]
+            pos: [ 5145.0, 312.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_ForceKillNPC
           parameter:
             - tag: cname_ntr_orianna_bruxa
             - playDeath: false
-          next:
-            - waituntil.Wait_baron_dead
+          next: ".done"
         
         script.NTR_SaveGame:
           ".editor":
@@ -714,6 +725,18 @@ structure:
           next:
             - script.Bruxa_fight_indicator
         
+        script.Tune_bandits:
+          ".editor":
+            pos: [ 5225.0, -394.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_TuneNPC
+          parameter:
+            - tag: cname_ntr_baron_bandit
+            - level: 1000
+            - npcGroupType: ENGT_Enemy
+          next: ".done"
+        
         script.Unlock_front_door:
           ".editor":
             pos: [ 1160.6940917969, 58.4589042664 ]
@@ -805,6 +828,17 @@ structure:
             - playDeath: true
           next:
             - scene.scene_27_baron_dies_short: Input
+        
+        script.hide_baron_indicator:
+          ".editor":
+            pos: [ 6134.0, -17.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: ShowBossFightIndicator
+          parameter:
+            - enable: false
+            - bossTag: cname_ntr_baron_edward
+          next: ".done"
         
         script.new_fact_checker_branch:
           ".editor":
@@ -903,6 +937,7 @@ structure:
             - comm_bandits_river
           next:
             - script.Baron_edward_bossbar
+            - script.Tune_bandits
         
         spawn.orianna_human:
           ".editor":
@@ -987,6 +1022,7 @@ structure:
           next:
             - script.NTR_SaveLock_unlock
             - changelayers.show_baron_sword_loot
+            - script.hide_baron_indicator
         
         despawn.despawn_orihum:
           ".editor":
@@ -1079,6 +1115,7 @@ structure:
           time: "01:00"
           next:
             - scene.23_orianna_bruxa_dies: Input
+            - script.Hide_bruxa_indicator
         
         settime.Set_11pm:
           ".editor": [ 2413.0, -41.0 ]

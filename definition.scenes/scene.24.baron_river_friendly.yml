@@ -1320,6 +1320,7 @@ dialogscript:
     - Baron_Edward: "2114670321|Hey, witcher!"
     # shot shot1 edward
     - CUE: shot_2
+    - PAUSE: 4.0
     # (longest) anim: man_work_loot_ground_01
     - Baron_Edward: "2114670322|You're alive?"
     # shot shot2 overview
@@ -1356,9 +1357,9 @@ dialogscript:
         emphasize: true
       - choice: ["Your son is dead.", section_try_trick]
         emphasize: true
-      - choice: ["I don't know. (TEST single-use)", section_dont_know]
+      - choice: ["I don't know.", section_dont_know]
         emphasize: true
-        #single_use: true
+        single_use: true
 
   section_dont_know:
     - CUE: shot_dont_know_g

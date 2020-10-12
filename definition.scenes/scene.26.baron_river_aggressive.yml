@@ -718,6 +718,15 @@ dialogscript:
 
   section_start:
     - PAUSE: 0.0
+    - NEXT: script_music
+
+  script_music:
+    - SCRIPT:
+            function: NTR_PlayMusicScene
+            parameter:
+                - areaName: "toussaint"
+                - eventName: "mus_bob_investigation_calm"
+                - saveType: "SESB_ClearSaved"
     - NEXT: section_storyboard_ui
 
   section_storyboard_ui:

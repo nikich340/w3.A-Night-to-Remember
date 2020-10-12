@@ -109,6 +109,6 @@ exec function playBank( bankName : string ) {
 	}
 }
 
-exec function playEvent( bankName : string, eventName : string ) {
+exec function playEvent( eventName : string ) {
 	thePlayer.SoundEvent(eventName);
 }
