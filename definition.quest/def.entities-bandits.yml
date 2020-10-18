@@ -54,19 +54,25 @@ templates:
       - ".type": SEntityTemplateColoringEntry
         appearance: bob_knight_15
         componentName: a_01_mb__bob_knights
-        colorShift1:
-          hue: 36
-          saturation: -46
-          luminance: -72
+        colorShift1: # colorEnt(0, 36, -46, -72, 50, -23, -56)
+          #hue: 36
+          hue: 100
+          #saturation: -46
+          saturation: 16
+          #luminance: -72
+          luminance: -76
         colorShift2:
-          hue: 50          # int16
-          saturation: -23  # int8
-          luminance: -56   # int8
+          #hue: 50          # int16
+          hue: 0          # int16
+          #saturation: -23  # int8
+          saturation: -60  # int8
+          #luminance: -56   # int8
+          luminance: -60   # int8
 
       - ".type": SEntityTemplateColoringEntry
         appearance: bob_knight_15
         componentName: c_10_ma__bob
-        colorShift1:
+        colorShift1: # colorEnt(1, 333, -100, 7, 315, -23, -56)
           hue: 333
           saturation: -100
           luminance: 7
@@ -78,26 +84,34 @@ templates:
       - ".type": SEntityTemplateColoringEntry
         appearance: bob_knight_15
         componentName: t2_01_mb__novigrad_guard
-        colorShift1:
-          hue: 65
+        colorShift1: # colorEnt(2, 65, -41, -44, 333, -23, -56)
+          #hue: 65
+          hue: 0
           saturation: -41
           luminance: -44
         colorShift2:
-          hue: 333
-          saturation: -23
-          luminance: -56
+          #hue: 333
+          hue: 120
+          #saturation: -23
+          saturation: -3
+          #luminance: -56
+          luminance: -85
 
       - ".type": SEntityTemplateColoringEntry
         appearance: bob_knight_15
         componentName: l0_02_mb__novigrad_guard
-        colorShift1:
-          hue: 65
+        colorShift1: # colorEnt(3, 65, -41, -44, 333, -23, -56)
+          #hue: 65
+          hue: 120
           saturation: -41
-          luminance: -44
+          #luminance: -44
+          luminance: -60
         colorShift2:
-          hue: 333
+          #hue: 333
+          hue: 0
           saturation: -23
-          luminance: -56
+          #luminance: -56
+          luminance: -65
 
     templateParams:
       - ".type": CAnimAnimsetsParam

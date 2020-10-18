@@ -86,6 +86,11 @@
 2114670790|00000000||Hahaha, shove off, vargant! If you will decide to help - our camp is on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater.
 ;   1000528|00000000||Dammit...
 ;
+; scene 13 orphanage gp
+;
+2114670795|00000000||Interesting. Son of a bandit in the vampire's claws...
+2114670796|00000000||What's that you're mutterin'? Go and talk with baron.
+;
 ; scene 14 orphanage win
 ;
 ;   1195382|00000000||Argh!
@@ -107,12 +112,6 @@
 ;    499337|00000000||Where can I find him?
 2114670815|00000000||We have pitched camp on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater.
 ;   1003998|00000000||See what I can do.
-;
-;
-; scene 13 orphanage gp
-;
-2114670795|00000000||Interesting. Son of a bandit in the vampire's claws...
-2114670796|00000000||What's that you're mutterin'? Go and talk with baron.
 ;
 ; scene 18
 ;
@@ -138,14 +137,14 @@
 ;   1029815|00000000||Hm, interesting. Thanks.
 2114670932|00000000||Good luck to you!
 ;
-; scene 19 - ori appear
+; scene 19 - orianna appear
 ;
 2114670935|00000000||Here we are.
 2114670936|00000000||Lady Orianna...
 2114670937|00000000||Go on!
 2114670938|00000000||Wait me here. I should check something. You are allowed to play in my room.
 ;
-; scene 20 - ori main
+; scene 20 - orianna main
 ;
 2114670940|00000000||I came to kill you.
 2114670941|00000000||No need in fight.
@@ -252,3 +251,15 @@
 ;   1066805|00000000||Mhm. Thanks a bunch.
 2114670378|00000000||Good luck, Geralt of Rivia.
 2114670379|00000000||So long, Orianna.
+;
+; scene 29
+;
+;
+; scene 30
+;
+2114670390|00000000||Take care of them, Barnabas-Basil.
+2114670391|00000000||Oh, with great pleasure, sir.
+2114670392|00000000||Follow me, please.
+;
+; scene 31
+;

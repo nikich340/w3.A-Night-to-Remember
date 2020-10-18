@@ -1,0 +1,280 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    regis:
+      template: "dlc\\dlcntr\\data\\entities\\regis_vampire_scene_fix.w2ent"
+      appearance: [ "regis_human" ]
+
+  props:
+    ntr_logo:
+      template: "dlc\\dlcntr\\data\\entities\\ntr_logo_entity.w2ent"
+
+  animations:
+    anim_6803_high_sitting_chair_proud_gesture_question_03:
+      animation: "high_sitting_chair_proud_gesture_question_03"
+      frames: 97
+
+    anim_6805_high_sitting_chair_proud_gesture_you:
+      animation: "high_sitting_chair_proud_gesture_you"
+      frames: 119
+
+    anim_6802_high_sitting_chair_proud_gesture_question_02:
+      animation: "high_sitting_chair_proud_gesture_question_02"
+      frames: 123
+
+  actor.poses:
+    pose_2107_High_Sitting_Chair_Proud:
+      name: "Sitting Chair"
+      emotional_state: "Proud"
+      status: "High"
+      idle_anim: "high_sitting_chair_proud_idle"
+
+  cameras:
+    cam_1_Shot1_close:
+      fov: 25.0
+      transform:
+        pos: [ -0.8522949219, 13.1076049805, 1.6774635315 ]
+        rot: [ 0.0, 348.7075195313, 41.6188240051 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_Shot1_medium:
+      fov: 30.0
+      transform:
+        pos: [ 2.5629577637, 9.2540893555, 2.6525230408 ]
+        rot: [ 0.0, 348.8999938965, 41.3438224792 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_Shot1_medium2:
+      fov: 30.0
+      transform:
+        pos: [ 2.5629577637, 9.2540893555, 2.6525230408 ]
+        rot: [ 0.0, 351.8425292969, 16.7037429810 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+
+    cam_4_Shot_cam_to_gp:
+      fov: 35.0
+      transform:
+        pos: [ -1.4181213379, 13.6152343750, 1.7774620056 ]
+        rot: [ 0.0, 355.9674987793, 314.0588989258 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 395
+
+  placement: "ntr_bob_homescenes_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -384.8305358887, -804.3603515625, 35.0772705078 ]
+      #rot: [ 0.0, 0.0, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      regis:
+        repo: "regis"
+        #by_voicetag: true
+        tags: [ "regis_tmp" ]
+
+
+    props:
+      ntr_logo:
+        repo: "ntr_logo"
+
+    cameras:
+      cam_1_Shot1_close:
+        repo: "cam_1_Shot1_close"
+
+      cam_2_Shot1_medium:
+        repo: "cam_2_Shot1_medium"
+
+      cam_3_Shot1_medium2:
+        repo: "cam_3_Shot1_medium2"
+
+      cam_4_Shot_cam_to_gp:
+        repo: "cam_4_Shot_cam_to_gp"
+
+    animations:
+      geralt_high_sitting_chair_proud_gesture_question_03:
+        actor: "geralt"
+        repo: "anim_6803_high_sitting_chair_proud_gesture_question_03"
+        #duration: 3.2333333492
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_sitting_chair_proud_gesture_you:
+        actor: "geralt"
+        repo: "anim_6805_high_sitting_chair_proud_gesture_you"
+        #duration: 3.9666666985
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_sitting_chair_proud_gesture_question_02:
+        actor: "geralt"
+        repo: "anim_6802_high_sitting_chair_proud_gesture_question_02"
+        #duration: 4.0999999046
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    mimics:
+      geralt_happy:
+        actor: "geralt"
+        repo: "happy"
+        duration: 1.0
+        weight: 0.75
+
+    actor.poses:
+      geralt_High_Sitting_Chair_Proud:
+        actor: "geralt"
+        repo: "pose_2107_High_Sitting_Chair_Proud"
+
+storyboard:
+  defaults:
+    placement:
+      geralt: [[ -1.1582946777, 14.4415893555, 0.1948699951 ], [ 0.0, 0.0, 237.4599914551 ]]
+
+    actor.pose:
+      geralt: geralt_High_Sitting_Chair_Proud
+
+  section_storyboard_ui:
+    # shot Shot1 close
+    shot_1a:
+      - actor.placement: [0.0, regis, [ -1.1582946777, 14.4415893555, -10.0 ], [ 0.0, 0.0, 237.4599914551 ]]
+      #- actor.pose: [0.0, geralt_High_Sitting_Chair_Proud]
+      - prop.placement: [0.0, ntr_logo, [ -8.3710632324, 3.0602416992, 0.2578430176 ], [ 0.0, 0.0, 0.0 ]]
+      - cam: [0.0, cam_1_Shot1_close]
+
+    shot_1b:
+      - actor.anim.additive: 
+          .@pos: [0.0, geralt_high_sitting_chair_proud_gesture_question_02]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.lookat: [1.0, geralt, [ 0.5497444272, 0.1169829965, 1.3617172241 ]]
+      - cam.blend.start: [0.0, cam_1_Shot1_close, smooth]
+      - actor.mimic: [0.0, geralt_happy]
+      #- actor.anim.mimic:
+      #    actor: geralt
+      #    .@pos: [0.5, mimicsanim_508_geralt_reaction_smile_face]
+      #    blendin: 0.3
+      #    blendout: 0.3
+      #    weight: 0.8
+      #    stretch: 2.0
+
+    shot_2_blend:
+      - cam.blend.end: [0.999, cam_2_Shot1_medium, smooth]
+
+    shot_3_blend_a:
+      - actor.lookat: 
+          .@pos: [0.0, geralt, [ -3.8037798405, 1.6937615871, 2.9594230652 ]]
+          speed: 0.2
+      - cam.blend.start: [0.0, cam_2_Shot1_medium, smooth]
+      - cam.blend.end: [1.0, cam_3_Shot1_medium2, smooth]
+
+    shot_3_blend_b:
+      - prop.effect.start: [0.0, ntr_logo, ntr_logo_screen_en]
+      - prop.effect.stop: [1.0, ntr_logo, ntr_logo_screen_en]
+      - fade.out: [0.85, 1.5, [0, 0, 0, 255]]
+
+    shot_to_gp:
+      - actor.placement: [0.0, geralt, [ -1.1594848633, 14.5704956055, 0.1948699951 ], [ 0.0, 0.0, 313.0299987793 ]]
+      - actor.gamestate: [0.0, geralt]
+      - fade.in: [0.0, 0.75]
+      - cam.blend.togame: [0.0, cam_4_Shot_cam_to_gp]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "regis" ]
+  props: [ "ntr_logo" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: script_tw3_music
+
+  script_tw3_music:
+    - SCRIPT:
+            function: NTR_PlayMusicScene
+            parameter:
+                - areaName: "toussaint"
+                - eventName: "mus_q705_tw3_theme"
+                - saveType: "SESB_ClearSaved"
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot Shot1 close
+    - CUE: shot_1a
+    - PAUSE: 2.0
+    # (longest) anim: high_sitting_chair_proud_gesture_question_03
+    - geralt: "0001014097|Nice place."
+    - PAUSE: 2.0
+    - CUE: shot_1b
+    - geralt: "0000587959|I could use a little rest myself…"
+    ## mimic!
+    - CUE: shot_2_blend
+    - PAUSE: 15.0
+
+    - CUE: shot_3_blend_a
+    - regis: "0001162398|So we shall, my friend. We have witnessed - and, in fact, on several occasions incited - many great and weighty events. After all that toil, I believe we deserve a bit of a rest."
+    - PAUSE: 0.5
+    - CUE: shot_3_blend_b
+    - PAUSE: 10.0
+    - PAUSE: 1.0
+
+    - CUE: shot_to_gp
+    - PAUSE: 2.0
+    - NEXT: section_exit
+
+  section_exit:
+    - EXIT

@@ -1,0 +1,264 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    Baron_Edward:
+      template: "dlc\\dlcntr\\data\\entities\\baron_edward.w2ent"
+      appearance: [ "bob_knight_15" ]
+
+    niellan:
+      template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\characters\\q704_bloodbag_boy.w2ent"
+      appearance: [ "__q704_wounded_boy_neck_blood" ]
+
+    agneta:
+      template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\citizens\\girl_noble.w2ent"
+      appearance: [ "bob_child_noble_female_03" ]
+
+    horse_baron:
+      template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
+      appearance: [ "horse_knight_07" ]
+
+    horse_kids:
+      template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
+      appearance: [ "_sq101__white_stallion_02" ]
+
+  animations:
+    anim_4622_horse_walk:
+      animation: "horse_walk"
+      frames: 38
+
+  actor.poses:
+    pose_4_dg_horse_standing_idle02:
+      name: "520"
+      idle_anim: "dg_horse_standing_idle02"
+
+    pose_999_child_sitting_loop_01:
+      idle_anim: "child_sitting_loop_01"
+
+    pose_131_kids_sit_fishing_loop_02_dialog_recompress:
+      name: "108"
+      idle_anim: "kids_sit_fishing_loop_02_dialog_recompress"
+
+    pose_506_horse_standing_idle02:
+      idle_anim: "horse_standing_idle02"
+
+    pose_custom_horse_walk:
+      idle_anim: "horse_walk"
+
+  cameras:
+    cam_1_Shot1:
+      fov: 30.0
+      transform:
+        pos: [ -22.4352035522, -22.6829967499, 1.0104198456 ]
+        rot: [ 0.0, 359.4598083496, 304.7519531250 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 5.2681369781, 8.2681369781 ]
+        focus: [ 5.7681369781, 6.7681369781 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_Shot2:
+      fov: 35.0
+      transform:
+        pos: [ -44.1598052979, -37.5590362549, 3.6104145050 ]
+        rot: [ 0.0, 357.5898132324, 306.4567871094 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 30.0, 34.6499481201 ]
+        focus: [ 30.0, 33.1499481201 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 385
+
+  placement: "ntr_bob_orianna_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -180.0365447998, -443.1201477051, 11.4495849609 ]
+      #rot: [ 0.0, 94.1600112915, 0.0 ]
+
+  assets:
+    actors:
+      #geralt:
+      #  repo: "geralt"
+      #  by_voicetag: true
+      #  tags: [ "PLAYER" ]
+
+      Baron_Edward:
+        repo: "Baron_Edward"
+        #by_voicetag: true
+        appearance: "bob_knight_15"
+        tags: [ "Baron_Edward" ]
+
+      niellan:
+        repo: "niellan"
+        #by_voicetag: true
+        appearance: "__q704_wounded_boy_neck_blood"
+        tags: [ "niellan" ]
+
+      agneta:
+        repo: "agneta"
+        #by_voicetag: true
+        appearance: "bob_child_noble_female_03"
+        tags: [ "agneta" ]
+
+      horse_baron:
+        repo: "horse_baron"
+        #by_voicetag: true
+        appearance: "horse_knight_07"
+        tags: [ "horse_baron" ]
+
+      horse_kids:
+        repo: "horse_kids"
+        #by_voicetag: true
+        appearance: "_sq101__white_stallion_02"
+        tags: [ "horse_kids" ]
+
+    cameras:
+      cam_1_Shot1:
+        repo: "cam_1_Shot1"
+
+      cam_2_Shot2:
+        repo: "cam_2_Shot2"
+
+    animations:
+      horse_baron_horse_walk:
+        actor: "horse_baron"
+        repo: "anim_4622_horse_walk"
+        #duration: 1.2666666508
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      horse_kids_horse_walk:
+        actor: "horse_kids"
+        repo: "anim_4622_horse_walk"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    actor.poses:
+      Baron_Edward_dg_horse_standing_idle02:
+        actor: "Baron_Edward"
+        repo: "pose_4_dg_horse_standing_idle02"
+
+      niellan_child_sitting_loop_01:
+        actor: "niellan"
+        repo: "pose_999_child_sitting_loop_01"
+
+      agneta_kids_sit_fishing_loop_02_dialog_recompress:
+        actor: "agneta"
+        repo: "pose_131_kids_sit_fishing_loop_02_dialog_recompress"
+
+      horse_baron_horse_standing_idle02:
+        actor: "horse_baron"
+        repo: "pose_506_horse_standing_idle02"
+
+      horse_kids_horse_standing_idle02:
+        actor: "horse_kids"
+        repo: "pose_506_horse_standing_idle02"
+
+      horse_baron_horse_walk:
+        actor: "horse_baron"
+        repo: "pose_custom_horse_walk"
+
+      horse_kids_horse_walk:
+        actor: "horse_kids"
+        repo: "pose_custom_horse_walk"
+
+storyboard:
+  defaults:
+    #placement:
+      #Baron_Edward: [[ -16.9650535583, -19.6803016663, -0.4603443146 ], [ 0.0, 0.0, 145.4201660156 ]]
+      #niellan: [[ -15.7933368683, -15.7326974869, 1.0192012787 ], [ 0.0, 13.0900030136, 51.6723251343 ]]
+      #agneta: [[ -15.6244878769, -16.3114585876, 1.3972444534 ], [ 0.0, 0.0, 139.9200439453 ]]
+      #horse_baron: [[ -17.1312866211, -19.9443893433, -0.3503417969 ], [ 0.0, 0.0, 140.7999267578 ]]
+      #horse_kids: [[ -15.5859584808, -16.2596282959, -0.2679443359 ], [ 0.0, 0.0, 137.7200317383 ]]
+
+    actor.pose:
+      Baron_Edward: Baron_Edward_dg_horse_standing_idle02
+      niellan: niellan_child_sitting_loop_01
+      agneta: agneta_kids_sit_fishing_loop_02_dialog_recompress
+      horse_baron: horse_baron_horse_walk
+      horse_kids: horse_kids_horse_walk
+
+  section_storyboard_ui:
+    # shot Shot1
+    shot_1:
+      - actor.placement.start: [0.0, Baron_Edward, [ -16.9650535583, -19.6803016663, -0.4603443146 ], [ 0.0, 0.0, 145.4201660156 ]]
+      - actor.placement.start: [0.0, niellan, [ -15.7933368683, -15.7326974869, 1.0192012787 ], [ 0.0, 13.0, 51.6723251343 ]]
+      - actor.placement.start: [0.0, agneta, [ -15.6244878769, -16.3114585876, 1.3972444534 ], [ 0.0, 0.0, 139.9200439453 ]]
+      - actor.placement.start: [0.0, horse_baron, [ -17.1312866211, -19.9443893433, -0.3503417969 ], [ 0.0, 0.0, 140.7999267578 ]]
+      - actor.placement.start: [0.0, horse_kids, [ -15.5859584808, -16.2596282959, -0.2679443359 ], [ 0.0, 0.0, 137.7200317383 ]]
+      
+      - actor.lookat: [0.0, Baron_Edward, NONE]
+      - actor.lookat: [0.0, niellan, NONE]
+      - actor.lookat: [0.0, agneta, Baron_Edward]
+
+      - actor.lookat: 
+          .@pos: [0.5, Baron_Edward, agneta]
+          turn: body
+
+      - actor.lookat: 
+          .@pos: [0.7, Baron_Edward, NONE]
+          turn: body
+          
+      #- actor.pose: [0.0, Baron_Edward_dg_horse_standing_idle02]
+      #- actor.pose: [0.0, niellan_child_sitting_loop_01]
+      #- actor.pose: [0.0, agneta_kids_sit_fishing_loop_02_dialog_recompress]
+      #- actor.pose: [0.0, horse_baron_horse_walk]
+      #- actor.pose: [0.0, horse_kids_horse_walk]
+
+      - cam.blend.start: [0.0, cam_1_Shot1, rapid]
+      - cam.blend.end: [1.0, cam_2_Shot2, rapid]
+
+      - actor.placement.key: [0.5, Baron_Edward, [ -22.7201356887, -26.5981636047, -0.4603443146 ], [ 0.0, 0.0, 145.4201660156 ]]
+      - actor.placement.key: [0.5, horse_baron, [ -22.7899913788, -26.7430915832, -0.3503417969 ], [ 0.0, 0.0, 140.7999267578 ]]
+      - actor.placement.key: [0.5, horse_kids, [ -21.5030326843, -23.5852890014, -0.2679443359 ], [ 0.0, 0.0, 137.7200317383 ]]
+      - actor.placement.key: [0.5, niellan, [ -21.6554746628, -22.8927860259, 1.0192012787 ], [ 0.0, 13.0900030136, 51.6723251343 ]]
+      - actor.placement.key: [0.5, agneta, [ -21.5549778939, -23.7021694186, 1.3972444534 ], [ 0.0, 0.0, 138.8200378418 ]]
+      
+      - actor.placement.end: [1.0, Baron_Edward, [ -28.4752178192, -33.5160255432, -1.5703344345 ], [ 0.0, 0.0, 145.4201660156 ]]
+      - actor.placement.end: [1.0, niellan, [ -27.5176124573, -29.7647151947, 0.2392082214 ], [ 0.0, 13.0900030136, 51.6723251343 ]]
+      - actor.placement.end: [1.0, agneta, [ -27.4854679108, -30.3896007538, 0.6172513962 ], [ 0.0, 0.0, 138.8200378418 ]]
+      - actor.placement.end: [1.0, horse_baron, [ -28.4486961365, -33.5417938232, -1.5952148438 ], [ 0.0, 0.0, 140.7999267578 ]]
+      - actor.placement.end: [1.0, horse_kids, [ -27.4201068878, -30.3247604370, -1.0264282227 ], [ 0.0, 0.0, 137.7200317383 ]]
+
+      - fade.out: [0.9, 1.6, [0, 0, 0, 255]]
+
+dialogscript:
+  player: "Baron_Edward"
+  actors: [ "Baron_Edward", "niellan", "agneta", "horse_baron", "horse_kids" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot Shot1
+    - CUE: shot_1
+    # (longest) anim: horse_walk
+    - PAUSE: 16.0
+    - PAUSE: 1.0
+    - NEXT: section_exit
+
+  section_exit:
+    - BLACKSCREEN: true
+    - EXIT
+

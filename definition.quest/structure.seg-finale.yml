@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 883, saved: 2020-10-12 20:59:57)
+# (version: 906, saved: 2020-10-18 14:56:29)
 #
 ---
 structure:
@@ -41,6 +41,7 @@ structure:
           _fadein: false
           next.Output:
             - scene.24_baron_river_friendly: Input
+            - script.Heal_Player
         
         scene.24_baron_river_friendly:
           ".editor":
@@ -57,7 +58,7 @@ structure:
             - waituntil.Wait_baron_dead
           next.peaceful:
             - script.Kill_orianna
-            - script.TODOOO
+            - settime.02_30_t
         
         scene.25_baron_dies_long:
           ".editor":
@@ -69,7 +70,9 @@ structure:
           interruptable: true
           _fadein: false
           next.Output:
-            - despawn.despawn_bandits_river
+            - script.Gameplay_music
+            - settime.02_30
+            - scene.scene_30_children_corvo_byanko: Input
         
         scene.26_baron_river_aggressive:
           ".editor":
@@ -88,7 +91,7 @@ structure:
         
         scene.28_orianna_farewell:
           ".editor":
-            pos: [ 6024.7827148438, -538.8959960938 ]
+            pos: [ 5998.0, -531.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 28.orianna_farewell.yml
@@ -96,7 +99,8 @@ structure:
           interruptable: true
           _fadein: true
           next.Output:
-            - out
+            - scene.scene_31_ntr_completed: Input
+            - settime.02_30
         
         scene.KILL_SCENE:
           ".editor":
@@ -124,7 +128,7 @@ structure:
             - waituntil.room_are
             - objective.Check_house: Activate
         
-        scene.main_orianna_scene:
+        scene.main_20_orianna_scene:
           ".editor":
             pos: [ 3052.14453125, -66.2440948486 ]
             in: [ Input ]
@@ -132,7 +136,7 @@ structure:
           scene: 20.orianna_main.yml
           placement: bob/orianna
           interruptable: true
-          _fadein: false
+          _fadein: true
           next.fight:
             - objective.wait_outside: Success
             - script.NTR_SaveGame2
@@ -178,20 +182,7 @@ structure:
           next.Output:
             - waituntil.Notes_were_read
         
-        scene.scene_27_baron_dies_short:
-          ".editor":
-            pos: [ 5726.0, -516.0 ]
-            in: [ Input ]
-            out: [ Output ]
-          scene: 27.baron_dies_short.yml
-          placement: bob/orianna
-          interruptable: true
-          _fadein: false
-          next.Output:
-            - despawn.despawn_bandits_river
-            - scene.28_orianna_farewell: Input
-        
-        scene.scene_orianna_appear:
+        scene.scene_19_orianna_appear:
           ".editor":
             pos: [ 2570.0, 32.0 ]
             in: [ Input ]
@@ -203,6 +194,56 @@ structure:
           next.Output:
             - settime.set_0am
             - waituntil.2_s
+        
+        scene.scene_27_baron_dies_short:
+          ".editor":
+            pos: [ 5699.0, -510.0 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 27.baron_dies_short.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - script.Gameplay_music
+            - scene.28_orianna_farewell: Input
+        
+        scene.scene_29_baron_leaving:
+          ".editor":
+            pos: [ 5491.0, 424.0 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 29.baron_leaving.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: true
+          next.Output:
+            - despawn.despawn_bandits_river
+            - scene.scene_31_ntr_completed: Input
+        
+        scene.scene_30_children_corvo_byanko:
+          ".editor":
+            pos: [ 5954.0, 157.0 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 30.children_corvo_byanko.yml
+          placement: bob/homescenes
+          interruptable: true
+          _fadein: true
+          next.Output:
+            - scene.scene_31_ntr_completed: Input
+        
+        scene.scene_31_ntr_completed:
+          ".editor":
+            pos: [ 6635.0, -58.0 ]
+            in: [ Input ]
+            out: [ Output ]
+          scene: 31.ntr_completed.yml
+          placement: bob/homescenes
+          interruptable: true
+          _fadein: true
+          next.Output:
+            - addfact.ntr_quest_completed
         
         waituntil.1s_repeat:
           elapsed: "00:00:01"
@@ -311,11 +352,11 @@ structure:
         waituntil.Wait_baron_dead:
           factdb: [ ntr_baron_edward_dead, ">=", 1 ]
           ".editor":
-            pos: [ 5168.0, 177.0 ]
+            pos: [ 5163.0, 163.0 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - scene.25_baron_dies_long: Input
+            - settime.01_30_tt
             - objective.Kill_baron_edward: Success
         
         waituntil.Wait_bruxa_dead:
@@ -361,11 +402,11 @@ structure:
         waituntil.new_wait_until_realtime_elapsed:
           elapsed: "00:00:01"
           ".editor":
-            pos: [ 1337.1665039062, 610.9909667969 ]
+            pos: [ 4630.0, 800.0 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - waituntil.Player_outside
+            - scene.24_baron_river_friendly: Input
         
         waituntil.outside_fight_area:
           outside: [ bob/fight_area, PLAYER ]
@@ -414,14 +455,14 @@ structure:
             in: [ In ]
             out: [ Out ]
           next:
-            - settime.00_30
+            - settime.00_45
             - despawn.despawn_vampire
             - script.Hide_fight_indicator
         
         waituntil.wait_baron_death:
           factdb: [ ntr_baron_edward_dead, ">=", 1 ]
           ".editor":
-            pos: [ 5198.0, -510.0 ]
+            pos: [ 5222.0, -501.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -483,7 +524,7 @@ structure:
         
         script.Gameplay_music:
           ".editor":
-            pos: [ 6278.0, -254.0 ]
+            pos: [ 5888.0, -279.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
@@ -491,6 +532,24 @@ structure:
             - areaName: toussaint
             - eventName: mus_loc_toussaint_general_cs_to_gmpl
             - saveType: SESB_ClearSaved
+          next:
+            - changelayers.show_baron_sword_loot
+            - script.NTR_SaveLock_unlock
+            - script.hide_baron_indicator
+            - despawn.despawn_bandits_river
+            - script.Kill_Baron
+        
+        script.Heal_Player:
+          ".editor":
+            pos: [ 4883.0, -75.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: SetHealthQuest
+          parameter:
+            - targetTag: cname_PLAYER
+            - healthPerc: 0
+            - relative: false
+            - shouldPlayHitParticle: false
           next: ".done"
         
         script.Hide_bruxa_indicator:
@@ -528,7 +587,7 @@ structure:
         
         script.Kill_Baron:
           ".editor":
-            pos: [ 5878.0, 106.0 ]
+            pos: [ 6197.0, -419.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_ForceKillNPC
@@ -549,7 +608,7 @@ structure:
         
         script.Kill_orianna:
           ".editor":
-            pos: [ 5145.0, 312.0 ]
+            pos: [ 5091.0, 56.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_ForceKillNPC
@@ -606,14 +665,13 @@ structure:
         
         script.NTR_SaveLock_unlock:
           ".editor":
-            pos: [ 6120.0, -154.0 ]
+            pos: [ 6227.0, -229.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_SaveLock
           parameter:
             - lock: false
-          next:
-            - script.Gameplay_music
+          next: ".done"
         
         script.Orianna_fight_indicator:
           ".editor":
@@ -683,18 +741,7 @@ structure:
             - npcsTag: cname_ntr_orianna_bruxa
             - appearanceName: cname_orianna_bruxa_morph
           next:
-            - settime.01_00
-        
-        script.TODOOO:
-          ".editor":
-            pos: [ 5165.0, 57.0 ]
-            in: [ In ]
-            out: [ Out ]
-          function: radLog
-          parameter:
-            - logChannel: cname_NTR
-            - msg: PECAEFUL
-          next: ".done"
+            - settime.01_30
         
         script.Try_to_reset_music:
           ".editor":
@@ -819,7 +866,7 @@ structure:
         
         script.force_kill_alive_bandits:
           ".editor":
-            pos: [ 5524.0, -638.0 ]
+            pos: [ 5400.0, -575.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_ForceKillNPC
@@ -827,11 +874,11 @@ structure:
             - tag: cname_ntr_baron_bandit
             - playDeath: true
           next:
-            - scene.scene_27_baron_dies_short: Input
+            - settime.01_30_t
         
         script.hide_baron_indicator:
           ".editor":
-            pos: [ 6134.0, -17.0 ]
+            pos: [ 6244.0, -106.0 ]
             in: [ In ]
             out: [ Out ]
           function: ShowBossFightIndicator
@@ -865,7 +912,7 @@ structure:
         
         changelayers.show_baron_sword_loot:
           ".editor":
-            pos: [ 6108.0, -379.0 ]
+            pos: [ 6223.0, -333.0 ]
             hint: show-only
             in: []
             out: []
@@ -1013,16 +1060,13 @@ structure:
         
         despawn.despawn_bandits_river:
           ".editor":
-            pos: [ 5955.0, -260.0 ]
+            pos: [ 6241.0, -7.0 ]
             hint: despawn-only
             in: []
             out: []
           spawnsets:
             - comm_bandits_river
-          next:
-            - script.NTR_SaveLock_unlock
-            - changelayers.show_baron_sword_loot
-            - script.hide_baron_indicator
+          next: ".done"
         
         despawn.despawn_orihum:
           ".editor":
@@ -1104,32 +1148,62 @@ structure:
           track: false
           next: ".done"
         
-        settime.00_30:
+        questoutcome.NTR_outcome:
+          ".editor": [ 7030.0, -60.0 ]
+          quest: nighttoremember
+          notify: true
+          next:
+            - out
+        
+        settime.00_45:
           ".editor": [ 3399.0, 5.0 ]
-          time: "00:30"
+          time: "00:45"
           next:
             - scene.21_to_bruxa_scene: Input
         
-        settime.01_00:
+        settime.01_30:
           ".editor": [ 4577.0, 96.0 ]
-          time: "01:00"
+          time: "01:30"
           next:
             - scene.23_orianna_bruxa_dies: Input
             - script.Hide_bruxa_indicator
+        
+        settime.01_30_t:
+          ".editor": [ 5544.0, -447.0 ]
+          time: "01:30"
+          next:
+            - scene.scene_27_baron_dies_short: Input
+        
+        settime.01_30_tt:
+          ".editor": [ 5350.0, 237.0 ]
+          time: "01:30"
+          next:
+            - scene.25_baron_dies_long: Input
+        
+        settime.02_30:
+          ".editor": [ 6009.0, -43.0 ]
+          time: "02:30"
+          next: ".done"
+        
+        settime.02_30_t:
+          ".editor": [ 5217.0, 391.0 ]
+          time: "02:30"
+          next:
+            - scene.scene_29_baron_leaving: Input
         
         settime.Set_11pm:
           ".editor": [ 2413.0, -41.0 ]
           time: "22:30"
           next:
             - spawn.Spawn_orianna_vampire
-            - scene.scene_orianna_appear: Input
+            - scene.scene_19_orianna_appear: Input
             - spawn.spawn_human
         
         settime.set_0am:
           ".editor": [ 2868.0, -71.0 ]
           time: "00:00"
           next:
-            - scene.main_orianna_scene: Input
+            - scene.main_20_orianna_scene: Input
             - despawn.Despawn_all_bandits
         
         addfact.fact_fight_orianna:
@@ -1149,7 +1223,13 @@ structure:
           value: [ ntr_finale_started, 1 ]
           next: ".done"
         
+        addfact.ntr_quest_completed:
+          ".editor": [ 6845.0, 27.0 ]
+          value: [ ntr_quest_completed, 1 ]
+          next:
+            - questoutcome.NTR_outcome: Success
+        
         out:
-          ".editor": [ 6564.0, -199.0 ]
+          ".editor": [ 7190.0, 30.0 ]
           next: ".done"
         

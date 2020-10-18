@@ -1509,7 +1509,7 @@ dialogscript:
 
   section_exit_peaceful:
     - OUTPUT: peaceful
-    #- BLACKSCREEN: true
+    - BLACKSCREEN: true
     - EXIT
 
   section_exit_fight:

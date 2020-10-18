@@ -700,6 +700,7 @@ storyboard:
           blendin: 0.5
           blendout: 0.5
           clipend: 2.5
+          weight: 0.75
 
     # shot cam baron high stand point you
     shot_togame:

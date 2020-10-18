@@ -1204,13 +1204,14 @@ storyboard:
           stretch: 1.25    
 
     shot_try_peacefully_ger8:
-      ### gesture point
       - cam: [0.0, cam_30_Shot_p3_ger]
       - actor.anim.additive:
           actor: geralt # 5.0
           .@pos: [0.0, anim_6703_add_gesture_point_forward]
           blendin: 0.5
           blendout: 0.5
+          weight: 0.75
+          stretch: 1.25
 
     shot_try_peacefully_ori8:
       ### gesture explain

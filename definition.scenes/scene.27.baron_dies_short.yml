@@ -728,5 +728,5 @@ dialogscript:
     - NEXT: section_exit
 
   section_exit:
-    #- BLACKSCREEN: true
+    - BLACKSCREEN: true
     - EXIT

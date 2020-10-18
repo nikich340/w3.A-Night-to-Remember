@@ -1,0 +1,473 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    butler:
+      template: "dlc\\bob\\data\\quests\\secondary_npcs\\butler.w2ent"
+      appearance: [ "__mq7024_majordomus" ]
+
+    niellan:
+      template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\characters\\q704_bloodbag_boy.w2ent"
+      appearance: [ "__q704_wounded_boy" ]
+
+    agneta:
+      template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\citizens\\girl_noble.w2ent"
+      appearance: [ "bob_child_noble_female_03" ]
+
+  animations:
+    anim_6715_add_gesture_slight_explain_05:
+      animation: "add_gesture_slight_explain_05"
+      frames: 147
+
+    anim_7175_high_standing_happy_gesture_bow:
+      animation: "high_standing_happy_gesture_bow"
+      frames: 135
+
+    anim_7171_high_standing_happy_exit_leftside:
+      animation: "high_standing_happy_exit_leftside"
+      frames: 119
+
+    anim_3693_add_walk_two_steps_forward_casual:
+      animation: "add_walk_two_steps_forward_casual"
+      frames: 120
+
+    anim_7163_high_standing_happy_enter_frontal:
+      animation: "high_standing_happy_enter_frontal"
+      frames: 129
+
+    anim_3691_add_walk_three_steps_forward_casual:
+      animation: "add_walk_three_steps_forward_casual"
+      frames: 149
+
+  animations.mimic:
+    mimicsanim_518_geralt_neutral_yes_ok_face:
+      animation: "geralt_neutral_yes_ok_face"
+      frames: 35
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_2137_High_Standing_Happy:
+      name: "Standing"
+      emotional_state: "Happy"
+      status: "High"
+      idle_anim: "high_standing_happy_idle"
+
+    pose_0_low_standing_determined_idle:
+      idle_anim: "low_standing_determined_idle"
+
+  cameras:
+    cam_1_Shot1_ger:
+      fov: 25.0
+      transform:
+        pos: [ -4.8881835938, 0.8074340820, 1.8798751831 ]
+        rot: [ 0.0, 349.2300109863, 344.0596923828 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.6512069702, 6.6512069702 ]
+        focus: [ 4.1512069702, 5.1512069702 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_2_Shot2_butler_gest:
+      fov: 20.0
+      transform:
+        pos: [ -1.5492858887, 4.4915161133, 1.3298873901 ]
+        rot: [ 0.0, 359.8175048828, 114.0522918701 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.1448636055, 6.1448636055 ]
+        focus: [ 3.6448636055, 4.6448636055 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_3_Shot3_go_home1:
+      fov: 20.0
+      transform:
+        pos: [ -1.7109680176, 4.4018554688, 1.3298873901 ]
+        rot: [ 0.0, 1.7975109816, 108.8822937012 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.1961917877, 6.1961917877 ]
+        focus: [ 3.6961917877, 4.6961917877 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+    cam_4_Shot3_go_home2_pos2:
+      fov: 25.0
+      transform:
+        pos: [ 0.2704162598, 0.4464111328, 2.5298690796 ]
+        rot: [ 0.0, 348.9275207520, 53.3322868347 ]
+      #zoom: 1.0
+      dof:
+        #aperture: [ 28.2500000000, 1.2699999809 ]
+        blur: [ 3.1961917877, 6.1961917877 ]
+        focus: [ 3.6961917877, 4.6961917877 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 390
+
+  placement: "ntr_bob_homescenes_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -384.8305358887, -804.3603515625, 35.0772705078 ]
+      #rot: [ 0.0, 0.0, 0.0 ]
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      butler:
+        repo: "butler"
+        by_voicetag: true
+        appearance: "__mq7024_majordomus"
+        tags: [ "BUTLER" ]
+
+      niellan:
+        repo: "niellan"
+        #by_voicetag: true
+        appearance: "__q704_wounded_boy"
+        tags: [ "niellan" ]
+
+      agneta:
+        repo: "agneta"
+        #by_voicetag: true
+        appearance: "bob_child_noble_female_03"
+        tags: [ "agneta" ]
+
+    cameras:
+      cam_1_Shot1_ger:
+        repo: "cam_1_Shot1_ger"
+
+      cam_2_Shot2_butler_gest:
+        repo: "cam_2_Shot2_butler_gest"
+
+      cam_3_Shot3_go_home1:
+        repo: "cam_3_Shot3_go_home1"
+
+      cam_4_Shot3_go_home2_pos2:
+        repo: "cam_4_Shot3_go_home2_pos2"
+
+    animations:
+      geralt_add_gesture_slight_explain_05:
+        actor: "geralt"
+        repo: "anim_6715_add_gesture_slight_explain_05"
+        #duration: 4.9000000954
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      butler_high_standing_happy_gesture_bow:
+        actor: "butler"
+        repo: "anim_7175_high_standing_happy_gesture_bow"
+        #duration: 4.5000000000
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      butler_high_standing_happy_exit_leftside:
+        actor: "butler"
+        repo: "anim_7171_high_standing_happy_exit_leftside"
+        #duration: 3.9666666985
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      niellan_add_walk_two_steps_forward_casual:
+        actor: "niellan"
+        repo: "anim_3693_add_walk_two_steps_forward_casual"
+        #duration: 4.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      agneta_add_walk_two_steps_forward_casual:
+        actor: "agneta"
+        repo: "anim_3693_add_walk_two_steps_forward_casual"
+        #duration: 4.3000001907
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      butler_high_standing_happy_enter_frontal:
+        actor: "butler"
+        repo: "anim_7163_high_standing_happy_enter_frontal"
+        #duration: 4.9666666985
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      niellan_add_walk_three_steps_forward_casual:
+        actor: "niellan"
+        repo: "anim_3691_add_walk_three_steps_forward_casual"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      agneta_add_walk_three_steps_forward_casual:
+        actor: "agneta"
+        repo: "anim_3691_add_walk_three_steps_forward_casual"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    animations.mimic:
+      butler_geralt_neutral_yes_ok_face:
+        actor: "butler"
+        repo: "mimicsanim_518_geralt_neutral_yes_ok_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+    actor.poses:
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+      butler_High_Standing_Happy:
+        actor: "butler"
+        repo: "pose_2137_High_Standing_Happy"
+
+      niellan_low_standing_determined_idle:
+        actor: "niellan"
+        repo: "pose_0_low_standing_determined_idle"
+
+      agneta_low_standing_determined_idle:
+        actor: "agneta"
+        repo: "pose_0_low_standing_determined_idle"
+
+      butler_high_standing_determined_idle:
+        actor: "butler"
+        repo: "pose_0_high_standing_determined_idle"
+
+storyboard:
+  #defaults:
+    #placement:
+      #geralt: [[ -3.2473449707, 4.7326660156, 0.0 ], [ 0.0, 0.0, 147.6198730469 ]]
+      #butler: [[ -4.9733886719, 2.5526733398, 0.0274658203 ], [ 0.0, 0.0, 311.5999755859 ]]
+      #niellan: [[ -3.6875610352, 4.2301635742, 0.0274658203 ], [ 0.0, 0.0, 149.7099914551 ]]
+      #agneta: [[ -3.1672363281, 3.9115600586, 0.0170288086 ], [ 0.0, 0.0, 144.7599945068 ]]
+
+    #actor.pose:
+      #geralt: geralt_high_standing_determined_idle
+      #butler: butler_High_Standing_Happy
+      #niellan: niellan_low_standing_determined_idle
+      #agneta: agneta_low_standing_determined_idle
+
+  section_storyboard_ui:
+    # shot Shot1 ger
+    shot_1:
+      - actor.placement: [0.0, geralt, [ -3.2473449707, 4.7326660156, 0.0 ], [ 0.0, 0.0, 147.6198730469 ]]
+      - actor.placement: [0.0, butler, [ -4.9733886719, 2.5526733398, 0.0274658203 ], [ 0.0, 0.0, 311.5999755859 ]]
+      - actor.placement: [0.0, niellan, [ -3.6875610352, 4.2301635742, 0.0274658203 ], [ 0.0, 0.0, 149.7099914551 ]]
+      - actor.placement: [0.0, agneta, [ -3.1672363281, 3.9115600586, 0.0261192322 ], [ 0.0, 0.0, 144.7599945068 ]]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.pose: [0.0, butler_High_Standing_Happy]
+      - actor.pose: [0.0, niellan_low_standing_determined_idle]
+      - actor.pose: [0.0, agneta_low_standing_determined_idle]
+      - cam: [0.0, cam_1_Shot1_ger]
+      - actor.lookat: [0.0, geralt, butler]
+      - actor.lookat: [0.0, butler, geralt]
+      - actor.lookat: [0.0, niellan, butler]
+      - actor.lookat: [0.0, agneta, butler]
+
+      - actor.anim.additive: 
+          .@pos: [0.0, geralt_add_gesture_slight_explain_05]
+          blendin: 0.5
+          blendout: 0.5
+
+    # shot Shot2 butler gest
+    shot_2a:
+      - cam: [0.0, cam_2_Shot2_butler_gest]
+      - actor.anim.additive: 
+          .@pos: [0.0, butler_high_standing_happy_gesture_bow]
+          blendin: 0.5
+          blendout: 0.5
+
+    shot_2b:
+      ## hand gest
+      - actor.anim.additive: 
+          blendin: 0.5
+          blendout: 0.5
+          actor: butler
+          .@pos: [0.0, anim_7185_high_standing_happy_gesture_point_left]
+
+    # shot Shot3 go home1
+    shot_3a:
+      #- cam: [0.0, cam_3_Shot3_go_home1]
+      - actor.lookat: [0.1, butler, NONE]
+      - actor.anim: # 3.9666666985
+          blendin: 0.5
+          blendout: 0.0
+          clipend: 3.95
+          .@pos: [0.0, butler_high_standing_happy_exit_leftside]
+
+      - actor.anim: # 3.0
+          blendin: 0.5
+          blendout: 0.5
+          clipend: 2.5
+          actor: niellan
+          .@pos: [0.0, anim_3686_add_walk_one_step_forward_casual]
+      - actor.anim: # 3.0
+          blendin: 0.5
+          blendout: 0.5
+          clipend: 2.5
+          actor: agneta
+          .@pos: [0.1, anim_3686_add_walk_one_step_forward_casual]
+
+      - actor.placement.start: [0.506, niellan, [ -3.6875610352, 4.2301635742, 0.0274658203 ], [ 0.0, 0.0, 149.7099914551 ], smooth]
+      - actor.placement.start: [0.606, agneta, [ -3.1672363281, 3.9115600586, 0.0261192322 ], [ 0.0, 0.0, 144.7599945068 ], smooth]
+      - actor.placement.end: [0.633, niellan, [ -3.9511413574, 3.7790527344, 0.0274658203 ], [ 0.0, 0.0, 149.7099914551 ], smooth]
+      - actor.placement.end: [0.733, agneta, [ -3.4687194824, 3.4846801758, 0.0261192322 ], [ 0.0, 0.0, 144.7599945068 ], smooth]
+      - actor.placement: [1.0, butler, [ -10.3027954102, 6.1049804688, 0.2581977844 ], [ 0.0, 0.0, 58.4099693298 ]]
+      
+      - actor.anim: # 5.5666
+          blendin: 0.45
+          blendout: 0.0
+          clipfront: 0.7
+          stretch: 1.1
+          actor: niellan
+          .@pos: [0.506, anim_3688_add_walk_right_three_steps_turn_90]
+      - actor.anim: # 5.5666
+          blendin: 0.45
+          blendout: 0.0
+          clipfront: 0.7
+          stretch: 1.1
+          actor: agneta
+          .@pos: [0.606, anim_3688_add_walk_right_three_steps_turn_90]
+
+    shot_3b:
+      - fade.out: [0.4444, 1.0, [0, 0, 0, 255]]
+
+  #section_storyboard_ui2:
+    # shot Shot3 go home2 pos2
+  #  shot_4:
+  #    - actor.placement: [0.0, geralt, [ -3.2473449707, 4.7326660156, 0.0 ], [ 0.0, 0.0, 147.6198730469 ]]
+  #    - actor.placement: [0.0, butler, [ -8.2342224121, 5.9375610352, 0.2582283020 ], [ 0.0, 0.0, 52.0300025940 ]]
+  #    - actor.placement: [0.0, niellan, [ -5.5081787109, 3.7087402344, 0.3131332397 ], [ 0.0, 0.0, 47.4100227356 ]]
+  #    - actor.placement: [0.0, agneta, [ -4.3142089844, 3.0893554688, 0.0274658203 ], [ 0.0, 0.0, 67.9799346924 ]]
+      
+  #    #?- actor.placement: [0.0, niellan, [ -6.1152954102, 4.1736450195, 0.3131332397 ], [ 0.0, 0.0, 47.4100227356 ]]
+  #    - actor.placement: [0.0, agneta, [ -4.3142089844, 3.0893554688, 0.2645950317 ], [ 0.0, 0.0, 67.9799346924 ]]
+  #    - cam: [0.0, cam_4_Shot3_go_home2_pos2]
+  #    - actor.anim: # 4.3
+  #        blendin: 0.0
+  #        clipfront: 0.8
+  #        #clipend: 4.3
+  #        blendout: 0.0
+  #        .@pos: [0.0, butler_high_standing_happy_enter_frontal]
+
+  #    - actor.anim: # 4.0
+  #        blendin: 0.0
+  #        blendout: 0.0
+  #        clipfront: 0.5
+  #        .@pos: [0.0, niellan_add_walk_three_steps_forward_casual]
+
+  #    - actor.placement.start: [0.4, agneta, [ -4.3142089844, 3.0893554688, 0.0274658203 ], [ 0.0, 0.0, 67.9799346924 ]]
+  #    - actor.placement.end: [0.5, agneta, [ -4.3142089844, 3.0893554688, 0.2645950317 ], [ 0.0, 0.0, 67.9799346924 ], smooth]
+      
+  #    - actor.anim: # 4.0
+  #        blendin: 0.0
+  #        blendout: 0.0
+  #        clipfront: 0.5
+  #        .@pos: [0.0, agneta_add_walk_three_steps_forward_casual]
+
+  #    - fade.out: [0.714, 1.0, [0, 0, 0, 255]]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "butler", "niellan", "agneta" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: script_open_door
+
+  script_open_door:
+    - SCRIPT:
+        function: NTR_SceneDoorChangeState
+        parameter: 
+          - tag: "CNAME_mq7024_corvo_bianco_main_door"
+          - newState: "EDQS_Open"
+          - smoooth: false
+          - dontBlockInCombat: false
+    - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot Shot1 ger
+    - CUE: shot_1
+    # (longest) anim: add_gesture_slight_explain_05
+    - geralt: "Take care of them, Barnabas-Basil."
+    # shot Shot2 butler gest
+    - CUE: shot_2a
+    # (longest) anim: high_standing_happy_gesture_bow
+    - butler: "Oh, with great pleasure, sir."
+    # shot Shot3 go home1
+    - CUE: shot_2b
+    # (longest) anim: add_walk_two_steps_forward_casual
+    - butler: "Follow me, please."
+    - PAUSE: 1.0
+    # shot Shot3 go home2 pos2
+    - CUE: shot_3a
+    # (longest) anim: add_walk_three_steps_forward_casual
+    - PAUSE: 3.95
+
+    - CUE: shot_3b
+    # (longest) anim: add_walk_three_steps_forward_casual
+    - PAUSE: 1.8
+    - PAUSE: 1.0
+    - NEXT: section_exit
+
+  section_exit:
+    - BLACKSCREEN: true
+    - EXIT

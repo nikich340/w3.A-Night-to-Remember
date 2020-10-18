@@ -66,8 +66,6 @@ layers:
   orianna_house: 
     world: "bob"
     #context: ""
-    scenepoints: 
-      orianna: [ -180.0365447998, -443.1201477051, 11.4495849609, 94.1600112915 ]
       
     waypoints: 
       orianna_vampire_spawn: [ -202.5288391113, -584.5111083984, 0.1697998047, 162.5800018311 ]

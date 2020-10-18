@@ -42,10 +42,9 @@ exec function NTR_MoveNPCsTo(tag : name, targetTag : name, optional speed : floa
         */
 	}
 }
-exec function colorEnt(compN : int, h1 : Uint16, l1 : Int8, s1 : Int8, h2 : Uint16, l2 : Int8, s2 : Int8)
-{
-    var template, temp : CEntityTemplate;
-    var colEntry : SEntityTemplateColoringEntry;
+function colorEntCommon(compN : int, h1 : Uint16, s1 : Int8, l1 : Int8, h2 : Uint16, s2 : Int8, l2 : Int8) {
+	var template, temp : CEntityTemplate;
+    //var colEntry : SEntityTemplateColoringEntry;
     var col1 : CColorShift;
     var col2 : CColorShift;
     var ent, npcEntity : CEntity;
@@ -64,8 +63,8 @@ exec function colorEnt(compN : int, h1 : Uint16, l1 : Int8, s1 : Int8, h2 : Uint
     //template = (CEntityTemplate)LoadResource( "characters\models\crowd_npc\nml_villager\torso\t1a_04_ma__nml_villager.w2ent", true);
     temp = (CEntityTemplate)LoadResource( "dlc/dlcntr/data/entities/baron_edward.w2ent", true);
        
-    colEntry.appearance = 'bob_knight_15';
-    colEntry.componentName = 'a_01_mb__bob_knights';
+    //colEntry.appearance = 'bob_knight_15';
+    //colEntry.componentName = 'a_01_mb__bob_knights';
 
     col1.hue = h1;
     col1.saturation = s1;
@@ -88,7 +87,23 @@ exec function colorEnt(compN : int, h1 : Uint16, l1 : Int8, s1 : Int8, h2 : Uint
 
     npcEntity = theGame.CreateEntity( temp, pos, rot);
     npcEntity.ApplyAppearance('bob_knight_15');
-    npcEntity.AddTag('colshifttestnpc');    
+    npcEntity.AddTag('colshifttestnpc');   
+}
+
+exec function colorEnt(compN : int, h1 : Uint16, s1 : Int8, l1 : Int8, h2 : Uint16, s2 : Int8, l2 : Int8)
+{
+    colorEntCommon(compN, h1, s1, l1, h2, s2, l2);
+}
+
+exec function clearColorEnt() {
+	// for Baron
+	/*
+	colorEnt(0, -46, 36, -72, 50, -56, -23)
+	colorEnt(1, 333, -100, 7, 315, -23, -56)
+	colorEnt(2, 65, -41, -44, 333, -23, -56)
+	colorEnt(3, 65, -41, -44, 333, -23, -56)
+
+	*/
 }
 
 exec function getPosRot(tag : name) {
@@ -320,10 +335,15 @@ exec function getInRange(range : float) {
     LogChannel('getInRange', "player pos: [" + pos.X + ", " + pos.Y + ", " + pos.Z + "]");
         
     for (i = 0; i < entities.Size(); i += 1) {
+    	LogChannel('getInRange', "entity: " + entities[i]);
+    	tags = entities[i].GetTags();
 
+        for (t = 0; t < tags.Size(); t += 1) {
+           LogChannel('getInRange', "   > tag " + tags[t]);
+        }
         actor = (CActor)entities[i];
         if (actor) {
-            LogChannel('getInRange', "actor " + actor);
+            //LogChannel('getInRange', "actor " + actor);
             if (!actor.IsAlive()) {
             	LogChannel('getInRange', "* actor dead");
             	continue;
@@ -336,12 +356,6 @@ exec function getInRange(range : float) {
 
             LogChannel('getInRange', "* GetVoicetag: " + actor.GetVoicetag());
             LogChannel('getInRange', "* GetDisplayName: " + actor.GetDisplayName());
-
-            tags = actor.GetTags();
-
-            for (t = 0; t < tags.Size(); t += 1) {
-                LogChannel('getInRange', "   > tag " + tags[t]);
-            }
         }
     }
 }
@@ -498,6 +512,9 @@ exec function animScale(entityTag : name, timeScale : float) {
 
 exec function orianaDoor(newState : string, optional smoooth : bool, optional dontBlockInCombat : bool ) {
 	NTR_DoorChangeState('q704_oriana_feeding_room', newState, , , smoooth, dontBlockInCombat);
+}
+exec function corvoDoor(newState : string, optional smoooth : bool, optional dontBlockInCombat : bool ) {
+	NTR_DoorChangeState('mq7024_corvo_bianco_main_door', newState, , , smoooth, dontBlockInCombat);
 }
 
 exec function myspawn(path : string) {
