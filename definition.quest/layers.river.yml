@@ -1,4 +1,47 @@
 layers: 
+  corvo_byanko_children: 
+    world: "bob"
+    #context: ""
+
+    waypoints: 
+      spawn_children1: [ -393.0443115234, -793.7760009766, 35.3556861877, -125.6200027466 ]
+      spawn_children2: [ -395.0089721680, -791.8014526367, 35.3358039856, -218.0199890137 ]
+
+    actionpoints: 
+      balancing: [ -372.1004333496, -793.3339843750, 31.3193225861, -72.7100219727, "play_child/stand_c_balancing_dynamic_jt" ]
+      balancing_cheer: [ -368.3623046875, -793.5469970703, 31.0070800781, 66.9900131226, "play_child/stand_c_cheering_sequence_jt" ]
+      
+      hide1: [ -393.0443115234, -793.7760009766, 35.3556861877, -125.6200027466, "play_child/kneel_c_hide_and_seek_jt" ]
+      hide2: [ -395.0089721680, -791.8014526367, 35.3358039856, -218.0199890137, "play_child/kneel_c_hide_and_seek_jt" ]
+      hide3: [ -388.5672912598, -802.8623046875, 26.4866390228, -1.5400000811, "play_child/kneel_c_hide_and_seek_jt" ]
+      
+      play_bow: [ -320.6773071289, -807.5180053711, 26.6791992188, -108.6799926758, "play_child/stand_c_play_bow_dynamic_jt" ]
+      play_doll: [ -322.5597534180, -805.3523559570, 27.0144042969, -99.6599807739, "play_child/stand_c_playing_doll_jt" ]
+      play_flute: [ -359.6085205078, -801.2540893555, 30.2825927734, -87.5600051880, "ep2_child/stand_c_playing_flute_dynamic_jt" ]
+      play_point: [ -318.8273620605, -805.2717895508, 26.3174438477, -100.7598800659, "play_child/stand_c_pointing_loop_jt" ]
+      play_puddle1: [ -393.0926513672, -776.7515869141, 34.4469871521, -59.6199913025, "play_child/kneel_c_playing_puddle_jt" ]
+      play_puddle2: [ -391.8315734863, -775.7490844727, 34.5092163086, 103.8400115967, "play_child/kneel_c_playing_puddle_jt" ]
+      play_search_ground: [ -325.9577941895, -805.5960693359, 27.5428466797, -125.6199035645, "play_child/kneel_c_searching_ground_jt" ]
+      play_sit_ground: [ -323.7976074219, -804.5144042969, 27.2020263672, -108.6199035645, "resting_child/sit_c_ground_jt" ]
+      
+      play_stick1: [ -394.0017089844, -807.9422607422, 35.1688232422, -52.5800094604, "play_child/kneel_c_playing_stick_01_jt" ]
+      play_stick2: [ -393.6501159668, -806.4360351563, 35.1925048828, -155.1000061035, "play_child/q301_sara_play_stick" ]
+      
+      play_stones: [ -321.7785644531, -803.4270019531, 26.8606567383, -84.4799728394, "play_child/stand_c_throw_rocks_jt" ]
+      play_sword: [ -358.7968139648, -803.6117553711, 30.4079589844, -59.8400115967, "play_child/stand_c_play_sword_01_dynamic_jt" ]
+
+      sleep_boy: 
+        pos: [ -398.5410156250, -803.7573242188, 39.2146263123 ]
+        rot: [ 0.0, 0.0, 79.8599319458 ]
+        action: "resting_child/lie_mwdc_sleep_bed_l_new_jt"
+        ignoreCollisions: false
+
+      sleep_girl: 
+        pos: [ -397.5088500977, -804.3970947266, 39.2146263123 ]
+        rot: [ 0.0, 0.0, 96.7999038696 ]
+        action: "resting_child/lie_mwdc_sleep_bed_l_new_dress_jt"
+        ignoreCollisions: false
+
   river_sword_loot:
     world: "bob"
     #context: ""

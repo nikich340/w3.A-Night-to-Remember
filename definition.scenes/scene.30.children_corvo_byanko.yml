@@ -9,8 +9,8 @@ repository:
       appearance: [ "__mq7024_majordomus" ]
 
     niellan:
-      template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\characters\\q704_bloodbag_boy.w2ent"
-      appearance: [ "__q704_wounded_boy" ]
+      template: "dlc\\dlcntr\\data\\entities\\niellan_boy.w2ent"
+      appearance: [ "niellan" ]
 
     agneta:
       template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\citizens\\girl_noble.w2ent"
@@ -146,15 +146,15 @@ production:
 
       niellan:
         repo: "niellan"
-        #by_voicetag: true
-        appearance: "__q704_wounded_boy"
-        tags: [ "niellan" ]
+        by_voicetag: false
+        appearance: "niellan"
+        tags: [ "ntr_children_agneta" ]
 
       agneta:
         repo: "agneta"
-        #by_voicetag: true
+        by_voicetag: false
         appearance: "bob_child_noble_female_03"
-        tags: [ "agneta" ]
+        tags: [ "ntr_children_niellan" ]
 
     cameras:
       cam_1_Shot1_ger:

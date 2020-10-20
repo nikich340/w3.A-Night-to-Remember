@@ -1,4 +1,71 @@
 communities:
+  comm_children:
+    actors:
+      niellan:
+        react_to_rain: true
+        #template: "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\characters\\q704_bloodbag_boy.w2ent"
+        template: "dlc\\dlcntr\\data\\entities\\niellan_boy.w2ent"
+        appearances: [ "niellan" ]
+        tags: [ "ntr_children_niellan", "vip" ]
+
+      agneta:
+        react_to_rain: true
+        template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\citizens\\girl_noble.w2ent"
+        appearances: [ "bob_child_noble_female_03" ]
+        tags: [ "ntr_children_agneta", "vip" ]
+
+    phases:
+      before_scene_corvo_byanko:
+        agneta:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: friendly_to_player
+          spawn_at: bob/spawn_children1
+        niellan:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: friendly_to_player
+          spawn_at: bob/spawn_children2
+
+      corvo_byanko:
+        agneta:
+          attitude: friendly_to_player
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "07:00": 
+              - [ bob/play_stick1, 0.5 ]
+              - [ bob/play_puddle1, 0.7 ]
+            "10:00": bob/hide1
+            "12:30": bob/balancing
+            "15:00": 
+              - [ bob/play_doll, 0.7 ]
+              - [ bob/play_sit_ground, 0.7 ]
+              - [ bob/play_search_ground, 0.5 ]
+            "19:00": bob/play_flute
+            "22:00": bob/sleep_girl
+
+        niellan:
+          attitude: friendly_to_player
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "07:30": 
+              - [ bob/play_stick2, 0.5 ]
+              - [ bob/play_puddle2, 0.7 ]
+            "10:00":
+              - [ bob/hide2, 0.5 ]
+              - [ bob/hide3, 0.5 ]
+            "12:30": bob/balancing_cheer
+            "15:00": 
+              - [ bob/play_bow, 0.7 ]
+              - [ bob/play_stones, 0.7 ]
+              - [ bob/play_point, 0.5 ]
+            "19:00": bob/play_sword
+            "22:30": bob/sleep_boy
+
   comm_orianna_bruxa:
     actors:
       orianna_bruxa:
@@ -14,7 +81,7 @@ communities:
           start_in_ap: false
           attitude: AG_VAMPIRE
           spawn_at: bob/beach_bruxa_spawn
-          guard: [ bob/orianna_guard, 0.5 ]
+          guard: [ bob/orianna_guard, 0.0 ]
 
   comm_orianna_vampire:
     actors:
@@ -469,6 +536,7 @@ communities:
   comm_camp_bandit_axe_night:
     actors:
       bandit_axe:
+        react_to_rain: false
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_axe.w2ent"
         appearances: [ "bob_raider_lvl1_03" ]
 
@@ -489,6 +557,7 @@ communities:
   comm_camp_bandit_axe_day:
     actors:
       bandit_axe:
+        react_to_rain: true
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_axe.w2ent"
         appearances: [ "bob_raider_lvl1_03" ]
 
@@ -507,6 +576,7 @@ communities:
   comm_camp_baron:
     actors:
       bandit_baron:
+        react_to_rain: true
         template: "dlc\\dlcntr\\data\\entities\\baron_edward.w2ent"
         appearances: [ "bob_knight_15" ]
         #appearances: [ "bob_raider_lvl2_02" ]
@@ -579,16 +649,19 @@ communities:
   comm_camp_bandits:
     actors:
       bandit_sword_shield:
+        react_to_rain: true
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_sword.w2ent"
         appearances: [ "bob_raider_lvl1_21" ]
         tags: [ "ntr_camp_bandit_sword" ]
 
       bandit_crossbow:
+        react_to_rain: true
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
         appearances: [ "__q703_nazairi_01" ]
         tags: [ "ntr_camp_bandit_crossbow" ]
 
       bandit_spear:
+        react_to_rain: true
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_spear.w2ent"
         appearances: [ "bob_raider_lvl1_07" ]
         tags: [ "ntr_camp_bandit_spear" ]
@@ -692,7 +765,7 @@ communities:
     actors:
       triss_monster:
         template: dlc/dlcntr/data/entities/triss_monster.w2ent
-        tags: [triss_monster]
+        tags: [ triss_monster ]
         
     phases:
       normal:

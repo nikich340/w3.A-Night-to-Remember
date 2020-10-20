@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 926, saved: 2020-10-19 20:12:20)
+# (version: 933, saved: 2020-10-20 19:31:05)
 #
 ---
 structure:
@@ -42,6 +42,7 @@ structure:
           next.Output:
             - scene.24_baron_river_friendly: Input
             - script.Heal_Player
+            - script.Set_bruxa_app
         
         scene.24_baron_river_friendly:
           ".editor":
@@ -53,11 +54,9 @@ structure:
           interruptable: true
           _fadein: true
           next.fight:
-            - script.Set_bruxa_app
             - spawn.spawn_hostile_baron
             - waituntil.Wait_baron_dead
           next.peaceful:
-            - script.Set_bruxa_app
             - settime.02_30_t
         
         scene.25_baron_dies_long:
@@ -232,6 +231,7 @@ structure:
           _fadein: true
           next.Output:
             - scene.scene_31_ntr_completed: Input
+            - spawn.Children_at_corvo_phase
         
         scene.scene_31_ntr_completed:
           ".editor":
@@ -351,7 +351,7 @@ structure:
         waituntil.Player_outside:
           entered: [ bob/outside_orianna_house, PLAYER ]
           ".editor":
-            pos: [ 1948.1547851562, 106.847114563 ]
+            pos: [ 1921.0, 92.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -421,11 +421,11 @@ structure:
         waituntil.new_wait_until_realtime_elapsed:
           elapsed: "00:00:01"
           ".editor":
-            pos: [ 1988.0, 550.0 ]
+            pos: [ 2970.0, 612.0 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - waituntil.Player_outside
+            - scene.21_to_bruxa_scene: Input
         
         waituntil.outside_fight_area:
           outside: [ bob/fight_area, PLAYER ]
@@ -627,7 +627,7 @@ structure:
         
         script.Kill_orianna:
           ".editor":
-            pos: [ 5244.0, 47.0 ]
+            pos: [ 5045.0, 222.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_ForceKillNPC
@@ -789,7 +789,7 @@ structure:
         
         script.Set_bruxa_app:
           ".editor":
-            pos: [ 5068.0, 47.0 ]
+            pos: [ 4880.0, 163.0 ]
             in: [ In ]
             out: [ Out ]
           function: AppearanceChange
@@ -1041,6 +1041,17 @@ structure:
             - beach_orianna_dress
           next: ".done"
         
+        spawn.Children_at_corvo_phase:
+          ".editor":
+            pos: [ 6150.0, 270.0 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: corvo_byanko
+          spawnsets:
+            - comm_children
+          next: ".done"
+        
         spawn.Spawn_orianna_vampire:
           ".editor":
             pos: [ 2652.8291015625, -176.9574737549 ]
@@ -1098,6 +1109,17 @@ structure:
           phase: before_scene
           spawnsets:
             - comm_bandits_river
+          next: ".done"
+        
+        spawn.spawn_children_in_corvo:
+          ".editor":
+            pos: [ 5536.0, 296.0 ]
+            hint: spawn-only
+            in: []
+            out: []
+          phase: before_scene_corvo_byanko
+          spawnsets:
+            - comm_children
           next: ".done"
         
         spawn.spawn_hostile:
@@ -1282,6 +1304,7 @@ structure:
           time: "01:30"
           next:
             - scene.25_baron_dies_long: Input
+            - spawn.spawn_children_in_corvo
         
         settime.02_30:
           ".editor": [ 6009.0, -43.0 ]

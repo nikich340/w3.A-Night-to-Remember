@@ -2,6 +2,104 @@
 # definition of entities
 #
 templates:
+  niellan_boy:
+    includes:
+      - dlc/bob/data/gameplay/community/community_npcs/citizens/boy.w2ent
+
+    entityObject:
+      .type: "CNewNPC"
+      displayName: "Niellan"
+
+    appearances:
+      niellan:
+        includedTemplates:
+          - characters\models\common\child_average\body\g_01_cma__body.w2ent
+          - characters\models\crowd_npc\skellige_children\shoes\s_02_cma__skellige.w2ent
+          - characters\models\crowd_npc\novigrad_citizen_child\torso\t3_03_cma__novigrad_citizen.w2ent
+          - characters\models\common\child_average\body\n_01_cma__body.w2ent
+          - characters\models\crowd_npc\novigrad_citizen_child\legs\l0_01_cma__novigrad_citizen.w2ent
+          - characters\models\common\child_average\heads\h_06_cma__skellige_villager.w2ent
+          - characters\models\crowd_npc\novigrad_citizen_child\arms\a_02_cma__novigrad_citizen.w2ent
+          - characters\models\crowd_npc\skellige_children\items\i_02_cma__skellige.w2ent
+          - characters\models\crowd_npc\wizard\caps\c_02_ma__wizard.w2ent
+          - characters\models\common\child_average\hair\c_01_cma__hair_mid.w2ent
+
+    coloringEntries:
+      - ".type": SEntityTemplateColoringEntry
+        appearance: niellan
+        componentName: c_02_ma__wizard
+        colorShift1:
+          hue: 0
+          saturation: -20
+          luminance: -62
+        colorShift2:
+          hue: 146
+          saturation: -40
+          luminance: 48
+
+      - ".type": SEntityTemplateColoringEntry
+        appearance: niellan
+        componentName: l0_01_cma__novigrad_citizen
+        colorShift1:
+          hue: 0
+          saturation: -34
+          luminance: -62
+        colorShift2:
+          hue: 333
+          saturation: -91
+          luminance: 94
+
+      - ".type": SEntityTemplateColoringEntry
+        appearance: niellan
+        componentName: t3_03_cma__novigrad_citizen
+        colorShift1:
+          hue: 118
+          saturation: -60
+          luminance: -29
+        colorShift2:
+          hue: 333
+          saturation: -85
+          luminance: 89
+
+      - ".type": SEntityTemplateColoringEntry
+        appearance: niellan
+        componentName: a_02_cma__novigrad_citizen
+        colorShift1:
+          hue: 118
+          saturation: -60
+          luminance: -29
+        colorShift2:
+          hue: 0
+          saturation: 0
+          luminance: 0
+
+      - ".type": SEntityTemplateColoringEntry
+        appearance: niellan
+        componentName: i_02_cma__skellige
+        colorShift1:
+          hue: 0
+          saturation: -91
+          luminance: 0
+        colorShift2:
+          hue: 0
+          saturation: 0
+          luminance: 0     
+
+      - ".type": SEntityTemplateColoringEntry
+        appearance: niellan
+        componentName: i_02_cma__skellige_px
+        colorShift1:
+          hue: 0
+          saturation: -91
+          luminance: 0
+        colorShift2:
+          hue: 0
+          saturation: 0
+          luminance: 0
+
+    usedAppearances:
+      - q704_wounded_boy
+
   regis_vampire_scene_fix:
     includes:
       - dlc/bob/data/quests/main_npcs/regis_terzieff_vampire.w2ent

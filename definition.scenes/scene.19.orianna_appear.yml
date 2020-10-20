@@ -5,8 +5,8 @@ repository:
       template: "gameplay\\templates\\characters\\player\\player.w2ent"
 
     niellan:
-      template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\citizens\\boy_noble.w2ent"
-      appearance: [ "bob_child_noble_05" ]
+      template: "dlc\\dlcntr\\data\\entities\\niellan_boy.w2ent"
+      appearance: [ "niellan" ]
 
     agneta:
       template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\citizens\\girl_noble.w2ent"
@@ -375,7 +375,7 @@ production:
       niellan:
         repo: "niellan"
         #by_voicetag: true
-        appearance: "bob_child_noble_05"
+        appearance: "niellan"
         tags: [ "niellan" ]
 
       agneta:
