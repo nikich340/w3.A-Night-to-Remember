@@ -165,6 +165,9 @@ exec function sc(num : int, optional input : String) {
 	sceneNames.PushBack("26.baron_river_aggressive.w2scene");
 	sceneNames.PushBack("27.baron_dies_short.w2scene");
 	sceneNames.PushBack("28.orianna_farewell.w2scene");
+	sceneNames.PushBack("29.baron_leaving.w2scene");
+	sceneNames.PushBack("30.children_corvo_byanko.w2scene");
+	sceneNames.PushBack("31.ntr_completed.w2scene");
 	
 	if (!input) {
 		input = "Input";

@@ -109,6 +109,11 @@ exec function playBank( bankName : string ) {
 	}
 }
 
-exec function playEvent( eventName : string ) {
+exec function playEventPlayer( eventName : string ) {
 	thePlayer.SoundEvent(eventName);
 }
+
+exec function playEvent( bankName : string, eventName : string, optional saveType : string ) {
+    NTR_PlaySound( bankName, eventName, saveType );
+}
+//playEvent(ntr_quest.bnk, Play_ntr_fangs_music, SESB_Savv)

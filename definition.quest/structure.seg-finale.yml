@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 906, saved: 2020-10-18 14:56:29)
+# (version: 926, saved: 2020-10-19 20:12:20)
 #
 ---
 structure:
@@ -25,10 +25,10 @@ structure:
           interruptable: true
           _fadein: false
           next.Output:
-            - script.Play_fangs_music
             - spawn.bruxa_spawn
             - despawn.despawn_orihum
             - changelayers.show_dress
+            - script.stop_music
         
         scene.23_orianna_bruxa_dies:
           ".editor":
@@ -53,11 +53,11 @@ structure:
           interruptable: true
           _fadein: true
           next.fight:
-            - script.Kill_orianna
+            - script.Set_bruxa_app
             - spawn.spawn_hostile_baron
             - waituntil.Wait_baron_dead
           next.peaceful:
-            - script.Kill_orianna
+            - script.Set_bruxa_app
             - settime.02_30_t
         
         scene.25_baron_dies_long:
@@ -218,8 +218,8 @@ structure:
           interruptable: true
           _fadein: true
           next.Output:
-            - despawn.despawn_bandits_river
             - scene.scene_31_ntr_completed: Input
+            - despawn.despawn_bandits_river_and_ori_horse
         
         scene.scene_30_children_corvo_byanko:
           ".editor":
@@ -244,6 +244,15 @@ structure:
           _fadein: true
           next.Output:
             - addfact.ntr_quest_completed
+        
+        waituntil.1s:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 4055.0, -261.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Play_custom_fangs_music_2
         
         waituntil.1s_repeat:
           elapsed: "00:00:01"
@@ -349,6 +358,15 @@ structure:
             - script.fade_out
             - script.NTR_SaveGame
         
+        waituntil.Wait_30s:
+          elapsed: "00:00:30"
+          ".editor":
+            pos: [ 7206.86328125, 29.0699768066 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Play_gp_music
+        
         waituntil.Wait_baron_dead:
           factdb: [ ntr_baron_edward_dead, ">=", 1 ]
           ".editor":
@@ -368,6 +386,7 @@ structure:
           next:
             - script.Set_morph_app_bruxa
             - objective.KILL_ORIANNA: Success
+            - script.Reset_fight_orianna_fact
         
         waituntil.bandits_dead:
           factdb: [ ntr_bandit_dead, ">=", 5 ]
@@ -402,11 +421,11 @@ structure:
         waituntil.new_wait_until_realtime_elapsed:
           elapsed: "00:00:01"
           ".editor":
-            pos: [ 4630.0, 800.0 ]
+            pos: [ 1988.0, 550.0 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - scene.24_baron_river_friendly: Input
+            - waituntil.Player_outside
         
         waituntil.outside_fight_area:
           outside: [ bob/fight_area, PLAYER ]
@@ -547,7 +566,7 @@ structure:
           function: SetHealthQuest
           parameter:
             - targetTag: cname_PLAYER
-            - healthPerc: 0
+            - healthPerc: 100
             - relative: false
             - shouldPlayHitParticle: false
           next: ".done"
@@ -608,7 +627,7 @@ structure:
         
         script.Kill_orianna:
           ".editor":
-            pos: [ 5091.0, 56.0 ]
+            pos: [ 5244.0, 47.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_ForceKillNPC
@@ -708,9 +727,34 @@ structure:
             - saveType: SESB_Save
           next: ".done"
         
+        script.Play_custom_fangs_music:
+          ".editor":
+            pos: [ 3908.0, -182.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_PlaySound
+          parameter:
+            - bankName: ntr_quest.bnk
+            - eventName: Play_ntr_fangs_music_dummy
+            - saveType: SESB_ClearSaved
+          next:
+            - waituntil.1s
+        
+        script.Play_custom_fangs_music_2:
+          ".editor":
+            pos: [ 4217.0, -323.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_PlaySound
+          parameter:
+            - bankName: ntr_quest.bnk
+            - eventName: Play_ntr_fangs_music
+            - saveType: SESB_Save
+          next: ".done"
+        
         script.Play_fangs_music:
           ".editor":
-            pos: [ 3744.0, -152.0 ]
+            pos: [ 3948.0, -55.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
@@ -719,6 +763,41 @@ structure:
             - eventName: mus_q704_vampire_siege
             - saveType: SESB_Save
           next: ".done"
+        
+        script.Play_gp_music:
+          ".editor":
+            pos: [ 7377.0, -42.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_PlayMusic
+          parameter:
+            - areaName: toussaint
+            - eventName: mus_loc_toussaint_general_cs_to_gmpl
+            - saveType: SESB_ClearSaved
+          next:
+            - out
+        
+        script.Reset_fight_orianna_fact:
+          ".editor":
+            pos: [ 4455.0, -143.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: ResetFactQuest
+          parameter:
+            - factID: cname_ntr_fight_orianna
+          next: ".done"
+        
+        script.Set_bruxa_app:
+          ".editor":
+            pos: [ 5068.0, 47.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: AppearanceChange
+          parameter:
+            - npcsTag: cname_ntr_orianna_bruxa
+            - appearanceName: cname_orianna_bruxa_human_bloody2
+          next:
+            - script.Kill_orianna
         
         script.Set_morph_app:
           ".editor":
@@ -733,7 +812,7 @@ structure:
         
         script.Set_morph_app_bruxa:
           ".editor":
-            pos: [ 4441.0, 6.0 ]
+            pos: [ 4449.0, 12.0 ]
             in: [ In ]
             out: [ Out ]
           function: AppearanceChange
@@ -829,13 +908,13 @@ structure:
           ".editor":
             pos: [ 3268.0, 666.0 ]
             in: [ In ]
-            out: [ Out ]
+            out: [ "False", "True" ]
           function: NTR_FactChecker
           parameter:
             - factName: ntr_fight_orianna
             - factCond: "=="
             - val: 1
-          next:
+          next.True:
             - waituntil.outside_fight_area
         
         script.fade_out:
@@ -909,6 +988,19 @@ structure:
           parameter:
             - factID: cname_ntr_fight_outside_area
           next: ".done"
+        
+        script.stop_music:
+          ".editor":
+            pos: [ 3743.0, -97.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_PlayMusic
+          parameter:
+            - areaName: toussaint
+            - eventName: stop_music
+            - saveType: SESB_ClearSaved
+          next:
+            - script.Play_custom_fangs_music
         
         changelayers.show_baron_sword_loot:
           ".editor":
@@ -1068,6 +1160,17 @@ structure:
             - comm_bandits_river
           next: ".done"
         
+        despawn.despawn_bandits_river_and_ori_horse:
+          ".editor":
+            pos: [ 5750.0, 465.9999694824 ]
+            hint: despawn-only
+            in: []
+            out: []
+          spawnsets:
+            - comm_bandits_river
+            - comm_orianna_horse
+          next: ".done"
+        
         despawn.despawn_orihum:
           ".editor":
             pos: [ 3686.0, 157.0 ]
@@ -1153,7 +1256,7 @@ structure:
           quest: nighttoremember
           notify: true
           next:
-            - out
+            - waituntil.Wait_30s
         
         settime.00_45:
           ".editor": [ 3399.0, 5.0 ]
@@ -1230,6 +1333,6 @@ structure:
             - questoutcome.NTR_outcome: Success
         
         out:
-          ".editor": [ 7190.0, 30.0 ]
+          ".editor": [ 7534.0, 42.0 ]
           next: ".done"
         

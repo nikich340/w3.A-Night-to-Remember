@@ -15,9 +15,7 @@ quest function NTR_ForceKillNPC(tag : name, playDeath : bool) {
 
 	theGame.GetNPCsByTag(tag, npcs);
 	for (i = 0; i < npcs.Size(); i += 1) {
-		if ( !npcs[i].IsAlive() )
-			continue;
-
+		NTR_notify("Kill: " + npcs[i]);
 		NTR_npc = (CNTRCommonNPC) npcs[i];
 		if (NTR_npc) {
 			NTR_npc.NTR_avoidDeathEvent = false;
@@ -339,7 +337,9 @@ quest function NTR_DoorChangeState(tag : name, newState : string, optional keyIt
 quest function NTR_PlaySound( bankName : string, eventName : string, optional saveType : string ) {
 	if ( !theSound.SoundIsBankLoaded(bankName) ) {
 		theSound.SoundLoadBank(bankName, true);
+		NTR_notify("Bank [" + bankName + "] was not loaded!");
 	}
+	//NTR_notify("Play Sound: bnk [" + bankName + "], event [" + eventName + "]");
 
 	switch (saveType) {
 		case "SESB_Save":
