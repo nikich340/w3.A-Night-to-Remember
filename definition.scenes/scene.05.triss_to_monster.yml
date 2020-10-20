@@ -740,7 +740,9 @@ storyboard:
 
     # shot to gp
     shot_14:
-      - cam: [0.0, cam_14_to_gp]
+      - cam.blend.togame: [0.0, cam_14_to_gp]
+      - actor.gamestate: [0.0, geralt, DrawSteel]
+      - actor.gamestate: [0.0, triss_monster]
 
 dialogscript:
   player: "geralt"
@@ -813,11 +815,10 @@ dialogscript:
     - PAUSE: 4.4
     # shot to gp
     - CUE: shot_14
-    - PAUSE: 0.1
+    - PAUSE: 1.0
     - NEXT: section_exit
 
   section_exit:
-    - CAMERA_BLEND: 1.0
     - EXIT
 
 

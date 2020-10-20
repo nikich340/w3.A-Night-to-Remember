@@ -307,7 +307,7 @@ storyboard:
 
   section_storyboard_ui:
     # shot Shot1 ger
-    shot_1:
+    shot_1a:
       - actor.placement: [0.0, geralt, [ -3.2473449707, 4.7326660156, 0.0 ], [ 0.0, 0.0, 147.6198730469 ]]
       - actor.placement: [0.0, butler, [ -4.9733886719, 2.5526733398, 0.0274658203 ], [ 0.0, 0.0, 311.5999755859 ]]
       - actor.placement: [0.0, niellan, [ -3.6875610352, 4.2301635742, 0.0274658203 ], [ 0.0, 0.0, 149.7099914551 ]]
@@ -321,7 +321,9 @@ storyboard:
       - actor.lookat: [0.0, butler, geralt]
       - actor.lookat: [0.0, niellan, butler]
       - actor.lookat: [0.0, agneta, butler]
+      - fade.in: [0.0, 0.75]
 
+    shot_1b:
       - actor.anim.additive: 
           .@pos: [0.0, geralt_add_gesture_slight_explain_05]
           blendin: 0.5
@@ -445,7 +447,11 @@ dialogscript:
 
   section_storyboard_ui:
     # shot Shot1 ger
-    - CUE: shot_1
+    - CUE: shot_1a
+    - PAUSE: 1.0
+
+    # shot Shot1 ger
+    - CUE: shot_1b
     # (longest) anim: add_gesture_slight_explain_05
     - geralt: "Take care of them, Barnabas-Basil."
     # shot Shot2 butler gest

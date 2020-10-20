@@ -423,6 +423,7 @@ storyboard:
   section_storyboard_ui:
     # shot Shot1 cam1
     shot_3:
+      - fade.in: [0.0, 0.75]
       - actor.placement: [0.0, geralt, [ 1.0632644892, 14.7847585678, -0.9016113281 ], [ 0.0, 0.0, 246.0399780273 ]]
       - actor.placement: [0.0, vampire_diva, [ 1.6130012274, 13.5968675613, -0.7265625000 ], [ 0.0, 0.0, 291.7725219727 ]]
       - actor.pose: [0.0, vampire_diva_Low_Standing_Determined]

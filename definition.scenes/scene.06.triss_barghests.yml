@@ -270,21 +270,21 @@ storyboard:
       #barghest_1: [[ 2.1461620331, 16.3447265625, -0.6447143555 ], [ 0.0, 0.0, 0.0 ]]
       #barghest_2: [[ 6.1461620331, 16.3447265625, -0.5303955078 ], [ 0.0, 0.0, 0.0 ]]
 
-    #actor.pose:
-      #geralt: geralt_high_standing_determined_idle
-      #triss: triss_woman_sorceress_idle_lp_01
+    actor.pose:
+      geralt: geralt_high_standing_determined_idle
+      triss: triss_woman_sorceress_idle_lp_01
       #barghest_1: barghest_1_None
       #barghest_2: barghest_2_None
 
   section_storyboard_ui:
     # shot from teleport
     shot_1:
-      - actor.placement: [0.0, geralt, [ -5.7042903900, 10.1396484375, -0.3926391602 ], [ 0.0, 0.0, 0.0 ]]
-      #- actor.placement: [0.0, triss, [ -5.9788436890, 13.0268554688, -0.5366210938 ], [ 0.0, 0.0, 161.9200134277 ]]
-      #- actor.placement: [0.1, triss, [ -5.9788436890, 13.0268554688, -0.5366210938 ], [ 0.0, 0.0, 161.9200134277 ]]
+      - actor.placement: [0.0, geralt, [ -5.7042903900, 10.1396484375, -2.3926391602 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.placement: [0.1, geralt, [ -5.7042903900, 10.1396484375, -0.3926391602 ], [ 0.0, 0.0, 0.0 ]]
+      
       - actor.placement: [0.0, barghest_1, [ -7.3380260468, 13.4687500000, -1.7402343750 ], [ 0.0, 0.0, 204.3499145508 ]]
       - actor.placement: [0.0, barghest_2, [ -4.9032192230, 13.5212402344, -1.7387084961 ], [ 0.0, 0.0, 167.5300140381 ]]
-      - actor.lookat: [0.1, geralt, triss]
+      - actor.lookat: [0.0, geralt, triss]
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
       - actor.pose: [0.0, triss_woman_sorceress_idle_lp_01]
       - actor.pose: [0.0, barghest_1_None]
@@ -299,7 +299,7 @@ storyboard:
           stretch: 0.8
       ###    blendout: 0.3
       - prop.effect.stop: [0.7, teleport, teleport_fx]
-      #- prop.placement: [0.7, teleport, [ -5.9195747375, 7.7526855469, -50.5273895264 ], [ 0.0, 0.0, 180.9501037598 ]]
+      - prop.placement: [0.7, teleport, [ -50.9195747375, 70.7526855469, -50.5273895264 ], [ 0.0, 0.0, 180.9501037598 ]]
       #- prop.hide: [0.7, teleport]
 
     # shot from teleport look back
@@ -344,8 +344,9 @@ storyboard:
 
     # shot to gp
     shot_7:
-      - actor.anim: 
-          .@pos: [0.0, triss_woman_sorceress_taunt_01_rp]
+      - actor.gamestate: [0.0, triss]
+      #- actor.anim: 
+      #    .@pos: [0.0, triss_woman_sorceress_taunt_01_rp]
       - actor.gamestate: [0.0, geralt, DrawSilver]
       - cam.blend.togame: [0.0, cam_7_to_gp]
 

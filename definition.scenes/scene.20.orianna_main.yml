@@ -667,6 +667,7 @@ storyboard:
   section_storyboard_ui:
     # shot Shot1
     shot_init:
+      - fade.in: [0.0, 0.75]
       - actor.pose: [0.0, geralt_High_Standing_Aggressive]
       - actor.placement: [0.0, geralt, [ -134.7511138916, 29.3421230316, -15.2036132813 ], [ 0.0, 0.0, 123.5300064087 ]]
       - actor.placement: [0.0, orianna_human, [ -150.5038757324, 35.1060638428, -15.1286010742 ], [ 0.0, 0.0, 59.1799545288 ]]
@@ -676,7 +677,7 @@ storyboard:
       - actor.lookat: [0.01, orianna_human, [ -1.0223956108, 4.8440313339, 1.9122929573 ]]
 
     shot_0:
-      - cam.blend.start: [0.0, cam_8_Shot0]
+      - cam.blend.start: [0.0, cam_8_Shot0, smooth]
       
     shot_1: ## 11.98
       - actor.placement: [0.0, orianna_human, [ -150.5038757324, 35.1060638428, -11.1286010742 ], [ 0.0, 0.0, 59.1799545288 ]]

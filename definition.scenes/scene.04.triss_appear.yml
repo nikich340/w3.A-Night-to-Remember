@@ -281,6 +281,5 @@ dialogscript:
     - NEXT: section_exit
 
   section_exit:
-    #- CAMERA_BLEND: 1.0
     - EXIT
 

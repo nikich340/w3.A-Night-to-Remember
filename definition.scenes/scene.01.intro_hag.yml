@@ -249,6 +249,7 @@ storyboard:
   section_storyboard_ui:
     # shot start sneak
     shot_1:
+      - fade.in: [0.0, 0.75]
       - actor.placement: [0.0, geralt, [ 8.2565422058, -30.8742675781, -1.2461547852 ], [ 0.0, 0.0, 0.0 ]]
       - actor.placement: [0.0, hag_water_mh, [ 17.0268554688, -16.2871093750, 1.1152954102 ], [ 0.0, 0.0, 178.9698944092 ]]
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
@@ -276,7 +277,11 @@ storyboard:
       - actor.placement: [0.0, hag_water_mh, [ 16.8928260803, -23.5400390625, 0.9630355835 ], [ 0.0, 0.0, 122.2099456787 ]]
       - cam: [0.0, cam_6_hug_attack]
       - actor.anim: [0.0, hag_water_mh_taunt_01]
-      - cam: [1.0, cam_7_to_gp]
+
+    shot_togame:
+      - cam.blend.togame: [0.0, cam_7_to_gp]
+      - actor.gamestate: [0.0, geralt, DrawSilver]
+      - actor.gamestate: [0.0, hag_water_mh]
 
 dialogscript:
   player: "geralt"
@@ -296,14 +301,14 @@ dialogscript:
     # shot start sneak
     - CUE: shot_1
     # (longest) anim: sneak_cycle
-    - PAUSE: 4
+    - PAUSE: 4.0
     # shot sneak show pass
     - CUE: shot_4
     # (longest) anim: sneak_cycle
-    - PAUSE: 1
+    - PAUSE: 1.0
     # shot geralt sword
     - CUE: shot_5
-    - PAUSE: 1
+    - PAUSE: 1.0
     - geralt: "[0.4870095253]0000553305|Shit!"
     # (longest) anim: geralt_sneaking_stop_draw_silver_sword_to_combat
     - PAUSE: 1.5
@@ -311,8 +316,10 @@ dialogscript:
     - CUE: shot_6
     # (longest) anim: taunt_01
     - PAUSE: 1.5
+    - CUE: shot_togame
+    - PAUSE: 1.0
+    
     - NEXT: section_exit
 
   section_exit:
-    - CAMERA_BLEND: 1
     - EXIT

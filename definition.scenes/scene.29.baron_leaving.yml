@@ -97,31 +97,31 @@ production:
         repo: "Baron_Edward"
         #by_voicetag: true
         appearance: "bob_knight_15"
-        tags: [ "Baron_Edward" ]
+        tags: [ "Baron_Edward_tmp" ]
 
       niellan:
         repo: "niellan"
         #by_voicetag: true
         appearance: "__q704_wounded_boy_neck_blood"
-        tags: [ "niellan" ]
+        tags: [ "ntr_niellan_tmp" ]
 
       agneta:
         repo: "agneta"
         #by_voicetag: true
         appearance: "bob_child_noble_female_03"
-        tags: [ "agneta" ]
+        tags: [ "ntr_agneta_tmp" ]
 
       horse_baron:
         repo: "horse_baron"
-        #by_voicetag: true
+        by_voicetag: false
         appearance: "horse_knight_07"
-        tags: [ "horse_baron" ]
+        tags: [ "ntr_horse_baron_tmp" ]
 
       horse_kids:
         repo: "horse_kids"
-        #by_voicetag: true
+        by_voicetag: false
         appearance: "_sq101__white_stallion_02"
-        tags: [ "horse_kids" ]
+        tags: [ "ntr_orianna_horse" ]
 
     cameras:
       cam_1_Shot1:
@@ -201,6 +201,8 @@ storyboard:
   section_storyboard_ui:
     # shot Shot1
     shot_1:
+      - actor.appearance: [0.0, horse_baron, horse_knight_07]
+      - actor.appearance: [0.0, horse_kids, _sq101__white_stallion_02]
       - actor.placement.start: [0.0, Baron_Edward, [ -16.9650535583, -19.6803016663, -0.4603443146 ], [ 0.0, 0.0, 145.4201660156 ]]
       - actor.placement.start: [0.0, niellan, [ -15.7933368683, -15.7326974869, 1.0192012787 ], [ 0.0, 13.0, 51.6723251343 ]]
       - actor.placement.start: [0.0, agneta, [ -15.6244878769, -16.3114585876, 1.3972444534 ], [ 0.0, 0.0, 139.9200439453 ]]
@@ -218,6 +220,8 @@ storyboard:
       - actor.lookat: 
           .@pos: [0.7, Baron_Edward, NONE]
           turn: body
+
+      - fade.in: [0.0, 0.75]
           
       #- actor.pose: [0.0, Baron_Edward_dg_horse_standing_idle02]
       #- actor.pose: [0.0, niellan_child_sitting_loop_01]

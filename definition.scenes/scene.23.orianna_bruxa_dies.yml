@@ -1287,6 +1287,7 @@ storyboard:
 
     shot_ger_walk:
       - cam.blend.end: [1.0, cam_39_Shot6_crossbow_bruxa6_ger_walk2_cam3, rapid]
+      - actor.sound: [0.0, geralt, Stop_ntr_fangs_music]
       - actor.sound: [0.0, geralt, Play_ntr_trailer_music]
       - actor.anim:  # 1 sec
           actor: geralt
@@ -1403,7 +1404,7 @@ storyboard:
       #- actor.placement: [0.0, geralt, [ -151.1475982666, 34.3303146362, -11.0883865356 ], [ 0.0, 0.0, 173.8548889160 ]]
       - cam.blend.start: [0.0, cam_55_shot9_ger_fall3_cam1]
       - cam.blend.end: [1.0, cam_56_shot9_ger_fall3_cam2]
-      - actor.sound: [0.9, geralt, Stop_ntr_trailer_music]
+      - actor.sound: [1.0, geralt, Stop_ntr_trailer_music]
       - fade.out: [0.875, 1.5, [0, 0, 0, 255]]
 
 dialogscript:
@@ -1499,6 +1500,7 @@ dialogscript:
           - slotName: cname_EES_RangedWeapon
     - NEXT: script_stop_music
 
+  ## ?
   script_stop_music:
     - SCRIPT:
             function: NTR_PlayMusicScene

@@ -537,6 +537,7 @@ storyboard:
   section_storyboard_ui:
     # shot eyes open
     shot_1:
+      - fade.in: [0.0, 0.5]
       - actor.placement: [0.0, Baron_Edward, [ -158.3189392090, 35.0936851501, -15.3368530273 ], [ 0.0, 0.0, 12.4300155640 ]]
       - actor.placement: [0.0, Big_bandit, [ -157.2763214111, 34.1676330566, -15.2500610352 ], [ 0.0, 0.0, 18.7000045776 ]]
       - actor.placement: [0.0, Bandit_camp_axe, [ -159.5366363525, 34.5762405396, -15.3785400391 ], [ 0.0, 0.0, 350.2099914551 ]]
