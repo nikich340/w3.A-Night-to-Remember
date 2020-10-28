@@ -32,6 +32,7 @@ templates:
             - Set_Switch_bruxa_state_clean
           banksDependency:
             - monster_bruxa.bnk
+            - monster_dettlaff_vampire.bnk
 
     appearances:
       # bloody2 -> human bloody2

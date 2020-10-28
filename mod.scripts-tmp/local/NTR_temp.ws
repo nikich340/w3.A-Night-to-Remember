@@ -627,15 +627,20 @@ exec function barolg() {
 	var      template : CEntityTemplate;
 	var           pos : Vector;
 	var           ent : CEntity;
+	var act : CActor;
 	
 	template = (CEntityTemplate)LoadResource("dlc/dlcntr/data/entities/baron_edward.w2ent", true);
 	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
 	ent = (CEntity)theGame.CreateEntity(template, pos);
-	ent.AddTag('baron_test2');
-	ent.AddTag('ntr_baron_edward');
-	ent.AddTag('vip');
-	ent.ApplyAppearance('bob_knight_15');
-	NTR_TuneNPC( 'baron_test2', GetWitcherPlayer().GetLevel(), "Hostile", "None", false, "ENGT_Quest", -1 );
+	act = (CActor) ent;
+	act.AddTag('baron_test2');
+	act.AddTag('ntr_baron_edward');
+	act.AddTag('vip');
+	act.ApplyAppearance('bob_knight_15');
+	act.SetTemporaryAttitudeGroup( 'hostile_to_player', AGP_Default );
+	act.SetAttitude( thePlayer, AIA_Hostile );
+	thePlayer.SetAttitude( act, AIA_Hostile );
+	//NTR_TuneNPC( 'baron_test2', GetWitcherPlayer().GetLevel(), "Hostile", "None", false, "ENGT_Quest", -1 );
 }
 exec function barolg2() {
 	var      template : CEntityTemplate;
@@ -747,8 +752,22 @@ exec function oribru() {
 	ent = (CEntity)theGame.CreateEntity(template, pos);
 	ent.AddTag('oriana_test2');
 	ent.AddTag('ntr_orianna_bruxa');
-	ent.ApplyAppearance('orianna_bruxa_morph');
+	ent.ApplyAppearance('bruxa_monster_gameplay');
 	NTR_TuneNPC( 'oriana_test2', GetWitcherPlayer().GetLevel(), "Neutral", "None", false, "ENGT_Quest", -1 );
+}
+
+exec function oribru2() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	
+	template = (CEntityTemplate)LoadResource("dlc/dlcntr/data/entities/orianna_bruxa.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	ent.AddTag('oriana_test2');
+	ent.AddTag('ntr_orianna_bruxa');
+	ent.ApplyAppearance('bruxa_monster_gameplay');
+	NTR_TuneNPC( 'oriana_test2', GetWitcherPlayer().GetLevel(), "Hostile", "None", false, "ENGT_Quest", -1 );
 }
 exec function oribruh() {
 	var      template : CEntityTemplate;

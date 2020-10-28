@@ -214,9 +214,9 @@ production:
 
       Orianna_bruxa:
         repo: "Orianna_bruxa"
-        #by_voicetag: true
+        by_voicetag: false
         appearance: "orianna_bruxa_monster"
-        tags: [ "Orianna_bruxa" ]
+        tags: [ "ntr_orianna_bruxa" ]
 
     props:
       vampire_vision:
@@ -421,6 +421,7 @@ dialogscript:
     - CUE: shot_7
     # (longest) anim: q704_truth_07_geralt_high_standing_determined_gesture_die
     - PAUSE: 6.93
+    - PAUSE: 1.0
     # shot run funny killed cam2
     - NEXT: section_exit
 

@@ -28,14 +28,14 @@ quest function NTR_ForceKillNPC(tag : name, playDeath : bool) {
 	}
 }
 
-exec function NTR_releaseOriannaBruxa() {
+quest function NTR_releaseOriannaBruxa() {
 	var npc : CNewNPC;
 
 	npc = theGame.GetNPCByTag('ntr_orianna_bruxa');
-	npc.SetAppearance('orianna_bruxa_human');
+	npc.SetAppearance('orianna_bruxa_human_bloody2');
 	npc.TeleportWithRotation(Vector(-204.5, -597.8, 0.277527), EulerAngles(0.000000, -110.0, 0.000000));
 	NTR_ForceKillNPC('ntr_orianna_bruxa', false);
-	// ? npc.TeleportWithRotation(Vector(-204.5, -597.8, 0.277527), EulerAngles(0.000000, -110.0, 0.000000));
+	npc.TeleportWithRotation(Vector(-204.5, -597.8, 0.277527), EulerAngles(0.000000, -110.0, 0.000000));
 }
 quest function NTR_SaveLock(lock : bool) {
 	var saveLockId : int;
