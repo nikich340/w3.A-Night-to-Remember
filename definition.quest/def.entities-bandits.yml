@@ -48,7 +48,7 @@ templates:
     usedAppearances:
       - baron_edward
       - bob_knight_15
-      - olgierd
+      #- olgierd
 
     coloringEntries:
       - ".type": SEntityTemplateColoringEntry
@@ -129,14 +129,14 @@ templates:
             isLootable: false
             initializer:
               .type: CInventoryInitializerUniform
-              itemName: "NPC Ardaenye"
+              itemName: "npc_la_espada_steel"
           - ".type": CInventoryDefinitionEntry
             category: "steelsword"
             isMount: false
             isLootable: true
             initializer:
               .type: CInventoryInitializerUniform
-              itemName: "Ardaenye"
+              itemName: "la_espada_steel"
 
     effects:
       cut_head_fx:

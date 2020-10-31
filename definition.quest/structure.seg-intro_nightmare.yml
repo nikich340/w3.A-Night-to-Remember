@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 933, saved: 2020-10-20 19:31:05)
+# (version: 995, saved: 2020-10-31 21:23:21)
 #
 ---
 structure:
@@ -9,7 +9,7 @@ structure:
     intro_nightmare:
       blocks:
         in:
-          ".editor": [ 82.444442749, 394.6110839844 ]
+          ".editor": [ 330.0, 350.0 ]
           next:
             - spawn.spawn_intro_hag
         
@@ -41,7 +41,7 @@ structure:
         
         scene.04_triss_appear:
           ".editor":
-            pos: [ 3900.0, 525.0 ]
+            pos: [ 3495.0, 595.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 04.triss_appear.yml
@@ -51,7 +51,7 @@ structure:
           next.Output:
             - objective.behind_wall: Success
             - objective.talk_triss: Activate
-            - waituntil.new_wait_until_contact_triss
+            - waituntil.wait_contact_triss
         
         scene.05_triss_to_monster:
           ".editor":
@@ -61,7 +61,7 @@ structure:
           scene: 05.triss_to_monster.yml
           placement: bob/introscenes
           interruptable: true
-          _fadein: false
+          _fadein: true
           next.Output:
             - changelayers.show_magic
             - objective.talk_triss: Success
@@ -76,7 +76,7 @@ structure:
           scene: 06.triss_barghests.yml
           placement: bob/introscenes
           interruptable: true
-          _fadein: false
+          _fadein: true
           next.Output:
             - waituntil.outside_magic_barrier
         
@@ -93,48 +93,65 @@ structure:
         
         scene.09_triss_final:
           ".editor":
-            pos: [ 5712.1669921875, 569.4588012695 ]
+            pos: [ 5811.0, 575.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 09.triss_final.yml
           placement: bob/introscenes
           interruptable: true
-          _fadein: false
+          _fadein: true
           next.Output:
             - despawn.despawn_triss
         
         scene.gp_wall:
           ".editor":
-            pos: [ 3300.0, 575.0 ]
+            pos: [ 3132.0, 578.0 ]
             in: [ hag_wall ]
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
           placement: bob/introscenes
-          interruptable: true
+          interruptable: false
           _fadein: false
           next.Output:
             - objective.blood_tracks: Success
             - waituntil.triss_found_area
             - objective.behind_wall: Activate
         
+        waituntil.1s:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 3839.0, 436.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Triss_monster_yen_app
+        
+        waituntil.1ss:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 4127.0, 459.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.05_triss_to_monster: Input
+        
+        waituntil.1sss:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 5644.0, 489.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.09_triss_final: Input
+        
         waituntil.Triss_out:
-          outside: [ bob/magic_area, triss_monster ]
+          outside: [ bob/magic_area, ntr_triss_monster ]
           ".editor":
             pos: [ 4695.734375, -18.5194282532 ]
             in: [ In ]
             out: [ Out ]
           next:
             - waituntil.if_triss_not_dead_
-        
-        waituntil.blood_examined:
-          examined: bob/blood_on_wall
-          ".editor":
-            pos: [ 3100.0, 525.0 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - spawn.spawn_triss_normal
-            - scene.gp_wall: hag_wall
         
         waituntil.bloodarea1:
           inside: [ bob/bloodarea1, PLAYER ]
@@ -149,7 +166,7 @@ structure:
         waituntil.bloodarea2:
           inside: [ bob/bloodarea2, PLAYER ]
           ".editor":
-            pos: [ 2700.0, 425.0 ]
+            pos: [ 2590.0, 422.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -157,7 +174,7 @@ structure:
             - mappin.bloodpin3: Enable
         
         waituntil.half_dead:
-          factdb: [ trissIntroHalf, ">=", 1 ]
+          factdb: [ ntr_intro_triss_half, ">=", 1 ]
           ".editor":
             pos: [ 4900.0, 425.0 ]
             in: [ In ]
@@ -168,7 +185,7 @@ structure:
             - script.tune_triss_power
         
         waituntil.if_triss_not_dead:
-          factdb: [ trissIntroDead, "=", 0 ]
+          factdb: [ ntr_intro_triss_dead, "=", 0 ]
           ".editor":
             pos: [ 4853.0673828125, 227.4805450439 ]
             in: [ In ]
@@ -177,22 +194,13 @@ structure:
             - despawn.despawn_old_barghests
         
         waituntil.if_triss_not_dead_:
-          factdb: [ trissIntroDead, "=", 0 ]
+          factdb: [ ntr_intro_triss_dead, "=", 0 ]
           ".editor":
-            pos: [ 4583.1806640625, -153.1312713623 ]
+            pos: [ 4583.0, -149.0 ]
             in: [ In ]
             out: [ Out ]
           next:
             - script.teleport_triss
-        
-        waituntil.new_wait_until_contact_triss:
-          entered: [ bob/triss_contact, PLAYER ]
-          ".editor":
-            pos: [ 4013.8889160156, 428.3333740234 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - script.Triss_monster_yen_app
         
         waituntil.outside_magic_barrier:
           outside: [ bob/magic_area, PLAYER ]
@@ -206,7 +214,7 @@ structure:
         waituntil.triss_found_area:
           inside: [ bob/triss_found, PLAYER ]
           ".editor":
-            pos: [ 3700.0, 525.0 ]
+            pos: [ 3330.0, 512.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -215,7 +223,7 @@ structure:
         waituntil.wait_1s:
           elapsed: "00:00:01"
           ".editor":
-            pos: [ 500.0000305176, 383.5714416504 ]
+            pos: [ 698.0, 357.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -232,8 +240,28 @@ structure:
             - script.tune_barghest_1
             - script.tune_barghest_2
         
+        waituntil.wait_blood_examined:
+          examined: bob/blood_on_wall
+          ".editor":
+            pos: [ 2952.0, 520.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - spawn.spawn_triss_normal
+            - scene.gp_wall: hag_wall
+        
+        waituntil.wait_contact_triss:
+          entered: [ bob/triss_contact, PLAYER ]
+          ".editor":
+            pos: [ 3695.0, 542.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.fade_out_1s
+            - waituntil.1s
+        
         waituntil.wait_hag_onDead:
-          factdb: [ hagIntroDead, ">=", 1 ]
+          factdb: [ ntr_hag_intro_dead, ">=", 1 ]
           ".editor":
             pos: [ 1300.0, 375.0 ]
             in: [ In ]
@@ -242,7 +270,7 @@ structure:
             - scene.02_hag_runs: Input
         
         waituntil.wait_triss_onDeath:
-          factdb: [ trissIntroDead, ">=", 1 ]
+          factdb: [ ntr_intro_triss_dead, ">=", 1 ]
           ".editor":
             pos: [ 5100.0, 425.0 ]
             in: [ In ]
@@ -268,7 +296,7 @@ structure:
             out: [ Out ]
           function: PlayEffectQuest
           parameter:
-            - entityTag: cname_triss_monster
+            - entityTag: cname_ntr_triss_monster
             - effectName: cname_a
             - activate: false
             - persistentEffect: false
@@ -279,15 +307,28 @@ structure:
         
         script.Triss_monster_yen_app:
           ".editor":
-            pos: [ 4162.7065429688, 351.5278015137 ]
+            pos: [ 3979.0, 319.0 ]
             in: [ In ]
             out: [ Out ]
           function: AppearanceChange
           parameter:
-            - npcsTag: cname_triss_monster
+            - npcsTag: cname_ntr_triss_monster
             - appearanceName: cname_triss_yen
           next:
-            - scene.05_triss_to_monster: Input
+            - waituntil.1ss
+        
+        script.fade_out_1s:
+          ".editor":
+            pos: [ 3888.0, 581.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FadeOutQuest
+          parameter:
+            - fadeTime: 1.0
+            - r: 0
+            - g: 0
+            - b: 0
+          next: ".done"
         
         script.hide_triss_indicator:
           ".editor":
@@ -297,7 +338,7 @@ structure:
           function: ShowBossFightIndicator
           parameter:
             - enable: false
-            - bossTag: cname_triss_monster
+            - bossTag: cname_ntr_triss_monster
           next: ".done"
         
         script.magic_barrier_fx:
@@ -313,6 +354,19 @@ structure:
             - persistentEffect: false
             - deactivateAll: false
             - preventEffectStacking: false
+          next: ".done"
+        
+        script.new_scriptcall:
+          ".editor":
+            pos: [ 5642.0, 678.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FadeOutQuest
+          parameter:
+            - fadeTime: 1.0
+            - r: 0
+            - g: 0
+            - b: 0
           next: ".done"
         
         script.play_music_combat_triss:
@@ -344,7 +398,7 @@ structure:
             out: [ Out ]
           function: NTR_teleportTriss
           parameter:
-            - tag: cname_triss_monster
+            - tag: cname_ntr_triss_monster
           next:
             - waituntil.Triss_out
         
@@ -356,20 +410,21 @@ structure:
           function: ShowBossFightIndicator
           parameter:
             - enable: true
-            - bossTag: cname_triss_monster
+            - bossTag: cname_ntr_triss_monster
           next: ".done"
         
         script.triss_triss_appearance:
           ".editor":
-            pos: [ 5513.8125, 576.9298095703 ]
+            pos: [ 5492.0, 578.0 ]
             in: [ In ]
             out: [ Out ]
           function: AppearanceChange
           parameter:
-            - npcsTag: cname_triss_monster
+            - npcsTag: cname_ntr_triss_monster
             - appearanceName: cname_triss
           next:
-            - scene.09_triss_final: Input
+            - script.new_scriptcall
+            - waituntil.1sss
         
         script.tune_barghest_1:
           ".editor":
@@ -426,7 +481,7 @@ structure:
             out: [ Out ]
           function: NTR_TuneNPC
           parameter:
-            - tag: cname_triss_monster
+            - tag: cname_ntr_triss_monster
             - level: 1005
             - attitude: Hostile
             - mortality: None
@@ -444,7 +499,7 @@ structure:
             out: [ Out ]
           function: NTR_TuneNPC
           parameter:
-            - tag: cname_triss_monster
+            - tag: cname_ntr_triss_monster
             - level: 0
             - attitude: Hostile
             - mortality: None
@@ -504,7 +559,7 @@ structure:
         
         spawn.spawn_intro_hag:
           ".editor":
-            pos: [ 289.2857666016, 383.5714416504 ]
+            pos: [ 518.0, 480.0 ]
             hint: spawn-only
             in: []
             out: []
@@ -528,7 +583,7 @@ structure:
         
         spawn.spawn_triss_normal:
           ".editor":
-            pos: [ 3300.0, 475.0 ]
+            pos: [ 3125.0, 435.0 ]
             hint: spawn-only
             in: []
             out: []
@@ -583,14 +638,14 @@ structure:
         
         despawn.despawn_triss:
           ".editor":
-            pos: [ 5889.8676757812, 572.5427246094 ]
+            pos: [ 5984.0, 572.0 ]
             hint: despawn-only
             in: []
             out: []
           spawnsets:
             - comm_triss
           next:
-            - out
+            - addfact.ntr_quest_intro_completed
         
         journal.journal_entry_intro_hag:
           ".editor": [ 2100.0, 325.0 ]
@@ -600,14 +655,14 @@ structure:
           next: ".done"
         
         objective.behind_wall:
-          ".editor": [ 3669.0910644531, 834.9999389648 ]
+          ".editor": [ 3332.0, 776.0 ]
           objective: nightofnightmares/intro_hag/blood_tracks_wall
           notify: true
           track: true
           next: ".done"
         
         objective.blood_tracks:
-          ".editor": [ 2600.9091796875, 809.5454711914 ]
+          ".editor": [ 2473.0, 775.0 ]
           objective: nightofnightmares/intro_hag/blood_tracks
           notify: true
           track: true
@@ -621,7 +676,7 @@ structure:
           next: ".done"
         
         objective.talk_triss:
-          ".editor": [ 4107.2729492188, 817.7272949219 ]
+          ".editor": [ 3809.0, 731.0 ]
           objective: nightofnightmares/intro_triss/talk_triss
           notify: true
           track: true
@@ -634,24 +689,36 @@ structure:
             - waituntil.bloodarea1
         
         mappin.bloodpin2:
-          ".editor": [ 2500.0, 425.0 ]
+          ".editor": [ 2385.0, 557.0 ]
           mappin: nightofnightmares/intro_hag/blood_tracks/bloodpin2
           next:
             - waituntil.bloodarea2
         
         mappin.bloodpin3:
-          ".editor": [ 2900.0, 525.0 ]
+          ".editor": [ 2737.0, 570.0 ]
           mappin: nightofnightmares/intro_hag/blood_tracks/bloodpin3
           next:
-            - waituntil.blood_examined
+            - waituntil.wait_blood_examined
         
         settime.set_00_00:
-          ".editor": [ 733.69921875, 427.9938659668 ]
+          ".editor": [ 883.0, 491.0 ]
           time: "00:00"
           next:
             - scene.01_intro_hag: Input
+            - addfact.ntr_quest_started
+        
+        addfact.ntr_quest_intro_completed:
+          ".editor": [ 6160.0, 629.0 ]
+          value: [ ntr_quest_intro_completed, 1 ]
+          next:
+            - out
+        
+        addfact.ntr_quest_started:
+          ".editor": [ 1117.0, 588.0 ]
+          value: [ ntr_quest_started, 1 ]
+          next: ".done"
         
         out:
-          ".editor": [ 6078.9921875, 562.825378418 ]
+          ".editor": [ 6321.0, 568.0 ]
           next: ".done"
         

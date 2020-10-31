@@ -1,6 +1,6 @@
 class CNTRBanditNPC extends CNTRCommonNPC {
 
-	/*protected function Attack( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity)
+	protected function Attack( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity)
     {
         var action : W3Action_Attack;
         
@@ -8,7 +8,7 @@ class CNTRBanditNPC extends CNTRCommonNPC {
         {
             theGame.damageMgr.ProcessAction(action);
 
-            LogChannel('NTR_MOD', "-----ATTACK ACTION LOG!!!-----");
+            /*LogChannel('NTR_MOD', "-----ATTACK ACTION LOG!!!-----");
             //LogChannel('NTR_MOD', "GetWeaponId: " + action.GetWeaponId() );
             LogChannel('NTR_MOD', "IsParried: " + action.IsParried() );
             LogChannel('NTR_MOD', "IsCountered: " + action.IsCountered() );
@@ -22,16 +22,17 @@ class CNTRBanditNPC extends CNTRCommonNPC {
             LogChannel('NTR_MOD', "GetAttackName: " + action.GetAttackName() );
             LogChannel('NTR_MOD', "GetAttackTypeName: " + action.GetAttackTypeName() );
             LogChannel('NTR_MOD', "GetHitTime: " + action.GetAttackAnimName() );
+            */
 
             delete action;
             if (thePlayer.GetHealth() < 1.0) {
-            	FactsAdd("NTR_fisfightDead");
+            	FactsAdd("ntr_fisfight_dead");
             }
         }
-    }*/
+    }
     event OnDeath( damageAction : W3DamageAction  )	{
     	if (IsInFistFightMiniGame()) {
-			FactsAdd("NTR_fisfightDefeat");
+			FactsAdd("ntr_fisfight_defeat");
 		}
 		super.OnDeath( damageAction );
 	}

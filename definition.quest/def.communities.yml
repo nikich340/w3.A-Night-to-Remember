@@ -14,6 +14,12 @@ communities:
         appearances: [ "bob_child_noble_female_03" ]
         tags: [ "ntr_children_agneta", "vip" ]
 
+      orianna:
+        react_to_rain: true
+        template: "dlc\\dlcntr\\data\\entities\\orianna_human.w2ent"
+        appearances: [ "oriana" ]
+        tags: [ "ntr_orianna_human", "vip" ]
+
     phases:
       before_scene_corvo_byanko:
         agneta:
@@ -40,8 +46,8 @@ communities:
             "10:00": bob/hide1
             "12:30": bob/balancing
             "15:00": 
-              - [ bob/play_doll, 0.7 ]
-              - [ bob/play_sit_ground, 0.7 ]
+              - [ bob/play_doll, 0.5 ]
+              - [ bob/play_sit_ground, 0.5 ]
               - [ bob/play_search_ground, 0.5 ]
             "19:00": bob/play_flute
             "22:00": bob/sleep_girl
@@ -60,11 +66,74 @@ communities:
               - [ bob/hide3, 0.5 ]
             "12:30": bob/balancing_cheer
             "15:00": 
-              - [ bob/play_bow, 0.7 ]
-              - [ bob/play_stones, 0.7 ]
+              - [ bob/play_bow, 0.5 ]
+              - [ bob/play_stones, 0.5 ]
               - [ bob/play_point, 0.5 ]
             "19:00": bob/play_sword
             "22:30": bob/sleep_boy
+
+      orianna_house:
+        orianna:
+          attitude: friendly_to_player
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            #"06:30": bob/orianna_pet_horse
+            "07:45": 
+              - [ bob/orianna_cook, 0.5 ]
+              - [ bob/orianna_wash, 0.5 ]
+            "09:55":
+              - [ bob/orianna_river_sightseeing, 0.5 ]
+              - [ bob/orianna_river_fun, 0.5 ]
+              - [ bob/orianna_river_bored, 0.3 ]
+              - [ bob/orianna_river_cross, 0.3 ]
+            "14:00":
+              - [ bob/orianna_flowers, 0.5 ]
+              - [ bob/orianna_enjoy, 0.5 ]
+            "17:00":
+              - [ bob/orianna_clothes, 0.5 ]
+              - [ bob/orianna_dance, 0.5 ]
+            "20:00":
+              - [ bob/orianna_cook, 0.5 ]
+              - [ bob/orianna_wash, 0.5 ]
+            "22:00": bob/orianna_read_book
+            "01:00": bob/orianna_wine
+            "04:00": bob/orianna_sit
+
+        agneta:
+          attitude: friendly_to_player
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "08:00": bob/play_near_house1
+            "10:00": bob/play_puddle_river1
+            "14:05":
+              - [ bob/play_house_sit, 0.5 ]
+              - [ bob/play_house_lute, 0.5 ]
+            "17:00":
+              - [ bob/play_house_doll, 0.5 ]
+              - [ bob/play_house_point, 0.5 ]
+            "20:00": bob/play_near_house2
+            "22:00": bob/house_girl_sleep
+
+        niellan:
+          attitude: friendly_to_player
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "08:15": bob/play_near_house2
+            "10:00": bob/play_puddle_river2
+            "14:05":
+              - [ bob/play_house_bow, 0.5 ]
+              - [ bob/play_house_stones, 0.5 ]
+            "17:00":
+              - [ bob/play_house_sword, 0.5 ]
+              - [ bob/play_house_hopscotch, 0.5 ]
+            "20:00": bob/play_near_house1
+            "22:00": bob/house_boy_sleep
 
   comm_orianna_bruxa:
     actors:
@@ -171,6 +240,8 @@ communities:
           start_in_ap: false
           attitude: AG_grave_hag
           spawn_at: bob/hag_spawn
+          level: 50
+          immortality: none
           
   comm_orianna_human:
     actors:
@@ -765,7 +836,7 @@ communities:
     actors:
       triss_monster:
         template: dlc/dlcntr/data/entities/triss_monster.w2ent
-        tags: [ triss_monster ]
+        tags: [ "ntr_triss_monster" ]
         
     phases:
       normal:

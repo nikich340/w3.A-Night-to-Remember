@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: town_part
 # 
-# (version: 933, saved: 2020-10-20 19:31:05)
+# (version: 995, saved: 2020-10-31 21:23:21)
 #
 ---
 structure:
@@ -73,7 +73,7 @@ structure:
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
           placement: bob/camp
-          interruptable: true
+          interruptable: false
           _fadein: false
           next.Output:
             - waituntil.blood_scent_track1
@@ -103,6 +103,8 @@ structure:
             - objective.follow_footprints: Success
             - despawn.despawn_folk
             - interaction.Scene_to_fisherman: Input
+            - script.disable_scent
+            - addfact.ntr_quest_town_completed
         
         scene.woman_footprints_comment:
           ".editor":
@@ -328,7 +330,6 @@ structure:
             - mappin.cemetery_footprints2: Disable
             - waituntil.cemetery0_comment
             - waituntil.1ss
-            - addfact.disable_scent
         
         waituntil.scent1:
           inside: [ bob/scent_area_1, PLAYER ]
@@ -439,6 +440,16 @@ structure:
             - range: 40.0
           next:
             - out
+        
+        script.disable_scent:
+          ".editor":
+            pos: [ 4312.0, 305.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: ResetFactQuest
+          parameter:
+            - factID: cname_ntr_town_scent_enabled
+          next: ".done"
         
         script.focus_clue_footprints_cemetery:
           ".editor":
@@ -633,9 +644,9 @@ structure:
           mappin: nighttoremember/town_part/follow_scent/scent_pin4
           next: ".done"
         
-        addfact.disable_scent:
-          ".editor": [ 3237.0, 22.0 ]
-          value: [ ntr_town_scent_enabled, 0 ]
+        addfact.ntr_quest_town_completed:
+          ".editor": [ 4322.0, 717.0 ]
+          value: [ ntr_quest_town_completed, 1 ]
           next: ".done"
         
         addfact.scent_enabled_0:

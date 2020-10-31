@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 943, saved: 2020-10-25 21:59:48)
+# (version: 995, saved: 2020-10-31 21:23:21)
 #
 ---
 structure:
@@ -68,7 +68,7 @@ structure:
         next:
           - changelayers.show_river
       
-      scene.new_scene:
+      scene.baron_meeting_short:
         ".editor":
           pos: [ 540.3065185547, 1132.34375 ]
           in: [ hurry ]
@@ -78,7 +78,7 @@ structure:
         interruptable: true
         _fadein: false
         next.hurry:
-          - waituntil.wait_10s
+          - waituntil.wait_3s
       
       interaction.baron_not_yet_gp:
         ".editor":
@@ -95,15 +95,15 @@ structure:
       waituntil.2s:
         elapsed: "00:00:02"
         ".editor":
-          pos: [ 77.0912857056, 532.9841918945 ]
+          pos: [ 72.0, 532.0 ]
           in: [ In ]
           out: [ Out ]
         next:
           - script.Lock_back_door_house
           - script.Lock_front_door
       
-      waituntil.5s_to_get_ready:
-        elapsed: "00:00:05"
+      waituntil.3s_to_get_ready:
+        elapsed: "00:00:03"
         ".editor":
           pos: [ 57.6797676086, 368.8603210449 ]
           in: [ In ]
@@ -118,7 +118,7 @@ structure:
           in: [ In ]
           out: [ Out ]
         next:
-          - script.check_camp_allowed
+          - script.check_orphanage_completed
       
       waituntil.midnight:
         time: [ "00:00", "01:00" ]
@@ -128,7 +128,7 @@ structure:
           out: [ Out ]
         next:
           - script.check_camp_removed2
-          - script.Teleport_Orianna_horse
+          - script.Check_baron_not_left
       
       waituntil.night_time:
         time: [ "00:00", "04:00" ]
@@ -166,8 +166,8 @@ structure:
         next:
           - waituntil.midnight
       
-      waituntil.wait_10s:
-        elapsed: "00:00:10"
+      waituntil.wait_3s:
+        elapsed: "00:00:03"
         ".editor":
           pos: [ 387.8064880371, 1319.3675537109 ]
           in: [ In ]
@@ -210,6 +210,19 @@ structure:
           out: [ Out ]
         next:
           - addfact.fact_add1
+      
+      script.Check_baron_not_left:
+        ".editor":
+          pos: [ 804.0, 1129.0 ]
+          in: [ In ]
+          out: [ Out ]
+        function: NTR_FactChecker
+        parameter:
+          - factName: ntr_quest_baron_alive
+          - factCond: "=="
+          - val: 1
+        next:
+          - script.Teleport_Orianna_horse
       
       script.FACT_BRANCH:
         ".editor":
@@ -274,7 +287,7 @@ structure:
       
       script.Teleport_Orianna_horse:
         ".editor":
-          pos: [ 944.6632080078, 1202.9197998047 ]
+          pos: [ 978.0, 1216.0 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_teleportToNode
@@ -284,19 +297,6 @@ structure:
           - applyRotation: true
         next:
           - waituntil.time_brake
-      
-      script.check_camp_allowed:
-        ".editor":
-          pos: [ 415.5445861816, 1077.7008056641 ]
-          in: [ In ]
-          out: [ "False", "True" ]
-        function: NTR_FactChecker
-        parameter:
-          - factName: ntr_camp_allowed
-          - factCond: "=="
-          - val: 1
-        next.False:
-          - scene.new_scene: hurry
       
       script.check_camp_removed:
         ".editor":
@@ -318,7 +318,7 @@ structure:
           out: [ "False", "True" ]
         function: NTR_FactChecker
         parameter:
-          - factName: ntr_remove_camp
+          - factName: ntr_quest_finale_started
           - factCond: "=="
           - val: 1
         next.False:
@@ -340,6 +340,19 @@ structure:
         next.False:
           - interaction.baron_not_yet_gp: camp_not_yet
       
+      script.check_orphanage_completed:
+        ".editor":
+          pos: [ 415.5445861816, 1077.7008056641 ]
+          in: [ In ]
+          out: [ "False", "True" ]
+        function: NTR_FactChecker
+        parameter:
+          - factName: ntr_quest_orphanage_completed
+          - factCond: "=="
+          - val: 1
+        next.False:
+          - scene.baron_meeting_short: hurry
+      
       script.sounds_dettlaff:
         ".editor":
           pos: [ 117.6712799072, 203.2845916748 ]
@@ -350,7 +363,7 @@ structure:
       
       script.teleport_horse1:
         ".editor":
-          pos: [ 1185.8624267578, 992.9293212891 ]
+          pos: [ 1176.0, 984.0 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_teleportToNode
@@ -396,22 +409,6 @@ structure:
           - applyRotation: true
         next: ".done"
       
-      script.tune_fisherman:
-        ".editor":
-          pos: [ 607.3370361328, 605.0113525391 ]
-          in: [ In ]
-          out: [ Out ]
-        function: NTR_TuneNPC
-        parameter:
-          - tag: cname_ntr_fisherman
-          - level: 1000
-          - attitude: Friendly
-          - mortality: Invulnerable
-          - finishers: false
-          - npcGroupType: ENGT_Quest
-          - scale: -1.0
-        next: ".done"
-      
       changelayers.hide_hide_hide_ALL:
         ".editor":
           pos: [ -392.5714111328, 596.571472168 ]
@@ -433,6 +430,10 @@ structure:
           - orianna_house
           - river
           - town_blood
+          - riverside_combat_walls
+          - river_sword_loot
+          - beach_doll
+          - beach_orianna_dress
         next: ".done"
       
       changelayers.show_camp_house_main:
@@ -448,15 +449,16 @@ structure:
           - camp_layer
           - orianna_house
           - nlayer
+          - orianna_house_music
         next:
           - spawn.spawn_fisherman
           - spawn.spawn_bandits_camp
           - spawn.spawn_horses
           - spawn.spawn_baron
           - spawn.Spawn_orianna_horse
-          - changelayers.show_orphlayer
           - waituntil.inside_camp
           - waituntil.2s
+          - waituntil.3s_to_get_ready
       
       changelayers.show_orphlayer:
         ".editor":

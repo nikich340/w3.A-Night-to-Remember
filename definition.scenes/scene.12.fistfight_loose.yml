@@ -236,9 +236,16 @@ storyboard:
       - cam: [0.0, cam_4_Shot1]
       - actor.pose: [0.0, geralt_ep1_geralt_lying_unconscious_idle]
       - actor.pose: [0.0, fat_bandit_high_standing_determined_idle]
+      - actor.anim.additive:
+          .@pos: [1.0, anim_6732_add_reaction_laugh_01]
+          actor: fat_bandit
+          blendin: 0.5
+          blendout: 0.5
 
     shot_01:
-      - actor.anim: [0.0, fat_bandit_high_standing_determined_exit_back]
+      - actor.anim: 
+          .@pos: [0.0, fat_bandit_high_standing_determined_exit_back]
+          blendin: 0.5
       - cam.blend.start: [0.0, cam_4_Shot1]
       #- actor.anim:
       #    actor: geralt
@@ -298,8 +305,10 @@ dialogscript:
 
   section_storyboard_ui:
     - CUE: shot_0
+    - PAUSE: 0.5
     # (longest) anim: ep1_geralt_lying_unconscious_to_low_sitting_ground_leaning_back_bored
-    - fat_bandit: "2114670790|Hahaha, shove off, vargant! If you will decide to help - our camp is on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater."
+    - fat_bandit: "[3.7467]2114670790|Hahaha, shove off, vargant!"
+    - fat_bandit: "2114670791|If you decide to help - our camp is on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater."
     - CUE: shot_01
     - PAUSE: 4.0
     # shot Shot1
@@ -334,3 +343,4 @@ dialogscript:
   section_exit:
     - CAMERA_BLEND: 1.0
     - EXIT
+

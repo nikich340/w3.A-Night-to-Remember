@@ -1,4 +1,149 @@
 layers: 
+  riverside_combat_walls: 
+    world: "bob"
+    #context: ""
+
+    statics: 
+      wall1: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -255.8231658936, -569.8696899414, -0.9050903320 ]
+        rot: [ 0.0, 0.0, -51.9199905396 ]
+
+      wall1_1: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -253.3835601807, -572.9767456055, -1.1482193470 ]
+        rot: [ 0.0, 0.0, -51.9199905396 ]
+
+      wall1_10: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -231.2346801758, -600.9551391602, -1.9580862522 ]
+        rot: [ 0.0, 0.0, -51.9199905396 ]
+
+      wall1_11: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -228.9268188477, -603.8901367188, -2.6180856228 ]
+        rot: [ 0.0, 0.0, -51.9199905396 ]
+
+      wall1_12: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -225.9020996094, -606.2116699219, -2.6061911583 ]
+        rot: [ 0.0, 0.0, -26.6199836731 ]
+
+      wall1_13: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -222.3459472656, -608.0018310547, -2.6061911583 ]
+        rot: [ 0.0, 0.0, -26.6199836731 ]
+
+      wall1_14: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -218.7666320801, -609.7852783203, -2.6061892509 ]
+        rot: [ 0.0, 0.0, -26.6199836731 ]
+
+      wall1_15: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -215.1773223877, -611.5362548828, -2.6061892509 ]
+        rot: [ 0.0, 0.0, -26.6199836731 ]
+
+      wall1_16: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -211.6502532959, -613.4508666992, -2.4054412842 ]
+        rot: [ 0.0, 0.0, -34.7599792480 ]
+
+      wall1_17: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -208.2236175537, -615.5034179688, -2.4054412842 ]
+        rot: [ 0.0, 0.0, -28.1599731445 ]
+
+      wall1_18: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -204.7770690918, -617.3587036133, -2.4482858181 ]
+        rot: [ 0.0, 0.0, -28.1599731445 ]
+
+      wall1_19: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -201.3032379150, -619.2324218750, -2.4482858181 ]
+        rot: [ 0.0, 0.0, -28.1599731445 ]
+
+      wall1_2: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -250.9482269287, -576.0519409180, -1.1482193470 ]
+        rot: [ 0.0, 0.0, -51.9199905396 ]
+
+      wall1_20: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -197.7721099854, -621.0836181641, -2.4482858181 ]
+        rot: [ 0.0, 0.0, -28.1599731445 ]
+
+      wall1_21: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -194.2323455811, -622.9806518555, -2.4482858181 ]
+        rot: [ 0.0, 0.0, -28.1599731445 ]
+
+      wall1_22: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -190.6780700684, -624.7812500000, -2.4482858181 ]
+        rot: [ 0.0, 0.0, -25.9599742889 ]
+
+      wall1_23: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -187.1130523682, -626.5362548828, -2.4482858181 ]
+        rot: [ 0.0, 0.0, -25.9599742889 ]
+
+      wall1_24: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -183.4984436035, -628.1830444336, -2.3395121098 ]
+        rot: [ 0.0, 0.0, -25.9599742889 ]
+
+      wall1_25: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -179.7392578125, -629.2161254883, -2.4395117760 ]
+        rot: [ 0.0, 0.0, -2.4199719429 ]
+
+      wall1_26: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -175.8313598633, -628.4454345703, -2.4395117760 ]
+        rot: [ 0.0, 0.0, 22.8800296783 ]
+
+      wall1_27: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -172.2368316650, -626.8290405273, -2.4395117760 ]
+        rot: [ 0.0, 0.0, 25.9600296021 ]
+
+      wall1_3: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -248.5276641846, -579.1660156250, -1.1482193470 ]
+        rot: [ 0.0, 0.0, -51.9199905396 ]
+
+      wall1_4: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -245.9858398438, -582.3641357422, -1.1482193470 ]
+        rot: [ 0.0, 0.0, -51.9199905396 ]
+
+      wall1_5: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -243.5131835938, -585.4603271484, -1.1482193470 ]
+        rot: [ 0.0, 0.0, -51.9199905396 ]
+
+      wall1_6: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -241.0537261963, -588.5261230469, -1.1482193470 ]
+        rot: [ 0.0, 0.0, -51.9199905396 ]
+
+      wall1_7: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -238.6028900146, -591.6662597656, -1.1482193470 ]
+        rot: [ 0.0, 0.0, -51.9199905396 ]
+
+      wall1_8: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -236.1588439941, -594.7326049805, -1.1482193470 ]
+        rot: [ 0.0, 0.0, -51.9199905396 ]
+
+      wall1_9: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        pos: [ -233.7335662842, -597.8236694336, -1.1482193470 ]
+        rot: [ 0.0, 0.0, -51.9199905396 ]
+
   corvo_byanko_children: 
     world: "bob"
     #context: ""
@@ -41,6 +186,85 @@ layers:
         rot: [ 0.0, 0.0, 96.7999038696 ]
         action: "resting_child/lie_mwdc_sleep_bed_l_new_dress_jt"
         ignoreCollisions: false
+
+  orianna_house_children: 
+    world: "bob"
+    #context: ""
+
+    actionpoints: 
+      house_boy_sleep: 
+        pos: [ -180.4443359375, -449.1740417480, 11.8725624084 ]
+        rot: [ 0.0, 0.0, 17.9299926758 ]
+        action: "resting_child/lie_mwdc_sleep_bed_r_new_jt"
+        ignoreCollisions: true
+
+      house_girl_sleep: 
+        pos: [ -181.5518188477, -446.0013427734, 11.9193086624 ]
+        rot: [ 0.0, 0.0, 210.7599639893 ]
+        action: "resting_child/lie_mwdc_sleep_bed_l_new_dress_jt"
+        ignoreCollisions: true
+
+      orianna_cook: [ -189.9069213867, -446.7700195313, 11.5180339813, 33.9899978638, "household_woman/stand_mw_cooking_jt" ]
+      
+      orianna_read_book: 
+        pos: [ -181.1404724121, -448.9378356934, 11.9700469971 ]
+        rot: [ 0.0, 0.0, 215.3800354004 ]
+        action: "work_woman/sit_w_reading_book_jt"
+        ignoreCollisions: true
+
+      orianna_sit: 
+        pos: [ -180.4661560059, -452.4024047852, 11.8561058044 ]
+        rot: [ 0.0, 0.0, 66.2199707031 ]
+        action: "resting_woman/sit_mwd_chair_jt"
+        ignoreCollisions: true
+
+      orianna_clothes: [ -201.4688415527, -428.2296447754, 11.7368774414, -20.9801101685, "resting_woman/stand_mw_adjusting_clothes_jt" ]
+
+      orianna_cook: [ -189.9069213867, -446.7700195313, 11.5180339813, 33.9899978638, "household_woman/stand_mw_cooking_jt" ]
+
+      orianna_dance: [ -199.9725952148, -430.0189208984, 11.5688476563, -75.7601165771, "ep2_noblewoman/stand_w_dancing_formal_dynamic_jt" ]
+
+      orianna_enjoy: [ -202.7062530518, -426.9063415527, 11.7157592773, -56.6201095581, "ep2_noblewoman/stand_w_enjoying_nature_dynamic_jt" ]
+
+      orianna_flowers: [ -196.8950653076, -430.0755920410, 11.7233276367, -32.4201126099, "ep2_noblewoman/stand_w_picking_flowers_dynamic_jt" ]
+
+      orianna_pet_horse: [ -188.8254852295, -440.6260681152, 11.1535644531, -139.7799682617, "work_woman/stand_mw_brushing_horse_jt" ]
+
+      orianna_river_bored: [ -273.7471618652, -511.8601684570, 0.2551231086, 113.0799331665, "resting_woman/stand_mw_hopeless_jt" ]
+
+      orianna_river_cross: [ -275.5249938965, -507.0202331543, 0.4017035663, 146.2999267578, "resting_woman/stand_mwd_arms_crossed_jt" ]
+
+      orianna_river_fun: [ -279.0077514648, -510.5370788574, 0.1198730469, 128.4800109863, "resting_woman/stand_mw_with_fan_jt" ]
+
+      orianna_river_sightseeing: [ -278.9393005371, -507.6964416504, 0.2089843750, 125.8399200439, "resting_woman/stand_mw_sightseeing_dynamic_jt" ]
+
+      orianna_wash: [ -180.1988525391, -449.1642456055, 11.8305492401, -120.6700286865, "household_woman/stand_w_washing_cloths_jt" ]
+
+      orianna_wine: [ -181.0171966553, -452.9575805664, 11.8561058044, 29.6999740601, "ep2_noblewoman/stand_w_tasting_wine_jt" ]
+
+      play_house_bow: [ -201.2130737305, -420.7500000000, 11.9841918945, 278.5199584961, "play_child/stand_c_play_bow_dynamic_jt" ]
+
+      play_house_doll: [ -197.2001495361, -427.2656250000, 11.9246826172, 40.4799270630, "play_child/stand_c_playing_doll_jt" ]
+
+      play_house_hopscotch: [ -202.8143463135, -420.0349121094, 11.8857421875, 55.4399719238, "play_child/stand_c_hopscotch_dynamic_jt" ]
+
+      play_house_point: [ -207.8515930176, -415.7721862793, 12.2027587891, 340.1201171875, "play_child/stand_c_pointing_loop_jt" ]
+
+      play_house_lute: [ -201.4190673828, -423.4295959473, 11.9042358398, 294.7997741699, "ep2_child/stand_c_playing_flute_dynamic_jt" ]
+
+      play_house_sit: [ -199.5957489014, -423.9323730469, 11.9848022461, -24.5000171661, "resting_child/q304_sit_c_ground_long_jt" ]
+
+      play_house_stones: [ -198.3459014893, -422.8790588379, 12.1831054688, 296.3399963379, "play_child/stand_c_throw_rocks_jt" ]
+
+      play_house_sword: [ -208.7527770996, -414.4353942871, 12.3900756836, 312.6199645996, "play_child/stand_c_play_sword_01_dynamic_jt" ]
+
+      play_near_house1: [ -196.6428222656, -442.6304626465, 10.6032104492, -23.5399742126, "play_child/e3_johnny_play_stick" ]
+
+      play_near_house2: [ -195.6604156494, -440.8097839355, 10.7878417969, -214.7200012207, "play_child/q301_sara_play_stick" ]
+
+      play_puddle_river1: [ -282.7785949707, -517.3377075195, -0.4302368164, -296.3400268555, "play_child/kneel_c_playing_puddle_jt" ]
+
+      play_puddle_river2: [ -283.6643066406, -516.3144531250, -0.4463500977, 132.0799255371, "play_child/kneel_c_playing_puddle_jt" ]
 
   river_sword_loot:
     world: "bob"
@@ -94,6 +318,38 @@ layers:
         rot: [ 0.0, 90.0, 2.8600111008 ]
         valid_interactions: [ Examine ]
         tags: [ "ntr_beach_doll" ]  
+
+  orianna_house_music:
+    world: "bob"
+
+    statics:
+      house_music_area:
+        ".type": CEntity
+        transform: 
+          pos: [ -185.9706573486, -445.7877502441, 8.5445947647 ]
+          scale: [ 1.0, 1.0, 1.0 ]
+        streamingDistance: 0
+        components:
+          Main:
+            ".type": CSoundAmbientAreaComponent
+            height: 15.0
+            localPoints:
+              - [ 4.0065307617, 7.7846069336, 0.0, 1.0 ]
+              - [ 1.2961578369, 10.7863769531, 0.0, 1.0 ]
+              - [ -7.1823883057, 11.1307067871, 0.0, 1.0 ]
+              - [ -12.5571899414, 5.7194519043, 0.0, 1.0 ]
+              - [ -11.1136016846, -7.6995849609, 0.0, 1.0 ]
+              - [ -0.7600097656, -20.0392456055, 0.0, 1.0 ]
+              - [ 14.1759643555, -9.8925170898, 0.0, 1.0 ]
+              - [ 12.1344299316, 2.2101135254, 0.0, 1.0 ]
+            triggerPriority: 1   ### 1, 2, 3 in vanilla usually
+            banksDependency:
+              - music_toussaint.bnk
+            soundEventsOnEnter:
+              - mus_cs704_diva_feeding
+            soundEventsOnExit:
+              - mus_loc_toussaint_general_cs_to_gmpl
+            priorityParameterMusic: true  
 
   beach_orianna_dress:
     world: "bob"
@@ -184,33 +440,20 @@ layers:
         rot: [ 0.0, 0.0, 33.6599998474 ]
 
     statics:
-      house_music_area:
-        ".type": CEntity
-        transform: 
-          pos: [ -185.9706573486, -445.7877502441, 8.5445947647 ]
-          scale: [ 1.0, 1.0, 1.0 ]
-        streamingDistance: 0
-        components:
-          Main:
-            ".type": CSoundAmbientAreaComponent
-            height: 10.0
-            localPoints:
-              - [ 4.0065307617, 7.7846069336, 0.0, 1.0 ]
-              - [ 1.2961578369, 10.7863769531, 0.0, 1.0 ]
-              - [ -7.1823883057, 11.1307067871, 0.0, 1.0 ]
-              - [ -12.5571899414, 5.7194519043, 0.0, 1.0 ]
-              - [ -11.1136016846, -7.6995849609, 0.0, 1.0 ]
-              - [ -0.7600097656, -20.0392456055, 0.0, 1.0 ]
-              - [ 14.1759643555, -9.8925170898, 0.0, 1.0 ]
-              - [ 12.1344299316, 2.2101135254, 0.0, 1.0 ]
-            triggerPriority: 1   ### 1, 2, 3 in vanilla usually
-            banksDependency:
-              - music_toussaint.bnk
-            soundEventsOnEnter:
-              - mus_cs704_diva_feeding
-            soundEventsOnExit:
-              - mus_loc_toussaint_general_cs_to_gmpl
-            priorityParameterMusic: true  
+      soup_plate: 
+        template: "CEntity:items\\work\\soup_bowl\\model\\soup_bowl.w2ent"
+        pos: [ -190.3115081787, -445.7427978516, 12.3380298615 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      soup_pot: 
+        template: "CEntity:dlc\\ep1\\environment\\decorations\\decorations_sets\\food\\decoration_set_soup_pot_a.w2ent"
+        pos: [ -190.7787322998, -445.7383728027, 12.4780330658 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+
+      wash_bug: 
+        template: "CEntity:environment\\decorations\\housework\\washtubs\\washtub_clothes_water.w2ent"
+        pos: [ -179.1577301025, -449.6422424316, 11.8404226303 ]
+        rot: [ 0.0, 0.0, 60.7199745178 ]
 
       orianna_dress_new: 
         template: "CEntity:dlc\\bob\\data\\environment\\decorations\\clothes\\decoration_clothes_bob_woman_2.w2ent"

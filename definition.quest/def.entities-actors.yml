@@ -554,6 +554,9 @@ templates:
       - triss_monster
 
     entityObject:
-      .type: "CTrissNPC:CNewNPC"
+      .type: "CNTRCommonNPC"
       name: "TRISS"
       displayName: "Triss"
+      NTR_avoidDeathEvent: true
+      NTR_factNearlyDead: "ntr_intro_triss_dead"
+      NTR_factOnHalfHealth: "ntr_intro_triss_half"

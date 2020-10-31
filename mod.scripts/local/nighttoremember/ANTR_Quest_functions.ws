@@ -132,6 +132,7 @@ quest function NTR_HideActorsHagScene() {
     var killIfHostile : bool;
 
     acceptedTags.PushBack('PLAYER');
+    acceptedTags.PushBack('ntr_hag_intro');
     acceptedVoicetags.PushBack('CELINA MONSTER');
     killIfHostile = true;
 

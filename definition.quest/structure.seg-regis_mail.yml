@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: regis_mail
 # 
-# (version: 933, saved: 2020-10-20 19:31:05)
+# (version: 995, saved: 2020-10-31 21:23:21)
 #
 ---
 structure:
@@ -34,7 +34,7 @@ structure:
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
           placement: bob/camp
-          interruptable: true
+          interruptable: false
           _fadein: false
           next.Output:
             - out
@@ -46,7 +46,7 @@ structure:
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
           placement: bob/homescenes
-          interruptable: true
+          interruptable: false
           _fadein: false
           next: ".done"
         
@@ -99,7 +99,7 @@ structure:
             out: [ Out ]
           function: NTR_FocusSetHighlight
           parameter:
-            - tag: cname_NTR_regis_mail
+            - tag: cname_ntr_regis_mail
             - highlightType: FMV_Clue
             - overrideCustomLogic: true
           next: ".done"

@@ -1,0 +1,18 @@
+;meta[language=en]
+;meta[version=1]
+;meta[text=No…]
+;meta[translation=nˈəʊ]
+;meta[audio-hypothesis=SIL M ER M IH L OW UW L SIL]
+;
+;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
+;
+;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
+;_       |  320|  465|  1.00| -1.00| <- VERIFY! | _  d  M  [  320 -  465]
+;_       |  465|  495|  1.00| -1.00| <- VERIFY! | _  d  ER [  465 -  495]
+------------------------------------------------------------------------
+n       |  495|  635|  1.00|  0.25| ok         | n  ~  M  [  495 -  635]
+;_       |  635|  685|  1.00| -1.00| <- VERIFY! | _  d  IH [  635 -  685]
+;_       |  685|  735|  1.00| -1.00| <- VERIFY! | _  d  L  [  685 -  735]
+əʊ      |  735|  995|  1.30|  2.00| ok         | əʊ ~  OW [  735 -  995]
+;_       |  995| 1165|  1.00| -1.00| <- VERIFY! | _  d  UW [  995 - 1165]
+;_       | 1165| 1350|  1.00| -1.00| <- VERIFY! | _  d  L  [ 1165 - 1350]

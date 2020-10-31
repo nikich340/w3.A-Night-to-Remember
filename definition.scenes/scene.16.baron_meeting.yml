@@ -1419,7 +1419,7 @@ dialogscript:
     - CUE: shot_hurry_2
     # (longest) anim: high_standing_determined_gesture_both_hands_stop
     - PAUSE: 2.5
-    - Bandit_camp_crossbow: "2114670878|Stay! What are you looking here?"
+    - Bandit_camp_crossbow: "2114670878|Halt! What are you looking here?"
     - CUE: shot_hurry_3
     - geralt: "[2.9642897]0000393630|Just a traveler. Happened to be passing through."
     - CUE: shot_hurry_3b
@@ -1446,7 +1446,7 @@ dialogscript:
     - CUE: shot_2
     # (longest) anim: high_standing_determined_gesture_both_hands_stop
     - PAUSE: 2.5
-    - Bandit_camp_crossbow: "2114670878|Stay! What are you looking here?"
+    - Bandit_camp_crossbow: "2114670878|Halt! What are you looking for?"
     # shot Shot3 ger
     - CUE: shot_3
     # (longest) anim: high_standing_determined_gesture_both_hands_stop
@@ -1583,6 +1583,29 @@ dialogscript:
         single_use: true
         emphasize: true
       - choice: ["Why do you wanna take the child?", section_about_child]
+      - choice: ["413748|00000000||Picked strange place to hide.", section_bad_place]
+        single_use: true
+        #1198754|Something wicked here. It's in the air, I can smell it…
+        #573937|00000000||See what I can do.
+
+  section_bad_place:
+    - CUE: shot_bad_place_g1
+    - geralt: "0001198754|Something wicked here. It's in the air, I can smell it…"
+    - CUE: shot_bad_place_b1
+    - Baron_Edward: "You are right, we heard some scary sounds from that direction, by the Amphitheatre..."
+    - Baron_Edward: "I told my people to stay away from it. It will be nice if you check what's wrong there."
+    - CUE: shot_bad_place_g2
+    - geralt: "0000573937|See what I can do."
+    - NEXT: script_setfact_ampitheatre
+
+  script_setfact_ampitheatre:
+    - SCRIPT:
+        function: AddFact_S
+        parameter:
+          - factName: ntr_quest_amphitheatre_active
+          - value: 1
+          - validFor: 0
+    - NEXT: section_choice_geralt
 
   section_about_child:
     - CUE: shot_40_dg_geralt

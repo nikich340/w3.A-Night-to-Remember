@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: camp
 # 
-# (version: 933, saved: 2020-10-20 19:31:05)
+# (version: 995, saved: 2020-10-31 21:23:21)
 #
 ---
 structure:
@@ -13,7 +13,6 @@ structure:
           next:
             - objective.go_camp: Activate
             - despawn.despawn_baron
-            - addfact.camp_allowed_fact
         
         scene.baron_remark_gp:
           ".editor":
@@ -22,7 +21,7 @@ structure:
             out: [ Output ]
           scene: 17.baron_oneliners.yml
           placement: bob/camp
-          interruptable: true
+          interruptable: false
           _fadein: false
           next.Output:
             - spawn.spawn_baron_in_ususal
@@ -35,7 +34,7 @@ structure:
           scene: 16.baron_meeting.yml
           placement: bob/camp
           interruptable: true
-          _fadein: false
+          _fadein: true
           next.Output:
             - scene.baron_remark_gp: camp_reminder
             - objective.go_camp: Success
@@ -86,6 +85,7 @@ structure:
             out: [ Out ]
           next:
             - spawn.spawn_baron_on_beach
+            - script.fade_out_1s
         
         waituntil.wait_1s:
           elapsed: "00:00:01"
@@ -96,20 +96,17 @@ structure:
           next:
             - scene.scene_16: Input
         
-        script.tune_baron_invulnerable:
+        script.fade_out_1s:
           ".editor":
-            pos: [ 1476.0883789062, -13.4254550934 ]
+            pos: [ 813.0, 18.0 ]
             in: [ In ]
             out: [ Out ]
-          function: NTR_TuneNPC
+          function: NTR_FadeOutQuest
           parameter:
-            - tag: cname_ntr_baron_edward
-            - level: 1000
-            - attitude: Friendly
-            - mortality: Invulnerable
-            - finishers: false
-            - npcGroupType: ENGT_Quest
-            - scale: -1.0
+            - fadeTime: 1.0
+            - r: 0
+            - g: 0
+            - b: 0
           next: ".done"
         
         spawn.spawn_baron_in_ususal:
@@ -122,7 +119,7 @@ structure:
           spawnsets:
             - comm_camp_baron
           next:
-            - out
+            - addfact.ntr_quest_camp_completed
         
         spawn.spawn_baron_on_beach:
           ".editor":
@@ -166,12 +163,13 @@ structure:
           track: true
           next: ".done"
         
-        addfact.camp_allowed_fact:
-          ".editor": [ 364.4232788086, 75.1407623291 ]
-          value: [ ntr_camp_allowed, 1 ]
-          next: ".done"
+        addfact.ntr_quest_camp_completed:
+          ".editor": [ 1686.0, 155.0 ]
+          value: [ ntr_quest_camp_completed, 1 ]
+          next:
+            - out
         
         out:
-          ".editor": [ 1714.1926269531, 86.815864563 ]
+          ".editor": [ 1827.0, 90.0 ]
           next: ".done"
         

@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: orphanage
 # 
-# (version: 933, saved: 2020-10-20 19:31:05)
+# (version: 995, saved: 2020-10-31 21:23:21)
 #
 ---
 structure:
@@ -9,7 +9,7 @@ structure:
     orphanage:
       blocks:
         in:
-          ".editor": [ -138.4615325928, 249.2307739258 ]
+          ".editor": [ -205.0, 234.0 ]
           next:
             - objective.Go_orphanage: Activate
             - waituntil.orph_area
@@ -24,7 +24,7 @@ structure:
           interruptable: true
           _fadein: false
           next.Output:
-            - out
+            - addfact.ntr_quest_orphanage_completed
         
         scene.orphanage_scene:
           ".editor":
@@ -34,7 +34,7 @@ structure:
           scene: 11.orphanage.yml
           placement: bob/orphscenepoint
           interruptable: true
-          _fadein: false
+          _fadein: true
           next.fistfight:
             - script.Lock_Door
             - script.Set_0orens_bandit
@@ -89,6 +89,15 @@ structure:
           next.Output:
             - script.Lock_Door
         
+        waituntil.1s:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 644.0, 186.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.orphanage_scene: Input
+        
         waituntil.START_HERE:
           examined: ~afc
           ".editor":
@@ -107,9 +116,9 @@ structure:
             out: [ loose, win ]
           conditions:
             win:
-              factdb: [ NTR_fisfightDefeat, ">=", 3 ]
+              factdb: [ ntr_fisfight_defeat, ">=", 3 ]
             loose:
-              factdb: [ NTR_fisfightDead, ">=", 1 ]
+              factdb: [ ntr_fisfight_dead, ">=", 1 ]
           next.loose:
             - script.neutral_3
             - script.stop_player_fistfight
@@ -132,11 +141,12 @@ structure:
         waituntil.close_to_door:
           entered: [ bob/ordphdoor_area, PLAYER ]
           ".editor":
-            pos: [ 572.4385375977, 253.8149261475 ]
+            pos: [ 348.0, 226.0 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - scene.orphanage_scene: Input
+            - script.NTR_SaveGame3
+            - script.NTR_FadeOutQuest
         
         waituntil.night_time:
           time: [ "00:00", "04:00" ]
@@ -159,7 +169,7 @@ structure:
         waituntil.orph_area:
           entered: [ bob/orphanage_area, PLAYER ]
           ".editor":
-            pos: [ 341.412902832, 241.5072174072 ]
+            pos: [ 86.0, 244.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -280,6 +290,31 @@ structure:
             - script.tune_band2
             - script.tune_band3
             - script.player_fistfight
+        
+        script.NTR_FadeOutQuest:
+          ".editor":
+            pos: [ 506.0, 164.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FadeOutQuest
+          parameter:
+            - fadeTime: 1.0
+            - r: 0
+            - g: 0
+            - b: 0
+          next: ".done"
+        
+        script.NTR_SaveGame3:
+          ".editor":
+            pos: [ 506.0, 303.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_SaveGame
+          parameter:
+            - type: SGT_ForcedCheckPoint
+            - slot: -1
+          next:
+            - waituntil.1s
         
         script.Return_money:
           ".editor":
@@ -525,7 +560,7 @@ structure:
         
         spawn.spawn_bandits:
           ".editor":
-            pos: [ 590.9128417969, 172.8632965088 ]
+            pos: [ 363.0, 139.0 ]
             hint: spawn-only
             in: []
             out: []
@@ -546,7 +581,7 @@ structure:
           next: ".done"
         
         objective.Go_orphanage:
-          ".editor": [ 269.8803710938, 448.7349853516 ]
+          ".editor": [ 78.0, 425.0 ]
           objective: nighttoremember/orphanage_part/go_orphanage
           notify: true
           track: true
@@ -560,7 +595,7 @@ structure:
           next: ".done"
         
         objective.go_door:
-          ".editor": [ 714.1051025391, 474.6696472168 ]
+          ".editor": [ 519.0, 474.0 ]
           objective: nighttoremember/orphanage_part/go_door
           notify: true
           track: true
@@ -597,7 +632,13 @@ structure:
             - script.FACT_BRANCH
             - script.FACT_BRANCH1
         
+        addfact.ntr_quest_orphanage_completed:
+          ".editor": [ 2229.0, -319.0 ]
+          value: [ ntr_quest_orphanage_completed, 1 ]
+          next:
+            - out
+        
         out:
-          ".editor": [ 2256.0842285156, -314.6850280762 ]
+          ".editor": [ 2436.0, -315.0 ]
           next: ".done"
         

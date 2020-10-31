@@ -192,7 +192,7 @@ storyboard:
   section_storyboard_ui:
     # shot Shot1 close
     shot_1a:
-      - fade.in: [0.0, 0.75]
+      ### IGNORED - fade.in: [0.0, 0.0]
       - actor.placement: [0.0, regis, [ -1.1582946777, 14.4415893555, -10.0 ], [ 0.0, 0.0, 237.4599914551 ]]
       #- actor.pose: [0.0, geralt_High_Sitting_Chair_Proud]
       - prop.placement: [0.0, ntr_logo, [ -8.3710632324, 3.0602416992, 0.2578430176 ], [ 0.0, 0.0, 0.0 ]]

@@ -298,6 +298,11 @@ storyboard:
     # shot Shot ger
     shot_6:
       - cam: [0.0, cam_6_Shot_ger]
+      - actor.anim.additive: 
+          actor: geralt
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, anim_7032_high_standing_determined_gesture_left_shoulder_relax]
       - actor.anim.mimic: 
           actor: geralt
           blendin: 0.5
@@ -315,6 +320,20 @@ storyboard:
           .@pos: [0.5, mimicsanim_145_geralt_neutral_yes_long_face]
       #- actor.lookat: [0.0, Big_bandit, [ 0.3754468560, -0.0301665738, 0.8267898560 ]]
 
+    shot_7a:
+      # Years ago
+      - actor.anim.additive: 
+          actor: Big_bandit
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, anim_6690_add_gesture_explain_01]
+      # And a wee boy
+      - actor.anim.additive: 
+          actor: Big_bandit
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [1.0, anim_6714_add_gesture_slight_explain_04]
+      
     shot_8_ger_listen_sceptic:
       - cam: [0.0, cam_6_Shot_ger]
       - actor.anim.mimic: 
@@ -325,6 +344,20 @@ storyboard:
 
     shot_8_band:
       - cam: [0.0, cam_5_Shot_band]
+      # I can't say
+      - actor.anim.additive: 
+          actor: Big_bandit
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, anim_6700_add_gesture_explain_11]
+
+      # illness
+      - actor.anim.additive: 
+          actor: Big_bandit
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [1.0, anim_6702_add_gesture_explain_13]
+      
 
     shot_8_ger_listen:
       - cam: [0.0, cam_6_Shot_ger]
@@ -336,6 +369,45 @@ storyboard:
 
     shot_9_band:
       - cam: [0.0, cam_5_Shot_band]
+      # since vampire
+      - actor.anim.additive: 
+          actor: Big_bandit
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.3, anim_6690_add_gesture_explain_01]
+
+      # was upset
+      - actor.anim.additive: 
+          actor: Big_bandit
+          blendin: 0.5
+          blendout: 0.5
+          weight: 0.75
+          .@pos: [1.0, anim_6691_add_gesture_explain_02]
+
+    shot_10_ger_listen2:
+      - cam: [0.5, cam_6_Shot_ger]
+      - actor.anim.mimic: 
+          actor: geralt
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.5, mimicsanim_399_geralt_neutral_gesture_impressed02_face]
+
+    shot_9_band2:
+      - cam: [0.0, cam_5_Shot_band]
+      # we divided
+      - actor.anim.additive: 
+          actor: Big_bandit
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, anim_6701_add_gesture_explain_12]
+
+      # tbh
+      - actor.anim.additive: 
+          actor: Big_bandit
+          blendin: 0.5
+          blendout: 0.5
+          weight: 0.75
+          .@pos: [1.0, anim_6699_add_gesture_explain_10]
 
     shot_10_ger_listen2:
       - cam: [0.0, cam_6_Shot_ger]
@@ -345,14 +417,27 @@ storyboard:
           blendout: 0.5
           .@pos: [0.0, mimicsanim_156_geralt_pose_neutral_listening_face]
 
+    shot_10_ger_listen3:
+      - cam: [0.0, cam_6_Shot_ger]
+
     shot_11_band:
       - cam: [0.0, cam_5_Shot_band]
 
     shot_12_ger:
       - cam: [0.0, cam_6_Shot_ger]
+      - actor.anim.mimic: 
+          actor: geralt
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, mimicsanim_418_geralt_neutral_gesture_question_ver04_face]
 
     shot_13_band:
       - cam: [0.0, cam_5_Shot_band]
+      - actor.anim.additive: 
+          actor: Big_bandit
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, anim_6697_add_gesture_explain_08]
 
     shot_14_togame:
       - actor.gamestate: [0.0, geralt]
@@ -388,30 +473,33 @@ dialogscript:
     - CUE: shot_6
     - geralt: "[1.0482]2114670800|Gonna answer me?"
     - CUE: shot_7
-    - Big_bandit: "2114670801|Baron won't be happy... Alright, I'll tell you what I know."
-    - Big_bandit: "2114670802|A few years ago our leader, Baron Edward, visited Toussaint, where he met a beautiful girl."
-    - Big_bandit: "2114670803|A boy was born to them."
+    - Big_bandit: "[5.4262]2114670801|Baron won't be happy… Alright, I'll tell you what I know."
+    - CUE: shot_7a
+    - Big_bandit: "[8.0640]2114670802|Years ago our leader, Baron Edward, visited Toussaint, where he met a beautiful lass."
+    - Big_bandit: "[2.7337]2114670803|And a wee boy was born to them."
     - CUE: shot_8_ger_listen_sceptic
-    - Big_bandit: "2114670804|The Baron went with us to the far lands, where we were culled by battalions of Nilfs."
+    - Big_bandit: "[7.2121]2114670804|The Baron went with us to the far lands, where we were culled by battalions of Nilfs."
     - CUE: shot_8_band
-    - Big_bandit: "2114670805|Well, I can't say that the Baron liked that girl much, as he left her here. However recently he said we must visit Toussaint again."
-    - Big_bandit: "2114670806|We came here and found out that she had died of some illness about a year ago. And the boy was sent in an orphanage, to this Orianna."
+    - Big_bandit: "[10.2974]2114670805|Well, I can't say that the Baron liked that girl much, as he left her here. However he recently said we must visit Toussaint again."
+    - Big_bandit: "[10.8915]2114670806|We came here and found out that she had died of some illness about a year ago. And the boy was sent to an orphanage, to this Orianna."
     - CUE: shot_8_ger_listen
-    - Big_bandit: "2114670807|But we didn't manage to find neither boy nor Orianna."
+    - Big_bandit: "[5.5510]2114670807|But we didn't manage to find neither the boy nor Orianna."
     - CUE: shot_9_band
-    - Big_bandit: "2114670808|After that vampire attack the orphanage is abandoned, only a mess and a pile of children's old corpses."
-    - Big_bandit: "2114670809|Baron was quite upset. But then we learned that Orianna is alive and in perfect health, people saw her in the city with the boy."
-    - Big_bandit: "2114670810|Baron is sure that this is his son and very much wants to find this woman. However she is... elusive, everyone know her but where she is - no idea."
-    - Big_bandit: "2114670811|So we divided into groups and now watching for places where she may appear."
+    - Big_bandit: "[10.3352]2114670808|Since that vampire attack the orphanage has been abandoned… All that remains now is a mess and a pile children's corpses."
+    - Big_bandit: "[13.1244]2114670809|The Baron was quite upset. But then we learned that Orianna is alive and in perfect health - people saw her in the city with the wee boy."
     - CUE: shot_10_ger_listen2
-    - Big_bandit: "2114670812|To be honest, I'm tired of sitting on one place, so if you could help us, it would be great."
+    - Big_bandit: "[20.2289]2114670810|The Baron is certain that this is his son, and very much wants to find this woman. However she is… elusive, everyone knows her, but where she is - noone seems to know."
+    - CUE: shot_9_band2
+    - Big_bandit: "[8.2729]2114670811|So we divided into groups and now watching for places where she may appear."
+    - Big_bandit: "[9.1062]2114670812|To be honest, I'm well tired of sittin' around here waitin'… So if you could find a way to help us, it'd be well appreciated!"
+    - CUE: shot_10_ger_listen3
     - geralt: "[2.3149]2114670813|I see it now. It's a deal."
     - CUE: shot_11_band
-    - Big_bandit: "2114670814|Then you should talk with our leader."
+    - Big_bandit: "[2.1778]2114670814|Then you should talk to the Baron."
     - CUE: shot_12_ger
     - geralt: "[1.1675782]0000499337|Where can I find him?"
     - CUE: shot_13_band
-    - Big_bandit: "2114670815|We have pitched camp on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater."
+    - Big_bandit: "[7.5912]2114670782|We have pitched camp on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater."
     - CUE: shot_14_togame
     - geralt: "[1.3444105]0001003998|See what I can do."
     - NEXT: section_exit
@@ -419,5 +507,6 @@ dialogscript:
   section_exit:
     #- CAMERA_BLEND: 1.0
     - EXIT
+
 
 

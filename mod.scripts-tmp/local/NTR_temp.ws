@@ -3,17 +3,18 @@ exec function startNTR() {
 }
 
 // not work?
-exec function NTR_MoveNPCsTo(tag : name, targetTag : name, optional speed : float) {
+//NTR_MoveNPCsTo(oriana_test2, , 2.0)
+exec function NTR_MoveNPCsTo(tag : name, target : name, optional speed : float) {
 	var i               : int;
 	var l_npcs 		    : array<CNewNPC>;
 	var l_aiTree		: CAIMoveToAction;
 	
 	theGame.GetNPCsByTag(tag, l_npcs);
 	
-	l_aiTree = new CAIMoveToAction in thePlayer;
+	l_aiTree = new CAIMoveToAction in theGame;
 	l_aiTree.OnCreated();
 	
-	l_aiTree.params.targetTag = targetTag;
+	l_aiTree.params.targetTag = target;
 	l_aiTree.params.moveSpeed = speed;
 	l_aiTree.params.rotateAfterwards = false;
 	
@@ -24,8 +25,10 @@ exec function NTR_MoveNPCsTo(tag : name, targetTag : name, optional speed : floa
 	
 	for	( i = 0; i < l_npcs.Size(); i+= 1 )
 	{
-		if (l_npcs[i].IsAlive())
-			l_npcs[i].ForceAIBehavior( l_aiTree, BTAP_AboveCombat2);
+		if (l_npcs[i].IsAlive()) {
+			l_npcs[i].ForceAIBehavior( l_aiTree, BTAP_Idle);
+			NTR_notify("Force move " + l_npcs[i]);
+		}
 		/*
 			BTAP_Unavailable,
             BTAP_Idle,
@@ -515,6 +518,12 @@ exec function animScale(entityTag : name, timeScale : float) {
 
 exec function orianaDoor(newState : string, optional smoooth : bool, optional dontBlockInCombat : bool ) {
 	NTR_DoorChangeState('q704_oriana_feeding_room', newState, , , smoooth, dontBlockInCombat);
+}
+exec function orianaDoor2(newState : string, optional smoooth : bool, optional dontBlockInCombat : bool ) {
+	NTR_DoorChangeState('ntr_orianna_house_front_door', newState, , , smoooth, dontBlockInCombat);
+}
+exec function orianaDoor3(newState : string, optional smoooth : bool, optional dontBlockInCombat : bool ) {
+	NTR_DoorChangeState('ntr_orianna_house_back_door', newState, , , smoooth, dontBlockInCombat);
 }
 exec function corvoDoor(newState : string, optional smoooth : bool, optional dontBlockInCombat : bool ) {
 	NTR_DoorChangeState('mq7024_corvo_bianco_main_door', newState, , , smoooth, dontBlockInCombat);

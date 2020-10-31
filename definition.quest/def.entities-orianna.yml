@@ -10,15 +10,16 @@ templates:
     
     entityObject:
       .type: "CNTROriannaVampireNPC"
-      NTR_factOnDeath: "ntr_orianna_bruxa_dead"
+      NTR_factNearlyDead: "ntr_orianna_bruxa_dead"
       #NTR_factNearlyDead: "ntr_orianna_bruxa_dead"
       NTR_avoidDeathEvent: true
       NTR_animationMultiplier: 1.25
 
-      grantNoExperienceAfterKill: true
       displayName: "Orianna"
       voiceTag: "ORIANNA BRUXA"
       level: 50
+      streamingDistance: 50
+      grantNoExperienceAfterKill: true
       tags:
         - HideHealthBarModule
       components:
@@ -97,6 +98,7 @@ templates:
         name: ntr_abilities
         abilities:
           - ntr_mon_orianna_bruxa
+          - NoShadows
 
     effects:
       camera_smoke:
@@ -150,7 +152,8 @@ templates:
       .type: "CNTROriannaVampireNPC"
       displayName: "Orianna"
       voiceTag: "ORIANNA HUMAN"
-      streamingDistance: 14
+      level: 50
+      streamingDistance: 50
 
     appearances:
       orianna_vampire_bloody_morph:
@@ -192,6 +195,23 @@ templates:
     usedAppearances:
       - orianna_human_morph
       - orianna_vampire_bloody_morph
+      - oriana
+
+    templateParams:
+      - ".type": CCharacterStatsParam
+        name: ntr_abilities
+        abilities:
+          - ntr_mon_orianna_vampire
+          - NoShadows
+      - ".type": CAnimAnimsetsParam
+        name: orianna_woman
+        componentName: noble_woman_base
+        animationSets:
+          - "animations\\woman\\community\\woman_work.w2anims"
+          - "animations\\woman\\movement\\woman_movement.w2anims"
+          - "animations\\woman\\quest\\q602_woman_picking_flowers.w2anims"
+          - "animations\\woman\\community\\woman_reaction.w2anims"
+          - "animations\\woman\\dialog\\woman_dialog.w2anims"
 
     effects:
       # disappear_cutscene_fx1 from bruxa
@@ -379,6 +399,8 @@ templates:
       displayName: "Orianna"
       voiceTag: "ORIANNA VAMPIRE"
       level: 50
+      streamingDistance: 50
+      grantNoExperienceAfterKill: true
       tags:
         - HideHealthBarModule
 
@@ -485,7 +507,6 @@ templates:
           - ntr_mon_orianna_vampire
           - NoShadows
     #  - ".type": CAnimAnimsetsParam
-    #    wasIncluded: true
      #   name: orianna_vampire
      #   componentName: dettlaff_vampire_base
      #  animationSets:
