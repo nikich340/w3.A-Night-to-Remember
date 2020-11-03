@@ -2,6 +2,10 @@ exec function startNTR() {
 	FactsAdd("NTRstartquest", 1);
 }
 
+exec function NTR_lvl( tag : name, level : int ) {
+	NTR_SetRelativeLevel(tag, level);
+}
+
 // not work?
 //NTR_MoveNPCsTo(oriana_test2, , 2.0)
 exec function NTR_MoveNPCsTo(tag : name, target : name, optional speed : float) {
@@ -195,6 +199,7 @@ exec function ulock() {
 	}
 	
 }
+//addAbl(ntr_triss_monster, ntr_mon_orianna_triss, 0)
 exec function addAbl( tag : name, abl : name, optional remove : bool ) {
 	var           npc : CNewNPC;
 	npc = (CNewNPC)theGame.GetNPCByTag(tag);
@@ -209,18 +214,23 @@ exec function getAttr( tag : name ) {
 	var           npc : CNewNPC;
 	var abls, attrs  : array<name>;
 	var i : int;
+	var val : SAbilityAttributeValue;
 	
 	npc = (CNewNPC)theGame.GetNPCByTag(tag);
 	npc.GetCharacterStats().GetAbilities(abls);
 	npc.GetCharacterStats().GetAllAttributesNames(attrs);
+	if (npc.HasAbility('ntr_mon_orianna_bruxa') || npc.HasAbility('ntr_mon_triss'))
+		NTR_notify("YEAH IT HAS IT!!!");
 	for (i = 0; i < abls.Size(); i += 1) {
 		NTR_notify("Ability: " + abls[i]);
 	}
 	for (i = 0; i < attrs.Size(); i += 1) {
-		NTR_notify("Attribute: " + attrs[i]);
+		val = npc.GetAttributeValue(attrs[i]);
+		NTR_notify("Attribute: " + attrs[i] + ", value: [base = " + val.valueBase + "], [mult = " + val.valueMultiplicative + "], [add = " + val.valueAdditive + "]");
 	}
-	NTR_notify("Max essence: " + npc.GetStatMax(BCS_Essence));
-	NTR_notify("Cur essence: " + npc.GetStat(BCS_Essence));
+	NTR_notify("Max vit: " + npc.GetStatMax(BCS_Vitality));
+	NTR_notify("Cur vit: " + npc.GetStat(BCS_Vitality));
+	NTR_notify("Immortality: " + npc.GetImmortalityMode());
 }
 /* 30
 [NTR_MOD] Max essence: 15357.599609
@@ -326,7 +336,7 @@ exec function execUnhide(range : float) {
     NTR_UnhideActorsInRange(range);
 }
 
-exec function getInRange(range : float) {
+exec function getInRange(range : float, makeFriendly : bool) {
     var entities: array<CGameplayEntity>;
     var actor : CActor;
     var i, t, maxEntities: int;
@@ -362,6 +372,8 @@ exec function getInRange(range : float) {
 
             LogChannel('getInRange', "* GetVoicetag: " + actor.GetVoicetag());
             LogChannel('getInRange', "* GetDisplayName: " + actor.GetDisplayName());
+            if (makeFriendly)
+            	actor.SetTemporaryAttitudeGroup( 'friendly_to_player', AGP_Default );
         }
     }
 }
@@ -375,7 +387,7 @@ quest function scentOn() {
 	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scents', -1 );
 	NTR_notify("scentON !");
 }
-exec function enableScent(enable : bool) {
+/*exec function enableScent(enable : bool) {
 	var scent : CCustomScent;
 	var points : array<Vector>;
 
@@ -391,7 +403,7 @@ exec function scentDist(dist : float) {
 
 	scent = (CCustomScent) theGame.GetEntityByTag('ntr_orianna_scent_l');
 	scent.setScentDistance(dist);
-}
+}*/
 
 exec function GiveReward( rewardName : name ) : void
 {
@@ -646,6 +658,23 @@ exec function barolg() {
 	act.AddTag('ntr_baron_edward');
 	act.AddTag('vip');
 	act.ApplyAppearance('bob_knight_15');
+	act.SetTemporaryAttitudeGroup( 'hostile_to_player', AGP_Default );
+	act.SetAttitude( thePlayer, AIA_Hostile );
+	thePlayer.SetAttitude( act, AIA_Hostile );
+	//NTR_TuneNPC( 'baron_test2', GetWitcherPlayer().GetLevel(), "Hostile", "None", false, "ENGT_Quest", -1 );
+}
+exec function trissmonster() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	var act : CActor;
+	
+	template = (CEntityTemplate)LoadResource("dlc/dlcntr/data/entities/triss_monster.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	act = (CActor) ent;
+	act.AddTag('ntr_test');
+	act.AddTag('vip');
 	act.SetTemporaryAttitudeGroup( 'hostile_to_player', AGP_Default );
 	act.SetAttitude( thePlayer, AIA_Hostile );
 	thePlayer.SetAttitude( act, AIA_Hostile );

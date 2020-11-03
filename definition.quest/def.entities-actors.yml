@@ -98,7 +98,7 @@ templates:
           luminance: 0
 
     usedAppearances:
-      - q704_wounded_boy
+      - niellan
 
   regis_vampire_scene_fix:
     includes:
@@ -532,7 +532,7 @@ templates:
   triss_monster:
     includes:
       #- quests/main_npcs/triss.w2ent
-      - dlc/dlcntr/data/entities/triss_color_effect.w2ent
+      - dlc/dlcntr/data/entities/triss_base.w2ent
 
     appearances:
       triss_yen:
@@ -557,6 +557,18 @@ templates:
       .type: "CNTRCommonNPC"
       name: "TRISS"
       displayName: "Triss"
+      level: 50
+      isImmortal: false
       NTR_avoidDeathEvent: true
       NTR_factNearlyDead: "ntr_intro_triss_dead"
       NTR_factOnHalfHealth: "ntr_intro_triss_half"
+      streamingDistance: 50
+      grantNoExperienceAfterKill: true
+      tags:
+        - HideHealthBarModule
+
+    templateParams:
+      - ".type": CCharacterStatsParam
+        name: Stats
+        abilities:
+          - ntr_triss_monster_abl

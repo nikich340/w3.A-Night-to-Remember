@@ -57,7 +57,7 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670765, category, "group 1", "Just_a_traveler_you_say__And_that's_just_two_sword", 9.5723));
     lines.PushBack(SSbUiExtraLines(2114670766, category, "group 1", "A_witcher__So_you_know_how_to_track_down_somebody_", 8));
     lines.PushBack(SSbUiExtraLines(2114670767, category, "group 1", "Well__come_in_then__we've_matters_to_discuss_", 5));
-    lines.PushBack(SSbUiExtraLines(2114670768, category, "group 1", "I_suppose_to_find_a_red-haired_woman_here_", 2.6503));
+    lines.PushBack(SSbUiExtraLines(2114670768, category, "group 1", "I_supposed_to_find_a_red-haired_woman_here_", 2.6503));
     lines.PushBack(SSbUiExtraLines(2114670769, category, "group 1", "That's_interesting__Because_we're_supposed_to_meet", 5.8686));
     lines.PushBack(SSbUiExtraLines(2114670770, category, "group 1", "Why_are_you_looking_for_her_", 1.4995));
     lines.PushBack(SSbUiExtraLines(2114670771, category, "group 1", "Our_boss_has_questions_for_'er_about_the_orphanage", 6.5442));
@@ -68,14 +68,14 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670776, category, "group 1", "It's_no_concern_of_yours_", 2.3133));
     lines.PushBack(SSbUiExtraLines(2114670777, category, "group 1", "Orianna_will_kill_you__She_is_a_monster__not_a_hum", 7.8518));
     lines.PushBack(SSbUiExtraLines(2114670778, category, "group 1", "I've_not_got_all_the_answers__talk_with_our_leader", 5.1231));
-    lines.PushBack(SSbUiExtraLines(2114670779, category, "group 1", "Would_ya_look_at_that_lads__Vagrant_mutt's_givin'_", 10.2658));
+    lines.PushBack(SSbUiExtraLines(2114670779, category, "group 1", "Would_ya_look_at_that_lads__vagrant_mutt's_givin'_", 10.2658));
     lines.PushBack(SSbUiExtraLines(2114670781, category, "group 1", "It's_a_deal__Where_can_I_find_him_", 2.322));
     lines.PushBack(SSbUiExtraLines(2114670782, category, "group 1", "We_have_pitched_camp_on_the_banks_of_the_lake_know", 7.5912));
     lines.PushBack(SSbUiExtraLines(2114670783, category, "group 1", "Perhaps_you_could_help_us__and_then_our_leader_Bar", 7.3777));
     lines.PushBack(SSbUiExtraLines(2114670790, category, "group 1", "Hahaha__shove_off__vargant!", 3.7467));
     lines.PushBack(SSbUiExtraLines(2114670791, category, "group 1", "If_you_decide_to_help_-_our_camp_is_on_the_banks_o", 9.8214));
     lines.PushBack(SSbUiExtraLines(2114670795, category, "group 1", "Interesting__Son_of_a_bandit_in_the_vampire's_claw", 4.2789));
-    lines.PushBack(SSbUiExtraLines(2114670796, category, "group 1", "What's_that_you're_mutterin'__Go_and_talk_with_the", 3.6653));
+    lines.PushBack(SSbUiExtraLines(2114670796, category, "group 1", "What's_with_the_mutterin'__Go_and_talk_with_the_Ba", 3.6653));
     lines.PushBack(SSbUiExtraLines(2114670800, category, "group 1", "Gonna_answer_me_", 1.0482));
     lines.PushBack(SSbUiExtraLines(2114670801, category, "group 1", "Baron_won't_be_happy__Alright__I'll_tell_you_what_", 5.4262));
     lines.PushBack(SSbUiExtraLines(2114670802, category, "group 1", "Years_ago_our_leader__Baron_Edward__visited_Toussa", 8.064));

@@ -50,6 +50,15 @@ class CNTRCommonNPC extends CNewNPC {
         NTR_slowdownSet = false;
     }
 
+    function PlayEffect( effectName : name, optional target : CNode  ) : bool {
+        NTR_notify("PlayEffect(" + effectName + ", " + target + ")");
+        return super.PlayEffect(effectName, target);
+    }   
+    function PlayEffectOnBone( effectName : name, boneName : name, optional target : CNode ) : bool {
+        NTR_notify("PlayEffectOnBone(" + effectName + ", " + boneName + "," + target + ")");
+        return super.PlayEffectOnBone(effectName, boneName, target);
+    }
+
 	/*protected function Attack( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity)
     {
         var action : W3Action_Attack;
