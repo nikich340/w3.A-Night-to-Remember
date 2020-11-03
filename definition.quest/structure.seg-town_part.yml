@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: town_part
 # 
-# (version: 995, saved: 2020-10-31 21:23:21)
+# (version: 1036, saved: 2020-11-01 19:45:02)
 #
 ---
 structure:
@@ -195,7 +195,6 @@ structure:
             in: [ In ]
             out: [ Out ]
           next:
-            - addfact.scent_enabled_1
             - scene.scent_comment: town_scent
             - waituntil.wait_3s
         
@@ -396,6 +395,7 @@ structure:
             - mappin.scentpin2: Disable
             - mappin.scentpin3: Disable
             - mappin.scentpin4: Disable
+            - addfact.scent_enabled_1
         
         script.FOcus_clue_horse_tracks:
           ".editor":
@@ -655,7 +655,7 @@ structure:
           next: ".done"
         
         addfact.scent_enabled_1:
-          ".editor": [ 1009.3527832031, 102.8685836792 ]
+          ".editor": [ 1201.0, -6.0 ]
           value: [ ntr_town_scent_enabled, 1 ]
           next: ".done"
         

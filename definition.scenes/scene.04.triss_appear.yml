@@ -144,7 +144,7 @@ production:
         repo: "triss"
         by_voicetag: false
         appearance: "triss"
-        tags: [ "triss_monster" ]
+        tags: [ "ntr_triss_monster" ]
 
     cameras:
       cam_1_Shot1_geralt_end_jump:
@@ -261,7 +261,7 @@ dialogscript:
     # shot Shot2 geralt sceptic
     - CUE: shot_2
     # (longest) anim: geralt_neutral_gesture_sceptical_remark_face
-    - PAUSE: 3.6666667461
+    - PAUSE: 2.5
     # shot Shot2 triss far
     - CUE: shot_3
     # (longest) anim: geralt_neutral_gesture_sceptical_remark_face

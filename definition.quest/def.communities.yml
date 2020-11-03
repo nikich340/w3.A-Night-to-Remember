@@ -207,13 +207,11 @@ communities:
     actors:
       barghest1_intro:
         template: dlc/bob/data/characters/npc_entities/monsters/barghest.w2ent
-        tags: [intro_barghest1]
+        tags: [ "ntr_intro_barghest1", "ntr_intro_barghests" ]
       barghest2_intro:
         template: dlc/bob/data/characters/npc_entities/monsters/barghest.w2ent
-        tags: [intro_barghest2]
-      barghest3_intro:
-        template: dlc/bob/data/characters/npc_entities/monsters/barghest.w2ent
-        tags: [intro_barghest3]
+        tags: [ "ntr_intro_barghest2", "ntr_intro_barghests" ]
+
     phases:
       barghests_fight:
         barghest1_intro:
@@ -221,6 +219,7 @@ communities:
           use_last_ap: false
           start_in_ap: false
           spawn_at: bob/barghest1_spawn
+
         barghest2_intro:
           appearance: barghest
           use_last_ap: false
@@ -240,7 +239,7 @@ communities:
           start_in_ap: false
           attitude: AG_grave_hag
           spawn_at: bob/hag_spawn
-          level: 50
+          #level: 50
           immortality: none
           
   comm_orianna_human:
@@ -467,6 +466,7 @@ communities:
 
       fight_only_baron:
         baron_edward:
+          add_tags: [ "olgierd" ]
           attitude: hostile_to_player
           immortality: none
           use_last_ap: false
@@ -515,6 +515,7 @@ communities:
 
       fight_only_baron_run_bandits:
         baron_edward:
+          add_tags: [ "olgierd" ]
           attitude: hostile_to_player
           immortality: none
           use_last_ap: false
@@ -563,6 +564,7 @@ communities:
 
       fight_all:
         baron_edward:
+          add_tags: [ "olgierd" ]
           attitude: hostile_to_player
           immortality: none
           use_last_ap: false
@@ -844,6 +846,7 @@ communities:
           appearance: triss    # [someappearance, only_on_spawn_bool]
           use_last_ap: false
           start_in_ap: false
+          #immortality: invulnerable
           attitude: friendly_to_player
           spawn_at: bob/triss_spawn
       fight:
@@ -851,6 +854,7 @@ communities:
           appearance: triss_monster    # [someappearance, only_on_spawn_bool]
           use_last_ap: false
           start_in_ap: false
+          #immortality: none
           attitude: hostile_to_player
           spawn_at: bob/triss_spawn
           guard: [ bob/magic_area, 0.0 ]
@@ -876,28 +880,26 @@ communities:
       orphanage:
         fat_bandit:
           appearance: [ "bob_thug_lvl2_03", false ]    # [someappearance, only_on_spawn_bool]
-          #attitude: neutral
-          use_last_ap: true
+          attitude: hostile_to_player
+          use_last_ap: false
           start_in_ap: false
-          level: 33
+          level: 50
           spawn_at: bob/bandit1
 
         bandit_2:
           appearance: [ "bob_thug_lvl1_06", false ]    # [someappearance, only_on_spawn_bool]
-          #appearance: [ "bandit_lvl1_04", false ]    # [someappearance, only_on_spawn_bool]
-          #attitude: neutral
-          use_last_ap: true
+          attitude: hostile_to_player
+          use_last_ap: false
           start_in_ap: false
-          level: 33
+          level: 50
           spawn_at: bob/bandit2
 
         bandit_3:
           appearance: [ "bob_thug_lvl1_10", false ]    # [someappearance, only_on_spawn_bool]
-          #appearance: [ "bandit_lvl1_09", false ]    # [someappearance, only_on_spawn_bool]
-          #attitude: neutral
-          use_last_ap: true
+          attitude: hostile_to_player
+          use_last_ap: false
           start_in_ap: false
-          level: 33
+          level: 50
           spawn_at: bob/bandit3
 
       orphanage_normal:

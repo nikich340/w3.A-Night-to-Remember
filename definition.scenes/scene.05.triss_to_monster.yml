@@ -311,7 +311,7 @@ production:
         repo: "triss_monster"
         by_voicetag: false
         appearance: "triss_yen"
-        tags: [ "triss_monster" ]
+        tags: [ "ntr_triss_monster" ]
 
       triss_fake:
         repo: "triss_fake"
@@ -725,7 +725,7 @@ storyboard:
           .@pos: [1.0, triss_monster_woman_sorceress_idle_lp_01]
           blendin: 0.5
       - actor.effect.start: [0.5, triss_monster, fx_push]
-      - actor.effect.start: [0.65, triss_monster, critical_burning]
+      - actor.effect.start: [0.65, triss_monster, critical_burning_monster]
       - actor.appearance: [0.65, triss_monster, triss_monster]
       - prop.effect.start: [0.6, q201_item_fixed_stuffed_unicorn, teleport_appear]
       - prop.hide: [0.9, q201_item_fixed_stuffed_unicorn]

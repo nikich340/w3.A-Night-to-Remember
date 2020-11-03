@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 995, saved: 2020-10-31 21:23:21)
+# (version: 1036, saved: 2020-11-01 19:45:02)
 #
 ---
 structure:
@@ -272,6 +272,15 @@ structure:
           next:
             - script.Set_morph_app
         
+        waituntil.1ss_re:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 4860.0, 921.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.fact_check_fight_2
+        
         waituntil.1sss:
           elapsed: "00:00:01"
           ".editor":
@@ -281,24 +290,6 @@ structure:
           next:
             - script.Play_baron_music
             - addfact.ntr_quest_baron_fight
-        
-        waituntil.1ssss:
-          elapsed: "00:00:01"
-          ".editor":
-            pos: [ 3820.0, 143.0 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - script.Tune_Orianna_bruxa
-        
-        waituntil.1sssss:
-          elapsed: "00:00:01"
-          ".editor":
-            pos: [ 3830.0, 429.0 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - script.Tune_Orianna
         
         waituntil.2_s:
           elapsed: "00:00:02"
@@ -328,6 +319,7 @@ structure:
             out: [ Out ]
           next:
             - scene.scene_31_ntr_completed: Input
+            - waituntil.2sss
         
         waituntil.2sss:
           elapsed: "00:00:02"
@@ -400,7 +392,7 @@ structure:
         waituntil.Wait_bruxa_dead:
           factdb: [ ntr_orianna_bruxa_dead, ">=", 1 ]
           ".editor":
-            pos: [ 4244.0, -71.0 ]
+            pos: [ 4237.0, -77.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -438,6 +430,15 @@ structure:
           next:
             - script.reset_fact
         
+        waituntil.inside_fight_area_2:
+          inside: [ bob/fight_area, PLAYER ]
+          ".editor":
+            pos: [ 4586.0, 1042.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.reset_fact_2
+        
         waituntil.new_wait_until_realtime_elapsed:
           elapsed: "00:00:01"
           ".editor":
@@ -455,6 +456,15 @@ structure:
             out: [ Out ]
           next:
             - addfact.ntr_fight_outside_area
+        
+        waituntil.outside_fight_area_2:
+          outside: [ bob/fight_area, PLAYER ]
+          ".editor":
+            pos: [ 4688.0, 711.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - addfact.ntr_fight_outside_area2
         
         waituntil.room_are:
           inside: [ bob/room_area, PLAYER ]
@@ -478,14 +488,10 @@ structure:
         waituntil.wait_1s:
           elapsed: "00:00:01"
           ".editor":
-            pos: [ 3445.7526855469, 439.7662963867 ]
+            pos: [ 3603.0, 537.0 ]
             in: [ In ]
             out: [ Out ]
-          next:
-            - objective.KILL_ORIANNA: Activate
-            - spawn.orianna_human
-            - script.Orianna_fight_indicator
-            - spawn.spawn_hostile
+          next: ".done"
         
         waituntil.wait_50perc_health:
           factdb: [ ntr_orianna_vampire_halfhealth, ">=", 1 ]
@@ -521,6 +527,7 @@ structure:
             - script.NTR_SaveGame_2
             - objective.Kill_baron_edward: Activate
             - changelayers.river_walls
+            - waituntil.outside_fight_area_2
         
         script.Bruxa_fight_indicator:
           ".editor":
@@ -548,6 +555,17 @@ structure:
             - objective.Kill_bandits: Success
           next.True:
             - objective.Kill_bandits: Failure
+        
+        script.DisplayHudMessage_2:
+          ".editor":
+            pos: [ 5275.0, 800.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: DisplayHudMessage
+          parameter:
+            - localisedStringKey: cname_ntr_outside_fight_warning
+            - localizedStringID: 0
+          next: ".done"
         
         script.Fcous_first_footprints:
           ".editor":
@@ -669,7 +687,7 @@ structure:
             - type: SGT_ForcedCheckPoint
             - slot: -1
           next:
-            - waituntil.wait_1s
+            - script.wait_05_s
         
         script.NTR_SaveGame_2:
           ".editor":
@@ -701,6 +719,17 @@ structure:
           function: NTR_SaveLock
           parameter:
             - lock: false
+          next: ".done"
+        
+        script.NTR_SetRelativeLevel:
+          ".editor":
+            pos: [ 3818.0, 341.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_SetRelativeLevel
+          parameter:
+            - tag: cname_ntr_orianna_vampire
+            - levelBonus: 0
           next: ".done"
         
         script.NTR_releaseOriannaBruxa:
@@ -842,7 +871,7 @@ structure:
         
         script.Set_morph_app_bruxa:
           ".editor":
-            pos: [ 4373.0, 1.0 ]
+            pos: [ 4388.0, 5.0 ]
             in: [ In ]
             out: [ Out ]
           function: AppearanceChange
@@ -864,17 +893,9 @@ structure:
             - saveType: SESB_ClearSaved
           next: ".done"
         
-        script.Tune_Orianna:
-          ".editor":
-            pos: [ 4033.0, 342.0 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_TuneOriannaVampire
-          next: ".done"
-        
         script.Tune_Orianna_bruxa:
           ".editor":
-            pos: [ 3976.0, 100.0 ]
+            pos: [ 3965.0, 81.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_TuneOriannaBruxa
@@ -886,11 +907,10 @@ structure:
             pos: [ 5225.0, -394.0 ]
             in: [ In ]
             out: [ Out ]
-          function: NTR_TuneNPC
+          function: NTR_SetRelativeLevel
           parameter:
             - tag: cname_ntr_baron_bandit
-            - level: 1000
-            - npcGroupType: ENGT_Enemy
+            - levelBonus: 0
           next: ".done"
         
         script.Unlock_front_door:
@@ -904,6 +924,17 @@ structure:
             - newState: EDQS_RemoveLock
           next: ".done"
         
+        script.Wait_05_s:
+          ".editor":
+            pos: [ 3825.0, 128.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Wait
+          parameter:
+            - seconds: 0.5
+          next:
+            - script.Tune_Orianna_bruxa
+        
         script.Warning_1st_sec:
           ".editor":
             pos: [ 3779.0, 662.0 ]
@@ -916,6 +947,19 @@ structure:
             - val: 1
           next.True:
             - script.Hud_warning
+        
+        script.Warning_1st_sec_2:
+          ".editor":
+            pos: [ 5089.0, 729.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FactChecker
+          parameter:
+            - factName: ntr_fight_outside_area2
+            - factCond: "=="
+            - val: 1
+          next:
+            - script.DisplayHudMessage_2
         
         script.branch_fact_7:
           ".editor":
@@ -933,6 +977,22 @@ structure:
           next.True:
             - script.Set_monster_scene_app
             - despawn.despawn_vampire_bruxa
+        
+        script.branch_fact_7_2:
+          ".editor":
+            pos: [ 4548.0, 919.0 ]
+            in: [ In ]
+            out: [ "False", "True" ]
+          function: NTR_FactChecker
+          parameter:
+            - factName: ntr_fight_outside_area2
+            - factCond: ">="
+            - val: 7
+          next.False:
+            - waituntil.1ss_re
+            - waituntil.inside_fight_area_2
+          next.True:
+            - despawn.Despawn_baron
         
         script.check_if_quest_started:
           ".editor":
@@ -954,11 +1014,24 @@ structure:
             out: [ "False", "True" ]
           function: NTR_FactChecker
           parameter:
-            - factName: ntr_fight_orianna
+            - factName: ntr_quest_orianna_fight
             - factCond: "=="
             - val: 1
           next.True:
             - waituntil.outside_fight_area
+        
+        script.fact_check_fight_2:
+          ".editor":
+            pos: [ 4530.0, 803.0 ]
+            in: [ In ]
+            out: [ "False", "True" ]
+          function: NTR_FactChecker
+          parameter:
+            - factName: ntr_quest_baron_fight
+            - factCond: "=="
+            - val: 1
+          next.True:
+            - waituntil.outside_fight_area_2
         
         script.fade_out:
           ".editor":
@@ -1010,6 +1083,17 @@ structure:
           next:
             - script.Kill_Baron
         
+        script.ntr_orianna_vampire_app:
+          ".editor":
+            pos: [ 3814.0, 260.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: AppearanceChange
+          parameter:
+            - npcsTag: cname_ntr_orianna_vampire
+            - appearanceName: cname_orianna_vampire
+          next: ".done"
+        
         script.reset_fact:
           ".editor":
             pos: [ 3466.0, 923.0 ]
@@ -1018,6 +1102,16 @@ structure:
           function: ResetFactQuest
           parameter:
             - factID: cname_ntr_fight_outside_area
+          next: ".done"
+        
+        script.reset_fact_2:
+          ".editor":
+            pos: [ 4802.0, 1048.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: ResetFactQuest
+          parameter:
+            - factID: cname_ntr_fight_outside_area2
           next: ".done"
         
         script.stop_music:
@@ -1044,6 +1138,20 @@ structure:
             - eventName: mus_q705_tw3_theme
             - saveType: SESB_ClearSaved
           next: ".done"
+        
+        script.wait_05_s:
+          ".editor":
+            pos: [ 3435.0, 467.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Wait
+          parameter:
+            - seconds: 0.5
+          next:
+            - script.Orianna_fight_indicator
+            - spawn.spawn_hostile
+            - spawn.orianna_human
+            - objective.KILL_ORIANNA: Activate
         
         changelayers.Show_orianna_children_layer:
           ".editor":
@@ -1189,7 +1297,7 @@ structure:
         
         spawn.bruxa_spawn:
           ".editor":
-            pos: [ 3692.0, 44.0 ]
+            pos: [ 3696.0, 38.0 ]
             hint: spawn-only
             in: []
             out: []
@@ -1197,7 +1305,7 @@ structure:
           spawnsets:
             - comm_orianna_bruxa
           next:
-            - waituntil.1ssss
+            - script.Wait_05_s
         
         spawn.fight_all_river:
           ".editor":
@@ -1214,7 +1322,7 @@ structure:
         
         spawn.orianna_human:
           ".editor":
-            pos: [ 3635.4763183594, 440.0137329102 ]
+            pos: [ 3637.0, 443.0 ]
             hint: spawn-only
             in: []
             out: []
@@ -1266,7 +1374,8 @@ structure:
           spawnsets:
             - comm_orianna_vampire
           next:
-            - waituntil.1sssss
+            - script.NTR_SetRelativeLevel
+            - script.ntr_orianna_vampire_app
         
         spawn.spawn_hostile_baron:
           ".editor":
@@ -1306,6 +1415,17 @@ structure:
           next:
             - spawn.river_in_inn
         
+        despawn.Despawn_baron:
+          ".editor":
+            pos: [ 5547.0, 1041.0 ]
+            hint: despawn-only
+            in: []
+            out: []
+          spawnsets:
+            - comm_bandits_river
+          next:
+            - questoutcome.NTR_outcome: Failure
+        
         despawn.despawn_bandits_river:
           ".editor":
             pos: [ 6241.0, -7.0 ]
@@ -1318,7 +1438,7 @@ structure:
         
         despawn.despawn_bandits_river_and_ori_horse:
           ".editor":
-            pos: [ 5759.0, 454.0 ]
+            pos: [ 5803.0, 415.0 ]
             hint: despawn-only
             in: []
             out: []
@@ -1480,6 +1600,13 @@ structure:
           next:
             - script.branch_fact_7
             - script.Warning_1st_sec
+        
+        addfact.ntr_fight_outside_area2:
+          ".editor": [ 4884.0, 788.0 ]
+          value: [ ntr_fight_outside_area2, 1 ]
+          next:
+            - script.branch_fact_7_2
+            - script.Warning_1st_sec_2
         
         addfact.ntr_quest_baron_alive:
           ".editor": [ 5739.0, 569.0 ]

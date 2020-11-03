@@ -745,7 +745,8 @@ dialogscript:
 
   section_storyboard_ui4:
     - CUE: shot_d1_ger
-    - geralt: "[2.7976]2114670768|I suppose to find a red-haired woman here."
+    #- geralt: "[2.7976]2114670768|I suppose to find a red-haired woman here."
+    - geralt: "I'm looking for a woman. Red-haired."
     # shot shot8 bandit
     - CUE: shot_d1_band
     - fat_bandit: "[5.8686]2114670769|That's interesting. Because we're supposed to meet her too."
@@ -777,7 +778,8 @@ dialogscript:
 
   section_why_children:
     - CUE: shot_d4_ger
-    - geralt: "[1.7966]2114670775|Why are you interested in children?"
+    #- geralt: "[1.7966]2114670775|Why are you interested in children?"
+    - geralt: "0000382555|What did you need the children for?"
     - CUE: shot_d4_band
     - fat_bandit: "[2.3133]2114670776|It's no concern of yours."
     - NEXT: script_set_whychildren

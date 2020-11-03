@@ -657,7 +657,7 @@ layers:
         rot: [ 0.0, 0.0, 148.9400024414 ]
 
       wall_hack_1: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -834.3278198242, -1708.5700683594, 96.9514083862 ]
         rot: [ 90.0, -4.9999613762, -121.5199813843 ]
 

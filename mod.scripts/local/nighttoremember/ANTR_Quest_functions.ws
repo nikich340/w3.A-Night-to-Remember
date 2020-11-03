@@ -8,6 +8,10 @@ quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	return false;
 }*/
 
+latent quest function NTR_Wait(seconds : float) {
+	Sleep(seconds);
+}
+
 quest function NTR_ForceKillNPC(tag : name, playDeath : bool) {
 	var npcs : array<CNewNPC>;
 	var NTR_npc : CNTRCommonNPC;
@@ -65,34 +69,13 @@ quest function NTR_SaveGame(type : string, slot : int) {
 			break;
 	}
 }
-quest function NTR_TuneOriannaVampire() {
-	var NPC    : CNewNPC;
-	var level  : int;
-	NPC = (CNewNPC)theGame.GetNPCByTag('ntr_orianna_vampire');
-
-	if (!NPC) {
-		NTR_notify("ERROR! Orianna vampire entity was not found!");
-	}
-
-	NPC.SetAppearance('orianna_vampire');
-	/*NPC.SetTemporaryAttitudeGroup( 'hostile_to_player', AGP_Default );
-	NPC.SetAttitude( thePlayer, AIA_Hostile );
-	thePlayer.SetAttitude( NPC, AIA_Hostile );*/
-
-	NPC.SetImmortalityMode( AIM_None, AIC_Combat );
-	NPC.SetImmortalityMode( AIM_None, AIC_Default );
-	NPC.SetImmortalityMode( AIM_None, AIC_Fistfight );
-	NPC.SetImmortalityMode( AIM_None, AIC_IsAttackableByPlayer );
-
-	NPC.SetNPCType(ENGT_Enemy);
-}
-quest function NTR_TuneOriannaBruxa() {
+latent quest function NTR_TuneOriannaBruxa() {
 	var NPC    : CNewNPC;
 	var level  : int;
 	NPC = (CNewNPC)theGame.GetNPCByTag('ntr_orianna_bruxa');
 
 	if (!NPC) {
-		NTR_notify("ERROR! Orianna bruxa entity was not found!");
+		LogChannel('NTR_TuneOriannaBruxa', "ERROR! Orianna bruxa entity was not found!");
 	}
 
 	level = GetWitcherPlayer().GetLevel() + 5;
@@ -391,6 +374,26 @@ quest function NTR_GameplayMusic( areaName : string )
 
 }
 // -------------------------------------------------------------------------------
+quest function NTR_SetRelativeLevel( tag : name, levelBonus : int ) {
+	var NPCs      : array <CNewNPC>;
+	var i, level  : int;
+
+	theGame.GetNPCsByTag(tag, NPCs);
+	if (NPCs.Size() < 1) {
+		//theGame.GetGuiManager().ShowNotification("[ERROR] No NPCs found with tag <" + tag + ">");
+		LogChannel('NTR_SetRelativeLevel', "[ERROR] No NPCs found with tag <" + tag + ">");
+		return;
+	}
+	level = GetWitcherPlayer().GetLevel() + levelBonus;
+	if (level < 1)
+		level = 1;
+
+	for (i = 0; i < NPCs.Size(); i += 1 ) {	
+		NPCs[i].SetLevel(level);
+	}
+}
+// -------------------------------------------------------------------------------
+// Not good
 quest function NTR_TuneNPC( tag : name, level : int, optional attitude : string, optional mortality : string, optional finishers : bool, optional npcGroupType : string, optional scale : float ) {
 	var NPCs   : array <CNewNPC>;
 	var i      : int;
@@ -405,7 +408,6 @@ quest function NTR_TuneNPC( tag : name, level : int, optional attitude : string,
 		LogChannel('NTR_TuneNPC', "[ERROR] No NPCs found with tag <" + tag + ">");
 		return;
 	}
-	theGame.GetGuiManager().ShowNotification("[OK] Tune npc with tag <" + tag + ">");
 	if (level > 500) {
 		// 1005 = playerLvl + 5;
 		// 995 = playerLvl - 5

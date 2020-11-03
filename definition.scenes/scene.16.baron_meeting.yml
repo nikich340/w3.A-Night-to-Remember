@@ -941,8 +941,8 @@ storyboard:
       - actor.placement.end: [0.995, horse_baron, [ 1.4154663086, 10.6003417969, -0.6079101563 ], [ 0.0, 0.0, 202.4798431396 ]]
       - actor.placement.end: [0.995, Baron_Edward, [ 1.3941040039, 10.4510498047, -0.5850307007 ], [ 0.0, 0.0, 208.3099670410 ]]
       
-     # - actor.pose: [0.0, Baron_Edward_dg_horse_standing_idle02]
-      - actor.pose: [0.0, Baron_Edward_horse_standing_idle01]
+      - actor.pose: [0.0, Baron_Edward_dg_horse_standing_idle02]
+      #- actor.pose: [0.0, Baron_Edward_horse_standing_idle01]
       - actor.pose: [0.0, horse_baron_horse_walk]
       - cam.blend.start: [0.0, cam_7_Shot5_barron_arrive]
       - cam.blend.end: [1.0, cam_19_Shot5_barron_arrive_pan]
@@ -1583,17 +1583,16 @@ dialogscript:
         single_use: true
         emphasize: true
       - choice: ["Why do you wanna take the child?", section_about_child]
-      - choice: ["413748|00000000||Picked strange place to hide.", section_bad_place]
+      - choice: ["2114670869|Picked bad place to hide.", section_bad_place]
         single_use: true
-        #1198754|Something wicked here. It's in the air, I can smell it…
-        #573937|00000000||See what I can do.
+        condition: [ poi_gor_a_10_boss_killed, "!=", 1 ]
 
   section_bad_place:
     - CUE: shot_bad_place_g1
     - geralt: "0001198754|Something wicked here. It's in the air, I can smell it…"
     - CUE: shot_bad_place_b1
-    - Baron_Edward: "You are right, we heard some scary sounds from that direction, by the Amphitheatre..."
-    - Baron_Edward: "I told my people to stay away from it. It will be nice if you check what's wrong there."
+    - Baron_Edward: "2114670913|You are right, we heard some scary sounds from that direction, by the Amphitheatre..."
+    - Baron_Edward: "2114670914|I told my people to stay away from it. It will be nice if you check what's wrong there."
     - CUE: shot_bad_place_g2
     - geralt: "0000573937|See what I can do."
     - NEXT: script_setfact_ampitheatre

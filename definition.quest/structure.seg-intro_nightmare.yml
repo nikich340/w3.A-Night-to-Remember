@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 995, saved: 2020-10-31 21:23:21)
+# (version: 1036, saved: 2020-11-01 19:45:02)
 #
 ---
 structure:
@@ -9,9 +9,10 @@ structure:
     intro_nightmare:
       blocks:
         in:
-          ".editor": [ 330.0, 350.0 ]
+          ".editor": [ 329.0, 391.0 ]
           next:
             - spawn.spawn_intro_hag
+            - script.fade_out_05
         
         scene.01_intro_hag:
           ".editor":
@@ -26,6 +27,7 @@ structure:
             - waituntil.wait_hag_onDead
             - script.tune_hag2
             - script.Kill_banshee
+            - objective.Kill_hag: Activate
         
         scene.02_hag_runs:
           ".editor":
@@ -38,6 +40,7 @@ structure:
           _fadein: false
           next.Output:
             - despawn.despawn_hag
+            - objective.Kill_hag: Success
         
         scene.04_triss_appear:
           ".editor":
@@ -55,7 +58,7 @@ structure:
         
         scene.05_triss_to_monster:
           ".editor":
-            pos: [ 4300.0, 425.0 ]
+            pos: [ 4314.0, 426.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 05.triss_to_monster.yml
@@ -93,7 +96,7 @@ structure:
         
         scene.09_triss_final:
           ".editor":
-            pos: [ 5811.0, 575.0 ]
+            pos: [ 6067.0, 556.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 09.triss_final.yml
@@ -116,33 +119,7 @@ structure:
             - objective.blood_tracks: Success
             - waituntil.triss_found_area
             - objective.behind_wall: Activate
-        
-        waituntil.1s:
-          elapsed: "00:00:01"
-          ".editor":
-            pos: [ 3839.0, 436.0 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - script.Triss_monster_yen_app
-        
-        waituntil.1ss:
-          elapsed: "00:00:01"
-          ".editor":
-            pos: [ 4127.0, 459.0 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - scene.05_triss_to_monster: Input
-        
-        waituntil.1sss:
-          elapsed: "00:00:01"
-          ".editor":
-            pos: [ 5644.0, 489.0 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - scene.09_triss_final: Input
+            - script.play_music_invest_suspense
         
         waituntil.Triss_out:
           outside: [ bob/magic_area, ntr_triss_monster ]
@@ -176,13 +153,13 @@ structure:
         waituntil.half_dead:
           factdb: [ ntr_intro_triss_half, ">=", 1 ]
           ".editor":
-            pos: [ 4900.0, 425.0 ]
+            pos: [ 4901.0, 435.0 ]
             in: [ In ]
             out: [ Out ]
           next:
             - scene.07_gameplay_triss_power: Input
             - waituntil.wait_triss_onDeath
-            - script.tune_triss_power
+            - script.ntr_mon_triss_berserk
         
         waituntil.if_triss_not_dead:
           factdb: [ ntr_intro_triss_dead, "=", 0 ]
@@ -238,7 +215,6 @@ structure:
           next:
             - scene.06_triss_barghests: Input
             - script.tune_barghest_1
-            - script.tune_barghest_2
         
         waituntil.wait_blood_examined:
           examined: bob/blood_on_wall
@@ -253,12 +229,12 @@ structure:
         waituntil.wait_contact_triss:
           entered: [ bob/triss_contact, PLAYER ]
           ".editor":
-            pos: [ 3695.0, 542.0 ]
+            pos: [ 3650.0, 534.0 ]
             in: [ In ]
             out: [ Out ]
           next:
             - script.fade_out_1s
-            - waituntil.1s
+            - script.NTR_Wait
         
         waituntil.wait_hag_onDead:
           factdb: [ ntr_hag_intro_dead, ">=", 1 ]
@@ -289,6 +265,51 @@ structure:
           function: NTR_HideActorsHagScene
           next: ".done"
         
+        script.NTR_Wait:
+          ".editor":
+            pos: [ 3804.0, 440.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Wait
+          parameter:
+            - seconds: 0.5
+          next:
+            - script.Triss_monster_yen_app
+        
+        script.NTR_Wait_2:
+          ".editor":
+            pos: [ 5868.0, 557.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Wait
+          parameter:
+            - seconds: 0.5
+          next:
+            - scene.09_triss_final: Input
+        
+        script.NTR_Wait_22:
+          ".editor":
+            pos: [ 4056.0, 455.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Wait
+          parameter:
+            - seconds: 0.5
+          next:
+            - settime.time_01
+        
+        script.Save_game:
+          ".editor":
+            pos: [ 4482.0, 484.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_SaveGame
+          parameter:
+            - type: SGT_ForcedCheckPoint
+            - slot: 0
+          next:
+            - script.half_sec
+        
         script.Stop_triss_effects:
           ".editor":
             pos: [ 5308.6000976562, 574.8638916016 ]
@@ -297,17 +318,17 @@ structure:
           function: PlayEffectQuest
           parameter:
             - entityTag: cname_ntr_triss_monster
-            - effectName: cname_a
+            - effectName: cname_hand_fx
             - activate: false
             - persistentEffect: false
             - deactivateAll: true
             - preventEffectStacking: false
           next:
-            - script.triss_triss_appearance
+            - script.fade_out
         
         script.Triss_monster_yen_app:
           ".editor":
-            pos: [ 3979.0, 319.0 ]
+            pos: [ 3926.0, 357.0 ]
             in: [ In ]
             out: [ Out ]
           function: AppearanceChange
@@ -315,20 +336,59 @@ structure:
             - npcsTag: cname_ntr_triss_monster
             - appearanceName: cname_triss_yen
           next:
-            - waituntil.1ss
+            - script.NTR_Wait_22
         
-        script.fade_out_1s:
+        script.fade_out:
           ".editor":
-            pos: [ 3888.0, 581.0 ]
+            pos: [ 5494.0, 574.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FadeOutQuest
+          parameter:
+            - fadeTime: 0.5
+            - r: 0
+            - g: 0
+            - b: 0
+          next:
+            - script.wait_05s
+        
+        script.fade_out_05:
+          ".editor":
+            pos: [ 499.0, 284.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_FadeOutQuest
           parameter:
             - fadeTime: 1.0
+            - r: 0.0
+            - g: 0.0
+            - b: 0.0
+          next: ".done"
+        
+        script.fade_out_1s:
+          ".editor":
+            pos: [ 3823.0, 577.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FadeOutQuest
+          parameter:
+            - fadeTime: 0.5
             - r: 0
             - g: 0
             - b: 0
           next: ".done"
+        
+        script.half_sec:
+          ".editor":
+            pos: [ 4603.0, 396.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Wait
+          parameter:
+            - seconds: 0.5
+          next:
+            - script.play_music_combat_triss
+            - script.tune_triss
         
         script.hide_triss_indicator:
           ".editor":
@@ -356,22 +416,21 @@ structure:
             - preventEffectStacking: false
           next: ".done"
         
-        script.new_scriptcall:
+        script.ntr_mon_triss_berserk:
           ".editor":
-            pos: [ 5642.0, 678.0 ]
+            pos: [ 5084.0, 530.0 ]
             in: [ In ]
             out: [ Out ]
-          function: NTR_FadeOutQuest
+          function: ModifyPlayerAbilityQuest
           parameter:
-            - fadeTime: 1.0
-            - r: 0
-            - g: 0
-            - b: 0
+            - abilityName: cname_ntr_triss_monster_berserk
+            - remove: false
+            - npcTag: cname_ntr_triss_monster
           next: ".done"
         
         script.play_music_combat_triss:
           ".editor":
-            pos: [ 4700.0, 325.0 ]
+            pos: [ 4773.0, 331.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
@@ -382,13 +441,14 @@ structure:
         
         script.play_music_invest_suspense:
           ".editor":
-            pos: [ 3495.2631835938, 445.5263366699 ]
+            pos: [ 3327.0, 402.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
           parameter:
             - areaName: toussaint
             - eventName: mus_credits_ep2_secondary
+            - saveType: SESB_Save
           next: ".done"
         
         script.teleport_triss:
@@ -404,7 +464,7 @@ structure:
         
         script.triss_indicator:
           ".editor":
-            pos: [ 4900.0, 525.0 ]
+            pos: [ 4677.0, 625.0 ]
             in: [ In ]
             out: [ Out ]
           function: ShowBossFightIndicator
@@ -415,47 +475,24 @@ structure:
         
         script.triss_triss_appearance:
           ".editor":
-            pos: [ 5492.0, 578.0 ]
+            pos: [ 5854.0, 673.0 ]
             in: [ In ]
             out: [ Out ]
           function: AppearanceChange
           parameter:
             - npcsTag: cname_ntr_triss_monster
             - appearanceName: cname_triss
-          next:
-            - script.new_scriptcall
-            - waituntil.1sss
+          next: ".done"
         
         script.tune_barghest_1:
           ".editor":
             pos: [ 5500.0, 225.0 ]
             in: [ In ]
             out: [ Out ]
-          function: NTR_TuneNPC
+          function: NTR_SetRelativeLevel
           parameter:
-            - tag: cname_intro_barghest1
-            - level: 990
-            - attitude: Hostile
-            - mortality: None
-            - finishers: false
-            - npcGroupType: ENGT_Enemy
-            - scale: -1.0
-          next: ".done"
-        
-        script.tune_barghest_2:
-          ".editor":
-            pos: [ 5500.0, 125.0 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_TuneNPC
-          parameter:
-            - tag: cname_intro_barghest2
-            - level: 990
-            - attitude: Hostile
-            - mortality: None
-            - finishers: false
-            - npcGroupType: ENGT_Enemy
-            - scale: -1.0
+            - tag: cname_ntr_intro_barghests
+            - levelBonus: -10
           next: ".done"
         
         script.tune_hag2:
@@ -463,50 +500,48 @@ structure:
             pos: [ 1285.625, 460.625 ]
             in: [ In ]
             out: [ Out ]
-          function: NTR_TuneNPC
+          function: NTR_SetRelativeLevel
           parameter:
             - tag: cname_ntr_hag_intro
-            - level: 995
-            - attitude: Hostile
-            - mortality: None
-            - finishers: false
-            - npcGroupType: ENGT_Enemy
-            - scale: -1.0
+            - level: -5
           next: ".done"
         
         script.tune_triss:
           ".editor":
-            pos: [ 4700.0, 475.0 ]
+            pos: [ 4736.0, 532.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_TuneNPC
           parameter:
             - tag: cname_ntr_triss_monster
-            - level: 1005
+            - level: 975
             - attitude: Hostile
-            - mortality: None
-            - finishers: false
-            - npcGroupType: ENGT_Enemy
-            - scale: -1.0
+            - immortality: None
           next:
-            - script.triss_indicator
             - waituntil.half_dead
         
         script.tune_triss_power:
           ".editor":
-            pos: [ 5100.0, 525.0 ]
+            pos: [ 5151.0, 611.0 ]
             in: [ In ]
             out: [ Out ]
-          function: NTR_TuneNPC
+          function: NTR_SetRelativeLevel
           parameter:
             - tag: cname_ntr_triss_monster
-            - level: 0
-            - attitude: Hostile
-            - mortality: None
-            - finishers: false
-            - npcGroupType: ENGT_Enemy
-            - scale: -1.0
+            - levelBonus: 0
           next: ".done"
+        
+        script.wait_05s:
+          ".editor":
+            pos: [ 5681.0, 573.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Wait
+          parameter:
+            - seconds: 0.5
+          next:
+            - script.triss_triss_appearance
+            - script.NTR_Wait_2
         
         changelayers.hide_barrier:
           ".editor":
@@ -553,7 +588,6 @@ structure:
             - after_triss_to_monster
           next:
             - waituntil.outside_magic_barrier
-            - script.play_music_combat_triss
             - script.magic_barrier_fx
             - waituntil.Triss_out
         
@@ -594,7 +628,7 @@ structure:
         
         spawn.triss_fight_magic_area:
           ".editor":
-            pos: [ 4500.0, 475.0 ]
+            pos: [ 4470.0, 726.0 ]
             hint: spawn-only
             in: []
             out: []
@@ -602,7 +636,8 @@ structure:
           spawnsets:
             - comm_triss
           next:
-            - script.tune_triss
+            - script.triss_indicator
+            - script.Save_game
         
         despawn.despawn_barghests:
           ".editor":
@@ -638,7 +673,7 @@ structure:
         
         despawn.despawn_triss:
           ".editor":
-            pos: [ 5984.0, 572.0 ]
+            pos: [ 6242.0, 644.0 ]
             hint: despawn-only
             in: []
             out: []
@@ -652,6 +687,13 @@ structure:
           entry: quests/nightofnightmares/intro_hag1
           notify: true
           activate_root: true
+          next: ".done"
+        
+        objective.Kill_hag:
+          ".editor": [ 1320.0, 616.0 ]
+          objective: nightofnightmares/intro_hag/kill_hag
+          notify: true
+          track: true
           next: ".done"
         
         objective.behind_wall:
@@ -707,8 +749,14 @@ structure:
             - scene.01_intro_hag: Input
             - addfact.ntr_quest_started
         
+        settime.time_01:
+          ".editor": [ 4184.0, 365.0 ]
+          time: "01:00"
+          next:
+            - scene.05_triss_to_monster: Input
+        
         addfact.ntr_quest_intro_completed:
-          ".editor": [ 6160.0, 629.0 ]
+          ".editor": [ 6397.0, 552.0 ]
           value: [ ntr_quest_intro_completed, 1 ]
           next:
             - out
@@ -719,6 +767,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 6321.0, 568.0 ]
+          ".editor": [ 6572.0, 631.0 ]
           next: ".done"
         

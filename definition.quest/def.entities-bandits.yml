@@ -13,12 +13,12 @@ templates:
     entityObject:
       .type: "CNTRBanditNPC"
       displayName: "Baron Edward"
-      NTR_factOnDeath: "ntr_baron_edward_dead"
+      voiceTag: "BARON EDWARD"
+      NTR_factNearlyDead: "ntr_baron_edward_dead"
       NTR_factOnHalfHealth: "ntr_baron_edward_halfhealth"
       NTR_avoidDeathEvent: true
-      NTR_animationMultiplier: 1.2
+      NTR_animationMultiplier: 1.1
       tags:
-        - olgierd
         - olgierd_gpl
 
       grantNoExperienceAfterKill: true
@@ -115,10 +115,12 @@ templates:
 
     templateParams:
       - ".type": CAnimAnimsetsParam
-        name: olgierd
+        name: ntr_baron
         componentName: man_base
         animationSets:
           - "dlc\\dlcntr\\data\\entities\\baron\\olgierd.w2anims"
+          - "animations\\interaction\\horse_draft\\man_horse_sword.w2anims"
+          - "animations\\interaction\\horse_draft\\man_horse_sword.w2anims"
           #- "dlc\\ep1\\data\\animations\\man\\combat\\olgierd.w2anims"
   
       - ".type": CInventoryDefinition
@@ -137,6 +139,13 @@ templates:
             initializer:
               .type: CInventoryInitializerUniform
               itemName: "la_espada_steel"
+              
+      - ".type": CCharacterStatsParam
+        name: ntr_abilities
+        abilities:
+          - DisableDismemberment
+          - DisableFinishers
+          - InstantKillImmune
 
     effects:
       cut_head_fx:
@@ -224,6 +233,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
+      level: 50
 
     usedAppearances:
       - bob_thug_lvl2_03
@@ -237,6 +247,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
+      level: 50
 
     usedAppearances:
       - bob_thug_lvl1_06
@@ -251,6 +262,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
+      level: 50
 
     usedAppearances:
       - bob_raider_lvl1_03
@@ -264,6 +276,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
+      level: 50
 
     usedAppearances:
       - bob_raider_lvl1_21
@@ -277,6 +290,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
+      level: 50
 
     usedAppearances:
       - bob_raider_lvl1_07
@@ -289,6 +303,7 @@ templates:
       .type: "CNTRBanditNPC"
       #name: "IORWETH"
       displayName: "Baron's bandit"
+      level: 50
 
     usedAppearances:
       - __q703_nazairi_01

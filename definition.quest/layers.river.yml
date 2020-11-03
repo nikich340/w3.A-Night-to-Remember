@@ -5,142 +5,142 @@ layers:
 
     statics: 
       wall1: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -255.8231658936, -569.8696899414, -0.9050903320 ]
         rot: [ 0.0, 0.0, -51.9199905396 ]
 
       wall1_1: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -253.3835601807, -572.9767456055, -1.1482193470 ]
         rot: [ 0.0, 0.0, -51.9199905396 ]
 
       wall1_10: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -231.2346801758, -600.9551391602, -1.9580862522 ]
         rot: [ 0.0, 0.0, -51.9199905396 ]
 
       wall1_11: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -228.9268188477, -603.8901367188, -2.6180856228 ]
         rot: [ 0.0, 0.0, -51.9199905396 ]
 
       wall1_12: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -225.9020996094, -606.2116699219, -2.6061911583 ]
         rot: [ 0.0, 0.0, -26.6199836731 ]
 
       wall1_13: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -222.3459472656, -608.0018310547, -2.6061911583 ]
         rot: [ 0.0, 0.0, -26.6199836731 ]
 
       wall1_14: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -218.7666320801, -609.7852783203, -2.6061892509 ]
         rot: [ 0.0, 0.0, -26.6199836731 ]
 
       wall1_15: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -215.1773223877, -611.5362548828, -2.6061892509 ]
         rot: [ 0.0, 0.0, -26.6199836731 ]
 
       wall1_16: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -211.6502532959, -613.4508666992, -2.4054412842 ]
         rot: [ 0.0, 0.0, -34.7599792480 ]
 
       wall1_17: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -208.2236175537, -615.5034179688, -2.4054412842 ]
         rot: [ 0.0, 0.0, -28.1599731445 ]
 
       wall1_18: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -204.7770690918, -617.3587036133, -2.4482858181 ]
         rot: [ 0.0, 0.0, -28.1599731445 ]
 
       wall1_19: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -201.3032379150, -619.2324218750, -2.4482858181 ]
         rot: [ 0.0, 0.0, -28.1599731445 ]
 
       wall1_2: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -250.9482269287, -576.0519409180, -1.1482193470 ]
         rot: [ 0.0, 0.0, -51.9199905396 ]
 
       wall1_20: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -197.7721099854, -621.0836181641, -2.4482858181 ]
         rot: [ 0.0, 0.0, -28.1599731445 ]
 
       wall1_21: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -194.2323455811, -622.9806518555, -2.4482858181 ]
         rot: [ 0.0, 0.0, -28.1599731445 ]
 
       wall1_22: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -190.6780700684, -624.7812500000, -2.4482858181 ]
         rot: [ 0.0, 0.0, -25.9599742889 ]
 
       wall1_23: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -187.1130523682, -626.5362548828, -2.4482858181 ]
         rot: [ 0.0, 0.0, -25.9599742889 ]
 
       wall1_24: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -183.4984436035, -628.1830444336, -2.3395121098 ]
         rot: [ 0.0, 0.0, -25.9599742889 ]
 
       wall1_25: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -179.7392578125, -629.2161254883, -2.4395117760 ]
         rot: [ 0.0, 0.0, -2.4199719429 ]
 
       wall1_26: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -175.8313598633, -628.4454345703, -2.4395117760 ]
         rot: [ 0.0, 0.0, 22.8800296783 ]
 
       wall1_27: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -172.2368316650, -626.8290405273, -2.4395117760 ]
         rot: [ 0.0, 0.0, 25.9600296021 ]
 
       wall1_3: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -248.5276641846, -579.1660156250, -1.1482193470 ]
         rot: [ 0.0, 0.0, -51.9199905396 ]
 
       wall1_4: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -245.9858398438, -582.3641357422, -1.1482193470 ]
         rot: [ 0.0, 0.0, -51.9199905396 ]
 
       wall1_5: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -243.5131835938, -585.4603271484, -1.1482193470 ]
         rot: [ 0.0, 0.0, -51.9199905396 ]
 
       wall1_6: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -241.0537261963, -588.5261230469, -1.1482193470 ]
         rot: [ 0.0, 0.0, -51.9199905396 ]
 
       wall1_7: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -238.6028900146, -591.6662597656, -1.1482193470 ]
         rot: [ 0.0, 0.0, -51.9199905396 ]
 
       wall1_8: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -236.1588439941, -594.7326049805, -1.1482193470 ]
         rot: [ 0.0, 0.0, -51.9199905396 ]
 
       wall1_9: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_visible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
         pos: [ -233.7335662842, -597.8236694336, -1.1482193470 ]
         rot: [ 0.0, 0.0, -51.9199905396 ]
 
@@ -1946,12 +1946,6 @@ layers:
         pos: [ 8.1128673553, -1429.7302246094, 0.5744942427 ]
 
     statics: 
-      ntr_agent_fisherman:
-        template: "CNTRScriptedAgent:ntr_scripted_agent"
-        pos: [ -410.45, -1439.175, 87.065 ]
-        rot: [ 0.0, 0.0, 0.0 ]
-        tags: [ "ntr_agent_fisherman" ]
-
       footprint_to_fisher: 
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_footprints_to_fisher" ]

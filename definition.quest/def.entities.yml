@@ -112,10 +112,6 @@ templates:
           rangeMax: 3.0
           isEnabled: true
           reportToScript: true
-
-  ntr_scripted_agent:
-    entityObject:
-      .type: "CNTRScriptedAgent" 
       
   memory_vision_env:
     entityObject:

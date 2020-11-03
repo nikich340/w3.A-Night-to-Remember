@@ -55,7 +55,7 @@ storyscene function NTR_RemoveAttachment_S( player : CStoryScenePlayer, id : int
 		entities[i].Destroy();
 	}
 }
-storyscene function NTR_CreateAttachment_S( player : CStoryScenePlayer, id : int ) {
+latent storyscene function NTR_CreateAttachment_S( player : CStoryScenePlayer, id : int ) {
 	var template                 : CEntityTemplate;
 	var entity, attachment       : CEntity;
 	var entityTag, attachmentTag : name;
@@ -69,7 +69,7 @@ storyscene function NTR_CreateAttachment_S( player : CStoryScenePlayer, id : int
 			entityTag = 'ntr_orianna_bruxa';
 			attachmentTag = 'ntr_bruxa_arrow1';
 
-			template = (CEntityTemplate)LoadResource("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
+			template = (CEntityTemplate)LoadResourceAsync("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
 			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
 			attachment.AddTag(attachmentTag);
 			entity = theGame.GetEntityByTag(entityTag);
@@ -86,7 +86,7 @@ storyscene function NTR_CreateAttachment_S( player : CStoryScenePlayer, id : int
 			entityTag = 'ntr_orianna_bruxa';
 			attachmentTag = 'ntr_bruxa_arrow2';
 
-			template = (CEntityTemplate)LoadResource("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
+			template = (CEntityTemplate)LoadResourceAsync("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
 			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
 			attachment.AddTag(attachmentTag);
 			entity = theGame.GetEntityByTag(entityTag);
@@ -101,7 +101,7 @@ storyscene function NTR_CreateAttachment_S( player : CStoryScenePlayer, id : int
 		case 3:
 			attachmentTag = 'ntr_geralt_letter_stamped';
 
-			template = (CEntityTemplate)LoadResource("dlc\bob\data\items\quest_items\q705\q705_item__assasination_letter_closed_small.w2ent", true);
+			template = (CEntityTemplate)LoadResourceAsync("dlc\bob\data\items\quest_items\q705\q705_item__assasination_letter_closed_small.w2ent", true);
 			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
 			attachment.AddTag(attachmentTag);
 
@@ -115,7 +115,7 @@ storyscene function NTR_CreateAttachment_S( player : CStoryScenePlayer, id : int
 			entityTag = 'ntr_orianna_human';
 			attachmentTag = 'ntr_orianna_letter_opened';
 
-			template = (CEntityTemplate)LoadResource("dlc\bob\data\items\quest_items\q705\q705_item__comercial_poster_stamped.w2ent", true);
+			template = (CEntityTemplate)LoadResourceAsync("dlc\bob\data\items\quest_items\q705\q705_item__comercial_poster_stamped.w2ent", true);
 			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
 			attachment.AddTag(attachmentTag);
 			entity = theGame.GetEntityByTag(entityTag);

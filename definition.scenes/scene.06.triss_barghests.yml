@@ -161,19 +161,19 @@ production:
         repo: "triss"
         by_voicetag: false
         appearance: "triss_monster"
-        tags: [ "triss_monster" ]
+        tags: [ "ntr_triss_monster" ]
 
       barghest_1:
         repo: "barghest_1"
         by_voicetag: false
         appearance: "barghest"
-        tags: [ "intro_barghest1" ]
+        tags: [ "ntr_intro_barghest1" ]
 
       barghest_2:
         repo: "barghest_2"
         by_voicetag: false
         appearance: "barghest"
-        tags: [ "intro_barghest2" ]
+        tags: [ "ntr_intro_barghest2" ]
 
     props:
       teleport:
@@ -332,7 +332,7 @@ storyboard:
           .@pos: [0.0, triss_woman_sorceress_taunt_01_rp]
           blendin: 0.5
           blendout: 0.5
-      - actor.effect.stop: [0.7, triss, summoned_light]
+      - actor.effect.stop: [0.75, triss, summoned_light]
       - actor.placement.end: [0.75, barghest_1, [ -7.3380260468, 13.4687500000, -0.5903320313 ], [ 0.0, 0.0, 204.3499145508 ]]
       - actor.placement.end: [0.75, barghest_2, [ -4.9032192230, 13.5212402344, -0.4589233398 ], [ 0.0, 0.0, 167.5300140381 ]]
       #- actor.sound: [0.7, barghest_1, monster_barghest_voice_attack]

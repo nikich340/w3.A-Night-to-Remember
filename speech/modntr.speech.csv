@@ -63,7 +63,7 @@
 ;   1094310|00000000||Geralt of Rivia. Witcher.
 2114670766|00000000||A witcher? So you know how to track down somebody, right?
 2114670767|00000000||Well, come in then, we've matters to discuss.
-2114670768|00000000||I suppose to find a red-haired woman here.
+2114670768|00000000||I supposed to find a red-haired woman here.
 2114670769|00000000||That's interesting. Because we're supposed to meet her too.
 2114670770|00000000||Why are you looking for her?
 2114670771|00000000||Our boss has questions for 'er about the orphanage and children.
@@ -117,6 +117,7 @@
 ;
 ; scene 16 - baron meeting
 ;
+2114670869|00000000||Picked bad place to hide.
 2114670870|00000000||Let's talk about my fee
 2114670871|00000000||I will make it for free
 2114670872|00000000||I don't work for bandits
@@ -164,6 +165,8 @@
 2114670910|00000000||Must be a bruxa, a kind of vampire.
 2114670911|00000000||Vampire? Shit… My son is in real danger. And I can't help him! You're my one hope.
 2114670912|00000000||All right, see if I can find her.
+2114670913|00000000||You are right, we heard some scary sounds from that direction, by the Amphitheatre...
+2114670914|00000000||I told my people to stay away from it. It will be nice if you check what's wrong there.
 ;
 ; scene 17 - baron oneliners
 ;

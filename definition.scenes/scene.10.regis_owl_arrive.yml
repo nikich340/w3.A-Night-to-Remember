@@ -504,7 +504,7 @@ storyboard:
 
     shot_togame:
       - actor.gamestate: [0.0, geralt]
-      - cam.blend.togame: [0.0, cam_12_shot_to_gp]
+      - cam.blend.togame: [0.0, cam_4_shot_sitting2]
 
 dialogscript:
   player: "geralt"

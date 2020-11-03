@@ -23,7 +23,7 @@ production:
         repo: "triss"
         by_voicetag: false
         appearance: "triss_monster"
-        tags: [ "triss_monster" ]
+        tags: [ "ntr_triss_monster" ]
 
 dialogscript:
   player: "geralt"
