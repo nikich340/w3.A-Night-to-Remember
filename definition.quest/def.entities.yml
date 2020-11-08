@@ -2,6 +2,95 @@
 # definition of entities
 #
 templates:
+  ntr_acero_sword:
+    includes:
+      - "dlc\\dlcntr\\data\\entities\\acero_sword\\acero_iris_base.w2ent"
+    entityObject:
+      ".type": CNTRWitcherSword
+      swordAuthor: "Jatotude1"
+
+    effects:
+      acero_charged:
+        ".type": CFXDefinition
+        trackGroups:
+          fx:
+            ".type": CFXTrackGroup
+            tracks:
+              asd:
+                ".type": CFXTrack
+            isExpanded: true
+            trackGroupColor: [ 254, 143, 129, 100 ]
+            componentName: acero_steel_sword
+          particle_trails_fx:
+            ".type": CFXTrackGroup
+            tracks:
+              trail:
+                ".type": CFXTrack
+                trackItems:
+                  # sword ghost
+                  - ".type": CFXTrackItemParticles
+                    timeBegin: 0.001
+                    timeDuration: 1.5
+                    particleSystem: "dlc\\dlcntr\\fx\\acero_sword\\palyer_sabre_charged.w2p"
+                    spawner:
+                      ".type": CFXSpawnerComponent
+                      componentName: acero_steel_sword
+                      attach: true
+                    interpolation:
+                      - [ 1.0, 0.0, 1.0 ]
+                      - [ 1.0, 0.05, 1.0 ]
+                      - [ 1.0, 0.1, 1.0 ]
+                      - [ 1.0, 0.15, 1.0 ]
+                      - [ 1.0, 0.2, 1.0 ]
+                      - [ 1.0, 0.3, 1.0 ]
+                      - [ 1.0, 0.4, 1.0 ]
+                      - [ 1.0, 0.5, 1.0 ]
+                      - [ 1.0, 0.5, 1.0 ]
+                      - [ 1.0, 0.4, 1.0 ]
+                      - [ 1.0, 0.3, 1.0 ]
+                      - [ 1.0, 0.2, 1.0 ]
+                      - [ 1.0, 0.15, 1.0 ]
+                      - [ 1.0, 0.1, 1.0 ]
+                      - [ 1.0, 0.05, 1.0 ]
+                      - [ 1.0, 0.0, 1.0 ]
+              fx:
+                ".type": CFXTrack
+                trackItems:
+                  # sparks and electric
+                  - ".type": CFXTrackItemParticles
+                    timeBegin: 0.01
+                    timeDuration: 1.5
+                    particleSystem: "dlc\\dlcntr\\fx\\acero_sword\\sword_charge_ready.w2p"
+                    spawner:
+                      ".type": CFXSpawnerComponent
+                      componentName: acero_steel_sword
+                      attach: true
+                    interpolation:
+                      - [ 0.0, 0.0, 1.0 ]
+                      - [ 0.1388888955, 0.1418439746, 1.0 ]
+                      - [ 0.277777791, 0.2836879492, 1.0 ]
+                      - [ 0.4166667163, 0.4255319536, 1.0 ]
+                      - [ 0.555555582, 0.5673758984, 1.0 ]
+                      - [ 0.6944444776, 0.709219873, 1.0 ]
+                      - [ 0.8333333731, 0.8510638475, 1.0 ]
+                      - [ 0.9722222686, 0.9929078221, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 0.9793031216, 1.0 ]
+                      - [ 0.8851915002, 0.7927691936, 1.0 ]
+                      - [ 0.6891425848, 0.6062352657, 1.0 ]
+                      - [ 0.4930935502, 0.4197013378, 1.0 ]
+                      - [ 0.2970445752, 0.2331674099, 1.0 ]
+                      - [ 0.1009956002, 0.0466334224, 1.0 ]
+                      - [ 0.0, 0.0, 1.0 ]
+            isExpanded: true
+            trackGroupColor: [ 224, 200, 188, 100 ]
+        length: 1.5
+        loopStart: 0.76
+        loopEnd: 0.85
+        showDistance: 25.0
+        isLooped: true
+        #stayInMemory: true
+
   ntr_logo_entity:
     #properOverrides: true
     entityObject:

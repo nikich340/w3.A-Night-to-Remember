@@ -4,6 +4,7 @@ journals:
       title: "A Night of Nightmares"
       type: "Side"
       world: bob                      # optional, if empty every objective requires world
+      level: 50
       description:
         - intro_hag1: My old friend Geralt was back in the center of events. Although he did not remember how he was among the ruins of Tesham Mutna, at the moment he was busy something completely different - witcher felt the presence of a water hag, and something told him that this would be not an ordinary battle.<br/>Geralt again won in the battle with the monster, but not finally - the water hag escaped, sensing the danger of her miserable slimy life. The witcher decided to follow the footsteps of her blood and finish what was started.<br/>
       instructions:

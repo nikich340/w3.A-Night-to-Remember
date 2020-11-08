@@ -120,7 +120,6 @@ templates:
         animationSets:
           - "dlc\\dlcntr\\data\\entities\\baron\\olgierd.w2anims"
           - "animations\\interaction\\horse_draft\\man_horse_sword.w2anims"
-          - "animations\\interaction\\horse_draft\\man_horse_sword.w2anims"
           #- "dlc\\ep1\\data\\animations\\man\\combat\\olgierd.w2anims"
   
       - ".type": CInventoryDefinition
@@ -131,14 +130,14 @@ templates:
             isLootable: false
             initializer:
               .type: CInventoryInitializerUniform
-              itemName: "npc_la_espada_steel"
+              itemName: "ntr_acero_sword_npc"
           - ".type": CInventoryDefinitionEntry
             category: "steelsword"
             isMount: false
             isLootable: true
             initializer:
               .type: CInventoryInitializerUniform
-              itemName: "la_espada_steel"
+              itemName: "ntr_acero_sword_pc"
               
       - ".type": CCharacterStatsParam
         name: ntr_abilities

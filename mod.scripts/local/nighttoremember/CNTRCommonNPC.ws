@@ -52,6 +52,12 @@ class CNTRCommonNPC extends CNewNPC {
 
     function PlayEffect( effectName : name, optional target : CNode  ) : bool {
         NTR_notify("PlayEffect(" + effectName + ", " + target + ")");
+        if (effectName == 'appear' || effectName == 'appear_safe_mode') {
+            super.PlayEffect('shadowdash_bruxa_appear');
+        }
+        if (effectName == 'disappear' || effectName == 'disappear_cutscene_fx1') {
+            super.PlayEffect('shadowdash_bruxa_disappear');
+        }
         return super.PlayEffect(effectName, target);
     }   
     function PlayEffectOnBone( effectName : name, boneName : name, optional target : CNode ) : bool {

@@ -4,6 +4,7 @@ journals:
       title: "A Night to Remember"
       type: "Side"
       world: bob                      # optional, if empty every objective requires world
+      level: 50
       description:
         - regis_owl: Description must be here<br>
       instructions:

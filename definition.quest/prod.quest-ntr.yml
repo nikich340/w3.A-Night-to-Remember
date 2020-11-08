@@ -21,3 +21,5 @@ production:
         definitionXmlFilePath: "dlc\\dlcntr\\data\\gameplay\\abilities\\"
       - ".type": CR4DefinitionsNGPlusDLCMounter
         definitionXmlFilePath: "dlc\\dlcntr\\data\\gameplay\\abilities_plus\\"
+      - ".type": CR4ScaleformContentDLCMounter
+        scaleformDirectoryPath: "dlc\\dlcntr\\data\\gameplay\\gui_new\\"

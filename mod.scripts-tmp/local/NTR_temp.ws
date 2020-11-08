@@ -439,6 +439,12 @@ function NTR_additem(itemName : name, optional count : int, optional equip : boo
 	}
 }
 
+exec function getAcero() {
+	NTR_additem('ntr_acero_sword_pc', 1, true);
+}
+exec function getAcero2() {
+	NTR_additem('acero_iris_base', 1, true);
+}
 exec function getExoticSilver() {
         NTR_additem('stiletto_silver', 1, false);
         NTR_additem('hachyar', 1, false);

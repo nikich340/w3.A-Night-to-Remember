@@ -24,7 +24,6 @@ templates:
       components:
         CSoundEmitterComponent0:
           ".type": CSoundEmitterComponent
-          #name: CSoundEmitterComponent0
           maxDistance: 100.0
           eventsOnAttach:
             - Set_Switch_bruxa_state_clean

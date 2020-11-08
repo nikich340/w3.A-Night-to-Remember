@@ -19,8 +19,7 @@ templates:
       1_full:
         ".type": CEntityAppearance
         includedTemplates:
-          - "items\\weapons\\swords\\steel_swords_unique\\steel_unique_ardaenye.w2ent"
-          - "dlc\\dlcntr\\data\\entities\\witcher_steel_espada.w2ent"
+          - "dlc\\dlcntr\\data\\entities\\acero_sword\\ntr_acero_sword.w2ent"
       2_empty:
         ".type": CEntityAppearance
     usedAppearances:
