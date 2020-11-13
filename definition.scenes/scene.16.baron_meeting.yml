@@ -355,18 +355,18 @@ repository:
         tags: [ "ext" ]
 
     cam_18_Shot5_bow_to_baron_closeup_sour:
-      fov: 7.0
+      fov: 11.0
       transform:
-        pos: [ 3.5493774414, 5.8168945313, 2.3367843628 ]
-        rot: [ 0.0, 348.4034423828, 0.1142883301 ]
-      #zoom: 1.0
+        pos: [ 3.4744873047, 5.8205566406, 2.3367843628 ]
+        rot: [ 0.0, 347.1384277344, 355.9068908691 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.5185561180, 5.5185561180 ]
-        focus: [ 3.0185561180, 4.0185561180 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.5152356625, 5.5152359009 ]
+        focus: [ 3.0152356625, 4.0152359009 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_19_Shot5_barron_arrive_pan:
@@ -476,18 +476,18 @@ repository:
         tags: [ "ext" ]
 
     cam_24_Shot5_dg_geralt:
-      fov: 15.0
+      fov: 20.0
       transform:
-        pos: [ 4.2470092773, -3.0498046875, 1.2867202759 ]
-        rot: [ 0.0, 7.1050181389, 26.1417236328 ]
-      #zoom: 1.0
+        pos: [ 5.1023559570, -1.0976562500, 1.3617248535 ]
+        rot: [ 0.0, 6.8300094604, 78.1991882324 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.2341983318, 5.2341985703 ]
-        focus: [ 2.7341983318, 3.7341983318 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.6878068447, 4.6878070831 ]
+        focus: [ 2.1878068447, 3.1878068447 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_25_Shot5_dg_baron_gesture_show:
@@ -523,16 +523,16 @@ repository:
     cam_26_Shot5_dg_geralt_close:
       fov: 10.0
       transform:
-        pos: [ 4.4219360352, -2.6729736328, 1.1367111206 ]
-        rot: [ 0.0, 13.3750162125, 37.2214355469 ]
-      #zoom: 1.0
+        pos: [ 5.7535400391, -1.3583984375, 1.1867141724 ]
+        rot: [ 0.0, 11.5325117111, 74.4012451172 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.9687418938, 4.9687418938 ]
-        focus: [ 2.4687418938, 3.4687418938 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.2708964348, 5.2708964348 ]
+        focus: [ 2.7708964348, 3.7708964348 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_27_Shot5_dg_baron_close:
@@ -563,6 +563,21 @@ repository:
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
+        tags: [ "ext" ]
+
+    cam_35_Shot3_ger_away:
+      fov: 35.0
+      transform:
+        pos: [ -8.7224121094, 16.7033691406, -1.0130691528 ]
+        rot: [ 0.0, 344.2799987793, 33.1815490723 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.8466396332, 5.8466396332 ]
+        focus: [ 3.3466396332, 4.3466396332 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
         tags: [ "ext" ]
 
 production:
@@ -696,6 +711,9 @@ production:
 
       cam_36_Shot5_to_gp:
         repo: "cam_36_Shot5_to_gp"
+
+      cam_35_Shot3_ger_away:
+        repo: "cam_35_Shot3_ger_away"
 
     animations:
       geralt_high_standing_determined_enter_frontal:
@@ -1248,8 +1266,8 @@ storyboard:
       - actor.anim.additive:
           actor: geralt
           .@pos: [0.0, anim_6952_high_standing_bored_gesture_explaining_01]
-          blendin: 0.4
-          blendout: 0.4
+          blendin: 0.3
+          blendout: 0.3
     shot_39_dg_baron:
       - cam: [0.0, cam_23_Shot5_dg_baron]
 
@@ -1363,6 +1381,19 @@ storyboard:
     #shot_dont_agree2:
     #  - actor.gamestate: [0.5, geralt]
     #  - cam.blend.togame: [0.5, cam_36_Shot5_to_gp]
+  section_bad_place:
+    shot_bad_place_g1:
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.lookat: [0.3, geralt, Bandit_camp_crossbow]
+      - actor.lookat: [0.8, geralt, Baron_Edward]
+      - actor.lookat: [0.0, Baron_Edward, geralt]
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
+
+    shot_bad_place_b1:
+      - cam: [0.0, cam_23_Shot5_dg_baron]
+
+    shot_bad_place_g2:
+      - cam: [0.0, cam_24_Shot5_dg_geralt]
 
   section_start_hurry:
     shot_hurry_1:
@@ -1399,12 +1430,15 @@ storyboard:
           .@pos: [0.0, mimicsanim_410_geralt_neutral_gesture_no_noface_face]
           blendin: 0.3
           blendout: 0.3
+      - fade.out: [1.0, 0.5, [0, 0, 0, 255]]
 
     shot_hurry_togame:
+      - fade.in: [0.0, 0.5]
+      - actor.placement: [0.0, geralt, [ -8.5933837891, 17.5725097656, -2.2178955078 ], [ 0.0, 0.0, 30.3600006104 ]]
       - actor.gamestate: [0.0, geralt]
       - actor.gamestate: [0.0, Bandit_camp_crossbow]
       - actor.gamestate: [0.0, Baron_Edward]
-      - cam.blend.togame: [0.0, cam_3_Shot3_ger]
+      - cam.blend.togame: [0.0, cam_35_Shot3_ger_away]
 
 dialogscript:
   player: "geralt"
@@ -1424,6 +1458,7 @@ dialogscript:
     - geralt: "[2.9642897]0000393630|Just a traveler. Happened to be passing through."
     - CUE: shot_hurry_3b
     - Bandit_camp_crossbow: "2114670877|Piss off, vagrant. Nothing for you here."
+    - PAUSE: 0.5
     # shot Shot4 ger meditate start
     - CUE: shot_hurry_togame
     - PAUSE: 1.0
@@ -1647,7 +1682,7 @@ dialogscript:
             function: NTR_NegotiateMonsterHunt_S
             parameter:
                 - resultFact: CNAME_ntr_scenefact_negotiate_result
-                - rewardName: CNAME_ntr_baron_coins_reward
+                - rewardName: CNAME_ntr_baron_coins_reward1
                 #- questUniqueScriptTag: CNAME_
                 - alwaysSuccessful: false
                 - isItemReward: false
@@ -1738,7 +1773,7 @@ dialogscript:
     - CUE: shot_37_db_baron2
     - Baron_Edward: "2114670909|How? What creature can do such things?"
     - CUE: shot_38_dg_geralt
-    - geralt: "2114670910|Must be a bruxa, a kind of vampire."
+    - geralt: "2114670910|A kind of vampire."
     - CUE: shot_39_dg_baron
     - Baron_Edward: "2114670911|Vampire? Shit... My son is in real danger. And I can't help him! You're my one hope."
     - CUE: shot_togame

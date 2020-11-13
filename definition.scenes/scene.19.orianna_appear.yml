@@ -313,15 +313,15 @@ repository:
       fov: 40.0
       transform:
         pos: [ -8.5995788574, -4.2752652168, 1.4854965210 ]
-        rot: [ 0.0, 355.7750549316, 327.5225524902 ]
-      #zoom: 1.0
+        rot: [ 0.0, 355.8025817871, 337.8073425293 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
         blur: [ 2.1497709751, 5.1497707367 ]
         focus: [ 2.6497709751, 3.6497709751 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_18_Shot2_horse_clip:
@@ -872,7 +872,7 @@ storyboard:
     # shot Shot8 cam5 ger
     shot_15:
       - cam.blend.end: [1.0, cam_15_Shot8_cam5_ger]
-      - fade.out: [0.5, 2.0]
+      - fade.out: [0.75, 1.0]
 
     shot_fix_music:
       - cam: [0.0, cam_exit_riverside]

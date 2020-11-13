@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 1036, saved: 2020-11-01 19:45:02)
+# (version: 1044, saved: 2020-11-12 15:48:30)
 #
 ---
 structure:
@@ -373,7 +373,7 @@ structure:
         waituntil.Wait_30s:
           elapsed: "00:00:30"
           ".editor":
-            pos: [ 7206.86328125, 29.0699768066 ]
+            pos: [ 7182.0, 109.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -665,6 +665,66 @@ structure:
             - ignoreImmortalityMode: true
           next: ".done"
         
+        script.NTR_FactChecker_Baron_alive:
+          ".editor":
+            pos: [ 7198.0, -185.0 ]
+            in: [ In ]
+            out: [ "False", "True" ]
+          function: NTR_FactChecker
+          parameter:
+            - factName: ntr_quest_baron_alive
+            - factCond: "=="
+            - val: 1
+          next.False:
+            - script.NTR_GiveRewardToPlayer_killed_baron
+          next.True:
+            - script.NTR_FactChecker_coins
+        
+        script.NTR_FactChecker_coins:
+          ".editor":
+            pos: [ 7362.0, -121.0 ]
+            in: [ In ]
+            out: [ "False", "True" ]
+          function: NTR_FactChecker
+          parameter:
+            - factName: ntr_scenefact_coins
+            - factCond: "=="
+            - val: 1
+          next.False:
+            - script.NTR_GiveRewardToPlayer_sword2
+          next.True:
+            - script.NTR_GiveRewardToPlayer_coins2
+        
+        script.NTR_GiveRewardToPlayer_coins2:
+          ".editor":
+            pos: [ 7514.0, -66.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_GiveRewardToPlayer
+          parameter:
+            - rewardName: cname_ntr_baron_coins_reward2
+          next: ".done"
+        
+        script.NTR_GiveRewardToPlayer_killed_baron:
+          ".editor":
+            pos: [ 7358.0, -254.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_GiveRewardToPlayer
+          parameter:
+            - rewardName: cname_ntr_baron_killed_reward
+          next: ".done"
+        
+        script.NTR_GiveRewardToPlayer_sword2:
+          ".editor":
+            pos: [ 7515.0, -180.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_GiveRewardToPlayer
+          parameter:
+            - rewardName: cname_ntr_baron_sword_reward2
+          next: ".done"
+        
         script.NTR_SaveGame:
           ".editor":
             pos: [ 2127.0910644531, 206.6595611572 ]
@@ -815,7 +875,7 @@ structure:
         
         script.Play_gp_music:
           ".editor":
-            pos: [ 7377.0, -42.0 ]
+            pos: [ 7348.0, 34.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
@@ -1425,6 +1485,7 @@ structure:
             - comm_bandits_river
           next:
             - questoutcome.NTR_outcome: Failure
+            - script.Gameplay_music
         
         despawn.despawn_bandits_river:
           ".editor":
@@ -1533,6 +1594,7 @@ structure:
           notify: true
           next:
             - waituntil.Wait_30s
+            - script.NTR_FactChecker_Baron_alive
         
         settime.00_45:
           ".editor": [ 3399.0, 5.0 ]
@@ -1645,6 +1707,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 7534.0, 42.0 ]
+          ".editor": [ 7509.0, 126.0 ]
           next: ".done"
         

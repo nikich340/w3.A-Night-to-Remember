@@ -1463,7 +1463,7 @@ dialogscript:
     - SCRIPT:
             function: GiveRewardToPlayer
             parameter:
-                - rewardName: CNAME_ntr_baron_coins_reward
+                - rewardName: CNAME_ntr_baron_coins_reward1
     - NEXT: section_get_coins2
 
   section_get_coins2:
@@ -1486,7 +1486,7 @@ dialogscript:
     - SCRIPT:
             function: GiveRewardToPlayer
             parameter:
-                - rewardName: CNAME_ntr_baron_sword_reward
+                - rewardName: CNAME_ntr_baron_sword_reward1
     - NEXT: script_umnount_sword
 
   script_umnount_sword:

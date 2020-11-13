@@ -1,6 +1,17 @@
 class CNTROriannaVampireNPC extends CNTRCommonNPC {
     saved var NTR_morphRatio, NTR_blendTime : array<float>;
 
+    function PlayEffect( effectName : name, optional target : CNode  ) : bool {
+        //NTR_notify("PlayEffect(" + effectName + ", " + target + ")");
+        if (HasTag('ntr_orianna_bruxa') && (effectName == 'appear' || effectName == 'appear_safe_mode')) {
+            super.PlayEffect('shadowdash_bruxa_appear');
+        }
+        if (HasTag('ntr_orianna_bruxa') && (effectName == 'disappear' || effectName == 'disappear_cutscene_fx1')) {
+            super.PlayEffect('shadowdash_bruxa_disappear');
+        }
+        return super.PlayEffect(effectName, target);
+    }
+
     timer function morphMe( time : float , id : int) {
         var    components : array<CComponent>;
         var       manager : CMorphedMeshManagerComponent;

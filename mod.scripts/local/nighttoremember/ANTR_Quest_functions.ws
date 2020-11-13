@@ -12,6 +12,16 @@ latent quest function NTR_Wait(seconds : float) {
 	Sleep(seconds);
 }
 
+latent quest function NTR_Halfsec() {
+	Sleep(0.5f);
+	return;
+}
+
+quest function NTR_GiveRewardToPlayer( rewardName : name )
+{
+	theGame.GiveReward( rewardName, thePlayer );
+}
+
 quest function NTR_ForceKillNPC(tag : name, playDeath : bool) {
 	var npcs : array<CNewNPC>;
 	var NTR_npc : CNTRCommonNPC;

@@ -876,6 +876,7 @@ storyboard:
           .@pos: [0.4, Orianna_human_add_walk_left_one_step_turn_90]
           blendin: 0.5
       - actor.effect.start: [0.66, Orianna_human, disappear_cutscene_fx1]
+      - actor.effect.start: [0.66, Orianna_human, shadowdash_bruxa_disappear]
       - actor.sound: [0.66, Orianna_human, monster_bruxa_combat_disappear]
       - actor.placement.start: [0.7, Orianna_human, [ -132.9543457031, 54.1202926636, -10.9409799576 ], [ 0.0, 0.0, 111.3197021484 ]]
       - actor.placement.end: [0.72, Orianna_human, [ -132.3598632813, 48.1805229187, -10.7468261719 ], [ 0.0, 0.0, 111.3197021484 ]]

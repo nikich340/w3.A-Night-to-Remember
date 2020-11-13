@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 1036, saved: 2020-11-01 19:45:02)
+# (version: 1044, saved: 2020-11-12 15:48:30)
 #
 ---
 structure:
@@ -78,7 +78,7 @@ structure:
         interruptable: true
         _fadein: false
         next.hurry:
-          - waituntil.wait_3s
+          - waituntil.wait_1s
       
       interaction.baron_not_yet_gp:
         ".editor":
@@ -166,8 +166,8 @@ structure:
         next:
           - waituntil.midnight
       
-      waituntil.wait_3s:
-        elapsed: "00:00:03"
+      waituntil.wait_1s:
+        elapsed: "00:00:01"
         ".editor":
           pos: [ 387.8064880371, 1319.3675537109 ]
           in: [ In ]

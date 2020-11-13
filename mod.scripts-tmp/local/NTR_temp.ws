@@ -142,6 +142,7 @@ exec function sc(num : int, optional input : String) {
     var entity: CEntity;
     var path  : String;
 	var sceneNames : array<String>;
+	var null: String;
 	
 	sceneNames.PushBack("00.not_exist.w2scene");             // 0
 	sceneNames.PushBack("01.intro_hag.w2scene");
@@ -176,9 +177,10 @@ exec function sc(num : int, optional input : String) {
 	sceneNames.PushBack("30.children_corvo_byanko.w2scene");
 	sceneNames.PushBack("31.ntr_completed.w2scene");
 	
-	if (!input) {
+	if (input == null) {
 		input = "Input";
 	}
+	NTR_notify("input = " + input);
 	path = "dlc/dlcntr/data/scenes/" + sceneNames[num];
 	
     // -> SET SCENE PATH
@@ -409,7 +411,6 @@ exec function GiveReward( rewardName : name ) : void
 {
 	theGame.GiveReward( rewardName, thePlayer );
 }
-
 function NTR_additem(itemName : name, optional count : int, optional equip : bool)
 {
 	var ids : array<SItemUniqueId>;
@@ -442,8 +443,8 @@ function NTR_additem(itemName : name, optional count : int, optional equip : boo
 exec function getAcero() {
 	NTR_additem('ntr_acero_sword_pc', 1, true);
 }
-exec function getAcero2() {
-	NTR_additem('acero_iris_base', 1, true);
+exec function getItem(itemName : name) {
+	NTR_additem(itemName, 1, true);
 }
 exec function getExoticSilver() {
         NTR_additem('stiletto_silver', 1, false);
