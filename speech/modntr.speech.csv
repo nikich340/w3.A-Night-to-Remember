@@ -203,13 +203,13 @@
 ;
 2114670935|00000000||Here we are.
 2114670936|00000000||Lady Orianna…
-2114670937|00000000||Go on!
-2114670938|00000000||Wait me here. I should check something. You are allowed to play in my room.
+2114670937|00000000||Come on!
+2114670938|00000000||It seems there's a matter I must attend to. Go on Niellan, you and Agneta get dinner started for me. I'll be home soon enough.
 ;
 ; scene 20 - orianna main
 ;
 2114670940|00000000||I came to kill you.
-2114670941|00000000||No need in fight.
+2114670941|00000000||No need to fight.
 2114670942|00000000||[Show letter from Regis.]
 2114670943|00000000||Talked enough, let's fight.
 ;   1174593|00000000||Wolves_asleepin'_'midst_the_trees__bats_all_aswayi
@@ -223,28 +223,28 @@
 2114670948|00000000||No witcher's ever died in his own bed.
 2114670949|00000000||You won't be exception.
 ;   1172302|00000000||We don't have to fight.
-2114670950|00000000||Really? You will let me leave again?
+2114670950|00000000||Really? You're just going let me go again?
 2114670951|00000000||On one condition… Stop drinking the children.
-2114670952|00000000||You know, I am the vampiress. And I can't resist the blood hunger.
+2114670952|00000000||You know what I am. I can't resist the hunger.
 2114670953|00000000||Think you can handle this on your own. Found something interesting in your house.
-2114670954|00000000||So, you snuck in my house and decided to show off with it? You call those manners?
+2114670954|00000000||Ha! So, you've been snooping around? I thought you were the straightforward type.
 2114670955|00000000||Orianna, that doesn't change the fact that…
-2114670956|00000000||That I started to change? It's just my guessings.
+2114670956|00000000||You presume to understand me? After reading some... musings?
 2114670957|00000000||Don't deny it.
-2114670958|00000000||That's not enough to convince me.
+2114670958|00000000||If I'm not convinced that I've changed, what makes you so sure?
 ;   1007115|00000000||All right.
 2114670959|00000000||Take a look at this.
 2114670960|00000000||Hmm. Regis, Regis… Awfully noble as always.
 ;   1101409|00000000||Well, I probably wouldn't 'ave forced myself on you.
-2114670961|00000000||Fine. I've come to a decision - I vow not to hurt kids anymore.
-2114670962|00000000||But they will stay with me. I'll take care of them. And it's not up for discussion.
+2114670961|00000000||Very well then, I've made my decision - I won't feed on the children again.
+2114670962|00000000||But they will stay with me. I'll take care of them. It's not up for discussion.
 2114670963|00000000||If you break your vow I'll come back, and someone'll get hurt.
-2114670964|00000000||I'd sooner drink from vagrant than break my word.
+2114670964|00000000||Unlike your kind, we tend to keep our promises.
 ;   1027471|00000000||Hmm… Guess I believe you…
-2114670965|00000000||Don't intend to pursue me again?
+2114670965|00000000||It would seem this is farewell again, witcher?
 ;   1047894|00000000||Right, leave you to it, then.
 2114670966|00000000||Thanks.
-2114670967|00000000||He would be upset if we tussled, wouldn't he?
+2114670967|00000000||I suppose he'd be upset if we tussled, wouldn't he?
 ;
 ; scene 21 orianna to bruxa
 ;
@@ -306,10 +306,10 @@
 ; scene 28
 ;
 ;   1143303|00000000||What's the matter?
-2114670375|00000000||A slayer of monsters slayed people to protect monster. You managed to impress me.
+2114670375|00000000||A witcher has slain a man to protect a monster. I'll admit, I'm impressed.
 ;    458827|00000000||It was the lesser evil… I think.
-2114670376|00000000||Probably this annoying Baron promised you a huge reward for me, right?
-2114670377|00000000||You can pick up his sword instead of this. I know, you like these sharp things.
+2114670376|00000000||I'm sure this... troublesome Baron Edward promised a sizable reward, right?
+2114670377|00000000||Whatever it might've been, you're better off confiscating that steel blade of his.
 ;   1066805|00000000||Mhm. Thanks a bunch.
 2114670378|00000000||Good luck, Geralt of Rivia.
 2114670379|00000000||So long, Orianna.
