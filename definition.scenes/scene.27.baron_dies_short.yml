@@ -375,6 +375,126 @@ repository:
         plane: "medium"
         tags: [ "ext" ]
 
+    cam_1_Shot1_orianna:
+      fov: 20.0
+      transform:
+        pos: [ -112.4585876465, -2.3479881287, -9.2896404266 ]
+        rot: [ 0.0, 357.4525146484, 209.8172302246 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.3209264278, 4.3209266663 ]
+        focus: [ 1.8209264278, 2.8209264278 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_2_Shot2_orianna:
+      fov: 30.0
+      transform:
+        pos: [ -108.5643310547, -5.3092474937, -9.2896404266 ]
+        rot: [ 0.0, 355.8850097656, 58.8692626953 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.8437676430, 5.8437676430 ]
+        focus: [ 3.3437676430, 4.3437676430 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_3_Shot3:
+      fov: 30.0
+      transform:
+        pos: [ -150.3976135254, 35.5448837280, -10.6896371841 ]
+        rot: [ 0.0, 11.0374937057, 302.2688598633 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.9236443043, 4.9236440659 ]
+        focus: [ 2.4236443043, 3.4236443043 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_4_Shot4:
+      fov: 28.0
+      transform:
+        pos: [ -146.7220764160, 38.6421585083, -9.6896371841 ]
+        rot: [ 0.0, 343.8399963379, 138.9467163086 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.6256766319, 4.6256766319 ]
+        focus: [ 2.1256766319, 3.1256766319 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_5_Shot5:
+      fov: 40.0
+      transform:
+        pos: [ -149.7029876709, 37.1938323975, -9.4896373749 ]
+        rot: [ 0.0, 351.7600097656, 246.0044555664 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.5919415951, 4.5919418335 ]
+        focus: [ 2.0919415951, 3.0919415951 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_6_Shot6:
+      fov: 45.0
+      transform:
+        pos: [ -149.7029876709, 37.1938323975, -9.4896373749 ]
+        rot: [ 0.0, 351.7324829102, 245.5919189453 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.5919415951, 4.5919418335 ]
+        focus: [ 2.0919415951, 3.0919415951 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_7_Shot6b:
+      fov: 45.0
+      transform:
+        pos: [ -149.7029876709, 37.1938323975, -9.4896373749 ]
+        rot: [ 0.0, 310.5649108887, 227.3038940430 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 3.1437177658, 6.1437177658 ]
+        focus: [ 3.6437177658, 4.6437177658 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_8_Shot2_orianna_pan:
+      fov: 30.0
+      transform:
+        pos: [ -108.5643310547, -5.3092474937, -9.2896404266 ]
+        rot: [ 0.0, 355.8850097656, 62.9122314453 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.8437676430, 5.8437676430 ]
+        focus: [ 3.3437676430, 4.3437676430 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
 production:
   settings:
     sceneid: 1
@@ -447,6 +567,27 @@ production:
 
       cam_2_Shot0_another_cam2:
         repo: "cam_2_Shot0_another_cam2"
+
+      cam_1_Shot1_orianna:
+        repo: "cam_1_Shot1_orianna"
+
+      cam_2_Shot2_orianna:
+        repo: "cam_2_Shot2_orianna"
+
+      cam_3_Shot3:
+        repo: "cam_3_Shot3"
+
+      cam_4_Shot4:
+        repo: "cam_4_Shot4"
+
+      cam_5_Shot5:
+        repo: "cam_5_Shot5"
+
+      cam_7_Shot6b:
+        repo: "cam_7_Shot6b"
+
+      cam_8_Shot2_orianna_pan:
+        repo: "cam_8_Shot2_orianna_pan"
 
     animations.mimic:
       vampire_diva_geralt_neutral_gesture_suprised_worried_face:
@@ -550,6 +691,10 @@ production:
         blendout: 0.5000000000
 
     actor.poses:
+      vampire_diva_high_standing_determined_idle:
+        actor: "vampire_diva"
+        repo: "pose_0_high_standing_determined_idle"
+
       vampire_diva_High_Sitting_Happy:
         actor: "vampire_diva"
         repo: "pose_2102_High_Sitting_Happy"
@@ -566,15 +711,21 @@ production:
         actor: "geralt"
         repo: "pose_0_high_standing_determined_idle"
 
+    soundbanks:
+      - work_activities
+      - qu_ep2_701_dlg
+
 storyboard:
   defaults:
     placement:
       geralt: [[ -148.2327117920, 34.8401603699, -11.1592407227 ], [ 0.0, 0.0, 47.5525588989 ]]
       Baron_Edward: [[ -150.0639038086, 36.8245124817, -11.1720581055 ], [ 0.0, 0.0, 224.3226013184 ]]
-      vampire_diva: [[ -14.5838394165, 8.6277923584, 6.8749465942 ], [ 0.0, 0.0, 53.6525344849 ]]
+      #vampire_diva: [[ -14.5838394165, 8.6277923584, 6.8749465942 ], [ 0.0, 0.0, 53.6525344849 ]]
+      vampire_diva: [[ -111.7371826172, -3.8554182053, -10.9002075195 ], [ 0.0, 0.0, 14.0800018311 ]]
     
     actor.pose:
-      vampire_diva: vampire_diva_High_Sitting_Happy
+      #vampire_diva: vampire_diva_High_Sitting_Happy
+      vampire_diva: vampire_diva_high_standing_determined_idle
 
   section_storyboard_ui:
     # shot Shot1
@@ -644,42 +795,104 @@ storyboard:
           clipfront: 1.5
           clipend: 4.6
 
-    shot_ori_roof:
-      - cam.blend.start: [0.0, cam_1_Shot0_another_cam1, rapid]
-      - cam.blend.end: [0.999, cam_2_Shot0_another_cam2, rapid]
-      - actor.anim.mimic: 
-          .@pos: [0.0, vampire_diva_geralt_neutral_gesture_suprised_worried_face]
-          weight: 0.8
-          stretch: 1.5
-
-    #shot_ori_roof2:
-    #  - cam.blend.start: [0.0, cam_2_Shot0_another_cam2, rapid]
-    #  - cam.blend.end: [0.999, cam_14_Shot8, smooth]
-
-    shot_8a:
+    shot_ori_reaction:
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.placement: [0.0, geralt, [ -147.7987823486, 36.7833595276, -11.1995239258 ], [ 0.0, 0.0, 325.8200378418 ]]
+      #- actor.anim: 
+      #    .@pos: [0.0, geralt_geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined]
+      #    blendin: 0.5
+      #    blendout: 0.5
+      #    #clipend: 5.5
       - actor.anim: 
           .@pos: [0.0, Baron_Edward_man_finisher_dlc_head_rp]
           clipfront: 4.6
-          stretch: 1000.0
-      - actor.pose: [0.0, geralt_high_standing_determined_idle]
-      - cam: [0.0, cam_14_Shot8]
-      - actor.anim: 
+          stretch: 5000.0
+      #- cam.blend.start: [0.0, cam_1_Shot0_another_cam1, rapid]
+      #- cam.blend.end: [0.999, cam_2_Shot0_another_cam2, rapid]
+      - cam: [0.0, cam_1_Shot1_orianna]
+      - actor.anim.mimic: 
+          .@pos: [0.0, vampire_diva_geralt_neutral_gesture_suprised_worried_face]
+          blendin: 0.2
+          blendout: 0.3
+          weight: 0.8
+          stretch: 1.5
+
+      - actor.anim:
+          actor: vampire_diva
+          .@pos: [0.8, anim_12940_high_standing_determined_exit_back]
+          blendin: 0.5
+          blendout: 0.0
+
+    shot_ori_reaction2:
+      - cam.blend.start: [0.0, cam_2_Shot2_orianna, rapid]
+      - cam.blend.end: [0.999, cam_8_Shot2_orianna_pan, rapid]
+      - actor.placement: [1.0, vampire_diva, [ -111.7371826172, -3.8554182053, -20.9002075195 ], [ 0.0, 0.0, 14.0800018311 ]]
+      - actor.anim:
+          actor: geralt
+          .@pos: [0.0, anim_315_high_standing_determined_enter_frontal_curve_right]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 2.7
+          clipend: 6.5
+
+    shot_8a:
+      - actor.placement: [0.0, geralt, [ -147.7987823486, 36.7833595276, -11.1995239258 ], [ 0.0, 0.0, 121.6599960327 ]]
+      - cam: [0.0, cam_3_Shot3]
+      - actor.anim:
           .@pos: [0.0, geralt_geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined]
           blendin: 0.5
-          blendout: 0.75
-          clipend: 5.5
+          blendout: 0.5
+          clipend: 6.0
 
-    shot_8b:
-      - actor.unequip.right: [0.5, geralt]
+    shot_8aa:
+      - actor.unequip.right: [0.75, geralt]
+
+    shot_8b:     
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_7107_high_standing_determined_to_high_kneeling_determined]
+          blendin: 0.5
+          blendout: 0.5
 
     shot_8c:
-      - cam.blend.start: [0.0, cam_14_Shot8, smooth]
-      - cam.blend.end: [0.9, cam_16_Shot9_cam_corpse, smooth]
+      - cam: [0.0, cam_4_Shot4]
+      - actor.sound: [0.66, geralt, dialog_sword_take]
+      - actor.sound: [0.6, geralt, q701_taking_sword_from_body]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_6767_high_kneeling_determined_gesture_take]
+          blendin: 0.333
+          blendout: 0.0
+          clipend: 2.0
+          stretch: 1.5
+
+  section_storyboard_ui2:
+    shot_8d:
+      - cam: [0.0, cam_5_Shot5]
+      - actor.placement: [0.0, vampire_diva, [ -111.7371826172, -3.8554182053, -20.9002075195 ], [ 0.0, 0.0, 14.0800018311 ]]
+      - actor.placement: [0.0, geralt, [ -147.7987823486, 36.7833595276, -11.1995239258 ], [ 0.0, 0.0, 121.6599960327 ]]
+      - actor.lookat: [0.0, geralt, Baron_Edward]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_6772_high_kneeling_determined_to_high_standing_determined]
+          blendin: 0.0
+          blendout: 0.5
+
+      - actor.anim: 
+          .@pos: [0.0, Baron_Edward_man_finisher_dlc_head_rp]
+          clipfront: 4.6
+          stretch: 5000.0
+
+    shot_8e:
+      - cam.blend.start: [0.25, cam_5_Shot5, smooth]
+      - cam.blend.end: [1.0, cam_7_Shot6b, smooth]
 
       - actor.lookat: [0.1, geralt, NONE]
       - actor.anim: 
-          .@pos: [0.0, geralt_high_standing_determined_calm_exit_back]
-          blendin: 0.75
+          actor: geralt
+          .@pos: [0.0, anim_6974_high_standing_determined_calm_exit_back_left_side]
+          blendin: 0.5
 
       - fade.out: [0.8125, 1.5, [0, 0, 0, 255]]
 
@@ -714,19 +927,42 @@ dialogscript:
     - CUE: shot_2c
     - PAUSE: 3.1
 
-    - CUE: shot_ori_roof
-    - PAUSE: 5.0
+    - CUE: shot_ori_reaction
+    - PAUSE: 3.0
+    - CUE: shot_ori_reaction2
+    - PAUSE: 3.8
+
 
     - CUE: shot_8a
-    - geralt: "[0.9736876]0000497586|I'm sorry."
+    - geralt: "[1.3167018]0000458655|You asked for it..."
+    #- PAUSE: 1000.0
+    - CUE: shot_8aa
+    - PAUSE: 4.18
+
     - CUE: shot_8b
-    - PAUSE: 3.65
+    - PAUSE: 3.4
 
     - CUE: shot_8c
-    - PAUSE: 7.5
+    - PAUSE: 3.0
+    - NEXT: script_give_sword_reward
+
+  script_give_sword_reward:
+    - SCRIPT:
+            function: GiveRewardToPlayer
+            parameter:
+                - rewardName: CNAME_ntr_baron_sword_reward1
+    - NEXT: section_storyboard_ui2
+
+  section_storyboard_ui2:
+    - CUE: shot_8d
+    - PAUSE: 3.9
+
+    - CUE: shot_8e
+    - PAUSE: 9.37
     - PAUSE: 0.5
     - NEXT: section_exit
 
   section_exit:
-    - BLACKSCREEN: true
+    ###!!!- BLACKSCREEN: true
+    - CAMERA_BLEND: 1.0
     - EXIT
