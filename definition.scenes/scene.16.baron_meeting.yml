@@ -1624,12 +1624,12 @@ dialogscript:
 
   section_bad_place:
     - CUE: shot_bad_place_g1
-    - geralt: "0001198754|Something wicked here. It's in the air, I can smell it…"
+    - geralt: "[3.796007]0001198754|Something wicked here. It's in the air, I can smell it…"
     - CUE: shot_bad_place_b1
     - Baron_Edward: "2114670913|You are right, we heard some scary sounds from that direction, by the Amphitheatre..."
     - Baron_Edward: "2114670914|I told my people to stay away from it. It will be nice if you check what's wrong there."
     - CUE: shot_bad_place_g2
-    - geralt: "0000573937|See what I can do."
+    - geralt: "[1.3279085]0000573937|See what I can do."
     - NEXT: script_setfact_ampitheatre
 
   script_setfact_ampitheatre:
@@ -1787,6 +1787,7 @@ dialogscript:
 
   section_exit:
     - EXIT
+
 
 
 

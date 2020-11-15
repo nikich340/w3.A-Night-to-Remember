@@ -1540,7 +1540,8 @@ dialogscript:
 
   section_exit_peaceful:
     - OUTPUT: peaceful
-    - BLACKSCREEN: true
+    ###!!!- BLACKSCREEN: true
+    - CAMERA_BLEND: 1.0
     - EXIT
 
   section_exit_fight:
