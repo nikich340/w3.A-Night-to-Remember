@@ -637,6 +637,25 @@ exec function oridet() {
 	ent.ApplyAppearance('orianna_human_morph');
 }
 
+exec function oridet2() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	var act : CActor;
+	
+	template = (CEntityTemplate)LoadResource("dlc/dlcntr/data/entities/orianna_vampire.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	act = (CActor) ent;
+	ent.AddTag('oriana_test2');
+	ent.AddTag('ntr_orianna_vampire');
+	ent.AddTag('vip');
+	ent.ApplyAppearance('orianna_vampire');
+	act.SetTemporaryAttitudeGroup( 'hostile_to_player', AGP_Default );
+	act.SetAttitude( thePlayer, AIA_Hostile );
+	thePlayer.SetAttitude( act, AIA_Hostile );
+}
+
 exec function orihum() {
 	var      template : CEntityTemplate;
 	var           pos : Vector;
