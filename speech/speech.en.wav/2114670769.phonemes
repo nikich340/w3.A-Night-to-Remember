@@ -2,14 +2,13 @@
 ;meta[version=1]
 ;meta[text=That's interesting. Because we're supposed to meet her too.]
 ;meta[translation=ðats ˈɪntɹəstɪŋ bɪkˈʌz wiə sʌpˈəʊzd tə mˈiːt hɜː tˈuː]
-;meta[audio-hypothesis=SIL T N AH P L AA D S IH R UW S UH D EH S T IH EY AH NG SIL B IY K IH Z AH W IY EH R AH S AH B AH L OW S T AH M IY D AA R K T UW Y IY]
+;meta[audio-hypothesis=SIL N AH P L AA D S IH R UW S UH D EH S T IH EY AH NG SIL B IY K IH Z AH W IY EH R AH S AH B AH L OW S T AH M IY D AA R K T UW Y IY]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
 ;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
 ------------------------------------------------------------------------
-ð       |  290|  315|  1.00|  0.25| ok         | ð  ~  T  [  290 -  315]
-;_       |  315|  375|  1.00| -1.00| <- VERIFY! | _  d  N  [  315 -  375]
+ð       |  330|  375|  1.00| -1.00| <- VERIFY! | ð  ~  N  [  330 -  375]
 a       |  375|  485|  1.00|  0.00| ok         | a  ~> AH [  375 -  405] + P  [  405 -  485]
 ;_       |  485|  575|  1.00| -1.00| <- VERIFY! | _  d  L  [  485 -  575]
 ;_       |  575|  805|  1.00| -1.00| <- VERIFY! | _  d  AA [  575 -  805]

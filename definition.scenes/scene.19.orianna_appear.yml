@@ -948,13 +948,13 @@ dialogscript:
     # shot Shot6 to children
     - CUE: shot_8
     # (longest) anim: low_standing_determined_gesture_beckon
-    - agneta: "2114670936|Lady Orianna..."
+    - agneta: "2114670936|Lady Orianna…"
     - CUE: shot_8_backon
-    - niellan: "2114670937|Go on!"
+    - niellan: "2114670937|Come on!"
     - PAUSE: 1.0
     # shot Shot6 to orianna
     - CUE: shot_9
-    - Orianna_human: "2114670938|Wait me here. I should check something. You are allowed to play in my room."
+    - Orianna_human: "2114670938|It seems there's a matter I must attend to. Go on Niellan, you and Agneta get dinner started for me. I'll be home soon enough."
     # shot Shot7 orianna go
     - CUE: shot_10
     # (longest) anim: high_standing_bored_exit_rightside
@@ -987,4 +987,5 @@ dialogscript:
     - CAMERA_BLEND: 1.0
     ###!!!- BLACKSCREEN: true
     - EXIT
+
 

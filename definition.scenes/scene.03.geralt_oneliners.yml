@@ -32,7 +32,8 @@ dialogscript:
 
   section_start_check_orphanage:
     - geralt: "[4.7800]2114670652|Regis... Just trying to avoid a fight, to protect her."
-    - geralt: "[5.3381]2114670653|Well, I should check an orphanage in a swamp. Last time Orianna was there."
+    - geralt: "[2.4636]2114670653|Well, I should check the orphanage."
+    - geralt: "[1.786507]0001194410|I'll find her if she's there."
     - NEXT: section_exit
 
   section_start_town_corpse:
@@ -89,6 +90,8 @@ dialogscript:
 
   section_exit:
     - EXIT
+
+
 
 
 

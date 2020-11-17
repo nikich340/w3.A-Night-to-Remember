@@ -1937,7 +1937,7 @@ storyboard:
 
     # shot Shot16 azar appear
     shot_18:
-      - cam.blend.start: [0.0, cam_14_Shot14_mask_close]
+      - cam.blend.start: [0.0, cam_14_Shot14_mask_close, smooth]
       - prop.placement: [0.0, portal_04, [ -8.1503582001, 14.6176757813, -0.5945358276 ], [ 0.0, 0.0, 42.8999824524 ]]
       - prop.effect.start: [0.0, portal_04, teleport]
       - actor.lookat: [0.2, Eredin_vesemir2, Azar_Javed]
@@ -1949,8 +1949,8 @@ storyboard:
 
     # shot Shot16 azar appear
     shot_18_phrase:
-      - cam.blend.end: [0.3, cam_15_Shot16_azar_appear]
-      - cam.blend.start: [1.0, cam_15_Shot16_azar_appear]
+      - cam.blend.end: [0.3, cam_15_Shot16_azar_appear, smooth]
+      - cam.blend.start: [1.0, cam_15_Shot16_azar_appear, smooth]
       - prop.effect.stop: [0.4, portal_04, teleport]
 
     # shot Shot17 azar to aggresive
@@ -1958,7 +1958,7 @@ storyboard:
       #- actor.placement: [0.0, geralt, [ -3.5566349030, 7.2065429688, -0.2647094727 ], [ 0.0, 0.0, 352.2526550293 ]]
       #- actor.placement: [0.0, Azar_Javed, [ -6.6261005402, 12.2111816406, -0.6538085938 ], [ 0.0, 0.0, 209.7400207520 ]]
       - actor.pose: [0.5, Azar_Javed_High_Standing2_Determined]
-      - cam.blend.end: [1.0, cam_15_Shot16_azar_appear2]
+      - cam.blend.end: [1.0, cam_15_Shot16_azar_appear2, smooth]
       #- cam: [0.0, cam_17_Shot17_azar_to_aggresive]
       - actor.anim: 
           .@pos: [0.0, Azar_Javed_high_standing_determined_to_high_standing_determined2]
@@ -2504,13 +2504,14 @@ dialogscript:
     - Eredin_vesemir: "[9.934805]0000534083|I'd planned to kill Zireael quickly, painlessly… But now… I shall not deny myself the pleasure."
     # (longest) anim: high_standing_wildhunt_determined_enter_frontal: 6.800000
     - CUE: shot_14
-    - geralt: "[1.4235]2114670728|Show me your face."
+    - geralt: "[2.2145526]0001097827|And who might you be?"
     - CUE: shot_15
-    - Eredin_vesemir: "[3.3156197]0000534728|Hahahaha… As you will."
+    - Eredin_vesemir: "[3.3156197]0000534728|Hahahaha… As you wish."
     - CUE: shot_16
     - PAUSE: 2.0
-    - geralt: "[2.7799]2114670729|I must be out of my mind... Vesemir!"
+    - geralt: "[2.7799]2114670729|I must be out of my mind..."
     - CUE: shot_17
+    - geralt: "[0.66788405]0001075169|Vesemir!"
     #- Eredin_vesemir: "[3.3156197]0000534728|Hahahaha… As you will."
     - Eredin_vesemir2: "[1.3952225]0001058454|Draw your sword, Geralt."
     - CUE: shot_18
@@ -2693,4 +2694,5 @@ dialogscript:
     #- CAMERA_BLEND: 5.0
     - BLACKSCREEN: true
     - EXIT
+
 

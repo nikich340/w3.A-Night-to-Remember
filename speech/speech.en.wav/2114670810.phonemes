@@ -1,7 +1,7 @@
 ;meta[language=en]
 ;meta[version=1]
-;meta[text=The Baron is certain that this is his son, and very much wants to find this woman. However she is… elusive, everyone knows her, but where she is - noone seems to know.]
-;meta[translation=ðə bˈaɹən ɪz sˈɜːtən ðat ðɪs ɪz hɪz sˈʌn and vˈɛɹɪ mˈʌtʃ wˈɒnts tə fˈaɪnd ðɪs wˈʊmən haʊˈɛvə ʃiː ɪz ɪlˈuːsɪv ˈɛvɹɪwˌɒn nˈəʊz hɜː bˌʌt wˌeə ʃiː ɪz nˈəʊwɒn sˈiːmz tə nˈəʊ]
+;meta[text=The Baron is certain that this is his son, and very much wants to find this woman. However she is… elusive, everyone knows her, but where she is - no one seems to know.]
+;meta[translation=ðə bˈaɹən ɪz sˈɜːtən ðat ðɪs ɪz hɪz sˈʌn and vˈɛɹɪ mˈʌtʃ wˈɒnts tə fˈaɪnd ðɪs wˈʊmən haʊˈɛvə ʃiː ɪz ɪlˈuːsɪv ˈɛvɹɪwˌɒn nˈəʊz hɜː bˌʌt wˌeə ʃiː ɪz nˈəʊwˈɒn sˈiːmz tə nˈəʊ]
 ;meta[audio-hypothesis=SIL DH AH B AA ER EH UW N IH S S ER DH AH M AE T V IH S IH Z HH IY UW Z S AH K S OW N SIL SIL AH N V EH D IY M AA T CH W AO N S T AH F AY IH NG M DH AH S W L M AY M HH ER SIL AY L EH V AE R AY SIL SH IY IH Z S SIL IY OW L UW S UH T F SIL IH V ER N UW W AH N UW N OW L AH Z HH AH AW D SIL B OW W IY UH SH IY Y IH S S SIL M UW OW W EH M UW N S IY M S T UH N UW L SIL]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
@@ -150,7 +150,7 @@ n       |18230|18435|  1.00|  0.25| ok         | n  ~  M  [18230 -18435]
 ;_       |18435|18495|  1.00| -1.00| <- VERIFY! | _  d  UW [18435 -18495]
 əʊ      |18495|18705|  1.30|  2.00| ok         | əʊ ~  OW [18495 -18705]
 w       |18705|18785|  1.00|  2.00| ok         | w  ~  W  [18705 -18785]
-ɒ       |18785|18825|  1.00|  0.01| ok         | ɒ  ~  EH [18785 -18825]
+ɒ       |18785|18825|  1.30|  0.01| ok         | ɒ  ~  EH [18785 -18825]
 ;_       |18825|18875|  1.00| -1.00| <- VERIFY! | _  d  M  [18825 -18875]
 ;_       |18875|18905|  1.00| -1.00| <- VERIFY! | _  d  UW [18875 -18905]
 n       |18905|18985|  1.00|  2.00| ok         | n  ~  N  [18905 -18985]

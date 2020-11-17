@@ -258,16 +258,16 @@ dialogscript:
     - CUE: shot_1a
     - PAUSE: 2.0
     # (longest) anim: high_sitting_chair_proud_gesture_question_03
-    - geralt: "0001014097|Nice place."
+    - geralt: "[1.1333333]0001014097|Nice place."
     - PAUSE: 2.0
     - CUE: shot_1b
-    - geralt: "0000587959|I could use a little rest myself…"
+    - geralt: "[1.7725871]0000587959|I could use a little rest myself…"
     ## mimic!
     - CUE: shot_2_blend
     - PAUSE: 15.0
 
     - CUE: shot_3_blend_a
-    - regis: "0001162398|So we shall, my friend. We have witnessed - and, in fact, on several occasions incited - many great and weighty events. After all that toil, I believe we deserve a bit of a rest."
+    - regis: "[14.198032]0001162398|So we shall, my friend. We have witnessed - and, in fact, on several occasions incited - many great and weighty events. After all that toil, I believe we deserve a bit of a rest."
     - PAUSE: 0.5
     - CUE: shot_3_blend_b
     - PAUSE: 10.0

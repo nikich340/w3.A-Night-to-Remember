@@ -527,11 +527,11 @@ dialogscript:
     
     - CUE: shot_5
     # (longest) anim: geralt_neutral_question_problem_face
-    - geralt: "0000472239|What's the matter?"
+    - geralt: "[1.0117565]0000472239|What's the matter?"
     # shot Shot2 ori closeup + gest
     - CUE: shot_6
     # (longest) anim: low_standing_determined_gesture_question_01
-    - vampire_diva: "2114670375|A slayer of monsters slayed people to protect monster. You managed to impress me."
+    - vampire_diva: "2114670375|A witcher has slain a man to protect a monster. I'll admit, I'm impressed."
     # shot Shot2 geralt closeup
     - CUE: shot_7
     # (longest) anim: high_standing_determined_gesture_both_hands_2
@@ -539,8 +539,8 @@ dialogscript:
     # shot Shot2 ori closeup + gest2
     - CUE: shot_8
     # (longest) anim: low_standing_determined_gesture_question_02
-    - vampire_diva: "2114670376|Probably this annoying Baron promised you a huge reward for me, right?"
-    - vampire_diva: "2114670377|You can pick up his sword instead of this. I know, you like these sharp things."
+    - vampire_diva: "2114670376|I'm sure this... troublesome Baron Edward promised a sizable reward, right?"
+    - vampire_diva: "2114670377|Whatever it might've been, you're better off confiscating that steel blade of his."
     # shot Shot2 geralt thank you
     - CUE: shot_9
     # (longest) anim: add_reaction_agreeing_nod_01
@@ -565,3 +565,4 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+

@@ -743,7 +743,7 @@ dialogscript:
     # shot static
     - CUE: shot_3_ger_greetings
     # (longest) anim: man_geralt_carry_torch_sword_loop_run_left
-    - geralt: "[0.7892894]0001101069|Greetings."
+    - geralt: "[2.8014643]0000587002|Dammit! Things've sure gotten messy."
     - PAUSE: 2.0
     # shot cam baron
     - CUE: shot_4_baron_aggro
@@ -780,5 +780,6 @@ dialogscript:
 
   section_exit:
     - EXIT
+
 
 

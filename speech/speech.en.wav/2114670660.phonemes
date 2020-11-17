@@ -2,12 +2,12 @@
 ;meta[version=1]
 ;meta[text=Interesting… Regis might be right.]
 ;meta[translation=ˈɪntɹəstɪŋ ɹˈiːdʒɪs mˌaɪt biː ɹˈaɪt]
-;meta[audio-hypothesis=SIL K EH N T IH S T EH UW N AY SIL L IY JH IH S T M AY T B IY R AY D AH R SIL]
+;meta[audio-hypothesis=SIL K EH N T IH S T EH UW N AY SIL L IY JH IH S T M AY T B IY R AY D IH D SIL]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
 ;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
-;_       |  290|  345|  1.00| -1.00| <- VERIFY! | _  d  K  [  290 -  345]
+;_       |  280|  345|  1.00| -1.00| <- VERIFY! | _  d  K  [  280 -  345]
 ------------------------------------------------------------------------
 ɪ       |  345|  435|  1.30| -1.00| <- VERIFY! | ɪ  ~  EH [  345 -  435]
 n       |  435|  505|  1.00|  2.00| ok         | n  ~  N  [  435 -  505]
@@ -36,6 +36,6 @@ i       | 2685| 2795|  1.00|  2.00| ok         | i  ~  IY [ 2685 - 2795]
 ------------------------------------------------------------------------
 ɹ       | 2795| 2895|  1.00|  2.00| ok         | ɹ  ~  R  [ 2795 - 2895]
 aɪ      | 2895| 3035|  1.30|  2.00| ok         | aɪ ~  AY [ 2895 - 3035]
-t       | 3035| 3105|  1.00|  1.70| ok         | t  ~  D  [ 3035 - 3105]
-;_       | 3105| 3185|  1.00| -1.00| <- VERIFY! | _  d  AH [ 3105 - 3185]
-;_       | 3185| 3230|  1.00| -1.00| <- VERIFY! | _  d  R  [ 3185 - 3230]
+;_       | 3035| 3085|  1.00| -1.00| <- VERIFY! | _  d  D  [ 3035 - 3085]
+;_       | 3085| 3165|  1.00| -1.00| <- VERIFY! | _  d  IH [ 3085 - 3165]
+t       | 3165| 3230|  1.00|  1.70| ok         | t  ~  D  [ 3165 - 3230]

@@ -1366,7 +1366,7 @@ dialogscript:
     - orianna_human: "2114670948|No witcher's ever died in his own bed."
     ## replace them!
     - CUE: shot_fight2_ger_sceptic
-    - orianna_vampire: "2114670949|You won't be exception."
+    - orianna_vampire: "2114670949|You won't be an exception."
     - NEXT: script_call_morph_forward
 
   script_call_morph_forward:
@@ -1409,31 +1409,31 @@ dialogscript:
     - geralt: "[1.605944]0001172302|We don't have to fight."
 
     - CUE: shot_try_peacefully_ori1
-    - orianna_human: "2114670950|Really? You will let me leave again?"
+    - orianna_human: "2114670950|Really? You're just going let me go again?"
 
     - CUE: shot_try_peacefully_ger2
     - geralt: "[3.6549]2114670951|On one condition… Stop drinking the children."
 
     - CUE: shot_try_peacefully_ori2
-    - orianna_human: "2114670952|You know, I am the vampiress. And I can't resist the blood hunger."
+    - orianna_human: "2114670952|You know what I am. I can't resist the hunger."
     
     - CUE: shot_try_peacefully_ger3
     - geralt: "[4.9114]2114670953|Think you can handle this on your own. Found something interesting in your house."
 
     - CUE: shot_try_peacefully_ori3
-    - orianna_human: "2114670954|So, you snuck in my house and decided to show off with it? You call those manners?"
+    - orianna_human: "2114670954|Ha! So, you've been snooping around? I thought you were the straightforward type."
     
     - CUE: shot_try_peacefully_ger4
     - geralt: "[2.3540]2114670955|Orianna, that doesn't change the fact that..."
     
     - CUE: shot_try_peacefully_ori4
-    - orianna_human: "2114670956|That I started to change? It's just my guessings."
+    - orianna_human: "2114670956|You presume to understand me? After reading some... musings?"
     
     - CUE: shot_try_peacefully_ger5
     - geralt: "[1.2964]2114670957|Don't deny it."
     
     - CUE: shot_try_peacefully_ori5
-    - orianna_human: "2114670958|That's not enough to convince me."
+    - orianna_human: "2114670958|If I'm not convinced that I've changed, what makes you so sure?"
     
     - NEXT: section_choice_peaceful
 
@@ -1486,7 +1486,7 @@ dialogscript:
     - orianna_human: "[10.0]2114670960|Hmm. Regis, Regis… Awfully noble as always."
     - CUE: shot_try_peacefully_hide_letter
     - PAUSE: 2.0
-    - orianna_human: "2114670967|He would be upset if we tussled, wouldn't he?"
+    - orianna_human: "2114670967|I suppose he'd be upset if we tussled, wouldn't he?"
     - NEXT: script_call_remove_letter_orianna
 
   script_call_remove_letter_orianna:
@@ -1536,21 +1536,21 @@ dialogscript:
     - CUE: shot_try_peacefully_ori7a
     - PAUSE: 2.6333
     #- CUE: shot_try_peacefully_ori7b
-    - orianna_human: "2114670961|Fine. I've come to a decision - I vow not to hurt kids anymore."
+    - orianna_human: "2114670961|Very well then, I've made my decision - I won't feed on the children again."
     - CUE: shot_try_peacefully_ori7c
-    - orianna_human: "2114670962|But they will stay with me. I'll take of them. And it's not up for discussion."
+    - orianna_human: "2114670962|But they will stay with me. I'll take care of them. It's not up for discussion."
     
     - CUE: shot_try_peacefully_ger8
     - geralt: "[4.2560]2114670963|If you break your vow I'll come back, and someone'll get hurt."
 
     - CUE: shot_try_peacefully_ori8
-    - orianna_human: "2114670964|I'd sooner drink from vagrant than break my word."
+    - orianna_human: "2114670964|Unlike your kind, we tend to keep our promises."
     
     - CUE: shot_try_peacefully_ger9
     - geralt: "[3.0908847]0001027471|Hmm… Guess I believe you…"
 
     - CUE: shot_try_peacefully_ori9
-    - orianna_human: "2114670965|Don't intend to pursue me again?"
+    - orianna_human: "2114670965|It would seem this is farewell again, witcher?"
 
     - CUE: shot_try_peacefully_ger10
     - geralt: "[2.035898]0001047894|Right, leave you to it, then."
@@ -1579,6 +1579,7 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+
 
 
 

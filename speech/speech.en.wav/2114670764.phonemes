@@ -1,7 +1,7 @@
 ;meta[language=en]
 ;meta[version=1]
-;meta[text=Very funny, you're cretin…]
-;meta[translation=vˈɛɹɪ fˈʌni jɔː kɹˈɛtɪn]
+;meta[text=Very funny, you cretin…]
+;meta[translation=vˈɛɹɪ fˈʌni juː kɹˈɛtɪn]
 ;meta[audio-hypothesis=SIL V R EH R N IH D IH T F AO N EY HH D SIL Y IH IH T K UH D IH T M SIL]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
@@ -25,10 +25,10 @@ n       | 1365| 1445|  1.00|  2.00| ok         | n  ~  N  [ 1365 - 1445]
 ;_       | 1715| 1780|  1.00| -1.00| <- VERIFY! | _  d  D  [ 1715 - 1780]
 i       | 2720| 3135|  1.00|  0.97| ok         | i  ~> Y  [ 2720 - 3045] + IH [ 3045 - 3135]
 ------------------------------------------------------------------------
-j       | 3135| 3175|  1.00|  0.50| ok         | j  ~  IH [ 3135 - 3175]
-ɔ       | 3175| 3245|  1.00| -1.00| <- VERIFY! | ɔ  ~  T  [ 3175 - 3245]
+j       | 3135| 3155|  1.00|  0.50| ok         | j  ~  IH [ 3135 - 3175]
+u       | 3155| 3175|  1.00|  0.00| ok         | u  \  IH [ 3135 - 3175]
 ------------------------------------------------------------------------
-k       | 3245| 3405|  1.00|  2.00| ok         | k  ~  K  [ 3245 - 3405]
+k       | 3175| 3405|  1.00|  1.00| ok         | k  ~> T  [ 3175 - 3245] + K  [ 3245 - 3405]
 ;ɹ       | 3405| 3405|  1.00| -1.00| <- VERIFY! | ɹ  i
 ɛ       | 3405| 3455|  1.30|  0.01| ok         | ɛ  ~  UH [ 3405 - 3455]
 t       | 3455| 3485|  1.00|  1.70| ok         | t  ~  D  [ 3455 - 3485]

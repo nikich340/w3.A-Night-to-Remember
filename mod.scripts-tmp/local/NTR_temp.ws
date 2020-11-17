@@ -180,7 +180,7 @@ exec function sc(num : int, optional input : String) {
 	if (input == null) {
 		input = "Input";
 	}
-	NTR_notify("input = " + input);
+	//NTR_notify("input = " + input);
 	path = "dlc/dlcntr/data/scenes/" + sceneNames[num];
 	
     // -> SET SCENE PATH

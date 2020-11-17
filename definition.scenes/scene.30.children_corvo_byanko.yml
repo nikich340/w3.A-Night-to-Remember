@@ -453,15 +453,15 @@ dialogscript:
     # shot Shot1 ger
     - CUE: shot_1b
     # (longest) anim: add_gesture_slight_explain_05
-    - geralt: "Take care of them, Barnabas-Basil."
+    - geralt: "2114670390|Take care of them, Barnabas-Basil."
     # shot Shot2 butler gest
     - CUE: shot_2a
     # (longest) anim: high_standing_happy_gesture_bow
-    - butler: "Oh, with great pleasure, sir."
+    - butler: "2114670391|Oh, with great pleasure, sir."
     # shot Shot3 go home1
     - CUE: shot_2b
     # (longest) anim: add_walk_two_steps_forward_casual
-    - butler: "Follow me, please."
+    - butler: "2114670392|Follow me, please."
     - PAUSE: 1.0
     # shot Shot3 go home2 pos2
     - CUE: shot_3a
@@ -478,3 +478,4 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+
