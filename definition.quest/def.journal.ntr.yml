@@ -36,6 +36,12 @@ journals:
               caption: "Go to bandits' camp and talk with baron Edward."
               mappins: 
                 - [ camp_pin, 22 ]
+
+          - check_amphitheatre:
+              caption: "Investigate amphitheatre near bandits' camp."
+              mappins: 
+                - [ camp_pin, 22 ]
+
         town_part:
           - investigate_gates_area:
               caption: "Investigate clues near Orianna's residence."

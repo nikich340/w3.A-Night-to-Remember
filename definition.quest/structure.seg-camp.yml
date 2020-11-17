@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: camp
 # 
-# (version: 1044, saved: 2020-11-12 15:48:30)
+# (version: 1052, saved: 2020-11-17 13:36:55)
 #
 ---
 structure:
@@ -38,10 +38,8 @@ structure:
           next.Output:
             - scene.baron_remark_gp: camp_reminder
             - objective.go_camp: Success
-            - waituntil.1ss
           next.greedy:
             - spawn.spawn_sitting_baron
-            - waituntil.1ss
         
         interaction.attach_scene_to_baron:
           ".editor":
@@ -55,10 +53,8 @@ structure:
           next.Output:
             - scene.baron_remark_gp: camp_reminder
             - objective.go_camp: Success
-            - waituntil.1ss
           next.greedy:
             - waituntil.1s
-            - waituntil.1ss
         
         waituntil.1s:
           elapsed: "00:00:01"
@@ -68,14 +64,6 @@ structure:
             out: [ Out ]
           next:
             - interaction.attach_scene_to_baron: greedy
-        
-        waituntil.1ss:
-          elapsed: "00:00:01"
-          ".editor":
-            pos: [ 1292.8245849609, -4.6861462593 ]
-            in: [ In ]
-            out: [ Out ]
-          next: ".done"
         
         waituntil.inside_camp_area:
           inside: [ bob/camp_area, PLAYER ]
@@ -90,7 +78,7 @@ structure:
         waituntil.wait_1s:
           elapsed: "00:00:01"
           ".editor":
-            pos: [ 978.0476074219, 199.4960479736 ]
+            pos: [ 984.0, 59.0 ]
             in: [ In ]
             out: [ Out ]
           next:

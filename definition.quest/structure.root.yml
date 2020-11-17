@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 1044, saved: 2020-11-12 15:48:30)
+# (version: 1052, saved: 2020-11-17 13:36:55)
 #
 ---
 structure:
@@ -43,12 +43,13 @@ structure:
       
       subsegment.orphanage:
         ".editor":
-          pos: [ 798.0, 490.0 ]
+          pos: [ 854.0, 499.0 ]
           in: [ In ]
           out: [ Out ]
         segment: orphanage
         next:
           - subsegment.camp
+          - waituntil.ntr_quest_amphitheatre_active
       
       subsegment.regis_mail:
         ".editor":
@@ -111,6 +112,22 @@ structure:
         next:
           - subsegment.intro_nightmare
       
+      waituntil.Wait_fail_or_done:
+        ".editor":
+          pos: [ 1340.0, 608.0 ]
+          hint: named
+          in: [ In ]
+          out: [ done, fail ]
+        conditions:
+          done:
+            factdb: [ poi_gor_a_10_boss_killed, ">=", 1 ]
+          fail:
+            factdb: [ ntr_quest_finale_started, ">=", 1 ]
+        next.done:
+          - objective.Check_amphitheatre: Success
+        next.fail:
+          - objective.Check_amphitheatre: Failure
+      
       waituntil.inside_camp:
         inside: [ bob/camp_area, PLAYER ]
         ".editor":
@@ -147,6 +164,16 @@ structure:
           out: [ Out ]
         next:
           - addfact.del_fact11
+      
+      waituntil.ntr_quest_amphitheatre_active:
+        factdb: [ ntr_quest_amphitheatre_active, ">=", 1 ]
+        ".editor":
+          pos: [ 1100.0, 626.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - objective.Check_amphitheatre: Activate
+          - waituntil.Wait_fail_or_done
       
       waituntil.outside_area:
         outside: [ bob/orphanage_wraitharea, PLAYER ]
@@ -598,6 +625,13 @@ structure:
         phase: fight
         spawnsets:
           - comm_orph_wraiths
+        next: ".done"
+      
+      objective.Check_amphitheatre:
+        ".editor": [ 1326.0, 727.0 ]
+        objective: nighttoremember/camp_part/check_amphitheatre
+        notify: true
+        track: true
         next: ".done"
       
       addfact.del_fact1:
