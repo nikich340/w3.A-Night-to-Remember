@@ -43,7 +43,7 @@
 2114670737|||Is it your doing?
 2114670738|||So you say, yet I wait and wait, and nothing…
 2114670739|||Fuck you!
-;2114670740|||Death mistake. - "Hahahaha… Point for me." instead
+2114670740|||Death mistake.
 ;2114670745|||Crazy nightmare. - "what a dream" instead
 ;
 ; scene 11 orphanage main
@@ -128,13 +128,16 @@
 2114670874|00000000||I agree.
 2114670875|00000000||I don't agree.
 ;    393630|00000000||Just a traveler. Happened to be passing through.
-2114670877|00000000||Piss off, vagrant. Nothing for you here.
+2114670877|00000000||Piss off, vagrant. There's nothing for you here.
 2114670878|00000000||Halt! What are you looking for?
 2114670879|00000000||I'm a witcher. Your friends asked me to find you.
-2114670880|00000000||Good. The Baron is in Beauclair at the moment, be back soon. Wait a little here.
+2114670880|00000000||Well, alright. The Baron is in Beauclair at the moment, should be back soon. Wait here a bit.
 2114670881|00000000||Greetings, Baron! Any news? Where is Alfred?
 2114670882|00000000||He is dead. Orianna killed him.
-2114670883|00000000||What?! How? Did you find her?
+2114670883|00000000||What?! But… How? Tell me what happened.
+2114670970|00000000||Oh, shit…
+;;; 2114670883|00000000||You, piece of shit, I'll kill you!
+;;; 2114670883|00000000||I'm gonna fucking kill you, witcher!
 2114670884|00000000||She is not just a woman… Maybe witch or monster. I can't understand what happened myself.
 2114670885|00000000||And who are.. Witcher! It must be destiny sent you to us.
 2114670886|00000000||Actually it was your friends. My name is Geralt.

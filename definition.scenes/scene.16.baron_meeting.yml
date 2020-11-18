@@ -897,14 +897,14 @@ storyboard:
       - actor.anim: 
           .@pos: [0.0, geralt_high_standing_determined_enter_frontal]
           blendout: 0.5
+      - actor.anim: 
+          .@pos: [0.8, Bandit_camp_crossbow_high_standing_determined_gesture_both_hands_stop]
+          blendin: 0.5
+          blendout: 0.5
       
     # shot Shot2 band
     shot_2:
-      - cam.blend.end: [1.0, cam_2_Shot2_band, smooth]
-      - actor.anim: 
-          .@pos: [0.4, Bandit_camp_crossbow_high_standing_determined_gesture_both_hands_stop]
-          blendin: 0.5
-          blendout: 0.5
+      - cam.blend.end: [0.77, cam_2_Shot2_band, smooth]
 
     # shot Shot3 ger
     shot_3:
@@ -1062,6 +1062,9 @@ storyboard:
           weight: 1.0
       - actor.placement: [0.0, geralt, [ 3.4936523438, 5.7642822266, 0.3538208008 ], [ 0.0, 0.0, 32.3399658203 ]]
     
+    shot_17_bow:
+      - cam: [0.0, cam_13_Shot5_barron_to_crossbow]
+
     shot_17_baron_to_geralt:
       - actor.lookat: [0.0, Baron_Edward, geralt]
       - actor.lookat: [0.4, Bandit_camp_crossbow, geralt]
@@ -1409,14 +1412,15 @@ storyboard:
       - actor.anim: 
           .@pos: [0.0, geralt_high_standing_determined_enter_frontal]
           blendout: 0.5
+
+      - actor.anim: 
+          .@pos: [0.8, Bandit_camp_crossbow_high_standing_determined_gesture_both_hands_stop]
+          blendin: 0.5
+          blendout: 0.5
       
     # shot Shot2 band
     shot_hurry_2:
-      - cam.blend.end: [1.0, cam_2_Shot2_band, smooth]
-      - actor.anim: 
-          .@pos: [0.4, Bandit_camp_crossbow_high_standing_determined_gesture_both_hands_stop]
-          blendin: 0.5
-          blendout: 0.5
+      - cam.blend.end: [0.77, cam_2_Shot2_band, smooth]
 
     # shot Shot3 ger
     shot_hurry_3:
@@ -1450,14 +1454,14 @@ dialogscript:
     # (longest) anim: high_standing_determined_enter_frontal
     - PAUSE: 2.0
     # shot Shot2 band
-    - CUE: shot_hurry_2
     # (longest) anim: high_standing_determined_gesture_both_hands_stop
-    - PAUSE: 2.5
-    - Bandit_camp_crossbow: "2114670878|Halt! What are you looking for?"
+    - PAUSE: 0.5
+    - CUE: shot_hurry_2
+    - Bandit_camp_crossbow: "[2.6100]2114670878|Halt! What are you looking for?"
     - CUE: shot_hurry_3
     - geralt: "[2.9642897]0000393630|Just a traveler. Happened to be passing through."
     - CUE: shot_hurry_3b
-    - Bandit_camp_crossbow: "2114670877|Piss off, vagrant. Nothing for you here."
+    - Bandit_camp_crossbow: "[4.0878]2114670877|Piss off, vagrant. There's nothing for you here."
     - PAUSE: 0.5
     # shot Shot4 ger meditate start
     - CUE: shot_hurry_togame
@@ -1478,10 +1482,10 @@ dialogscript:
     # (longest) anim: high_standing_determined_enter_frontal
     - PAUSE: 2.0
     # shot Shot2 band
-    - CUE: shot_2
     # (longest) anim: high_standing_determined_gesture_both_hands_stop
-    - PAUSE: 2.5
-    - Bandit_camp_crossbow: "2114670878|Halt! What are you looking for?"
+    - PAUSE: 0.5
+    - CUE: shot_2
+    - Bandit_camp_crossbow: "[2.6100]2114670878|Halt! What are you looking for?"
     # shot Shot3 ger
     - CUE: shot_3
     # (longest) anim: high_standing_determined_gesture_both_hands_stop
@@ -1489,7 +1493,7 @@ dialogscript:
     # shot Shot4 ger meditate start
     - CUE: shot_3b
     - PAUSE: 0.5
-    - Bandit_camp_crossbow: "2114670880|Good. The Baron is in Beauclair at the moment, be back soon. Wait a little here."
+    - Bandit_camp_crossbow: "[7.0742]2114670880|Well, alright. The Baron is in Beauclair at the moment, should be back soon. Wait here a bit."
     - CUE: shot_4_fadeout
     - PAUSE: 1.0
     - CUE: shot_4_fadein
@@ -1555,15 +1559,17 @@ dialogscript:
     - PAUSE: 5.0
 
     - CUE: shot_13
-    - Bandit_camp_crossbow: "2114670881|Greetings, Baron! Any news? Where is Alfred?"
+    - Bandit_camp_crossbow: "[4.1376]2114670881|Greetings, Baron! Any news? Where is Alfred?"
     - CUE: shot_15_baron_sore
     - PAUSE: 4.0
     - CUE: shot_15_geralt_goes
     - Baron_Edward: "2114670882|He is dead. Orianna killed him."
     - CUE: shot_16_bow
-    - Bandit_camp_crossbow: "2114670883|What?! How? Did you find her?"
+    - Bandit_camp_crossbow: "[6.3201]2114670883|What?! But… How? Tell me what happened."
     - CUE: shot_17_baron
     - Baron_Edward: "2114670884|She is not just a woman… Maybe witch or monster. I can't understand what happened myself."
+    - CUE: shot_17_bow
+    - Bandit_camp_crossbow: "[2.0757]2114670970|Oh, shit…"
     - CUE: shot_17_baron_to_geralt
     - Baron_Edward: "2114670885|And who are.. Witcher! It must be destiny sent you to us."
     - geralt: "2114670886|Actually it was your friends. My name is Geralt."
@@ -1787,6 +1793,8 @@ dialogscript:
 
   section_exit:
     - EXIT
+
+
 
 
 
