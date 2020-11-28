@@ -305,7 +305,7 @@ layers:
 
       orianna_scent1: 
         .type: "CNTRScent"
-        template: "quests\\sidequests\\no_mans_land\\quest_files\\sq104_werewolf\\entities\\sq104_niellen_scent_source.w2ent"
+        template: "dlc\\dlcntr\\data\\entities\\ntr_scent.w2ent"
         transform:
           pos: [ -410.45, -1439.175, 87.065 ]
           rot: [ 0.0, 0.0, 0.0 ]
@@ -752,7 +752,7 @@ layers:
 
       orianna_scent2: 
         .type: "CNTRScent"
-        template: "quests\\sidequests\\no_mans_land\\quest_files\\sq104_werewolf\\entities\\sq104_niellen_scent_source.w2ent"
+        template: "dlc\\dlcntr\\data\\entities\\ntr_scent.w2ent"
         transform:
           pos: [ -410.46, -1439.176, 87.066 ]
           rot: [ 0.0, 0.0, 0.0 ]
@@ -1200,7 +1200,7 @@ layers:
 
       orianna_scent3: 
         .type: "CNTRScent"
-        template: "quests\\sidequests\\no_mans_land\\quest_files\\sq104_werewolf\\entities\\sq104_niellen_scent_source.w2ent"
+        template: "dlc\\dlcntr\\data\\entities\\ntr_scent.w2ent"
         transform:
           pos: [ -410.47, -1439.177, 87.067 ]
           rot: [ 0.0, 0.0, 0.0 ]
@@ -1648,7 +1648,7 @@ layers:
 
       orianna_scent4: 
         .type: "CNTRScent"
-        template: "quests\\sidequests\\no_mans_land\\quest_files\\sq104_werewolf\\entities\\sq104_niellen_scent_source.w2ent"
+        template: "dlc\\dlcntr\\data\\entities\\ntr_scent.w2ent"
         transform:
           pos: [ -410.48, -1439.178, 87.068 ]
           rot: [ 0.0, 0.0, 0.0 ]
@@ -2096,7 +2096,7 @@ layers:
 
       orianna_scent5: 
         .type: "CNTRScent"
-        template: "quests\\sidequests\\no_mans_land\\quest_files\\sq104_werewolf\\entities\\sq104_niellen_scent_source.w2ent"
+        template: "dlc\\dlcntr\\data\\entities\\ntr_scent.w2ent"
         transform:
           pos: [ -410.49, -1439.179, 87.069 ]
           rot: [ 0.0, 0.0, 0.0 ]

@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: regis_mail
 # 
-# (version: 1052, saved: 2020-11-17 13:36:55)
+# (version: 1081, saved: 2020-11-24 14:36:03)
 #
 ---
 structure:
@@ -24,7 +24,7 @@ structure:
           _fadein: false
           next.Output:
             - changelayers.owl_layer
-            - questoutcome.Finish_Night_of_Nightmare: Success
+            - journal.entry_4: Activate
             - waituntil.wait_3s
         
         scene.geralt_comment:
@@ -142,6 +142,13 @@ structure:
           next:
             - waituntil.wait_until_outhome
         
+        journal.entry_4:
+          ".editor": [ 665.0, 518.0 ]
+          entry: quests/nightofnightmares/ntr_intro4
+          notify: true
+          next:
+            - questoutcome.Finish_Night_of_Nightmare: Success
+        
         objective.Fresh_air:
           ".editor": [ 1017.1463623047, 477.3131408691 ]
           objective: nighttoremember/regis_owl/out_home
@@ -164,7 +171,7 @@ structure:
           next: ".done"
         
         questoutcome.Finish_Night_of_Nightmare:
-          ".editor": [ 762.4936523438, 507.0811767578 ]
+          ".editor": [ 848.0, 598.0 ]
           quest: nightofnightmares
           notify: true
           next: ".done"

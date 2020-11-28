@@ -1,17 +1,20 @@
 #
 # quest structure root segment
 # 
-# (version: 1052, saved: 2020-11-17 13:36:55)
+# (version: 1081, saved: 2020-11-24 14:36:03)
 #
 ---
 structure:
   quest:
     blocks:
       start:
-        ".editor": [ -614.2691650391, 506.6156005859 ]
+        ".editor": [ -912.0, 480.0 ]
         next:
-          - waituntil.wait_quest_allowed
           - changelayers.hide_hide_hide_ALL
+          - waituntil.wait_quest_allowed
+          - objective.Go_to_corvo_at_midnight: Activate
+          - waituntil.3s
+          - journal.new_journal_entry: Activate
       
       subsegment.FINALE:
         ".editor":
@@ -103,6 +106,15 @@ structure:
           - script.Lock_back_door_house
           - script.Lock_front_door
       
+      waituntil.3s:
+        elapsed: "00:00:03"
+        ".editor":
+          pos: [ -669.0, 302.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - waituntil.Wait_00_to_03
+      
       waituntil.3s_to_get_ready:
         elapsed: "00:00:03"
         ".editor":
@@ -111,6 +123,15 @@ structure:
           out: [ Out ]
         next:
           - subsegment.intro_nightmare
+      
+      waituntil.Wait_00_to_03:
+        time: [ "00:00", "03:00" ]
+        ".editor":
+          pos: [ -486.0, 215.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - script.new_ntr_factchecker
       
       waituntil.Wait_fail_or_done:
         ".editor":
@@ -202,6 +223,15 @@ structure:
         next:
           - waituntil.inside_camp
       
+      waituntil.wait_another_range:
+        time: [ "03:01", "23:59" ]
+        ".editor":
+          pos: [ -312.0, 94.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - waituntil.Wait_00_to_03
+      
       waituntil.wait_day:
         time: [ "08:01", "23:59" ]
         ".editor":
@@ -221,13 +251,14 @@ structure:
           - script.check_camp_removed
       
       waituntil.wait_quest_allowed:
-        factdb: [ NTRstartquest, ">=", 1 ]
+        factdb: [ ntr_quest_allowed, ">=", 1 ]
         ".editor":
-          pos: [ -325.4405517578, 469.0657958984 ]
+          pos: [ -315.0, 467.0 ]
           in: [ In ]
           out: [ Out ]
         next:
           - changelayers.show_camp_house_main
+          - objective.Go_to_corvo_at_midnight: Success
       
       waituntil.wraith_area:
         inside: [ bob/orphanage_wraitharea, PLAYER ]
@@ -312,6 +343,15 @@ structure:
           - newState: EDQS_Lock
         next: ".done"
       
+      script.NTR_CheckQuestConditions:
+        ".editor":
+          pos: [ -177.0, 223.0 ]
+          in: [ In ]
+          out: [ Out ]
+        function: NTR_CheckQuestConditions
+        next:
+          - waituntil.wait_another_range
+      
       script.Teleport_Orianna_horse:
         ".editor":
           pos: [ 978.0, 1216.0 ]
@@ -380,6 +420,19 @@ structure:
         next.False:
           - scene.baron_meeting_short: hurry
       
+      script.new_ntr_factchecker:
+        ".editor":
+          pos: [ -333.0, 297.0 ]
+          in: [ In ]
+          out: [ "False", "True" ]
+        function: NTR_FactChecker
+        parameter:
+          - factName: ntr_quest_allowed
+          - factCond: "=="
+          - val: 1
+        next.False:
+          - script.NTR_CheckQuestConditions
+      
       script.sounds_dettlaff:
         ".editor":
           pos: [ 117.6712799072, 203.2845916748 ]
@@ -438,7 +491,7 @@ structure:
       
       changelayers.hide_hide_hide_ALL:
         ".editor":
-          pos: [ -392.5714111328, 596.571472168 ]
+          pos: [ -563.0, 762.0 ]
           hint: hide-only
           in: []
           out: []
@@ -627,9 +680,30 @@ structure:
           - comm_orph_wraiths
         next: ".done"
       
+      journal.new_journal_entry:
+        ".editor": [ -562.0, 876.0 ]
+        entry: characters/baron_edward/first_entry
+        notify: true
+        activate_root: true
+        next:
+          - journal.new_journal_entry_1: Activate
+      
+      journal.new_journal_entry_1:
+        ".editor": [ -381.0, 871.0 ]
+        entry: characters/test_character2/first_entry
+        notify: true
+        next: ".done"
+      
       objective.Check_amphitheatre:
         ".editor": [ 1326.0, 727.0 ]
         objective: nighttoremember/camp_part/check_amphitheatre
+        notify: true
+        track: true
+        next: ".done"
+      
+      objective.Go_to_corvo_at_midnight:
+        ".editor": [ -559.0, 654.0 ]
+        objective: nightofnightmares/start_quest/wait_night
         notify: true
         track: true
         next: ".done"

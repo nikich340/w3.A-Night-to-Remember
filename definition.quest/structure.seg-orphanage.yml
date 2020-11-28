@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: orphanage
 # 
-# (version: 1044, saved: 2020-11-12 15:48:30)
+# (version: 1081, saved: 2020-11-24 14:36:03)
 #
 ---
 structure:
@@ -58,7 +58,6 @@ structure:
             - spawn.bandits_normal_comm
             - script.reset_loose_fact
             - script.reset_win_fact
-            - script.Steal_money
             - waituntil.wait_1sss
             - objective.defeat_bandits: Failure
         
@@ -74,8 +73,8 @@ structure:
           next.Output:
             - spawn.bandits_normal_comm
             - waituntil.wait_1sss
-            - script.Return_money
             - objective.defeat_bandits: Success
+            - addfact.ntr_baron_story_known
         
         interaction.scene15_to_bandit_REMOVED:
           ".editor":
@@ -127,7 +126,6 @@ structure:
             - script.Unlock_door
             - waituntil.wait_3s
             - script.Fade_Out
-            - shifttime.new_shift_time
           next.win:
             - script.stop_player_fistfight
             - script.neutral_fat
@@ -136,7 +134,6 @@ structure:
             - script.Unlock_door
             - waituntil.wait_3ss
             - script.Fade_Out
-            - shifttime.new_shift_time
         
         waituntil.close_to_door:
           entered: [ bob/ordphdoor_area, PLAYER ]
@@ -318,7 +315,7 @@ structure:
         
         script.Return_money:
           ".editor":
-            pos: [ 1904.4733886719, -145.3754730225 ]
+            pos: [ 1931.0, -162.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_ReturnGeraltMoney
@@ -631,6 +628,11 @@ structure:
           next:
             - script.FACT_BRANCH
             - script.FACT_BRANCH1
+        
+        addfact.ntr_baron_story_known:
+          ".editor": [ 1768.0, -324.0 ]
+          value: [ ntr_baron_story_known, 1 ]
+          next: ".done"
         
         addfact.ntr_quest_orphanage_completed:
           ".editor": [ 2229.0, -319.0 ]

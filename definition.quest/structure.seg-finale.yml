@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 1044, saved: 2020-11-12 15:48:30)
+# (version: 1081, saved: 2020-11-24 14:36:03)
 #
 ---
 structure:
@@ -13,6 +13,7 @@ structure:
           next:
             - objective.Inv_Inn: Activate
             - waituntil.side_area
+            - changelayers.hide_fisher_cemetery
         
         scene.21_to_bruxa_scene:
           ".editor":
@@ -110,6 +111,17 @@ structure:
           _fadein: false
           next.Output:
             - script.Kill_Player
+        
+        scene.ORIANNA_comment_ADD_AREA_INSIDE_HOUSE:
+          ".editor":
+            pos: [ 1353.0, 18.0 ]
+            in: [ orianna_house_enter_room ]
+            out: [ Output ]
+          scene: 03.geralt_oneliners.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: false
+          next: ".done"
         
         scene.house_found_comment:
           ".editor":
@@ -230,7 +242,7 @@ structure:
           interruptable: true
           _fadein: true
           next.Output:
-            - changelayers.hide_music_area
+            - changelayers.new_hide_layers
             - spawn.Children_at_corvo_phase
         
         scene.scene_31_ntr_completed:
@@ -1109,7 +1121,7 @@ structure:
         
         script.focus_ALL_footprints:
           ".editor":
-            pos: [ 892.7736816406, 133.1155700684 ]
+            pos: [ 853.0, 86.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_FocusSetHighlight
@@ -1227,9 +1239,9 @@ structure:
           next:
             - spawn.spawn_children_and_orianna_house
         
-        changelayers.hide_music_area:
+        changelayers.hide_fisher_cemetery:
           ".editor":
-            pos: [ 6200.0, 102.0 ]
+            pos: [ 336.0, 128.0 ]
             hint: hide-only
             in: []
             out: []
@@ -1237,9 +1249,9 @@ structure:
           purge: false
           world: bob
           hide:
-            - orianna_house_music
-          next:
-            - waituntil.2ss
+            - fisher
+            - cemetery
+          next: ".done"
         
         changelayers.hide_walls:
           ".editor":
@@ -1266,6 +1278,20 @@ structure:
           hide:
             - riverside_combat_walls
           next: ".done"
+        
+        changelayers.new_hide_layers:
+          ".editor":
+            pos: [ 6168.0, 69.0 ]
+            hint: hide-only
+            in: []
+            out: []
+          sync: true
+          purge: false
+          world: bob
+          hide:
+            - orianna_house_music
+          next:
+            - waituntil.2ss
         
         changelayers.river_walls:
           ".editor":

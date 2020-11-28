@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 1044, saved: 2020-11-12 15:48:30)
+# (version: 1081, saved: 2020-11-24 14:36:03)
 #
 ---
 structure:
@@ -28,6 +28,7 @@ structure:
             - script.tune_hag2
             - script.Kill_banshee
             - objective.Kill_hag: Activate
+            - journal.journal_entry_1: Activate
         
         scene.02_hag_runs:
           ".editor":
@@ -41,6 +42,7 @@ structure:
           next.Output:
             - despawn.despawn_hag
             - objective.Kill_hag: Success
+            - journal.journal_entry_2: Activate
         
         scene.04_triss_appear:
           ".editor":
@@ -55,6 +57,7 @@ structure:
             - objective.behind_wall: Success
             - objective.talk_triss: Activate
             - waituntil.wait_contact_triss
+            - journal.journal_entry_3: Activate
         
         scene.05_triss_to_monster:
           ".editor":
@@ -569,7 +572,6 @@ structure:
           show:
             - after_hag
           next:
-            - journal.journal_entry_intro_hag: Activate
             - objective.blood_tracks: Activate
             - mappin.bloodpin1: Enable
             - mappin.bloodpin2: Disable
@@ -682,11 +684,23 @@ structure:
           next:
             - addfact.ntr_quest_intro_completed
         
-        journal.journal_entry_intro_hag:
-          ".editor": [ 2100.0, 325.0 ]
-          entry: quests/nightofnightmares/intro_hag1
+        journal.journal_entry_1:
+          ".editor": [ 1320.0, 725.0 ]
+          entry: quests/nightofnightmares/ntr_intro1
           notify: true
           activate_root: true
+          next: ".done"
+        
+        journal.journal_entry_2:
+          ".editor": [ 1705.0, 534.0 ]
+          entry: quests/nightofnightmares/ntr_intro2
+          notify: true
+          next: ".done"
+        
+        journal.journal_entry_3:
+          ".editor": [ 3801.0, 859.0 ]
+          entry: quests/nightofnightmares/ntr_intro3
+          notify: true
           next: ".done"
         
         objective.Kill_hag:

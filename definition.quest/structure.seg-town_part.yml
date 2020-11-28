@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: town_part
 # 
-# (version: 1044, saved: 2020-11-12 15:48:30)
+# (version: 1081, saved: 2020-11-24 14:36:03)
 #
 ---
 structure:
@@ -105,6 +105,7 @@ structure:
             - interaction.Scene_to_fisherman: Input
             - script.disable_scent
             - addfact.ntr_quest_town_completed
+            - script.Desable_scent_focus
         
         scene.woman_footprints_comment:
           ".editor":
@@ -395,11 +396,23 @@ structure:
             - mappin.scentpin2: Disable
             - mappin.scentpin3: Disable
             - mappin.scentpin4: Disable
-            - addfact.scent_enabled_1
+        
+        script.Desable_scent_focus:
+          ".editor":
+            pos: [ 4304.7001953125, 202.8877716064 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FocusEffect
+          parameter:
+            - actionType: FEAA_Disable
+            - effectName: cname_focus_smell
+            - effectEntityTag: cname_ntr_orianna_scents
+            - duration: -1.0
+          next: ".done"
         
         script.FOcus_clue_horse_tracks:
           ".editor":
-            pos: [ 2033.9753417969, 185.5 ]
+            pos: [ 2038.0, 187.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_FocusSetHighlight
@@ -407,7 +420,8 @@ structure:
             - tag: cname_ntr_orianna_horse_tracks
             - highlightType: FMV_Clue
             - overrideCustomLogic: false
-          next: ".done"
+          next:
+            - addfact.ntr_orianna_horse_tracks_1
         
         script.FocusEffect_ON:
           ".editor":
@@ -420,7 +434,8 @@ structure:
             - effectName: cname_focus_smell
             - effectEntityTag: cname_ntr_orianna_scents
             - duration: -1.0
-          next: ".done"
+          next:
+            - addfact.scent_enabled_1
         
         script.HideActors_FishermanScene:
           ".editor":
@@ -453,7 +468,7 @@ structure:
         
         script.focus_clue_footprints_cemetery:
           ".editor":
-            pos: [ 3086.93359375, 125.6964111328 ]
+            pos: [ 3073.0, 38.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_FocusSetHighlight
@@ -461,7 +476,8 @@ structure:
             - tag: cname_ntr_footprints_to_cemetery
             - highlightType: FMV_Clue
             - overrideCustomLogic: false
-          next: ".done"
+          next:
+            - addfact.ntr_footprints_to_cemetery_1
         
         script.focus_clue_footprints_fisher:
           ".editor":
@@ -473,7 +489,8 @@ structure:
             - tag: cname_ntr_footprints_to_fisher
             - highlightType: FMV_Clue
             - overrideCustomLogic: false
-          next: ".done"
+          next:
+            - addfact.ntr_footprints_to_fisher_1
         
         changelayers.hide_town_blood:
           ".editor":
@@ -644,6 +661,21 @@ structure:
           mappin: nighttoremember/town_part/follow_scent/scent_pin4
           next: ".done"
         
+        addfact.ntr_footprints_to_cemetery_1:
+          ".editor": [ 3260.0, -32.0 ]
+          value: [ ntr_footprints_to_cemetery_enabled, 1 ]
+          next: ".done"
+        
+        addfact.ntr_footprints_to_fisher_1:
+          ".editor": [ 3672.0, 119.0 ]
+          value: [ ntr_footprints_to_fisher_enabled, 1 ]
+          next: ".done"
+        
+        addfact.ntr_orianna_horse_tracks_1:
+          ".editor": [ 2237.0, 132.0 ]
+          value: [ ntr_orianna_horse_tracks_enabled, 1 ]
+          next: ".done"
+        
         addfact.ntr_quest_town_completed:
           ".editor": [ 4322.0, 717.0 ]
           value: [ ntr_quest_town_completed, 1 ]
@@ -655,7 +687,7 @@ structure:
           next: ".done"
         
         addfact.scent_enabled_1:
-          ".editor": [ 1201.0, -6.0 ]
+          ".editor": [ 1374.0, 87.0 ]
           value: [ ntr_town_scent_enabled, 1 ]
           next: ".done"
         

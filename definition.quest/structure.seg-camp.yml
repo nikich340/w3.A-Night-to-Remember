@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: camp
 # 
-# (version: 1052, saved: 2020-11-17 13:36:55)
+# (version: 1081, saved: 2020-11-24 14:36:03)
 #
 ---
 structure:
@@ -97,6 +97,14 @@ structure:
             - b: 0
           next: ".done"
         
+        script.hideactorscampscene:
+          ".editor":
+            pos: [ 983.0, 181.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_HideActorsCampScene
+          next: ".done"
+        
         spawn.spawn_baron_in_ususal:
           ".editor":
             pos: [ 1536.7142333984, 88.8433837891 ]
@@ -120,6 +128,7 @@ structure:
             - comm_camp_baron
           next:
             - waituntil.wait_1s
+            - script.hideactorscampscene
         
         spawn.spawn_sitting_baron:
           ".editor":
