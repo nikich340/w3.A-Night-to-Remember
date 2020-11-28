@@ -31,11 +31,12 @@ EXIT /B 1
 %BIN_IMPORT_TEXTURE% data/entities/acero_sword/witcher_steel_acero_n02.tga data/entities/acero_sword/witcher_steel_acero_n02.xbm NormalmapGloss
 %BIN_IMPORT_TEXTURE% data/entities/acero_sword/witcher_steel_acero_s01.tga data/entities/acero_sword/witcher_steel_acero_s01.xbm WorldDiffuse
 
+%BIN_IMPORT_TEXTURE% data/entities/baron/body_01_ma__junior_d01.png data/entities/baron/body_01_ma__junior_d01.xbm WorldDiffuse
+
 ::%BIN_IMPORT_TEXTURE% data\gameplay\gui_new\icons\inventory\oils\acero_fake_oil_64x64.png data\gameplay\gui_new\icons\inventory\oils\acero_fake_oil_64x64.xbm WorldDiffuseWithAlpha
-set NTR_PATH=D:\_w3.tools\NightToRemember
-robocopy %NTR_PATH%\textures.import\data\gameplay\gui_new\icons\inventory\oils\ %NTR_PATH%\uncooked.textures\dlc\dlcntr\data\gameplay\gui_new\icons\inventory\oils\ acero_fake_oil_64x64.png
+robocopy %DIR_PROJECT_BASE%\textures.import\data\gameplay\gui_new\icons\inventory\oils\ %DIR_PROJECT_BASE%\uncooked.textures\dlc\dlcntr\data\gameplay\gui_new\icons\inventory\oils\ acero_fake_oil_64x64.png
 ::%BIN_IMPORT_TEXTURE% data\gameplay\gui_new\icons\inventory\weapons\acero_steel_icon_64x128.png data\gameplay\gui_new\icons\inventory\weapons\acero_steel_icon_64x128.xbm WorldDiffuseWithAlpha
-robocopy %NTR_PATH%\textures.import\data\gameplay\gui_new\icons\inventory\weapons\ %NTR_PATH%\uncooked.textures\dlc\dlcntr\data\gameplay\gui_new\icons\inventory\weapons\ acero_steel_icon_64x128.png
+robocopy %DIR_PROJECT_BASE%\textures.import\data\gameplay\gui_new\icons\inventory\weapons\ %DIR_PROJECT_BASE%\uncooked.textures\dlc\dlcntr\data\gameplay\gui_new\icons\inventory\weapons\ acero_steel_icon_64x128.png
 
 	:: Triss fx
 %BIN_IMPORT_TEXTURE% fx/fire_anim_04.png fx/fire_anim_04.xbm Particles

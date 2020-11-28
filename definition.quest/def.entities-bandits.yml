@@ -27,22 +27,30 @@ templates:
     appearances:
       bob_knight_15:
         includedTemplates:
-          - dlc\bob\data\characters\models\crowd_npc\bob_knight\arms\a_01_mb__bob_knights.w2ent
-          - dlc\bob\data\characters\models\crowd_npc\bob_citizen\caps\c_10_ma__bob.w2ent
-          - dlc\bob\data\characters\models\crowd_npc\bob_knight\items\i_06_mb__bob_knights.w2ent
-          - dlc\bob\data\characters\models\crowd_npc\bob_knight\items\i_03_mb__bob_knights.w2ent
-          - characters\models\common\man_average\heads\h_10_ma__nml_villager_11_01.w2ent
-          - characters\models\crowd_npc\novigrad_guard\torso\t2_01_mb__novigrad_guard.w2ent
-          - characters\models\crowd_npc\novigrad_guard\legs\l0_02_mb__novigrad_guard.w2ent
-          - characters\models\crowd_npc\inquisitor_soldier_lvl2\shoes\s_01_mb__inquisition_soldier_lvl2.w2ent
-          - dlc\bob\data\characters\models\crowd_npc\bob_knight\gloves\g_02_mb__bob_knights.w2ent
+          - dlc\dlcntr\data\entities\baron\body_01_ma__junior.w2ent
+          #- characters\models\secondary_npc\junior\body_01_ma__junior.w2ent
+          - characters\models\common\man_average\body\n_01_ma__body.w2ent
+          - characters\models\secondary_npc\junior\l_01_ma__junior.w2ent
+          - characters\models\crowd_npc\novigrad_citizen\arms\a_01_ma__novigrad_citizen.w2ent
+          - dlc\bob\data\characters\models\common\man_average\heads\h_03_ma__ep1_01_01_bob.w2ent
+          - characters\models\main_npc\emhyr\c_07_ma__emhyr_hair.w2ent
+          - characters\models\common\man_average\body\ag_01_ma__arnvald.w2ent
+          #- dlc\bob\data\characters\models\crowd_npc\bob_knight\arms\a_01_mb__bob_knights.w2ent
+
+        # old Baron
+        #  - dlc\bob\data\characters\models\crowd_npc\bob_knight\arms\a_01_mb__bob_knights.w2ent
+        #  - dlc\bob\data\characters\models\crowd_npc\bob_citizen\caps\c_10_ma__bob.w2ent
+        #  - dlc\bob\data\characters\models\crowd_npc\bob_knight\items\i_06_mb__bob_knights.w2ent
+        #  - dlc\bob\data\characters\models\crowd_npc\bob_knight\items\i_03_mb__bob_knights.w2ent
+        #  - characters\models\common\man_average\heads\h_10_ma__nml_villager_11_01.w2ent
+        #  - characters\models\crowd_npc\novigrad_guard\torso\t2_01_mb__novigrad_guard.w2ent
+        #  - characters\models\crowd_npc\novigrad_guard\legs\l0_02_mb__novigrad_guard.w2ent
+        #  - characters\models\crowd_npc\inquisitor_soldier_lvl2\shoes\s_01_mb__inquisition_soldier_lvl2.w2ent
+        #  - dlc\bob\data\characters\models\crowd_npc\bob_knight\gloves\g_02_mb__bob_knights.w2ent
+
         #voicetag: "BARON EDWARD2"
         collapsedComponents:
-          - a_01_mb__bob_knights
           - head
-          - h_10_ma__nml_villager_11_01
-          - he_10_ma__nml_villager
-          - hb_10_ma__beard_11_01
         #wasIncluded: true
          
     usedAppearances:
@@ -53,65 +61,26 @@ templates:
     coloringEntries:
       - ".type": SEntityTemplateColoringEntry
         appearance: bob_knight_15
-        componentName: a_01_mb__bob_knights
+        componentName: a_01_ma__novigrad_citizen
         colorShift1: # colorEnt(0, 36, -46, -72, 50, -23, -56)
-          #hue: 36
-          hue: 100
-          #saturation: -46
-          saturation: 16
-          #luminance: -72
-          luminance: -76
+          hue: 42
+          saturation: -70
+          luminance: -43
         colorShift2:
-          #hue: 50          # int16
-          hue: 0          # int16
-          #saturation: -23  # int8
-          saturation: -60  # int8
-          #luminance: -56   # int8
-          luminance: -60   # int8
-
+          hue: 5          # int16
+          saturation: -85  # int8
+          luminance: -36   # int8  
       - ".type": SEntityTemplateColoringEntry
         appearance: bob_knight_15
-        componentName: c_10_ma__bob
-        colorShift1: # colorEnt(1, 333, -100, 7, 315, -23, -56)
-          hue: 333
-          saturation: -100
-          luminance: 7
-        colorShift2:
-          hue: 315
-          saturation: -23
-          luminance: -56
-
-      - ".type": SEntityTemplateColoringEntry
-        appearance: bob_knight_15
-        componentName: t2_01_mb__novigrad_guard
-        colorShift1: # colorEnt(2, 65, -41, -44, 333, -23, -56)
-          #hue: 65
-          hue: 0
-          saturation: -41
-          luminance: -44
-        colorShift2:
-          #hue: 333
-          hue: 120
-          #saturation: -23
-          saturation: -3
-          #luminance: -56
-          luminance: -85
-
-      - ".type": SEntityTemplateColoringEntry
-        appearance: bob_knight_15
-        componentName: l0_02_mb__novigrad_guard
-        colorShift1: # colorEnt(3, 65, -41, -44, 333, -23, -56)
-          #hue: 65
-          hue: 120
-          saturation: -41
-          #luminance: -44
-          luminance: -60
-        colorShift2:
-          #hue: 333
-          hue: 0
-          saturation: -23
-          #luminance: -56
-          luminance: -65
+        componentName: l_01_ma__junior
+        colorShift1: # colorEnt(0, 36, -46, -72, 50, -23, -56)
+          hue: 75
+          saturation: -92
+          luminance: -15
+        #colorShift2:
+        #  hue: 5          # int16
+        #  saturation: -85  # int8
+        #  luminance: -36   # int8     
 
     templateParams:
       - ".type": CAnimAnimsetsParam
@@ -131,13 +100,13 @@ templates:
             initializer:
               .type: CInventoryInitializerUniform
               itemName: "ntr_acero_sword_npc"
-          - ".type": CInventoryDefinitionEntry
-            category: "steelsword"
-            isMount: false
-            isLootable: true
-            initializer:
-              .type: CInventoryInitializerUniform
-              itemName: "ntr_acero_sword_pc"
+          #- ".type": CInventoryDefinitionEntry
+          #  category: "steelsword"
+          #  isMount: false
+          #  isLootable: true
+          #  initializer:
+          #    .type: CInventoryInitializerUniform
+          #    itemName: "ntr_acero_sword_pc"
               
       - ".type": CCharacterStatsParam
         name: ntr_abilities
