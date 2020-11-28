@@ -7,10 +7,10 @@
 ; make sure the XXXX is the string id-space of the project and nnn is unique
 ; for every line.
 ;
-;211XXXXnnn|||example voiceline text
+;211XXXXnnn|example voiceline text
 ;
-2114670650|||I need some fresh air.
-2114670651|||A letter?
+2114670650|00000000||I need some fresh air.
+2114670651|00000000||A letter?
 2114670652|00000000||Regis… Just trying to avoid a fight, to protect her.
 2114670653|00000000||Well, I should check the orphanage.
 2114670654|00000000||Go home. I'm a witcher. Need to examine the body.
@@ -22,29 +22,39 @@
 2114670660|00000000||Interesting… Regis might be right.
 2114670661|00000000||Need to hide, see how things play out…
 ;
-2114670700|||Triss?! I should talk to her.
-2114670705|||I've been thinking about us.
-2114670706|||I'm looking for…
-2114670707|||I'm not Yennefer, Geralt. But I can be like Yennefer!
-2114670708|||So, what do you think?
-2114670709|||You don't like me..
-2114670710|||You realize - one word and you'll howl with pain!
-2114670711|||I'm your nightmare!
-2114670727|||Geralt, please…
-;2114670728|||Show me your face. - 1097827|00000000||And who might you be?
-2114670729|||I must be out of my mind…
-2114670730|||I warned you. Pissing upwind leads to disaster.
-2114670731|||This time you pissed in a tornado.
-2114670732|||Do anything stupid and they'll tie you down on an anthill, face coated with honey. You'll scream so loud even the storm riders will hear you.
-2114670733|||Are you ghosts?
-2114670734|||I'm sorry, my friend…
-2114670735|||You wish to give your soul for this?
-2114670736|||Then you don't have what I need.
-2114670737|||Is it your doing?
-2114670738|||So you say, yet I wait and wait, and nothing…
-2114670739|||Fuck you!
-2114670740|||Death mistake.
-;2114670745|||Crazy nightmare. - "what a dream" instead
+2114670700|00000000||Triss?! I should talk to her.
+2114670705|00000000||I've been thinking about us.
+2114670706|00000000||I'm looking for…
+2114670707|00000000||I'm not Yennefer, Geralt. But I can be like Yennefer!
+2114670708|00000000||So, what do you think?
+2114670709|00000000||You don't like me..
+2114670710|00000000||You realize - one word and you'll howl with pain!
+2114670711|00000000||I'm your nightmare!
+;
+; scene 9 - nightmare final
+;
+2114670720|00000000||[Kill]
+2114670721|00000000||[Spare]
+2114670722|00000000||Is it your doing?
+2114670723|00000000||Fuck you!
+2114670724|00000000||Help me, and I'll return the favor.
+2114670725|00000000||Yes.
+2114670726|00000000||No.
+2114670727|00000000||Geralt, please…
+;2114670728|00000000||Show me your face. - 1097827|00000000||And who might you be?
+2114670729|00000000||I must be out of my mind…
+2114670730|00000000||I warned you. Pissing upwind leads to disaster.
+2114670731|00000000||This time you pissed in a tornado.
+2114670732|00000000||Do anything stupid and they'll tie you down on an anthill, face coated with honey. You'll scream so loud even the storm riders will hear you.
+2114670733|00000000||Are you ghosts?
+2114670734|00000000||I'm sorry, my friend…
+2114670735|00000000||You wish to give your soul for this?
+2114670736|00000000||Then you don't have what I need.
+2114670737|00000000||Is it your doing?
+2114670738|00000000||So you say, yet I wait and wait, and nothing…
+2114670739|00000000||Fuck you!
+2114670740|00000000||Death mistake.
+;2114670745|00000000||Crazy nightmare. - what a dream instead
 ;
 ; scene 11 orphanage main
 ;
@@ -53,7 +63,7 @@
 2114670757|00000000||Vampire of Rivia
 2114670758|00000000||It's a deal
 2114670759|00000000||Why are you interested in the children?
-; 0000382555|What did you need the children for?
+; 0000382555|00000000||What did you need the children for?
 2114670760|00000000||I'll ask again, polite like, and you'll answer, just as politely
 2114670761|00000000||Orianna will kill you
 2114670762|00000000||Who the foek are you?!
@@ -65,7 +75,8 @@
 2114670766|00000000||A witcher? So you know how to track down somebody, right?
 2114670767|00000000||Well, come in then, we've matters to discuss.
 2114670768|00000000||I am supposed to find a red-haired woman here.
-; Looking for a red-haired woman ?
+;;;2114670768|00000000||I'm looking for a red-haired woman.
+;;; neuro-voiced I am supposed to find a red-haired woman here.
 2114670769|00000000||That's interesting. Because we're supposed to meet her too.
 2114670770|00000000||Why are you looking for her?
 2114670771|00000000||Our boss has questions for 'er about the orphanage and children.
@@ -74,7 +85,7 @@
 2114670774|00000000||But she doesn't want to come here. So there's something wrong with here. We are few, and we guard the places where she used to be.
 2114670783|00000000||Perhaps you could help us, and then our leader Baron Edward will give you a decent reward.
 2114670775|00000000||Why are you interested in the children?
-; 0000382555|What did you need the children for?
+; 0000382555|00000000||What did you need the children for?
 2114670776|00000000||It's no concern of yours.
 2114670777|00000000||Orianna will kill you. She is a monster, not a human. And only I can help. Meaning I need more information.
 2114670778|00000000||I've not got all the answers, talk with our leader about it.
@@ -124,55 +135,95 @@
 2114670870|00000000||Let's talk about my fee.
 2114670871|00000000||I'll do it for free.
 2114670872|00000000||I don't work for bandits.
-2114670873|00000000||Why do you wanna take the child?
+2114670873|00000000||The child?
+;;2114670873|00000000||Why do you wanna take the child?
 2114670874|00000000||I agree.
 2114670875|00000000||I don't agree.
 ;    393630|00000000||Just a traveler. Happened to be passing through.
 2114670877|00000000||Piss off, vagrant. There's nothing for you here.
 2114670878|00000000||Halt! What are you looking for?
-2114670879|00000000||I'm a witcher. Your friends asked me to find you.
+2114670879|00000000||I'm a witcher. Your friends sent me here. Gotta deal with the Baron.
+;;;2114670879|00000000||I'm a witcher. Your friends asked me to find you.
+;;; or neuro-voiced I'm a witcher. Your friends sent me here. Gotta deal with the Baron.
 2114670880|00000000||Well, alright. The Baron is in Beauclair at the moment, should be back soon. Wait here a bit.
 2114670881|00000000||Greetings, Baron! Any news? Where is Alfred?
-2114670882|00000000||He is dead. Orianna killed him.
+2114670882|00000000||He is gone. Orianna killed him.
 2114670883|00000000||What?! But… How? Tell me what happened.
 2114670970|00000000||Oh, shit…
 ;;; 2114670883|00000000||You, piece of shit, I'll kill you!
 ;;; 2114670883|00000000||I'm gonna fucking kill you, witcher!
-2114670884|00000000||She is not just a woman… Maybe witch or monster. I can't understand what happened myself.
-2114670885|00000000||And who are.. Witcher! It must be destiny sent you to us.
-2114670886|00000000||Actually it was your friends. My name is Geralt.
-2114670887|00000000||The famous Geralt of Rivia?
-2114670888|00000000||Great. My name is Edward and I am the leader of…
+2114670884|00000000||She is not just a woman. Maybe a witch or a monster… I'm not entirely sure what happened myself.
+2114670885|00000000||And who is th… A witcher? It must be destiny that sent you to us.
+2114670886|00000000||Actually, it was your friends. I'm Geralt.
+;;; neuro-voice Actually, it was your friends. My name is Geralt.
+2114670887|00000000||He's the famous Geralt of Rivia, no less.
+2114670888|00000000||My name is Edward, and I take care of these fine gentlemen…
 ;   1075517|00000000||Bandits?
-2114670889|00000000||Don't be so conservative. We do not rob and kill peaceful merchants.
-2114670890|00000000||I don't believe it. However I'm here about Orianna.
-2114670891|00000000||Yeah. This whore refused to return my son and killed Alfred.
-2114670892|00000000||As she is some kind of monster and you are witcher… Could you find and exterminate her? For a fee of course.
-2114670893|00000000||Why do you wanna take the child?
-2114670894|00000000||I believe that he is my son and I want to raise him.
+2114670889|00000000||Don't be so prejudiced, Geralt, we don't rob and kill the innocent.
+;;;2114670890|00000000||I don't believe it. I'm here about Orianna.
+2114670890|00000000||I don't believe you. However I'm here about Orianna.
+;;; neuro-voiced I don't believe it. However I'm here about Orianna.
+2114670891|00000000||Of course. This evil woman, she refuses to return something precious to me.
+2114670892|00000000||That's why I'd like to contract your services, witcher. To kill that monster, and take back that which belongs to me.
+2114670893|00000000||The child.
+2114670894|00000000||Huh, I should've known you'd already figured it out. I'd expect nothing less from a witcher…
+2114670406|00000000||Have my men already told you about the boy?
+;
+;;;2114670725|00000000||Yes.
+2114670407|00000000||Naturally. Well, we can skip the story then. Will you take the job?
+;
+;;;2114670726|00000000||No.
+2114670408|00000000||That's hard to believe, considering all the strange stories they've rumored about me.
+;
+2114670409|00000000||It's no matter, I'll tell you the truth of it.
+2114670410|00000000||Have you ever truly loved somebody, witcher?
+;
+;;;000110575|00000000||Yes, I've loved. (option)
+;;;0001105772|00000000||Yeah. I've loved. Can we get to the matter at hand?
+;;;0001105756|00000000||You don't give a shit. (option)
+;;;0000594745|00000000||Doesn't matter. And don't change the subject.
+;;;0001105762|00000000||No, I've never loved. (option)
+;;;0001105762|00000000||No. Haven't loved. Now let's get to the point.
+;
+2114670400|00000000||I loved a woman once….
+2114670401|00000000||I was born a commoner, but I was gifted with a blade.
+2114670411|00000000||After proving myself in battle, the Duke of Toussaint knighted me as a young man.
+2114670412|00000000||It was quite a spectacle, all the nobles wanted to meet the low-born Knight.
+2114670413|00000000||That's how I met her, the only one who didn't care about all that.
+2114670414|00000000||We fell in love… We had a son together, and we were happy, for a time.
+2114670415|00000000||When word broke that she bore a child to a commoner, outside of wedlock…
+2114670416|00000000||I fled Beauclair that very night, and I made her promise to say the child was against her will.
+2114670417|00000000||She broke our promise. Her family quickly fell out of favor. They lost everything because of me.
+2114670418|00000000||A few months ago, I received word that she had fallen ill, and our child had been orphaned…
+2114670419|00000000||I never should have left her alone in that city.
+2114670420|00000000||After all of these years of regret… I need to do right by her and take care of our son.
+2114670421|00000000||What do you say witcher? Will you take the job, and return my boy?
+;
 2114670895|00000000||I don't work for bandits.
-2114670896|00000000||Did you seriously wait for me to say this? Think twice - I'll reward you generously.
-2114670897|00000000||And I'm asking for your aid not as bandit, but as father of the boy in distress…
+2114670896|00000000||We're not common bandits, but that's beside the point.
+2114670897|00000000||I'm asking for your help as a father. And I can reward you handsomely.
+;
 ;   1209328|00000000||Need to talk about my fee, first.
-2114670898|00000000||I wouldn't pay so much even if you were King Radovid.
+2114670898|00000000||I couldn't pay so much even if you were King Radovid.
 2114670899|00000000||That's just a bit high, witcher.
 2114670900|00000000||Fine.
-2114670901|00000000||My patience have ended! You will take my offer - 3000 orens, or get out of here!
-2114670902|00000000||Changed your mind, witcher?
+2114670901|00000000||My patience has ended! You will take my offer - 3000 orens, or get out of here!
+2114670902|00000000||Have you changed your mind, witcher?
 ;   1007115|00000000||All right.
 ;   1030870|00000000||Hmm… Need to think about it.
-;2114670903|00000000||Not interested in coins. Will make it for free. - vanilla line instead
+;;;2114670903|00000000||Not interested in coins. Will make it for free. - vanilla line instead
 2114670904|00000000||The noble witcher? Just wondering…
-2114670905|00000000||I need more information. What happened to Alfred?
+2114670905|00000000||But I need more information. Your friend… What happened to him?
 2114670906|00000000||We were guarding Orianna's estate while finally met her.
 2114670907|00000000||I called her and asked where is the boy. She refused to answer. Alfred began to threaten her and drew his sword.
 2114670908|00000000||After this she moved at once and vanished. And Alfred… His throat was slit. I could not help him…
 2114670909|00000000||How? What creature can do such things?
-2114670910|00000000||A kind of vampire.
+2114670910|00000000||Uh, must be a kind of vampire.
 2114670911|00000000||Vampire? Shit… My son is in real danger. And I can't help him! You're my one hope.
 2114670912|00000000||All right, see if I can find her.
-2114670913|00000000||You are right, we heard some scary sounds from that direction, by the Amphitheatre...
+2114670913|00000000||You are right, we heard some scary sounds from that direction, by the Amphitheatre…
 2114670914|00000000||I told my people to stay away from it. It will be nice if you check what's wrong there.
+;
 ;
 ; scene 17 - baron oneliners
 ;
@@ -207,8 +258,9 @@
 ;
 ; scene 19 - orianna appear
 ;
+2114670939|00000000||Sweet thing.
 2114670935|00000000||Here we are.
-; "Sweet thing" for horse
+; Sweet thing for horse
 2114670936|00000000||Lady Orianna…
 2114670937|00000000||Come on!
 2114670938|00000000||It seems there's a matter I must attend to. Go on Niellan, you and Agneta get dinner started for me. I'll be home soon enough.
@@ -236,7 +288,7 @@
 2114670953|00000000||Think you can handle this on your own. Found something interesting in your house.
 2114670954|00000000||Ha! So, you've been snooping around? I thought you were the straightforward type.
 2114670955|00000000||Orianna, that doesn't change the fact that…
-2114670956|00000000||You presume to understand me? After reading some... musings?
+2114670956|00000000||You presume to understand me? After reading some… musings?
 2114670957|00000000||Don't deny it.
 2114670958|00000000||If I'm not convinced that I've changed, what makes you so sure?
 ;   1007115|00000000||All right.
@@ -259,6 +311,12 @@
 ;
 ; scene 24
 ;
+2114670315|00000000||The children are in that house.
+2114670316|00000000||I'll take care of him myself.
+2114670317|00000000||Your son is dead.
+2114670318|00000000||I don't know.
+;2114670319|00000000||coins (TEST)
+;2114670320|00000000||sword (TEST)
 2114670321|00000000||Hey, witcher!
 2114670322|00000000||You're alive?
 2114670323|00000000||Glad to hear it. Finally this dirty whore got what she's deserved.
@@ -271,7 +329,7 @@
 2114670329|00000000||Hmmm…er…well…
 2114670330|00000000||You seek to trick me, witcher.
 2114670331|00000000||Perhaps I have to loosen your tongue with a knife.
-2114670332|00000000||I'll take care of them myself.
+2114670332|00000000||I'll take care of him myself.
 2114670333|00000000||Are you mad, you twit?
 2114670334|00000000||You're common bandits. I don't trust you.
 2114670335|00000000||You'll regret that you got in my way.
@@ -294,6 +352,9 @@
 2114670355|00000000||No…
 ;    373208|00000000||Had enough?
 2114670356|00000000||Good choice.
+2114670357|00000000||No! Destiny showed me that I am not worthy of raising the boy… Leave us alone.
+2114670358|00000000||I'm gonna fucking kill you, witcher!
+2114670359|00000000||Geralt… Take my sword… For the boy…
 ;
 ; scene 26
 ;
@@ -315,8 +376,8 @@
 ;   1143303|00000000||What's the matter?
 2114670375|00000000||A witcher has slain a man to protect a monster. I'll admit, I'm impressed.
 ;    458827|00000000||It was the lesser evil… I think.
-2114670376|00000000||I'm sure this... troublesome Baron Edward promised a sizable reward, right?
-2114670377|00000000||Whatever it might've been, you're better off confiscating that steel blade of his.
+2114670376|00000000||I'm sure this… troublesome Baron Edward promised a sizable reward, right?
+2114670377|00000000||Here.
 ;   1066805|00000000||Mhm. Thanks a bunch.
 2114670378|00000000||Good luck, Geralt of Rivia.
 2114670379|00000000||So long, Orianna.
@@ -326,9 +387,19 @@
 ;
 ; scene 30
 ;
-2114670390|00000000||Take care of them, Barnabas-Basil.
+2114670390|00000000||Take care of 'em, Barnabas-Basil.
 2114670391|00000000||Oh, with great pleasure, sir.
 2114670392|00000000||Follow me, please.
 ;
 ; scene 31
 ;
+;
+; scene 32
+;
+2114670402|00000000||Leave me be.
+2114670403|00000000||I am all ears.
+2114670404|00000000||Missed me that much?
+2114670405|00000000||I thank you again, witcher. For your understanding and help.
+;
+2114670990|00000000||Here is Johnny!
+2114670991|00000000||Noooo!
