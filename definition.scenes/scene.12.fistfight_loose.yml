@@ -315,7 +315,7 @@ dialogscript:
     - CUE: shot_1
     # (longest) anim: ep1_geralt_lying_unconscious_to_low_sitting_ground_leaning_back_bored
     - PAUSE: 7.5
-    - geralt: "[0.713903]0001000528|Dammit..."
+    - geralt: "[0.713903]0001000528|Dammit…"
     - PAUSE: 5.286097
     # shot Shot2
     - CUE: shot_2
@@ -343,5 +343,6 @@ dialogscript:
   section_exit:
     - CAMERA_BLEND: 1.0
     - EXIT
+
 
 

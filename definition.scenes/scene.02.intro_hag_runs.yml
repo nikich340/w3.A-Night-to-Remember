@@ -569,7 +569,7 @@ dialogscript:
     - PAUSE: 0.8
     # shot Shot9 to gp
     - CUE: shot_10
-    - geralt: "[6.6961522102]0000576655|Ran away. Damn it."
+    - geralt: "[6.696152]0000576655|Ran away. Damn it."
     # (longest) anim: geralt_after_combat_idle_sheathe_silver_sword_to_high_standing_determined
     #- PAUSE: 0.3
     - NEXT: section_exit
@@ -577,3 +577,4 @@ dialogscript:
   section_exit:
     - CAMERA_BLEND: 1.5
     - EXIT
+

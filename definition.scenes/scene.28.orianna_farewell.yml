@@ -8,6 +8,10 @@ repository:
       template: "dlc\\bob\\data\\quests\\secondary_npcs\\vampire_diva.w2ent"
       appearance: [ "oriana" ]
 
+    POUCH_GERALT:
+      template: "items\\cutscenes\\pouch_01\\pouch_01.w2ent"
+      appearance: [ "d" ]
+
   animations:
     anim_6970_high_standing_determined_calm_enter_frontal:
       animation: "high_standing_determined_calm_enter_frontal"
@@ -199,6 +203,21 @@ repository:
         plane: "medium"
         tags: [ "ext" ]
 
+    cam_shot_pouch_ger:
+      fov: 40.0
+      transform:
+        pos: [ 1.9707658291, 13.8334398270, 0.7002639771 ]
+        rot: [ 0.0, 357.2599792480, 40.2499389648 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.0, 5.0 ]
+        focus: [ 1.0, 5.0 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
 production:
   settings:
     sceneid: 1
@@ -222,6 +241,12 @@ production:
         #by_voicetag: true
         appearance: "oriana"
         tags: [ "vampire_diva" ]
+
+      POUCH_GERALT:
+        repo: "POUCH_GERALT"
+        by_voicetag: false
+        appearance: "d"
+        tags: [ "ntr_scene_pouch_geralt" ]
 
     cameras:
       cam_1_Shot0_another_cam1:
@@ -247,6 +272,9 @@ production:
 
       cam_12_Shot2_geralt_so_long2_cam:
         repo: "cam_12_Shot2_geralt_so_long2_cam"
+
+      cam_shot_pouch_ger:
+        repo: "cam_shot_pouch_ger"
 
     animations:
       geralt_high_standing_determined_calm_enter_frontal:
@@ -411,24 +439,26 @@ production:
         repo: "pose_0_high_standing_determined_idle"
 
 storyboard:
-  #defaults:
-    #placement:
-      #geralt: [[ 1.3289811611, 15.9854269028, -0.8997192383 ], [ 0.0, 0.0, 221.1799926758 ]]
-      #vampire_diva: [[ -14.5838394165, 8.6277923584, 6.8749465942 ], [ 0.0, 0.0, 53.6525344849 ]]
+  defaults:
+    placement:
+      POUCH_GERALT: [[ 1.0632644892, 14.7847585678, -0.9016113281 ], [ 0.0, 0.0, 66.0399780273 ]]
+      geralt: [[ 1.0632644892, 14.7847585678, -0.9016113281 ], [ 0.0, 0.0, 246.0399780273 ]]
+      vampire_diva: [[ 1.6130012274, 13.5968675613, -0.7265625000 ], [ 0.0, 0.0, 291.7725219727 ]]
 
-    #actor.pose:
-      #geralt: geralt_high_standing_determined_idle
+    actor.pose:
+      geralt: geralt_high_standing_determined_idle
       #vampire_diva: vampire_diva_High_Sitting_Happy
 
   section_storyboard_ui:
     # shot Shot1 cam1
     shot_3:
       - fade.in: [0.0, 0.75]
-      - actor.placement: [0.0, geralt, [ 1.0632644892, 14.7847585678, -0.9016113281 ], [ 0.0, 0.0, 246.0399780273 ]]
-      - actor.placement: [0.0, vampire_diva, [ 1.6130012274, 13.5968675613, -0.7265625000 ], [ 0.0, 0.0, 291.7725219727 ]]
+      - actor.hide: [0.0, POUCH_GERALT]
+      #- actor.placement: [0.0, geralt, [ 1.0632644892, 14.7847585678, -0.9016113281 ], [ 0.0, 0.0, 246.0399780273 ]]
+      #- actor.placement: [0.0, vampire_diva, [ 1.6130012274, 13.5968675613, -0.7265625000 ], [ 0.0, 0.0, 291.7725219727 ]]
       - actor.pose: [0.0, vampire_diva_Low_Standing_Determined]
       - cam.blend.start: [0.0, cam_3_Shot1_cam1, rapid]
-      - cam.blend.end: [0.7, cam_4_Shot1_cam2, smooth]
+      - cam.blend.end: [1.0, cam_4_Shot1_cam2, smooth]
       - actor.anim: 
           .@pos: [0.0, geralt_high_standing_determined_calm_enter_frontal]
           blendin: 0.0
@@ -439,7 +469,7 @@ storyboard:
           turn: body
           speed: 2.0
       - actor.lookat: [0.0, geralt, NONE]
-      - actor.lookat: [0.5, geralt, vampire_diva]
+      - actor.lookat: [0.7, geralt, vampire_diva]
 
     # shot Shot2 now you
     shot_5:
@@ -470,22 +500,59 @@ storyboard:
           blendin: 0.5
           blendout: 0.5
 
-    # shot Shot2 geralt thank you
-    shot_9:
-      - cam: [0.0, cam_7_Shot2_geralt_closeup]
-      - actor.anim: 
-          .@pos: [0.0, geralt_add_reaction_agreeing_nod_01]
-          blendin: 0.5
-          blendout: 0.5
-
-    # shot Shot2 ori closeup + smile
-    shot_10:
+    shot_8b:
       - actor.pose: [0.5, vampire_diva_high_standing_determined_idle]
-      - cam: [0.0, cam_6_Shot2_ori_closeup_+_gest]
       - actor.anim: 
           .@pos: [0.0, vampire_diva_low_standing_determined_to_high_standing_determined]
           blendin: 0.5
           blendout: 0.5
+
+      - actor.anim.additive:
+          actor: vampire_diva
+          .@pos: [1.0, anim_12649_high_standing_determined_gesture_give]
+          blendin: 0.5
+          clipend: 2.5
+          blendout: 0.0
+
+  section_storyboard_ui2:
+    shot_8c:
+      - cam: [0.0, cam_shot_pouch_ger]
+      - actor.pose: [0.5, vampire_diva_high_standing_determined_idle]
+      - actor.lookat: 
+          .@pos: [0.0, vampire_diva, geralt]
+          turn: body
+          speed: 2.0
+
+      - actor.show: [0.0, POUCH_GERALT]
+      - actor.hide: [1.0, POUCH_GERALT]
+      - actor.anim: # 5.2
+          actor: POUCH_GERALT
+          .@pos: [0.0, anim_3839_high_standing_determined_gesture_catch_money]
+          blendin: 0.0
+          clipfront: 2.0
+          blendout: 0.5
+
+      - actor.anim.additive: # 5.2
+          actor: geralt
+          #.@pos: [0.0, anim_7073_high_standing_determined_gesture_take]
+          .@pos: [0.0, anim_3839_high_standing_determined_gesture_catch_money]
+          blendin: 0.0
+          clipfront: 2.0
+          blendout: 0.5
+
+    # shot Shot2 geralt thank you
+    shot_9:
+      #- cam: [0.0, cam_7_Shot2_geralt_closeup]
+      - actor.anim.additive: 
+          .@pos: [0.0, geralt_add_reaction_agreeing_nod_01]
+          blendin: 0.5
+          blendout: 0.5
+          stretch: 1.5
+
+    # shot Shot2 ori closeup + smile
+    shot_10:
+      - cam: [0.0, cam_6_Shot2_ori_closeup_+_gest]
+
       - actor.anim.mimic: [0.0, vampire_diva_geralt_reaction_eye_smile_face]
 
     # shot Shot2 geralt so long
@@ -513,7 +580,7 @@ storyboard:
 
 dialogscript:
   player: "geralt"
-  actors: [ "geralt", "vampire_diva" ]
+  actors: [ "geralt", "vampire_diva", "POUCH_GERALT" ]
 
   section_start:
     - PAUSE: 0.0
@@ -522,7 +589,7 @@ dialogscript:
   section_storyboard_ui:
     - CUE: shot_3
     # (longest) anim: high_standing_determined_calm_enter_frontal
-    - PAUSE: 7.4333333969
+    - PAUSE: 6.0
     # shot Shot1 cam2
     
     - CUE: shot_5
@@ -539,12 +606,26 @@ dialogscript:
     # shot Shot2 ori closeup + gest2
     - CUE: shot_8
     # (longest) anim: low_standing_determined_gesture_question_02
-    - vampire_diva: "2114670376|I'm sure this... troublesome Baron Edward promised a sizable reward, right?"
-    - vampire_diva: "2114670377|Whatever it might've been, you're better off confiscating that steel blade of his."
+    - vampire_diva: "2114670376|I'm sure this… troublesome Baron Edward promised a sizable reward, right?"
+    - CUE: shot_8b
+    - vampire_diva: "2114670377|Here."
+    - PAUSE: 2.5
+    - NEXT: script_give_coins_reward
+
+  script_give_coins_reward:
+    - SCRIPT:
+            function: GiveRewardToPlayer
+            parameter:
+                - rewardName: CNAME_ntr_baron_killed_reward1
+    - NEXT: section_storyboard_ui2
+
+  section_storyboard_ui2:
+    - CUE: shot_8c
+    - PAUSE: 3.0
     # shot Shot2 geralt thank you
     - CUE: shot_9
     # (longest) anim: add_reaction_agreeing_nod_01
-    - geralt: "[2.4873993]0001066805|Mhm. Thanks a bunch."
+    - geralt: "[3.1949136]0001167222|Heh. If only all my employers were that generous…"
     # shot Shot2 ori closeup + smile
     - CUE: shot_10
     # (longest) anim: geralt_reaction_eye_smile_face
@@ -553,7 +634,8 @@ dialogscript:
     # shot Shot2 geralt so long
     - CUE: shot_11
     # (longest) anim: geralt_reaction_eye_smile_syanna_face
-    - geralt: "2114670379|So long, Orianna."
+    - geralt: "[0.882672]0001000192|So long."
+    #- PAUSE: 600.0
     # shot Shot2 geralt so long2 cam
     - CUE: shot_12
     # (longest) anim: happy_anim_face
@@ -565,4 +647,6 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+
+
 

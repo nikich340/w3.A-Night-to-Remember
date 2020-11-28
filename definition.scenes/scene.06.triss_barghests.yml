@@ -371,7 +371,7 @@ dialogscript:
     # shot triss i dont 
     - CUE: shot_3
     # (longest) anim: woman_sorceress_idle_lp_02
-    - triss: "[1.9207871]0001041452|Not_about_to_let_you_off!"
+    - triss: "[1.9207871]0001041452|Not about to let you off!"
     - PAUSE: 1.3466
     # shot triss burgests
     - CUE: shot_4
@@ -385,4 +385,5 @@ dialogscript:
   section_exit:
     #- CAMERA_BLEND: 1.0
     - EXIT
+
 

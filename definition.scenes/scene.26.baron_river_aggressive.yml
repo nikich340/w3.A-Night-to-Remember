@@ -761,7 +761,7 @@ dialogscript:
     - CUE: shot_7_changed_mind
     # (longest) anim: high_standing_aggressive_gesture_left_hand_point_down
     - geralt: "[2.329335]0001181655|Mhm. But I changed my mind."
-    - geralt: "2114670362|I don't have to explain myself to you."
+    - geralt: "[2.3129]2114670362|I don't have to explain myself to you."
     # shot cam geralt gest decline
     - CUE: shot_8_traitor1
     - Baron_Edward: "2114670363|I think you're just coward and traitor."
@@ -780,6 +780,7 @@ dialogscript:
 
   section_exit:
     - EXIT
+
 
 
 

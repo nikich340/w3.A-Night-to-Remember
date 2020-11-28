@@ -934,7 +934,7 @@ dialogscript:
 
 
     - CUE: shot_8a
-    - geralt: "[1.3167018]0000458655|You asked for it..."
+    - geralt: "[1.3167018]0000458655|You asked for it…"
     #- PAUSE: 1000.0
     - CUE: shot_8aa
     - PAUSE: 4.18
@@ -966,3 +966,4 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+

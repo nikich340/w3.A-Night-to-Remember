@@ -692,18 +692,18 @@ dialogscript:
 
   section_choice_who:
     - CHOICE:
-      - choice: ["A witcher", section_witcher]
+      - choice: ["2114670755|A witcher", section_witcher]
         emphasize: true
-      - choice: ["Just a traveler", section_traveler]
+      - choice: ["2114670756|Just a traveler", section_traveler]
         emphasize: true
-      - choice: ["Vampire of Rivia", section_vampire]
+      - choice: ["2114670757|Vampire of Rivia", section_vampire]
         emphasize: true
 
   section_vampire:
     - CUE: shot_vampire_ger
-    - geralt: "[7.7509]2114670763|Me? Drifter, stranger, mutant... Sometimes even by my name. Vampire of Rivia."
+    - geralt: "[7.7509]2114670763|Me? Drifter, stranger, mutant… Sometimes even by my name. Vampire of Rivia."
     - CUE: shot_vampire_band
-    - fat_bandit: "[4.1163]2114670764|Very funny, you're cretin…"
+    - fat_bandit: "[4.1163]2114670764|Very funny, you cretin…"
     - NEXT: section_storyboard_ui3
 
   section_traveler:
@@ -745,8 +745,8 @@ dialogscript:
 
   section_storyboard_ui4:
     - CUE: shot_d1_ger
-    #- geralt: "[2.7976]2114670768|I suppose to find a red-haired woman here."
-    - geralt: "I'm looking for a woman. Red-haired."
+    #- geralt: "[2.7000]2114670768|I am supposed to find a red-haired woman here."
+    - geralt: "[2.7000]2114670768|I am supposed to find a red-haired woman here."
     # shot shot8 bandit
     - CUE: shot_d1_band
     - fat_bandit: "[5.8686]2114670769|That's interesting. Because we're supposed to meet her too."
@@ -755,7 +755,7 @@ dialogscript:
     - CUE: shot_d2_band
     - fat_bandit: "[6.5442]2114670771|Our boss has questions for 'er about the orphanage and children."
     - CUE: shot_d3_ger
-    - geralt: "[4.5639]2114670772|The orphanage was attacked and almost none of the children survived."
+    - geralt: "[3.4870]2114670772|The orphanage was attacked and almost none of the children survived."
     - CUE: shot_d3_band
     - fat_bandit: "[9.1531]2114670773|Almost - nice word, so someone is alive. And we know for sure that Orianna herself is alive too."
     - fat_bandit: "[13.2788]2114670774|But she doesn't want to come here. So there's something wrong with here. We are few, and we guard the places where she used to be."
@@ -765,20 +765,20 @@ dialogscript:
 
   section_choice_details:
     - CHOICE:
-      - choice: ["It's a deal", section_leader]
+      - choice: ["2114670758|It's a deal", section_leader]
+        condition: [ NTR_scenefact_whychildren, "!=", 1 ]
         emphasize: true
-      - choice: ["Why are you interested in children?", section_why_children]
-        #condition: [ NTR_scenefact_whychildren, "!=", 1 ]
-        #emphasize: true
-      - choice: ["I'll ask again, polite like, and you'll answer, just as politely", section_fight]
-        #condition: [ NTR_scenefact_whychildren, "=", 1 ]
+      - choice: ["2114670759|Why are you interested in children?", section_why_children]
         emphasize: true
-      - choice: ["Orianna will kill you", section_orianna]
+      - choice: ["2114670760|I'll ask again, polite like, and you'll answer, just as politely", section_fight]
+        condition: [ NTR_scenefact_whychildren, "=", 1 ]
+        emphasize: true
+      - choice: ["2114670761|Orianna will kill you", section_orianna]
         #emphasize: true
 
   section_why_children:
     - CUE: shot_d4_ger
-    #- geralt: "[1.7966]2114670775|Why are you interested in children?"
+    #- geralt: "[2.0485]2114670775|Why are you interested in the children?"
     - geralt: "0000382555|What did you need the children for?"
     - CUE: shot_d4_band
     - fat_bandit: "[2.3133]2114670776|It's no concern of yours."
@@ -804,7 +804,7 @@ dialogscript:
     - CUE: shot_d6_ger
     - geralt: "[5.5173635]0001117735|I'll ask again, polite like, and you'll answer, just as politely."
     - CUE: shot_d6_band
-    - fat_bandit: "[10.2658]2114670779|Would ya look at that lads, Vagrant mutt's givin' us orders. Needs to know 'is place… Fuck 'im up!"
+    - fat_bandit: "[10.2658]2114670779|Would ya look at that lads, vagrant mutt's givin' us orders. Needs to know 'is place… Fuck 'im up!"
     - CUE: shot_10
     - bandit_2: "[2.49471]0001156640|We'll break your legs, vagrant!"
     - NEXT: section_exit_fistfight
@@ -827,3 +827,6 @@ dialogscript:
   section_exit_normal:
     - OUTPUT: normal
     - EXIT
+
+
+

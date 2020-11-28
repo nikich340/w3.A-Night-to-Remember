@@ -968,7 +968,7 @@ dialogscript:
     # (longest) anim: geralt_reaction_tired_face
     - PAUSE: 1.5
     - CUE: shot_8_cam
-    - geralt: "[2.2554]2114670300|Times have changed."
+    - geralt: "[1.8014]2114670300|Times have changed."
     # shot Shot6 ori smile
     #- geralt: "shot9"
     - CUE: shot_9
@@ -983,3 +983,4 @@ dialogscript:
   section_exit:
     #- CAMERA_BLEND: 2.0
     - EXIT
+

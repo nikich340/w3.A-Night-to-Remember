@@ -34,8 +34,9 @@ dialogscript:
     - NEXT: section_power
 
   section_power:
-    - triss: "[2.3344047]0001041457|You're dead, you're gone!"
+    - triss: "[2.3344047]0001041457|You're dead, you're gone."
     - NEXT: section_exit
 
   section_exit:
     - EXIT
+

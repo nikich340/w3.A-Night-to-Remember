@@ -839,7 +839,7 @@ dialogscript:
     - toussaint_fisherman: "[2.1060]2114670918|I catch more when it's raining."
     # shot geralt ask2 boat
     - CUE: shot_4
-    - geralt: "[5.4078]2114670919|Did you see a red-haired woman here? Left this site by boat, recently."
+    - geralt: "[5.3713]2114670919|Did you see a red-haired woman here? Left this site by boat, recently."
     # shot shot menu def impatient mimic
     - CUE: shot_4_answer
     - toussaint_fisherman: "[5.7383]2114670920|Maybe. Maybe not. Give me a few coins and I'll try to remember."
@@ -847,11 +847,11 @@ dialogscript:
 
   section_choice_geralt:
     - CHOICE:
-      - choice: ["I will pay", section_pay, pay, 500, true ]
+      - choice: ["2114670915|I will pay", section_pay, pay, 500, true ]
         emphasize: true
-      - choice: ["You will help me for free", section_axii, axii]
+      - choice: ["2114670916|You will help me for free", section_axii, axii]
         emphasize: true
-      - choice: ["I want to help that woman", section_help]
+      - choice: ["2114670917|I want to help that woman", section_help]
         single_use: true
         emphasize: true
 
@@ -864,7 +864,7 @@ dialogscript:
 
   section_axii:
     - CUE: shot_axii
-    - geralt: "[7.5]0001125802|Asking a lot. Too much. How about you do this free of charge, huh? Out of the kindness of your heart?"
+    - geralt: "[7.499866]0001125802|Asking a lot. Too much. How about you do this free of charge, huh? Out of the kindness of your heart?"
     - CUE: shot_axii_answer
     - toussaint_fisherman: "[4.0000]2114670922|Aye, I'll help. Outta kindness…"
     - PAUSE: 2.0
@@ -926,6 +926,8 @@ dialogscript:
 
   section_exit:
     - EXIT
+
+
 
 
 

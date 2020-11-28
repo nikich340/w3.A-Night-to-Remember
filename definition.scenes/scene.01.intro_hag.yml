@@ -309,7 +309,7 @@ dialogscript:
     # shot geralt sword
     - CUE: shot_5
     - PAUSE: 1.0
-    - geralt: "[0.4870095253]0000553305|Shit!"
+    - geralt: "[0.48700953]0000553305|Shit!"
     # (longest) anim: geralt_sneaking_stop_draw_silver_sword_to_combat
     - PAUSE: 1.5
     # shot hug attack

@@ -760,12 +760,12 @@ dialogscript:
     - PAUSE: 6
     # shot Shot2 greetings
     - CUE: shot_2
-    - geralt: "[1.2209100723]0000527056|Greetings, Triss."
+    - geralt: "[1.2209101]0000527056|Greetings, Triss."
     - CUE: shot_2_2
     - PAUSE: 4.75
     # (longest) anim: high_standing_bored_to_high_standing_determined: 5.166667
     - CUE: shot_3
-    - triss_fake: "[0.8353435397]0000487412|Geralt...?"
+    - triss_fake: "[0.83534354]0000487412|Geralt…?"
     # (longest) anim: high_standing_determined_gesture_greeting_01: 2.866667
     # shot grlt looking cam
     - CUE: shot_4
@@ -776,7 +776,7 @@ dialogscript:
     - triss_fake: "[1.8566]2114670705|I've been thinking about us."
     # grlt again
     - CUE: shot_4_2
-    - geralt: "[1.1954]2114670706|I'm looking for..."
+    - geralt: "[1.1954]2114670706|I'm looking for…"
     # shot triss magic to yen
     - CUE: shot_5_2
     - triss_fake: "[3.6236]2114670707|I'm not Yennefer, Geralt. But I can be like Yennefer!"
@@ -808,7 +808,7 @@ dialogscript:
     - PAUSE: 1.0
     # I am your nighmare!
     - CUE: shot_12
-    - triss_monster: "[2.2577]2114670711|I'm your nightmare!"
+    - triss_monster: "[1.8620]2114670711|I'm your nightmare!"
     - PAUSE: 2.0
     # shot grlt
     - CUE: shot_13
@@ -820,5 +820,7 @@ dialogscript:
 
   section_exit:
     - EXIT
+
+
 
 

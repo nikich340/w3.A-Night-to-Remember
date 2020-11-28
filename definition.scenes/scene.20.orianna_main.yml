@@ -1323,15 +1323,15 @@ dialogscript:
     - CUE: shot_init
     - PAUSE: 1.0
     - CUE: shot_0
-    - orianna_human: "[9.998902]0001174593|Wolves_asleepin'_'midst_the_trees__bats_all_aswayi"
+    - orianna_human: "[9.998902]0001174593|Wolves asleepin' 'midst the trees, bats all aswayin' in the breeze…"
     - CUE: shot_1
-    - orianna_human: "[11.980957]0001176970|But_one_soul_lies_anxious__wide_awake__fearin'_all"
+    - orianna_human: "[11.980957]0001176970|But one soul lies anxious, wide awake, fearin' all manner of ghouls, hags and wraiths…"
     # shot Shot4 to ger
     - CUE: shot_4
-    - geralt: "[2.6539567]0000366968|Nice_tune__Damn_sad__though_"
+    - geralt: "[2.6539567]0000366968|Nice tune… Damn sad, though."
     - orianna_human: "2114670944|Folk have forgotten it."
     - CUE: shot_4_shrug
-    - geralt: "[2.9005]2114670945|Got... other things on their mind."
+    - geralt: "[2.9005]2114670945|Got… other things on their mind."
     - CUE: shot_4_go
     - PAUSE: 2.8
     - CUE: shot_4_go2
@@ -1424,10 +1424,10 @@ dialogscript:
     - orianna_human: "2114670954|Ha! So, you've been snooping around? I thought you were the straightforward type."
     
     - CUE: shot_try_peacefully_ger4
-    - geralt: "[2.3540]2114670955|Orianna, that doesn't change the fact that..."
+    - geralt: "[2.3540]2114670955|Orianna, that doesn't change the fact that…"
     
     - CUE: shot_try_peacefully_ori4
-    - orianna_human: "2114670956|You presume to understand me? After reading some... musings?"
+    - orianna_human: "2114670956|You presume to understand me? After reading some… musings?"
     
     - CUE: shot_try_peacefully_ger5
     - geralt: "[1.2964]2114670957|Don't deny it."
@@ -1498,7 +1498,7 @@ dialogscript:
 
   section_try_peacefully5:
     - CUE: shot_try_peacefully_ger7
-    - geralt: "[2.5652952]0001101409|Well, I probably wouldn't 'ave forced myself on you."
+    - geralt: "[4.7890677]0001092168|I kill monsters, true - it's my job. But only when they threaten humans."
     # Orianna thinking
 
     - CUE: shot_try_peacefully_ori_thinking
@@ -1579,6 +1579,9 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+
+
+
 
 
 

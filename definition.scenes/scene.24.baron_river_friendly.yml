@@ -581,6 +581,7 @@ storyboard:
       Big_bandit: [[ -152.9651184082, 36.6402435303, -11.2269897461 ], [ 0.0, 0.0, 232.6199951172 ]]
       Bandit_poor: [[ -154.7418060303, 34.0491828918, -11.1720581055 ], [ 0.0, 0.0, 272.3299865723 ]]
       orianna_dead: [[ -155.8996429443, 32.3949279785, -11.1720581055 ], [ 0.0, 0.0, 130.2677917480 ]]
+      # actor pos [0,0,0] rot [0,0,+180]
       POUCH_GERALT: [[ -151.1905670166, 33.9341468811, -11.1305427551 ], [ 0.0, 0.0, 310.6247863770 ]]
       POUCH_BARON: [[ -152.5240173340, 33.3662834167, -11.1252403259 ], [ 0.0, 0.0, 126.0999755859 ]]
 
@@ -597,10 +598,10 @@ storyboard:
   section_storyboard_ui:
     # shot shot1 sky
     shot_1:
-      - actor.placement: [0.0, POUCH_GERALT, [ -151.1905670166, 33.9341468811, -13.1305427551 ], [ 0.0, 0.0, 310.6247863770 ]]
-      - actor.placement: [0.0, POUCH_BARON, [ -152.5240173340, 33.3662834167, -13.1252403259 ], [ 0.0, 0.0, 126.0999755859 ]]
+      - actor.hide: [0.0, POUCH_GERALT]
+      - actor.hide: [0.0, POUCH_BARON]
       - actor.pose: [0.0, geralt_Low_Lying_Dead]
-      - actor.placement: [0.0, geralt, [ -151.1475982666, 34.3303146362, -11.0883865356 ], [ 0.0, 0.0, 173.8548889160 ]]
+      - actor.placement: [0.0, geralt, [ -151.1475982666, 34.3303146362, -11.0 ], [ 0.0, 0.0, 173.8548889160 ]]
       - actor.placement: [0.0, Baron_Edward, [ -152.0740356445, 33.6944580078, -11.1220092773 ], [ 0.0, 0.0, 306.0999755859 ]]
       - fade.in: [0.0, 1.0]
       - cam: [0.0, cam_1_shot1_sky]
@@ -668,6 +669,7 @@ storyboard:
       - actor.anim: #8.73333 s
           .@pos: [0.0, geralt_high_standing_determined_gesture_drink]
           blendin: 0.3
+          #clipend: 6.0
           blendout: 0.3
       - actor.lookat: [0.0, geralt, NONE]
       - actor.lookat: [1.0, geralt, Baron_Edward]
@@ -677,6 +679,13 @@ storyboard:
       - actor.effect.start: [0.45, geralt, use_potion]
       - actor.sound: [0.45, geralt, gui_potion_activation]
       - actor.effect.stop: [1.0, geralt, use_potion]
+
+      - actor.anim:
+          actor: geralt
+          .@pos: [1.0, anim_4057_high_standing_determined_turn90_right]
+          blendin: 0.5
+          clipend: 1.168
+          blendout: 0.0
 
     # shot shot3 dg ger potion
     shot_8: 
@@ -707,9 +716,8 @@ storyboard:
   section_choice_main:
     CHOICE_1:
       - cam: [0.0, cam_5_shot3_dg_ger]
-      - actor.placement: [0.0, POUCH_GERALT, [ -151.1905670166, 33.9341468811, -13.1305427551 ], [ 0.0, 0.0, 310.6247863770 ]]
-      - actor.placement: [0.0, POUCH_BARON, [ -152.5240173340, 33.3662834167, -13.1252403259 ], [ 0.0, 0.0, 126.0999755859 ]]
-
+      - actor.hide: [0.0, POUCH_GERALT]
+      - actor.hide: [0.0, POUCH_BARON]
 
       #- actor.lookat: 
       #    .@pos: [0.0, geralt, Baron_Edward]
@@ -736,8 +744,8 @@ storyboard:
 
   section_dont_know:
     shot_dont_know_g:
-      - actor.placement: [0.0, POUCH_GERALT, [ -151.1905670166, 33.9341468811, -13.1305427551 ], [ 0.0, 0.0, 310.6247863770 ]]
-      - actor.placement: [0.0, POUCH_BARON, [ -152.5240173340, 33.3662834167, -13.1252403259 ], [ 0.0, 0.0, 126.0999755859 ]]
+      - actor.hide: [0.0, POUCH_GERALT]
+      - actor.hide: [0.0, POUCH_BARON]
 
       - actor.anim.additive:
           actor: geralt
@@ -777,8 +785,8 @@ storyboard:
 
   section_try_trick:
     shot_try_trick1_g:
-      - actor.placement: [0.0, POUCH_GERALT, [ -151.1905670166, 33.9341468811, -13.1305427551 ], [ 0.0, 0.0, 310.6247863770 ]]
-      - actor.placement: [0.0, POUCH_BARON, [ -152.5240173340, 33.3662834167, -13.1252403259 ], [ 0.0, 0.0, 126.0999755859 ]]
+      - actor.hide: [0.0, POUCH_GERALT]
+      - actor.hide: [0.0, POUCH_BARON]
 
       - cam: [0.0, cam_5_shot3_dg_ger]
       - actor.anim.mimic: # 2.533
@@ -839,8 +847,8 @@ storyboard:
 
   section_refuse:
     shot_refuse1_g:
-      - actor.placement: [0.0, POUCH_GERALT, [ -151.1905670166, 33.9341468811, -13.1305427551 ], [ 0.0, 0.0, 310.6247863770 ]]
-      - actor.placement: [0.0, POUCH_BARON, [ -152.5240173340, 33.3662834167, -13.1252403259 ], [ 0.0, 0.0, 126.0999755859 ]]
+      - actor.hide: [0.0, POUCH_GERALT]
+      - actor.hide: [0.0, POUCH_BARON]
 
       - cam: [0.0, cam_5_shot3_dg_ger]
 
@@ -894,8 +902,8 @@ storyboard:
 
   section_agree:
     shot_agree1_g:
-      - actor.placement: [0.0, POUCH_GERALT, [ -151.1905670166, 33.9341468811, -13.1305427551 ], [ 0.0, 0.0, 310.6247863770 ]]
-      - actor.placement: [0.0, POUCH_BARON, [ -152.5240173340, 33.3662834167, -13.1252403259 ], [ 0.0, 0.0, 126.0999755859 ]]
+      - actor.hide: [0.0, POUCH_GERALT]
+      - actor.hide: [0.0, POUCH_BARON]
 
       - cam: [0.0, cam_26_shot10_point_to_house]
       - actor.anim.additive: 
@@ -964,8 +972,9 @@ storyboard:
 
   section_get_coins:
     shot_coins1_b:
-      #- actor.placement: [0.0, POUCH_GERALT, [ -151.1905670166, 33.9341468811, -11.1305427551 ], [ 0.0, 0.0, 310.6247863770 ]]
-      #- actor.placement: [0.0, POUCH_BARON, [ -152.5240173340, 33.3662834167, -11.1252403259 ], [ 0.0, 0.0, 126.0999755859 ]]
+      - actor.show: [0.0, POUCH_GERALT]
+      - actor.show: [0.0, POUCH_BARON]
+
       - cam: [0.0, cam_6_shot3_dg_baron]
       - actor.anim.additive: # 5.2
           actor: Baron_Edward
@@ -992,6 +1001,9 @@ storyboard:
 
   section_get_coins2:
     shot_coins1_g:
+      - actor.show: [0.0, POUCH_GERALT]
+      - actor.show: [0.0, POUCH_BARON]
+
       - cam: [0.0, cam_5_shot3_dg_ger]
       - actor.anim.mimic: # 2.533
           actor: geralt
@@ -1026,8 +1038,8 @@ storyboard:
 
   section_get_sword:
     shot_sword1_b: # 6.5 s
-      - actor.placement: [0.0, POUCH_GERALT, [ -151.1905670166, 33.9341468811, -13.1305427551 ], [ 0.0, 0.0, 310.6247863770 ]]
-      - actor.placement: [0.0, POUCH_BARON, [ -152.5240173340, 33.3662834167, -13.1252403259 ], [ 0.0, 0.0, 126.0999755859 ]]
+      - actor.hide: [0.0, POUCH_GERALT]
+      - actor.hide: [0.0, POUCH_BARON]
 
       - cam: [0.0, cam_19_shot3_dg_baron_gest_give_sword]
       - actor.equip.right: [0.2, Baron_Edward, steelsword]
@@ -1068,8 +1080,8 @@ storyboard:
 
   section_get_sword2:
     shot_sword2_b:
-      - actor.placement: [0.0, POUCH_GERALT, [ -151.1905670166, 33.9341468811, -13.1305427551 ], [ 0.0, 0.0, 310.6247863770 ]]
-      - actor.placement: [0.0, POUCH_BARON, [ -152.5240173340, 33.3662834167, -13.1252403259 ], [ 0.0, 0.0, 126.0999755859 ]]
+      - actor.hide: [0.0, POUCH_GERALT]
+      - actor.hide: [0.0, POUCH_BARON]
 
       - cam: [0.0, cam_6_shot3_dg_baron]
       - actor.anim.mimic:
@@ -1106,8 +1118,8 @@ storyboard:
 
   section_fight:
     shot_treat:
-      - actor.placement: [0.0, POUCH_GERALT, [ -151.1905670166, 33.9341468811, -13.1305427551 ], [ 0.0, 0.0, 310.6247863770 ]]
-      - actor.placement: [0.0, POUCH_BARON, [ -152.5240173340, 33.3662834167, -13.1252403259 ], [ 0.0, 0.0, 126.0999755859 ]]
+      - actor.hide: [0.0, POUCH_GERALT]
+      - actor.hide: [0.0, POUCH_BARON]
 
       - cam: [0.0, cam_5_shot3_dg_ger]
       - actor.anim.mimic: 
@@ -1150,8 +1162,8 @@ storyboard:
 
   section_peaceful:
     shot_peaceful1:
-      - actor.placement: [0.0, POUCH_GERALT, [ -151.1905670166, 33.9341468811, -13.1305427551 ], [ 0.0, 0.0, 310.6247863770 ]]
-      - actor.placement: [0.0, POUCH_BARON, [ -152.5240173340, 33.3662834167, -13.1252403259 ], [ 0.0, 0.0, 126.0999755859 ]]
+      - actor.hide: [0.0, POUCH_GERALT]
+      - actor.hide: [0.0, POUCH_BARON]
 
       - cam: [0.0, cam_6_shot3_dg_baron]
       - actor.anim.mimic: 
@@ -1366,7 +1378,7 @@ dialogscript:
     # shot shot3 dg ger
     - CUE: shot_5
     - PAUSE: 4.0
-    - geralt: "[1.3408476]0000499994|More_or_less_"
+    - geralt: "[1.3408476]0000499994|More or less."
     - CUE: shot_7
     - PAUSE: 6.0
     - geralt: "[1.1680409]0001209997|That's better."
@@ -1382,13 +1394,14 @@ dialogscript:
 
   section_choice_main:
     - CHOICE:
-      - choice: ["The children are in that house.", section_agree]
+      - choice: ["2114670315|The children are in that house.", section_agree]
         emphasize: true
-      - choice: ["I'll take care of them myself.", section_refuse]
+      - choice: ["2114670316|I'll take care of them myself.", section_refuse]
         emphasize: true
-      - choice: ["Your son is dead.", section_try_trick]
+      - choice: ["2114670317|Your son is dead.", section_try_trick]
+        condition: [ ntr_hidden_option, "=", 1 ]
         emphasize: true
-      - choice: ["I don't know.", section_dont_know]
+      - choice: ["2114670318|I don't know.", section_dont_know]
         emphasize: true
         single_use: true
 
@@ -1418,7 +1431,7 @@ dialogscript:
 
   section_refuse:
     - CUE: shot_refuse1_g
-    - geralt: "[1.7974]2114670332|I'll take care of them myself."
+    - geralt: "[2.0879]2114670332|I'll take care of him myself."
     - CUE: shot_refuse1_b
     - Baron_Edward: "2114670333|Are you mad, you twit?"
     - CUE: shot_refuse2_g
@@ -1429,7 +1442,7 @@ dialogscript:
 
   section_agree:
     - CUE: shot_agree1_g
-    - geralt: "[5.3117]2114670336|They are in that house. A young girl with a boy. Alive."
+    - geralt: "[5.3117]2114670336|The children are in that house. A young girl with a boy. Alive."
     - geralt: "[1.0698291]0001091952|You'll look after her?"
     - CUE: shot_agree1_b
     - PAUSE: 2.0
@@ -1443,15 +1456,15 @@ dialogscript:
     - NEXT: section_agree_branch
 
   section_agree_branch:
-    - CHOICE:
-      - choice: ["coins (TEST)", section_get_coins]
-        emphasize: true
-      - choice: ["sword (TEST)", section_get_sword]
-        emphasize: true
-    #- NEXT:
-    #    condition: [ ntr_scenefact_coins, "=", 1 ]
-    #    on_true: section_get_coins
-    #    on_false: section_get_sword
+    #- CHOICE:
+    #  - choice: ["coins (TEST)", section_get_coins]
+    #    emphasize: true
+    #  - choice: ["sword (TEST)", section_get_sword]
+    #    emphasize: true
+    - NEXT:
+        condition: [ ntr_scenefact_coins, "=", 1 ]
+        on_true: section_get_coins
+        on_false: section_get_sword
 
   section_get_coins:
     - CUE: shot_coins1_b
@@ -1547,4 +1560,6 @@ dialogscript:
   section_exit_fight:
     - OUTPUT: fight
     - EXIT
+
+
 

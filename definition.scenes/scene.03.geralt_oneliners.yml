@@ -27,11 +27,11 @@ dialogscript:
     - NEXT: section_exit
 
   section_start_using_owl:
-    - geralt: "[3.1468]2114670651|A letter... Who's using an owl for this?"
+    - geralt: "[1.0033]2114670651|A letter?"
     - NEXT: section_exit
 
   section_start_check_orphanage:
-    - geralt: "[4.7800]2114670652|Regis... Just trying to avoid a fight, to protect her."
+    - geralt: "[4.7800]2114670652|Regis… Just trying to avoid a fight, to protect her."
     - geralt: "[2.4636]2114670653|Well, I should check the orphanage."
     - geralt: "[1.786507]0001194410|I'll find her if she's there."
     - NEXT: section_exit
@@ -73,6 +73,8 @@ dialogscript:
     - NEXT: section_exit
 
   section_start_orianna_house_enter:
+    - geralt: "[0.98117673]0001174617|Orianna?"
+    - PAUSE: 5.0
     - geralt: "[5.3534]2114670659|House looks inhabited… No sign of the dweller, though. Guess I'll look around."
     - NEXT: section_exit
 
@@ -81,7 +83,7 @@ dialogscript:
     - NEXT: section_exit
 
   section_start_orianna_house_outside:
-    - geralt: "[2.0562]2114670661|I'll wait her outside."
+    - geralt: "[2.3451]2114670661|Need to hide, see how things play out…"
     - NEXT: section_exit
 
   #section_start_after_orphanage:
@@ -90,6 +92,8 @@ dialogscript:
 
   section_exit:
     - EXIT
+
+
 
 
 

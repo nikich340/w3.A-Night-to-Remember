@@ -24,9 +24,9 @@ repository:
       template: "dlc\\dlcntr\\data\\entities\\baron_bandit_axe.w2ent"
       appearance: [ "bob_raider_lvl1_03" ]
 
-    Bandit_poor:
-      template: "dlc\\dlcntr\\data\\entities\\baron_bandit.w2ent"
-      appearance: [ "bob_thug_lvl1_10" ]
+    Bandit_crossbow:
+      template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
+      appearance: [ "__q703_nazairi_01" ]
 
   animations:
     anim_5891_man_geralt_sword_repel_lp_kick:
@@ -187,18 +187,18 @@ repository:
         tags: [ "ext" ]
 
     cam_2_Shot2_finisher2:
-      fov: 30.0
+      fov: 40.0
       transform:
-        pos: [ -146.6827697754, 37.4300155640, -9.6178121567 ]
-        rot: [ 0.0, 352.2000122070, 111.7023544312 ]
-      #zoom: 1.0
+        pos: [ -148.4980468750, 38.3889923096, -9.5720577240 ]
+        rot: [ 0.0, 305.9448547363, 151.3294677734 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 5.2346553802, 8.2346553802 ]
-        focus: [ 5.7346553802, 6.7346553802 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.9298540354, 3.9298539162 ]
+        focus: [ 1.4298540354, 2.4298539162 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_3_Shot2_finisher3:
@@ -217,18 +217,18 @@ repository:
         tags: [ "ext" ]
 
     cam_4_Shot2_finisher1:
-      fov: 30.0
+      fov: 40.0
       transform:
-        pos: [ -145.8199615479, 37.0926856995, -9.6178121567 ]
-        rot: [ 0.0, 353.5200195313, 103.1223220825 ]
-      #zoom: 1.0
+        pos: [ -148.4980468750, 38.3889923096, -9.5720577240 ]
+        rot: [ 0.0, 346.1499633789, 145.6925659180 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 6.3588080406, 9.3588085175 ]
-        focus: [ 6.8588080406, 7.8588080406 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.0809378624, 5.0809378624 ]
+        focus: [ 2.5809378624, 3.5809378624 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_5_Shot3_stop_cheer:
@@ -351,6 +351,111 @@ repository:
         plane: "medium"
         tags: [ "ext" ]
 
+    cam_4_Shot_kill_baron_cam:
+      fov: 20.0
+      transform:
+        pos: [ -149.7505187988, 37.0300407410, -9.8720579147 ]
+        rot: [ 0.0, 321.8398132324, 268.6726379395 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.5591973066, 3.5591974258 ]
+        focus: [ 1.0591973066, 2.0591974258 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_5_Shot_kill_ger_cam:
+      fov: 40.0
+      transform:
+        pos: [ -148.7964172363, 37.2897911072, -9.2720584869 ]
+        rot: [ 0.0, 347.7448425293, 164.6391601563 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.3404695988, 4.3404693604 ]
+        focus: [ 1.8404695988, 2.8404695988 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_7_Shot_kill_crossbow_cam:
+      fov: 25.0
+      transform:
+        pos: [ -152.8362121582, 39.1309089661, -9.5720577240 ]
+        rot: [ 0.0, 356.6548461914, 52.2191696167 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.0234677792, 4.0234680176 ]
+        focus: [ 1.5234677792, 2.5234677792 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_8_Shot_take_sword_1:
+      fov: 20.0
+      transform:
+        pos: [ -151.4345550537, 36.9546470642, -9.1720581055 ]
+        rot: [ 0.0, 328.2198181152, 271.0925292969 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.5591973066, 3.5591974258 ]
+        focus: [ 1.0591973066, 2.0591974258 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_9_Shot_take_sword_2:
+      fov: 20.0
+      transform:
+        pos: [ -148.6400299072, 34.1350021362, -9.2720584869 ]
+        rot: [ 0.0, 337.0198364258, 5.2523498535 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.5591973066, 3.5591974258 ]
+        focus: [ 1.0591973066, 2.0591974258 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_10_Shot_take_sword_3:
+      fov: 30.0
+      transform:
+        pos: [ -149.9698638916, 38.7595405579, -9.4720582962 ]
+        rot: [ 0.0, 350.7698364258, 207.5120239258 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.5591973066, 3.5591974258 ]
+        focus: [ 1.0591973066, 2.0591974258 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_11_Shot_take_sword_4:
+      fov: 30.0
+      transform:
+        pos: [ -149.9698638916, 38.7595405579, -9.4720582962 ]
+        rot: [ 0.0, 319.1447753906, 209.4922790527 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.5591973066, 3.5591974258 ]
+        focus: [ 1.0591973066, 2.0591974258 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
 production:
   settings:
     sceneid: 1
@@ -399,11 +504,24 @@ production:
         appearance: "bob_raider_lvl1_03"
         tags: [ "ntr_camp_bandit_axe" ]
 
-      Bandit_poor:
-        repo: "Bandit_poor"
+      Bandit_crossbow:
+        repo: "Bandit_crossbow"
         #by_voicetag: true
-        appearance: "bob_thug_lvl1_10"
-        tags: [ "ntr_poor_bandit" ]
+        appearance: "__q703_nazairi_01"
+        tags: [ "ntr_crossbow_bandit" ]
+      
+    mimics:
+      Crossbow_angry:
+          actor: Bandit_crossbow
+          repo: angry
+          weight: 1.0
+          duration: 1.0
+
+      Baron_sleep:
+          actor: Baron_Edward
+          repo: sleeping
+          weight: 1.0
+          duration: 3.0
 
     cameras:
       cam_1_Shot1:
@@ -441,6 +559,27 @@ production:
 
       cam_16_Shot9_cam_corpse:
         repo: "cam_16_Shot9_cam_corpse"
+
+      cam_4_Shot_kill_baron_cam:
+        repo: "cam_4_Shot_kill_baron_cam"
+
+      cam_5_Shot_kill_ger_cam:
+        repo: "cam_5_Shot_kill_ger_cam"
+
+      cam_7_Shot_kill_crossbow_cam:
+        repo: "cam_7_Shot_kill_crossbow_cam"
+
+      cam_8_Shot_take_sword_1:
+        repo: "cam_8_Shot_take_sword_1"
+
+      cam_9_Shot_take_sword_2:
+        repo: "cam_9_Shot_take_sword_2"
+
+      cam_10_Shot_take_sword_3:
+        repo: "cam_10_Shot_take_sword_3"
+
+      cam_11_Shot_take_sword_4:
+        repo: "cam_11_Shot_take_sword_4"
 
     animations:
       geralt_man_geralt_sword_repel_lp_kick:
@@ -630,8 +769,8 @@ production:
         blendin: 0.0
         blendout: 0.0
 
-      Bandit_poor_high_standing_determined_calm_exit_rightside:
-        actor: "Bandit_poor"
+      Bandit_crossbow_high_standing_determined_calm_exit_rightside:
+        actor: "Bandit_crossbow"
         repo: "anim_6978_high_standing_determined_calm_exit_rightside"
         #duration: 7.6666665077
         #weight: 0.6000000238
@@ -697,8 +836,8 @@ production:
         blendin: 0.5000000000
         blendout: 0.5000000000
 
-      Bandit_poor_geralt_neutral_gesture_no_long_face:
-        actor: "Bandit_poor"
+      Bandit_crossbow_geralt_neutral_gesture_no_long_face:
+        actor: "Bandit_crossbow"
         repo: "mimicsanim_409_geralt_neutral_gesture_no_long_face"
         #duration: 0.0
         #weight: 0.6000000238
@@ -766,8 +905,8 @@ production:
         actor: "Bandit_camp_axe"
         repo: "pose_0_high_standing_determined_idle"
 
-      Bandit_poor_man_idle_torch:
-        actor: "Bandit_poor"
+      Bandit_crossbow_man_idle_torch:
+        actor: "Bandit_crossbow"
         repo: "pose_813_man_idle_torch"
 
       Bandit_camp_sword_high_standing_determined_idle:
@@ -785,6 +924,11 @@ production:
       geralt_high_standing_determined_idle:
         actor: "geralt"
         repo: "pose_0_high_standing_determined_idle"
+
+    soundbanks:
+      - work_activities
+      - qu_ep2_701_dlg
+
 storyboard:
   defaults:
     placement:
@@ -794,7 +938,7 @@ storyboard:
       #Bandit_camp_sword: [[ -151.8777465820, 39.6358909607, -11.2471923828 ], [ 0.0, 0.0, 236.6424255371 ]]
       #Bandit_camp_spear: [[ -155.4290771484, 37.8649520874, -11.3575439453 ], [ 0.0, 0.0, 241.9225769043 ]]
       #Bandit_camp_axe: [[ -151.3777618408, 41.5014343262, -11.2544555664 ], [ 0.0, 0.0, 210.5726623535 ]]
-      #Bandit_poor: [[ -153.7449951172, 39.6954956055, -11.3204956055 ], [ 0.0, 0.0, 226.8526916504 ]]
+      #Bandit_crossbow: [[ -153.7449951172, 39.6954956055, -11.3204956055 ], [ 0.0, 0.0, 226.8526916504 ]]
 
     #actor.pose:
       #geralt: geralt_High_Standing_Relaxed_Combat
@@ -803,7 +947,7 @@ storyboard:
       #Bandit_camp_sword: Bandit_camp_sword_High_Standing_Aggressive
       #Bandit_camp_spear: Bandit_camp_spear_High_Standing_Bored
       #Bandit_camp_axe: Bandit_camp_axe_high_standing_determined_idle
-      #Bandit_poor: Bandit_poor_man_idle_torch
+      #Bandit_crossbow: Bandit_crossbow_man_idle_torch
 
   section_storyboard_ui:
     # shot Shot1
@@ -811,13 +955,14 @@ storyboard:
       - actor.equip.right: [0.0, geralt, steelsword]
       - actor.equip.right: [0.0, Baron_Edward, steelsword]
       - actor.equip.left: [0.0, Bandit_camp_sword, Torch_work]
+      - actor.equip.left: [0.0, Bandit_crossbow, Torch_work]
       
       ##- actor.placement: [0.0, Baron_Edward, [ -150.0639038086, 36.8245124817, -11.1720581055 ], [ 0.0, 0.0, 224.3226013184 ]]
       - actor.placement: [0.0, Big_bandit, [ -153.5352020264, 37.9748649597, -11.2609252930 ], [ 0.0, 0.0, 231.3623352051 ]]
       - actor.placement: [0.0, Bandit_camp_sword, [ -151.8777465820, 39.6358909607, -11.2471923828 ], [ 0.0, 0.0, 236.6424255371 ]]
       - actor.placement: [0.0, Bandit_camp_spear, [ -155.4290771484, 37.8649520874, -11.3575439453 ], [ 0.0, 0.0, 241.9225769043 ]]
       - actor.placement: [0.0, Bandit_camp_axe, [ -151.3777618408, 41.5014343262, -11.2544555664 ], [ 0.0, 0.0, 210.5726623535 ]]
-      - actor.placement: [0.0, Bandit_poor, [ -153.7449951172, 39.6954956055, -11.3204956055 ], [ 0.0, 0.0, 226.8526916504 ]]
+      - actor.placement: [0.0, Bandit_crossbow, [ -153.7449951172, 39.6954956055, -11.3204956055 ], [ 0.0, 0.0, 226.8526916504 ]]
       ##- actor.placement: [0.0, geralt, [ -148.2327117920, 34.8401603699, -11.1592407227 ], [ 0.0, 0.0, 47.5525588989 ]]
       ### TEST
       #- actor.placement: [0.5, geralt, [ -148.2327117920, 34.8401603699, -11.1592407227 ], [ 0.0, 0.0, 47.5525588989 ]]
@@ -827,7 +972,7 @@ storyboard:
       - actor.pose: [0.0, Bandit_camp_sword_High_Standing_Aggressive]
       - actor.pose: [0.0, Bandit_camp_spear_High_Standing_Bored]
       - actor.pose: [0.0, Bandit_camp_axe_high_standing_determined_idle]
-      - actor.pose: [0.0, Bandit_poor_man_idle_torch]
+      - actor.pose: [0.0, Bandit_crossbow_man_idle_torch]
       - cam: [0.0, cam_1_Shot1]
       - actor.anim: 
           .@pos: [0.0, Baron_Edward_taunt_2]
@@ -850,43 +995,53 @@ storyboard:
 
       - actor.lookat: [0.1, geralt, Baron_Edward]
       - actor.lookat: [0.1, Baron_Edward, geralt]
-      - actor.lookat: [0.1, Big_bandit, geralt]
-      - actor.lookat: [0.1, Bandit_poor, geralt]
-      - actor.lookat: [0.1, Bandit_camp_sword, geralt]
-      - actor.lookat: [0.1, Bandit_camp_spear, geralt]
-      - actor.lookat: [0.1, Bandit_camp_axe, geralt]
+      - actor.lookat: [0.1, Big_bandit, Baron_Edward]
+      - actor.lookat: [0.1, Bandit_crossbow, Baron_Edward]
+      - actor.lookat: [0.1, Bandit_camp_sword, Baron_Edward]
+      - actor.lookat: [0.1, Bandit_camp_spear, Baron_Edward]
+      - actor.lookat: [0.1, Bandit_camp_axe, Baron_Edward]
 
     # shot Shot2 finisher
     shot_2a:
       #- actor.placement: [0.0, geralt, [ -148.0629119873, 36.1286926270, -11.1728515625 ], [ 0.0, 0.0, 71.2026290894 ]]
       #- actor.placement: [0.0, Baron_Edward, [ -149.2843170166, 36.4983749390, -11.1720581055 ], [ 0.0, 0.0, 234.1125793457 ]]
-      - actor.placement: [0.0, geralt, [ -148.843, 36.455, -11.1728515625 ], [ 0.0, 0.0, 62.2026290894 ]]
-      - actor.placement: [0.0, Baron_Edward, [ -150.0639038086, 36.8245124817, -11.1720581055 ], [ 0.0, 0.0, 224.3226013184 ]]
-
-      - cam.blend.start: [0.0, cam_4_Shot2_finisher1, rapid]
-      - cam.blend.end: [0.999, cam_2_Shot2_finisher2, smooth]
+      - actor.placement: [0.0, geralt, [ -149.3150787354, 35.7126045227, -11.1592407227 ], [ 0.0, 0.0, 37.4000015259 ]]
+      - actor.placement: [0.0, Baron_Edward, [ -150.1091461182, 36.7771301270, -11.1720581055 ], [ 0.0, 0.0, 231.5199584961 ]]
+      
+      - cam: [0.0, cam_4_Shot2_finisher1]
       - actor.anim: 
-          .@pos: [0.0, geralt_man_finisher_dlc_head_rp]
-          clipfront: 0.5
-          clipend: 1.2
+          actor: geralt # 3.9 s
+          .@pos: [0.0, anim_4293_man_finisher_06_lp]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 0.4
+          clipend: 1.0
       - actor.anim: 
-          .@pos: [0.0, Baron_Edward_man_finisher_dlc_head_rp]
-          clipfront: 0.5
-          clipend: 1.2
+          actor: Baron_Edward
+          .@pos: [0.0, anim_4293_man_finisher_06_lp]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 0.4
+          clipend: 1.0
 
     # slowmo
     shot_2b:
       - actor.anim: 
-          .@pos: [0.0, geralt_man_finisher_dlc_head_rp]
-          clipfront: 1.2
-          clipend: 1.5
-          stretch: 4.0
+          actor: geralt # 3.9 s
+          .@pos: [0.0, anim_4293_man_finisher_06_lp]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 1.0
+          clipend: 1.4
+          stretch: 3.0
       - actor.anim: 
-          .@pos: [0.0, Baron_Edward_man_finisher_dlc_head_rp]
-          clipfront: 1.2
-          clipend: 1.5
-          stretch: 4.0
-
+          actor: Baron_Edward
+          .@pos: [0.0, anim_4293_man_finisher_06_lp]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 1.0
+          clipend: 1.4
+          stretch: 3.0
       - actor.anim:
           .@pos: [0.0, Big_bandit_man_cheering_arena_loop_02]
           clipfront: 1.7
@@ -900,18 +1055,22 @@ storyboard:
           stretch: 4.0
 
     shot_2c:
-      # 0.3
-      - cam.blend.start: [0.0, cam_2_Shot2_finisher2, rapid]
-      # 1.3
-      - cam.blend.end: [0.25, cam_3_Shot2_finisher3, rapid]
+      - cam.blend.start: [0.0, cam_4_Shot2_finisher1, rapid]
+      - cam.blend.end: [0.4, cam_2_Shot2_finisher2, smooth]
+
       - actor.anim: 
-          .@pos: [0.0, geralt_man_finisher_dlc_head_rp]
-          clipfront: 1.5
-          clipend: 4.6
+          actor: geralt # 3.9 s
+          .@pos: [0.0, anim_4293_man_finisher_06_lp]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 1.4
+
       - actor.anim: 
-          .@pos: [0.0, Baron_Edward_man_finisher_dlc_head_rp]
-          clipfront: 1.5
-          clipend: 4.6
+          actor: Baron_Edward
+          .@pos: [0.0, anim_4293_man_finisher_06_lp]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 1.4
 
       - actor.anim:
           .@pos: [0.0, Big_bandit_man_cheering_arena_loop_02]
@@ -922,11 +1081,15 @@ storyboard:
       - actor.anim:
           .@pos: [0.0, Big_bandit_man_cheering_arena_stop_02]
           blendin: 0.4
+          blendout: 0.4
 
     shot_3a:
       - actor.anim: 
-          .@pos: [0.0, Baron_Edward_man_finisher_dlc_head_rp]
-          clipfront: 4.6
+          actor: Baron_Edward
+          .@pos: [0.0, anim_4293_man_finisher_06_lp]
+          clipfront: 3.8
+          blendin: 0.0
+          blendout: 0.0
           stretch: 1000.0
 
       - cam: [0.0, cam_6_Shot3_start_frighten]
@@ -941,7 +1104,7 @@ storyboard:
           .@pos: [0.0, Bandit_camp_spear_geralt_neutral_gesture_no_long_face]
           weight: 0.9
       - actor.anim.mimic: 
-          actor: Bandit_poor
+          actor: Bandit_crossbow
           .@pos: [0.0, mimicsanim_124_geralt_neutral_gesture_diasppointment_face]
           weight: 1.0
 
@@ -972,17 +1135,24 @@ storyboard:
           blendout: 0.0
       - actor.equip.right: [0.3, Bandit_camp_sword, steelsword]
       - actor.anim.mimic: [0.0, Bandit_camp_sword_geralt_neutral_gesture_brows_down_face_nrml]
-      - actor.lookat: [0.0, Bandit_poor, Bandit_camp_sword]
-      - actor.lookat: [0.8, Bandit_camp_sword, Big_bandit]
-      - actor.lookat: [0.8, Big_bandit, Bandit_camp_sword]
-      - actor.lookat: [0.8, Bandit_camp_spear, Big_bandit]
+
+    shot_5b:
+      - cam: [0.0, cam_7_Shot_kill_crossbow_cam]
+      - actor.mimic: [0.0, Crossbow_angry]
+      - actor.lookat: [0.0, Bandit_crossbow, geralt]
+
+    shot_5b_baron:
+      #- actor.lookat: [0.0, Baron_Edward, Bandit_camp_sword]
+      - cam: [0.0, cam_4_Shot_kill_baron_cam]
 
     shot_6a:
       - cam: [0.0, cam_10_Shot6_no]
       - actor.pose: [0.0, Bandit_camp_spear_High_Standing_Sad]
-      - actor.anim.mimic: 
-          .@pos: [0.0, Big_bandit_geralt_neutral_gesture_no_short_face]
-          weight: 0.8  
+      - actor.lookat: [0.3, Big_bandit, Bandit_camp_sword]
+      - actor.lookat: [0.8, Big_bandit, Baron_Edward]
+      #- actor.anim.mimic: 
+      #    .@pos: [0.0, Big_bandit_geralt_neutral_gesture_no_short_face]
+      #    weight: 0.8  
 
     shot_6b:
       - actor.pose: [0.0, Bandit_camp_sword_high_standing_determined_idle]
@@ -998,10 +1168,10 @@ storyboard:
     shot_7a:
       - cam: [0.0, cam_12_Shot7_go_away2]
       - actor.lookat: [0.0, Bandit_camp_axe, NONE]
-      - actor.lookat: [0.0, Bandit_poor, NONE]
+      - actor.lookat: [0.0, Bandit_crossbow, NONE]
       - actor.placement: [0.0, Bandit_camp_axe, [ -154.5952911377, 38.8702850342, -11.3093872070 ], [ 0.0, 0.0, 221.3526000977 ]]
       - actor.anim: 
-          .@pos: [0.0, Bandit_poor_high_standing_determined_calm_exit_rightside]
+          .@pos: [0.1, Bandit_crossbow_high_standing_determined_calm_exit_rightside]
           blendin: 0.5
       - actor.anim: 
           .@pos: [0.0, Bandit_camp_axe_high_standing_determined_calm_enter_leftside]
@@ -1031,26 +1201,80 @@ storyboard:
       - actor.anim: 
           .@pos: [0.0, geralt_geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined]
           blendin: 0.0
-          blendout: 0.75
-          clipend: 5.5
+          blendout: 0.0
+          clipend: 4.5
+
+      - actor.unequip.right: [0.6, geralt]
 
     shot_8b:
-      - actor.unequip.right: [0.5, geralt]
+      #- actor.lookat: [0.0, Baron_Edward, geralt]
+      - actor.placement: [0.0, geralt, [ -149.3552856445, 36.2427330017, -11.1592407227 ], [ 0.0, 0.0, 348.1199951172 ]]
+      - actor.lookat: [0.1, geralt, Baron_Edward]
+      - cam: [0.0, cam_4_Shot_kill_baron_cam]
 
     shot_8c:
-      - cam.blend.start: [0.0, cam_14_Shot8, smooth]
-      - cam.blend.end: [0.9, cam_16_Shot9_cam_corpse, smooth]
+      - actor.mimic: [0.0, Baron_sleep]
+      - actor.lookat:
+          .@pos: [0.0, Baron_Edward, NONE]
+          speed: 0.2
 
+    shot_9a: # 3.4
+      - cam: [0.0, cam_9_Shot_take_sword_2]
+      - actor.anim: 
+          actor: geralt # 3.9
+          .@pos: [0.0, anim_7107_high_standing_determined_to_high_kneeling_determined]
+          blendin: 0.5
+          blendout: 0.5
+
+    shot_9b: # 3.0
+      - actor.sound: [0.66, geralt, dialog_sword_take]
+      - actor.sound: [0.6, geralt, q701_taking_sword_from_body]
+      - actor.anim: 
+          actor: geralt #duration 5.6666665 sec
+          .@pos: [0.0, anim_6767_high_kneeling_determined_gesture_take]
+          blendin: 0.333
+          blendout: 0.0
+          clipend: 2.0
+          stretch: 1.5
+
+  section_storyboard_ui2:
+    shot_9c: # 4.0
+      - actor.hide: [0.0, Big_bandit]
+      - actor.hide: [0.0, Bandit_camp_axe]
+      - actor.hide: [0.0, Bandit_crossbow]
+      - actor.hide: [0.0, Bandit_camp_spear]
+      - actor.placement: [0.0, Baron_Edward, [ -150.1091461182, 36.7771301270, -11.1720581055 ], [ 0.0, 0.0, 231.5199584961 ]]
+      - actor.placement: [0.0, geralt, [ -149.3552856445, 36.2427330017, -11.1592407227 ], [ 0.0, 0.0, 348.1199951172 ]]
+      - cam: [0.0, cam_10_Shot_take_sword_3]
+      - actor.mimic: [0.0, Baron_sleep]
+      - actor.lookat: [0.0, Baron_Edward, NONE]
+      - actor.anim: 
+          actor: geralt #duration 4.4 sec
+          .@pos: [0.0, anim_6772_high_kneeling_determined_to_high_standing_determined]
+          blendin: 0.0
+          blendout: 0.5
+      - actor.anim: 
+          actor: Baron_Edward
+          .@pos: [0.0, anim_4293_man_finisher_06_lp]
+          clipfront: 3.8
+          blendin: 0.0
+          blendout: 0.0
+          stretch: 1000.0
+
+    shot_9d:
+      - cam.blend.start: [0.07, cam_10_Shot_take_sword_3, smooth]
+      - cam.blend.end: [0.8, cam_11_Shot_take_sword_4, smooth]
       - actor.lookat: [0.1, geralt, NONE]
       - actor.anim: 
-          .@pos: [0.0, geralt_high_standing_determined_calm_exit_back]
-          blendin: 0.75
-
-      - fade.out: [0.8125, 1.5, [0, 0, 0, 255]]
+          actor: geralt #duration 8.166667 sec
+          .@pos: [0.0, anim_6978_high_standing_determined_calm_exit_rightside]
+          blendin: 0.5
+          blendout: 0.0
+      - fade.out: [0.8, 1.6, [0,0,0,255]]
 
 dialogscript:
   player: "geralt"
-  actors: [ "geralt", "Baron_Edward", "Big_bandit", "Bandit_camp_sword", "Bandit_camp_spear", "Bandit_camp_axe", "Bandit_poor" ]
+  actors: [ "geralt", "Baron_Edward", "Big_bandit", "Bandit_camp_sword", "Bandit_camp_spear", "Bandit_camp_axe", "Bandit_crossbow" ]
 
   section_start:
     - PAUSE: 0.0
@@ -1073,14 +1297,15 @@ dialogscript:
     # shot Shot2 finisher
     - CUE: shot_2a
     # (longest) anim: man_finisher_dlc_head_rp
-    - PAUSE: 0.7
+    - PAUSE: 0.6
+
     - CUE: shot_2b
     - PAUSE: 1.2
     - CUE: shot_2c
-    - PAUSE: 3.1
+    - PAUSE: 2.5
 
     - CUE: shot_3a
-    - Big_bandit: "[1.5]2114670355|No…"
+    - Big_bandit: "[1.4300]2114670355|No…"
     #- PAUSE: 1.5
     - CUE: shot_3b
     - PAUSE: 3.0
@@ -1089,9 +1314,15 @@ dialogscript:
 
     - CUE: shot_5
     - PAUSE: 2.5
+    - CUE: shot_5b
+    - Bandit_crossbow: "2114670358|I'm gonna fucking kill you, witcher!"
+
+    - CUE: shot_5b_baron
+    - Baron_Edward: "2114670357|No! Destiny showed me that I am not worthy of raising the boy… Leave us alone."
 
     - CUE: shot_6a
-    - PAUSE: 1.5
+    - PAUSE: 2.5
+
     - CUE: shot_6b
     - PAUSE: 4.0  
 
@@ -1101,14 +1332,34 @@ dialogscript:
     - PAUSE: 2.5
 
     - CUE: shot_8a
-    #- geralt: "[0.74837637]0000459147|Good."
-    # 1.1
-    - geralt: "2114670356|Good choice."
+    - PAUSE: 4.5
     - CUE: shot_8b
-    - PAUSE: 3.65
-
+    - Baron_Edward: "2114670359|Geralt… Take my sword… For the boy…"
+    #- geralt: "2114670356|Good choice."
     - CUE: shot_8c
-    - PAUSE: 7.5
+    - PAUSE: 4.0
+
+    - CUE: shot_9a
+    - PAUSE: 3.4
+
+    - CUE: shot_9b
+    - PAUSE: 3.0
+    - NEXT: script_give_sword_reward
+
+  script_give_sword_reward:
+    - SCRIPT:
+            function: GiveRewardToPlayer
+            parameter:
+                - rewardName: CNAME_ntr_baron_sword_reward1
+    - NEXT: section_storyboard_ui2
+
+  section_storyboard_ui2:
+    - CUE: shot_9c
+    - PAUSE: 4.0
+    - geralt: "[6.745182]0001187728|And all this, what did it bring you…? Rest in peace."
+    
+    - CUE: shot_9d
+    - PAUSE: 8.0
     - PAUSE: 0.5
     - NEXT: section_exit
 
@@ -1116,3 +1367,5 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+
+

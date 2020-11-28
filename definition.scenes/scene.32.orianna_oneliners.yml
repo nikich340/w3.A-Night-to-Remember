@@ -1,0 +1,63 @@
+repository:
+  actors:
+    orianna:
+      template: "dlc\\bob\\data\\quests\\secondary_npcs\\vampire_diva.w2ent"
+      appearance: [ "oriana" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 625
+
+  gameplay: true
+  cinematic_subtitles: false
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      oriana:
+        repo: "orianna"
+        by_voicetag: false
+        appearance: "oriana"
+        tags: [ "ntr_orianna_human" ]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "oriana", "geralt" ]
+
+  section_start_camp_reminder:
+    - geralt: "[0.98117673]0001174617|Orianna?"
+    - NEXT: section_randomizer_1
+
+  section_randomizer_1:
+    - section_orianna_comment1
+    - section_orianna_comment2
+    - section_orianna_comment3
+    - section_orianna_comment4
+
+  section_orianna_comment1:
+    - oriana: "2114670402|Leave me be."
+    - NEXT: section_exit
+
+  section_orianna_comment2:
+    - oriana: "2114670403|I am all ears."
+    - NEXT: section_exit
+  
+  section_orianna_comment3:
+    - oriana: "2114670404|Missed me that much?"
+    - NEXT: section_exit
+
+  section_orianna_comment4:
+    - oriana: "2114670405|I thank you again, witcher. For your understanding and help."
+    - NEXT: section_exit
+
+  section_exit:
+    - EXIT
+
+
+

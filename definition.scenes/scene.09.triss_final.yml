@@ -2437,7 +2437,7 @@ dialogscript:
     # shot Shot1 triss
     - CUE: shot_1
     - PAUSE: 1.0
-    - triss_monster: "[1.6104]2114670727|Geralt, please..."
+    - triss_monster: "[1.6104]2114670727|Geralt, please…"
     # shot Shot2 geralt go
     - CUE: shot_3
     # (longest) anim: high_standing_determined_enter_frontal
@@ -2447,9 +2447,9 @@ dialogscript:
 
   section_choice_actions:
         - CHOICE:
-            - choice: ["[Kill]", section_kill_triss]
+            - choice: ["2114670720|[Kill]", section_kill_triss]
               emphasize: true
-            - choice: ["[Spare]", section_spare_triss]
+            - choice: ["2114670721|[Spare]", section_spare_triss]
               emphasize: true
             - TIME_LIMIT: 5.0
 
@@ -2463,7 +2463,7 @@ dialogscript:
     # shot Shot4a after
     - CUE: shot_10_kill
     - PAUSE: 2.0
-    - geralt: "[0.834]0000477076|Who was it?"
+    - geralt: "[0.8341221]0000477076|Who was it?"
     - PAUSE: 2.591
     - CUE: shot_11_kill
     - PAUSE: 6.8
@@ -2478,7 +2478,7 @@ dialogscript:
     - PAUSE: 5.0
     # shot Shot4b laugh
     - CUE: shot_7
-    - triss_monster: "[1.9990962744]0001000680|Hahahah."
+    - triss_monster: "[1.9990963]0001000680|Hahahah."
     # (longest) anim: geralt_neutral_gesture_smile_face: 2.233333
     # shot Shot4b disappear
     - CUE: shot_8
@@ -2486,7 +2486,7 @@ dialogscript:
     - PAUSE: 2.5000000000
     - CUE: shot_10_spare
     - PAUSE: 2.0
-    - geralt: "[1.4899674654]0000380709|What the hell was that?"
+    - geralt: "[1.4899675]0000380709|What the hell was that?"
     - PAUSE: 2.0
     - CUE: shot_11_spare
     - PAUSE: 6.8
@@ -2506,10 +2506,10 @@ dialogscript:
     - CUE: shot_14
     - geralt: "[2.2145526]0001097827|And who might you be?"
     - CUE: shot_15
-    - Eredin_vesemir: "[3.3156197]0000534728|Hahahaha… As you wish."
+    - Eredin_vesemir: "[2.9975786]0001040839|This is the end, Geralt."
     - CUE: shot_16
     - PAUSE: 2.0
-    - geralt: "[2.7799]2114670729|I must be out of my mind..."
+    - geralt: "[1.8422]2114670729|I must be out of my mind…"
     - CUE: shot_17
     - geralt: "[0.66788405]0001075169|Vesemir!"
     #- Eredin_vesemir: "[3.3156197]0000534728|Hahahaha… As you will."
@@ -2565,7 +2565,7 @@ dialogscript:
     - geralt: "[0.9755476]0001196841|Regis!"
     # REGIS CLOSE
     - CUE: shot_30
-    - regis: "[1.5661]2114670734|I'm sorry, my friend..."
+    - regis: "[1.5661]2114670734|I'm sorry, my friend…"
     # REGIS TAUNT
     - CUE: shot_31
     - PAUSE: 2.0
@@ -2590,11 +2590,11 @@ dialogscript:
 
   section_choice_mirror:
         - CHOICE:
-            - choice: ["Is it your doing?", section_mirror_yourdoing]
+            - choice: ["2114670722|Is it your doing?", section_mirror_yourdoing]
               #emphasize: true
-            - choice: ["Fuck you!", script_music_hos_final]
+            - choice: ["2114670723|Fuck you!", script_music_hos_final]
               emphasize: true
-            - choice: ["Help me, and I'll return the favor", section_mirror_helpme]
+            - choice: ["2114670724|Help me, and I'll return the favor", section_mirror_helpme]
               emphasize: true
 
   section_mirror_helpme:
@@ -2606,9 +2606,9 @@ dialogscript:
 
   section_choice_mirror_soul:
     - CHOICE:
-            - choice: ["Yes", section_mirror_soul_yes]
+            - choice: ["2114670725|Yes", section_mirror_soul_yes]
               emphasize: true
-            - choice: ["No", section_mirror_soul_no]
+            - choice: ["2114670726|No", section_mirror_soul_no]
               emphasize: true
 
   section_mirror_soul_yes:
@@ -2633,7 +2633,7 @@ dialogscript:
     - CUE: shot_yourdoing_grlt2
     - geralt: "[2.5443535]0001175865|You crazy?! You're a recovering addict!"
     - CUE: shot_yourdoing_mr2
-    - mirror: "[4.9930]2114670738|So you say, yet I wait and wait, and nothing..." #0001108192
+    - mirror: "[4.9930]2114670738|So you say, yet I wait and wait, and nothing…" #0001108192
     - NEXT: section_choice_mirror
 
   script_music_hos_final:
@@ -2650,7 +2650,7 @@ dialogscript:
     - CUE: shot_fuckyou_aard
     - PAUSE: 2.5
     - CUE: shot_demon_close
-    - mirror: "[1.3369]2114670740|Death mistake."
+    - mirror: "[5.3767195]0001108178|Hahahaha… Point for me."
     - PAUSE: 1.0
     - CUE: shot_demon_very_close
     - mirror: "0001135556|Ouw se on coq é coq là sé rwa an lè pil fimié ay."
@@ -2663,13 +2663,14 @@ dialogscript:
     - CUE: shot_pain_end
     - geralt: "[1.001217]0001070656|Aaa-argh!"
     - PAUSE: 1.0
-    - unseen: "[2.9714754]0001156849|Hehehehehe..."
+    - unseen: "[2.9714754]0001156849|Hehehehehe…"
     - CUE: shot_pain_end2
     - PAUSE: 4.0
     - CUE: shot_unseen_close
     - unseen: "[5.246143]0001156752|You waste my time."
     - CUE: shot_unseen_killing
     - PAUSE: 6.9
+    #- Eredin_vesemir2: "[3.4154863]0001040841|Ess'tedd, esse creasa."
     - NEXT: script_music_stop
 
   script_music_stop:
@@ -2694,5 +2695,8 @@ dialogscript:
     #- CAMERA_BLEND: 5.0
     - BLACKSCREEN: true
     - EXIT
+
+
+
 
 
