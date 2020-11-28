@@ -419,10 +419,10 @@ communities:
         appearances: [ "bob_thug_lvl2_03" ]
         tags: [ "ntr_fat_bandit", "ntr_baron_bandit" ]
 
-      poor_bandit:
-        template: "dlc\\dlcntr\\data\\entities\\baron_bandit.w2ent"
-        appearances: [ "bob_thug_lvl1_10" ]
-        tags: [ "ntr_poor_bandit", "ntr_baron_bandit" ]
+      crossbow_bandit:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
+        appearances: [ "__q703_nazairi_01" ]
+        tags: [ "ntr_crossbow_bandit", "ntr_baron_bandit" ]
 
     phases:
       before_scene:
@@ -457,7 +457,7 @@ communities:
           attitude: humans
           immortality: invulnerable
           spawn_at: bob/inn_spawn5
-        poor_bandit:
+        crossbow_bandit:
           use_last_ap: false
           start_in_ap: false
           attitude: humans
@@ -505,7 +505,7 @@ communities:
           actionpoints:
             "00:00": bob/river_cheer2
 
-        poor_bandit:
+        crossbow_bandit:
           attitude: humans
           immortality: invulnerable
           use_last_ap: true
@@ -554,7 +554,7 @@ communities:
           actionpoints:
             "00:00": bob/riverrun_point4
 
-        poor_bandit:
+        crossbow_bandit:
           attitude: humans
           immortality: invulnerable
           use_last_ap: false
@@ -599,7 +599,7 @@ communities:
           start_in_ap: false
           spawn_at: bob/riverspawn_fat
 
-        poor_bandit:
+        crossbow_bandit:
           attitude: hostile_to_player
           immortality: none
           use_last_ap: false
@@ -612,6 +612,7 @@ communities:
         react_to_rain: false
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_axe.w2ent"
         appearances: [ "bob_raider_lvl1_03" ]
+        tags: [ "ntr_camp_bandit_axe", "ntr_camp_bandits" ]
 
     phases:
       patrolling_night:
@@ -633,6 +634,7 @@ communities:
         react_to_rain: true
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_axe.w2ent"
         appearances: [ "bob_raider_lvl1_03" ]
+        tags: [ "ntr_camp_bandit_axe", "ntr_camp_bandits" ]
 
     phases:
       usual_day:
@@ -653,12 +655,12 @@ communities:
         template: "dlc\\dlcntr\\data\\entities\\baron_edward.w2ent"
         appearances: [ "bob_knight_15" ]
         #appearances: [ "bob_raider_lvl2_02" ]
-        tags: [ "ntr_baron_edward" ]
+        tags: [ "ntr_baron_edward", "ntr_camp_bandits" ]
 
       horse_baron:
         template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
         appearances: [ "horse_knight_07" ]
-        tags: [ "ntr_camp_horse_baron" ]
+        tags: [ "ntr_camp_horse_baron", "ntr_camp_horses" ]
 
     phases:
       for_scene:
@@ -725,19 +727,19 @@ communities:
         react_to_rain: true
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_sword.w2ent"
         appearances: [ "bob_raider_lvl1_21" ]
-        tags: [ "ntr_camp_bandit_sword" ]
+        tags: [ "ntr_camp_bandit_sword", "ntr_camp_bandits" ]
 
       bandit_crossbow:
         react_to_rain: true
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
         appearances: [ "__q703_nazairi_01" ]
-        tags: [ "ntr_camp_bandit_crossbow" ]
+        tags: [ "ntr_camp_bandit_crossbow", "ntr_camp_bandits" ]
 
       bandit_spear:
         react_to_rain: true
         template: "dlc\\dlcntr\\data\\entities\\baron_bandit_spear.w2ent"
         appearances: [ "bob_raider_lvl1_07" ]
-        tags: [ "ntr_camp_bandit_spear" ]
+        tags: [ "ntr_camp_bandit_spear", "ntr_camp_bandits" ]
 
     phases:
       camp_full:
@@ -782,17 +784,17 @@ communities:
       horse_orange:
         template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
         appearances: [ "horse_draft_vehicle_03" ]
-        tags: [ "ntr_camp_horse1" ]
+        tags: [ "ntr_camp_horse1", "ntr_camp_horses" ]
 
       horse_white:
         template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
         appearances: [ "_sq101__white_stallion_02" ]
-        tags: [ "ntr_camp_horse2" ]
+        tags: [ "ntr_camp_horse2", "ntr_camp_horses" ]
 
       horse_orange2:
         template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
         appearances: [ "horse_draft_vehicle_02" ]
-        tags: [ "ntr_camp_horse3" ]
+        tags: [ "ntr_camp_horse3", "ntr_camp_horses" ]
     
     phases:
       camp_horses_full:
