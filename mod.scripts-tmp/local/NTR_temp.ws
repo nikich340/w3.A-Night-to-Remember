@@ -1,5 +1,5 @@
 exec function startNTR() {
-	FactsAdd("NTRstartquest", 1);
+	FactsAdd("ntr_quest_allowed", 2);
 }
 
 exec function NTR_lvl( tag : name, level : int ) {
@@ -338,7 +338,7 @@ exec function execUnhide(range : float) {
     NTR_UnhideActorsInRange(range);
 }
 
-exec function getInRange(range : float, makeFriendly : bool) {
+exec function getInRange(range : float, optional makeFriendly : bool) {
     var entities: array<CGameplayEntity>;
     var actor : CActor;
     var i, t, maxEntities: int;
@@ -361,7 +361,6 @@ exec function getInRange(range : float, makeFriendly : bool) {
         }
         actor = (CActor)entities[i];
         if (actor) {
-            //LogChannel('getInRange', "actor " + actor);
             if (!actor.IsAlive()) {
             	LogChannel('getInRange', "* actor dead");
             	continue;

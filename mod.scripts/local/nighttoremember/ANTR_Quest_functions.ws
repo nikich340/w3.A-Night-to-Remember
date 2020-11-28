@@ -17,6 +17,47 @@ latent quest function NTR_Halfsec() {
 	return;
 }
 
+
+quest function NTR_CheckQuestConditions() {
+	var popup : CNTRPopupRequest;
+	var message : String;
+	var conditionIdx : int;
+	var selectedSpeech : String;
+	var selectedText   : String;
+	
+	conditionIdx = 0;
+	FactsSet("ntr_quest_lang_allowed", 0);
+	message = "";
+	theGame.GetGameLanguageName( selectedSpeech, selectedText );
+
+	if ( selectedSpeech != "EN" ) {
+		conditionIdx += 1;
+		message += conditionIdx + ") You are using unsupported [" + selectedSpeech + "] lanaguage for speech.<br>It is strongly recommended to change it to [EN], otherwise you will have muted scenes!<br><br>";
+	}
+	if ( StrFindFirst(GetLocStringByKeyExt("ntr_language_check"), "SUPPORTED") < 0 ) {
+		conditionIdx += 1;
+		message += conditionIdx + ") You are using unsupported [" + selectedText + "] lanaguage for text.<br>It is strongly recommended to change it to [EN], otherwise you will have missed text in scenes!<br><br>";
+	}
+	if (FactsQuerySum("q704_orianas_part_done") < 1) {
+		conditionIdx += 1;
+		message += conditionIdx + ") You did not passed 'Blood Simple' Orianna's quest (Unseen Elder path) in Blood and Wine DLC.<br>It is strongly recommended to play (or watch) it before starting this quest to avoid spoilers!<br><br>";
+		popup = new CNTRPopupRequest in thePlayer;
+		popup.open("WARNING!", message, true, "ntr_quest_plot_allowed");
+	}
+
+	if (message != "") {
+		message += "* If you are not ready press ESCAPE and return here next night.<br>";
+		message += "* If you want to proceed anyway press OK but you WERE WARNED!<br>";
+		popup = new CNTRPopupRequest in thePlayer;
+		// for next night
+		theGame.SetGameTime( theGame.GetGameTime() + GameTimeCreate(0, 1, 1, 0), true);
+		
+		popup.open("WARNING!", message, true, "ntr_quest_allowed");
+	} else {
+		FactsAdd("ntr_quest_allowed", 1);
+	}	
+}
+
 quest function NTR_GiveRewardToPlayer( rewardName : name )
 {
 	theGame.GiveReward( rewardName, thePlayer );
@@ -127,6 +168,19 @@ quest function NTR_HideActorsHagScene() {
     acceptedTags.PushBack('PLAYER');
     acceptedTags.PushBack('ntr_hag_intro');
     acceptedVoicetags.PushBack('CELINA MONSTER');
+    killIfHostile = true;
+
+    NTR_HideActorsInRange(20.0, acceptedTags, acceptedVoicetags, killIfHostile);
+}
+
+quest function NTR_HideActorsCampScene() {
+    var acceptedTags : array<name>;
+    var acceptedVoicetags : array<name>;
+    var killIfHostile : bool;
+
+    acceptedTags.PushBack('PLAYER');
+    acceptedTags.PushBack('ntr_camp_horses');
+    acceptedTags.PushBack('ntr_camp_bandits');
     killIfHostile = true;
 
     NTR_HideActorsInRange(20.0, acceptedTags, acceptedVoicetags, killIfHostile);
