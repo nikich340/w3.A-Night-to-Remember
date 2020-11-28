@@ -2,6 +2,12 @@
 # definition of entities
 #
 templates:
+  ntr_scent:
+    includes:
+      - "quests\\sidequests\\no_mans_land\\quest_files\\sq104_werewolf\\entities\\sq104_niellen_scent_source.w2ent"
+    entityObject:
+      ".type": CNTRScent
+
   ntr_acero_sword:
     includes:
       - "dlc\\dlcntr\\data\\entities\\acero_sword\\acero_iris_base.w2ent"

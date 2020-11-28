@@ -5,3 +5,4 @@ speech/wwise SFX.lnk
 *.cr2w
 speech/imgui.ini
 *.zip
+*.phonemes
