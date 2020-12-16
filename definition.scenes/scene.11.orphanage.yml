@@ -703,28 +703,28 @@ dialogscript:
     - CUE: shot_vampire_ger
     - geralt: "[7.7509]2114670763|Me? Drifter, stranger, mutant… Sometimes even by my name. Vampire of Rivia."
     - CUE: shot_vampire_band
-    - fat_bandit: "[4.1163]2114670764|Very funny, you cretin…"
+    - fat_bandit: "[3.6030]2114670764|Very funny, you cretin…"
     - NEXT: section_storyboard_ui3
 
   section_traveler:
     - CUE: shot_traveler_ger
     - geralt: "[2.9642897]0000393630|Just a traveler. Happened to be passing through."
     - CUE: shot_traveler_band
-    - fat_bandit: "[9.5723]2114670765|Just a traveler you say… And that's just two swords on your back? Looks like you can swing them as well."
+    - fat_bandit: "[8.1055]2114670765|Just a traveler you say… And that's just two swords on your back? Looks like you can swing them as well."
     - NEXT: section_storyboard_ui3
 
   section_witcher:
     - CUE: shot_witcher_ger
     - geralt: "[1.7917082]0001094310|Geralt of Rivia. Witcher."
     - CUE: shot_witcher_band
-    - fat_bandit: "[8.0000]2114670766|A witcher? So you know how to track down somebody, right?"
+    - fat_bandit: "[7.0090]2114670766|A witcher? So you know how to track down somebody, right?"
     - NEXT: section_storyboard_ui3
 
   section_storyboard_ui3:
     # shot shot5 gesture enter
     - PAUSE: 1.0
     - CUE: shot_5
-    - fat_bandit: "[5.0000]2114670767|Well, come in then, we've matters to discuss."
+    - fat_bandit: "[4.5410]2114670767|Well, come in then, we've matters to discuss."
     # (longest) anim: high_standing_aggressive_turn90_right
     #- PAUSE: 3.5
     - CUE: shot_7
@@ -749,18 +749,18 @@ dialogscript:
     - geralt: "[2.7000]2114670768|I am supposed to find a red-haired woman here."
     # shot shot8 bandit
     - CUE: shot_d1_band
-    - fat_bandit: "[5.8686]2114670769|That's interesting. Because we're supposed to meet her too."
+    - fat_bandit: "[5.3720]2114670769|That's interesting. Because we're supposed to meet her too."
     - CUE: shot_d2_ger
     - geralt: "[1.4995]2114670770|Why are you looking for her?"
     - CUE: shot_d2_band
-    - fat_bandit: "[6.5442]2114670771|Our boss has questions for 'er about the orphanage and children."
+    - fat_bandit: "[6.1891]2114670771|Our boss has questions for 'er about the orphanage and children."
     - CUE: shot_d3_ger
     - geralt: "[3.4870]2114670772|The orphanage was attacked and almost none of the children survived."
     - CUE: shot_d3_band
-    - fat_bandit: "[9.1531]2114670773|Almost - nice word, so someone is alive. And we know for sure that Orianna herself is alive too."
-    - fat_bandit: "[13.2788]2114670774|But she doesn't want to come here. So there's something wrong with here. We are few, and we guard the places where she used to be."
+    - fat_bandit: "[8.6019]2114670773|Almost - nice word, so someone is alive. And we know for sure that Orianna herself is alive too."
+    - fat_bandit: "[11.8571]2114670774|But she doesn't want to come here. So there's something wrong with here. We are few, and we guard the places where she used to be."
     - CUE: shot_d3_band_help_us
-    - fat_bandit: "[7.3777]2114670783|Perhaps you could help us, and then our leader Baron Edward will give you a decent reward."
+    - fat_bandit: "[7.0821]2114670783|Perhaps you could help us, and then our leader Baron Edward will give you a decent reward."
     - NEXT: section_choice_details
 
   section_choice_details:
@@ -779,7 +779,7 @@ dialogscript:
   section_why_children:
     - CUE: shot_d4_ger
     #- geralt: "[2.0485]2114670775|Why are you interested in the children?"
-    - geralt: "0000382555|What did you need the children for?"
+    - geralt: "[1.7511764]0000382555|What did you need the children for?"
     - CUE: shot_d4_band
     - fat_bandit: "[2.3133]2114670776|It's no concern of yours."
     - NEXT: script_set_whychildren
@@ -797,14 +797,14 @@ dialogscript:
     - CUE: shot_d5_ger
     - geralt: "[7.8518]2114670777|Orianna will kill you. She is a monster, not a human. And only I can help. Meaning I need more information."
     - CUE: shot_d5_band
-    - fat_bandit: "[5.1231]2114670778|I've not got all the answers, talk with our leader about it."
+    - fat_bandit: "[4.3269]2114670778|I've not got all the answers, talk with our leader about it."
     - NEXT: section_choice_details
 
   section_fight:
     - CUE: shot_d6_ger
     - geralt: "[5.5173635]0001117735|I'll ask again, polite like, and you'll answer, just as politely."
     - CUE: shot_d6_band
-    - fat_bandit: "[10.2658]2114670779|Would ya look at that lads, vagrant mutt's givin' us orders. Needs to know 'is place… Fuck 'im up!"
+    - fat_bandit: "[9.3580]2114670779|Would ya look at that lads, vagrant mutt's givin' us orders. Needs to know 'is place… Fuck 'im up!"
     - CUE: shot_10
     - bandit_2: "[2.49471]0001156640|We'll break your legs, vagrant!"
     - NEXT: section_exit_fistfight
@@ -813,7 +813,7 @@ dialogscript:
     - CUE: shot_d7_ger
     - geralt: "[2.3220]2114670781|It's a deal. Where can I find him?"
     - CUE: shot_d7_band
-    - fat_bandit: "[7.5912]2114670782|We have pitched camp on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater."
+    - fat_bandit: "[7.3951]2114670782|We have pitched camp on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater."
     - CUE: shot_ger_togame
     - geralt: "[1.3444105]0001003998|See what I can do."
     - NEXT: section_exit_normal
@@ -827,6 +827,8 @@ dialogscript:
   section_exit_normal:
     - OUTPUT: normal
     - EXIT
+
+
 
 
 

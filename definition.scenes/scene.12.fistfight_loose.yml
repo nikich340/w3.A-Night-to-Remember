@@ -308,7 +308,7 @@ dialogscript:
     - PAUSE: 0.5
     # (longest) anim: ep1_geralt_lying_unconscious_to_low_sitting_ground_leaning_back_bored
     - fat_bandit: "[3.7467]2114670790|Hahaha, shove off, vargant!"
-    - fat_bandit: "[9.8214]2114670791|If you decide to help - our camp is on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater."
+    - fat_bandit: "[9.5995]2114670791|If you decide to help - our camp is on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater."
     - CUE: shot_01
     - PAUSE: 4.0
     # shot Shot1
@@ -343,6 +343,7 @@ dialogscript:
   section_exit:
     - CAMERA_BLEND: 1.0
     - EXIT
+
 
 
 
