@@ -201,36 +201,36 @@
 ;
 2114670895|00000000||I don't work for bandits.
 2114670896|00000000||We're not common bandits, but that's beside the point.
-2114670897|00000000||I'm asking for your help as a father. And I can reward you handsomely.
+2114670897|00000000||I'm asking for your help as a father... And I can reward you handsomely.
 ;
 ;   1209328|00000000||Need to talk about my fee, first.
-2114670898|00000000||I couldn't pay so much even if you were King Radovid.
-2114670899|00000000||That's just a bit high, witcher.
-2114670900|00000000||Fine.
+2114670898|00000000||I couldn't pay so much even if  you were King Radovid!
+2114670899|00000000||That's a bit high, witcher.
+2114670900|00000000||Thank you, witcher. I will repay you.
 2114670901|00000000||My patience has ended! You will take my offer - 3000 orens, or get out of here!
 2114670902|00000000||Have you changed your mind, witcher?
 ;   1007115|00000000||All right.
 ;   1030870|00000000||Hmm… Need to think about it.
-;;;2114670903|00000000||Not interested in coins. Will make it for free. - vanilla line instead
-2114670904|00000000||The noble witcher? Just wondering…
+2114670904|00000000||You fight for a noble cause. But if you return my boy... I will find a way to repay you.
 2114670905|00000000||But I need more information. Your friend… What happened to him?
-2114670906|00000000||We were guarding Orianna's estate while finally met her.
-2114670907|00000000||I called her and asked where is the boy. She refused to answer. Alfred began to threaten her and drew his sword.
-2114670908|00000000||After this she moved at once and vanished. And Alfred… His throat was slit. I could not help him…
-2114670909|00000000||How? What creature can do such things?
+2114670906|00000000||We set up an ambush, outside Orianna's estate.
+2114670907|00000000||Alfred and I had her cornered, with nowhere to go. I asked her what she'd done with my son.
+2114670903|00000000||She gave a contemptible answer, so Alfred motioned for his blade.
+2114670908|00000000||All at once she vanished. And Alfred... I was covered in his blood. There was nothing I could do!
+2114670909|00000000||What kind of creature could do such a thing?
 2114670910|00000000||Uh, must be a kind of vampire.
-2114670911|00000000||Vampire? Shit… My son is in real danger. And I can't help him! You're my one hope.
+2114670911|00000000||A vampire? Geralt, my son is in danger. You're my only hope!
 2114670912|00000000||All right, see if I can find her.
-2114670913|00000000||You are right, we heard some scary sounds from that direction, by the Amphitheatre…
-2114670914|00000000||I told my people to stay away from it. It will be nice if you check what's wrong there.
+2114670913|00000000||You're not wrong. We've heard some strange sounds... In that direction, by the amphitheater.
+2114670914|00000000||I told my men to stay away from it. It'd be nice, if you could have a look.
 ;
 ;
 ; scene 17 - baron oneliners
 ;
-2114670625|00000000||Remember, witcher, the boy can't be harmed.
-2114670626|00000000||Did you find Orianna?
+2114670625|00000000||Remember, Geralt, the boy mustn't be harmed.
+2114670626|00000000||Have you found Orianna?
 ;   1035069|00000000||Not yet.
-2114670627|00000000||Then go and work!
+2114670627|00000000||Then get to work! My son is in danger!
 ;
 ; scene 18
 ;
@@ -277,36 +277,48 @@
 2114670944|00000000||Folk have forgotten it.
 2114670945|00000000||Got… other things on their mind.
 2114670946|00000000||Things like me?
-;   1187118|00000000||Know what…? Don't feel like talking to you anymore. This is pointless.
-2114670947|00000000||Got something for you. My silver sword.
-2114670948|00000000||No witcher's ever died in his own bed.
+2114670976|00000000||Know what…? Don't feel like talking to you anymore.
+2114670947|00000000||It's time.
+2114670948|00000000||Well, no witcher's ever dead in his own bed.
 2114670949|00000000||You won't be an exception.
 ;   1172302|00000000||We don't have to fight.
-2114670950|00000000||Really? You're just going let me go again?
-2114670951|00000000||On one condition… Stop drinking the children.
+2114670968|00000000||You've killed an innocent man who wanted to reunite the Baron with his son.
+2114670950|00000000||Well, the threat of a sword doesn't always bring out the best in me.
+2114670951|00000000||Alright, but what about the children... You are using them as a livestock!
 2114670952|00000000||You know what I am. I can't resist the hunger.
-2114670953|00000000||Think you can handle this on your own. Found something interesting in your house.
-2114670954|00000000||Ha! So, you've been snooping around? I thought you were the straightforward type.
-2114670955|00000000||Orianna, that doesn't change the fact that…
-2114670956|00000000||You presume to understand me? After reading some… musings?
-2114670957|00000000||Don't deny it.
-2114670958|00000000||If I'm not convinced that I've changed, what makes you so sure?
+2114670953|00000000||No, you can. I have read something interesting in your house…
+2114670954|00000000||Ha! So, you've been snooping around... Do I intrigue you that much, witcher?
+2114670955|00000000||Orianna, I know you don't want to be the same… person more.
+2114670956|00000000||You presume to understand me? After reading some my... musings?
+2114670957|00000000||I helped some creatures before. And I want to help you too.
+2114670958|00000000||Geralt, I'm vampires. If I give up drinking blood, I will die...
+2114670969|00000000||You can't help me. Nobody can help me.
 ;   1007115|00000000||All right.
+2114670979|00000000||Think mutual friend of us could.
 2114670959|00000000||Take a look at this.
-2114670960|00000000||Hmm. Regis, Regis… Awfully noble as always.
+2114670960|00000000||Hmm. Regis, Regis… Awfully considerate as always.
+2114670977|00000000||"Remove herself from the confines of such primitive instincts", interesting… He is sure that every of us is able to live without blood.
+2114670967|00000000||I suppose he'd be upset if we tussled, wouldn't he?
+;;;2114670971|00000000||I kill monsters, true - it's my job. But only when they threaten humans.
+;;;2114670978|00000000||If you change your attitude towards the children and refuse drinking the blood, I will spare your life.
+2114670971|00000000||You're not my friend, true. But not the enemy anymore. 
+2114670978|00000000||It remains to do the last step - give up with blood-drinking. Like Regis did. And we'll part in peace.
 ;   1101409|00000000||Well, I probably wouldn't 'ave forced myself on you.
-2114670961|00000000||Very well then, I've made my decision - I won't feed on the children again.
-2114670962|00000000||But they will stay with me. I'll take care of them. It's not up for discussion.
-2114670963|00000000||If you break your vow I'll come back, and someone'll get hurt.
+2114670972|00000000||Nice suggestion. But I have a lot to think about. Alone.
+2114670961|00000000||Very well then, I've made my decision - I won't feed on the children's blood again.
+2114670962|00000000||But Niellan and Agneta will stay with me. I'm used to take care of them and... It will distract me from obsessive thoughts about hunger.
+2114670963|00000000||Leave children with you? What if you will break your vow?
 2114670964|00000000||Unlike your kind, we tend to keep our promises.
 ;   1027471|00000000||Hmm… Guess I believe you…
-2114670965|00000000||It would seem this is farewell again, witcher?
-;   1047894|00000000||Right, leave you to it, then.
-2114670966|00000000||Thanks.
-2114670967|00000000||I suppose he'd be upset if we tussled, wouldn't he?
+2114670973|00000000||Alright, I'll trust you, against my better judgment.
+2114670974|00000000||But one day I'll visit children, and if I see any small scratch on them…
+2114670965|00000000||As you wish, Geralt. Not a hair on their heads shall come to any harm, I vow.
+2114670975|00000000||Sure hope so. You can go then.
+2114670966|00000000||See you, White Wolf.
 ;
 ; scene 21 orianna to bruxa
 ;
+2114670301|00000000||In times past. No amount of coin would convince a witcher to take this contract.
 2114670300|00000000||Times have changed.
 ;
 ; scene 24

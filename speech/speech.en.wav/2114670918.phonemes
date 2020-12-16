@@ -2,20 +2,20 @@
 ;meta[version=1]
 ;meta[text=I catch more when it's raining.]
 ;meta[translation=aɪ kˈatʃ mˈɔː wɛn ɪts ɹˈeɪnɪŋ]
-;meta[audio-hypothesis=SIL P AY K AE N S L AO L W EH N IH D S R EY N IH T N AH SIL]
+;meta[audio-hypothesis=SIL L EH K AE N S L AO L W EH N IH D S R EY N IH T N AH SIL]
 ;
 ;auto-matched phoneme translation (eSpeak) with timings (pocketsphinx):
 ;
 ;phoneme|start|  end|weight| score| status     | match + pocketsphinx timing
-;_       |  290|  335|  1.00| -1.00| <- VERIFY! | _  d  P  [  290 -  335]
+;_       |  290|  355|  1.00| -1.00| <- VERIFY! | _  d  L  [  290 -  355]
 ------------------------------------------------------------------------
-aɪ      |  335|  395|  1.00|  2.00| ok         | aɪ ~  AY [  335 -  395]
+aɪ      |  355|  395|  1.00| -1.00| <- VERIFY! | aɪ ~  EH [  355 -  395]
 ------------------------------------------------------------------------
 k       |  395|  485|  1.00|  2.00| ok         | k  ~  K  [  395 -  485]
-a       |  485|  585|  1.30|  1.70| ok         | a  ~  AE [  485 -  585]
-;tʃ      |  585|  585|  1.00| -1.00| <- VERIFY! | tʃ i
+a       |  485|  595|  1.30|  1.70| ok         | a  ~  AE [  485 -  595]
+;tʃ      |  595|  595|  1.00| -1.00| <- VERIFY! | tʃ i
 ------------------------------------------------------------------------
-m       |  585|  625|  1.00|  0.01| ok         | m  ~  N  [  585 -  625]
+m       |  595|  625|  1.00|  0.01| ok         | m  ~  N  [  595 -  625]
 ;_       |  625|  745|  1.00| -1.00| <- VERIFY! | _  d  S  [  625 -  745]
 ;_       |  745|  825|  1.00| -1.00| <- VERIFY! | _  d  L  [  745 -  825]
 ɔ       |  825|  975|  1.30|  2.00| ok         | ɔ  ~  AO [  825 -  975]
