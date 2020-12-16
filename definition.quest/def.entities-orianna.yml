@@ -156,8 +156,8 @@ templates:
     appearances:
       orianna_vampire_bloody_morph:
         includedTemplates:
-          - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
-          - characters/models/common/woman_average/body/l_01_wa__body.w2ent
+          ##?- characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
+          ##- characters/models/common/woman_average/body/l_01_wa__body.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
           - dlc/dlcntr/data/entities/oriana/h_oriana_vampire_bloody_morph_inverse.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
@@ -172,8 +172,8 @@ templates:
 
       orianna_human_morph:
         includedTemplates:
-          - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
-          - characters/models/common/woman_average/body/l_01_wa__body.w2ent
+          ##?- characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
+          ##- characters/models/common/woman_average/body/l_01_wa__body.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
           - dlc/dlcntr/data/entities/oriana/h_oriana_vampire_clean_morph.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
@@ -210,6 +210,7 @@ templates:
           - "animations\\woman\\quest\\q602_woman_picking_flowers.w2anims"
           - "animations\\woman\\community\\woman_reaction.w2anims"
           - "animations\\woman\\dialog\\woman_dialog.w2anims"
+          #- "dlc\\bob\\data\\animations\\animations\\man\\dialogs\\ep2_man_dialog_animation.w2anims"
 
     effects:
       # disappear_cutscene_fx1 from bruxa
@@ -499,6 +500,8 @@ templates:
      #   appearance: orianna_vampire_morph
 
     templateParams:
+      - ".type": CAnimGlobalParam
+        defaultAnimationName: "idle_vampire"
       - ".type": CCharacterStatsParam
         name: ntr_abilities
         abilities:

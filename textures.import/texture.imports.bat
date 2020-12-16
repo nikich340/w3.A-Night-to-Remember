@@ -31,7 +31,8 @@ EXIT /B 1
 %BIN_IMPORT_TEXTURE% data/entities/acero_sword/witcher_steel_acero_n02.tga data/entities/acero_sword/witcher_steel_acero_n02.xbm NormalmapGloss
 %BIN_IMPORT_TEXTURE% data/entities/acero_sword/witcher_steel_acero_s01.tga data/entities/acero_sword/witcher_steel_acero_s01.xbm WorldDiffuse
 
-%BIN_IMPORT_TEXTURE% data/entities/baron/body_01_ma__junior_d01.png data/entities/baron/body_01_ma__junior_d01.xbm WorldDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/baron/body_01_ma__junior_d01.tga data/entities/baron/body_01_ma__junior_d01.xbm CharacterDiffuse
+%BIN_IMPORT_TEXTURE% data/entities/baron/body_01_ma__junior_a01.tga data/entities/baron/body_01_ma__junior_a01.xbm CharacterDiffuse
 
 ::%BIN_IMPORT_TEXTURE% data\gameplay\gui_new\icons\inventory\oils\acero_fake_oil_64x64.png data\gameplay\gui_new\icons\inventory\oils\acero_fake_oil_64x64.xbm WorldDiffuseWithAlpha
 robocopy %DIR_PROJECT_BASE%\textures.import\data\gameplay\gui_new\icons\inventory\oils\ %DIR_PROJECT_BASE%\uncooked.textures\dlc\dlcntr\data\gameplay\gui_new\icons\inventory\oils\ acero_fake_oil_64x64.png
