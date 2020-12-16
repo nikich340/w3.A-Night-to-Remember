@@ -617,7 +617,7 @@ latent quest function NTR_teleportTriss( tag : CName) {
 	if (!trissNPC) {
 		LogChannel('NTR_teleportTriss', "[ERROR] Triss NPC not found! Requested tag <" + tag + ">");
 	}
-	trissNPC.ActionPlaySlotAnimationAsync( 'GAMEPLAY_SLOT', 'woman_sorceress_teleport_lp', 0.1, 0.2 );
+	trissNPC.ActionPlaySlotAnimationAsync( 'GAMEPLAY_SLOT', 'woman_sorceress_teleport_lp', 0.2, 0.2 );
 	trissNPC.PlayEffect('teleport_out');
 	Sleep(0.3);
 	switch(choose) {

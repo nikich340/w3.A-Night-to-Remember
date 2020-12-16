@@ -121,7 +121,7 @@ latent storyscene function NTR_CreateAttachment_S( player : CStoryScenePlayer, i
 			entity = theGame.GetEntityByTag(entityTag);
 
 			slotName = 'r_weapon';
-			relativePosition = Vector(0.2, 0.1, 0.0);
+			relativePosition = Vector(0.22, 0.08, 0.0);
 			relativeRotation = EulerAngles(0, 120, 90);
 
 			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
