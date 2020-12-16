@@ -656,7 +656,7 @@ storyboard:
       - cam: [0.0, cam_3_fisher_answer]
       - actor.anim.mimic: [0.1, toussaint_fisherman_geralt_neutral_gesture_axii_face]
       - actor.effect.start: [0.0, toussaint_fisherman, axii_confusion]
-      - actor.lookat: [0.9, toussaint_fisherman, [ 0.4417657852, 0.1025390625, 0.9237567782 ]]
+      #- actor.lookat: [0.9, toussaint_fisherman, [ 0.4417657852, 0.1025390625, 0.9237567782 ]]
 
   section_pay:
     # shot shot will pay
@@ -866,8 +866,8 @@ dialogscript:
     - CUE: shot_axii
     - geralt: "[7.499866]0001125802|Asking a lot. Too much. How about you do this free of charge, huh? Out of the kindness of your heart?"
     - CUE: shot_axii_answer
-    - toussaint_fisherman: "[4.0000]2114670922|Aye, I'll help. Outta kindness…"
     - PAUSE: 2.0
+    - toussaint_fisherman: "[4.0000]2114670922|Aye, I'll help. Outta kindness…"
     - NEXT: section_tell
 
   section_pay:
