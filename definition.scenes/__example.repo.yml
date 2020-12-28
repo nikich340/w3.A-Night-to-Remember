@@ -1,0 +1,371 @@
+#
+# repo/example.repo.yml
+#
+# defines reuseable, shared, generic templates with default definitions to be used
+# in a scene production. all templates from all repo/*.repo.yml will be read and
+# added to the pool of available templates on encoding start. but only the templates
+# referenced by the production manifest (aka production assets) are available in the
+# actual scene.
+#
+
+repository:
+    actors:
+        # some actors with their corresponding templates
+        geralt:
+            template: "gameplay\\templates\\characters\\player\\player.w2ent"
+            # multiple tags (even with spaces in them) can be assigned like [ "tag1", "tag 2" ]
+            #tags: [ ]
+            # default mimic settings for this actor template (which will be set in dialog slot)
+            mimic:
+                emotional_state: "Determined"
+                #eyes: "Determined"
+                #pose: "Determined"
+                #weight: "Determined"
+                #anim: "Determined"
+
+        ciri:
+            template: "quests\\main_npcs\\cirilla.w2ent"
+            #tags: [ CIRILLA ]
+            mimic:
+                emotional_state: "Determined"
+                eyes: "Sad"
+                pose: "Sad"
+                weight: 0.5
+                anim: "Sad"
+
+        ciri_young:
+            template: "quests\\main_npcs\\cirilla_young.w2ent"
+            #tags: [ "CIRILLA YOUNG" ]
+            mimic:
+                emotional_state: "Happy"
+
+        yennefer:
+            template: "quests\\main_npcs\\yennefer.w2ent"
+            #tags: [ ]
+            mimic:
+                emotional_state: "Determined"
+
+        triss:
+            template: "quests\\main_npcs\\triss.w2ent"
+            #tags: [ ]
+            mimic:
+                emotional_state: "Determined"
+
+        vesemir:
+            template: "quests\\main_npcs\\vesemir.w2ent"
+            #tags: [ ]
+            mimic:
+                emotional_state: "Determined"
+
+        keira_metz:
+            template: "quests\\secondary_npcs\\keira_metz.w2ent"
+            #tags: [ ]
+            mimic:
+                emotional_state: "Seducing"
+                eyes: "Seducing"
+                pose: "Seducing"
+                weight: 0.5
+                anim: "Seducing"
+
+        emhyr:
+            template: "quests\\main_npcs\\emhyr.w2ent"
+            #tags: [ EMHYR ]
+            mimic:
+                emotional_state: "Determined"
+
+        karl_varese:
+            template: "quests\\secondary_npcs\\karl_varese.w2ent"
+            #tags: [ ]
+            mimic:
+                emotional_state: "Aggressive"
+                eyes: "Aggressive"
+                pose: "Aggressive"
+                weight: 0.5
+                anim: "Aggressive"
+
+        prologue_woman:
+            template: "characters\\npc_entities\\crowd_npc\\prolog_villager\\prolog_villager_woman.w2ent"
+
+        skellige_skinny_man:
+            template: "characters\\npc_entities\\crowd_npc\\skellige_villager\\skellige_villager__skinny.w2ent"
+
+        skellige_merchant:
+            template: "characters\\npc_entities\\crowd_npc\\skellige_craftsmen\\skellige_merchant.w2ent"
+
+        "abel lupo":
+            template: "characters\\npc_entities\\animals\\snow_rabbit.w2ent"
+            tags: [ "hare1" ]
+
+    mimics:
+        # complete set of mimics as defined in the game
+        contempt:
+            emotional_state: "Contempt"
+            eyes: "Contempt"
+            pose: "Contempt"
+            weight: 1.0
+            anim: "Contempt"
+            # time until mimics smoothly changed, default: 0s
+            duration: 1.5
+
+        disgusted:
+            emotional_state: "Disgusted"
+            eyes: "Disgusted"
+            pose: "Disgusted"
+            weight: 1.0
+            anim: "Disgusted"
+
+        aggressive:
+            emotional_state: "Aggressive"
+            eyes: "Aggressive"
+            pose: "Aggressive"
+            weight: 1.0
+            anim: "Aggressive"
+
+        angry:
+            emotional_state: "Bursting_anger"
+            eyes: "Bursting_anger"
+            pose: "Bursting_anger"
+            weight: 1.0
+            anim: "Bursting_anger"
+
+        drunk:
+            emotional_state: "Drunk"
+            eyes: "Drunk"
+            pose: "Drunk"
+            weight: 1.0
+            anim: "Drunk"
+
+        nervous:
+            emotional_state: "Nervous"
+            eyes: "Nervous"
+            pose: "Nervous"
+            weight: 1.0
+            anim: "Nervous"
+
+        afraid:
+            emotional_state: "Afraid"
+            eyes: "Afraid"
+            pose: "Afraid"
+            weight: 1.0
+            anim: "Afraid"
+
+        very_afraid:
+            emotional_state: "Very afraid"
+            eyes: "Very afraid"
+            pose: "Very afraid"
+            weight: 1.0
+            anim: "Very afraid"
+
+        neutral:
+            emotional_state: "Neutral"
+            eyes: "Neutral"
+            pose: "Neutral"
+            weight: 1.0
+            anim: "Neutral"
+
+        happy:
+            emotional_state: "Happy"
+            eyes: "Happy"
+            pose: "Happy"
+            weight: 1.0
+            anim: "Happy"
+            duration: 2.0
+
+        very_happy:
+            emotional_state: "Very happy"
+            eyes: "Very happy"
+            pose: "Very happy"
+            weight: 1.0
+            anim: "Very happy"
+            duration: 2.0
+
+        determined:
+            emotional_state: "Determined"
+            eyes: "Determined"
+            pose: "Determined"
+            weight: 1.0
+            anim: "Determined"
+
+        focused:
+            emotional_state: "Focused"
+            eyes: "Focused"
+            pose: "Focused"
+            weight: 1.0
+            anim: "Focused"
+
+        confident:
+            emotional_state: "Confident"
+            eyes: "Confident"
+            pose: "Confident"
+            weight: 1.0
+            anim: "Confident"
+
+        proud:
+            emotional_state: "Proud"
+            eyes: "Proud"
+            pose: "Proud"
+            weight: 1.0
+            anim: "Proud"
+
+        sad:
+            emotional_state: "Sad"
+            eyes: "Sad"
+            pose: "Sad"
+            weight: 1.0
+            anim: "Sad"
+
+        cry:
+            emotional_state: "Cry"
+            eyes: "Cry"
+            pose: "Cry"
+            weight: 1.0
+            anim: "Cry"
+
+        sceptic:
+            emotional_state: "Sceptic"
+            eyes: "Sceptic"
+            pose: "Sceptic"
+            weight: 1.0
+            anim: "Sceptic"
+
+        seducing:
+            emotional_state: "Seducing"
+            eyes: "Seducing"
+            pose: "Seducing"
+            weight: 1.0
+            anim: "Seducing"
+
+        sleeping:
+            emotional_state: "Sleeping"
+            eyes: "Sleeping"
+            pose: "Sleeping"
+            weight: 1.0
+            anim: "Sleeping"
+
+        surprised:
+            emotional_state: "Surprised"
+            eyes: "Surprised"
+            pose: "Surprised"
+            weight: 1.0
+            anim: "Surprised"
+
+        surprised_shocked:
+            emotional_state: "Surprised Shocked"
+            eyes: "Surprised Shocked"
+            pose: "Surprised Shocked"
+            weight: 1.0
+            anim: "Surprised Shocked"
+
+        #white_eyes:
+            #emotional_state: "White eyes"
+            #eyes: "White eyes"
+            #pose: "White eyes"
+            #weight: 1.0
+            #anim: "White eyes"
+
+    # camera definitions for storyboard usage, see po
+    cameras:
+        # some basic over the shoulder camera as dumped from a w2scene file (slot 1 looking at slot 2)
+        1_2_medium:
+            fov: 20.0
+            transform:
+                pos: [ -1.12, -1.40, 1.71 ]
+                rot: [ 0.0, -5.0, 332.0]
+            zoom: 2.0
+            dof:
+                aperture: [ 28.25, 1.27 ]
+                blur: [ 3.0, 10.0 ]
+                focus: [ 2.0, 4.0 ]
+                intensity: 1.0
+            event_generator:
+                plane: "medium"
+                tags: [ "ext" ]
+
+        # some basic over the shoulder camera as dumped from a w2scene file (slot 2 looking at slot 1)
+        2_1_medium:
+            fov: 20.0
+            transform:
+                pos: [ -1.04, 2.66, 1.71 ]
+                rot: [ 0.0, -5.0, 206.7 ]
+            zoom: 0.0
+            dof:
+                aperture: [ 42.14, 2.7 ]
+                blur: [ 4.0, 5.0 ]
+                focus: [ 1.45, 3.0 ]
+                intensity: 1.0
+            event_generator:
+                plane: "medium"
+                tags: [ "ext" ]
+
+        # manually tweaked camera
+        side_tilt_right_slight_from_above:
+            fov: 40.0
+            transform:
+                # x, y, z (distances in meters)
+                pos: [ -3.5, 1.2, 1.9 ]
+                # pitch, yaw, roll
+                rot: [ 0.0, -15.0, 260.0 ]
+            zoom: 0.0
+            dof:
+                aperture: [ 42.14, 2.7 ]
+                # near, far (in meters)
+                blur: [ 4.0, 5.0 ]
+                # near, far (in meters)
+                focus: [ 1.45, 3.0 ]
+                intensity: 1.0
+            event_generator:
+                plane: "medium"
+                tags: [ "ext" ]
+
+        # extreme closeup test
+        sergio_1:
+            fov: 9.0
+            transform:
+                pos: [ -0.05, 0.6, 1.68 ]
+                rot: [ 0.0, 0.0, 180.0 ]
+            zoom: 0.0
+            dof:
+                aperture: [ 42.14, 2.7 ]
+                blur: [ 4.0, 5.0 ]
+                focus: [ 1.45, 3.0 ]
+                intensity: 1.0
+            event_generator:
+                plane: "medium"
+                tags: [ "ext" ]
+
+    animations.mimic:
+        # template name for usage in production manifest
+        man_gesture_chewing:
+            # information was extracted from the game w2anim files (see dumps)
+            # name of animation as used in the game
+            animation: "geralt_neutral_gesture_chewing_face"
+            # unstretched clip length in seconds
+            #duration: 6
+            # number of frames of the unstretched clip
+            frames: 180
+            # theses settings can defined here and overriden in production assets
+            #weight: 0.75           # in percent, default: 1.0
+            #clipfront: 1.0         # in seconds, default: no clipping
+            #clipend: 1.2666        # in seconds, default: no clipping
+            #stretch: 1.061         # in percent, default: 1.0
+            #blendin: 2.3           # in seconds, default: game default blendin (none? minimal?)
+            #blendout: 5.0          # in seconds, default: game default blendout (to default pose)
+
+
+    animations:
+        man_gesture_point_forward:
+            animation: "high_standing_aggressive_gesture_point_forward_r"
+            #duration: 2.6000004
+            frames: 78
+            # theses settings can defined here and overriden in production assets
+            #weight: 0.75           # in percent, default: 1.0
+            #clipfront: 1.0         # in seconds, default: no clipping
+            #clipend: 1.2666        # in seconds, default: no clipping
+            #stretch: 1.061         # in percent, default: 1.0
+            #blendin: 2.3           # in seconds, default: game default blendin (none? minimal?)
+            #blendout: 5.0          # in seconds, default: game default blendout (to default pose)
+
+        man_gesture_explain_1:
+            animation: "high_standing_bored_gesture_explaining_01"
+            #duration: 3
+            frames: 90

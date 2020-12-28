@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 1081, saved: 2020-11-24 14:36:03)
+# (version: 1113, saved: 2020-12-20 23:24:06)
 #
 ---
 structure:
@@ -440,6 +440,7 @@ structure:
           parameter:
             - areaName: toussaint
             - eventName: mus_mq7017_combat
+            - saveType: SESB_ClearSaved
           next: ".done"
         
         script.play_music_invest_suspense:

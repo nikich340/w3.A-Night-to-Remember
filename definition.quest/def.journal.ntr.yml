@@ -40,7 +40,7 @@ journals:
           - check_amphitheatre:
               caption: "Investigate amphitheatre near bandits' camp."
               mappins: 
-                - [ camp_pin, 22 ]
+                - [ amphi_pin, 28 ]
 
         town_part:
           - investigate_gates_area:

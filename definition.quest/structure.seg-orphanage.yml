@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: orphanage
 # 
-# (version: 1081, saved: 2020-11-24 14:36:03)
+# (version: 1113, saved: 2020-12-20 23:24:06)
 #
 ---
 structure:
@@ -25,6 +25,17 @@ structure:
           _fadein: false
           next.Output:
             - addfact.ntr_quest_orphanage_completed
+        
+        scene.new_scene:
+          ".editor":
+            pos: [ 279.0, 375.0 ]
+            in: [ orianna_call ]
+            out: [ Output ]
+          scene: 03.geralt_oneliners.yml
+          placement: bob/camp
+          interruptable: true
+          _fadein: false
+          next: ".done"
         
         scene.orphanage_scene:
           ".editor":
@@ -87,15 +98,6 @@ structure:
           actor: [ ntr_fat_bandit ]
           next.Output:
             - script.Lock_Door
-        
-        waituntil.1s:
-          elapsed: "00:00:01"
-          ".editor":
-            pos: [ 644.0, 186.0 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - scene.orphanage_scene: Input
         
         waituntil.START_HERE:
           examined: ~afc
@@ -174,6 +176,7 @@ structure:
             - objective.go_door: Activate
             - waituntil.close_to_door
             - spawn.spawn_bandits
+            - scene.new_scene: orianna_call
         
         waituntil.outside_area:
           outside: [ bob/orphanage_wraitharea, PLAYER ]
@@ -219,6 +222,17 @@ structure:
             out: [ Out ]
           next:
             - addfact.fact_add1
+        
+        script.0_5_s:
+          ".editor":
+            pos: [ 642.0, 200.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Wait
+          parameter:
+            - seconds: 0.5
+          next:
+            - scene.orphanage_scene: Input
         
         script.FACT_BRANCH:
           ".editor":
@@ -295,7 +309,7 @@ structure:
             out: [ Out ]
           function: NTR_FadeOutQuest
           parameter:
-            - fadeTime: 1.0
+            - fadeTime: 0.5
             - r: 0
             - g: 0
             - b: 0
@@ -311,7 +325,7 @@ structure:
             - type: SGT_ForcedCheckPoint
             - slot: -1
           next:
-            - waituntil.1s
+            - script.0_5_s
         
         script.Return_money:
           ".editor":

@@ -18,11 +18,14 @@ storyscene function NTR_UnequipItemFromSlot_S( player : CStoryScenePlayer, tag :
 		GetWitcherPlayer().UnequipItemFromSlot( SlotNameToEnum(slotName) );
 	} else {
 		theGame.GetNPCsByTag(tag, npcs);
+		NTR_notify("Founds npcs: " + npcs.Size());
 		for (i = 0; i < npcs.Size(); i += 1) {
 			slotItem = npcs[i].GetInventory().GetItemFromSlot( slotName );
 			//if ( npcs[i].GetInventory().IsIdValid(slotItem) ) {
 			if ( npcs[i].UnequipItem( slotItem ) ) {
 				NTR_notify("Unmount success!");
+			} else {
+				NTR_notify("Unmount not success!");
 			}
 		}
 	}
@@ -209,6 +212,7 @@ storyscene function NTR_ShowTimeLapse_S( player : CStoryScenePlayer, showTime : 
 storyscene function NTR_ChangeWeatherQuest_S( player : CStoryScenePlayer, weatherName: name, blendTime: float, randomGen: bool, questPause: bool )
 {
 	/* 
+	changeweather(name)
 	WT_Clear
 	WT_Rain_Storm
 	WT_Light_Clouds

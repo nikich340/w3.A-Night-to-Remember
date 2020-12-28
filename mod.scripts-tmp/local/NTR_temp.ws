@@ -6,6 +6,55 @@ exec function NTR_lvl( tag : name, level : int ) {
 	NTR_SetRelativeLevel(tag, level);
 }
 
+//  ShowCredits(ntr_credits_1, 0)
+exec function test_msg() {
+	var showTime : float;
+	var timeLapseMessageKey : string;
+	var timeLapseAdditionalMessageKey : string;
+
+	showTime = 7.0;
+	timeLapseMessageKey = "ntr_test_msg";
+	timeLapseAdditionalMessageKey = "ntr_test_msg_add";
+	ShowTimeLapse(showTime, timeLapseMessageKey, timeLapseAdditionalMessageKey);
+}
+
+exec function credits(num : int) {
+	var effectName : name;	
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var          logo : CEntity;
+	var        result : Bool;
+	
+	if (num == 1) {
+		effectName = 'ntr_credits_1';
+	} else if (num == 2) {
+		effectName = 'ntr_credits_2';
+	} else if (num == 3) {
+		effectName = 'ntr_credits_3';
+	} else if (num == 4) {
+		effectName = 'ntr_credits_4';
+	} else if (num == 5) {
+		effectName = 'ntr_credits_5';
+	}
+	logo = theGame.GetEntityByTag('ntr_logo_credits');
+	/*if (destoy) {
+		if (logo) {
+			logo.Destroy();
+		}
+		return;
+	}*/
+	if (!logo) {
+		template = (CEntityTemplate)LoadResource("dlc/dlcntr/data/entities/ntr_logo_entity.w2ent", true);
+		pos = thePlayer.GetWorldPosition();
+		logo = (CEntity)theGame.CreateEntity(template, pos);
+		logo.AddTag('ntr_logo_credits');
+		result = logo.CreateAttachment(thePlayer, 'r_weapon', Vector(0, 0, 0), EulerAngles(0, 0, 0));
+	}
+
+	logo.StopAllEffects();
+	logo.PlayEffect(effectName);
+}
+
 // not work?
 //NTR_MoveNPCsTo(oriana_test2, , 2.0)
 exec function NTR_MoveNPCsTo(tag : name, target : name, optional speed : float) {
@@ -338,7 +387,7 @@ exec function execUnhide(range : float) {
     NTR_UnhideActorsInRange(range);
 }
 
-exec function getInRange(range : float, optional makeFriendly : bool) {
+exec function getInRange(range : float, optional makeFriendly : int) {
     var entities: array<CGameplayEntity>;
     var actor : CActor;
     var i, t, maxEntities: int;
@@ -373,8 +422,14 @@ exec function getInRange(range : float, optional makeFriendly : bool) {
 
             LogChannel('getInRange', "* GetVoicetag: " + actor.GetVoicetag());
             LogChannel('getInRange', "* GetDisplayName: " + actor.GetDisplayName());
-            if (makeFriendly)
+            if (makeFriendly == 1)
             	actor.SetTemporaryAttitudeGroup( 'friendly_to_player', AGP_Default );
+            if (makeFriendly == 2  && ((actor.HasAttitudeTowards(thePlayer) && actor.GetAttitude(thePlayer) == AIA_Hostile) || actor.GetAttitudeGroup() == 'AG_nightwraith' || actor.GetAttitudeGroup() == 'hostile_to_player')) {
+            	LogChannel('HideInRange', " x KILL");
+            	actor.OnCutsceneDeath();
+            }
+            if (makeFriendly == 3)
+            	actor.OnCutsceneDeath();            	
         }
     }
 }
@@ -683,7 +738,7 @@ exec function barolg() {
 	act.AddTag('ntr_baron_edward');
 	act.AddTag('vip');
 	act.ApplyAppearance('bob_knight_15');
-	act.SetTemporaryAttitudeGroup( 'hostile_to_player', AGP_Default );
+	act.SetTemporaryAttitudeGroup( 'friendly_to_player', AGP_Default );
 	act.SetAttitude( thePlayer, AIA_Hostile );
 	thePlayer.SetAttitude( act, AIA_Hostile );
 	//NTR_TuneNPC( 'baron_test2', GetWitcherPlayer().GetLevel(), "Hostile", "None", false, "ENGT_Quest", -1 );
@@ -705,6 +760,7 @@ exec function trissmonster() {
 	thePlayer.SetAttitude( act, AIA_Hostile );
 	//NTR_TuneNPC( 'baron_test2', GetWitcherPlayer().GetLevel(), "Hostile", "None", false, "ENGT_Quest", -1 );
 }
+
 exec function barolg2() {
 	var      template : CEntityTemplate;
 	var           pos : Vector;

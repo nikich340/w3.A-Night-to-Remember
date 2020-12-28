@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 1081, saved: 2020-11-24 14:36:03)
+# (version: 1113, saved: 2020-12-20 23:24:06)
 #
 ---
 structure:
@@ -118,11 +118,11 @@ structure:
       waituntil.3s_to_get_ready:
         elapsed: "00:00:03"
         ".editor":
-          pos: [ 57.6797676086, 368.8603210449 ]
+          pos: [ 18.0, 383.0 ]
           in: [ In ]
           out: [ Out ]
         next:
-          - subsegment.intro_nightmare
+          - changelayers.show_town_blood
       
       waituntil.Wait_00_to_03:
         time: [ "00:00", "03:00" ]
@@ -131,7 +131,7 @@ structure:
           in: [ In ]
           out: [ Out ]
         next:
-          - script.new_ntr_factchecker
+          - script.check_fact_allowed
       
       waituntil.Wait_fail_or_done:
         ".editor":
@@ -407,6 +407,19 @@ structure:
         next.False:
           - interaction.baron_not_yet_gp: camp_not_yet
       
+      script.check_fact_allowed:
+        ".editor":
+          pos: [ -333.0, 297.0 ]
+          in: [ In ]
+          out: [ "False", "True" ]
+        function: NTR_FactChecker
+        parameter:
+          - factName: ntr_quest_allowed
+          - factCond: "=="
+          - val: 1
+        next.False:
+          - script.NTR_CheckQuestConditions
+      
       script.check_orphanage_completed:
         ".editor":
           pos: [ 415.5445861816, 1077.7008056641 ]
@@ -419,19 +432,6 @@ structure:
           - val: 1
         next.False:
           - scene.baron_meeting_short: hurry
-      
-      script.new_ntr_factchecker:
-        ".editor":
-          pos: [ -333.0, 297.0 ]
-          in: [ In ]
-          out: [ "False", "True" ]
-        function: NTR_FactChecker
-        parameter:
-          - factName: ntr_quest_allowed
-          - factCond: "=="
-          - val: 1
-        next.False:
-          - script.NTR_CheckQuestConditions
       
       script.sounds_dettlaff:
         ".editor":
@@ -682,16 +682,9 @@ structure:
       
       journal.new_journal_entry:
         ".editor": [ -562.0, 876.0 ]
-        entry: characters/baron_edward/first_entry
+        entry: characters/baron_edward/camp_entry
         notify: true
         activate_root: true
-        next:
-          - journal.new_journal_entry_1: Activate
-      
-      journal.new_journal_entry_1:
-        ".editor": [ -381.0, 871.0 ]
-        entry: characters/test_character2/first_entry
-        notify: true
         next: ".done"
       
       objective.Check_amphitheatre:

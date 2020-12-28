@@ -116,4 +116,5 @@ exec function playEventPlayer( eventName : string ) {
 exec function playEvent( bankName : string, eventName : string, optional saveType : string ) {
     NTR_PlaySound( bankName, eventName, saveType );
 }
-//playEvent(ntr_quest.bnk, Play_ntr_fangs_music, SESB_Savv)
+//playEvent(ntr_quest.bnk, Play_ntr_fangs_music, SESB_ClearSaved)
+//playEvent(ntr_quest.bnk, Play_ntr_trailer_music, SESB_ClearSaved)

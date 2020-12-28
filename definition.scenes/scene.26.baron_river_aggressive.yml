@@ -24,9 +24,9 @@ repository:
       template: "dlc\\dlcntr\\data\\entities\\baron_bandit_spear.w2ent"
       appearance: [ "bob_raider_lvl1_11" ]
 
-    Bandit_poor:
-      template: "dlc\\dlcntr\\data\\entities\\baron_bandit.w2ent"
-      appearance: [ "bob_thug_lvl1_10" ]
+    Bandit_crossbow:
+      template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
+      appearance: [ "__q703_nazairi_01" ]
 
   animations:
     anim_337_high_standing_determined_turn_180_left_casual:
@@ -149,48 +149,48 @@ repository:
         tags: [ "ext" ]
 
     cam_4_cam_baron:
-      fov: 15.0
+      fov: 22.0
       transform:
-        pos: [ -158.5091705322, 38.4040031433, -9.6738424301 ]
-        rot: [ 0.0, 358.4700012207, 179.7606201172 ]
-      #zoom: 1.0
+        pos: [ -159.6145629883, 37.9228782654, -9.7988424301 ]
+        rot: [ 0.0, 0.8899534941, 211.0285644531 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.7094469070, 5.7094469070 ]
-        focus: [ 3.2094469070, 4.2094469070 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.4681954384, 5.4681954384 ]
+        focus: [ 2.9681954384, 3.9681954384 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_5_cam_geralt:
-      fov: 15.0
+      fov: 22.0
       transform:
-        pos: [ -158.6118164063, 34.0379753113, -9.4738426208 ]
-        rot: [ 0.0, 352.8599853516, 358.6203002930 ]
-      #zoom: 1.0
+        pos: [ -158.6104431152, 34.2689361572, -9.5238418579 ]
+        rot: [ 0.0, 352.1724853516, 356.6680297852 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.9280822277, 5.9280824661 ]
-        focus: [ 3.4280822277, 4.4280824661 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.7540414333, 5.7540416718 ]
+        focus: [ 3.2540414333, 4.2540416718 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_13_cam_geralt_togame:
-      fov: 30.0
+      fov: 35.0
       transform:
-        pos: [ -159.8735809326, 38.6340942383, -9.8738422394 ]
-        rot: [ 0.0, 352.4199829102, 197.8004760742 ]
-      #zoom: 1.0
+        pos: [ -163.1970672607, 37.7705688477, -9.8238420486 ]
+        rot: [ 0.0, 355.7749938965, 252.7997741699 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.2543118000, 4.2543115616 ]
-        focus: [ 1.7543118000, 2.7543118000 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 4.7663598061, 7.7663598061 ]
+        focus: [ 5.2663598061, 6.2663598061 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
 production:
@@ -205,6 +205,19 @@ production:
       #rot: [ 0.0, 94.1600112915, 0.0 ]
 
   assets:
+    mimics:
+      Baron_Edward_aggressive:
+        actor: Baron_Edward
+        repo: aggressive
+        weight: 1.0
+        duration: 1.0
+
+      geralt_angry:
+        actor: geralt
+        repo: angry
+        weight: 0.8
+        duration: 1.0
+
     actors:
       geralt:
         repo: "geralt"
@@ -241,11 +254,11 @@ production:
         appearance: "bob_raider_lvl1_11"
         tags: [ "ntr_camp_bandit_spear" ]
 
-      Bandit_poor:
-        repo: "Bandit_poor"
+      Bandit_crossbow:
+        repo: "Bandit_crossbow"
         #by_voicetag: true
-        appearance: "bob_thug_lvl1_10"
-        tags: [ "ntr_poor_bandit" ]
+        appearance: "__q703_nazairi_01"
+        tags: [ "ntr_crossbow_bandit" ]
 
     cameras:
       cam_1_eyes_open:
@@ -330,8 +343,8 @@ production:
         blendin: 0.0
         blendout: 0.0
 
-      Bandit_poor_high_standing_determined_enter_frontal:
-        actor: "Bandit_poor"
+      Bandit_crossbow_high_standing_determined_enter_frontal:
+        actor: "Bandit_crossbow"
         repo: "anim_6981_high_standing_determined_enter_frontal"
         #duration: 4.7333331108
         #weight: 0.6000000238
@@ -352,8 +365,8 @@ production:
         blendin: 0.0
         blendout: 0.0
 
-      Bandit_poor_man_geralt_carry_torch_sword_loop_run_left:
-        actor: "Bandit_poor"
+      Bandit_crossbow_man_geralt_carry_torch_sword_loop_run_left:
+        actor: "Bandit_crossbow"
         repo: "anim_4274_man_geralt_carry_torch_sword_loop_run_left"
         #duration: 2.5333333015
         #weight: 0.6000000238
@@ -510,16 +523,16 @@ production:
         actor: "Bandit_camp_spear"
         repo: "pose_0_high_standing_determined_idle"
 
-      Bandit_poor_high_standing_determined_idle:
-        actor: "Bandit_poor"
+      Bandit_crossbow_high_standing_determined_idle:
+        actor: "Bandit_crossbow"
         repo: "pose_0_high_standing_determined_idle"
 
       Bandit_camp_sword_man_idle_torch:
         actor: "Bandit_camp_sword"
         repo: "pose_813_man_idle_torch"
 
-      Bandit_poor_man_idle_torch:
-        actor: "Bandit_poor"
+      Bandit_crossbow_man_idle_torch:
+        actor: "Bandit_crossbow"
         repo: "pose_813_man_idle_torch"
 
       Baron_Edward_high_standing_determined_idle:
@@ -543,12 +556,12 @@ storyboard:
       - actor.placement: [0.0, Bandit_camp_axe, [ -159.5366363525, 34.5762405396, -15.3785400391 ], [ 0.0, 0.0, 350.2099914551 ]]
       - actor.placement: [0.0, Bandit_camp_sword, [ -158.8983459473, 33.9732475281, -15.3093872070 ], [ 0.0, 0.0, 356.4799804688 ]]
       - actor.placement: [0.0, Bandit_camp_spear, [ -156.1526489258, 35.0238037109, -15.1720581055 ], [ 0.0, 0.0, 71.4999771118 ]]
-      - actor.placement: [0.0, Bandit_poor, [ -156.1406555176, 33.2613143921, -15.1720581055 ], [ 0.0, 0.0, 20.0200042725 ]]
+      - actor.placement: [0.0, Bandit_crossbow, [ -156.1406555176, 33.2613143921, -15.1720581055 ], [ 0.0, 0.0, 20.0200042725 ]]
       - actor.pose: [0.0, Baron_Edward_High_Standing_Aggressive]
       - actor.pose: [0.0, Big_bandit_High_Standing_Determined]
       - actor.pose: [0.0, Bandit_camp_axe_High_Standing_Aggressive]
       - actor.pose: [0.0, Bandit_camp_sword_man_idle_torch]
-      - actor.pose: [0.0, Bandit_poor_man_idle_torch]
+      - actor.pose: [0.0, Bandit_crossbow_man_idle_torch]
 
       - actor.placement: [0.0, geralt, [ -158.8057098389, 37.4670944214, -11.4799804688 ], [ 0.0, 0.0, 38.8299331665 ]]
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
@@ -566,11 +579,11 @@ storyboard:
       - cam.blend.end: [0.999, cam_2_eyes_open_cam2]
 
       - actor.placement: [0.15, Baron_Edward, [ -158.3189392090, 35.0936851501, -11.3368530273 ], [ 0.0, 0.0, 12.4300155640 ]]
-      - actor.placement: [0.2, Big_bandit, [ -157.2763214111, 34.1676330566, -11.2500610352 ], [ 0.0, 0.0, 18.7000045776 ]]
+      - actor.placement: [0.2, Big_bandit, [ -157.2901000977, 32.2021827698, -11.2332153320 ], [ 0.0, 0.0, 11.6599960327 ]]
       - actor.placement: [0.15, Bandit_camp_axe, [ -159.5366363525, 34.5762405396, -11.3785400391 ], [ 0.0, 0.0, 350.2099914551 ]]
       - actor.placement: [0.25, Bandit_camp_sword, [ -158.8108520508, 33.1164550781, -11.2819213867 ], [ 0.0, 0.0, 347.2399902344 ]]
       - actor.placement: [0.15, Bandit_camp_spear, [ -156.1526489258, 35.0238037109, -11.1720581055 ], [ 0.0, 0.0, 71.4999771118 ]]
-      - actor.placement: [0.25, Bandit_poor, [ -156.1406555176, 33.2613143921, -11.1720581055 ], [ 0.0, 0.0, 20.0200042725 ]]
+      - actor.placement: [0.25, Bandit_crossbow, [ -156.1406555176, 33.2613143921, -11.1720581055 ], [ 0.0, 0.0, 20.0200042725 ]]
       
       - actor.anim: # 4.36666
           .@pos: [0.6, geralt_high_standing_determined_turn_180_left_casual]
@@ -606,7 +619,7 @@ storyboard:
           blendout: 0.5
 
       - actor.anim: 
-          .@pos: [0.25, Bandit_poor_high_standing_determined_enter_frontal]
+          .@pos: [0.25, Bandit_crossbow_high_standing_determined_enter_frontal]
           blendin: 0.0
           blendout: 0.5
 
@@ -616,19 +629,21 @@ storyboard:
           blendout: 0.25
           stretch: 2.15
       - actor.anim.additive: 
-          .@pos: [0.25, Bandit_poor_man_geralt_carry_torch_sword_loop_run_left]
+          .@pos: [0.25, Bandit_crossbow_man_geralt_carry_torch_sword_loop_run_left]
           blendin: 0.0
           blendout: 0.25
           stretch: 2.15
 
       - actor.equip.left: [0.0, Bandit_camp_sword, Torch_work]
-      - actor.equip.left: [0.0, Bandit_poor, Torch_work]
+      - actor.equip.left: [0.0, Bandit_crossbow, Torch_work]
     # shot static
     shot_3_ger_greetings:
       - cam: [0.0, cam_5_cam_geralt]
       - actor.placement: [0.0, geralt, [ -158.8057098389, 37.4670944214, -11.4799804688 ], [ 0.0, 0.0, 202.9499816895 ]]
-      - actor.anim.additive: 
-          .@pos: [0.0, geralt_high_standing_determined_gesture_greeting_geralt_03]
+      - actor.anim.mimic: 
+          actor: geralt
+          .@pos: [0.0, mimicsanim_397_geralt_neutral_gesture_impatience_face]
+          weight: 0.7
           blendin: 0.5
           blendout: 0.5
       - cam: [0.0, cam_5_cam_geralt]
@@ -637,7 +652,7 @@ storyboard:
     shot_4_baron_aggro:
       - cam: [0.0, cam_4_cam_baron]
       - actor.anim.additive:
-          .@pos: [0.0, Baron_Edward_high_standing_aggressive_gesture_both_hands_1]
+          .@pos: [0.5, Baron_Edward_high_standing_aggressive_gesture_both_hands_1]
           blendin: 0.5
           blendout: 0.5
 
@@ -673,50 +688,53 @@ storyboard:
     shot_8_traitor1:
       - cam: [0.0, cam_4_cam_baron]
       - actor.anim.additive:
-          .@pos: [0.0, Baron_Edward_high_standing_aggressive_gesture_left_hand_point_down]
+          .@pos: [0.5, Baron_Edward_high_standing_aggressive_gesture_left_hand_point_down]
           blendin: 0.5
           blendout: 0.5
 
     shot_8_traitor2:
       - actor.anim: 
-          .@pos: [0.0, Baron_Edward_high_standing_aggressive_to_high_standing_determined]
+          .@pos: [0.2, Baron_Edward_high_standing_aggressive_to_high_standing_determined]
           blendin: 0.5
           blendout: 0.5
-      - actor.pose: [0.5, Baron_Edward_high_standing_determined_idle]
+      - actor.pose: [0.6, Baron_Edward_high_standing_determined_idle]
+      - actor.mimic: [0.0, Baron_Edward_aggressive]
       
     # shot cam geralt gest you
     shot_9_treat:
       - actor.anim.additive: 
           .@pos: [0.0, geralt_high_standing_determined_gesture_you]
-          clipfront: 1.5
           blendin: 0.5
           blendout: 0.5
+          stretch: 0.8
+
       - cam: [0.0, cam_5_cam_geralt]
+      - actor.mimic: [0.0, geralt_angry]
 
     # shot cam geralt gest greetings
     shot_10:
       - cam: [0.0, cam_4_cam_baron]
-      - actor.anim.additive: 
-          .@pos: [0.0, Baron_Edward_add_gesture_point_forward]
-          blendin: 0.5
-          blendout: 0.5
-          clipend: 2.5
-          weight: 0.75
-
-    # shot cam baron high stand point you
-    shot_togame:
-      - cam.blend.togame: [0.0, cam_13_cam_geralt_togame]
-      - actor.gamestate: [0.0, geralt, DrawSteel]
       - actor.gamestate: [0.0, Baron_Edward]
       - actor.gamestate: [0.0, Big_bandit]
       - actor.gamestate: [0.0, Bandit_camp_spear]
       - actor.gamestate: [0.0, Bandit_camp_sword]
       - actor.gamestate: [0.0, Bandit_camp_axe]
-      - actor.gamestate: [0.0, Bandit_poor]
+      - actor.gamestate: [0.0, Bandit_crossbow]
+      - actor.gamestate: [0.5, geralt, DrawSteel]
+      - actor.anim.additive: 
+          .@pos: [0.0, Baron_Edward_add_gesture_point_forward]
+          blendin: 0.5
+          blendout: 0.5
+          stretch: 0.8
+
+    # shot cam baron high stand point you
+    shot_togame:
+      - cam.blend.togame: [0.0, cam_4_cam_baron]
+      #- cam.blend.togame: [0.0, cam_13_cam_geralt_togame]
 
 dialogscript:
   player: "geralt"
-  actors: [ "geralt", "Baron_Edward", "Big_bandit", "Bandit_camp_axe", "Bandit_camp_sword", "Bandit_camp_spear", "Bandit_poor" ]
+  actors: [ "geralt", "Baron_Edward", "Big_bandit", "Bandit_camp_axe", "Bandit_camp_sword", "Bandit_camp_spear", "Bandit_crossbow" ]
 
   section_start:
     - PAUSE: 0.0
@@ -744,11 +762,10 @@ dialogscript:
     - CUE: shot_3_ger_greetings
     # (longest) anim: man_geralt_carry_torch_sword_loop_run_left
     - geralt: "[2.8014643]0000587002|Dammit! Things've sure gotten messy."
-    - PAUSE: 2.0
     # shot cam baron
     - CUE: shot_4_baron_aggro
     # (longest) anim: man_geralt_carry_torch_sword_loop_run_left
-    - Baron_Edward: "2114670360|What the hell, witcher? Why did you let Orianna leave? Turned yellow?"
+    - Baron_Edward: "[5.1766]2114670360|What happened witcher? Are ye' a coward? Why'd you let her go?!"
     # shot cam geralt
     - CUE: shot_5_explain
     # (longest) anim: man_geralt_carry_torch_sword_loop_run_left
@@ -756,7 +773,7 @@ dialogscript:
     # shot cam baron gest both hands
     - CUE: shot_6_bullshit
     # (longest) anim: high_standing_aggressive_gesture_both_hands_1
-    - Baron_Edward: "2114670361|Bullshit. You were to kill her, not help her."
+    - Baron_Edward: "[3.4453]2114670361|Bullshit! I hired you to kill her!"
     # shot cam baron gest point ground
     - CUE: shot_7_changed_mind
     # (longest) anim: high_standing_aggressive_gesture_left_hand_point_down
@@ -764,15 +781,18 @@ dialogscript:
     - geralt: "[2.3129]2114670362|I don't have to explain myself to you."
     # shot cam geralt gest decline
     - CUE: shot_8_traitor1
-    - Baron_Edward: "2114670363|I think you're just coward and traitor."
+    - Baron_Edward: "[3.2287]2114670363|So you're a coward, and a traitor!"
+    - PAUSE: 0.5
     - CUE: shot_8_traitor2
-    - Baron_Edward: "2114670364|Wanna know what happen to everyone who betrayed my trust?"
+    - Baron_Edward: "[3.0577]2114670364|Do you know what happens to those who betray me?"
 
     - CUE: shot_9_treat
     - geralt: "[1.0785826]0000490004|That a threat?"
+    - PAUSE: 0.5
 
     - CUE: shot_10
-    - Baron_Edward: "2114670365|Kill him!"
+    - Baron_Edward: "[1.0418]2114670365|Kill him!"
+    - PAUSE: 0.5
 
     - CUE: shot_togame
     - PAUSE: 2.0
@@ -780,6 +800,8 @@ dialogscript:
 
   section_exit:
     - EXIT
+
+
 
 
 

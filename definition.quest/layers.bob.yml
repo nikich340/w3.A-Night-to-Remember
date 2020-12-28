@@ -330,9 +330,9 @@ layers:
         #radius for quest instructions: 22
         pos: [ -828.8852539063, -1723.7460937500, 95.5917358398 ]
 
-      amphitheatre_pin: 
-        #radius for quest instructions: 24
-        pos: [ -773.1193237305, -1671.3071289063, 96.6290893555 ]
+      amphi_pin: 
+        #radius for quest instructions: 28
+        pos: [ -770.0106811523, -1670.0690917969, 96.6290893555 ]
 
     # ntr_bob_<name>_ap
     actionpoints:
@@ -672,17 +672,17 @@ layers:
         rot: [ 0.0, 0.0, 148.9400024414 ]
 
       wall_hack_1: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_green.w2ent"
         pos: [ -834.3278198242, -1708.5700683594, 96.9514083862 ]
         rot: [ 90.0, -4.9999613762, -121.5199813843 ]
 
       wall_hack_2: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_blue.w2ent"
         pos: [ -835.9363403320, -1711.4798583984, 96.9038925171 ]
         rot: [ 90.0, 5.0, 58.4799957275 ]
 
       wall_hack_roof1: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_invisible.w2ent"
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\wall_red.w2ent"
         pos: [ -832.2823486328, -1709.6939697266, 99.8314743042 ]
         rot: [ 90.0, -63.0, -121.5199966431 ]
 

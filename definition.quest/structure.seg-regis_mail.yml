@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: regis_mail
 # 
-# (version: 1081, saved: 2020-11-24 14:36:03)
+# (version: 1113, saved: 2020-12-20 23:24:06)
 #
 ---
 structure:
@@ -9,7 +9,7 @@ structure:
     regis_mail:
       blocks:
         in:
-          ".editor": [ -50.3333282471, 247.6666717529 ]
+          ".editor": [ -41.0, 180.0 ]
           next:
             - script.Undress_geralt
         
@@ -49,6 +49,15 @@ structure:
           interruptable: false
           _fadein: false
           next: ".done"
+        
+        waituntil.1s:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 305.4363098145, 188.034072876 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.10_scene: Input
         
         waituntil.Letter_read:
           factdb: [ BookReadState_ntr_notices_regis_letter, ">=", 1 ]
@@ -106,14 +115,14 @@ structure:
         
         script.Undress_geralt:
           ".editor":
-            pos: [ 191.8094940186, 273.0 ]
+            pos: [ 142.0, 290.0 ]
             in: [ In ]
             out: [ Out ]
           function: UnequipPlayerItemsQuest
           parameter:
             - all: true
           next:
-            - scene.10_scene: Input
+            - waituntil.1s
         
         changelayers.owl_layer:
           ".editor":

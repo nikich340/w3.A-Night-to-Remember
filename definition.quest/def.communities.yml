@@ -882,7 +882,7 @@ communities:
       orphanage:
         fat_bandit:
           appearance: [ "bob_thug_lvl2_03", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: hostile_to_player
+          attitude: friendly_to_player
           use_last_ap: false
           start_in_ap: false
           level: 50
@@ -890,7 +890,7 @@ communities:
 
         bandit_2:
           appearance: [ "bob_thug_lvl1_06", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: hostile_to_player
+          attitude: friendly_to_player
           use_last_ap: false
           start_in_ap: false
           level: 50
@@ -898,7 +898,7 @@ communities:
 
         bandit_3:
           appearance: [ "bob_thug_lvl1_10", false ]    # [someappearance, only_on_spawn_bool]
-          attitude: hostile_to_player
+          attitude: friendly_to_player
           use_last_ap: false
           start_in_ap: false
           level: 50

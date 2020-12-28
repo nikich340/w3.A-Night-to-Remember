@@ -72,9 +72,11 @@ dialogscript:
     - geralt: "[2.0004]2114670658|Tracks lead to this house."
     - NEXT: section_exit
 
-  section_start_orianna_house_enter:
+  section_start_orianna_call:
     - geralt: "[0.98117673]0001174617|Orianna?"
-    - PAUSE: 5.0
+    - NEXT: section_exit
+
+  section_start_orianna_room_enter:
     - geralt: "[5.3534]2114670659|House looks inhabited… No sign of the dweller, though. Guess I'll look around."
     - NEXT: section_exit
 

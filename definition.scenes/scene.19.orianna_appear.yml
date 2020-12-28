@@ -1538,7 +1538,7 @@ dialogscript:
             function: NTR_ShowTimeLapse_S
             parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
                 - showTime: 3.0
-                - timeLapseMessageKey: "ntr_sometime_later"
+                - timeLapseMessageKey: "cinematic_text_some_time_later"
                 #- timeLapseAdditionalMessageKey: "item_name_ntr_notices_regis_letter"
     - NEXT: section_storyboard_ui
 

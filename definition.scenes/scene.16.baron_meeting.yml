@@ -2091,7 +2091,7 @@ dialogscript:
     - geralt: "[2.9141]2114670890|I don't believe you. However I'm here about Orianna."
 
     - CUE: shot_29_dg_baron
-    - Baron_Edward: "[5.3425]2114670891|Of course. This evil woman, she refuses to return something precious to me."
+    - Baron_Edward: "[5.3139]2114670891|Of course. This evil woman, she refuses to return something precious to me."
     - PAUSE: 0.5
     - CUE: shot_29_dg_baron1
     - Baron_Edward: "[6.2181]2114670892|That's why I'd like to contract your services, witcher. To kill that monster, and take back that which belongs to me."
@@ -2232,7 +2232,7 @@ dialogscript:
     - CUE: shot_bad_place_g1
     - geralt: "[3.796007]0001198754|Something wicked here. It's in the air, I can smell it…"
     - CUE: shot_bad_place_b1
-    - Baron_Edward: "[6.1224]2114670913|You're not wrong. We've heard some strange sounds... In that direction, by the amphitheater."
+    - Baron_Edward: "[6.1224]2114670913|You're not wrong. We've heard some strange sounds… In that direction, by the amphitheater."
     - CUE: shot_bad_place_b2    
     - Baron_Edward: "[4.3394]2114670914|I told my men to stay away from it. It'd be nice, if you could have a look."
     - CUE: shot_bad_place_g2    
@@ -2254,7 +2254,7 @@ dialogscript:
     - CUE: shot_31_dg_baron
     - Baron_Edward: "[3.5266]2114670896|We're not common bandits, but that's beside the point."
     - CUE: shot_31_dg_baron2
-    - Baron_Edward: "[4.9863]2114670897|I'm asking for your help as a father... And I can reward you handsomely."
+    - Baron_Edward: "[4.9863]2114670897|I'm asking for your help as a father… And I can reward you handsomely."
     - NEXT: section_choice_geralt
 
   script_set_coins:
@@ -2359,7 +2359,7 @@ dialogscript:
     - CUE: shot_34_dg_geralt
     - geralt: "[1.6623693]0000583286|I don't want your coin."
     - CUE: shot_35_dg_baron
-    - Baron_Edward: "[6.8892]2114670904|You fight for a noble cause. But if you return my boy... I will find a way to repay you."
+    - Baron_Edward: "[6.8892]2114670904|You fight for a noble cause. But if you return my boy… I will find a way to repay you."
     - NEXT: section_details
 
   section_details:
@@ -2375,7 +2375,7 @@ dialogscript:
     - Baron_Edward: "[4.5108]2114670903|She gave a contemptible answer, so Alfred motioned for his blade."
     - PAUSE: 0.5
     - CUE: shot_37_throat
-    - Baron_Edward: "[9.2227]2114670908|All at once she vanished. And Alfred... I was covered in his blood. There was nothing I could do!"
+    - Baron_Edward: "[9.2227]2114670908|All at once she vanished. And Alfred… I was covered in his blood. There was nothing I could do!"
     - CUE: shot_37_dg_geralt_close
     - PAUSE: 1.5
     - CUE: shot_37_db_baron2
@@ -2397,6 +2397,8 @@ dialogscript:
 
   section_exit:
     - EXIT
+
+
 
 
 

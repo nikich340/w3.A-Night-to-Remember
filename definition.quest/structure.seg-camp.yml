@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: camp
 # 
-# (version: 1081, saved: 2020-11-24 14:36:03)
+# (version: 1113, saved: 2020-12-20 23:24:06)
 #
 ---
 structure:
@@ -38,8 +38,10 @@ structure:
           next.Output:
             - scene.baron_remark_gp: camp_reminder
             - objective.go_camp: Success
+            - journal.camp_entry_baron: Activate
           next.greedy:
             - spawn.spawn_sitting_baron
+            - journal.camp_entry_baron: Activate
         
         interaction.attach_scene_to_baron:
           ".editor":
@@ -152,6 +154,13 @@ structure:
             - comm_camp_baron
           next:
             - waituntil.inside_camp_area
+        
+        journal.camp_entry_baron:
+          ".editor": [ 1377.0, 307.0 ]
+          entry: characters/baron_edward/camp_entry
+          notify: true
+          activate_root: true
+          next: ".done"
         
         objective.go_camp:
           ".editor": [ 333.4543457031, 385.4485473633 ]

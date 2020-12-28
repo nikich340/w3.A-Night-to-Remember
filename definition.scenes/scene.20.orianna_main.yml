@@ -1893,7 +1893,7 @@ dialogscript:
     - orianna_human: "2114670950|Well, the threat of a sword doesn't always bring out the best in me."
 
     - CUE: shot_try_peacefully_ger2
-    - geralt: "2114670951|Alright, but what about the children... You are using them as a livestock!"
+    - geralt: "2114670951|Alright, but what about the children… You are using them as a livestock!"
 
     - CUE: shot_try_peacefully_ori2
     - orianna_human: "2114670952|You know what I am. I can't resist the hunger."
@@ -1902,19 +1902,19 @@ dialogscript:
     - geralt: "2114670953|No, you can. I have read something interesting in your house…"
 
     - CUE: shot_try_peacefully_ori3
-    - orianna_human: "2114670954|Ha! So, you've been snooping around... Do I intrigue you that much, witcher?"
+    - orianna_human: "2114670954|Ha! So, you've been snooping around… Do I intrigue you that much, witcher?"
     
     - CUE: shot_try_peacefully_ger4
     - geralt: "2114670955|Orianna, I know you don't want to be the same… person more."
     
     - CUE: shot_try_peacefully_ori4
-    - orianna_human: "2114670956|You presume to understand me? After reading some my... musings?"
+    - orianna_human: "2114670956|You presume to understand me? After reading some my… musings?"
     
     - CUE: shot_try_peacefully_ger5
     - geralt: "2114670957|I helped some creatures before. And I want to help you too."
     
     - CUE: shot_try_peacefully_ori5
-    - orianna_human: "2114670958|Geralt, I'm vampires. If I give up drinking blood, I will die..."
+    - orianna_human: "2114670958|Geralt, I'm vampires. If I give up drinking blood, I will die…"
     - orianna_human: "2114670969|You can't help me. Nobody can help me."
     
     - NEXT: section_choice_peaceful
@@ -2043,7 +2043,7 @@ dialogscript:
     #- CUE: shot_try_peacefully_ori7b
     - orianna_human: "2114670961|Very well then, I've made my decision - I won't feed on the children's blood again."
     - CUE: shot_try_peacefully_ori7c
-    - orianna_human: "2114670962|But Niellan and Agneta will stay with me. I'm used to take care of them and... It will distract me from obsessive thoughts about hunger."
+    - orianna_human: "2114670962|But Niellan and Agneta will stay with me. I'm used to take care of them and… It will distract me from obsessive thoughts about hunger."
     
     - CUE: shot_try_peacefully_ger8
     - geralt: "2114670963|Leave children with you? What if you will break your vow?"
@@ -2086,4 +2086,5 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+
 

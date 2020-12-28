@@ -201,7 +201,7 @@
 ;
 2114670895|00000000||I don't work for bandits.
 2114670896|00000000||We're not common bandits, but that's beside the point.
-2114670897|00000000||I'm asking for your help as a father... And I can reward you handsomely.
+2114670897|00000000||I'm asking for your help as a father… And I can reward you handsomely.
 ;
 ;   1209328|00000000||Need to talk about my fee, first.
 2114670898|00000000||I couldn't pay so much even if  you were King Radovid!
@@ -211,17 +211,17 @@
 2114670902|00000000||Have you changed your mind, witcher?
 ;   1007115|00000000||All right.
 ;   1030870|00000000||Hmm… Need to think about it.
-2114670904|00000000||You fight for a noble cause. But if you return my boy... I will find a way to repay you.
+2114670904|00000000||You fight for a noble cause. But if you return my boy… I will find a way to repay you.
 2114670905|00000000||But I need more information. Your friend… What happened to him?
 2114670906|00000000||We set up an ambush, outside Orianna's estate.
 2114670907|00000000||Alfred and I had her cornered, with nowhere to go. I asked her what she'd done with my son.
 2114670903|00000000||She gave a contemptible answer, so Alfred motioned for his blade.
-2114670908|00000000||All at once she vanished. And Alfred... I was covered in his blood. There was nothing I could do!
+2114670908|00000000||All at once she vanished. And Alfred… I was covered in his blood. There was nothing I could do!
 2114670909|00000000||What kind of creature could do such a thing?
 2114670910|00000000||Uh, must be a kind of vampire.
 2114670911|00000000||A vampire? Geralt, my son is in danger. You're my only hope!
 2114670912|00000000||All right, see if I can find her.
-2114670913|00000000||You're not wrong. We've heard some strange sounds... In that direction, by the amphitheater.
+2114670913|00000000||You're not wrong. We've heard some strange sounds… In that direction, by the amphitheater.
 2114670914|00000000||I told my men to stay away from it. It'd be nice, if you could have a look.
 ;
 ;
@@ -284,14 +284,14 @@
 ;   1172302|00000000||We don't have to fight.
 2114670968|00000000||You've killed an innocent man who wanted to reunite the Baron with his son.
 2114670950|00000000||Well, the threat of a sword doesn't always bring out the best in me.
-2114670951|00000000||Alright, but what about the children... You are using them as a livestock!
+2114670951|00000000||Alright, but what about the children… You are using them as a livestock!
 2114670952|00000000||You know what I am. I can't resist the hunger.
 2114670953|00000000||No, you can. I have read something interesting in your house…
-2114670954|00000000||Ha! So, you've been snooping around... Do I intrigue you that much, witcher?
+2114670954|00000000||Ha! So, you've been snooping around… Do I intrigue you that much, witcher?
 2114670955|00000000||Orianna, I know you don't want to be the same… person more.
-2114670956|00000000||You presume to understand me? After reading some my... musings?
+2114670956|00000000||You presume to understand me? After reading some my… musings?
 2114670957|00000000||I helped some creatures before. And I want to help you too.
-2114670958|00000000||Geralt, I'm vampires. If I give up drinking blood, I will die...
+2114670958|00000000||Geralt, I'm vampires. If I give up drinking blood, I will die…
 2114670969|00000000||You can't help me. Nobody can help me.
 ;   1007115|00000000||All right.
 2114670979|00000000||Think mutual friend of us could.
@@ -306,7 +306,7 @@
 ;   1101409|00000000||Well, I probably wouldn't 'ave forced myself on you.
 2114670972|00000000||Nice suggestion. But I have a lot to think about. Alone.
 2114670961|00000000||Very well then, I've made my decision - I won't feed on the children's blood again.
-2114670962|00000000||But Niellan and Agneta will stay with me. I'm used to take care of them and... It will distract me from obsessive thoughts about hunger.
+2114670962|00000000||But Niellan and Agneta will stay with me. I'm used to take care of them and… It will distract me from obsessive thoughts about hunger.
 2114670963|00000000||Leave children with you? What if you will break your vow?
 2114670964|00000000||Unlike your kind, we tend to keep our promises.
 ;   1027471|00000000||Hmm… Guess I believe you…
@@ -330,54 +330,67 @@
 ;2114670319|00000000||coins (TEST)
 ;2114670320|00000000||sword (TEST)
 2114670321|00000000||Hey, witcher!
-2114670322|00000000||You're alive?
-2114670323|00000000||Glad to hear it. Finally this dirty whore got what she's deserved.
-2114670324|00000000||Now say where is my son.
+2114670322|00000000||You're still breathin'?
+2114670323|00000000||I'm glad to hear it… She got what she deserved.
+2114670324|00000000||Now tell me, where's my boy?
 2114670325|00000000||I don't know where he is.
-2114670326|00000000||Wrong answer. You think nobody saw you having interesting conversation with Orianna?
-2114670327|00000000||I give you one more try.
+2114670326|00000000||You take me for a fool? You think my men didn't see your conversation with her!?
+2114670327|00000000||I'll give you one more chance.
 ;   1068309|00000000||Your son is dead.
-2114670328|00000000||Where is his body?
+;;;2114670328|00000000||Where is his body?
 2114670329|00000000||Hmmm…er…well…
-2114670330|00000000||You seek to trick me, witcher.
-2114670331|00000000||Perhaps I have to loosen your tongue with a knife.
+;;;2114670330|00000000||You seek to trick me, witcher.
+;;;2114670331|00000000||Perhaps I have to loosen your tongue with a knife.
 2114670332|00000000||I'll take care of him myself.
-2114670333|00000000||Are you mad, you twit?
+2114670333|00000000||Is that supposed to be a joke?
 2114670334|00000000||You're common bandits. I don't trust you.
-2114670335|00000000||You'll regret that you got in my way.
+2114670335|00000000||You'll regret that you got in my way!
 2114670336|00000000||The children are in that house. A young girl with a boy. Alive.
 ;   1091952|00000000||You'll look after her?
 2114670337|00000000||All right, I will.
 2114670338|00000000||Sure hope so. Here's my advice, don't show it to them.
-2114670339|00000000||True. In this case here our paths diverge.
-2114670340|00000000||There's your payment. And good luck.
+2114670339|00000000||I wish Neillan could have known his real mother… It seems this is where our paths diverge, Geralt.
+2114670340|00000000||There's your payment… As I promised.
 ;   1019171|00000000||Farewell.
-2114670341|00000000||You refused the money. But I have another reward for you.
+2114670341|00000000||I know you're not interested in my coin… but I have something else in mind.
 ;   1130945|00000000||What a surprise.
-2114670342|00000000||My favourite sword. Was made to order by an elven swordsmith.
+2114670342|00000000||It was given to me by Margot… Neillan's mother. It's powerful, but cursed with sadness.
 ;    451753|00000000||Thank you. Farewell.
 ;    490004|00000000||That a threat?
-2114670343|00000000||I challenge you to a duel. You and I.
+2114670343|00000000||I challenge you to a duel! You and I!
+2114670344|00000000||Goodbye, witcher. And… Thank you.
+2114670345|00000000||Take care of it, in her name.
+2114670346|00000000||How long has he been here?
+2114670347|00000000||About an hour. Saw…
+2114670348|00000000||Thank the heavens! My boy is okay…
+2114670349|00000000||There was no need to be so difficult Geralt. Anyways…
+2114670350|00000000||What about the girl? You'll look after her?
 ;
 ; scene 25
 ;
 2114670355|00000000||No…
 ;    373208|00000000||Had enough?
 2114670356|00000000||Good choice.
-2114670357|00000000||No! Destiny showed me that I am not worthy of raising the boy… Leave us alone.
 2114670358|00000000||I'm gonna fucking kill you, witcher!
-2114670359|00000000||Geralt… Take my sword… For the boy…
+;;;2114670422|00000000||Cough,Cough,Cough,Cough,Aaa… Aaaaaah… No!
+2114670422|00000000||*Heavy breathing* Aaaaaah… No!
+2114670423|00000000||This is my sin, and it dies here with me!
+2114670424|00000000||*Cough* Tyberious, take the men, and get out of this wretched land.
+2114670425|00000000||Go! 'Fore I kill you myself!
+2114670426|00000000||And you… You will take this blade… and keep it safe for my son.
+2114670427|00000000||The blade… Margot… You will tell him… It's name is Margot…
+2114670428|00000000||Margot… I'm so sorry… I failed you…
 ;
 ; scene 26
 ;
 ;   1101069|00000000||Greetings.
-2114670360|00000000||What the hell, witcher? Why did you let Orianna leave? Turned yellow?
+2114670360|00000000||What happened witcher? Are ye' a coward? Why'd you let her go?!
 ;   1174787|00000000||Despite what you might've heard, I don't lunge at every monster I see, sword in hand. Talking gets the job done for some.
-2114670361|00000000||Bullshit. You were to kill her, not help her.
+2114670361|00000000||Bullshit! I hired you to kill her!
 ;   1181655|00000000||Mhm. But I changed my mind.
 2114670362|00000000||I don't have to explain myself to you.
-2114670363|00000000||I think you're just coward and traitor.
-2114670364|00000000||Wanna know what happen to everyone who betrayed my trust?
+2114670363|00000000||So you're a coward, and a traitor!
+2114670364|00000000||Do you know what happens to those who betray me?
 ;    490004|00000000||That a threat?
 2114670365|00000000||Kill him!
 ;

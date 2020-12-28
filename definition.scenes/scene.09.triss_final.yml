@@ -2431,6 +2431,7 @@ dialogscript:
             parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
                 - areaName: "toussaint"
                 - eventName: "mus_loc_toussaint_cemetery"
+                - saveType: "SESB_ClearSaved"
     - NEXT: section_storyboard_ui
 
   section_storyboard_ui:
@@ -2546,6 +2547,7 @@ dialogscript:
                 - areaName: "novigrad"
                 #- eventName: "mus_q605_final_standoff"
                 - eventName: "mus_q605_final_confrontation_stage02"
+                - saveType: "SESB_ClearSaved"
     - NEXT: section_storyboard_ui3
 
   section_storyboard_ui3:
@@ -2642,6 +2644,7 @@ dialogscript:
             parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
                 - areaName: "novigrad"
                 - eventName: "mus_cs605_merchant_lose"
+                - saveType: "SESB_ClearSaved"
     - NEXT: section_mirror_fuckyou
 
   section_mirror_fuckyou:
@@ -2680,6 +2683,7 @@ dialogscript:
                 - areaName: "toussaint"
                 #- eventName: "mus_q605_final_standoff"
                 - eventName: "mus_loc_toussaint_unseen_cave"
+                - saveType: "SESB_ClearSaved"
     - NEXT: script_music_gameplay
 
   script_music_gameplay:
@@ -2689,6 +2693,7 @@ dialogscript:
                 - areaName: "toussaint"
                 #- eventName: "mus_q605_final_standoff"
                 - eventName: "mus_loc_toussaint_general_cs_to_gmpl"
+                - saveType: "SESB_ClearSaved"
     - NEXT: section_exit
 
   section_exit:

@@ -17,6 +17,30 @@ latent quest function NTR_Halfsec() {
 	return;
 }
 
+latent quest function NTR_ShowCredits(effectName : name, destoy : Bool) {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var          logo : CEntity;
+	var        result : Bool;
+	
+	logo = theGame.GetEntityByTag('ntr_logo_credits');
+	if (destoy) {
+		if (logo) {
+			logo.Destroy();
+		}
+		return;
+	}
+	if (!logo) {
+		template = (CEntityTemplate)LoadResourceAsync("dlc/dlcntr/data/entities/ntr_logo_entity.w2ent", true);
+		pos = thePlayer.GetWorldPosition();
+		logo = (CEntity)theGame.CreateEntity(template, pos);
+		logo.AddTag('ntr_logo_credits');
+		result = logo.CreateAttachment(thePlayer, 'r_weapon', Vector(0, 0, 0), EulerAngles(0, 0, 0));
+	}
+
+	logo.StopAllEffects();
+	logo.PlayEffect(effectName);
+}
 
 quest function NTR_CheckQuestConditions() {
 	var popup : CNTRPopupRequest;
@@ -157,7 +181,7 @@ quest function NTR_HideActorsFishermanScene() {
     acceptedVoicetags.PushBack('VAMPIRE DIVA');
     killIfHostile = false;
 
-    NTR_HideActorsInRange(30.0, acceptedTags, acceptedVoicetags, killIfHostile);
+    NTR_HideActorsInRange(40.0, acceptedTags, acceptedVoicetags, killIfHostile);
 }
 
 quest function NTR_HideActorsHagScene() {
@@ -170,7 +194,7 @@ quest function NTR_HideActorsHagScene() {
     acceptedVoicetags.PushBack('CELINA MONSTER');
     killIfHostile = true;
 
-    NTR_HideActorsInRange(20.0, acceptedTags, acceptedVoicetags, killIfHostile);
+    NTR_HideActorsInRange(40.0, acceptedTags, acceptedVoicetags, killIfHostile);
 }
 
 quest function NTR_HideActorsCampScene() {
@@ -183,7 +207,7 @@ quest function NTR_HideActorsCampScene() {
     acceptedTags.PushBack('ntr_camp_bandits');
     killIfHostile = true;
 
-    NTR_HideActorsInRange(20.0, acceptedTags, acceptedVoicetags, killIfHostile);
+    NTR_HideActorsInRange(40.0, acceptedTags, acceptedVoicetags, killIfHostile);
 }
 
 quest function NTR_UnhideActorsInRange(range : float)  {
