@@ -24,8 +24,10 @@
 			<ShortName>ntr_quest</ShortName>
 			<Path>ntr_quest.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2406263907" Name="Play_ntr_diary_feeding" />
 				<Event Id="1585213046" Name="Play_ntr_fangs_music" />
 				<Event Id="2452485250" Name="Play_ntr_trailer_music" />
+				<Event Id="477400357" Name="Stop_ntr_diary_feeding" />
 				<Event Id="164185520" Name="Stop_ntr_fangs_music" />
 				<Event Id="768178428" Name="Stop_ntr_trailer_music" />
 			</IncludedEvents>
@@ -39,6 +41,10 @@
 				<File Id="683846544" Language="SFX">
 					<ShortName>ntr_trailer_music.wav</ShortName>
 					<Path>sfx\ntr_trailer_music_db50bab0.wem</Path>
+				</File>
+				<File Id="551136353" Language="SFX">
+					<ShortName>scene33_feeding.wav</ShortName>
+					<Path>sfx\scene33_feeding_db50bab0.wem</Path>
 				</File>
 			</IncludedFullFiles>
 			<IncludedPrefetchFiles />

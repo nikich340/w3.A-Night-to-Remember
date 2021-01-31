@@ -12,7 +12,7 @@ templates:
       .type: "CNTROriannaVampireNPC"
       NTR_factNearlyDead: "ntr_orianna_bruxa_dead"
       NTR_avoidDeathEvent: true
-      NTR_animationMultiplier: 1.25
+      NTR_animationMultiplier: 1.2
 
       displayName: "Orianna"
       voiceTag: "ORIANNA BRUXA"
@@ -64,7 +64,7 @@ templates:
           - dlc/bob/data/characters/models/monsters/bruxa/bruxa_merged_body_ghost.w2ent
           - dlc/bob/data/characters/models/monsters/alp/c_01__alp.w2ent
           - dlc/bob/data/characters/models/monsters/bruxa/c_01__bruxa_poly_effect.w2ent
-          #- dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+          #- dlc/dlcntr/data/entities/oriana/g_orianna_claws.w2ent
           - dlc/dlcntr/data/entities/oriana/bruxa/h_oriana_bruxa_monster.w2ent
         voicetag: "ORIANNA BRUXA"
         usesRobe: true
@@ -77,7 +77,7 @@ templates:
           - dlc/bob/data/characters/models/monsters/bruxa/bruxa_merged_body_ghost.w2ent
           - dlc/bob/data/characters/models/monsters/alp/c_01__alp.w2ent
           - dlc/bob/data/characters/models/monsters/bruxa/c_01__bruxa_poly_effect.w2ent
-          #- dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+          #- dlc/dlcntr/data/entities/oriana/g_orianna_claws.w2ent
           - dlc/dlcntr/data/entities/oriana/bruxa/h_oriana_bruxa_monster_gameplay.w2ent
         voicetag: "ORIANNA BRUXA"
         usesRobe: true
@@ -194,6 +194,7 @@ templates:
       - orianna_human_morph
       - orianna_vampire_bloody_morph
       - oriana
+      - oriana_blood_morph
 
     templateParams:
       - ".type": CCharacterStatsParam
@@ -201,6 +202,21 @@ templates:
         abilities:
           - ntr_mon_orianna_vampire
           - NoShadows
+          
+      - ".type": CAnimMimicParam
+        animationSets:
+          - "dlc\\bob\\data\\animations\\cutscenes\\beauclair\\q704_the_truth\\cs704_diva_feeding\\cs704_diva_feeding.w2cutscene"
+          - "animations\\mimics\\yennefer_mimic_animation.w2anims"
+          - "animations\\woman\\dialog\\yennefer_mimic_layers.w2anims"
+          - "animations\\mimics\\gameplay_man_mimic_animation.w2anims"
+        behaviorInstanceSlots:
+          - ".type": SBehaviorGraphInstanceSlot
+            instanceName: mimika
+            graph: "animations\\mimics\\mimics_behavior.w2beh"
+          - ".type": SBehaviorGraphInstanceSlot
+            instanceName: Cutscene
+            graph: "gameplay\\behaviors\\cutscene_graph.w2beh"
+
       - ".type": CAnimAnimsetsParam
         name: orianna_woman
         componentName: noble_woman_base
@@ -210,6 +226,7 @@ templates:
           - "animations\\woman\\quest\\q602_woman_picking_flowers.w2anims"
           - "animations\\woman\\community\\woman_reaction.w2anims"
           - "animations\\woman\\dialog\\woman_dialog.w2anims"
+          - "dlc\\bob\\data\\animations\\cutscenes\\beauclair\\q704_the_truth\\cs704_diva_feeding\\cs704_diva_feeding.w2cutscene"
           #- "dlc\\bob\\data\\animations\\animations\\man\\dialogs\\ep2_man_dialog_animation.w2anims"
 
     effects:
@@ -408,7 +425,7 @@ templates:
         includedTemplates:
           - characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
           - characters/models/common/woman_average/body/l_01_wa__body.w2ent
-          #- dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+          #- dlc/dlcntr/data/entities/oriana/g_orianna_claws.w2ent
           #- dlc/bob/data/characters/models/crowd_npc/bob_citizen_woman/torso/t2_04_wa__bob_woman_noble.w2ent
           #- characters/models/crowd_npc/novigrad_citizen_woman/legs/l2_04_wa__novigrad_citizen.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
@@ -444,7 +461,7 @@ templates:
 
       orianna_vampire: # ok
         includedTemplates:
-          - dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+          - dlc/dlcntr/data/entities/oriana/g_orianna_claws.w2ent
           - dlc/dlcntr/data/entities/oriana/body_03_wa__oriana.w2ent
           - dlc/dlcntr/data/entities/oriana/h_oriana_vampire_clean.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
@@ -474,7 +491,7 @@ templates:
 
       orianna_vampire_bloody: # ok
         includedTemplates:
-          - dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+          - dlc/dlcntr/data/entities/oriana/g_orianna_claws.w2ent
           - dlc/dlcntr/data/entities/oriana/body_03_wa__oriana.w2ent
           - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
           - dlc/dlcntr/data/entities/oriana/h_oriana_vampire_bloody.w2ent

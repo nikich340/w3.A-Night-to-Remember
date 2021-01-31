@@ -1,0 +1,1449 @@
+#-- STORYBOARD UI - SCENE DUMP -------------------------------------------------
+repository:
+  actors:
+    Orianna_vampire:
+      template: "dlc\\dlcntr\\data\\entities\\orianna_human.w2ent"
+      appearance: [ "oriana_blood_morph" ]
+
+    Orianna_human:
+      template: "dlc\\dlcntr\\data\\entities\\orianna_human.w2ent"
+      appearance: [ "oriana" ]
+
+    Agneta_girl:
+      #template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\citizens\\girl_noble.w2ent"
+      template: "dlc\\dlcntr\\data\\entities\\agneta_girl.w2ent"
+      appearance: [ "bob_child_noble_female_03" ]
+
+    Niellan_boy:
+      template: "dlc\\dlcntr\\data\\entities\\niellan_boy.w2ent"
+      appearance: [ "niellan" ]
+
+    bob_medic:
+      template: "dlc\\dlcntr\\data\\entities\\bob_medic.w2ent"
+      appearance: [ "bob_medic_04" ]
+
+    geralt:
+      template: "gameplay\\templates\\characters\\player\\player.w2ent"
+
+    diary:
+      template: "dlc\\dlcntr\\data\\entities\\notebook_actor.w2ent"
+      appearance: [ "d" ]
+
+  props:
+    rich_armchair_broken_px:
+      template: "dlc\\bob\\data\\environment\\decorations\\gameplay\\rich_district\\furniture\\chairs\\destruction\\rich_armchair_broken_px.w2ent"
+
+  animations:
+    anim_1_oriana_Root_cs704_diva_feeding:
+      animation: "oriana:Root:cs704_diva_feeding"
+      frames: 463
+
+    anim_2_oriana_Root_cs704_diva_feeding:
+      animation: "boy:Root:cs704_diva_feeding"
+      frames: 463
+
+    anim_12545_high_sitting_determined_to_high_standing_determined:
+      animation: "high_sitting_determined_to_high_standing_determined"
+      frames: 170
+
+    anim_12490_add_walk_one_step_forward_casual:
+      animation: "add_walk_one_step_forward_casual"
+      frames: 117
+
+    anim_14166_woman_work_searching_ground_start:
+      animation: "woman_work_searching_ground_start"
+      frames: 64
+
+    anim_14164_woman_work_searching_ground_loop_02:
+      animation: "woman_work_searching_ground_loop_02"
+      frames: 232
+
+    anim_11114_high_standing_hold_book_determined_gesture_flip_page:
+      animation: "high_standing_hold_book_determined_gesture_flip_page"
+      frames: 74
+
+    anim_11115_high_standing_hold_book_determined_gesture_read:
+      animation: "high_standing_hold_book_determined_gesture_read"
+      frames: 275
+
+    anim_11121_zoltan_takes_notebook_from_geralt_transition:
+      animation: "zoltan_takes_notebook_from_geralt_transition"
+      frames: 145
+
+    anim_3947_high_sitting_determined_gesture_explain_04:
+      animation: "high_sitting_determined_gesture_explain_04"
+      frames: 233
+
+  animations.mimic:
+    mimicsanim_1_oriana_face_cs704_diva_feeding_face:
+      animation: "oriana:face:cs704_diva_feeding_face"
+      frames: 463
+
+    mimicsanim_2_boy_face_cs704_diva_feeding_face:
+      animation: "boy:face:cs704_diva_feeding_face"
+      frames: 463
+
+    mimicsanim_399_geralt_neutral_gesture_impatience_face:
+      animation: "geralt_neutral_gesture_impatience_face"
+      frames: 170
+
+    mimicsanim_22_afraid_anim_combined_face:
+      animation: "afraid_anim_combined_face"
+      frames: 700
+
+  actor.poses:
+    pose_0_high_standing_determined_idle:
+      idle_anim: "high_standing_determined_idle"
+
+    pose_0_low_standing_determined_idle:
+      idle_anim: "low_standing_determined_idle"
+
+    pose_1015_child_sleeping_r_sleepy_loop:
+      idle_anim: "child_sleeping_r_sleepy_loop"
+
+    pose_1985_woman_work_searching_ground_loop_02:
+      idle_anim: "woman_work_searching_ground_loop_02"
+
+    pose_2129_High_Standing_Devastated:
+      name: "Standing"
+      emotional_state: "Devastated"
+      status: "High"
+      idle_anim: "high_standing_devastated_idle"
+
+    pose_2095_High_Sitting_Determined:
+      name: "Sitting"
+      emotional_state: "Determined"
+      status: "High"
+      idle_anim: "high_sitting_determined_idle"
+
+    pose_2132_High_Standing_Hold_Book_Determined:
+      name: "Standing Hold Book"
+      emotional_state: "Determined"
+      status: "High"
+      idle_anim: "high_standing_hold_book_determined_idle"
+
+    pose_2140_High_Standing_Sad:
+      name: "Standing"
+      emotional_state: "Sad"
+      status: "High"
+      idle_anim: "high_standing_sad_idle"
+
+  cameras:
+    cam_1_Shot1_blood:
+      fov: 40.0
+      transform:
+        pos: [ -8.6978015900, 2.5533027649, 1.4361438751 ]
+        rot: [ 0.0, 356.1875305176, 239.3489990234 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 10.8756008148, 13.8756008148 ]
+        focus: [ 11.3756008148, 12.3756008148 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_2_Shot2_blood:
+      fov: 30.0
+      transform:
+        pos: [ -5.5892324448, -0.0144900382, 1.4861469269 ]
+        rot: [ 0.0, 355.0325317383, 328.1188964844 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 13.4397754669, 16.4397754669 ]
+        focus: [ 13.9397754669, 14.9397754669 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_3_Shot3_blood_hand:
+      fov: 20.0
+      transform:
+        pos: [ -6.5660815239, 2.0009987354, 1.1361484528 ]
+        rot: [ 0.0, 356.4625244141, 270.9186401367 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 12.7257156372, 15.7257156372 ]
+        focus: [ 13.2257156372, 14.2257156372 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_4_Shot2_blood_release:
+      fov: 30.0
+      transform:
+        pos: [ -5.8453679085, 0.1416173279, 1.4861469269 ]
+        rot: [ 0.0, 355.4725341797, 326.4412841797 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 12.9931936264, 15.9931936264 ]
+        focus: [ 13.4931936264, 14.4931936264 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_5_Shot5_blood_fall:
+      fov: 30.0
+      transform:
+        pos: [ -6.9730439186, 1.7855222225, 1.5111465454 ]
+        rot: [ 0.0, 355.6375122070, 249.2501831055 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 11.6216754913, 14.6216754913 ]
+        focus: [ 12.1216754913, 13.1216754913 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_6_Shot5_blood_fall2:
+      fov: 40.0
+      transform:
+        pos: [ -6.3268661499, 0.3375850022, 1.9861488342 ]
+        rot: [ 0.0, 355.6650085449, 309.7503662109 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.0179638863, 4.0179638863 ]
+        focus: [ 1.5179638863, 2.5179638863 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_7_Shot5_blood_fall3_girl:
+      fov: 25.0
+      transform:
+        pos: [ -5.9339189529, 1.5879478455, 2.4361419678 ]
+        rot: [ 0.0, 311.0874633789, 197.1112670898 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.9575977325, 4.9575977325 ]
+        focus: [ 2.4575977325, 3.4575977325 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_8_Shot5_blood_fall4:
+      fov: 25.0
+      transform:
+        pos: [ -6.3631711006, 0.3718641400, 2.0611476898 ]
+        rot: [ 0.0, 357.2600097656, 312.2531738281 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.0179638863, 4.0179638863 ]
+        focus: [ 1.5179638863, 2.5179638863 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_9_Shot5_blood_to_girl:
+      fov: 35.0
+      transform:
+        pos: [ -7.2327070236, 1.5279691219, 1.6361465454 ]
+        rot: [ 0.0, 341.5850219727, 236.6273803711 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.8419880867, 4.8419880867 ]
+        focus: [ 2.3419880867, 3.3419880867 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_11_Shot6_medic_establish:
+      fov: 40.0
+      transform:
+        pos: [ -6.9323878288, 3.6654555798, 2.1361522675 ]
+        rot: [ 0.0, 348.2125244141, 227.9660644531 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.8756791353, 3.8756790161 ]
+        focus: [ 1.3756791353, 2.3756790161 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_12_Shot6_dg_medic:
+      fov: 30.0
+      transform:
+        pos: [ -6.1730103493, 0.8782788515, 2.1611518860 ]
+        rot: [ 0.0, 344.3075256348, 279.3632812500 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.5448393822, 5.5448393822 ]
+        focus: [ 3.0448393822, 4.0448393822 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_13_Shot6_dg_orianna:
+      fov: 28.0
+      transform:
+        pos: [ -2.9150178432, 2.7493448257, 1.6111526489 ]
+        rot: [ 0.0, 2.2650284767, 137.1339111328 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.4231278896, 5.4231281281 ]
+        focus: [ 2.9231278896, 3.9231278896 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_14_Shot6_dg_boy:
+      fov: 43.0
+      transform:
+        pos: [ -11.0079746246, 3.1858873367, 1.4361534119 ]
+        rot: [ 0.0, 357.6450195313, 259.3961181641 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.4231278896, 5.4231281281 ]
+        focus: [ 2.9231278896, 3.9231278896 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_15_Shot6_dg_medic2:
+      fov: 20.0
+      transform:
+        pos: [ -6.1730103493, 0.8782788515, 2.1611518860 ]
+        rot: [ 0.0, 357.5625305176, 282.8823852539 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.5448393822, 5.5448393822 ]
+        focus: [ 3.0448393822, 4.0448393822 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_16_Shot6_dg_orianna2:
+      fov: 20.0
+      transform:
+        pos: [ -2.8606896400, 2.6709020138, 2.2861499786 ]
+        rot: [ 0.0, 352.7775268555, 132.1554565430 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.7073824406, 5.7073822021 ]
+        focus: [ 3.2073824406, 4.2073822021 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_17_Shot6_dg_medic3:
+      fov: 30.0
+      transform:
+        pos: [ -6.1730103493, 0.8782788515, 2.1611518860 ]
+        rot: [ 0.0, 354.5925292969, 279.5826416016 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.5459902287, 5.5459899902 ]
+        focus: [ 3.0459902287, 4.0459899902 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_18_Shot6_dg_orianna3_to_girl:
+      fov: 20.0
+      transform:
+        pos: [ -2.8763694763, 2.3896975517, 1.9361381531 ]
+        rot: [ 0.0, 358.8550415039, 127.5909423828 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.3834049702, 5.3834047318 ]
+        focus: [ 2.8834049702, 3.8834049702 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_19_Shot6_dg_girl:
+      fov: 20.0
+      transform:
+        pos: [ -6.1998705864, 1.0176030397, 2.4361400604 ]
+        rot: [ 0.0, 325.0849914551, 270.7274780273 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.8310852051, 4.8310852051 ]
+        focus: [ 2.3310852051, 3.3310852051 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_20_Shot6_dg_orianna4_close:
+      fov: 10.0
+      transform:
+        pos: [ -2.8763694763, 2.3896975517, 1.9361381531 ]
+        rot: [ 0.0, 0.9450300932, 124.7309570313 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.3935306072, 5.3935308456 ]
+        focus: [ 2.8935306072, 3.8935306072 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_21_Shot6_dg_boy2:
+      fov: 20.0
+      transform:
+        pos: [ -8.2923116684, 2.5667853355, 1.7111530304 ]
+        rot: [ 0.0, 351.1000366211, 61.9750976563 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.1820001602, 4.1820001602 ]
+        focus: [ 1.6820001602, 2.6820001602 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_22_Shot6_dg_orianna4_close_pan:
+      fov: 10.0
+      transform:
+        pos: [ -3.2473948002, 2.1348743439, 1.9361381531 ]
+        rot: [ 0.0, 1.2750297785, 124.0435180664 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.3935306072, 5.3935308456 ]
+        focus: [ 2.8935306072, 3.8935306072 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_14_Shot0_geralt_reads:
+      fov: 30.0
+      transform:
+        pos: [ -5.9315395355, 5.0728173256, 2.0611591339 ]
+        rot: [ 0.0, 359.1025695801, 257.0078125000 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.4883706570, 4.4883708954 ]
+        focus: [ 1.9883706570, 2.9883706570 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_15_Shot0_geralt_reads_pan:
+      fov: 28.0
+      transform:
+        pos: [ -5.7372465134, 5.0264654160, 2.0611591339 ]
+        rot: [ 0.0, 359.1575622559, 255.8251342773 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.3408541679, 4.3408541679 ]
+        focus: [ 1.8408541679, 2.8408541679 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_16_Shot0_geralt_togame:
+      fov: 40.0
+      transform:
+        pos: [ -3.9938035011, 3.7831764221, 2.1861572266 ]
+        rot: [ 0.0, 355.9125671387, 37.8894653320 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.8666104078, 3.8666105270 ]
+        focus: [ 1.3666104078, 2.3666105270 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 440
+
+  placement: "ntr_bob_orianna_sp"
+    # INFO: world coordinates of used origin:
+      #pos: [ -180.0365447998, -443.1201477051, 11.4495849609 ]
+      #rot: [ 0.0, 94.1600112915, 0.0 ]
+
+  assets:
+    mimics:
+      Orianna_vampire_aggressive:
+        actor: Orianna_vampire
+        repo: "aggressive"
+        weight: 0.6
+        duration: 0.0
+
+      Orianna_vampire_neutral:
+        actor: Orianna_vampire
+        repo: "neutral"
+        weight: 0.6
+        duration: 1.5
+
+      Orianna_human_afraid:
+        actor: Orianna_human
+        repo: "afraid"
+        weight: 0.5
+        duration: 0.0
+
+      Orianna_human_sad:
+        actor: Orianna_human
+        repo: "sad"
+        weight: 0.5
+        duration: 0.0
+
+      Agneta_girl_sleeping:
+        actor: Agneta_girl
+        repo: "sleeping"
+        #eyes: "No anim"
+        weight: 1.0
+        duration: 0.0
+
+    actors:
+      Orianna_vampire:
+        repo: "Orianna_vampire"
+        by_voicetag: false
+        appearance: "oriana_blood_morph"
+        tags: [ "temp_orianna_vampire" ]
+
+      Orianna_human:
+        repo: "Orianna_human"
+        by_voicetag: false
+        appearance: "oriana"
+        tags: [ "temp_orianna_human" ]
+
+      Agneta_girl:
+        repo: "Agneta_girl"
+        by_voicetag: false
+        appearance: "bob_child_noble_female_03"
+        tags: [ "temp_agneta_girl" ]
+
+      Niellan_boy:
+        repo: "Niellan_boy"
+        by_voicetag: false
+        appearance: "niellan"
+        tags: [ "temp_niellan_boy" ]
+
+      bob_medic:
+        repo: "bob_medic"
+        by_voicetag: false
+        appearance: "bob_medic_04"
+        tags: [ "temp_bob_medic" ]
+
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      diary:
+        repo: "diary"
+        by_voicetag: false
+        appearance: "d"
+        tags: [ "ntr_geralt_orianna_diary" ]
+
+    props:
+      rich_armchair_broken_px:
+        repo: "rich_armchair_broken_px"
+
+    cameras:
+      cam_1_Shot1_blood:
+        repo: "cam_1_Shot1_blood"
+
+      cam_2_Shot2_blood:
+        repo: "cam_2_Shot2_blood"
+
+      cam_3_Shot3_blood_hand:
+        repo: "cam_3_Shot3_blood_hand"
+
+      cam_4_Shot2_blood_release:
+        repo: "cam_4_Shot2_blood_release"
+
+      cam_5_Shot5_blood_fall:
+        repo: "cam_5_Shot5_blood_fall"
+
+      cam_6_Shot5_blood_fall2:
+        repo: "cam_6_Shot5_blood_fall2"
+
+      cam_7_Shot5_blood_fall3_girl:
+        repo: "cam_7_Shot5_blood_fall3_girl"
+
+      cam_8_Shot5_blood_fall4:
+        repo: "cam_8_Shot5_blood_fall4"
+
+      cam_9_Shot5_blood_to_girl:
+        repo: "cam_9_Shot5_blood_to_girl"
+
+      cam_11_Shot6_medic_establish:
+        repo: "cam_11_Shot6_medic_establish"
+
+      cam_12_Shot6_dg_medic:
+        repo: "cam_12_Shot6_dg_medic"
+
+      cam_13_Shot6_dg_orianna:
+        repo: "cam_13_Shot6_dg_orianna"
+
+      cam_14_Shot6_dg_boy:
+        repo: "cam_14_Shot6_dg_boy"
+
+      cam_15_Shot6_dg_medic2:
+        repo: "cam_15_Shot6_dg_medic2"
+
+      cam_16_Shot6_dg_orianna2:
+        repo: "cam_16_Shot6_dg_orianna2"
+
+      cam_17_Shot6_dg_medic3:
+        repo: "cam_17_Shot6_dg_medic3"
+
+      cam_18_Shot6_dg_orianna3_to_girl:
+        repo: "cam_18_Shot6_dg_orianna3_to_girl"
+
+      cam_19_Shot6_dg_girl:
+        repo: "cam_19_Shot6_dg_girl"
+
+      cam_20_Shot6_dg_orianna4_close:
+        repo: "cam_20_Shot6_dg_orianna4_close"
+
+      cam_21_Shot6_dg_boy2:
+        repo: "cam_21_Shot6_dg_boy2"
+
+      cam_22_Shot6_dg_orianna4_close_pan:
+        repo: "cam_22_Shot6_dg_orianna4_close_pan"
+
+      cam_14_Shot0_geralt_reads:
+        repo: "cam_14_Shot0_geralt_reads"
+
+      cam_15_Shot0_geralt_reads_pan:
+        repo: "cam_15_Shot0_geralt_reads_pan"
+
+      cam_16_Shot0_geralt_togame:
+        repo: "cam_16_Shot0_geralt_togame"
+
+    animations:
+      bob_medic_high_sitting_determined_gesture_explain_04:
+        actor: "bob_medic"
+        repo: "anim_3947_high_sitting_determined_gesture_explain_04"
+        #duration: 7.7666668892
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_vampire_oriana_Root_cs704_diva_feeding:
+        actor: "Orianna_vampire"
+        repo: "anim_1_oriana_Root_cs704_diva_feeding"
+        #duration: 15.4333333969
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Agneta_girl_oriana_Root_cs704_diva_feeding:
+        actor: "Agneta_girl"
+        repo: "anim_2_oriana_Root_cs704_diva_feeding"
+        #duration: 15.4333333969
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_vampire_high_sitting_determined_to_high_standing_determined:
+        actor: "Orianna_vampire"
+        repo: "anim_12545_high_sitting_determined_to_high_standing_determined"
+        #duration: 5.6666665077
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_vampire_add_walk_one_step_forward_casual:
+        actor: "Orianna_vampire"
+        repo: "anim_12490_add_walk_one_step_forward_casual"
+        #duration: 3.9000000954
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_vampire_woman_work_searching_ground_start:
+        actor: "Orianna_vampire"
+        repo: "anim_14166_woman_work_searching_ground_start"
+        #duration: 2.1333334446
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      Orianna_vampire_woman_work_searching_ground_loop_02:
+        actor: "Orianna_vampire"
+        repo: "anim_14164_woman_work_searching_ground_loop_02"
+        #duration: 7.7333331108
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_hold_book_determined_gesture_flip_page:
+        actor: "geralt"
+        repo: "anim_11114_high_standing_hold_book_determined_gesture_flip_page"
+        #duration: 2.4666666985
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_high_standing_hold_book_determined_gesture_read:
+        actor: "geralt"
+        repo: "anim_11115_high_standing_hold_book_determined_gesture_read"
+        #duration: 9.1666669846
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+      geralt_zoltan_takes_notebook_from_geralt_transition:
+        actor: "geralt"
+        repo: "anim_11121_zoltan_takes_notebook_from_geralt_transition"
+        #duration: 4.8333334923
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.0
+        blendout: 0.0
+
+    animations.mimic:
+      Orianna_vampire_oriana_face_cs704_diva_feeding_face:
+        actor: "Orianna_vampire"
+        repo: "mimicsanim_1_oriana_face_cs704_diva_feeding_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      Agneta_girl_boy_face_cs704_diva_feeding_face:
+        actor: "Agneta_girl"
+        repo: "mimicsanim_2_boy_face_cs704_diva_feeding_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      Orianna_vampire_geralt_neutral_gesture_impatience_face:
+        actor: "Orianna_vampire"
+        repo: "mimicsanim_399_geralt_neutral_gesture_impatience_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+      Orianna_vampire_afraid_anim_combined_face:
+        actor: "Orianna_vampire"
+        repo: "mimicsanim_22_afraid_anim_combined_face"
+        #duration: 0.0
+        #weight: 0.6000000238
+        #clipfront: 0.0
+        #clipend: 99.0
+        #stretch: 1.0
+        blendin: 0.5000000000
+        blendout: 0.5000000000
+
+    actor.poses:
+      Orianna_human_High_Standing_Sad:
+        actor: "Orianna_human"
+        repo: "pose_2140_High_Standing_Sad"
+
+      Orianna_vampire_high_standing_determined_idle:
+        actor: "Orianna_vampire"
+        repo: "pose_0_high_standing_determined_idle"
+
+      Orianna_human_high_standing_determined_idle:
+        actor: "Orianna_human"
+        repo: "pose_0_high_standing_determined_idle"
+
+      Agneta_girl_low_standing_determined_idle:
+        actor: "Agneta_girl"
+        repo: "pose_0_low_standing_determined_idle"
+
+      Niellan_boy_low_standing_determined_idle:
+        actor: "Niellan_boy"
+        repo: "pose_0_low_standing_determined_idle"
+
+      bob_medic_high_standing_determined_idle:
+        actor: "bob_medic"
+        repo: "pose_0_high_standing_determined_idle"
+
+      Agneta_girl_child_sleeping_r_sleepy_loop:
+        actor: "Agneta_girl"
+        repo: "pose_1015_child_sleeping_r_sleepy_loop"
+
+      Orianna_human_woman_work_searching_ground_loop_02:
+        actor: "Orianna_human"
+        repo: "pose_1985_woman_work_searching_ground_loop_02"
+
+      Orianna_human_High_Standing_Devastated:
+        actor: "Orianna_human"
+        repo: "pose_2129_High_Standing_Devastated"
+
+      bob_medic_High_Sitting_Determined:
+        actor: "bob_medic"
+        repo: "pose_2095_High_Sitting_Determined"
+
+      geralt_High_Standing_Hold_Book_Determined:
+        actor: "geralt"
+        repo: "pose_2132_High_Standing_Hold_Book_Determined"
+
+      diary_High_Standing_Hold_Book_Determined:
+        actor: "diary"
+        repo: "pose_2132_High_Standing_Hold_Book_Determined"
+
+      geralt_high_standing_determined_idle:
+        actor: "geralt"
+        repo: "pose_0_high_standing_determined_idle"
+
+    soundbanks:
+      - ntr_quest
+
+storyboard:
+  #defaults:
+    #placement:
+      #Orianna_human: [[ -19.6668682098, -1.8939721584, 0.4711618423 ], [ 0.0, 0.0, 359.8899841309 ]]
+      #Agneta_girl: [[ -19.6850109100, -1.6541550159, 0.4619760513 ], [ 0.0, 0.0, 359.0926208496 ]]
+      #Niellan_boy: [[ -9.5408811569, 4.4765691757, 0.4742956161 ], [ 0.0, 0.0, 8.5800094604 ]]
+      #bob_medic: [[ -9.8472414017, 5.1491093636, 0.4607534409 ], [ 0.0, 0.0, 190.9600219727 ]]
+
+    #actor.pose:
+      #Orianna_human: Orianna_human_high_standing_determined_idle
+      #Agneta_girl: Agneta_girl_low_standing_determined_idle
+      #Niellan_boy: Niellan_boy_low_standing_determined_idle
+      #bob_medic: bob_medic_high_standing_determined_idle
+
+  section_storyboard_ui:
+    # shot Shot0 geralt reads
+    shot_ger_read:
+      - actor.hide: [0.0, Orianna_human]
+      - actor.hide: [0.0, Orianna_vampire]
+      - actor.hide: [0.0, Niellan_boy]
+      - actor.hide: [0.0, Agneta_girl]
+      - actor.hide: [0.0, bob_medic]
+      - prop.hide: [0.0, rich_armchair_broken_px]
+      - actor.pose: [0.0, Orianna_human_high_standing_determined_idle]
+      - actor.pose: [0.0, Agneta_girl_low_standing_determined_idle]
+      - actor.pose: [0.0, Niellan_boy_low_standing_determined_idle]
+      - actor.pose: [0.0, bob_medic_high_standing_determined_idle]
+      
+      - actor.lookat: [0.0, Orianna_vampire, NONE]
+      - actor.lookat: [0.0, Orianna_human, NONE]
+      - actor.lookat: [0.0, Agneta_girl, NONE]
+      - actor.placement: [0.0, Orianna_vampire, [ -19.6668682098, -1.8939721584, 0.4711618423 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.placement: [0.0, Agneta_girl, [ -19.6668682098, -1.8939721584, 0.4711618423 ], [ 0.0, 0.0, 0.0 ]]
+      
+      - actor.placement: [0.0, Niellan_boy, [ -9.5408811569, 4.4765691757, 0.4742956161 ], [ 0.0, 0.0, 8.5800094604 ]]
+      - actor.placement: [0.0, bob_medic, [ -9.8472414017, 5.1491093636, 0.4607534409 ], [ 0.0, 0.0, 190.9600219727 ]]
+      
+      - actor.placement: [0.0, geralt, [ -4.1458344460, 4.4429769516, 0.4466791153 ], [ 0.0, 0.0, 51.5899581909 ]]
+      - actor.pose: [0.0, geralt_High_Standing_Hold_Book_Determined]
+      - cam.blend.start: [0.0, cam_14_Shot0_geralt_reads, rapid]
+      - actor.lookat: [0.0, geralt, NONE]
+      - actor.pose: [0.0, diary_High_Standing_Hold_Book_Determined]
+      - actor.anim.additive: 
+          .@pos: [0.0, geralt_high_standing_hold_book_determined_gesture_flip_page]
+          blendin: 0.5
+          blendout: 0.5
+
+      - actor.anim.additive: 
+          actor: diary
+          .@pos: [0.0, anim_11112_high_standing_hold_book_determined_gesture_flip_page]
+          blendin: 0.5
+          blendout: 0.0
+
+    # shot Shot0 geralt reads pan
+    shot_ger_read2:
+      - cam.blend.end: [0.99, cam_15_Shot0_geralt_reads_pan, rapid]
+      - fade.out: [0.875, 0.5, [255,255,255,255]]
+      - actor.sound: [0.9, Orianna_vampire, Play_ntr_diary_feeding]
+      - actor.anim:
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, geralt_high_standing_hold_book_determined_gesture_read]
+
+      - actor.anim:
+          blendin: 0.5
+          blendout: 0.5
+          actor: diary
+          .@pos: [0.0, anim_11113_high_standing_hold_book_determined_gesture_read]
+
+    shot_blood1:
+      - fade.in: [0.0, 0.5]
+      #- actor.sound: [0.0, Orianna_vampire, Play_ntr_diary_feeding]
+      - actor.hide: [0.0, geralt]
+      - actor.hide: [0.0, diary]
+      #- actor.placement: [0.0, geralt, [ -4.1458344460, 4.4429769516, -2.4466791153 ], [ 0.0, 0.0, 51.5899581909 ]]
+      - actor.show: [0.0, Orianna_vampire]
+      - actor.show: [0.0, Agneta_girl]
+      - actor.mimic: [0.0, Orianna_vampire_aggressive]
+
+      - cam: [0.0, cam_1_Shot1_blood]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_vampire_oriana_Root_cs704_diva_feeding]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 0.0
+          clipend: 2.1
+      - actor.anim: 
+          .@pos: [0.0, Agneta_girl_oriana_Root_cs704_diva_feeding]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 0.0
+          clipend: 2.1
+
+      - actor.anim.mimic: 
+          .@pos: [0.0, Orianna_vampire_oriana_face_cs704_diva_feeding_face]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 0.0
+          clipend: 2.1
+      - actor.anim.mimic: 
+          .@pos: [0.0, Agneta_girl_boy_face_cs704_diva_feeding_face]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 0.0
+          clipend: 2.1
+
+    # shot Shot2 blood
+    shot_blood2:
+      - cam: [0.0, cam_2_Shot2_blood]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_vampire_oriana_Root_cs704_diva_feeding]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 2.2
+          clipend: 4.3
+      - actor.anim: 
+          .@pos: [0.0, Agneta_girl_oriana_Root_cs704_diva_feeding]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 2.2
+          clipend: 4.3
+
+      - actor.anim.mimic: 
+          .@pos: [0.0, Orianna_vampire_oriana_face_cs704_diva_feeding_face]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 2.2
+          clipend: 4.3
+      - actor.anim.mimic: 
+          .@pos: [0.0, Agneta_girl_boy_face_cs704_diva_feeding_face]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 2.2
+          clipend: 4.3
+
+    # shot Shot3 blood hand
+    shot_blood3_hand:
+      #- actor.placement: [0.0, Agneta_girl, [ -19.7954711914, -1.5939967632, 0.4619760513 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.placement: [0.0, Agneta_girl, [ -19.7100257874, -1.6009305716, 0.4619760513 ], [ 0.0, 0.0, 0.0 ]]
+      - cam: [0.0, cam_3_Shot3_blood_hand]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_vampire_oriana_Root_cs704_diva_feeding]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 4.5
+          clipend: 6.2
+      - actor.anim: 
+          .@pos: [0.0, Agneta_girl_oriana_Root_cs704_diva_feeding]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 4.5
+          clipend: 6.2
+
+      - actor.anim.mimic: 
+          .@pos: [0.0, Orianna_vampire_oriana_face_cs704_diva_feeding_face]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 4.5
+          clipend: 6.2
+      - actor.anim.mimic: 
+          .@pos: [0.0, Agneta_girl_boy_face_cs704_diva_feeding_face]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 4.5
+          clipend: 6.2
+
+    # shot Shot2 blood release
+    shot_blood4_release1:
+      #- actor.placement: [0.0, Agneta_girl, [ -19.6850109100, -1.6541550159, 0.4619760513 ], [ 0.0, 0.0, 359.0926208496 ]]
+      - actor.placement: [0.0, Agneta_girl, [ -19.6668682098, -1.8939721584, 0.4711618423 ], [ 0.0, 0.0, 0.0 ]]
+      - cam: [0.0, cam_4_Shot2_blood_release]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_vampire_oriana_Root_cs704_diva_feeding]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 7.1
+          clipend: 8.5
+      - actor.anim: 
+          .@pos: [0.0, Agneta_girl_oriana_Root_cs704_diva_feeding]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 7.1
+          clipend: 8.5
+
+      - actor.anim.mimic: 
+          .@pos: [0.0, Orianna_vampire_oriana_face_cs704_diva_feeding_face]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 7.1
+          clipend: 8.5
+      - actor.anim.mimic: 
+          .@pos: [0.0, Agneta_girl_boy_face_cs704_diva_feeding_face]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 7.1
+          clipend: 8.5
+
+    # shot Shot5 blood fall
+    shot_blood4_release2:
+      - actor.placement: [0.0, Agneta_girl, [ -17.5205574036, 8.6379594803, 0.4619760513 ], [ 0.0, 0.0, 316.7725830078 ]]
+      - cam: [0.0, cam_5_Shot5_blood_fall]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_vampire_oriana_Root_cs704_diva_feeding]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 8.7
+          clipend: 10.9
+          stretch: 0.8
+      - actor.anim: 
+          .@pos: [0.0, Agneta_girl_oriana_Root_cs704_diva_feeding]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 8.7
+          clipend: 10.9
+          stretch: 0.8
+
+      - actor.anim.mimic: 
+          .@pos: [0.0, Orianna_vampire_oriana_face_cs704_diva_feeding_face]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 8.7
+          clipend: 10.9
+          stretch: 0.8
+      - actor.anim.mimic: 
+          .@pos: [0.0, Agneta_girl_boy_face_cs704_diva_feeding_face]
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 8.7
+          clipend: 10.9
+          stretch: 0.8
+
+    # shot Shot5 blood fall2
+    shot_blood4_fall1:
+      - actor.placement: [0.0, Orianna_vampire, [ -5.6299977303, 1.2861597538, 0.4220142365 ], [ 0.0, 0.0, 160.1601867676 ]]
+      - actor.placement: [0.0, Agneta_girl, [ -5.4881029129, 0.0452868342, -0.0475711823 ], [ 0.0, 0.0, 49.0629577637 ]]
+      - actor.pose: [0.0, Agneta_girl_child_sleeping_r_sleepy_loop]
+      - cam: [0.0, cam_6_Shot5_blood_fall2]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_vampire_high_sitting_determined_to_high_standing_determined]
+          clipfront: 1.5
+          blendin: 0.0
+          blendout: 0.0
+          #clipend: 5.0
+      - actor.lookat: [0.6, Orianna_vampire, Agneta_girl]
+      - actor.mimic: [0.0, Orianna_vampire_neutral]
+      - actor.anim.mimic: 
+          .@pos: [0.8, Orianna_vampire_geralt_neutral_gesture_impatience_face]
+          blendin: 0.5
+          blendout: 0.5
+          weight: 0.7
+
+    shot_blood4_fall2:
+      - cam: [0.0, cam_6_Shot5_blood_fall2]
+      #- actor.anim.mimic: 
+      #    .@pos: [0.0, Orianna_human_geralt_neutral_gesture_impatience_face]
+      #    blendin: 0.5
+      #    blendout: 0.5
+      #    weight: 0.7
+
+    # shot Shot5 blood fall3 girl
+    shot_blood4_fall3:
+      - cam: [0.0, cam_7_Shot5_blood_fall3_girl]
+      - actor.mimic: [0.0, Agneta_girl_sleeping]
+
+    # shot Shot5 blood fall4
+    shot_blood4_fall_to_girl1:
+      - cam: [0.0, cam_8_Shot5_blood_fall4]
+      - actor.anim: 
+          .@pos: [0.0, Orianna_vampire_add_walk_one_step_forward_casual]
+          blendin: 0.5
+          clipend: 2.5
+
+      - actor.anim.mimic: 
+          .@pos: [0.0, Orianna_vampire_afraid_anim_combined_face]
+          blendin: 0.5
+          blendout: 0.5
+          weight: 0.7
+
+    # shot Shot5 blood to girl
+    shot_blood4_fall_to_girl2:
+      - actor.placement: [0.0, Orianna_vampire, [ -5.7205615044, 0.7048636079, 0.4220142365 ], [ 0.0, 0.0, 166.3201599121 ]]
+      - actor.pose: [0.5, Orianna_human_woman_work_searching_ground_loop_02]
+      - cam: [0.0, cam_9_Shot5_blood_to_girl]
+
+      - actor.anim: # 2.1333334
+          .@pos: [0.0, Orianna_vampire_woman_work_searching_ground_start]
+          blendin: 0.4
+          blendout: 0.4
+
+    shot_blood4_fall_to_girl3:
+      - fade.out: [0.8333, 0.5, [255,255,255,255]]
+      - actor.sound: [1.0, Orianna_vampire, Stop_ntr_diary_feeding]
+      - actor.anim: # 7+
+          actor: Orianna_vampire
+          .@pos: [0.0, anim_14162_woman_work_searching_ground_loop_02]
+          blendin: 0.4
+          blendout: 0.0
+          clipend: 3.0
+
+    # shot Shot6 medic establish
+    shot_medic_establish:
+      - fade.in: [0.0, 0.5]
+      - actor.hide: [0.0, Orianna_vampire]
+      - actor.show: [0.0, Orianna_human]
+      - actor.show: [0.0, bob_medic]
+      - actor.show: [0.0, Niellan_boy]
+      - prop.show: [0.0, rich_armchair_broken_px]
+      - prop.placement: [0.0, rich_armchair_broken_px, [ -2.8018243313, 2.1925015450, 0.4736680984 ], [ 0.0, 0.0, 108.0199356079 ]]
+      - actor.placement: [0.0, Orianna_human, [ -5.4713764191, 0.8011155128, 0.4220142365 ], [ 0.0, 0.0, 286.8196105957 ]]
+      - actor.placement: [0.0, Agneta_girl, [ -4.2253117561, 1.4525365829, 0.4544754028 ], [ 0.0, 0.0, 99.1129455566 ]]
+      - actor.placement: [0.0, bob_medic, [ -3.2301969528, 1.8929992914, 0.4652519226 ], [ 0.0, 0.0, 122.1000442505 ]]
+      - actor.pose: [0.0, Orianna_human_High_Standing_Devastated]
+      - actor.pose: [0.0, bob_medic_High_Sitting_Determined]
+      
+      - cam: [0.0, cam_11_Shot6_medic_establish]
+      - actor.mimic: [0.0, Agneta_girl_sleeping]
+      - actor.mimic: [0.0, Orianna_human_sad]
+      - actor.lookat: [0.0, Orianna_human, Agneta_girl]
+      - actor.lookat: [0.0, bob_medic, Agneta_girl]
+
+    # shot Shot6 dg medic
+    shot_medic_dg1:
+      - cam: [0.3, cam_12_Shot6_dg_medic]
+      - actor.lookat: [0.0, bob_medic, Orianna_human]
+      - actor.anim.additive: 
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, bob_medic_high_sitting_determined_gesture_explain_04]
+
+    # shot Shot6 dg orianna
+    shot_ori_dg1:
+      - cam: [0.0, cam_13_Shot6_dg_orianna]
+      - actor.lookat: [0.0, Orianna_human, bob_medic]
+      - actor.anim.mimic: 
+          blendin: 0.5
+          blendout: 0.5
+          weight: 0.7
+          actor: Orianna_human
+          .@pos: [0.0, mimicsanim_338_nod_head_accent_face]
+      - actor.lookat: [0.0, Niellan_boy, Agneta_girl]
+      - actor.placement: [0.0, Niellan_boy, [ -9.7824335098, 3.5601897240, 0.4388942719 ], [ 0.0, 0.0, 222.6398925781 ]]
+      
+    # shot Shot6 dg boy
+    shot_boy_dg1:
+      - cam: [0.0, cam_14_Shot6_dg_boy]
+      - actor.anim:  #duration 7.9666667 sec
+          blendin: 0.0
+          blendout: 0.0
+          clipend: 3.0
+          actor: Niellan_boy
+          .@pos: [0.0, anim_3737_low_standing_bored_gesture_lean_right]
+      - actor.anim:
+          actor: bob_medic
+          .@pos: [0.0, anim_6823_high_sitting_determined_to_high_standing_determined]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.anim.mimic:
+          blendin: 0.5
+          blendout: 0.5
+          actor: Niellan_boy
+          weight: 0.7
+          .@pos: [0.5, mimicsanim_495_geralt_reaction_grief_face]
+
+    # shot Shot6 dg boy2
+    shot_boy_dg2:
+      #- actor.placement: [0.0, Niellan_boy, [ -9.6970682144, 3.6480548382, 0.4388942719 ], [ 0.0, 0.0, 222.6398925781 ]]
+      - cam: [0.0, cam_21_Shot6_dg_boy2]
+      - actor.pose: [0.3, bob_medic_high_standing_determined_idle]
+      - actor.pose: [0.3, Orianna_human_High_Standing_Sad]
+      - actor.anim: #duration 7.9666667 sec
+          blendin: 0.0
+          blendout: 0.0
+          clipfront: 2.0
+          actor: Niellan_boy
+          .@pos: [0.0, anim_3737_low_standing_bored_gesture_lean_right]
+
+      - cam: [1.0, cam_17_Shot6_dg_medic3]
+      - actor.anim.additive:
+          actor: bob_medic
+          .@pos: [1.0, anim_6699_add_gesture_explain_10]
+          blendin: 0.5
+          blendout: 0.5
+
+    shot_dg_ori2:
+      - cam: [0.0, cam_16_Shot6_dg_orianna2]
+      - actor.anim.mimic:
+          blendin: 0.5
+          blendout: 0.5
+          actor: Orianna_human
+          .@pos: [0.0, mimicsanim_147_geralt_neutral_yes_slow_face]
+
+    shot_dg_medic2:
+      - cam: [0.0, cam_17_Shot6_dg_medic3]
+      - actor.anim.mimic: 
+          actor: bob_medic
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, mimicsanim_412_geralt_neutral_gesture_nod_face]
+
+    shot_dg_medic3:
+      - actor.anim.additive: 
+          blendin: 0.5
+          blendout: 0.5
+          actor: bob_medic
+          .@pos: [0.0, anim_6699_add_gesture_explain_10]
+      - actor.anim:
+          actor: bob_medic
+          .@pos: [0.8333, anim_6978_high_standing_determined_calm_exit_rightside]
+          blendin: 0.5
+          blendout: 0.0
+          clipend: 3.0
+
+    shot_dg_medic4:
+      - actor.lookat: [0.5, Orianna_human, Agneta_girl]
+      - actor.lookat: [0.3, bob_medic, NONE]
+      - actor.hide: [1.0, bob_medic]
+
+    #shot_dg_ori3:
+    #  - cam: [0.0, cam_18_Shot6_dg_orianna3_to_girl]
+    #  - actor.lookat: [0.0, Orianna_human, Agneta_girl]
+
+    shot_dg_girl3:
+      - cam: [0.0, cam_19_Shot6_dg_girl]
+
+    shot_dg_ori4:
+      - cam.blend.start: [0.0, cam_20_Shot6_dg_orianna4_close, rapid]
+      - cam.blend.end: [1.0, cam_22_Shot6_dg_orianna4_close_pan, rapid]
+      - actor.anim.mimic: 
+          actor: Orianna_human
+          blendin: 0.5
+          blendout: 0.5
+          weight: 0.6
+          .@pos: [0.0, mimicsanim_495_geralt_reaction_grief_face]
+
+      - fade.out: [0.9, 0.5, [255,255,255,255]]
+
+    # shot Shot0 geralt togame
+    shot_geralt_reads_finish:
+      - fade.in: [0.0, 0.5]
+      - actor.show: [0.0, geralt]
+      - actor.show: [0.0, diary]
+      - actor.hide: [0.0, Orianna_human]
+      - actor.hide: [0.0, Niellan_boy]
+      - actor.hide: [0.0, Agneta_girl]
+      - actor.hide: [0.0, bob_medic]
+      - prop.hide: [0.0, rich_armchair_broken_px]
+
+      - actor.pose: [0.0, geralt_High_Standing_Hold_Book_Determined]
+      - cam.blend.start: [0.0, cam_15_Shot0_geralt_reads_pan, rapid]
+      - cam.blend.end: [0.999, cam_14_Shot0_geralt_reads, rapid]
+      - actor.anim:
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, geralt_high_standing_hold_book_determined_gesture_read]
+
+      - actor.anim:
+          blendin: 0.5
+          blendout: 0.5
+          actor: diary
+          .@pos: [0.0, anim_11113_high_standing_hold_book_determined_gesture_read]
+      #- actor.anim: #duration 1.8333334 sec
+      #    actor: geralt
+      #    .@pos: [0.69444, anim_880_man_work_reading_book_stop]
+      #    blendin: 0.5
+      #    blendout: 0.0
+
+    shot_geralt_togame:
+      - actor.hide: [0.0, diary]
+      - cam.blend.togame: [0.0, cam_16_Shot0_geralt_togame]
+      - actor.gamestate: [0.0, geralt]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "Orianna_human", "Orianna_vampire", "Agneta_girl", "Niellan_boy", "bob_medic", "geralt", "diary" ]
+  props: [ "rich_armchair_broken_px" ]
+
+  section_start:
+    - PAUSE: 0.0
+    - NEXT: section_storyboard_ui
+
+  #script_call_attach_diary:
+  #  - SCRIPT:
+  #      function: NTR_CreateAttachment_S
+  #      parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+  #        - id: 5
+  #  - NEXT: section_storyboard_ui
+
+  section_storyboard_ui:
+    # shot Shot0 geralt reads
+    - CUE: shot_ger_read
+    - PAUSE: 2.4
+
+    # shot Shot1 blood
+    - CUE: shot_ger_read2
+    - PAUSE: 4.0
+    - PAUSE: 0.25
+
+    # shot Shot2 blood
+    - CUE: shot_blood1
+    - PAUSE: 2.1
+
+    # shot Shot3 blood hand
+    - CUE: shot_blood2
+    - PAUSE: 2.1
+
+    - CUE: shot_blood3_hand
+    - PAUSE: 1.7
+
+    - CUE: shot_blood4_release1
+    # (longest) anim: oriana:Root:cs704_diva_feeding
+    - PAUSE: 1.4
+
+    # shot Shot5 blood fall
+    - CUE: shot_blood4_release2
+    # (longest) anim: oriana:Root:cs704_diva_feeding
+    - PAUSE: 1.76
+    # shot Shot5 blood fall2
+
+    - CUE: shot_blood4_fall1
+    - PAUSE: 2.1666
+    - CUE: shot_blood4_fall2
+    - Orianna_human: "[2.0]Agneta?"
+
+    - CUE: shot_blood4_fall3
+    - PAUSE: 2.0
+
+    - CUE: shot_blood4_fall_to_girl1
+    - PAUSE: 2.5
+
+    - CUE: shot_blood4_fall_to_girl2
+    - PAUSE: 1.6333
+    - CUE: shot_blood4_fall_to_girl3
+    - Orianna_human: "[3.0]What have I done..."
+    - PAUSE: 0.25
+
+    # shot Shot6 medic establish
+    - CUE: shot_medic_establish
+    # (longest) anim: afraid_anim_combined_face
+    - PAUSE: 1.0
+    - CUE: shot_medic_dg1
+    - bob_medic: "The girl has rapid breathing and heartbeat, it seems that she has lost a significant amount of blood."
+    - bob_medic: "You say she fell and hurt herself?"
+
+    - CUE: shot_ori_dg1
+    - PAUSE: 0.5
+    - Orianna_human: "Sort of. Tell me, is she going to be all right?"
+    - CUE: shot_boy_dg1
+    - bob_medic: "[3.0]I'm afraid such injuries always leave consequences."
+    - CUE: shot_boy_dg2
+    - PAUSE: 2.0
+    - bob_medic: "[4.0]Let her drink more fluids and stay in bed."
+
+    - CUE: shot_dg_ori2
+    - PAUSE: 1.0
+    - Orianna_human: "Thank you so much." # "I'm grateful to you." # thank you so much
+
+    - CUE: shot_dg_medic2
+    - PAUSE: 0.5
+    - CUE: shot_dg_medic3
+    - bob_medic: "[3.0]Take good care of the girl. Another bleeding could be fatal for her."
+    - CUE: shot_dg_medic4
+    - PAUSE: 2.5
+
+    #- CUE: shot_dg_ori3
+    #- PAUSE: 1.5
+    - CUE: shot_dg_girl3
+    - PAUSE: 2.0
+    - CUE: shot_dg_ori4
+    - PAUSE: 5.0
+    - PAUSE: 0.25
+
+    - CUE: shot_geralt_reads_finish
+    #- geralt: "[3.3616]2114670660|Interesting… Regis might be right."
+    - geralt: "[6.0]Interesting, she seems to hesitate, as though a prey to some sort of inward conflict…"
+    - CUE: shot_geralt_togame
+    - PAUSE: 1.0
+
+    - NEXT: section_exit
+
+  section_exit:
+    #- CAMERA_BLEND: 2.0
+    - EXIT
+
