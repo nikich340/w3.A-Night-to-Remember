@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<mesh>
+    <mesh_data autohideDistance="100.00" isTwoSided="false" useExtraStreams="false" mergeInGlobalShadowMesh="true" entityProxy="false">
+        <LODs>
+            <LOD_info distance="0.00" />
+            <LOD_info distance="5.00" />
+            <LOD_info distance="12.00" />
+        </LODs>
+    </mesh_data>
+    <materials>
+        <material name="Material0" local="true" base="engine\materials\graphs\pbr_std_tint_mask_2det.w2mg">
+            <param name="Diffuse" type="handle:ITexture" value="dlc\dlcntr\data\entities\baron\body_01_ma__junior_d01.xbm" />
+            <param name="Normal" type="handle:ITexture" value="characters\models\secondary_npc\junior\model\body_01_ma__junior_n01.xbm" />
+            <param name="TintMask" type="handle:ITexture" value="dlc\dlcntr\data\entities\baron\body_01_ma__junior_a01.xbm" />
+            <param name="AOPower" type="Float" value="0.3" />
+            <param name="DetailPower" type="Float" value="0.9" />
+            <param name="RSpecScale" type="Float" value="1" />
+            <param name="RSpecBase" type="Float" value="0" />
+            <param name="DetailNormal1" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_cloth_04.xbm" />
+            <param name="DetailNormal2" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_rope_01.xbm" />
+            <param name="DetailTile1" type="Vector" value="18; 18; 1; 1" />
+            <param name="DetailTile2" type="Vector" value="40; 40; 1; 1" />
+            <param name="AmbientPower" type="Float" value="0.3" />
+            <param name="DetailRange" type="Float" value="10" />
+            <param name="SpecularColor" type="Color" value="51; 51; 51; 255" />
+            <param name="FresnelPower" type="Float" value="3" />
+            <param name="FresnelStrenght" type="Float" value="0.1" />
+        </material>
+        <material name="Material3" local="true" base="engine\materials\graphs\pbr_std_tint_mask_det.w2mg">
+            <param name="Normal" type="handle:ITexture" value="characters\models\secondary_npc\junior\model\body_01_ma__junior_n01.xbm" />
+            <param name="Diffuse" type="handle:ITexture" value="dlc\dlcntr\data\entities\baron\body_01_ma__junior_d01.xbm" />
+            <param name="TintMask" type="handle:ITexture" value="dlc\dlcntr\data\entities\baron\body_01_ma__junior_a01.xbm" />
+            <param name="SpecularColor" type="Color" value="63; 74; 88; 255" />
+            <param name="RSpecScale" type="Float" value="2" />
+            <param name="RSpecBase" type="Float" value="-1.2" />
+            <param name="DetailPower" type="Float" value="0.8" />
+            <param name="Translucency" type="Float" value="0.1" />
+            <param name="AOPower" type="Float" value="0.6" />
+            <param name="DetailNormal" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_cloth_02.xbm" />
+            <param name="DetailTile" type="Vector" value="35; 25; 1; 1" />
+            <param name="DetailRange" type="Float" value="10" />
+            <param name="DetailNormal1" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_leather_04.xbm" />
+            <param name="DetailNormal2" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_leather_04.xbm" />
+            <param name="DetailTile2" type="Vector" value="30; 30; 1; 1" />
+            <param name="AmbientPower" type="Float" value="0.4" />
+            <param name="DetailTile1" type="Vector" value="25; 25; 1; 1" />
+            <param name="DetailRotation" type="Float" value="0" />
+        </material>
+        <material name="Material1" local="true" base="engine\materials\graphs\pbr_std_tint_mask_det.w2mg">
+            <param name="Normal" type="handle:ITexture" value="characters\models\secondary_npc\junior\model\body_01_ma__junior_n01.xbm" />
+            <param name="Diffuse" type="handle:ITexture" value="dlc\dlcntr\data\entities\baron\body_01_ma__junior_d01.xbm" />
+            <param name="TintMask" type="handle:ITexture" value="dlc\dlcntr\data\entities\baron\body_01_ma__junior_a01.xbm" />
+            <param name="AOPower" type="Float" value="0.1" />
+            <param name="Translucency" type="Float" value="0.1" />
+            <param name="DetailPower" type="Float" value="0.8" />
+            <param name="SpecularColor" type="Color" value="121; 131; 135; 255" />
+            <param name="RSpecScale" type="Float" value="1" />
+            <param name="RSpecBase" type="Float" value="-0.2" />
+            <param name="DetailNormal" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_leather_02.xbm" />
+            <param name="DetailTile" type="Vector" value="32; 32; 1; 1" />
+            <param name="DetailRange" type="Float" value="10" />
+            <param name="DetailRotation" type="Float" value="0" />
+            <param name="DetailAlbedoPower" type="Float" value="2" />
+            <param name="ColorShift_ BlendColors" type="Float" value="0" />
+            <param name="ColorShift_ KeepGray" type="Float" value="1" />
+            <param name="ColorShift_Enabled" type="Float" value="0" />
+            <param name="Roughness_min" type="Float" value="0" />
+            <param name="Roughness_max" type="Float" value="1" />
+        </material>
+        <material name="Material4" local="true" base="engine\materials\graphs\pbr_std_tint_mask_det.w2mg">
+            <param name="Normal" type="handle:ITexture" value="characters\models\secondary_npc\junior\model\body_01_ma__junior_n01.xbm" />
+            <param name="Diffuse" type="handle:ITexture" value="dlc\dlcntr\data\entities\baron\body_01_ma__junior_d01.xbm" />
+            <param name="Translucency" type="Float" value="0.1" />
+            <param name="DetailPower" type="Float" value="1" />
+            <param name="SpecularColor" type="Color" value="59; 59; 59; 255" />
+            <param name="RSpecScale" type="Float" value="1" />
+            <param name="RSpecBase" type="Float" value="0" />
+            <param name="DetailTile" type="Vector" value="12; 12; 1; 1" />
+            <param name="DetailRotation" type="Float" value="0" />
+            <param name="DetailNormal" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_cloth_02.xbm" />
+            <param name="DetailRange" type="Float" value="20" />
+            <param name="TintMask" type="handle:ITexture" value="dlc\dlcntr\data\entities\baron\body_01_ma__junior_a01.xbm" />
+            <param name="DetailAlbedoPower" type="Float" value="2" />
+            <param name="ColorShift_ BlendColors" type="Float" value="0" />
+            <param name="ColorShift_ KeepGray" type="Float" value="1" />
+            <param name="ColorShift_Enabled" type="Float" value="0" />
+            <param name="AOPower" type="Float" value="0.4" />
+            <param name="Roughness_min" type="Float" value="0" />
+            <param name="Roughness_max" type="Float" value="1" />
+        </material>
+        <material name="Material2" local="true" base="engine\materials\graphs\pbr_std_tint_mask_det.w2mg">
+            <param name="Normal" type="handle:ITexture" value="characters\models\secondary_npc\junior\model\body_01_ma__junior_n01.xbm" />
+            <param name="Diffuse" type="handle:ITexture" value="dlc\dlcntr\data\entities\baron\body_01_ma__junior_d01.xbm" />
+            <param name="TintMask" type="handle:ITexture" value="dlc\dlcntr\data\entities\baron\body_01_ma__junior_a01.xbm" />
+            <param name="AOPower" type="Float" value="0.6" />
+            <param name="DetailPower" type="Float" value="0.1" />
+            <param name="SpecularColor" type="Color" value="186; 171; 148; 255" />
+            <param name="RSpecScale" type="Float" value="0.95" />
+            <param name="RSpecBase" type="Float" value="0" />
+            <param name="DetailRange" type="Float" value="10" />
+        </material>
+        <material name="Material5" local="true" base="engine\materials\graphs\pbr_std.w2mg">
+            <param name="Diffuse" type="handle:ITexture" value="dlc\dlcntr\data\entities\baron\body_01_ma__junior_d01.xbm" />
+            <param name="Normal" type="handle:ITexture" value="characters\models\secondary_npc\junior\model\body_01_ma__junior_n01.xbm" />
+            <param name="TintMask" type="handle:ITexture" value="dlc\dlcntr\data\entities\baron\body_01_ma__junior_a01.xbm" />
+            <param name="DetailPower" type="Float" value="0.9" />
+            <param name="RSpecScale" type="Float" value="1" />
+            <param name="RSpecBase" type="Float" value="0" />
+            <param name="DetailNormal1" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_cloth_04.xbm" />
+            <param name="DetailNormal2" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_rope_01.xbm" />
+            <param name="DetailTile1" type="Vector" value="18; 18; 1; 1" />
+            <param name="DetailTile2" type="Vector" value="40; 40; 1; 1" />
+            <param name="AmbientPower" type="Float" value="0.3" />
+            <param name="DetailRange" type="Float" value="10" />
+            <param name="SpecularColor" type="Color" value="51; 51; 51; 255" />
+        </material>
+    </materials>
+</mesh>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<mesh>
+    <mesh_data autohideDistance="50.00" isTwoSided="false" useExtraStreams="false" mergeInGlobalShadowMesh="true" entityProxy="false">
+        <LODs>
+            <LOD_info distance="0.00" />
+            <LOD_info distance="8.00" />
+        </LODs>
+    </mesh_data>
+    <materials>
+        <material name="Material0" local="true" base="characters\models\common\materials\other\scabbard_leather.w2mi">
+            <param name="Normal" type="handle:ITexture" value="characters\models\geralt\scabbards\model\textures\scabbard_sabre_1\pattern_2\scabbard_sabre_1_2__n01.xbm" />
+            <param name="Diffuse" type="handle:ITexture" value="characters\models\geralt\scabbards\model\textures\scabbard_sabre_1\pattern_2\scabbard_sabre_1_2__d01.xbm" />
+            <param name="Translucency" type="Float" value="0" />
+            <param name="DetailPower" type="Float" value="1" />
+            <param name="SpecularColor" type="Color" value="140; 139; 136; 255" />
+            <param name="RSpecScale" type="Float" value="0.8" />
+            <param name="RSpecBase" type="Float" value="-0.28" />
+            <param name="DetailRange" type="Float" value="5" />
+            <param name="TintMask" type="handle:ITexture" value="characters\models\geralt\scabbards\model\textures\scabbard_sabre_1\pattern_1\scabbard_sabre_1_1__a01.xbm" />
+            <param name="DetailAlbedoPower" type="Float" value="2" />
+            <param name="ColorShift_ BlendColors" type="Float" value="0" />
+            <param name="ColorShift_ KeepGray" type="Float" value="1" />
+            <param name="ColorShift_Enabled" type="Float" value="1" />
+            <param name="Roughness_min" type="Float" value="0" />
+            <param name="Roughness_max" type="Float" value="1" />
+            <param name="DetailTile1" type="Vector" value="7; 7; 25; 1" />
+            <param name="DetailRotation1" type="Float" value="0" />
+            <param name="DetailNormal1" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_leather_01.xbm" />
+            <param name="DetailTile2" type="Vector" value="2; 3; 25; 1" />
+            <param name="DetailRotation2" type="Float" value="0" />
+            <param name="DetailNormal2" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_deco_patern_01.xbm" />
+            <param name="AmbientPower" type="Float" value="0.5" />
+        </material>
+        <material name="Material1" local="true" base="characters\models\common\materials\other\scabbard_metal.w2mi">
+            <param name="VarianceOffset" type="Float" value="1" />
+            <param name="VarianceColor" type="Color" value="128; 128; 128; 255" />
+            <param name="Normal" type="handle:ITexture" value="characters\models\geralt\scabbards\model\textures\scabbard_sabre_1\pattern_2\scabbard_sabre_1_2__n01.xbm" />
+            <param name="Diffuse" type="handle:ITexture" value="characters\models\geralt\scabbards\model\textures\scabbard_sabre_1\pattern_2\scabbard_sabre_1_2__d01.xbm" />
+            <param name="Translucency" type="Float" value="0" />
+            <param name="DetailPower" type="Float" value="1" />
+            <param name="SpecularColor" type="Color" value="52; 73; 80; 255" />
+            <param name="RSpecScale" type="Float" value="1" />
+            <param name="RSpecBase" type="Float" value="0" />
+            <param name="DetailTile" type="Vector" value="10; 10; 1; 1" />
+            <param name="DetailRotation" type="Float" value="0" />
+            <param name="DetailNormal" type="handle:ITexture" value="characters\models\common\textures\detailmaps_pbr\detailmap_metal_02.xbm" />
+            <param name="DetailRange" type="Float" value="5" />
+        </material>
+    </materials>
+</mesh>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<mesh>
+    <mesh_data autohideDistance="100.00" isTwoSided="false" useExtraStreams="true" mergeInGlobalShadowMesh="true" entityProxy="false">
+        <LODs>
+            <LOD_info distance="0.00" />
+            <LOD_info distance="5.00" />
+        </LODs>
+    </mesh_data>
+    <materials>
+        <material name="Material0" local="true" base="characters\models\common\materials\skin_body\skin_body__ma_01.w2mi">
+            <param name="Ambient" type="handle:ITexture" value="dlc\bob\data\characters\models\main_npc\regis\model\g_01_ma__regis_a01.xbm" />
+            <param name="Diffuse" type="handle:ITexture" value="dlc\bob\data\characters\models\main_npc\dettlaff\model\g_01_ma__dettlaff_vampire_d01.xbm" />
+            <param name="Normal" type="handle:ITexture" value="dlc\bob\data\characters\models\main_npc\regis\model\g_01_ma__regis_vampire_n01.xbm" />
+        </material>
+        <material name="Material1" local="true" base="characters\models\common\materials\skin_body\skin_body__ma_01_lod.w2mi">
+            <param name="Diffuse" type="handle:ITexture" value="dlc\bob\data\characters\models\main_npc\dettlaff\model\g_01_ma__dettlaff_vampire_d01.xbm" />
+            <param name="Normal" type="handle:ITexture" value="dlc\bob\data\characters\models\main_npc\regis\model\g_01_ma__regis_vampire_n01.xbm" />
+        </material>
+    </materials>
+</mesh>
