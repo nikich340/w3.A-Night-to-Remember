@@ -67,7 +67,7 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
+        blur: [ 0.0, 6.0 ]
         focus: [ 1.0, 5.0 ]
         intensity: 0.2500000000
       event_generator:
@@ -97,7 +97,7 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
+        blur: [ 0.0, 6.0 ]
         focus: [ 1.0, 5.0 ]
         intensity: 0.2500000000
       event_generator:
@@ -227,7 +227,7 @@ storyboard:
 
   section_storyboard_ui:
     # shot Shot1
-    shot_0:
+    shot_0a:
       - actor.placement: [0.0, geralt, [ 16.2912902832, -11.9979248047, 0.0696029663 ], [ 0.0, 0.0, 100.5999832153 ]]
       - actor.placement: [0.0, fat_bandit, [ 18.7664794922, -11.1140747070, 0.0580406189 ], [ 0.0, 0.0, 120.4599838257 ]]
       - actor.placement: [0.0, bandit_2, [ 21.1300964355, -7.9724121094, 0.0653228760 ], [ 0.0, 0.0, 125.2900009155 ]]
@@ -241,6 +241,13 @@ storyboard:
           actor: fat_bandit
           blendin: 0.5
           blendout: 0.5
+
+    shot_0b:
+      - actor.anim.additive: 
+          actor: fat_bandit
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, anim_6697_add_gesture_explain_08]
 
     shot_01:
       - actor.anim: 
@@ -304,10 +311,11 @@ dialogscript:
     - NEXT: section_storyboard_ui
 
   section_storyboard_ui:
-    - CUE: shot_0
+    - CUE: shot_0a
     - PAUSE: 0.5
     # (longest) anim: ep1_geralt_lying_unconscious_to_low_sitting_ground_leaning_back_bored
     - fat_bandit: "[3.7467]2114670790|Hahaha, shove off, vargant!"
+    - CUE: shot_0b
     - fat_bandit: "[9.5995]2114670791|If you decide to help - our camp is on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater."
     - CUE: shot_01
     - PAUSE: 4.0

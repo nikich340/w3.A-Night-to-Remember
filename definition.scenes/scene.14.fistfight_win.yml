@@ -55,7 +55,7 @@ repository:
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 2.7602787018, 5.7602787018 ]
-        focus: [ 3.2602787018, 4.2602787018 ]
+        focus: [ 1.0, 4.2602787018 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -70,7 +70,7 @@ repository:
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 1.1569094658, 4.1569094658 ]
-        focus: [ 1.6569094658, 2.6569094658 ]
+        focus: [ 0.0, 2.6569094658 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -85,40 +85,70 @@ repository:
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 1.1569094658, 4.1569094658 ]
-        focus: [ 1.6569094658, 2.6569094658 ]
+        focus: [ 0.0, 2.6569094658 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
 
-    cam_5_Shot_band:
+    cam_5_Shot_band_close:
+      fov: 32.0
+      transform:
+        pos: [ 20.0638427734, -10.6165771484, 1.8445777893 ]
+        rot: [ 0.0, 351.8700256348, 351.1183471680 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.2970707417, 4.2970705032 ]
+        focus: [ 0.0, 2.7970707417 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_6_Shot_ger_close:
       fov: 30.0
       transform:
-        pos: [ 20.1205444336, -10.9817504883, 1.8572654724 ]
-        rot: [ 0.0, 353.0250244141, 354.5973510742 ]
-      #zoom: 1.0
+        pos: [ 19.2101745605, -9.0996093750, 1.8195686340 ]
+        rot: [ 0.0, 354.4550170898, 245.2968750000 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.6967225075, 4.6967225075 ]
-        focus: [ 2.1967225075, 3.1967225075 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.3534142971, 4.3534145355 ]
+        focus: [ 0.0, 2.8534142971 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
-    cam_6_Shot_ger:
-      fov: 25.0
+    cam_5_Shot_band_med:
+      fov: 40.0
       transform:
-        pos: [ 19.0852661133, -8.8536987305, 1.9072647095 ]
-        rot: [ 0.0, 351.8150024414, 237.3921508789 ]
-      #zoom: 1.0
+        pos: [ 20.0638427734, -10.6165771484, 1.8445777893 ]
+        rot: [ 0.0, 349.8900146484, 348.4782104492 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.6094748974, 4.6094751358 ]
-        focus: [ 2.1094748974, 3.1094748974 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.2970707417, 4.2970705032 ]
+        focus: [ 0.0, 2.7970707417 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_6_Shot_ger_med:
+      fov: 38.0
+      transform:
+        pos: [ 19.2560729980, -9.1193847656, 1.8195686340 ]
+        rot: [ 0.0, 352.6125183105, 247.0023803711 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.3211369514, 4.3211369514 ]
+        focus: [ 0.0, 2.8211369514 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
         tags: [ "ext" ]
 
 production:
@@ -167,11 +197,17 @@ production:
       cam_4_Shot4:
         repo: "cam_4_Shot4"
 
-      cam_5_Shot_band:
-        repo: "cam_5_Shot_band"
+      cam_5_Shot_band_close:
+        repo: "cam_5_Shot_band_close"
 
-      cam_6_Shot_ger:
-        repo: "cam_6_Shot_ger"
+      cam_6_Shot_ger_close:
+        repo: "cam_6_Shot_ger_close"
+
+      cam_5_Shot_band_med:
+        repo: "cam_5_Shot_band_med"
+
+      cam_6_Shot_ger_med:
+        repo: "cam_6_Shot_ger_med"
 
     animations:
       geralt_man_fistfight_crawl_finish:
@@ -287,7 +323,7 @@ storyboard:
       #- actor.placement: [0.0, Big_bandit, [ 20.2732971191, -9.0687866211, 0.0622177124 ], [ 0.0, 0.0, 205.3399505615 ]]
       - cam.blend.start: [0.0, cam_3_Shot3]
       - cam.blend.key: [0.5, cam_4_Shot4]
-      - cam.blend.end: [0.8, cam_5_Shot_band]
+      - cam.blend.end: [0.8, cam_5_Shot_band_med]
       - actor.anim: 
           .@pos: [0.0, Big_bandit_dialogue_man_fistfight_hit_knockdown_f_getup_exploration_2]
           blendin: 0.5
@@ -297,7 +333,7 @@ storyboard:
 
     # shot Shot ger
     shot_6:
-      - cam: [0.0, cam_6_Shot_ger]
+      - cam: [0.0, cam_6_Shot_ger_med]
       - actor.anim.additive: 
           actor: geralt
           blendin: 0.5
@@ -310,7 +346,7 @@ storyboard:
           .@pos: [0.2, mimicsanim_419_geralt_neutral_gesture_question_ver05_face]
 
     shot_7:
-      - cam: [0.0, cam_5_Shot_band]
+      - cam: [0.0, cam_5_Shot_band_med]
       - actor.lookat: [0.1, Big_bandit, [ 0.3138969541, 0.7363720536, 2.3697013855 ]]
       - actor.lookat: [0.6, Big_bandit, geralt]
       - actor.anim.mimic: 
@@ -335,7 +371,7 @@ storyboard:
           .@pos: [1.0, anim_6714_add_gesture_slight_explain_04]
       
     shot_8_ger_listen_sceptic:
-      - cam: [0.0, cam_6_Shot_ger]
+      - cam: [0.0, cam_6_Shot_ger_med]
       - actor.anim.mimic: 
           actor: geralt
           blendin: 0.5
@@ -343,7 +379,7 @@ storyboard:
           .@pos: [0.0, mimicsanim_129_geralt_neutral_gesture_sceptical_remark_face]
 
     shot_8_band:
-      - cam: [0.0, cam_5_Shot_band]
+      - cam: [0.0, cam_5_Shot_band_med]
       # I can't say
       - actor.anim.additive: 
           actor: Big_bandit
@@ -360,7 +396,7 @@ storyboard:
       
 
     shot_8_ger_listen:
-      - cam: [0.0, cam_6_Shot_ger]
+      - cam: [0.0, cam_6_Shot_ger_close]
       - actor.anim.mimic: 
           actor: geralt
           blendin: 0.5
@@ -368,7 +404,7 @@ storyboard:
           .@pos: [0.0, mimicsanim_166_geralt_reaction_listening_new_info_face]
 
     shot_9_band:
-      - cam: [0.0, cam_5_Shot_band]
+      - cam.blend.start: [0.0, cam_5_Shot_band_med, rapid]
       # since vampire
       - actor.anim.additive: 
           actor: Big_bandit
@@ -385,15 +421,16 @@ storyboard:
           .@pos: [1.0, anim_6691_add_gesture_explain_02]
 
     shot_10_ger_listen2:
-      - cam: [0.5, cam_6_Shot_ger]
+      - cam.blend.end: [0.499, cam_5_Shot_band_close, rapid]
+      - cam: [0.5, cam_6_Shot_ger_close]
       - actor.anim.mimic: 
           actor: geralt
           blendin: 0.5
           blendout: 0.5
-          .@pos: [0.5, mimicsanim_399_geralt_neutral_gesture_impressed02_face]
+          .@pos: [0.5, mimicsanim_454_geralt_neutral_gesture_wondering_face]
 
-    shot_9_band2:
-      - cam: [0.0, cam_5_Shot_band]
+    shot_9_band2a:
+      - cam.blend.start: [0.0, cam_5_Shot_band_close, rapid]
       # we divided
       - actor.anim.additive: 
           actor: Big_bandit
@@ -401,30 +438,37 @@ storyboard:
           blendout: 0.5
           .@pos: [0.0, anim_6701_add_gesture_explain_12]
 
+    shot_9_band2b:
+      - cam.blend.end: [0.999, cam_5_Shot_band_med, rapid]
       # tbh
       - actor.anim.additive: 
           actor: Big_bandit
           blendin: 0.5
           blendout: 0.5
           weight: 0.75
-          .@pos: [1.0, anim_6699_add_gesture_explain_10]
+          .@pos: [0.0, anim_6699_add_gesture_explain_10]
 
-    shot_10_ger_listen2:
-      - cam: [0.0, cam_6_Shot_ger]
+    #shot_10_ger_listen2:
+    #  - cam: [0.0, cam_6_Shot_ger_med]
+    #  - actor.anim.mimic: 
+    #      actor: geralt
+    #      blendin: 0.5
+    #      blendout: 0.5
+    #      .@pos: [0.0, mimicsanim_156_geralt_pose_neutral_listening_face]
+
+    shot_10_ger_listen3:
+      - cam: [0.0, cam_6_Shot_ger_med]
       - actor.anim.mimic: 
           actor: geralt
           blendin: 0.5
           blendout: 0.5
           .@pos: [0.0, mimicsanim_156_geralt_pose_neutral_listening_face]
 
-    shot_10_ger_listen3:
-      - cam: [0.0, cam_6_Shot_ger]
-
     shot_11_band:
-      - cam: [0.0, cam_5_Shot_band]
+      - cam: [0.0, cam_5_Shot_band_med]
 
     shot_12_ger:
-      - cam: [0.0, cam_6_Shot_ger]
+      - cam: [0.0, cam_6_Shot_ger_med]
       - actor.anim.mimic: 
           actor: geralt
           blendin: 0.5
@@ -432,7 +476,7 @@ storyboard:
           .@pos: [0.0, mimicsanim_418_geralt_neutral_gesture_question_ver04_face]
 
     shot_13_band:
-      - cam: [0.0, cam_5_Shot_band]
+      - cam: [0.0, cam_5_Shot_band_med]
       - actor.anim.additive: 
           actor: Big_bandit
           blendin: 0.5
@@ -441,7 +485,7 @@ storyboard:
 
     shot_14_togame:
       - actor.gamestate: [0.0, geralt]
-      - cam.blend.togame: [0.0, cam_6_Shot_ger]
+      - cam.blend.togame: [0.0, cam_6_Shot_ger_med]
 
 dialogscript:
   player: "geralt"
@@ -472,6 +516,7 @@ dialogscript:
     # shot Shot ger
     - CUE: shot_6
     - geralt: "[1.0482]2114670800|Gonna answer me?"
+    - PAUSE: 1.5
     - CUE: shot_7
     - Big_bandit: "[4.7255]2114670801|Baron won't be happy… Alright, I'll tell you what I know."
     - CUE: shot_7a
@@ -489,8 +534,9 @@ dialogscript:
     - Big_bandit: "[12.3582]2114670809|The Baron was quite upset. But then we learned that Orianna is alive and in perfect health - people saw her in the city with the wee boy."
     - CUE: shot_10_ger_listen2
     - Big_bandit: "[17.5940]2114670810|The Baron is certain that this is his son, and very much wants to find this woman. However she is… elusive, everyone knows her, but where she is - no one seems to know."
-    - CUE: shot_9_band2
+    - CUE: shot_9_band2a
     - Big_bandit: "[8.0176]2114670811|So we divided into groups and now watching for places where she may appear."
+    - CUE: shot_9_band2b
     - Big_bandit: "[8.7508]2114670812|To be honest, I'm well tired of sittin' around here waitin'… So if you could find a way to help us, it'd be well appreciated!"
     - CUE: shot_10_ger_listen3
     - geralt: "[2.3149]2114670813|I see it now. It's a deal."

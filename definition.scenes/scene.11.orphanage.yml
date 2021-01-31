@@ -42,6 +42,12 @@ repository:
       frames: 358
 
   actor.poses:
+    pose_2139_High_Standing_Proud:
+      name: "Standing"
+      emotional_state: "Proud"
+      status: "High"
+      idle_anim: "high_standing_proud_idle"
+
     pose_0_high_standing_determined_idle:
       idle_anim: "high_standing_determined_idle"
 
@@ -94,33 +100,33 @@ repository:
         tags: [ "ext" ]
 
     cam_3_shot3_band:
-      fov: 25.0
+      fov: 30.0
       transform:
-        pos: [ 16.7651062012, -11.3601684570, 1.8696022034 ]
-        rot: [ 0.0, 353.3000183105, 281.7940979004 ]
-      #zoom: 1.0
+        pos: [ 16.5525207520, -11.4613037109, 1.8446006775 ]
+        rot: [ 0.0, 354.3450317383, 281.7117614746 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.7274003029, 5.7274003029 ]
-        focus: [ 3.2274003029, 4.2274003029 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.8982295990, 5.8982295990 ]
+        focus: [ 3.3982295990, 4.3982295990 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_4_shot4_ger:
-      fov: 20.0
+      fov: 30.0
       transform:
-        pos: [ 20.3893127441, -9.4808959961, 1.8696022034 ]
-        rot: [ 0.0, 354.1800231934, 133.4893188477 ]
-      #zoom: 1.0
+        pos: [ 20.0695495605, -9.3630371094, 1.7445945740 ]
+        rot: [ 0.0, 356.3800354004, 141.9292602539 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.8749971390, 5.8749971390 ]
-        focus: [ 3.3749971390, 4.3749971390 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.6659538746, 5.6659536362 ]
+        focus: [ 3.1659538746, 4.1659536362 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_5_shot5_gesture_enter:
@@ -143,59 +149,89 @@ repository:
       transform:
         pos: [ 17.1391906738, -8.6999511719, 1.8196029663 ]
         rot: [ 0.0, 349.5050354004, 242.3317565918 ]
-      #zoom: 1.0
+      zoom: 0.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 2.9186413288, 5.9186410904 ]
         focus: [ 3.4186413288, 4.4186410904 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
-    cam_8_shot7_ger:
-      fov: 20.0
+    cam_8_shot7_ger_close:
+      fov: 28.0
       transform:
-        pos: [ 22.1250915527, -9.5369873047, 1.7696037292 ]
-        rot: [ 0.0, 357.1500244141, 121.8271484375 ]
-      #zoom: 1.0
+        pos: [ 20.3251953125, -9.1879272461, 1.7696037292 ]
+        rot: [ 0.0, 356.9300231934, 146.4661865234 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.3056216240, 5.3056216240 ]
-        focus: [ 2.8056216240, 3.8056216240 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.4435601234, 4.4435601234 ]
+        focus: [ 0.9435601234, 2.9435601234 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
-    cam_9_shot8_bandit:
-      fov: 20.0
+    cam_9_shot8_bandit_close:
+      fov: 28.0
       transform:
-        pos: [ 18.6392517090, -10.2644042969, 1.8196029663 ]
-        rot: [ 0.0, 356.2150268555, 263.7546081543 ]
-      #zoom: 1.0
+        pos: [ 18.5159912109, -10.0807495117, 1.8694572449 ]
+        rot: [ 0.0, 353.2999572754, 264.8533630371 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.7802660465, 4.7802658081 ]
-        focus: [ 2.2802660465, 3.2802660465 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.6958184242, 5.6958184242 ]
+        focus: [ 1.1958184242, 4.1958184242 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_8_shot7_ger_med:
+      fov: 35.0
+      transform:
+        pos: [ 20.2352905273, -9.1911621094, 1.7696037292 ]
+        rot: [ 0.0, 355.9125061035, 151.0585937500 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.3999087811, 4.3999090195 ]
+        focus: [ 0.8999087811, 2.8999087811 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_9_shot8_bandit_med:
+      fov: 35.0
+      transform:
+        pos: [ 18.5685119629, -10.0600585938, 1.8694572449 ]
+        rot: [ 0.0, 352.1449584961, 261.5809020996 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.6704604626, 5.6704607010 ]
+        focus: [ 1.1704604626, 4.1704607010 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_10_shot9_to_fistfight:
-      fov: 35.0
+      fov: 40.0
       transform:
-        pos: [ 18.4335021973, -10.3170166016, 1.6196060181 ]
-        rot: [ 0.0, 353.6300354004, 287.2672119141 ]
-      #zoom: 1.0
+        pos: [ 18.1774902344, -8.9003906250, 1.7945213318 ]
+        rot: [ 0.0, 351.8974914551, 262.6802368164 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.9186413288, 5.9186410904 ]
-        focus: [ 3.4186413288, 4.4186410904 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.2537250519, 7.2537250519 ]
+        focus: [ 1.7537250519, 5.7537250519 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
 production:
@@ -247,11 +283,17 @@ production:
       cam_7_shot6:
         repo: "cam_7_shot6"
 
-      cam_8_shot7_ger:
-        repo: "cam_8_shot7_ger"
+      cam_8_shot7_ger_close:
+        repo: "cam_8_shot7_ger_close"
 
-      cam_9_shot8_bandit:
-        repo: "cam_9_shot8_bandit"
+      cam_9_shot8_bandit_close:
+        repo: "cam_9_shot8_bandit_close"
+
+      cam_8_shot7_ger_med:
+        repo: "cam_8_shot7_ger_med"
+
+      cam_9_shot8_bandit_med:
+        repo: "cam_9_shot8_bandit_med"
 
       cam_10_shot9_to_fistfight:
         repo: "cam_10_shot9_to_fistfight"
@@ -359,13 +401,17 @@ production:
         actor: "geralt"
         repo: "pose_2120_High_Standing_Aggressive"
 
+      fat_bandit_High_Standing_Proud:
+        actor: "fat_bandit"
+        repo: "pose_2139_High_Standing_Proud"
+
 storyboard:
   defaults:
     placement:
-      bandit_2: [[ 23.0559997559, -9.8716430664, 0.0673751831 ], [ 0.0, 0.0, 108.9000167847 ]]
+      bandit_2: [[ 23.0934143066, -10.2034301758, 0.0673751831 ], [ 0.0, 0.0, 77.8800125122 ]]
       bandit_3: [[ 21.8456726074, -8.5714721680, 0.0667266846 ], [ 0.0, 0.0, 90.1999435425 ]]
       geralt: [[ 17.1320190430, -11.6549682617, 0.0696029663 ], [ 0.0, 0.0, 297.5199890137 ]]
-      fat_bandit: [[ 19.8524475098, -10.3160400391, 0.0608367920 ], [ 0.0, 0.0, 122.3200607300 ]]
+      fat_bandit: [[ 19.7972106934, -10.2421875000, 0.0608024597 ], [ 0.0, 0.0, 128.3700866699 ]]
 
     actor.pose:
       #geralt: geralt_high_standing_determined_idle
@@ -404,75 +450,114 @@ storyboard:
   section_storyboard_ui2:
     shot_3:
       - cam: [0.0, cam_3_shot3_band]
+      - actor.pose: [0.0, fat_bandit_High_Standing_Proud]
 
     # shot shot4 ger
   section_choice_who:
     CHOICE_1:
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.pose: [0.0, fat_bandit_High_Standing_Proud]
       - cam: [0.0, cam_4_shot4_ger]
 
   section_traveler:
     shot_traveler_ger:
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.pose: [0.0, fat_bandit_High_Standing_Proud]
       - cam: [0.0, cam_4_shot4_ger]
+      - actor.anim.additive:
+          actor: geralt
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, anim_6705_add_gesture_question_04]
+
     shot_traveler_band:
       - cam: [0.0, cam_3_shot3_band]
 
   section_vampire:
     shot_vampire_ger:
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.pose: [0.0, fat_bandit_High_Standing_Proud]
       - cam: [0.0, cam_4_shot4_ger]
+      - actor.anim.additive:
+          actor: geralt
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, anim_6699_add_gesture_explain_10]
+
     shot_vampire_band:
       - cam: [0.0, cam_3_shot3_band]
 
   section_witcher:
     shot_witcher_ger:
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.pose: [0.0, fat_bandit_High_Standing_Proud]
       - cam: [0.0, cam_4_shot4_ger]
+      - actor.anim.additive:
+          actor: geralt
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, anim_7036_high_standing_determined_gesture_me]
+
     shot_witcher_band:
       - cam: [0.0, cam_3_shot3_band]
 
   section_storyboard_ui3:
+    shot_init:
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.pose: [0.0, fat_bandit_High_Standing_Proud]
     # shot shot5 gesture enter
     shot_5:
-      - actor.pose: [0.0, geralt_high_standing_determined_idle]
-      - actor.anim.additive: [0.0, fat_bandit_high_standing_aggressive_gesture_left_hand_flick_1]
+      #- actor.anim.additive: [0.0, fat_bandit_high_standing_aggressive_gesture_left_hand_flick_1]
 
-      - actor.placement.start: [0.55, fat_bandit, [ 19.8524475098, -10.3160400391, 0.0608367920 ], [ 0.0, 0.0, 122.3200607300 ], smooth]
-      - actor.placement.end: [0.8, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ], smooth]
+      #- actor.placement.start: [0.55, fat_bandit, [ 19.8524475098, -10.3160400391, 0.0608367920 ], [ 0.0, 0.0, 122.3200607300 ], smooth]
+      #- actor.placement.end: [0.8, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ], smooth]
       - actor.anim.additive:
-          .@pos: [0.3, anim_332_high_standing_determined_step_back_casual]
           actor: fat_bandit
-          clipend: 3.5
-          blendin: 0.0
+          blendin: 0.5
+          blendout: 0.5
+          .@pos: [0.0, anim_7256_high_standing_proud_gesture_you]
+
+      - actor.anim:
+          .@pos: [0.251, anim_7258_high_standing_proud_one_step_back]
+          actor: fat_bandit
+          clipend: 3.4
+          blendin: 0.5
           blendout: 0.0
 
     # shot shot6
     shot_7:
-      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
-      #- actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 73.4800338745 ]]
+      - actor.placement: [0.0, geralt, [ 19.1508178711, -10.4790039063, 0.0593566895 ], [ 0.0, 0.0, 307.0899963379 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.1570129395, -10.0559082031, 0.0616607666 ], [ 0.0, 0.0, 135.5201110840 ]]
       - cam: [0.0, cam_7_shot6]
+
+      - actor.pose: [0.5, fat_bandit_High_Standing_Aggressive]
+      - actor.anim:
+          .@pos: [0.0, anim_7271_high_standing_proud_to_high_standing_aggressive]
+          actor: fat_bandit
+          blendin: 0.5
+          blendout: 0.5
+
       - actor.anim: 
           .@pos: [0.0, geralt_high_standing_aggressive_enter_frontal]
-          clipfront: 1.0
+          clipfront: 1.5
 
   section_storyboard_ui4:
     # shot shot7 ger
     shot_d1_ger:
-      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
-      - actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ]]
+      - actor.placement: [0.0, geralt, [ 19.1508178711, -10.4790039063, 0.0593566895 ], [ 0.0, 0.0, 307.0899963379 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.1570129395, -10.0559082031, 0.0616607666 ], [ 0.0, 0.0, 135.5201110840 ]]
       - actor.pose: [0.0, geralt_High_Standing_Aggressive]
-      - cam: [0.0, cam_8_shot7_ger]
+      - cam: [0.0, cam_8_shot7_ger_med]
 
     # shot shot8 bandit
     shot_d1_band:
-      - cam: [0.0, cam_9_shot8_bandit]
+      - cam: [0.0, cam_9_shot8_bandit_med]
 
     shot_d2_ger:
-      - cam: [0.0, cam_8_shot7_ger]
+      - cam: [0.0, cam_8_shot7_ger_close]
 
     shot_d2_band:
-      - cam: [0.0, cam_9_shot8_bandit]
+      - cam: [0.0, cam_9_shot8_bandit_close]
       - actor.anim.additive: 
           actor: fat_bandit
           blendin: 0.5
@@ -480,7 +565,7 @@ storyboard:
           .@pos: [0.0, anim_6926_high_standing_aggressive_gesture_point_forward_l]
 
     shot_d3_ger:
-      - cam: [0.0, cam_8_shot7_ger]
+      - cam: [0.0, cam_8_shot7_ger_close]
       - actor.anim:
           actor: geralt
           .@pos: [0.0, anim_6932_high_standing_aggressive_to_high_standing_determined]
@@ -489,9 +574,11 @@ storyboard:
       - actor.pose: [0.5, geralt_high_standing_determined_idle]
 
     shot_d3_band:
-      - cam: [0.0, cam_9_shot8_bandit]
-
+      - cam.blend.start: [0.0, cam_9_shot8_bandit_close, rapid]
+      - actor.placement: [0.0, geralt, [ 19.1508178711, -10.4790039063, 0.0593566895 ], [ 0.0, 0.0, 289.8200073242 ]]
+      
     shot_d3_band_help_us:
+      - cam.blend.end: [0.999, cam_9_shot8_bandit_med, rapid]
       - actor.anim.additive:
           actor: fat_bandit
           .@pos: [0.0, anim_6923_high_standing_aggressive_gesture_left_hand_flick_1]
@@ -500,15 +587,16 @@ storyboard:
 
   section_choice_details:
     CHOICE_1:
-      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
-      - actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ]]
-      - cam: [0.0, cam_8_shot7_ger]
+      - actor.placement: [0.0, geralt, [ 19.1508178711, -10.4790039063, 0.0593566895 ], [ 0.0, 0.0, 289.8200073242 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.1570129395, -10.0559082031, 0.0616607666 ], [ 0.0, 0.0, 135.5201110840 ]]
+      - cam: [0.0, cam_8_shot7_ger_med]
+      - cam: [0.5, cam_9_shot8_bandit_med]
 
   section_why_children:
     shot_d4_ger:
-      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
-      - actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ]]
-      - cam: [0.0, cam_8_shot7_ger]
+      - actor.placement: [0.0, geralt, [ 19.1508178711, -10.4790039063, 0.0593566895 ], [ 0.0, 0.0, 289.8200073242 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.1570129395, -10.0559082031, 0.0616607666 ], [ 0.0, 0.0, 135.5201110840 ]]
+      - cam: [0.0, cam_8_shot7_ger_med]
       - actor.anim.additive:
           actor: geralt
           .@pos: [0.0, anim_7091_high_standing_determined_gesture_you]
@@ -519,9 +607,10 @@ storyboard:
           .@pos: [0.0, mimicsanim_117_geralt_neutral_gesture_brows_down_face_nrml]
           blendout: 0.5
           blendin: 0.5
+          weight: 0.5
 
     shot_d4_band:
-      - cam: [0.0, cam_9_shot8_bandit]
+      - cam: [0.0, cam_9_shot8_bandit_med]
       - actor.anim.additive:
           actor: fat_bandit
           .@pos: [0.0, anim_6925_high_standing_aggressive_gesture_left_hand_wave_1]
@@ -530,9 +619,9 @@ storyboard:
 
   section_orianna:
     shot_d5_ger:
-      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
-      - actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ]]
-      - cam: [0.0, cam_8_shot7_ger]
+      - actor.placement: [0.0, geralt, [ 19.1508178711, -10.4790039063, 0.0593566895 ], [ 0.0, 0.0, 289.8200073242 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.1570129395, -10.0559082031, 0.0616607666 ], [ 0.0, 0.0, 135.5201110840 ]]
+      - cam: [0.0, cam_8_shot7_ger_med]
       - actor.anim.additive:
           actor: geralt
           .@pos: [0.25, anim_6701_add_gesture_explain_12]
@@ -540,7 +629,7 @@ storyboard:
           blendout: 0.5
 
     shot_d5_band:
-      - cam: [0.0, cam_9_shot8_bandit]
+      - cam: [0.0, cam_9_shot8_bandit_med]
       - actor.anim.additive:
           actor: fat_bandit
           .@pos: [0.0, anim_6928_high_standing_aggressive_gesture_shrug]
@@ -549,9 +638,9 @@ storyboard:
 
   section_fight:
     shot_d6_ger:
-      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
-      - actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ]]
-      - cam: [0.0, cam_8_shot7_ger]
+      - actor.placement: [0.0, geralt, [ 19.1508178711, -10.4790039063, 0.0593566895 ], [ 0.0, 0.0, 289.8200073242 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.1570129395, -10.0559082031, 0.0616607666 ], [ 0.0, 0.0, 135.5201110840 ]]
+      - cam: [0.0, cam_8_shot7_ger_close]
       - actor.anim.additive:
           actor: geralt
           .@pos: [0.0, anim_7010_high_standing_determined_gesture_decline]
@@ -559,7 +648,7 @@ storyboard:
           blendout: 0.5
 
     shot_d6_band:
-      - cam: [0.0, cam_9_shot8_bandit]
+      - cam: [0.0, cam_9_shot8_bandit_med]
       - actor.lookat: 
           .@pos: [0.2, fat_bandit, bandit_2]
           turn: body
@@ -586,38 +675,49 @@ storyboard:
 
     # shot shot9 to fistfight
     shot_10:
-      - actor.placement: [0.0, bandit_3, [ 21.6425781250, -8.6456909180, 0.0658645630 ], [ 0.0, 0.0, 153.6699829102 ]]
-      - actor.placement: [0.0, bandit_2, [ 22.6160888672, -10.1472167969, 0.0673751831 ], [ 0.0, 0.0, 108.9000167847 ]]
+      #- actor.placement: [0.0, bandit_3, [ 21.6425781250, -8.6456909180, 0.0658645630 ], [ 0.0, 0.0, 153.6699829102 ]]
+      #- actor.placement: [0.0, bandit_2, [ 22.6160888672, -10.1472167969, 0.0673751831 ], [ 0.0, 0.0, 108.9000167847 ]]
+      - actor.placement: [0.0, bandit_2, [ 22.9747009277, -10.1674194336, 0.0669479370 ], [ 0.0, 0.0, 96.9100494385 ]]
+      - actor.placement: [0.0, bandit_3, [ 21.6880187988, -8.6056518555, 0.0667266846 ], [ 0.0, 0.0, 124.4099731445 ]]
+      
       - cam: [0.0, cam_10_shot9_to_fistfight]
       #- cam.blend.togame: [0.4, cam_10_shot9_to_fistfight]
       #- actor.gamestate: [0.4, geralt]
+
       - actor.anim: 
           .@pos: [0.0, bandit_2_man_fistfight_idle]
           blendin: 0.7
+      
+      - actor.anim: 
+          actor: fat_bandit
+          .@pos: [0.0, anim_4953_man_fistfight_idle]
+          blendin: 0.5
+          blendout: 0.5
+
       - actor.anim: 
           actor: bandit_3
           .@pos: [0.0, anim_4958_man_fistfight_idle_guarded]
-          blendin: 0.7
-          blendout: 0.5
-          stretch: 1.0
-      - actor.pose: [0.15, bandit_3_man_fistfight_idle]
-      - actor.anim: 
-          actor: bandit_3
-          .@pos: [0.25, anim_4958_man_fistfight_idle_guarded]
           blendin: 0.5
           blendout: 0.5
-          stretch: 1.5
-      - actor.anim: 
-          actor: bandit_3
-          .@pos: [0.7, anim_4958_man_fistfight_idle_guarded]
-          blendin: 0.5
-          stretch: 1.5
+      - actor.pose: [0.2, bandit_3_man_fistfight_idle]
+
+      #- actor.anim: 
+      #    actor: bandit_3
+      #    .@pos: [0.25, anim_4958_man_fistfight_idle_guarded]
+      #    blendin: 0.5
+      #    blendout: 0.5
+      #    stretch: 1.5
+      #- actor.anim: 
+      #    actor: bandit_3
+      #    .@pos: [0.7, anim_4958_man_fistfight_idle_guarded]
+      #    blendin: 0.5
+       #   stretch: 1.5
 
   section_leader:
     shot_d7_ger:
-      - actor.placement: [0.0, geralt, [ 19.5695190430, -10.7506103516, 0.0598373413 ], [ 0.0, 0.0, 297.0203552246 ]]
-      - actor.placement: [0.0, fat_bandit, [ 20.7489318848, -10.7010498047, 0.0621986389 ], [ 0.0, 0.0, 90.4800338745 ]]
-      - cam: [0.0, cam_8_shot7_ger]
+      - actor.placement: [0.0, geralt, [ 19.1508178711, -10.4790039063, 0.0593566895 ], [ 0.0, 0.0, 289.8200073242 ]]
+      - actor.placement: [0.0, fat_bandit, [ 20.1570129395, -10.0559082031, 0.0616607666 ], [ 0.0, 0.0, 135.5201110840 ]]
+      - cam: [0.0, cam_8_shot7_ger_med]
       #- actor.anim:
       #   actor: geralt
       #    .@pos: [0.0, anim_6932_high_standing_aggressive_to_high_standing_determined]
@@ -633,7 +733,7 @@ storyboard:
           .@pos: [0.5, mimicsanim_418_geralt_neutral_gesture_question_ver04_face]
 
     shot_d7_band:
-      - cam: [0.0, cam_9_shot8_bandit]
+      - cam: [0.0, cam_9_shot8_bandit_med]
       ### Crutch!
       - actor.placement: [0.0, bandit_2, [ 22.6160888672, -10.1472167969, 0.0673751831 ], [ 0.0, 0.0, 108.9000167847 ]]
       - actor.anim.additive: 
@@ -647,7 +747,7 @@ storyboard:
       - actor.gamestate: [0.0, fat_bandit]
       - actor.gamestate: [0.0, bandit_2]
       - actor.gamestate: [0.0, bandit_3]
-      - cam.blend.togame: [0.0, cam_8_shot7_ger]
+      - cam.blend.togame: [0.0, cam_8_shot7_ger_med]
 
 dialogscript:
   player: "geralt"
@@ -722,14 +822,15 @@ dialogscript:
 
   section_storyboard_ui3:
     # shot shot5 gesture enter
-    - PAUSE: 1.0
+    - CUE: shot_init
+    - PAUSE: 0.5
     - CUE: shot_5
     - fat_bandit: "[4.5410]2114670767|Well, come in then, we've matters to discuss."
     # (longest) anim: high_standing_aggressive_turn90_right
     #- PAUSE: 3.5
     - CUE: shot_7
     # (longest) anim: high_standing_aggressive_enter_frontal
-    - PAUSE: 4.5666666031
+    - PAUSE: 4.0
     # shot shot7 ger
     - NEXT: script_close_door
 
@@ -766,13 +867,13 @@ dialogscript:
   section_choice_details:
     - CHOICE:
       - choice: ["2114670758|It's a deal", section_leader]
-        condition: [ NTR_scenefact_whychildren, "!=", 1 ]
+      #  condition: [ NTR_scenefact_whychildren, "!=", 1 ]
         emphasize: true
       - choice: ["2114670759|Why are you interested in children?", section_why_children]
         emphasize: true
-      - choice: ["2114670760|I'll ask again, polite like, and you'll answer, just as politely", section_fight]
-        condition: [ NTR_scenefact_whychildren, "=", 1 ]
-        emphasize: true
+      #- choice: ["2114670760|I'll ask again, polite like, and you'll answer, just as politely", section_fight]
+      #  condition: [ NTR_scenefact_whychildren, "=", 1 ]
+      #  emphasize: true
       - choice: ["2114670761|Orianna will kill you", section_orianna]
         #emphasize: true
 
@@ -782,16 +883,16 @@ dialogscript:
     - geralt: "[1.7511764]0000382555|What did you need the children for?"
     - CUE: shot_d4_band
     - fat_bandit: "[2.3133]2114670776|It's no concern of yours."
-    - NEXT: script_set_whychildren
+    - NEXT: section_fight
 
-  script_set_whychildren:
-        - SCRIPT:
-            function: AddFact_S
-            parameter:
-                - factName: NTR_scenefact_whychildren
-                - value: 1
-                - validFor: 0
-        - NEXT: section_choice_details
+  #script_set_whychildren:
+  #      - SCRIPT:
+  #          function: AddFact_S
+   #         parameter:
+   #             - factName: NTR_scenefact_whychildren
+   #             - value: 1
+  #              - validFor: 0
+  #      - NEXT: section_choice_details
 
   section_orianna:
     - CUE: shot_d5_ger

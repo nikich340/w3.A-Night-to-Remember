@@ -76,61 +76,61 @@ repository:
     cam_1_Shot1:
       fov: 40.0
       transform:
-        pos: [ 14.3341064453, -31.4394531250, 0.5675811768 ]
-        rot: [ 0.0, 344.6100158691, 118.2205505371 ]
-      #zoom: 1.0
+        pos: [ 14.5540313721, -32.2661132813, -0.1074981689 ]
+        rot: [ 0.0, 356.7925109863, 113.7105865479 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.6198854446, 7.6198854446 ]
+        focus: [ 3.1198854446, 6.1198854446 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_2_Shot2:
       fov: 40.0
       transform:
-        pos: [ 14.3341064453, -31.4394531250, 0.5675811768 ]
-        rot: [ 0.0, 346.3150024414, 93.0304412842 ]
-      #zoom: 1.0
+        pos: [ 14.3341064453, -31.4394531250, -0.2324676514 ]
+        rot: [ 0.0, 359.0475158691, 94.3228836060 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.9657940865, 6.9657940865 ]
+        focus: [ 2.4657940865, 5.4657940865 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_3_Shot3:
       fov: 40.0
       transform:
-        pos: [ 12.2741127014, -34.1936035156, 0.5675811768 ]
-        rot: [ 0.0, 351.7049865723, 40.8352966309 ]
-      #zoom: 1.0
+        pos: [ 13.0463485718, -33.7810058594, -0.1824111938 ]
+        rot: [ 0.0, 1.6875008345, 52.6878166199 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 3.4607987404, 8.4607982635 ]
+        focus: [ 3.9607987404, 6.9607987404 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_4_Shot4_igni:
-      fov: 40.0
+      fov: 30.0
       transform:
-        pos: [ 10.4952507019, -37.6635742188, 0.9176025391 ]
-        rot: [ 0.0, 341.5300292969, 359.3653259277 ]
-      #zoom: 1.0
+        pos: [ 9.6106338501, -37.5078125000, -0.3324737549 ]
+        rot: [ 0.0, 359.8450317383, 345.4228210449 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.6915502548, 6.6915502548 ]
+        focus: [ 2.1915502548, 5.1915502548 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_6_Shot5_burn2:
@@ -149,52 +149,63 @@ repository:
         tags: [ "ext" ]
 
     cam_8_Shot8_run1:
-      fov: 40.0
+      fov: 35.0
       transform:
-        #pos: [ 5.7212677002, -23.7448730469, 8.8680877686 ]
-        #rot: [ 0.0, 297.7500000000, 228.1351623535 ]
-        #pos: [ 7.4295387268, -22.9941406250, 0.9676055908 ]
-        #rot: [ 0.0, 351.3750305176, 188.4251861572 ]
-        pos: [ 9.3591537476, -25.8676757813, -0.2824707031 ]
-        rot: [ 0.0, 355.4450378418, 174.8401336670 ]
-      #zoom: 1.0
+        pos: [ 9.0095825195, -26.4655761719, -0.4575119019 ]
+        rot: [ 0.0, 0.5875396729, 191.9725799561 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.1752133369, 8.1752128601 ]
+        focus: [ 0.6752133369, 6.6752133369 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_9_Shot9_run2:
-      fov: 40.0
+      fov: 35.0
       transform:
-        pos: [ 17.6267051697, -28.4680175781, 2.8177185059 ]
-        rot: [ 0.0, 352.7500305176, 7.8901987076 ]
-      #zoom: 1.0
+        pos: [ 17.6911087036, -28.6975097656, 1.7679443359 ]
+        rot: [ 0.0, 4.0800299644, 18.8352031708 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.0793552399, 9.0793552399 ]
+        focus: [ 2.5793552399, 7.5793552399 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_13_Shot9_to_player:
+      fov: 30.0
+      transform:
+        pos: [ 10.3724784851, -29.7377929688, 0.3425750732 ]
+        rot: [ 0.0, 355.8850097656, 221.1502532959 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.8695194721, 5.8695192337 ]
+        focus: [ 1.3695194721, 4.3695194721 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_10_Shot9_to_gp:
-      fov: 40.0
+      fov: 30.0
       transform:
-        pos: [ 12.7166633606, -34.5595703125, 1.1676177979 ]
-        rot: [ 0.0, 351.1000366211, 21.0902042389 ]
-      #zoom: 1.0
+        pos: [ 11.0690498352, -31.5270996094, 0.3425750732 ]
+        rot: [ 0.0, 347.7175292969, 10.5851917267 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
-        intensity: 0.0000000000
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.7533702850, 3.7533702850 ]
+        focus: [ 1.2533702850, 2.2533702850 ]
+        intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
 production:
@@ -242,6 +253,8 @@ production:
         repo: "cam_9_Shot9_run2"
       cam_10_Shot9_to_gp:
         repo: "cam_10_Shot9_to_gp"
+      cam_13_Shot9_to_player:
+        repo: "cam_13_Shot9_to_player"
 
     animations:
       geralt_man_geralt_sword_attack_fast_1_rp_40ms:
@@ -458,7 +471,7 @@ storyboard:
           .@pos: [0.0, hag_grave_lvl1_barons_wife_attack_04]
           blendin: 0.3
           blendout: 0.3
-      - actor.placement.start: [0.58, hag_grave_lvl1_barons_wife, [ 8.0168952942, -29.8359375000, -1.1220703125 ], [ 0.0, 0.0, 219.9699096680 ]]
+      - actor.placement.start: [0.51, hag_grave_lvl1_barons_wife, [ 8.0168952942, -29.8359375000, -1.1220703125 ], [ 0.0, 0.0, 219.9699096680 ]]
       - actor.placement.end: [0.7133, hag_grave_lvl1_barons_wife, [ 9.9419136047, -32.9479980469, -1.3855590820 ], [ 0.0, 0.0, 219.9699096680 ]]
 
     # shot Shot4 igni
@@ -487,16 +500,18 @@ storyboard:
     
     # shot Shot5 burn2
     shot_6:
-      - cam: [0.0, cam_6_Shot5_burn2]
-      - actor.placement.start: [0.1533, hag_grave_lvl1_barons_wife, [ 9.9419136047, -32.9479980469, -1.3855590820 ], [ 0.0, 0.0, 297.7399291992 ]]
-      - actor.placement.end: [0.232, hag_grave_lvl1_barons_wife, [ 8.9629669189, -33.2421875000, -1.3855590820 ], [ 0.0, 0.0, 297.7399291992 ]]
+      ##- cam: [0.0, cam_6_Shot5_burn2]
+      #- actor.placement.start: [0.1533, hag_grave_lvl1_barons_wife, [ 9.9419136047, -32.9479980469, -1.3855590820 ], [ 0.0, 0.0, 297.7399291992 ]]
+      #- actor.placement.end: [0.232, hag_grave_lvl1_barons_wife, [ 8.9629669189, -33.2421875000, -1.3855590820 ], [ 0.0, 0.0, 297.7399291992 ]]
+      #- actor.anim: 
+      #    .@pos: [0.154, hag_grave_lvl1_barons_wife_effect_burning_end]
+      #    blendin: 0.3
+      #    blendout: 0.2
       - actor.anim: 
-          .@pos: [0.154, hag_grave_lvl1_barons_wife_effect_burning_end]
+          #.@pos: [0.9476, hag_grave_lvl1_barons_wife_walk_start_l135]
+          .@pos: [0.0, hag_grave_lvl1_barons_wife_walk_start_l135]
           blendin: 0.3
-          blendout: 0.2
-      - actor.anim: 
-          .@pos: [0.9476, hag_grave_lvl1_barons_wife_walk_start_l135]
-          blendin: 0.2
+          blendout: 0.0
 
     # shot Shot8 run1
     shot_8:
@@ -505,7 +520,7 @@ storyboard:
       - cam: [0.0, cam_8_Shot8_run1]
       - actor.anim: 
           .@pos: [0.0, hag_grave_lvl1_barons_wife_gravehag_run_forward]
-      - actor.placement: [0.35, hag_grave_lvl1_barons_wife, [ 16.8185462952, -23.7753906250, 0.9422683716 ], [ 0.0, 0.0, 4.6199254990 ]]
+      - actor.placement: [0.8, hag_grave_lvl1_barons_wife, [ 16.8185462952, -23.7753906250, 0.9422683716 ], [ 0.0, 0.0, 4.6199254990 ]]
 
     # shot Shot9 run2
     shot_9:
@@ -514,9 +529,10 @@ storyboard:
 
     # shot Shot9 to gp
     shot_10:
+      - actor.lookat: [0.0, geralt, NONE]
       - actor.placement: [0.0, geralt, [ 11.6114997864, -31.7275390625, -1.3126831055 ], [ 0.0, 0.0, 15.3999185562 ]]
       #- actor.gamestate: [0.0, geralt]
-      - cam: [0.0, cam_10_Shot9_to_gp]
+      - cam: [0.0, cam_13_Shot9_to_player]
       - actor.anim: 
           .@pos: [0.0, geralt_geralt_after_combat_idle_sheathe_silver_sword_to_high_standing_determined]
           blendout: 0.5
@@ -526,7 +542,7 @@ storyboard:
       - actor.placement: [0.0, hag_grave_lvl1_barons_wife, [ 16.8185462952, -23.7753906250, -10.0 ], [ 0.0, 0.0, 4.6199254990 ]]
 
       - actor.gamestate: [0.85, geralt]
-      - cam.blend.togame: [0.85, cam_8_Shot8_run1]
+      - cam.blend.togame: [0.85, cam_10_Shot9_to_gp]
 
 dialogscript:
   player: "geralt"
@@ -554,16 +570,18 @@ dialogscript:
     - CUE: shot_4
     # (longest) anim: man_ger_sword_ignii_front_rp
     - PAUSE: 2.7000000477
+    - PAUSE: 0.7
     # shot Shot5 burn2
     - CUE: shot_6
     # (longest) anim: effect_burning_end
-    - PAUSE: 3.815
+    ##- PAUSE: 3.815
+    - PAUSE: 0.67
     # shot Shot6 rotate
     ##- CUE: shot_7
-    - PAUSE: 0.47
+    ##- PAUSE: 0.47
     # shot Shot8 run1
     - CUE: shot_8
-    - PAUSE: 2
+    - PAUSE: 1.0
     # shot Shot9 run2
     - CUE: shot_9
     - PAUSE: 0.8
@@ -575,6 +593,6 @@ dialogscript:
     - NEXT: section_exit
 
   section_exit:
-    - CAMERA_BLEND: 1.5
+    #- CAMERA_BLEND: 1.5
     - EXIT
 

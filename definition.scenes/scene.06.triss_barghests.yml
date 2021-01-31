@@ -57,8 +57,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.6223759651, 5.6223759651 ]
-        focus: [ 3.1223759651, 4.1223759651 ]
+        blur: [ 0.6223759651, 7.6223759651 ]
+        focus: [ 1.1223759651, 6.1223759651 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -151,6 +151,19 @@ production:
       #rot: [ 0.0, 0.0, 0.0 ]
 
   assets:
+    mimics:
+      triss_aggressive:
+        actor: triss
+        repo: aggressive
+        weight: 0.7
+        duration: 1.0
+
+      geralt_surprised:
+        actor: geralt
+        repo: surprised_shocked
+        weight: 0.7
+        duration: 1.0
+
     actors:
       geralt:
         repo: "geralt"
@@ -281,7 +294,9 @@ storyboard:
     shot_1:
       - actor.placement: [0.1, geralt, [ -5.7042903900, 10.1396484375, -0.3926391602 ], [ 0.0, 0.0, 0.0 ]]
       - actor.hide: [0.0, geralt]
-      - actor.show: [0.3, geralt]
+      - actor.show: [0.2, geralt]
+      - actor.mimic: [0.2, geralt_surprised]
+      - actor.mimic: [0.2, triss_aggressive]
 
       - actor.placement: [0.0, barghest_1, [ -7.3380260468, 13.4687500000, -1.7402343750 ], [ 0.0, 0.0, 204.3499145508 ]]
       - actor.placement: [0.0, barghest_2, [ -4.9032192230, 13.5212402344, -1.7387084961 ], [ 0.0, 0.0, 167.5300140381 ]]
@@ -320,6 +335,7 @@ storyboard:
       - actor.anim: 
           .@pos: [0.0, triss_woman_sorceress_idle_lp_02]
           blendout: 0.5
+          clipend: 1.92
 
     # shot triss burgests
     shot_4:
@@ -364,7 +380,7 @@ dialogscript:
     # shot from teleport
     - CUE: shot_1
     # (longest) anim: high_standing_determined_enter_run_in_frontal
-    - PAUSE: 5.6
+    - PAUSE: 4.5
     # shot from teleport look back
     ###- CUE: shot_2
     # (longest) anim: high_standing_determined_gesture_look_over_left
@@ -373,7 +389,6 @@ dialogscript:
     - CUE: shot_3
     # (longest) anim: woman_sorceress_idle_lp_02
     - triss: "[1.9207871]0001041452|Not about to let you off!"
-    - PAUSE: 1.3466
     # shot triss burgests
     - CUE: shot_4
     # (longest) anim: woman_sorceress_taunt_01_rp

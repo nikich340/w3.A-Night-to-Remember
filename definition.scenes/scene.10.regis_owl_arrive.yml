@@ -110,8 +110,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.2183763981, 5.2183761597 ]
-        focus: [ 2.7183763981, 3.7183763981 ]
+        blur: [ 1.2183763981, 5.2183761597 ]
+        focus: [ 1.7183763981, 3.7183763981 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -125,7 +125,7 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
+        blur: [ 0.0, 6.0 ]
         focus: [ 1.0, 5.0 ]
         intensity: 0.2500000000
       event_generator:
@@ -142,7 +142,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 1.0, 5.0 ]
         focus: [ 1.0, 5.0 ]
-        intensity: 0.2500000000
+        intensity: 0.0
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -157,7 +157,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 1.0, 5.0 ]
         focus: [ 1.0, 5.0 ]
-        intensity: 0.2500000000
+        intensity: 0.0
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -187,7 +187,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 0.3098254204, 3.3098254204 ]
         focus: [ 0.8098254204, 1.8098254204 ]
-        intensity: 0.2500000000
+        intensity: 0.0
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -230,8 +230,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 0.3098254204, 3.3098254204 ]
-        focus: [ 0.8098254204, 1.8098254204 ]
+        blur: [ 0.0, 6.3098254204 ]
+        focus: [ 0.8098254204, 5.8098254204 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -245,8 +245,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 0.3098254204, 3.3098254204 ]
-        focus: [ 0.8098254204, 1.8098254204 ]
+        blur: [ 0.0, 6.3098254204 ]
+        focus: [ 0.8098254204, 5.8098254204 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"

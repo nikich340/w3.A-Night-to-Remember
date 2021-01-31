@@ -285,33 +285,33 @@ repository:
         tags: [ "ext" ]
 
     cam_3_Shot2_geralt_go:
-      fov: 40.0
+      fov: 30.0
       transform:
-        pos: [ -4.4630298615, 3.5839843750, 1.3577575684 ]
-        rot: [ 0.0, 352.2000122070, 331.7082214355 ]
-      #zoom: 1.0
+        pos: [ -5.2639350891, 2.9531250000, 1.3193283081 ]
+        rot: [ 0.0, 357.4524841309, 326.7229919434 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.3936719894, 6.3936719894 ]
-        focus: [ 3.8936719894, 4.8936719894 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.0, 6.0 ]
+        focus: [ 1.0, 5.0 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_5_Shot4a_kill:
-      fov: 40.0
+      fov: 35.0
       transform:
-        pos: [ -4.8781681061, 2.0861816406, 0.5077056885 ]
-        rot: [ 0.0, 357.5350341797, 337.3182678223 ]
-      #zoom: 1.0
+        pos: [ -6.9237136841, 3.7744140625, 1.2193374634 ]
+        rot: [ 0.0, 352.3924865723, 288.5530395508 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.8310408592, 6.8310408592 ]
-        focus: [ 4.3310408592, 5.3310408592 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.0, 7.0 ]
+        focus: [ 1.0, 6.0 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_7_Shot4b_laugh:
@@ -322,8 +322,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.3936719894, 6.3936719894 ]
-        focus: [ 3.8936719894, 4.8936719894 ]
+        blur: [ 1.3936719894, 6.3936719894 ]
+        focus: [ 1.8936719894, 4.8936719894 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -345,18 +345,18 @@ repository:
         tags: [ "ext" ]
 
     cam_10_Shot5_who_is_it:
-      fov: 40.0
+      fov: 35.0
       transform:
-        pos: [ -1.7310009003, 5.2707519531, 3.8079071045 ]
-        rot: [ 0.0, 287.4099426270, 115.1486511230 ]
-      #zoom: 1.0
+        pos: [ -3.6937618256, 5.7983398438, 2.0193328857 ]
+        rot: [ 0.0, 300.8850097656, 234.5704956055 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 4.8388991356, 7.8388991356 ]
-        focus: [ 5.3388991356, 6.3388991356 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.0, 7.0 ]
+        focus: [ 1.0, 6.0 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_11_Shot6_eredin_appear:
@@ -367,8 +367,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.3936719894, 6.3936719894 ]
-        focus: [ 3.8936719894, 4.8936719894 ]
+        blur: [ 0.3936719894, 8.3936719894 ]
+        focus: [ 0.8936719894, 7.8936719894 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -392,16 +392,16 @@ repository:
     cam_12_Shot12_no_jokes:
       fov: 30.0
       transform:
-        pos: [ -3.0497417450, 9.5053710938, 1.4577636719 ]
-        rot: [ 0.0, 354.8402099609, 173.4188385010 ]
-      #zoom: 1.0
+        pos: [ -3.3375167847, 9.5004882813, 1.4443359375 ]
+        rot: [ 0.0, 355.8575134277, 183.4204101563 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.3936719894, 6.3936719894 ]
-        focus: [ 3.8936719894, 4.8936719894 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.0, 7.0 ]
+        focus: [ 1.0, 6.0 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_13_Shot13_haha:
@@ -412,8 +412,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.3936719894, 6.3936719894 ]
-        focus: [ 3.8936719894, 4.8936719894 ]
+        blur: [ 0.3936719894, 6.3936719894 ]
+        focus: [ 0.8936719894, 4.8936719894 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -427,8 +427,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.0305573940, 5.0305576324 ]
-        focus: [ 2.5305573940, 3.5305573940 ]
+        blur: [ 0.0305573940, 5.0305576324 ]
+        focus: [ 0.5305573940, 4.5305573940 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -442,8 +442,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.3936719894, 6.3936719894 ]
-        focus: [ 3.8936719894, 4.8936719894 ]
+        blur: [ 0.3936719894, 6.3936719894 ]
+        focus: [ 0.8936719894, 4.8936719894 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -457,8 +457,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.0305573940, 5.0305576324 ]
-        focus: [ 2.5305573940, 3.5305573940 ]
+        blur: [ 1.0305573940, 5.0305576324 ]
+        focus: [ 1.5305573940, 3.5305573940 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -487,8 +487,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.3149306774, 5.3149309158 ]
-        focus: [ 2.8149306774, 3.8149306774 ]
+        blur: [ 1.3149306774, 5.3149309158 ]
+        focus: [ 1.8149306774, 3.8149306774 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -502,8 +502,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 5.6592555046, 8.6592559814 ]
-        focus: [ 6.1592555046, 7.1592555046 ]
+        blur: [ 0.6592555046, 8.6592559814 ]
+        focus: [ 0.1592555046, 7.1592555046 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -517,8 +517,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.2160961628, 4.2160959244 ]
-        focus: [ 1.7160961628, 2.7160961628 ]
+        blur: [ 0.2160961628, 5.2160959244 ]
+        focus: [ 0.7160961628, 4.7160961628 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -532,9 +532,9 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 8.4805746078, 11.4805746078 ]
-        focus: [ 8.9805746078, 9.9805746078 ]
-        intensity: 0.2500000000
+        blur: [ 7.4805746078, 13.4805746078 ]
+        focus: [ 7.9805746078, 12.9805746078 ]
+        intensity: 0.0
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -549,7 +549,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 1.8238117695, 4.8238115311 ]
         focus: [ 2.3238117695, 3.3238117695 ]
-        intensity: 0.2500000000
+        intensity: 0.0
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -564,7 +564,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 1.8238117695, 4.8238115311 ]
         focus: [ 2.3238117695, 3.3238117695 ]
-        intensity: 0.2500000000
+        intensity: 0.0
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -579,7 +579,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 1.8238117695, 4.8238115311 ]
         focus: [ 2.3238117695, 3.3238117695 ]
-        intensity: 0.2500000000
+        intensity: 0.0
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -594,7 +594,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 1.8238117695, 4.8238115311 ]
         focus: [ 2.3238117695, 3.3238117695 ]
-        intensity: 0.2500000000
+        intensity: 0.0
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -609,7 +609,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 1.8238117695, 4.8238115311 ]
         focus: [ 2.3238117695, 3.3238117695 ]
-        intensity: 0.2500000000
+        intensity: 0.0
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -637,8 +637,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.3870375156, 4.3870372772 ]
-        focus: [ 1.8870375156, 2.8870375156 ]
+        blur: [ 0.3870375156, 4.3870372772 ]
+        focus: [ 0.8870375156, 2.8870375156 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -647,16 +647,16 @@ repository:
     cam_28_Shot21_vampires_regis_taunt:
       fov: 30.0
       transform:
-        pos: [ -1.9151210785, 8.3171386719, 1.6577758789 ]
-        rot: [ 0.0, 347.0852355957, 148.8844604492 ]
-      #zoom: 1.0
+        pos: [ -5.4110488892, 8.5649414063, 1.4193649292 ]
+        rot: [ 0.0, 352.4200134277, 213.5054016113 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.9800949097, 5.9800949097 ]
-        focus: [ 3.4800949097, 4.4800949097 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.0, 7.0 ]
+        focus: [ 1.0, 6.0 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_29_Shot21_vampires_regis:
@@ -667,26 +667,26 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0870399475, 4.0870399475 ]
-        focus: [ 1.5870399475, 2.5870399475 ]
+        blur: [ 0.0870399475, 4.0870399475 ]
+        focus: [ 0.5870399475, 2.5870399475 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
 
     cam_31_Shot_mirror1:
-      fov: 40.0
+      fov: 20.0
       transform:
-        pos: [ 4.9414672852, 7.5197753906, 1.7577819824 ]
-        rot: [ 0.0, 352.0903320313, 77.7692871094 ]
-      #zoom: 1.0
+        pos: [ 4.1169185638, 8.1679687500, 1.7073745728 ]
+        rot: [ 0.0, 357.1224975586, 96.9825134277 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 8.7468185425, 11.7468185425 ]
-        focus: [ 9.2468185425, 10.2468185425 ]
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.8773806095, 4.8773803711 ]
+        focus: [ 1.3773806095, 3.3773806095 ]
         intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     #cam_30_Shot21_vampires_overwiew:
@@ -713,21 +713,6 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 8.7834348679, 11.7834348679 ]
         focus: [ 9.2834348679, 10.2834348679 ]
-        intensity: 0.2500000000
-      event_generator:
-        plane: "medium"
-        tags: [ "ext" ]
-
-    cam_31_Shot_mirror1:
-      fov: 40.0
-      transform:
-        pos: [ 4.9414672852, 7.5197753906, 1.7577819824 ]
-        rot: [ 0.0, 351.9803466797, 78.0993041992 ]
-      #zoom: 1.0
-      dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.2462205887, 6.2462205887 ]
-        focus: [ 3.7462205887, 4.7462205887 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -818,7 +803,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 7.7767257690, 10.7767257690 ]
         focus: [ 8.2767257690, 9.2767257690 ]
-        intensity: 0.2500000000
+        intensity: 0.0
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -891,8 +876,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.5991938114, 5.5991935730 ]
-        focus: [ 3.0991938114, 4.0991935730 ]
+        blur: [ 2.5991938114, 10.5991935730 ]
+        focus: [ 3.0991938114, 9.0991935730 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -951,8 +936,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.2184848785, 5.2184848785 ]
-        focus: [ 2.7184848785, 3.7184848785 ]
+        blur: [ 1.2184848785, 10.2184848785 ]
+        focus: [ 1.7184848785, 9.7184848785 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -966,8 +951,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.7662105560, 4.7662105560 ]
-        focus: [ 2.2662105560, 3.2662105560 ]
+        blur: [ 0.7662105560, 4.7662105560 ]
+        focus: [ 1.2662105560, 3.2662105560 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -1015,6 +1000,43 @@ production:
       #rot: [ 0.0, 0.0, 0.0 ]
 
   assets:
+    mimics:
+      triss_monster_dead:
+        actor: triss_monster
+        repo: "sleeping"
+        weight: 0.0
+        duration: 0.0
+
+      triss_monster_afraid:
+        actor: triss_monster
+        repo: afraid
+        weight: 0.8
+        duration: 1.0
+
+      triss_monster_aggressive:
+        actor: triss_monster
+        repo: aggressive
+        weight: 0.5
+        duration: 1.0
+
+      Eredin_vesemir2_aggressive:
+        actor: Eredin_vesemir2
+        repo: aggressive
+        weight: 0.6
+        duration: 1.0
+
+      geralt_nervous:
+        actor: geralt
+        repo: nervous
+        weight: 0.7
+        duration: 0.0
+
+      geralt_afraid:
+        actor: geralt
+        repo: afraid
+        weight: 0.8
+        duration: 0.0
+
     actors:
       geralt:
         repo: "geralt"
@@ -1771,6 +1793,8 @@ storyboard:
           .@pos: [0.0, triss_monster_scared_start]
           blendout: 0.3
       - actor.pose: [0.3, triss_monster_scared_loop]
+
+      - actor.mimic: [0.0, triss_monster_afraid]
       - actor.anim: 
           .@pos: [0.1, triss_monster_scared_loop]
           blendin: 0.3
@@ -1812,8 +1836,8 @@ storyboard:
           .@pos: [0.1, triss_monster_woman_sorceress_death_front_01]
           blendin: 0.3
       - actor.pose: [0.5, triss_monster_woman_sorceress_effect_knockdown_f_loop]
-      - actor.placement.start: [0.333, geralt, [ -3.2630882263, 7.4868164063, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
-      - actor.placement.end: [0.485, geralt, [ -3.0143222809, 5.8850097656, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
+      - actor.placement.start: [0.3, geralt, [ -3.2630882263, 7.4868164063, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ], smooth]
+      - actor.placement.end: [0.5, geralt, [ -3.0143222809, 5.8850097656, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ], smooth]
       - actor.anim: 
           .@pos: [0.333, geralt_geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined]
           blendin: 0.5
@@ -1822,6 +1846,7 @@ storyboard:
       #- actor.placement: [0.0, geralt, [ -2.9319896698, 6.1804199219, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
       - actor.unequip.right: [0.0, geralt]
       - actor.placement: [0.0, triss_monster, [ -2.7775707245, 5.1667480469, -0.2139739990 ], [ 0.0, 0.0, 333.0500183105 ]]
+      - actor.mimic: [0.0, triss_monster_dead]
       - cam: [0.0, cam_10_Shot5_who_is_it]
 
     shot_11_kill:
@@ -1852,12 +1877,13 @@ storyboard:
           stretch: 1.5
 
     shot_6_2:
-      - actor.pose: [0.1, triss_monster_High_Standing_Neutral]
-      - actor.unequip.right: [0.4, geralt]
+      - actor.pose: [0.2, triss_monster_High_Standing_Neutral]
+      - actor.unequip.right: [0.8, geralt]
     # shot Shot4b laugh
     shot_7:
       - cam: [0.0, cam_7_Shot4b_laugh]
-      - actor.anim.mimic: [0.0, triss_monster_geralt_neutral_gesture_smile_face]
+      - actor.mimic: [0.0, triss_monster_aggressive]
+      #- actor.anim.mimic: [0.0, triss_monster_geralt_neutral_gesture_smile_face]
 
     # shot Shot4b disappear
     shot_8:
@@ -1867,7 +1893,8 @@ storyboard:
       - actor.hide: [0.5, triss_monster]
 
     shot_10_spare:
-      - cam: [0.0, cam_10_Shot5_what_the_hell]
+      #- cam: [0.0, cam_10_Shot5_what_the_hell]
+      - cam: [0.0, cam_3_Shot2_geralt_go]
 
     shot_11_spare:
       - actor.placement: [0.0, geralt, [ -3.0143222809, 5.8850097656, -0.2647094727 ], [ 0.0, 0.0, 173.9900360107 ]]
@@ -1934,6 +1961,7 @@ storyboard:
     # shot Shot13 haha
     shot_17:
       - cam: [0.0, cam_14_Shot14_mask_close]
+      - actor.mimic: [0.0, Eredin_vesemir2_aggressive]
 
     # shot Shot16 azar appear
     shot_18:
@@ -1969,7 +1997,7 @@ storyboard:
     shot_20:
       - actor.placement: [0.0, Iorweth, [ 1.2958259583, 10.9382324219, -0.2285766602 ], [ 0.0, 0.0, 108.0200119019 ]]
       - cam: [0.0, cam_14_Shot14_mask_close]
-      - cam: [0.4, cam_19_Shot19_iorewth_phrase]
+      - cam: [0.5, cam_19_Shot19_iorewth_phrase]
       - actor.lookat: [0.2, Eredin_vesemir2, Iorweth]
       - actor.anim: 
           .@pos: [0.0, Iorweth_high_standing_determined_enter_front_45_right]
@@ -1981,7 +2009,7 @@ storyboard:
       - actor.lookat: [0.0, Eredin_vesemir2, geralt]
       - actor.lookat: [0.0, Iorweth, geralt]
       - actor.lookat: [0.0, Azar_Javed, geralt]
-      - actor.pose: [0.2, Iorweth_High_Standing_Proud]
+      - actor.pose: [0.25, Iorweth_High_Standing_Proud]
       - actor.anim: 
           .@pos: [0.0, Iorweth_high_standing_determined_to_high_standing_proud]
           blendin: 0.5
@@ -1989,6 +2017,7 @@ storyboard:
 
     # shot Shot20 fuck
     shot_22:
+      - actor.mimic: [0.0, geralt_nervous]
       - actor.anim.additive: [0.0, geralt_high_standing_determined_gesture_both_hands_stop]
       - actor.anim: 
           .@pos: [0.0, geralt_high_standing_determined_gesture_two_steps_back]
@@ -2111,19 +2140,19 @@ storyboard:
     shot_31:
       #- actor.sound: [0.08, regis, monster_dettlaff_vampire_dialog_claws_scrape]
       #- actor.sound: [0.13, regis, monster_dettlaff_vampire_dialog_claws_scrape_sparks_vfx]
-      - actor.sound: [0.08, detlaff, monster_dettlaff_vampire_dialog_claws_scrape]
-      - actor.sound: [0.13, detlaff, monster_dettlaff_vampire_dialog_claws_scrape_sparks_vfx]
+      - actor.sound: [0.16, detlaff, monster_dettlaff_vampire_dialog_claws_scrape]
+      - actor.sound: [0.26, detlaff, monster_dettlaff_vampire_dialog_claws_scrape_sparks_vfx]
 
       #- actor.sound: [0.4, detlaff, monster_dettlaff_vampire_dialog_claws_scrape]
       #- actor.sound: [0.45, detlaff, monster_dettlaff_vampire_dialog_claws_scrape_sparks_vfx]
-      - actor.sound: [0.4, regis, monster_dettlaff_vampire_dialog_claws_scrape]
-      - actor.sound: [0.45, regis, monster_dettlaff_vampire_dialog_claws_scrape_sparks_vfx]
+      - actor.sound: [0.8, regis, monster_dettlaff_vampire_dialog_claws_scrape]
+      - actor.sound: [0.9, regis, monster_dettlaff_vampire_dialog_claws_scrape_sparks_vfx]
       #- actor.placement: [0.0, geralt, [ -3.5566349030, 7.2065429688, -0.2647094727 ], [ 0.0, 0.0, 352.2526550293 ]]
       #- actor.placement: [0.0, regis, [ -3.1063232422, 5.0368652344, -0.2558593750 ], [ 0.0, 0.0, 0.0 ]]
       - cam: [0.0, cam_28_Shot21_vampires_regis_taunt]
       #- actor.placement: [0.0, geralt, [ 2.7864761353, 8.3112792969, -0.1164093018 ], [ 0.0, 0.0, 194.7624511719 ]]
-      - actor.pose: [0.2, regis_idle_vampire]
-      - actor.pose: [0.2, detlaff_idle_vampire]
+      - actor.pose: [0.4, regis_idle_vampire]
+      - actor.pose: [0.4, detlaff_idle_vampire]
 
     # shot Shot21 vampires GERALT RUN
     shot_32:
@@ -2137,8 +2166,9 @@ storyboard:
       - cam: [0.0, cam_30_Shot21_vampires_overwiew]
       - actor.anim: 
           .@pos: [0.0, geralt_high_standing_determined_enter_run_in_frontal_left]
-          #blendin: 0.3
-          clipend: 2.0
+          blendin: 0.0
+          blendout: 0.0
+          clipend: 1.6976
       - prop.effect.start: [0.5, cocoon, growing]
           
     # shot Shot mirror1 GERALT STOP
@@ -2150,6 +2180,7 @@ storyboard:
       - actor.placement: [0.0, regis, [ -2.5132255554, 5.3586425781, -0.2465209961 ], [ 0.0, 0.0, 320.5100097656 ]]
       - actor.placement: [0.0, detlaff, [ -4.9500255585, 5.6098632813, -0.2890625000 ], [ 0.0, 0.0, 300.0499877930 ]]
       - cam: [0.0, cam_31_Shot_mirror1]
+      - actor.mimic: [0.0, geralt_afraid]
       - actor.anim: 
           .@pos: [0.0, geralt_combat_locomotion_run_rightfoward_to_idle_02]
       - actor.lookat: [0.0, geralt, [ 0.0674499124, 1.1114001274, 1.6784515381 ]]
@@ -2476,7 +2507,7 @@ dialogscript:
     # (longest) anim: geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined
     - geralt: "[1.1783265]0000591259|Tell me what happened."
     - CUE: shot_6_2
-    - PAUSE: 5.0
+    - PAUSE: 2.5
     # shot Shot4b laugh
     - CUE: shot_7
     - triss_monster: "[1.9990963]0001000680|Hahahah."
@@ -2486,9 +2517,9 @@ dialogscript:
     # (longest) anim: woman_sorceress_teleport_lp
     - PAUSE: 2.5000000000
     - CUE: shot_10_spare
-    - PAUSE: 2.0
+    - PAUSE: 0.5
     - geralt: "[1.4899675]0000380709|What the hell was that?"
-    - PAUSE: 2.0
+    - PAUSE: 0.5
     - CUE: shot_11_spare
     - PAUSE: 6.8
 
@@ -2513,6 +2544,7 @@ dialogscript:
     - geralt: "[1.8422]2114670729|I must be out of my mind…"
     - CUE: shot_17
     - geralt: "[0.66788405]0001075169|Vesemir!"
+    - PAUSE: 0.5
     #- Eredin_vesemir: "[3.3156197]0000534728|Hahahaha… As you will."
     - Eredin_vesemir2: "[1.3952225]0001058454|Draw your sword, Geralt."
     - CUE: shot_18
@@ -2527,7 +2559,7 @@ dialogscript:
     - Azar_Javed: "[2.9032]2114670731|This time you pissed in a tornado."
     - CUE: shot_20
     # (longest) anim: high_standing_determined_enter_front_45_right
-    - PAUSE: 4.0666666031
+    - PAUSE: 3.0
     # shot Shot19 iorewth phrase
     - CUE: shot_21
     # (longest) anim: high_standing_determined_to_high_standing_proud
@@ -2570,12 +2602,10 @@ dialogscript:
     - regis: "[1.5661]2114670734|I'm sorry, my friend…"
     # REGIS TAUNT
     - CUE: shot_31
-    - PAUSE: 2.0
-    - PAUSE: 0.5
+    - PAUSE: 1.0
     # GERALT RUN FAR CAM
     - CUE: shot_32
     - geralt: "[1.6975838]0001061767|Aaaaaaaaargh!!!!"
-    - PAUSE: 0.3024162
     # GERALT STOP
     - CUE: shot_40
     - PAUSE: 1.67
@@ -2624,7 +2654,7 @@ dialogscript:
     - CUE: shot_soul_no_init
     - geralt: "[0.94723827]0001003705|No."
     - CUE: shot_soul_no_mr
-    - mirror: "[2.3555]2114670736|Then you don't have what I need."
+    - mirror: "0001101345|A bit more enthusiasm, witcher. You know you just might enjoy yourself."
     - NEXT: section_choice_mirror
 
   section_mirror_yourdoing:
@@ -2653,8 +2683,9 @@ dialogscript:
     - CUE: shot_fuckyou_aard
     - PAUSE: 2.5
     - CUE: shot_demon_close
-    - mirror: "[5.3767195]0001108178|Hahahaha… Point for me."
-    - PAUSE: 1.0
+    #- mirror: "[5.3767195]0001108178|Hahahaha… Point for me."
+    - mirror: "0001104211|At last, it's over."
+    #- PAUSE: 1.0
     - CUE: shot_demon_very_close
     - mirror: "0001135556|Ouw se on coq é coq là sé rwa an lè pil fimié ay."
     - CUE: shot_pain_start

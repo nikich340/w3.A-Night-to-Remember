@@ -240,8 +240,8 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.8789052963, 4.8789052963 ]
-        focus: [ 2.3789052963, 3.3789052963 ]
+        blur: [ 0.8789052963, 6.8789052963 ]
+        focus: [ 1.3789052963, 5.3789052963 ]
         intensity: 0.2500000000
       event_generator:
         plane: "medium"
@@ -278,18 +278,18 @@ repository:
         tags: [ "ext" ]
 
     cam_14_to_gp:
-      fov: 50.0
+      fov: 35.0
       transform:
-        pos: [ -7.7296276093, 18.4565429688, 1.7591171265 ]
-        rot: [ 0.0, 337.2922668457, 58.8699340820 ]
-      #zoom: 1.0
+        pos: [ -9.6398944855, 18.2741699219, 1.0841522217 ]
+        rot: [ 0.0, 355.6347656250, 34.5327758789 ]
+      zoom: 0.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.8789052963, 4.8789052963 ]
-        focus: [ 2.3789052963, 3.3789052963 ]
-        intensity: 0.0000000000
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.7380101681, 5.7380104065 ]
+        focus: [ 3.2380101681, 4.2380104065 ]
+        intensity: 0.2500000000
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
 production:
@@ -600,7 +600,10 @@ storyboard:
 
     # shot Shot2 greetings
     shot_2:
-      - actor.anim: [0.0, geralt_high_standing_determined_gesture_greeting_01]
+      - actor.anim.additive: 
+          .@pos: [0.0, geralt_high_standing_determined_gesture_greeting_01]
+          blendin: 0.5
+          blendout: 0.5
       - actor.anim:
           .@pos: [0.0, triss_fake_high_standing_bored_to_high_standing_determined]
           clipend: 3
@@ -612,8 +615,10 @@ storyboard:
       - actor.lookat: [0.3, triss_fake, geralt]
       - actor.pose: [0.3, triss_fake_High_Standing_Determined]
       - actor.anim: 
-          .@pos: [0.27, triss_fake_high_standing_neutral_turn180_right]
+          .@pos: [0.32, triss_fake_high_standing_neutral_turn180_right]
           blendin: 0.5
+          blendout: 0.0
+          clipend: 2.72
 
     # shot Shot3 dt1
     shot_3:
@@ -757,12 +762,12 @@ dialogscript:
     # shot Shot1
     - CUE: shot_1
     # (longest) anim: high_standing_determined_calm_enter_frontal
-    - PAUSE: 6
+    - PAUSE: 4.0
     # shot Shot2 greetings
     - CUE: shot_2
     - geralt: "[1.2209101]0000527056|Greetings, Triss."
     - CUE: shot_2_2
-    - PAUSE: 4.75
+    - PAUSE: 4.0
     # (longest) anim: high_standing_bored_to_high_standing_determined: 5.166667
     - CUE: shot_3
     - triss_fake: "[0.83534354]0000487412|Geralt…?"
@@ -791,11 +796,11 @@ dialogscript:
     # shot grlt triss stop
     - CUE: shot_8
     # (longest) anim: geralt_neutral_gesture_brows_down_face_nrml
-    - PAUSE: 1.0
+    - PAUSE: 0.5
     - geralt: "[1.1725289]0000490892|Triss, stop."
     # shot triss you dont like me
     - CUE: shot_9
-    - PAUSE: 5.0
+    - PAUSE: 3.0
     - triss_monster: "[1.3926]2114670709|You don't like me.."
     # shot triss realize
     - CUE: shot_10
@@ -803,9 +808,8 @@ dialogscript:
     - triss_monster: "[3.2677]2114670710|You realize - one word and you'll howl with pain!"
     # shot grlt shoked
     - CUE: shot_11
-    - PAUSE: 2.0
+    - PAUSE: 1.5
     - geralt: "[1.2607484]0001047817|Who are you?!"
-    - PAUSE: 1.0
     # I am your nighmare!
     - CUE: shot_12
     - triss_monster: "[1.8620]2114670711|I'm your nightmare!"

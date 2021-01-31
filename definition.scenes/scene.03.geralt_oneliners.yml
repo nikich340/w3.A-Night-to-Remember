@@ -38,6 +38,9 @@ dialogscript:
 
   section_start_town_corpse:
     - geralt: "[4.2495]2114670654|Go home. I'm a witcher. Need to examine the body."
+    #- city_man: "A witcher… Ptooey! Bodes ill, rotten luck!"
+    #- city_woman: "I've heard Guards are already looking for Orianna."
+    #- city_man2: "I wish they'd caught this monster, or whoever she really is."
     - NEXT: section_exit
 
   section_start_examine_town_corpse:
