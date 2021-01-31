@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: camp
 # 
-# (version: 1113, saved: 2020-12-20 23:24:06)
+# (version: 1189, saved: 2021-01-31 21:28:45)
 #
 ---
 structure:
@@ -38,10 +38,9 @@ structure:
           next.Output:
             - scene.baron_remark_gp: camp_reminder
             - objective.go_camp: Success
-            - journal.camp_entry_baron: Activate
+            - journal.entry_camp: Activate
           next.greedy:
             - spawn.spawn_sitting_baron
-            - journal.camp_entry_baron: Activate
         
         interaction.attach_scene_to_baron:
           ".editor":
@@ -55,6 +54,7 @@ structure:
           next.Output:
             - scene.baron_remark_gp: camp_reminder
             - objective.go_camp: Success
+            - journal.entry_camp: Activate
           next.greedy:
             - waituntil.1s
         
@@ -76,6 +76,7 @@ structure:
           next:
             - spawn.spawn_baron_on_beach
             - script.fade_out_1s
+            - script.hideactorscampscene
         
         waituntil.wait_1s:
           elapsed: "00:00:01"
@@ -101,7 +102,7 @@ structure:
         
         script.hideactorscampscene:
           ".editor":
-            pos: [ 983.0, 181.0 ]
+            pos: [ 835.0, 239.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_HideActorsCampScene
@@ -130,7 +131,6 @@ structure:
             - comm_camp_baron
           next:
             - waituntil.wait_1s
-            - script.hideactorscampscene
         
         spawn.spawn_sitting_baron:
           ".editor":
@@ -156,11 +156,18 @@ structure:
             - waituntil.inside_camp_area
         
         journal.camp_entry_baron:
-          ".editor": [ 1377.0, 307.0 ]
+          ".editor": [ 1581.0, 303.0 ]
           entry: characters/baron_edward/camp_entry
           notify: true
           activate_root: true
           next: ".done"
+        
+        journal.entry_camp:
+          ".editor": [ 1381.0, 302.0 ]
+          entry: quests/nighttoremember/camp
+          notify: true
+          next:
+            - journal.camp_entry_baron: Activate
         
         objective.go_camp:
           ".editor": [ 333.4543457031, 385.4485473633 ]

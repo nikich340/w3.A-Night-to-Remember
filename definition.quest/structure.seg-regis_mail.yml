@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: regis_mail
 # 
-# (version: 1113, saved: 2020-12-20 23:24:06)
+# (version: 1189, saved: 2021-01-31 21:28:45)
 #
 ---
 structure:
@@ -37,18 +37,19 @@ structure:
           interruptable: false
           _fadein: false
           next.Output:
-            - out
+            - journal.entry_orph3: Activate
         
         scene.gp_using_owl:
           ".editor":
-            pos: [ 1172.7955322266, 170.5534057617 ]
+            pos: [ 1199.0, 162.0 ]
             in: [ using_owl ]
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
           placement: bob/homescenes
           interruptable: false
           _fadein: false
-          next: ".done"
+          next.Output:
+            - journal.entry_orph2: Activate
         
         waituntil.1s:
           elapsed: "00:00:01"
@@ -59,31 +60,29 @@ structure:
           next:
             - scene.10_scene: Input
         
+        waituntil.1ss:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 842.0, 158.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.Set_FMV_Clue_for_mail
+        
         waituntil.Letter_read:
           factdb: [ BookReadState_ntr_notices_regis_letter, ">=", 1 ]
           ".editor":
-            pos: [ 1674.3376464844, 291.9548950195 ]
+            pos: [ 1649.0, 304.0 ]
             in: [ In ]
             out: [ Out ]
           next:
             - objective.Read_letter: Success
             - scene.geralt_comment: check_orphanage
         
-        waituntil.mail_looted:
-          looted: bob/regis_mail
-          ".editor":
-            pos: [ 1374.8280029297, 265.9329528809 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - objective.Take_letter: Success
-            - objective.Read_letter: Activate
-            - waituntil.Letter_read
-        
         waituntil.wait_3s:
           elapsed: "00:00:03"
           ".editor":
-            pos: [ 793.9761352539, 405.6655578613 ]
+            pos: [ 736.0, 377.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -96,14 +95,24 @@ structure:
             in: [ In ]
             out: [ Out ]
           next:
-            - waituntil.mail_looted
             - objective.Fresh_air: Success
             - objective.Take_letter: Activate
             - scene.gp_using_owl: using_owl
+            - script.iscontainersempty
+        
+        script.05s:
+          ".editor":
+            pos: [ 536.0, 76.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Wait
+          parameter:
+            - seconds: 0.5
+          next: ".done"
         
         script.Set_FMV_Clue_for_mail:
           ".editor":
-            pos: [ 853.4244384766, 166.5455169678 ]
+            pos: [ 988.0, 66.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_FocusSetHighlight
@@ -124,6 +133,46 @@ structure:
           next:
             - waituntil.1s
         
+        script.iscontainersempty:
+          ".editor":
+            pos: [ 1381.0, 292.0 ]
+            in: [ In ]
+            out: [ "False", "True" ]
+          function: NTR_IsContainersEmpty
+          parameter:
+            - tag: cname_ntr_regis_mail
+          next.False:
+            - script.wait_05s
+          next.True:
+            - waituntil.Letter_read
+            - objective.Read_letter: Activate
+            - objective.Take_letter: Success
+            - changelayers.hide_mail_layer
+        
+        script.wait_05s:
+          ".editor":
+            pos: [ 1390.0, 182.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Wait
+          parameter:
+            - seconds: 0.5
+          next:
+            - script.iscontainersempty
+        
+        changelayers.hide_mail_layer:
+          ".editor":
+            pos: [ 1635.0, 209.0 ]
+            hint: hide-only
+            in: []
+            out: []
+          sync: true
+          purge: false
+          world: bob
+          hide:
+            - regis_mail_layer
+          next: ".done"
+        
         changelayers.owl_layer:
           ".editor":
             pos: [ 670.1290283203, 275.0562744141 ]
@@ -135,9 +184,10 @@ structure:
           world: bob
           show:
             - owl_layer
+            - regis_mail_layer
           next:
             - spawn.spawn_oil
-            - script.Set_FMV_Clue_for_mail
+            - waituntil.1ss
         
         spawn.spawn_oil:
           ".editor":
@@ -150,6 +200,7 @@ structure:
             - comm_regis_owl
           next:
             - waituntil.wait_until_outhome
+            - journal.entry_orph1: Activate
         
         journal.entry_4:
           ".editor": [ 665.0, 518.0 ]
@@ -158,8 +209,28 @@ structure:
           next:
             - questoutcome.Finish_Night_of_Nightmare: Success
         
+        journal.entry_orph1:
+          ".editor": [ 1010.0, 163.0 ]
+          entry: quests/nighttoremember/regis_owl
+          notify: true
+          activate_root: true
+          next: ".done"
+        
+        journal.entry_orph2:
+          ".editor": [ 1353.0, 67.0 ]
+          entry: quests/nighttoremember/regis_owl2
+          notify: true
+          next: ".done"
+        
+        journal.entry_orph3:
+          ".editor": [ 2117.0, 205.0 ]
+          entry: quests/nighttoremember/regis_owl3
+          notify: true
+          next:
+            - out
+        
         objective.Fresh_air:
-          ".editor": [ 1017.1463623047, 477.3131408691 ]
+          ".editor": [ 961.0, 502.0 ]
           objective: nighttoremember/regis_owl/out_home
           notify: true
           track: false
@@ -186,6 +257,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 2139.0334472656, 298.6586914062 ]
+          ".editor": [ 2300.0, 312.0 ]
           next: ".done"
         

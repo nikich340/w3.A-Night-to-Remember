@@ -10,7 +10,7 @@ communities:
 
       agneta:
         react_to_rain: true
-        template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\citizens\\girl_noble.w2ent"
+        template: "dlc\\dlcntr\\data\\entities\\agneta_girl.w2ent"
         appearances: [ "bob_child_noble_female_03" ]
         tags: [ "ntr_children_agneta", "vip" ]
 
@@ -378,7 +378,7 @@ communities:
   comm_fisherman:
     actors:
       fisherman:
-        template: dlc\bob\data\gameplay\community\community_npcs\vineyard\toussaint_fisherman.w2ent
+        template: "dlc\\dlcntr\\data\\entities\\toussaint_fisherman.w2ent"
         appearances: [ "bob_vineyard_13" ]
         tags: [ "ntr_fisherman", "vip" ]
 

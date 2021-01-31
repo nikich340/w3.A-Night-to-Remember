@@ -6,6 +6,9 @@ exec function NTR_lvl( tag : name, level : int ) {
 	NTR_SetRelativeLevel(tag, level);
 }
 
+exec function testHorse() {
+	HorseWhistle();
+}
 //  ShowCredits(ntr_credits_1, 0)
 exec function test_msg() {
 	var showTime : float;
@@ -225,6 +228,8 @@ exec function sc(num : int, optional input : String) {
 	sceneNames.PushBack("29.baron_leaving.w2scene");
 	sceneNames.PushBack("30.children_corvo_byanko.w2scene");
 	sceneNames.PushBack("31.ntr_completed.w2scene");
+	sceneNames.PushBack("32.orianna_oneliners.w2scene");
+	sceneNames.PushBack("33.orianna_diary.w2scene");
 	
 	if (input == null) {
 		input = "Input";
@@ -434,14 +439,42 @@ exec function getInRange(range : float, optional makeFriendly : int) {
     }
 }
 
-quest function scentOn() {
+exec function scentGet() {
+	var focusModeController : CFocusModeController;
+	var i : int;
+
+	focusModeController = theGame.GetFocusModeController();
+	if ( focusModeController ) {
+		for (i = 0; i < focusModeController.detectedCluesTags.Size(); i += 1) {
+			NTR_notify("scent[" + i + " = " + focusModeController.detectedCluesTags[i]);
+		}
+	}
+	NTR_notify("scentGet !");
+}
+exec function scentOn1() {
+	//FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent1', -1 );
+	//FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent2', -1 );
+	//FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent3', -1 );
+	//FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent4', -1 );
+	//FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent5', -1 );
+	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scents', -1 );
+	NTR_notify("scentON1 !");
+}
+exec function scentOn11() {
+	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent1', -1 );
+	//FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent2', -1 );
+	//FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent3', -1 );
+	//FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent4', -1 );
+	//FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent5', -1 );
+	NTR_notify("scentON1 !");
+}
+exec function scentOn2() {
 	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent1', -1 );
 	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent2', -1 );
 	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent3', -1 );
 	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent4', -1 );
 	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scent5', -1 );
-	FocusEffect( FEAA_Enable, 'focus_smell', 'ntr_orianna_scents', -1 );
-	NTR_notify("scentON !");
+	NTR_notify("scentON2 !");
 }
 /*exec function enableScent(enable : bool) {
 	var scent : CCustomScent;
@@ -801,6 +834,14 @@ exec function barolg6() {
 	NTR_TuneNPC( 'baron_test6', GetWitcherPlayer().GetLevel(), "Hostile", "None", false, "ENGT_Quest", -1 );
 }
 
+exec function createAtt(id : int) {
+	NTR_CreateAttachment_Q( id );
+}
+
+exec function removeAtt(id : int) {
+	NTR_RemoveAttachment_Q( id );
+}
+
 exec function oridress() {
 	var      template : CEntityTemplate;
 	var           pos : Vector;
@@ -849,6 +890,7 @@ exec function switchLogo2(enable : bool) {
 		ent.StopEffect('ntr_logo_screen_en_baw');
 }
 
+// playScene(dlc/bob/data/quests/main_quests/quest_files/q704_truth/scenes/q704_05_return_to_diva.w2scene)
 exec function playScene(path : string, optional input : string) {
     var scene : CStoryScene;
 

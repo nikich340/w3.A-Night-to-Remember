@@ -62,7 +62,7 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670419, category, "group 1", "I_never_should_have_left_her_alone_in_that_city_", 2.7583));
     lines.PushBack(SSbUiExtraLines(2114670420, category, "group 1", "After_all_of_these_years_of_regret__I_need_to_do_r", 5.6409));
     lines.PushBack(SSbUiExtraLines(2114670421, category, "group 1", "What_do_you_say_witcher__Will_you_take_the_job__an", 4.7311));
-    lines.PushBack(SSbUiExtraLines(2114670422, category, "group 1", "_Heavy_breathing__Aaaaaah__No!", 7.1703));
+    lines.PushBack(SSbUiExtraLines(2114670422, category, "group 1", "_Cough__Aaaaaah__No!", 7.1703));
     lines.PushBack(SSbUiExtraLines(2114670423, category, "group 1", "This_is_my_sin__and_it_dies_here_with_me!", 5.3163));
     lines.PushBack(SSbUiExtraLines(2114670424, category, "group 1", "_Cough__Tyberious__take_the_men__and_get_out_of_th", 6.0585));
     lines.PushBack(SSbUiExtraLines(2114670425, category, "group 1", "Go!_'Fore_I_kill_you_myself!", 3.1146));
@@ -72,6 +72,10 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670625, category, "group 1", "Remember__Geralt__the_boy_mustn't_be_harmed_", 3.1614));
     lines.PushBack(SSbUiExtraLines(2114670626, category, "group 1", "Have_you_found_Orianna_", 1.5729));
     lines.PushBack(SSbUiExtraLines(2114670627, category, "group 1", "Then_get_to_work!_My_son_is_in_danger!", 2.8768));
+    lines.PushBack(SSbUiExtraLines(2114670628, category, "group 1", "-missing-", 1.1234));
+    lines.PushBack(SSbUiExtraLines(2114670629, category, "group 1", "-missing-", 1.6));
+    lines.PushBack(SSbUiExtraLines(2114670630, category, "group 1", "-missing-", 1.4186));
+    lines.PushBack(SSbUiExtraLines(2114670631, category, "group 1", "-missing-", 1.5871));
     lines.PushBack(SSbUiExtraLines(2114670650, category, "group 1", "I_need_some_fresh_air_", 1.6855));
     lines.PushBack(SSbUiExtraLines(2114670651, category, "group 1", "A_letter_", 1.0033));
     lines.PushBack(SSbUiExtraLines(2114670652, category, "group 1", "Regis__Just_trying_to_avoid_a_fight__to_protect_he", 4.78));

@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: town_part
 # 
-# (version: 1113, saved: 2020-12-20 23:24:06)
+# (version: 1189, saved: 2021-01-31 21:28:45)
 #
 ---
 structure:
@@ -29,6 +29,7 @@ structure:
           next.Output:
             - objective.Follow_horse: Activate
             - objective.Follow_scent: Success
+            - script.call_roach
         
         scene.geralt_to_folk_gp:
           ".editor":
@@ -131,7 +132,7 @@ structure:
           actor: [ ntr_fisherman ]
           next.Output:
             - objective.talk_fisherman: Success
-            - waituntil.3s
+            - waituntil.1sss
         
         waituntil.1s:
           elapsed: "00:00:01"
@@ -151,6 +152,15 @@ structure:
           next:
             - scene.woman_footprints_comment: cemetery_footprints
         
+        waituntil.1sss:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 4487.0, 558.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.good_luck_by_fisherman: good_luck
+        
         waituntil.1ssss:
           elapsed: "00:00:01"
           ".editor":
@@ -160,6 +170,15 @@ structure:
           next:
             - scene.tracks_end_comment: fisher_footprints_end
         
+        waituntil.2s:
+          elapsed: "00:00:02"
+          ".editor":
+            pos: [ 737.0, 302.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.checkpoint
+        
         waituntil.2sss:
           elapsed: "00:00:02"
           ".editor":
@@ -168,15 +187,6 @@ structure:
             out: [ Out ]
           next:
             - scene.tracks_back_comment: cemetery_footprints_end
-        
-        waituntil.3s:
-          elapsed: "00:00:03"
-          ".editor":
-            pos: [ 4481.490234375, 549.2733154297 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - scene.good_luck_by_fisherman: good_luck
         
         waituntil.REM:
           elapsed: "00:00:02"
@@ -192,12 +202,12 @@ structure:
         waituntil.blood_scent_track:
           examined: bob/blood_track1
           ".editor":
-            pos: [ 683.8435058594, 253.0467376709 ]
+            pos: [ 587.0, 247.0 ]
             in: [ In ]
             out: [ Out ]
           next:
             - scene.scent_comment: town_scent
-            - waituntil.wait_3s
+            - waituntil.2s
         
         waituntil.blood_scent_track1:
           examined: bob/blood_track1
@@ -381,10 +391,10 @@ structure:
             - mappin.horse_tracks_pin4: Disable
             - waituntil.1s
         
-        waituntil.wait_3s:
-          elapsed: "00:00:03"
+        waituntil.wait_1s:
+          elapsed: "00:00:01"
           ".editor":
-            pos: [ 991.1956787109, 243.4491424561 ]
+            pos: [ 1004.0, 300.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -439,7 +449,7 @@ structure:
         
         script.HideActors_FishermanScene:
           ".editor":
-            pos: [ 4046.8930664062, 207.1135253906 ]
+            pos: [ 4029.0, 199.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_HideActorsFishermanScene
@@ -447,14 +457,34 @@ structure:
         
         script.Unhide_actors:
           ".editor":
-            pos: [ 4752.8891601562, 560.8067016602 ]
+            pos: [ 4787.0, 549.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_UnhideActorsInRange
           parameter:
             - range: 40.0
           next:
-            - out
+            - journal.entry_river: Activate
+        
+        script.call_roach:
+          ".editor":
+            pos: [ 2317.0, 563.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: HorseWhistle
+          next: ".done"
+        
+        script.checkpoint:
+          ".editor":
+            pos: [ 867.0, 219.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_SaveGame
+          parameter:
+            - type: SGT_ForcedCheckPoint
+            - slot: -1
+          next:
+            - waituntil.wait_1s
         
         script.disable_scent:
           ".editor":
@@ -565,6 +595,13 @@ structure:
             - comm_town_corpse_folk
           next:
             - changelayers.hide_town_blood
+        
+        journal.entry_river:
+          ".editor": [ 4961.0, 434.0 ]
+          entry: quests/nighttoremember/town_and_river
+          notify: true
+          next:
+            - out
         
         objective.Follow_horse:
           ".editor": [ 2417.6806640625, 688.1245117188 ]
@@ -692,6 +729,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 4901.267578125, 472.1823120117 ]
+          ".editor": [ 5113.0, 540.0 ]
           next: ".done"
         

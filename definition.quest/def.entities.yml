@@ -2,11 +2,9 @@
 # definition of entities
 #
 templates:
-  ntr_scent:
-    includes:
-      - "quests\\sidequests\\no_mans_land\\quest_files\\sq104_werewolf\\entities\\sq104_niellen_scent_source.w2ent"
+  ntr_agent:
     entityObject:
-      ".type": CNTRScent
+      ".type": CNTRScriptedAgent
 
   ntr_acero_sword:
     includes:
@@ -157,7 +155,7 @@ templates:
                 ".type": CFXTrack
                 trackItems:
                   - ".type": CFXTrackItemParticles
-                    timeDuration: 7.0
+                    timeDuration: 9.0
                     particleSystem: "dlc\\dlcntr\\data\\fx\\ntr_credits_1.w2p"
                     spawner:
                       ".type": CFXSimpleSpawner
@@ -182,7 +180,7 @@ templates:
                       - [ 1.0, 1.0, 1.0 ]
             isExpanded: true
             trackGroupColor: [ 180, 203, 204, 100 ]
-        length: 7.0
+        length: 9.0
         showDistance: 150.0
       ntr_credits_2:
         ".type": CFXDefinition

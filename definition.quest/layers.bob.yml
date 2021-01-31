@@ -210,6 +210,10 @@ layers:
     mappins: 
       regis_mail_pin: [ -382.2948303223, -804.2601318359, 36.3919868469 ]
 
+  regis_mail_layer: 
+    world: "bob"
+    #context: ""
+    
     interactiveentities: 
       regis_mail: 
         #template: "W3AnimatedContainer:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q702_hunt\\entities\\q702_blackmail_letter.w2ent"

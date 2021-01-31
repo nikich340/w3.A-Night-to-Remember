@@ -33,104 +33,14 @@ storyscene function NTR_UnequipItemFromSlot_S( player : CStoryScenePlayer, tag :
 storyscene function NTR_TimeScale_S( player : CStoryScenePlayer, timeScale : float ) {
 	SetTimeScaleQuest(timeScale);
 }
+
 storyscene function NTR_RemoveAttachment_S( player : CStoryScenePlayer, id : int ) {
-	var attachmentTag : name;
-	var entities      : array<CEntity>;
-	var        i      : int;
-
-	switch (id) {
-		case 1: // bruxa bow 1
-			attachmentTag = 'ntr_bruxa_arrow1';
-			break;
-		case 2: // bruxa bow 2 heart
-			attachmentTag = 'ntr_bruxa_arrow2';
-			break;
-		case 3:
-			attachmentTag = 'ntr_geralt_letter_stamped';
-			break;
-		case 4:
-			attachmentTag = 'ntr_orianna_letter_opened';
-			break;
-	}
-
-	theGame.GetEntitiesByTag(attachmentTag, entities);
-	for (i = 0; i < entities.Size(); i += 1) {
-		entities[i].Destroy();
-	}
+	NTR_RemoveAttachment_Q( id );
 }
 latent storyscene function NTR_CreateAttachment_S( player : CStoryScenePlayer, id : int ) {
-	var template                 : CEntityTemplate;
-	var entity, attachment       : CEntity;
-	var entityTag, attachmentTag : name;
-	var slotName                 : name;
-	var relativePosition         : Vector;
-	var relativeRotation         : EulerAngles;
-	var result                   : Bool;
-
-	switch (id) {
-		case 1: // bruxa bow 1
-			entityTag = 'ntr_orianna_bruxa';
-			attachmentTag = 'ntr_bruxa_arrow1';
-
-			template = (CEntityTemplate)LoadResourceAsync("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
-			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
-			attachment.AddTag(attachmentTag);
-			entity = theGame.GetEntityByTag(entityTag);
-
-			slotName = 'blood_point';
-			relativePosition = Vector(0.05, 0.1, 0);
-			relativeRotation = EulerAngles(0, 200, 0);
-
-			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
-			//NTR_notify("attach = " + result);
-			break;
-
-		case 2: // bruxa bow 2 heart
-			entityTag = 'ntr_orianna_bruxa';
-			attachmentTag = 'ntr_bruxa_arrow2';
-
-			template = (CEntityTemplate)LoadResourceAsync("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
-			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
-			attachment.AddTag(attachmentTag);
-			entity = theGame.GetEntityByTag(entityTag);
-
-			slotName = 'blood_point';
-			relativePosition = Vector(0.05, 0.03, 0.07);
-			relativeRotation = EulerAngles(-5, 210, 0);
-
-			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
-			//NTR_notify("attach = " + result);
-			break;
-		case 3:
-			attachmentTag = 'ntr_geralt_letter_stamped';
-
-			template = (CEntityTemplate)LoadResourceAsync("dlc\bob\data\items\quest_items\q705\q705_item__assasination_letter_closed_small.w2ent", true);
-			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
-			attachment.AddTag(attachmentTag);
-
-			slotName = 'r_weapon';
-			relativePosition = Vector(0.03, 0.01, 0.05);
-			relativeRotation = EulerAngles(100.0, 0.0, 0.0);
-
-			result = attachment.CreateAttachment(thePlayer, slotName, relativePosition, relativeRotation);
-			break;
-		case 4:
-			entityTag = 'ntr_orianna_human';
-			attachmentTag = 'ntr_orianna_letter_opened';
-
-			template = (CEntityTemplate)LoadResourceAsync("dlc\bob\data\items\quest_items\q705\q705_item__comercial_poster_stamped.w2ent", true);
-			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
-			attachment.AddTag(attachmentTag);
-			entity = theGame.GetEntityByTag(entityTag);
-
-			slotName = 'r_weapon';
-			relativePosition = Vector(0.22, 0.08, 0.0);
-			relativeRotation = EulerAngles(0, 120, 90);
-
-			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
-			break;
-	}
+	NTR_CreateAttachment_Q( id );
 }
+
 storyscene function NTR_LeaveSceneState_S( player : CStoryScenePlayer ) {
 	var currentGameState   :   ESoundGameState;
 

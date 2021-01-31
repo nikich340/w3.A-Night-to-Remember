@@ -42,6 +42,35 @@ latent quest function NTR_ShowCredits(effectName : name, destoy : Bool) {
 	logo.PlayEffect(effectName);
 }
 
+quest function NTR_IsContainersEmpty(tag : name) : Bool {
+	var entities : array<CEntity>;
+	var container : W3Container;
+	var i : int;
+
+	theGame.GetEntitiesByTag(tag, entities);
+	
+	for (i = 0; i < entities.Size(); i += 1) {
+		container = (W3Container) entities[i];
+		if ( container && !container.IsEmpty() ) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+quest function NTR_IsTimeRange(hours1 : int, minutes1 : int, hours2 : int, minutes2 : int) : Bool {
+	var gameTime		: GameTime;
+	var days, hours, minutes, seconds : int;
+
+	gameTime = theGame.GetGameTime();
+
+	days = FloorF( ((float)seconds) / (24 * 60 * 60));
+	seconds -= days * 24 * 60 * 60;
+
+	return ((hours1 * 60 + minutes1) * 60 <= seconds && seconds <= (hours2 * 60 + minutes2) * 60);
+}
+
 quest function NTR_CheckQuestConditions() {
 	var popup : CNTRPopupRequest;
 	var message : String;
@@ -56,27 +85,28 @@ quest function NTR_CheckQuestConditions() {
 
 	if ( selectedSpeech != "EN" ) {
 		conditionIdx += 1;
-		message += conditionIdx + ") You are using unsupported [" + selectedSpeech + "] lanaguage for speech.<br>It is strongly recommended to change it to [EN], otherwise you will have muted scenes!<br><br>";
+		message += conditionIdx + ") " + GetLocStringByKeyExt("ntr_language_unsupported") + " [" + selectedSpeech + "] " + GetLocStringByKeyExt("ntr_speech_unsupported");
 	}
-	if ( StrFindFirst(GetLocStringByKeyExt("ntr_language_check"), "SUPPORTED") < 0 ) {
+
+	// barely
+	if ( StrFindFirst(GetLocStringByKeyExt("ntr_language_check"), "1") < 0 ) {
 		conditionIdx += 1;
 		message += conditionIdx + ") You are using unsupported [" + selectedText + "] lanaguage for text.<br>It is strongly recommended to change it to [EN], otherwise you will have missed text in scenes!<br><br>";
 	}
 	if (FactsQuerySum("q704_orianas_part_done") < 1) {
 		conditionIdx += 1;
-		message += conditionIdx + ") You did not passed 'Blood Simple' Orianna's quest (Unseen Elder path) in Blood and Wine DLC.<br>It is strongly recommended to play (or watch) it before starting this quest to avoid spoilers!<br><br>";
-		popup = new CNTRPopupRequest in thePlayer;
-		popup.open("WARNING!", message, true, "ntr_quest_plot_allowed");
+		message += conditionIdx + ") " + GetLocStringByKeyExt("ntr_plot_unsupported");
 	}
 
 	if (message != "") {
-		message += "* If you are not ready press ESCAPE and return here next night.<br>";
-		message += "* If you want to proceed anyway press OK but you WERE WARNED!<br>";
+		message += GetLocStringByKeyExt("ntr_unsupported_action1");
+		message += GetLocStringByKeyExt("ntr_unsupported_action2");
 		popup = new CNTRPopupRequest in thePlayer;
+		
 		// for next night
 		theGame.SetGameTime( theGame.GetGameTime() + GameTimeCreate(0, 1, 1, 0), true);
-		
-		popup.open("WARNING!", message, true, "ntr_quest_allowed");
+		popup = new CNTRPopupRequest in thePlayer;
+		popup.open(GetLocStringByKeyExt("ntr_language_unsupported_title"), message, true, "ntr_quest_allowed");
 	} else {
 		FactsAdd("ntr_quest_allowed", 1);
 	}	
@@ -104,6 +134,125 @@ quest function NTR_ForceKillNPC(tag : name, playDeath : bool) {
 			// will call DisableDeathAndAgony();
 		}
 		npcs[i].Kill( 'Kill', true );
+	}
+}
+
+quest function NTR_RemoveAttachment_Q( id : int ) {
+	var attachmentTag : name;
+	var entities      : array<CEntity>;
+	var        i      : int;
+
+	switch (id) {
+		case 1: // bruxa bow 1
+			attachmentTag = 'ntr_bruxa_arrow1';
+			break;
+		case 2: // bruxa bow 2 heart
+			attachmentTag = 'ntr_bruxa_arrow2';
+			break;
+		case 3:
+			attachmentTag = 'ntr_geralt_letter_stamped';
+			break;
+		case 4:
+			attachmentTag = 'ntr_orianna_letter_opened';
+			break;
+		case 5:
+			attachmentTag = 'ntr_geralt_orianna_diary';
+			break;
+	}
+
+	theGame.GetEntitiesByTag(attachmentTag, entities);
+	for (i = 0; i < entities.Size(); i += 1) {
+		entities[i].Destroy();
+	}
+}
+
+quest function NTR_CreateAttachment_Q( id : int ) {
+	var template                 : CEntityTemplate;
+	var entity, attachment       : CEntity;
+	var entityTag, attachmentTag : name;
+	var slotName                 : name;
+	var relativePosition         : Vector;
+	var relativeRotation         : EulerAngles;
+	var result                   : Bool;
+
+	switch (id) {
+		case 1: // bruxa bow 1
+			entityTag = 'ntr_orianna_bruxa';
+			attachmentTag = 'ntr_bruxa_arrow1';
+
+			// FIXME template = (CEntityTemplate)LoadResourceAsync("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
+			template = (CEntityTemplate)LoadResource("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
+			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
+			attachment.AddTag(attachmentTag);
+			entity = theGame.GetEntityByTag(entityTag);
+
+			slotName = 'blood_point';
+			relativePosition = Vector(0.05, 0.1, 0);
+			relativeRotation = EulerAngles(0, 200, 0);
+
+			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
+			//NTR_notify("attach = " + result);
+			break;
+
+		case 2: // bruxa bow 2 heart
+			entityTag = 'ntr_orianna_bruxa';
+			attachmentTag = 'ntr_bruxa_arrow2';
+
+			template = (CEntityTemplate)LoadResource("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
+			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
+			attachment.AddTag(attachmentTag);
+			entity = theGame.GetEntityByTag(entityTag);
+
+			slotName = 'blood_point';
+			relativePosition = Vector(0.05, 0.03, 0.07);
+			relativeRotation = EulerAngles(-5, 210, 0);
+
+			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
+			//NTR_notify("attach = " + result);
+			break;
+		case 3:
+			attachmentTag = 'ntr_geralt_letter_stamped';
+
+			template = (CEntityTemplate)LoadResource("dlc\bob\data\items\quest_items\q705\q705_item__assasination_letter_closed_small.w2ent", true);
+			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
+			attachment.AddTag(attachmentTag);
+
+			slotName = 'r_weapon';
+			relativePosition = Vector(0.03, 0.01, 0.05);
+			relativeRotation = EulerAngles(100.0, 0.0, 0.0);
+
+			result = attachment.CreateAttachment(thePlayer, slotName, relativePosition, relativeRotation);
+			break;
+		case 4:
+			entityTag = 'ntr_orianna_human';
+			attachmentTag = 'ntr_orianna_letter_opened';
+
+			template = (CEntityTemplate)LoadResource("dlc\bob\data\items\quest_items\q705\q705_item__comercial_poster_stamped.w2ent", true);
+			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
+			attachment.AddTag(attachmentTag);
+			entity = theGame.GetEntityByTag(entityTag);
+
+			slotName = 'r_weapon';
+			relativePosition = Vector(0.22, 0.08, 0.0);
+			relativeRotation = EulerAngles(0, 120, 90);
+
+			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
+			break;
+
+		case 5:
+			attachmentTag = 'ntr_geralt_orianna_diary';
+
+			template = (CEntityTemplate)LoadResource("dlc\dlcntr\data\entities\notebook_actor.w2ent", true);
+			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
+			attachment.AddTag(attachmentTag);
+			entity = theGame.GetEntityByTag(entityTag);
+
+			slotName = 'l_weapon';
+			relativePosition = Vector(0, 0, 0);
+			relativeRotation = EulerAngles(0, 0, 0);
+
+			result = attachment.CreateAttachment(thePlayer, slotName, relativePosition, relativeRotation);
+			break;
 	}
 }
 
@@ -181,7 +330,7 @@ quest function NTR_HideActorsFishermanScene() {
     acceptedVoicetags.PushBack('VAMPIRE DIVA');
     killIfHostile = false;
 
-    NTR_HideActorsInRange(40.0, acceptedTags, acceptedVoicetags, killIfHostile);
+    NTR_HideActorsInRange(50.0, acceptedTags, acceptedVoicetags, killIfHostile);
 }
 
 quest function NTR_HideActorsHagScene() {
@@ -194,7 +343,7 @@ quest function NTR_HideActorsHagScene() {
     acceptedVoicetags.PushBack('CELINA MONSTER');
     killIfHostile = true;
 
-    NTR_HideActorsInRange(40.0, acceptedTags, acceptedVoicetags, killIfHostile);
+    NTR_HideActorsInRange(50.0, acceptedTags, acceptedVoicetags, killIfHostile);
 }
 
 quest function NTR_HideActorsCampScene() {
@@ -207,7 +356,7 @@ quest function NTR_HideActorsCampScene() {
     acceptedTags.PushBack('ntr_camp_bandits');
     killIfHostile = true;
 
-    NTR_HideActorsInRange(40.0, acceptedTags, acceptedVoicetags, killIfHostile);
+    NTR_HideActorsInRange(50.0, acceptedTags, acceptedVoicetags, killIfHostile);
 }
 
 quest function NTR_UnhideActorsInRange(range : float)  {

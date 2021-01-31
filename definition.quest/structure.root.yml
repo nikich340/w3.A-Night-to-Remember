@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 1113, saved: 2020-12-20 23:24:06)
+# (version: 1189, saved: 2021-01-31 21:28:45)
 #
 ---
 structure:
@@ -14,7 +14,6 @@ structure:
           - waituntil.wait_quest_allowed
           - objective.Go_to_corvo_at_midnight: Activate
           - waituntil.3s
-          - journal.new_journal_entry: Activate
       
       subsegment.FINALE:
         ".editor":
@@ -96,6 +95,15 @@ structure:
         next.Output:
           - script.check_camp_removed3
       
+      waituntil.1ss:
+        elapsed: "00:00:01"
+        ".editor":
+          pos: [ -243.0, 0.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - waituntil.corvo_area
+      
       waituntil.2s:
         elapsed: "00:00:02"
         ".editor":
@@ -113,29 +121,28 @@ structure:
           in: [ In ]
           out: [ Out ]
         next:
-          - waituntil.Wait_00_to_03
+          - waituntil.corvo_area
       
       waituntil.3s_to_get_ready:
         elapsed: "00:00:03"
         ".editor":
-          pos: [ 18.0, 383.0 ]
+          pos: [ 27.0, 373.0 ]
           in: [ In ]
           out: [ Out ]
         next:
-          - changelayers.show_town_blood
+          - subsegment.regis_mail
       
-      waituntil.Wait_00_to_03:
-        time: [ "00:00", "03:00" ]
+      waituntil.Wait_00_to_02:
+        time: [ "00:00", "02:00" ]
         ".editor":
-          pos: [ -486.0, 215.0 ]
+          pos: [ -294.0, -88.0 ]
           in: [ In ]
           out: [ Out ]
-        next:
-          - script.check_fact_allowed
+        next: ".done"
       
       waituntil.Wait_fail_or_done:
         ".editor":
-          pos: [ 1340.0, 608.0 ]
+          pos: [ 1316.0, 585.0 ]
           hint: named
           in: [ In ]
           out: [ done, fail ]
@@ -145,9 +152,18 @@ structure:
           fail:
             factdb: [ ntr_quest_finale_started, ">=", 1 ]
         next.done:
-          - objective.Check_amphitheatre: Success
+          - journal.entry_camp_anphi_done: Activate
         next.fail:
           - objective.Check_amphitheatre: Failure
+      
+      waituntil.corvo_area:
+        inside: [ bob/amphi_area, PLAYER ]
+        ".editor":
+          pos: [ -506.0, 182.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - script.is_in_range
       
       waituntil.inside_camp:
         inside: [ bob/camp_area, PLAYER ]
@@ -224,13 +240,13 @@ structure:
           - waituntil.inside_camp
       
       waituntil.wait_another_range:
-        time: [ "03:01", "23:59" ]
+        time: [ "02:01", "23:59" ]
         ".editor":
-          pos: [ -312.0, 94.0 ]
+          pos: [ -511.0, -103.0 ]
           in: [ In ]
           out: [ Out ]
         next:
-          - waituntil.Wait_00_to_03
+          - waituntil.Wait_00_to_02
       
       waituntil.wait_day:
         time: [ "08:01", "23:59" ]
@@ -345,12 +361,12 @@ structure:
       
       script.NTR_CheckQuestConditions:
         ".editor":
-          pos: [ -177.0, 223.0 ]
+          pos: [ -8.0, 117.0 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_CheckQuestConditions
         next:
-          - waituntil.wait_another_range
+          - waituntil.1ss
       
       script.Teleport_Orianna_horse:
         ".editor":
@@ -409,7 +425,7 @@ structure:
       
       script.check_fact_allowed:
         ".editor":
-          pos: [ -333.0, 297.0 ]
+          pos: [ -146.0, 188.0 ]
           in: [ In ]
           out: [ "False", "True" ]
         function: NTR_FactChecker
@@ -432,6 +448,22 @@ structure:
           - val: 1
         next.False:
           - scene.baron_meeting_short: hurry
+      
+      script.is_in_range:
+        ".editor":
+          pos: [ -327.0, 182.0 ]
+          in: [ In ]
+          out: [ "False", "True" ]
+        function: NTR_IsTimeRange
+        parameter:
+          - hours1: 0
+          - minutes1: 0
+          - hours2: 2
+          - minutes2: 0
+        next.False:
+          - waituntil.1ss
+        next.True:
+          - script.check_fact_allowed
       
       script.sounds_dettlaff:
         ".editor":
@@ -514,6 +546,8 @@ structure:
           - river_sword_loot
           - beach_doll
           - beach_orianna_dress
+          - regis_mail_layer
+          - orianna_house_books_layer
         next: ".done"
       
       changelayers.show_camp_house_main:
@@ -530,6 +564,7 @@ structure:
           - orianna_house
           - nlayer
           - orianna_house_music
+          - orianna_house_books_layer
         next:
           - spawn.spawn_fisherman
           - spawn.spawn_bandits_camp
@@ -680,15 +715,15 @@ structure:
           - comm_orph_wraiths
         next: ".done"
       
-      journal.new_journal_entry:
-        ".editor": [ -562.0, 876.0 ]
-        entry: characters/baron_edward/camp_entry
+      journal.entry_camp_anphi_done:
+        ".editor": [ 1473.0, 651.0 ]
+        entry: quests/nighttoremember/camp_amphitheatre
         notify: true
-        activate_root: true
-        next: ".done"
+        next:
+          - objective.Check_amphitheatre: Success
       
       objective.Check_amphitheatre:
-        ".editor": [ 1326.0, 727.0 ]
+        ".editor": [ 1325.0, 757.0 ]
         objective: nighttoremember/camp_part/check_amphitheatre
         notify: true
         track: true

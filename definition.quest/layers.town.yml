@@ -243,11 +243,11 @@ layers:
         pos: [ -410.6305236816, -1436.6831054688, 87.2407150269 ]
         rot: [ 0.0, 0.0, 507.0203857422 ]
 
-      #ntr_agent_town:
-      #  template: "CNTRScriptedAgent:ntr_scripted_agent"
-      #  pos: [ -410.45, -1439.175, 87.065 ]
-      #  rot: [ 0.0, 0.0, 0.0 ]
-      #  tags: [ "ntr_agent_town" ]
+      ntr_agent_town:
+        template: "CNTRScriptedAgent:dlc\\dlcntr\\data\\entities\\ntr_agent.w2ent"
+        pos: [ -410.45, -1439.175, 87.065 ]
+        rot: [ 0.0, 0.0, 0.0 ]
+        tags: [ "ntr_agent_town" ]
 
       horse_tracks_1: 
         template: "W3MonsterClue:quests\\part_2\\quest_files\\q206_berserkers\\clues\\q206_arnvalds_horse_track.w2ent"
@@ -2095,8 +2095,8 @@ layers:
               playOnStartup: true  
 
       orianna_scent5: 
-        .type: "CNTRScent"
-        template: "dlc\\dlcntr\\data\\entities\\ntr_scent.w2ent"
+        .type: "CGameplayEntity"
+        template: "quests\\sidequests\\no_mans_land\\quest_files\\sq104_werewolf\\entities\\sq104_niellen_scent_source.w2ent"
         transform:
           pos: [ -410.49, -1439.179, 87.069 ]
           rot: [ 0.0, 0.0, 0.0 ]

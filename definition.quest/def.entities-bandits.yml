@@ -54,7 +54,6 @@ templates:
         #wasIncluded: true
          
     usedAppearances:
-      - baron_edward
       - bob_knight_15
       #- olgierd
 
@@ -191,6 +190,44 @@ templates:
         loopStart: 0.0863580033
         loopEnd: 0.9931170344
         showDistance: 30.0
+      bloody_mouth:
+        ".type": CFXDefinition
+        trackGroups:
+          Default:
+            ".type": CFXTrackGroup
+            tracks:
+              Emitter:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemMaterialOverride
+                    material: "dlc\\bob\\data\\fx\\cutscenes\\cs704_diva_feeding\\cs704_bloody_mouth.w2mi"
+                    drawOriginal: true
+                    includeList:
+                      - h_03_ma__dlc
+                    forceMeshAlternatives: true
+                    interpolation:
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0, 1.0 ]
+            isExpanded: true
+            trackGroupColor: [ 169, 130, 233, 100 ]
+        loopStart: 0.1000000015
+        loopEnd: 0.3000000119
+        showDistance: 25.0
+        isLooped: true
 
   baron_bandit_big:
     includes:

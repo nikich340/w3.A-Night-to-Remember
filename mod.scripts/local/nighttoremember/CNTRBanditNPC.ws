@@ -1,4 +1,5 @@
 class CNTRBanditNPC extends CNTRCommonNPC {
+    private var baronReplicCounter : int;
 
 	protected function Attack( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity)
     {
@@ -45,12 +46,30 @@ class CNTRBanditNPC extends CNTRCommonNPC {
 		}
 		super.OnTakeDamage( action );
 
-		if ( HasTag('ntr_baron_edward') && GetHealthPercents() < 0.25 ) {
-            SetAnimMultiplier();         
+		if ( HasTag('ntr_baron_edward') && GetHealthPercents() < 0.25 && baronReplicCounter < 3 ) {
+            SetAnimMultiplier();
+            
+            PlayBaronReplic();
+            baronReplicCounter += 1;     
+        }
+        if ( HasTag('ntr_baron_edward') && GetHealthPercents() < 0.5 && baronReplicCounter < 2 ) {
+            PlayBaronReplic();
+            baronReplicCounter += 1;     
+        }
+        if ( HasTag('ntr_baron_edward') && GetHealthPercents() < 0.75 && baronReplicCounter < 1 ) {
+            PlayBaronReplic();
+            baronReplicCounter += 1;     
         }
 	}
-	function PlayEffect( effectName : name, optional target : CNode  ) : bool {
+
+    function PlayBaronReplic() {
+        var scene : CStoryScene;
+
+        scene = (CStoryScene)LoadResource("dlc/dlcntr/data/scenes/17.baron_oneliners.w2scene", true);
+        theGame.GetStorySceneSystem().PlayScene(scene, "fight_replics");
+    }
+	/*function PlayEffect( effectName : name, optional target : CNode  ) : bool {
 		//NTR_notify("Play: " + effectName + ", target: " + target);
 		return super.PlayEffect( effectName, target );
-	}
+	}*/
 }

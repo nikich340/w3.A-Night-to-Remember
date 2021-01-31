@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: orphanage
 # 
-# (version: 1113, saved: 2020-12-20 23:24:06)
+# (version: 1189, saved: 2021-01-31 21:28:45)
 #
 ---
 structure:
@@ -14,19 +14,7 @@ structure:
             - objective.Go_orphanage: Activate
             - waituntil.orph_area
         
-        scene.gp_scene:
-          ".editor":
-            pos: [ 2048.5471191406, -315.0753479004 ]
-            in: [ after_orphanage ]
-            out: [ Output ]
-          scene: 13.gameplay_orphanage.yml
-          placement: bob/orphscenepoint
-          interruptable: true
-          _fadein: false
-          next.Output:
-            - addfact.ntr_quest_orphanage_completed
-        
-        scene.new_scene:
+        scene.call_orianna:
           ".editor":
             pos: [ 279.0, 375.0 ]
             in: [ orianna_call ]
@@ -36,6 +24,18 @@ structure:
           interruptable: true
           _fadein: false
           next: ".done"
+        
+        scene.gp_scene:
+          ".editor":
+            pos: [ 2046.0, -319.0 ]
+            in: [ after_orphanage ]
+            out: [ Output ]
+          scene: 13.gameplay_orphanage.yml
+          placement: bob/orphscenepoint
+          interruptable: true
+          _fadein: false
+          next.Output:
+            - addfact.ntr_quest_orphanage_completed
         
         scene.orphanage_scene:
           ".editor":
@@ -48,13 +48,13 @@ structure:
           _fadein: true
           next.fistfight:
             - script.Lock_Door
-            - script.Set_0orens_bandit
             - objective.defeat_bandits: Activate
             - objective.go_door: Success
           next.normal:
             - spawn.bandits_normal_comm
-            - waituntil.wait_1sss
+            - journal.entry_orph_common: Activate
             - objective.go_door: Success
+            - script.wait_05_s
         
         scene.scene_fistfight_loose:
           ".editor":
@@ -69,12 +69,13 @@ structure:
             - spawn.bandits_normal_comm
             - script.reset_loose_fact
             - script.reset_win_fact
-            - waituntil.wait_1sss
+            - journal.entry_loose: Activate
             - objective.defeat_bandits: Failure
+            - script.Steal_money
         
         scene.scene_win:
           ".editor":
-            pos: [ 1722.7094726562, -52.6477584839 ]
+            pos: [ 1643.0, -50.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 14.fistfight_win.yml
@@ -83,31 +84,20 @@ structure:
           _fadein: true
           next.Output:
             - spawn.bandits_normal_comm
-            - waituntil.wait_1sss
+            - journal.entry_win: Activate
             - objective.defeat_bandits: Success
             - addfact.ntr_baron_story_known
         
         interaction.scene15_to_bandit_REMOVED:
           ".editor":
-            pos: [ 1177.3326416016, 903.8959960938 ]
+            pos: [ 1031.0, 718.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 15.fistfight_repeat.yml
           placement: bob/orphscenepoint
           interruptable: true
           actor: [ ntr_fat_bandit ]
-          next.Output:
-            - script.Lock_Door
-        
-        waituntil.START_HERE:
-          examined: ~afc
-          ".editor":
-            pos: [ -79.2001647949, -164.1350708008 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - waituntil.night_time
-            - waituntil.wraith_area
+          next: ".done"
         
         waituntil.branch_ff_result:
           ".editor":
@@ -121,21 +111,23 @@ structure:
             loose:
               factdb: [ ntr_fisfight_dead, ">=", 1 ]
           next.loose:
-            - script.neutral_3
+            - script.Friendly_3
             - script.stop_player_fistfight
-            - script.neutral_2
-            - script.neutral_fat
+            - script.Friendly_2
+            - script.Friendly_fat
             - script.Unlock_door
             - waituntil.wait_3s
             - script.Fade_Out
+            - journal.entry_orph_common: Activate
           next.win:
             - script.stop_player_fistfight
-            - script.neutral_fat
-            - script.neutral_2
-            - script.neutral_3
+            - script.Friendly_fat
+            - script.Friendly_2
+            - script.Friendly_3
             - script.Unlock_door
             - waituntil.wait_3ss
             - script.Fade_Out
+            - journal.entry_orph_common: Activate
         
         waituntil.close_to_door:
           entered: [ bob/ordphdoor_area, PLAYER ]
@@ -146,24 +138,6 @@ structure:
           next:
             - script.NTR_SaveGame3
             - script.NTR_FadeOutQuest
-        
-        waituntil.night_time:
-          time: [ "00:00", "04:00" ]
-          ".editor":
-            pos: [ 137.3776092529, -371.7985229492 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - addfact.fact_add11
-        
-        waituntil.non_night_time:
-          time: [ "04:01", "23:59" ]
-          ".editor":
-            pos: [ 266.553894043, -221.7935791016 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - addfact.del_fact11
         
         waituntil.orph_area:
           entered: [ bob/orphanage_area, PLAYER ]
@@ -176,25 +150,7 @@ structure:
             - objective.go_door: Activate
             - waituntil.close_to_door
             - spawn.spawn_bandits
-            - scene.new_scene: orianna_call
-        
-        waituntil.outside_area:
-          outside: [ bob/orphanage_wraitharea, PLAYER ]
-          ".editor":
-            pos: [ 273.4553833008, 65.3629989624 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - addfact.del_fact1
-        
-        waituntil.wait_1sss:
-          elapsed: "00:00:01"
-          ".editor":
-            pos: [ 1873.7276611328, -240.2176818848 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - scene.gp_scene: after_orphanage
+            - scene.call_orianna: orianna_call
         
         waituntil.wait_3s:
           elapsed: "00:00:03"
@@ -208,20 +164,11 @@ structure:
         waituntil.wait_3ss:
           elapsed: "00:00:03"
           ".editor":
-            pos: [ 1546.9444580078, 1.8665232658 ]
+            pos: [ 1504.0, 51.0 ]
             in: [ In ]
             out: [ Out ]
           next:
             - scene.scene_win: Input
-        
-        waituntil.wraith_area:
-          inside: [ bob/orphanage_wraitharea, PLAYER ]
-          ".editor":
-            pos: [ 224.9050598145, -80.2561416626 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - addfact.fact_add1
         
         script.0_5_s:
           ".editor":
@@ -233,45 +180,6 @@ structure:
             - seconds: 0.5
           next:
             - scene.orphanage_scene: Input
-        
-        script.FACT_BRANCH:
-          ".editor":
-            pos: [ 645.2096557617, -133.7280426025 ]
-            in: [ In ]
-            out: [ "False", "True" ]
-          function: NTR_FactChecker
-          parameter:
-            - factName: NTR_orphanage_wraith
-            - factCond: "=="
-            - val: 2
-          next.True:
-            - spawn.spawn_wraiths
-        
-        script.FACT_BRANCH1:
-          ".editor":
-            pos: [ 91.7500991821, -221.1249084473 ]
-            in: [ In ]
-            out: [ "False", "True" ]
-          function: NTR_FactChecker
-          parameter:
-            - factName: NTR_orphanage_wraith
-            - factCond: "=="
-            - val: 2
-          next.False:
-            - waituntil.non_night_time
-        
-        script.FACT_BRANCH2:
-          ".editor":
-            pos: [ 109.7501068115, 75.9615707397 ]
-            in: [ In ]
-            out: [ "False", "True" ]
-          function: NTR_FactChecker
-          parameter:
-            - factName: NTR_orphanage_wraith
-            - factCond: "=="
-            - val: 2
-          next.False:
-            - waituntil.outside_area
         
         script.Fade_Out:
           ".editor":
@@ -285,6 +193,45 @@ structure:
             - g: 0
             - b: 0
           next: ".done"
+        
+        script.Friendly_2:
+          ".editor":
+            pos: [ 1595.3072509766, 422.6904907227 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_TuneNPC
+          parameter:
+            - tag: cname_ntr_bandit_2
+            - level: 980
+            - attitude: Friendly
+          next:
+            - script.stop_ff_2
+        
+        script.Friendly_3:
+          ".editor":
+            pos: [ 1597.8072509766, 520.1904296875 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_TuneNPC
+          parameter:
+            - tag: cname_ntr_bandit_3
+            - level: 975
+            - attitude: Friendly
+          next:
+            - script.stop_ff_3
+        
+        script.Friendly_fat:
+          ".editor":
+            pos: [ 1583.4322509766, 335.8154907227 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_TuneNPC
+          parameter:
+            - tag: cname_ntr_fat_bandit
+            - level: 985
+            - attitude: Friendly
+          next:
+            - script.stop_ff_fat
         
         script.Lock_Door:
           ".editor":
@@ -329,7 +276,7 @@ structure:
         
         script.Return_money:
           ".editor":
-            pos: [ 1931.0, -162.0 ]
+            pos: [ 2135.0, -166.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_ReturnGeraltMoney
@@ -350,13 +297,13 @@ structure:
         
         script.Steal_money:
           ".editor":
-            pos: [ 2161.0122070312, 177.6059875488 ]
+            pos: [ 2156.0, 178.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_StealGeraltMoney
           parameter:
             - tag: cname_ntr_fat_bandit
-            - amount: 500
+            - amount: 1000
           next: ".done"
         
         script.Unlock_door:
@@ -402,45 +349,6 @@ structure:
             - tag: cname_ntr_bandit_3
             - activate: true
           next: ".done"
-        
-        script.neutral_2:
-          ".editor":
-            pos: [ 1595.3072509766, 422.6904907227 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_TuneNPC
-          parameter:
-            - tag: cname_ntr_bandit_2
-            - level: 980
-            - attitude: Friendly
-          next:
-            - script.stop_ff_2
-        
-        script.neutral_3:
-          ".editor":
-            pos: [ 1597.8072509766, 520.1904296875 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_TuneNPC
-          parameter:
-            - tag: cname_ntr_bandit_3
-            - level: 975
-            - attitude: Friendly
-          next:
-            - script.stop_ff_3
-        
-        script.neutral_fat:
-          ".editor":
-            pos: [ 1583.4322509766, 335.8154907227 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_TuneNPC
-          parameter:
-            - tag: cname_ntr_fat_bandit
-            - level: 985
-            - attitude: Friendly
-          next:
-            - script.stop_ff_fat
         
         script.player_fistfight:
           ".editor":
@@ -558,6 +466,28 @@ structure:
           next:
             - script.fat_bandit
         
+        script.wait_05_s:
+          ".editor":
+            pos: [ 1400.0, -157.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Wait
+          parameter:
+            - seconds: 0.5
+          next:
+            - journal.entry_orphanage_peaceful: Activate
+        
+        script.wait_05_ss:
+          ".editor":
+            pos: [ 1872.0, -257.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Wait
+          parameter:
+            - seconds: 0.5
+          next:
+            - scene.gp_scene: after_orphanage
+        
         spawn.bandits_normal_comm:
           ".editor":
             pos: [ 2133.7387695312, -86.3081283569 ]
@@ -580,16 +510,32 @@ structure:
             - comm_orphanage_bandits
           next: ".done"
         
-        spawn.spawn_wraiths:
-          ".editor":
-            pos: [ 833.0524902344, -73.5438232422 ]
-            hint: spawn-only
-            in: []
-            out: []
-          phase: fight
-          spawnsets:
-            - comm_orph_wraiths
+        journal.entry_loose:
+          ".editor": [ 1888.0, -42.0 ]
+          entry: quests/nighttoremember/orphanage_loose
+          notify: true
+          next:
+            - script.wait_05_ss
+        
+        journal.entry_orph_common:
+          ".editor": [ 1564.0, 155.0 ]
+          entry: quests/nighttoremember/orphanage1
+          notify: true
           next: ".done"
+        
+        journal.entry_orphanage_peaceful:
+          ".editor": [ 1637.0, -196.0 ]
+          entry: quests/nighttoremember/orphanage_peaceful
+          notify: true
+          next:
+            - script.wait_05_ss
+        
+        journal.entry_win:
+          ".editor": [ 1820.0, -126.0 ]
+          entry: quests/nighttoremember/orphanage_win
+          notify: true
+          next:
+            - script.wait_05_ss
         
         objective.Go_orphanage:
           ".editor": [ 78.0, 425.0 ]
@@ -613,48 +559,22 @@ structure:
           next: ".done"
         
         shifttime.new_shift_time:
-          ".editor": [ 1355.9827880859, 219.0013122559 ]
+          ".editor": [ 1057.0, 340.0 ]
           by: "11:00"
           next: ".done"
         
-        addfact.del_fact1:
-          ".editor": [ 476.5303039551, 61.6710128784 ]
-          value: [ NTR_orphanage_wraith, -1 ]
-          next:
-            - waituntil.wraith_area
-        
-        addfact.del_fact11:
-          ".editor": [ 431.9640197754, -224.0132598877 ]
-          value: [ NTR_orphanage_wraith, -1 ]
-          next:
-            - waituntil.night_time
-        
-        addfact.fact_add1:
-          ".editor": [ 448.0700683594, -77.3270568848 ]
-          value: [ NTR_orphanage_wraith, 1 ]
-          next:
-            - script.FACT_BRANCH2
-            - script.FACT_BRANCH
-        
-        addfact.fact_add11:
-          ".editor": [ 380.6662597656, -375.0770263672 ]
-          value: [ NTR_orphanage_wraith, 1 ]
-          next:
-            - script.FACT_BRANCH
-            - script.FACT_BRANCH1
-        
         addfact.ntr_baron_story_known:
-          ".editor": [ 1768.0, -324.0 ]
+          ".editor": [ 1751.0, -386.0 ]
           value: [ ntr_baron_story_known, 1 ]
           next: ".done"
         
         addfact.ntr_quest_orphanage_completed:
-          ".editor": [ 2229.0, -319.0 ]
+          ".editor": [ 2251.0, -259.0 ]
           value: [ ntr_quest_orphanage_completed, 1 ]
           next:
             - out
         
         out:
-          ".editor": [ 2436.0, -315.0 ]
+          ".editor": [ 2497.0, -322.0 ]
           next: ".done"
         

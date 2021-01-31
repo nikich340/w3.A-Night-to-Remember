@@ -2,6 +2,37 @@
 # definition of entities
 #
 templates:
+  agneta_girl:
+    includes:
+      - "dlc\\bob\\data\\gameplay\\community\\community_npcs\\citizens\\girl_noble.w2ent"
+
+    entityObject:
+      .type: "CNewNPC"
+      displayName: "Agneta"
+
+    usedAppearances:
+      - bob_child_noble_female_03
+
+    templateParams:
+      - ".type": CAnimMimicParam
+        animationSets:
+          - "dlc\\bob\\data\\animations\\cutscenes\\beauclair\\q704_the_truth\\cs704_diva_feeding\\cs704_diva_feeding.w2cutscene"
+          - "animations\\mimics\\child_mimic_animation.w2anims"
+          - "animations\\mimics\\child_mimic_layers.w2anims"
+        behaviorInstanceSlots:
+          - ".type": SBehaviorGraphInstanceSlot
+            instanceName: mimika
+            graph: "animations\\mimics\\mimics_behavior.w2beh"
+          - ".type": SBehaviorGraphInstanceSlot
+            instanceName: Cutscene
+            graph: "gameplay\\behaviors\\cutscene_graph.w2beh"
+            
+      - ".type": CAnimAnimsetsParam
+        name: child
+        componentName: child_base
+        animationSets:
+          - "dlc\\bob\\data\\animations\\cutscenes\\beauclair\\q704_the_truth\\cs704_diva_feeding\\cs704_diva_feeding.w2cutscene"
+
   niellan_boy:
     includes:
       - dlc/bob/data/gameplay/community/community_npcs/citizens/boy.w2ent
@@ -102,7 +133,7 @@ templates:
 
   regis_vampire_scene_fix:
     includes:
-      - dlc/bob/data/quests/main_npcs/regis_terzieff_vampire.w2ent
+      - "dlc\\bob\\data\\quests\\main_npcs\\regis_terzieff_vampire.w2ent"
     
     entityObject:
       .type: "CNewNPC"
@@ -546,7 +577,7 @@ templates:
           - characters/models/main_npc/triss/h_01_wa__triss.w2ent
           - dlc/dlc6/data/characters/models/main_npc/triss/body_02_wa__triss_dlc.w2ent
           - characters/models/main_npc/yennefer/c_01_wa__yennefer.w2ent
-          - dlc/bob/data/characters/models/main_npc/dettlaff/g_01_ma__dettlaff_vampire.w2ent
+          - dlc/dlcntr/data/entities/oriana/g_orianna_claws.w2ent
 
     usedAppearances:
       - triss
