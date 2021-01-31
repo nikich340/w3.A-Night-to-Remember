@@ -34,9 +34,10 @@ EXIT /B 1
 %BIN_IMPORT_TEXTURE% data/entities/baron/body_01_ma__junior_d01.tga data/entities/baron/body_01_ma__junior_d01.xbm CharacterDiffuse
 %BIN_IMPORT_TEXTURE% data/entities/baron/body_01_ma__junior_a01.tga data/entities/baron/body_01_ma__junior_a01.xbm CharacterDiffuse
 
-::%BIN_IMPORT_TEXTURE% data\gameplay\gui_new\icons\inventory\oils\acero_fake_oil_64x64.png data\gameplay\gui_new\icons\inventory\oils\acero_fake_oil_64x64.xbm WorldDiffuseWithAlpha
+robocopy %DIR_PROJECT_BASE%\textures.import\data\gameplay\gui_new\textures\journal\characters\ %DIR_PROJECT_BASE%\uncooked.textures\dlc\dlcntr\data\gameplay\gui_new\textures\journal\characters\ journal_baron_edward.png
+robocopy %DIR_PROJECT_BASE%\textures.import\data\gameplay\gui_new\icons\characters\ %DIR_PROJECT_BASE%\uncooked.textures\dlc\dlcntr\data\gameplay\gui_new\icons\characters\ journal_baron_edward.png
+
 robocopy %DIR_PROJECT_BASE%\textures.import\data\gameplay\gui_new\icons\inventory\oils\ %DIR_PROJECT_BASE%\uncooked.textures\dlc\dlcntr\data\gameplay\gui_new\icons\inventory\oils\ acero_fake_oil_64x64.png
-::%BIN_IMPORT_TEXTURE% data\gameplay\gui_new\icons\inventory\weapons\acero_steel_icon_64x128.png data\gameplay\gui_new\icons\inventory\weapons\acero_steel_icon_64x128.xbm WorldDiffuseWithAlpha
 robocopy %DIR_PROJECT_BASE%\textures.import\data\gameplay\gui_new\icons\inventory\weapons\ %DIR_PROJECT_BASE%\uncooked.textures\dlc\dlcntr\data\gameplay\gui_new\icons\inventory\weapons\ acero_steel_icon_64x128.png
 
 	:: Triss fx
@@ -51,6 +52,11 @@ robocopy %DIR_PROJECT_BASE%\textures.import\data\gameplay\gui_new\icons\inventor
 
 	:: NTR LOGO
 %BIN_IMPORT_TEXTURE% data/gameplay/logos/ntr_logo_en.png data/gameplay/logos/ntr_logo_en.xbm WorldDiffuseWithAlpha
+%BIN_IMPORT_TEXTURE% data/gameplay/logos/ntr_credits_1.png data/gameplay/logos/ntr_credits_1.xbm WorldDiffuseWithAlpha
+%BIN_IMPORT_TEXTURE% data/gameplay/logos/ntr_credits_2.png data/gameplay/logos/ntr_credits_2.xbm WorldDiffuseWithAlpha
+%BIN_IMPORT_TEXTURE% data/gameplay/logos/ntr_credits_3.png data/gameplay/logos/ntr_credits_3.xbm WorldDiffuseWithAlpha
+%BIN_IMPORT_TEXTURE% data/gameplay/logos/ntr_credits_4.png data/gameplay/logos/ntr_credits_4.xbm WorldDiffuseWithAlpha
+%BIN_IMPORT_TEXTURE% data/gameplay/logos/ntr_credits_5.png data/gameplay/logos/ntr_credits_5.xbm WorldDiffuseWithAlpha
 
 	:: Bruxa morph torso
 %BIN_IMPORT_TEXTURE% data/entities/oriana/model/bruxa/t_02__bruxa_bloody_d01.tga data/entities/oriana/model/bruxa/t_02__bruxa_bloody_d01.xbm CharacterDiffuse
