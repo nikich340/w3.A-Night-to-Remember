@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 1189, saved: 2021-01-31 21:28:45)
+# (version: 1198, saved: 2021-02-03 11:50:41)
 #
 ---
 structure:
@@ -102,7 +102,7 @@ structure:
           in: [ In ]
           out: [ Out ]
         next:
-          - waituntil.corvo_area
+          - waituntil.in_corvo_area
       
       waituntil.2s:
         elapsed: "00:00:02"
@@ -121,7 +121,7 @@ structure:
           in: [ In ]
           out: [ Out ]
         next:
-          - waituntil.corvo_area
+          - waituntil.in_corvo_area
       
       waituntil.3s_to_get_ready:
         elapsed: "00:00:03"
@@ -156,14 +156,15 @@ structure:
         next.fail:
           - objective.Check_amphitheatre: Failure
       
-      waituntil.corvo_area:
-        inside: [ bob/amphi_area, PLAYER ]
+      waituntil.in_corvo_area:
+        inside: [ bob/corvo_trigger_area, PLAYER ]
         ".editor":
           pos: [ -506.0, 182.0 ]
           in: [ In ]
           out: [ Out ]
         next:
           - script.is_in_range
+          - script.new_logmsg
       
       waituntil.inside_camp:
         inside: [ bob/camp_area, PLAYER ]
@@ -465,6 +466,17 @@ structure:
         next.True:
           - script.check_fact_allowed
       
+      script.new_logmsg:
+        ".editor":
+          pos: [ -305.0, 334.0 ]
+          in: [ In ]
+          out: [ Out ]
+        function: radLog
+        parameter:
+          - logChannel: cname_NTR
+          - msg: WORKS!
+        next: ".done"
+      
       script.sounds_dettlaff:
         ".editor":
           pos: [ 117.6712799072, 203.2845916748 ]
@@ -562,7 +574,6 @@ structure:
         show:
           - camp_layer
           - orianna_house
-          - nlayer
           - orianna_house_music
           - orianna_house_books_layer
         next:
