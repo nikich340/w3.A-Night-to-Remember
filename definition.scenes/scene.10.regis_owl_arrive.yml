@@ -435,8 +435,8 @@ storyboard:
     shot_2:
       - actor.anim: 
           .@pos: [0.0, geralt_low_lying_down_happy_sleeping_wake_up_to_low_sitting_sad]
-          clipend: 12.0
-      - actor.pose: [0.5, geralt_Low_Sitting_Sad]
+          clipend: 8.0
+      - actor.pose: [0.75, geralt_Low_Sitting_Sad]
 
     # shot shot sitting
     shot_3a:
@@ -474,7 +474,7 @@ storyboard:
       #- actor.placement.start: [0.0, owl, [ -385.276, 1400.5283203125, -49.7029876709 ], [ 0.0, 0.0, 199.1800384521 ]]
       #- prop.placement.start: [0.0, q702_blackmail_letter, [ -385.276, 1400.4924316406, -49.7607650757 ], [ 0.0, 0.0, 290.8099975586 ]]
       - cam: [0.0, cam_9_shot_sky]
-      - actor.anim: 
+      - actor.anim:
           .@pos: [0.0, owl_clapping_wings]
           clipend: 4.0
       - actor.placement.end: [1.0, owl, [ -373.2567138672, 1367.5283203125, -49.7029876709 ], [ 0.0, 0.0, 199.1800384521 ]]
@@ -523,7 +523,7 @@ dialogscript:
     # shot shot wakeup
     - CUE: shot_2
     # (longest) anim: low_lying_down_happy_sleeping_wake_up_to_low_sitting_sad
-    - PAUSE: 12.0
+    - PAUSE: 8.0
     # shot shot sitting
     - CUE: shot_3a
     - geralt: "[2.5379393]0001075881|Damn… What a dream."
