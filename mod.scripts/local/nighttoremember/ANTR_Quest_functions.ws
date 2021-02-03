@@ -61,14 +61,14 @@ quest function NTR_IsContainersEmpty(tag : name) : Bool {
 
 quest function NTR_IsTimeRange(hours1 : int, minutes1 : int, hours2 : int, minutes2 : int) : Bool {
 	var gameTime		: GameTime;
-	var days, hours, minutes, seconds : int;
+	var minutes : int;
 
 	gameTime = theGame.GetGameTime();
+	minutes = GameTimeHours( gameTime ) * 60 + GameTimeMinutes( gameTime );
 
-	days = FloorF( ((float)seconds) / (24 * 60 * 60));
-	seconds -= days * 24 * 60 * 60;
+	//NTR_notify("game minutes = " + minutes);
 
-	return ((hours1 * 60 + minutes1) * 60 <= seconds && seconds <= (hours2 * 60 + minutes2) * 60);
+	return (hours1 * 60 + minutes1 <= minutes && minutes <= hours2 * 60 + minutes2);
 }
 
 quest function NTR_CheckQuestConditions() {
@@ -104,7 +104,7 @@ quest function NTR_CheckQuestConditions() {
 		popup = new CNTRPopupRequest in thePlayer;
 		
 		// for next night
-		theGame.SetGameTime( theGame.GetGameTime() + GameTimeCreate(0, 1, 1, 0), true);
+		theGame.SetGameTime( theGame.GetGameTime() + GameTimeCreate(0, 2, 2, 0), true);
 		popup = new CNTRPopupRequest in thePlayer;
 		popup.open(GetLocStringByKeyExt("ntr_language_unsupported_title"), message, true, "ntr_quest_allowed");
 	} else {
