@@ -243,7 +243,7 @@ layers:
     interactiveentities: 
       regis_mail: 
         #template: "W3AnimatedContainer:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q702_hunt\\entities\\q702_blackmail_letter.w2ent"
-        template: W3AnimatedContainer:regis_mail
+        template: "W3AnimatedContainer:regis_mail"
         valid_interactions: [ Loot ]
         tags: [ "ntr_regis_mail" ]
         pos: [ -382.5950317383, -804.3030395508, 36.1552848816 ]
