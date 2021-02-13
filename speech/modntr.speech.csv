@@ -14,6 +14,8 @@
 2114670652|00000000||Regis… Just trying to avoid a fight, to protect her.
 2114670653|00000000||Well, I should check the orphanage.
 2114670654|00000000||Go home. I'm a witcher. Need to examine the body.
+2114670662|00000000||I've heard the guards are looking for Orianna.
+2114670663|00000000||I wish they'd caught this monster, or whoever she really is.
 2114670655|00000000||Woman turned back here.
 2114670656|00000000||Think she was looking for Regis. But he left.
 2114670657|00000000||Fishermen should know something.
@@ -75,7 +77,7 @@
 2114670766|00000000||A witcher? So you know how to track down somebody, right?
 2114670767|00000000||Well, come in then, we've matters to discuss.
 2114670768|00000000||I am supposed to find a red-haired woman here.
-;;;2114670768|00000000||I'm looking for a red-haired woman.
+2114670784|00000000||I'm looking for a woman with red hair.
 ;;; neuro-voiced I am supposed to find a red-haired woman here.
 2114670769|00000000||That's interesting. Because we're supposed to meet her too.
 2114670770|00000000||Why are you looking for her?
@@ -150,8 +152,6 @@
 2114670882|00000000||He is gone. Orianna killed him.
 2114670883|00000000||What?! But… How? Tell me what happened.
 2114670970|00000000||Oh, shit…
-;;; 2114670883|00000000||You, piece of shit, I'll kill you!
-;;; 2114670883|00000000||I'm gonna fucking kill you, witcher!
 2114670884|00000000||She is not just a woman. Maybe a witch or a monster… I'm not entirely sure what happened myself.
 2114670885|00000000||And who is th… A witcher? It must be destiny that sent you to us.
 2114670886|00000000||Actually, it was your friends. I'm Geralt.
@@ -397,19 +397,21 @@
 2114670364|00000000||Do you know what happens to those who betray me?
 ;    490004|00000000||That a threat?
 2114670365|00000000||Kill him!
+2114670429|00000000||You, piece of shit, I'll kill you!
+2114670430|00000000||I'm gonna behead you, witcher!
 ;
 ; scene 27
 ;
 ; scene 28
 ;
 ;   1143303|00000000||What's the matter?
-2114670375|00000000||A witcher has slain a man to protect a monster. I'll admit, I'm impressed.
+2114670375|00000000||A witcher slaying a human to protect a monster. I'll admit, I'm impressed.
 ;    458827|00000000||It was the lesser evil… I think.
-2114670376|00000000||I'm sure this… troublesome Baron Edward promised a sizable reward, right?
+2114670376|00000000||Am I correct in assuming that this troublesome Baron Edward promised a most sizable reward?
 2114670377|00000000||Here.
 ;   1066805|00000000||Mhm. Thanks a bunch.
 2114670378|00000000||Good luck, Geralt of Rivia.
-2114670379|00000000||So long, Orianna.
+;;2114670379|00000000||So long, Orianna.
 ;
 ; scene 29
 ;
@@ -423,12 +425,26 @@
 ; scene 31
 ;
 ;
-; scene 32
+; scene 32 - removed
 ;
 2114670402|00000000||Leave me be.
 2114670403|00000000||I am all ears.
 2114670404|00000000||Missed me that much?
-2114670405|00000000||I thank you again, witcher. For your understanding and help.
+2114670405|00000000||I thank you again, witcher. For your understanding and assistance.
+;
+; scene 33
+;
+2114670440|00000000||Agneta?
+2114670441|00000000||What have I done…
+2114670442|00000000||The girl has a rapid heart rate and it seems that she has lost a significant amount of blood.
+2114670443|00000000||You say she fell and hurt herself?
+2114670444|00000000||In a way. Tell me, is she going to be alright?
+2114670445|00000000||I'm afraid such injuries have consequences. She may have a chance at recovery.
+2114670446|00000000||She must drink plenty of fluids and remain in bed.
+2114670447|00000000||Thank you.
+2114670448|00000000||Take good care of the girl. Another injury like this could prove fatal.
+2114670449|00000000||Interesting, she seems to hesitate, as though she is experiencing some sort of inner conflict…
+;
 ;
 2114670990|00000000||Here is Johnny!
 2114670991|00000000||Noooo!

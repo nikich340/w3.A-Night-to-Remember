@@ -2,7 +2,7 @@ production:
   settings:
     sceneid: 1
     strings-idspace: 4670
-    strings-idstart: 658
+    strings-idstart: 664
 
   gameplay: true
   cinematic_subtitles: true
@@ -34,13 +34,6 @@ dialogscript:
     - geralt: "[4.7800]2114670652|Regis… Just trying to avoid a fight, to protect her."
     - geralt: "[2.4636]2114670653|Well, I should check the orphanage."
     - geralt: "[1.786507]0001194410|I'll find her if she's there."
-    - NEXT: section_exit
-
-  section_start_town_corpse:
-    - geralt: "[4.2495]2114670654|Go home. I'm a witcher. Need to examine the body."
-    #- city_man: "A witcher… Ptooey! Bodes ill, rotten luck!"
-    #- city_woman: "I've heard Guards are already looking for Orianna."
-    #- city_man2: "I wish they'd caught this monster, or whoever she really is."
     - NEXT: section_exit
 
   section_start_examine_town_corpse:

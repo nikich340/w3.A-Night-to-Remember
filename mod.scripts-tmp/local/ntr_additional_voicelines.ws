@@ -69,13 +69,15 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670426, category, "group 1", "And_you__You_will_take_this_blade__and_keep_it_saf", 7.8954));
     lines.PushBack(SSbUiExtraLines(2114670427, category, "group 1", "The_blade__Margot__You_will_tell_him__It's_name_is", 8.6436));
     lines.PushBack(SSbUiExtraLines(2114670428, category, "group 1", "Margot__I'm_so_sorry__I_failed_you_", 4.5568));
+    lines.PushBack(SSbUiExtraLines(2114670429, category, "group 1", "-missing-", 3.2095));
+    lines.PushBack(SSbUiExtraLines(2114670430, category, "group 1", "-missing-", 2.2836));
     lines.PushBack(SSbUiExtraLines(2114670625, category, "group 1", "Remember__Geralt__the_boy_mustn't_be_harmed_", 3.1614));
     lines.PushBack(SSbUiExtraLines(2114670626, category, "group 1", "Have_you_found_Orianna_", 1.5729));
     lines.PushBack(SSbUiExtraLines(2114670627, category, "group 1", "Then_get_to_work!_My_son_is_in_danger!", 2.8768));
-    lines.PushBack(SSbUiExtraLines(2114670628, category, "group 1", "-missing-", 1.1234));
-    lines.PushBack(SSbUiExtraLines(2114670629, category, "group 1", "-missing-", 1.6));
-    lines.PushBack(SSbUiExtraLines(2114670630, category, "group 1", "-missing-", 1.4186));
-    lines.PushBack(SSbUiExtraLines(2114670631, category, "group 1", "-missing-", 1.5871));
+    lines.PushBack(SSbUiExtraLines(2114670628, category, "group 1", "Come_on!", 1.1234));
+    lines.PushBack(SSbUiExtraLines(2114670629, category, "group 1", "Where_are_you_going__coward_", 1.6));
+    lines.PushBack(SSbUiExtraLines(2114670630, category, "group 1", "That_the_best_you've_got_", 1.4186));
+    lines.PushBack(SSbUiExtraLines(2114670631, category, "group 1", "I_see_why_you_let_her_go_", 1.5871));
     lines.PushBack(SSbUiExtraLines(2114670650, category, "group 1", "I_need_some_fresh_air_", 1.6855));
     lines.PushBack(SSbUiExtraLines(2114670651, category, "group 1", "A_letter_", 1.0033));
     lines.PushBack(SSbUiExtraLines(2114670652, category, "group 1", "Regis__Just_trying_to_avoid_a_fight__to_protect_he", 4.78));
@@ -129,6 +131,7 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670781, category, "group 1", "It's_a_deal__Where_can_I_find_him_", 2.322));
     lines.PushBack(SSbUiExtraLines(2114670782, category, "group 1", "We_have_pitched_camp_on_the_banks_of_the_lake_know", 7.3951));
     lines.PushBack(SSbUiExtraLines(2114670783, category, "group 1", "Perhaps_you_could_help_us__and_then_our_leader_Bar", 7.0821));
+    lines.PushBack(SSbUiExtraLines(2114670784, category, "group 1", "I'm_looking_for_a_woman_with_red_hair_", 2.2328));
     lines.PushBack(SSbUiExtraLines(2114670790, category, "group 1", "Hahaha__shove_off__vargant!", 3.7467));
     lines.PushBack(SSbUiExtraLines(2114670791, category, "group 1", "If_you_decide_to_help_-_our_camp_is_on_the_banks_o", 9.5995));
     lines.PushBack(SSbUiExtraLines(2114670795, category, "group 1", "Interesting__Son_of_a_bandit_in_the_vampire's_claw", 4.2789));

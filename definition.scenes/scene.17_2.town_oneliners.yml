@@ -1,0 +1,71 @@
+repository:
+  actors:
+    city_woman2:
+      template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_citizen\\bob_citizen_female.w2ent"
+      appearance: [ "bob_citizen_female_04" ]
+
+    city_man1:
+      template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_citizen\\bob_citizen_poor.w2ent"
+      appearance: [ "bob_citizen_poor_08" ]
+
+    city_man2:
+      template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_citizen\\bob_citizen.w2ent"
+      appearance: [ "bob_citizen_14" ]
+
+production:
+  settings:
+    sceneid: 1
+    strings-idspace: 4670
+    strings-idstart: 662
+
+  gameplay: true
+  cinematic_subtitles: false
+
+  assets:
+    actors:
+      geralt:
+        repo: "geralt"
+        by_voicetag: true
+        tags: [ "PLAYER" ]
+
+      city_man1:
+        repo: "city_man1"
+        by_voicetag: false
+        appearance: "bob_citizen_poor_08"
+        tags: [ "ntr_city_man1" ]
+
+      city_man2:
+        repo: "city_man2"
+        by_voicetag: false
+        appearance: "bob_citizen_female_04"
+        tags: [ "bob_citizen_14" ]
+
+      city_woman2:
+        repo: "city_woman2"
+        by_voicetag: false
+        appearance: "bob_citizen_female_04"
+        tags: [ "ntr_city_woman2" ]
+
+dialogscript:
+  player: "geralt"
+  actors: [ "geralt", "city_woman2", "city_man1", "city_man2" ]
+
+  section_start_town_corpse:
+    - geralt: "[4.2495]2114670654|Go home. I'm a witcher. Need to examine the body."
+    - city_woman2: "0001050133|Thanks be to Freya for sendin' ye, witcher!"
+    - city_man1: "2114670662|I've heard the guards are looking for Orianna."
+    - city_man2: "2114670663|I wish they'd caught this monster, or whoever she really is."
+    - NEXT: section_exit
+
+  section_exit:
+    - EXIT
+
+
+
+
+
+
+
+
+
+
