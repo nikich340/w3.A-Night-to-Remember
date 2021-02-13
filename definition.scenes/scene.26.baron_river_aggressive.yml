@@ -22,7 +22,7 @@ repository:
 
     Bandit_camp_spear:
       template: "dlc\\dlcntr\\data\\entities\\baron_bandit_spear.w2ent"
-      appearance: [ "bob_raider_lvl1_11" ]
+      appearance: [ "bob_raider_lvl1_07" ]
 
     Bandit_crossbow:
       template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
@@ -125,10 +125,10 @@ repository:
         rot: [ 0.0, 0.8899932504, 217.1598815918 ]
       #zoom: 1.0
       dof:
+        blur: [0.49566792468106335, 5.4956679246810634]
+        focus: [1.4956679246810634, 3.4956679246810634]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -140,10 +140,10 @@ repository:
         rot: [ 0.0, 356.3800048828, 209.6803588867 ]
       #zoom: 1.0
       dof:
+        blur: [0.49566792468106335, 10.349160510163205]
+        focus: [1.4956679246810634, 8.3491605101632054]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -155,10 +155,10 @@ repository:
         rot: [ 0.0, 0.8899534941, 211.0285644531 ]
       zoom: 0.0
       dof:
+        blur: [1.4710879070182079, 6.4710879070182079]
+        focus: [2.4710879070182079, 4.4710879070182079]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 2.4681954384, 5.4681954384 ]
-        focus: [ 2.9681954384, 3.9681954384 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -170,10 +170,10 @@ repository:
         rot: [ 0.0, 352.1724853516, 356.6680297852 ]
       zoom: 0.0
       dof:
+        blur: [1.7540409749107733, 6.7540409749107733]
+        focus: [2.7540409749107733, 4.7540409749107733]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 2.7540414333, 5.7540416718 ]
-        focus: [ 3.2540414333, 4.2540416718 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -251,7 +251,7 @@ production:
       Bandit_camp_spear:
         repo: "Bandit_camp_spear"
         #by_voicetag: true
-        appearance: "bob_raider_lvl1_11"
+        appearance: "bob_raider_lvl1_07"
         tags: [ "ntr_camp_bandit_spear" ]
 
       Bandit_crossbow:
@@ -720,7 +720,7 @@ storyboard:
       - actor.gamestate: [0.0, Bandit_camp_sword]
       - actor.gamestate: [0.0, Bandit_camp_axe]
       - actor.gamestate: [0.0, Bandit_crossbow]
-      - actor.gamestate: [0.5, geralt, DrawSteel]
+      
       - actor.anim.additive: 
           .@pos: [0.0, Baron_Edward_add_gesture_point_forward]
           blendin: 0.5
@@ -730,6 +730,7 @@ storyboard:
     # shot cam baron high stand point you
     shot_togame:
       - cam.blend.togame: [0.0, cam_4_cam_baron]
+      - actor.gamestate: [0.0, geralt, DrawSteel]
       #- cam.blend.togame: [0.0, cam_13_cam_geralt_togame]
 
 dialogscript:
@@ -738,6 +739,17 @@ dialogscript:
 
   section_start:
     - PAUSE: 0.0
+    - NEXT: script_change_weather
+
+  script_change_weather:
+    - SCRIPT:
+            function: NTR_ChangeWeatherQuest_S
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - weatherName: CNAME_WT_Rain_Storm
+                #- weatherName: CNAME_q704_Cloud_Rain
+                - blendTime: 0.0
+                - randomGen: false
+                - questPause: false
     - NEXT: script_music
 
   script_music:
@@ -800,6 +812,7 @@ dialogscript:
 
   section_exit:
     - EXIT
+
 
 
 

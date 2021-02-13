@@ -5,7 +5,7 @@ repository:
       template: "gameplay\\templates\\characters\\player\\player.w2ent"
 
     toussaint_fisherman:
-      template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\vineyard\\toussaint_fisherman.w2ent"
+      template: "dlc\\dlcntr\\data\\entities\\toussaint_fisherman.w2ent"
       appearance: [ "bob_vineyard_13" ]
 
     oriana:
@@ -99,10 +99,10 @@ repository:
         rot: [ 0.0, 2.3749864101, 188.9083709717 ]
       #zoom: 1.0
       dof:
+        blur: [1.9458449756902034, 7.0645929160816667]
+        focus: [2.9458449756902034, 5.0645929160816667]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.9458394051, 5.9458394051 ]
-        focus: [ 3.4458394051, 4.4458394051 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -129,10 +129,10 @@ repository:
         rot: [ 0.0, 347.1399841309, 141.5533599854 ]
       #zoom: 1.0
       dof:
+        blur: [0, 5.358554832023378]
+        focus: [0.82842043880650151, 3.3585548320233785]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.3585567474, 4.3585567474 ]
-        focus: [ 1.8585567474, 2.8585567474 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -159,10 +159,10 @@ repository:
         rot: [ 0.0, 353.6849670410, 202.8235778809 ]
       #zoom: 1.0
       dof:
+        blur: [1.0965166047139565, 6.2019773742672317]
+        focus: [2.0965166047139565, 4.2019773742672317]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.3134000301, 5.3134002686 ]
-        focus: [ 2.8134000301, 3.8134000301 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -189,10 +189,10 @@ repository:
         rot: [ 0.0, 4.4099431038, 270.2532653809 ]
       #zoom: 1.0
       dof:
+        blur: [0, 5.2816809712256596]
+        focus: [0.4562421758411872, 3.28168097122566]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.3384056091, 4.3384056091 ]
-        focus: [ 1.8384056091, 2.8384056091 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -204,10 +204,10 @@ repository:
         rot: [ 0.0, 358.0299987793, 340.9533691406 ]
       #zoom: 1.0
       dof:
+        blur: [2.0099348368838559, 23.00763376487193]
+        focus: [3.0099348368838559, 21.00763376487193]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.3585567474, 4.3585567474 ]
-        focus: [ 1.8585567474, 2.8585567474 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -219,10 +219,10 @@ repository:
         rot: [ 0.0, 357.9199829102, 279.2432556152 ]
       #zoom: 1.0
       dof:
+        blur: [0.089908443702737095, 17.492204566074967]
+        focus: [1.0899084437027371, 15.492204566074969]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.6847593784, 4.6847591400 ]
-        focus: [ 2.1847593784, 3.1847593784 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -234,10 +234,10 @@ repository:
         rot: [ 0.0, 356.5449829102, 339.7443237305 ]
       #zoom: 1.0
       dof:
+        blur: [2.5559559769841762, 9.7428920311514702]
+        focus: [3.5559559769841762, 7.7428920311514711]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 5.7335767746, 8.7335767746 ]
-        focus: [ 6.2335767746, 7.2335767746 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -249,10 +249,10 @@ repository:
         rot: [ 0.0, 0.5049813986, 350.7440490723 ]
       #zoom: 1.0
       dof:
+        blur: [14.843707503592949, 24.958432975503332]
+        focus: [15.843707503592949, 22.958432975503332]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 5.7335767746, 8.7335767746 ]
-        focus: [ 6.2335767746, 7.2335767746 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -264,10 +264,10 @@ repository:
         rot: [ 0.0, 12.5499792099, 259.3880310059 ]
       #zoom: 1.0
       dof:
+        blur: [3.2627328129432183, 49.273928716530282]
+        focus: [4.2627328129432183, 47.273928716530282]
+        intensity: 0.2
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -280,9 +280,9 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 4.2627325058, 7.2627325058 ]
-        focus: [ 4.7627325058, 5.7627325058 ]
-        intensity: 0.2500000000
+        blur: [ 4.2627325058, 47.2627325058 ]
+        focus: [ 4.7627325058, 45.7627325058 ]
+        intensity: 0.2
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -295,9 +295,9 @@ repository:
       #zoom: 1.0
       dof:
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 4.2627325058, 7.2627325058 ]
-        focus: [ 4.7627325058, 5.7627325058 ]
-        intensity: 0.2500000000
+        blur: [ 4.2627325058, 47.2627325058 ]
+        focus: [ 4.7627325058, 45.7627325058 ]
+        intensity: 0.2
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -564,7 +564,7 @@ storyboard:
     # shot geralt walk
     shot_1:
       - actor.placement: [0.0, geralt, [ 393.1993103027, -618.8432617188, -34.5093231201 ], [ 0.0, 0.0, 357.5183410645 ]]
-      #- actor.placement: [0.0, toussaint_fisherman, [ 392.2554626465, -619.1131591797, -34.5131187439 ], [ 0.0, 0.0, 0.0 ]]
+      - actor.placement: [0.0, toussaint_fisherman, [ 392.2554626465, -619.1131591797, -34.5131187439 ], [ 0.0, 0.0, 0.0 ]]
       - cam: [0.0, cam_1_geralt_walk]
       - actor.anim: 
           .@pos: [0.0, geralt_high_standing_determined_calm_enter_frontal]
@@ -926,6 +926,7 @@ dialogscript:
 
   section_exit:
     - EXIT
+
 
 
 

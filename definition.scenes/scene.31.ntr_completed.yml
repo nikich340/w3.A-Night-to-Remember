@@ -40,10 +40,10 @@ repository:
         rot: [ 0.0, 348.7075195313, 41.6188240051 ]
       #zoom: 1.0
       dof:
+        blur: [0.017729852450238059, 5.0177298524502376]
+        focus: [1.0177298524502381, 3.0177298524502381]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -55,10 +55,10 @@ repository:
         rot: [ 0.0, 348.8999938965, 41.3438224792 ]
       #zoom: 1.0
       dof:
+        blur: [4.8409015835388214, 10.8409015835388214]
+        focus: [5.8409015835388214, 8.8409015835388214]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -70,10 +70,10 @@ repository:
         rot: [ 0.0, 351.8425292969, 16.7037429810 ]
       #zoom: 1.0
       dof:
+        blur: [4.8409015835388214, 15.792617259424349]
+        focus: [5.8409015835388214, 13.792617259424349]
+        intensity: 0.0
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -86,10 +86,10 @@ repository:
         rot: [ 0.0, 355.9674987793, 314.0588989258 ]
       #zoom: 1.0
       dof:
+        blur: [0, 4.8665514501851597]
+        focus: [0.80415351864697837, 2.8665514501851597]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -101,10 +101,10 @@ repository:
         rot: [ 0.0, 339.6875305176, 98.2688064575 ]
       zoom: 0.0
       dof:
+        blur: [1, 5]
+        focus: [1, 5]
+        intensity: 0
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -263,15 +263,16 @@ dialogscript:
 
   section_start:
     - PAUSE: 0.0
-  #  - NEXT: script_tw3_music
+    - NEXT: script_change_weather
 
-  #script_tw3_music:
-  #  - SCRIPT:
-  #          function: NTR_PlayMusicScene
-  #          parameter:
-  #              - areaName: "toussaint"
-  #              - eventName: "mus_q705_tw3_theme"
-  #              - saveType: "SESB_ClearSaved"
+  script_change_weather:
+    - SCRIPT:
+            function: NTR_ChangeWeatherQuest_S
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - weatherName: CNAME_WT_Light_Clouds
+                - blendTime: 0.0
+                - randomGen: false
+                - questPause: false
     - NEXT: section_storyboard_ui
 
   section_storyboard_ui:
@@ -302,3 +303,4 @@ dialogscript:
 
   section_exit:
     - EXIT
+

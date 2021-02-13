@@ -52,10 +52,10 @@ repository:
         rot: [ 0.0, 359.4598083496, 304.7519531250 ]
       #zoom: 1.0
       dof:
+        blur: [4.1223506586272016, 12.613590900674232]
+        focus: [5.1223506586272016, 10.613590900674232]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 5.2681369781, 8.2681369781 ]
-        focus: [ 5.7681369781, 6.7681369781 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -67,10 +67,10 @@ repository:
         rot: [ 0.0, 357.5898132324, 306.4567871094 ]
       #zoom: 1.0
       dof:
+        blur: [15.005657281212159, 21.816284435349655]
+        focus: [16.005657281212159, 19.816284435349655]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 30.0, 34.6499481201 ]
-        focus: [ 30.0, 33.1499481201 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -252,6 +252,16 @@ dialogscript:
 
   section_start:
     - PAUSE: 0.0
+    - NEXT: script_change_weather
+
+  script_change_weather:
+    - SCRIPT:
+            function: NTR_ChangeWeatherQuest_S
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - weatherName: CNAME_WT_Mid_Clouds
+                - blendTime: 5.0
+                - randomGen: false
+                - questPause: false
     - NEXT: section_storyboard_ui
 
   section_storyboard_ui:
@@ -266,4 +276,5 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+
 

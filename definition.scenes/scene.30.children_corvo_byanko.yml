@@ -67,10 +67,10 @@ repository:
         rot: [ 0.0, 349.2300109863, 344.0596923828 ]
       #zoom: 1.0
       dof:
+        blur: [2.0042063752284767, 7.6512071361792913]
+        focus: [3.0042063752284767, 5.6512071361792913]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.6512069702, 6.6512069702 ]
-        focus: [ 4.1512069702, 5.1512069702 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -82,10 +82,10 @@ repository:
         rot: [ 0.0, 359.8175048828, 114.0522918701 ]
       #zoom: 1.0
       dof:
+        blur: [2.1448634616536468, 7.1448634616536468]
+        focus: [3.1448634616536468, 5.1448634616536468]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.1448636055, 6.1448636055 ]
-        focus: [ 3.6448636055, 4.6448636055 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -433,6 +433,16 @@ dialogscript:
 
   section_start:
     - PAUSE: 0.0
+    - NEXT: script_change_weather
+
+  script_change_weather:
+    - SCRIPT:
+            function: NTR_ChangeWeatherQuest_S
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - weatherName: CNAME_WT_Clear
+                - blendTime: 0.0
+                - randomGen: false
+                - questPause: false
     - NEXT: script_open_door
 
   script_open_door:
@@ -458,6 +468,7 @@ dialogscript:
     - CUE: shot_2a
     # (longest) anim: high_standing_happy_gesture_bow
     - butler: "[2.2595]2114670391|Oh, with great pleasure, sir."
+    - PAUSE: 0.5
     # shot Shot3 go home1
     - CUE: shot_2b
     # (longest) anim: add_walk_two_steps_forward_casual
@@ -478,5 +489,6 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+
 
 

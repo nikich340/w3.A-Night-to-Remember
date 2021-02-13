@@ -53,11 +53,12 @@ dialogscript:
     - NEXT: section_exit
 
   section_orianna_comment4:
-    - oriana: "2114670405|I thank you again, witcher. For your understanding and help."
+    - oriana: "2114670405|I thank you again, witcher. For your understanding and assistance."
     - NEXT: section_exit
 
   section_exit:
     - EXIT
+
 
 
 

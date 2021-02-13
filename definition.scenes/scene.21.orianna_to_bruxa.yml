@@ -118,10 +118,10 @@ repository:
         rot: [ 0.0, 329.6501464844, 105.2615966797 ]
       #zoom: 1.0
       dof:
+        blur: [4.3483703209502336, 11.546816068431115]
+        focus: [5.3483703209502336, 9.5468160684311147]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 4.4042921066, 7.4042921066 ]
-        focus: [ 4.9042921066, 5.9042921066 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -133,10 +133,10 @@ repository:
         rot: [ 0.0, 351.1001892090, 308.5966186523 ]
       #zoom: 1.0
       dof:
+        blur: [0.022629416190638629, 10.1483224414938]
+        focus: [1.0226294161906386, 8.1483224414938]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.1903009415, 6.1903009415 ]
-        focus: [ 3.6903009415, 4.6903009415 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -163,10 +163,10 @@ repository:
         rot: [ 0.0, 343.0151977539, 102.6516952515 ]
       #zoom: 1.0
       dof:
+        blur: [0.0, 7.0282977734047236]
+        focus: [0.0, 5.0282977734047236]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.0282988548, 6.0282988548 ]
-        focus: [ 3.5282988548, 4.5282988548 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -178,10 +178,10 @@ repository:
         rot: [ 0.0, 358.0852050781, 337.3617553711 ]
       #zoom: 1.0
       dof:
+        blur: [1.0803921057729995, 8.8788639221125081]
+        focus: [2.0803921057729995, 6.878863922112509]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 4.4334068298, 7.4334068298 ]
-        focus: [ 4.9334068298, 5.9334068298 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -223,10 +223,10 @@ repository:
         rot: [ 0.0, 356.5451965332, 104.6869735718 ]
       #zoom: 1.0
       dof:
+        blur: [0.012828519650311954, 5.3466118487466829]
+        focus: [1.012828519650312, 3.3466118487466829]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.9335343838, 4.9335346222 ]
-        focus: [ 2.4335343838, 3.4335343838 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -238,10 +238,10 @@ repository:
         rot: [ 0.0, 356.5451965332, 104.6869735718 ]
       #zoom: 1.0
       dof:
+        blur: [0.012828519650311954, 5.3466118487466829]
+        focus: [1.012828519650312, 3.3466118487466829]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.9335343838, 4.9335346222 ]
-        focus: [ 2.4335343838, 3.4335343838 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -253,10 +253,10 @@ repository:
         rot: [ 0.0, 357.8652038574, 266.8271179199 ]
       #zoom: 1.0
       dof:
+        blur: [1.2745827087177104, 11.966842986681666]
+        focus: [2.2745827087177104, 9.9668429866816659]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 4.8003878593, 7.8003878593 ]
-        focus: [ 5.3003878593, 6.3003878593 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -328,10 +328,10 @@ repository:
         rot: [ 0.0, 354.6202087402, 350.7269897461 ]
       #zoom: 1.0
       dof:
+        blur: [5.6214925185847049, 11.38668295897109]
+        focus: [6.6214925185847049, 9.3866829589710896]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 6.5761632919, 9.5761632919 ]
-        focus: [ 7.0761632919, 8.0761632919 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -343,10 +343,10 @@ repository:
         rot: [ 0.0, 357.0401916504, 194.9973144531 ]
       #zoom: 1.0
       dof:
+        blur: [0, 17.616868452653708]
+        focus: [0.44879355647701535, 15.616868452653708]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.2745809555, 5.2745809555 ]
-        focus: [ 2.7745809555, 3.7745809555 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -358,10 +358,10 @@ repository:
         rot: [ 0.0, 354.4002075195, 0.0770111084 ]
       #zoom: 1.0
       dof:
+        blur: [5.8620919232668074, 11.165918922795001]
+        focus: [6.8620919232668074, 9.1659189227950009]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 6.2440085411, 9.2440090179 ]
-        focus: [ 6.7440085411, 7.7440085411 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -373,10 +373,10 @@ repository:
         rot: [ 0.0, 329.6501464844, 105.2615966797 ]
       #zoom: 1.0
       dof:
+        blur: [2.2758410325239389, 8.8770566806383044]
+        focus: [3.2758410325239389, 6.8770566806383044]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.9880967140, 5.9880967140 ]
-        focus: [ 3.4880967140, 4.4880967140 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -403,10 +403,10 @@ repository:
         rot: [ 0.0, 351.1001892090, 308.5966186523 ]
       #zoom: 1.0
       dof:
+        blur: [0, 8.8334797870864925]
+        focus: [0.60144157349901284, 6.8334797870864916]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.1903009415, 6.1903009415 ]
-        focus: [ 3.6903009415, 4.6903009415 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -418,10 +418,10 @@ repository:
         rot: [ 0.0, 358.1676940918, 330.5418395996 ]
       #zoom: 1.0
       dof:
+        blur: [1.0528628553552166, 8.8747988396233595]
+        focus: [2.0528628553552166, 6.8747988396233586]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 4.2281045914, 7.2281045914 ]
-        focus: [ 4.7281045914, 5.7281045914 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -813,9 +813,9 @@ storyboard:
     # shot Shot4 steps
     shot_5: # 2.2 + 2.5
       - actor.sound: [0.0, Orianna_human, q701_bruxa_skin_morph]
-      #- actor.placement: [0.0, geralt, [ -136.0120086670, 54.6269607544, -11.1443824768 ], [ 0.0, 0.0, 331.9499511719 ]]
-      #- actor.placement: [0.0, Orianna_vampire, [ -134.2037811279, 59.0072212219, -23.5891962051 ], [ 0.0, 0.0, 159.7198791504 ]]
-      #- actor.placement: [0.0, Orianna_human, [ -134.1233978271, 57.1229362488, -11.1664104462 ], [ 0.0, 0.0, 111.3196716309 ]]
+      ##- actor.placement: [0.0, geralt_dof, [ -136.0120086670, 54.6269607544, -11.1443824768 ], [ 0.0, 0.0, 331.9499511719 ]]
+      ##- actor.placement: [0.0, Orianna_vampire_dof, [ -134.2037811279, 59.0072212219, -23.5891962051 ], [ 0.0, 0.0, 159.7198791504 ]]
+      ##- actor.placement: [0.0, Orianna_human_dof, [ -134.1233978271, 57.1229362488, -11.1664104462 ], [ 0.0, 0.0, 111.3196716309 ]]
       - actor.pose: [0.0, Orianna_vampire_High_Standing_Aggressive]
       - actor.pose: [0.0, Orianna_human_High_Standing2_Determined]
       - actor.pose: [0.0, geralt_High_Standing_Relaxed_Combat]
@@ -838,14 +838,14 @@ storyboard:
       - actor.lookat: [0.0, Orianna_human, geralt]
 
     # shot Shot4 steps2
-    shot_6:
-      - actor.placement: [0.0, Orianna_human, [ -133.7341003418, 56.1212463379, -11.0991506577 ], [ 0.0, 0.0, 111.3197021484 ]]
-      - cam.blend.start: [0.001, cam_6_Shot4_steps2]
-      - cam.blend.end: [0.999, cam_12_Shot4_steps2_cam_pan]
-      - actor.anim: 
-          .@pos: [0.0, Orianna_human_high_standing2_determined_gesture_two_steps_left]
-          clipfront: 0.5
-          clipend: 2.5
+    #shot_6:
+    #  - actor.placement: [0.0, Orianna_human, [ -133.7341003418, 56.1212463379, -11.0991506577 ], [ 0.0, 0.0, 111.3197021484 ]]
+    #  - cam.blend.start: [0.001, cam_6_Shot4_steps2]
+    #  - cam.blend.end: [0.999, cam_12_Shot4_steps2_cam_pan]
+    #  - actor.anim: 
+    #      .@pos: [0.0, Orianna_human_high_standing2_determined_gesture_two_steps_left]
+    #      clipfront: 0.5
+    #      clipend: 2.5
 
     # shot Shot4 steps3
     shot_7:
@@ -858,7 +858,9 @@ storyboard:
       #    blendout: 0.5
       - actor.anim: 
           .@pos: [0.0, Orianna_human_high_standing2_determined_gesture_two_steps_left]
-          clipfront: 0.5
+          clipfront: 2.0
+          blendin: 0.0
+          blendout: 0.0
     # shot Shot5 ger times
     shot_8:
       - actor.placement: [0.0, Orianna_human, [ -132.9543457031, 54.1202926636, -10.9409799576 ], [ 0.0, 0.0, 111.3197021484 ]]
@@ -961,7 +963,7 @@ dialogscript:
     #- geralt: "shot7"
     - CUE: shot_7
     # (longest) anim: high_standing2_determined_gesture_two_steps_left
-    - PAUSE: 5.733
+    - PAUSE: 4.2333
     # shot Shot5 ger times
     #- geralt: "shot8"
     - CUE: shot_8
@@ -983,4 +985,6 @@ dialogscript:
   section_exit:
     #- CAMERA_BLEND: 2.0
     - EXIT
+
+
 

@@ -172,10 +172,10 @@ repository:
         rot: [ 0.0, 355.1700134277, 20.0725173950 ]
       #zoom: 1.0
       dof:
+        blur: [0, 6.6963907758660319]
+        focus: [0.90450024006980012, 4.6963907758660319]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.4707264900, 5.4707264900 ]
-        focus: [ 2.9707264900, 3.9707264900 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -187,10 +187,10 @@ repository:
         rot: [ 0.0, 352.2000122070, 111.7023544312 ]
       #zoom: 1.0
       dof:
+        blur: [0.83467767601686349, 6.7701965204083603]
+        focus: [1.8346776760168635, 4.7701965204083603]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 5.2346553802, 8.2346553802 ]
-        focus: [ 5.7346553802, 6.7346553802 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -202,10 +202,10 @@ repository:
         rot: [ 0.0, 339.1100158691, 118.1923599243 ]
       #zoom: 1.0
       dof:
+        blur: [0.0, 6.7701965204083603]
+        focus: [0.3890518150818609, 4.7701965204083603]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 6.4038891792, 9.4038887024 ]
-        focus: [ 6.9038891792, 7.9038891792 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -217,10 +217,10 @@ repository:
         rot: [ 0.0, 353.5200195313, 103.1223220825 ]
       #zoom: 1.0
       dof:
+        blur: [1.458836811388009, 7.5275427393081484]
+        focus: [2.458836811388009, 5.5275427393081484]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 6.3588080406, 9.3588085175 ]
-        focus: [ 6.8588080406, 7.8588080406 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -382,10 +382,10 @@ repository:
         rot: [ 0.0, 357.4525146484, 209.8172302246 ]
       zoom: 0.0
       dof:
+        blur: [0, 6.6963907758660319]
+        focus: [0.90450024006980012, 4.6963907758660319]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.3209264278, 4.3209266663 ]
-        focus: [ 1.8209264278, 2.8209264278 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -412,10 +412,10 @@ repository:
         rot: [ 0.0, 11.0374937057, 302.2688598633 ]
       zoom: 0.0
       dof:
+        blur: [0, 5.9236501639327361]
+        focus: [0.40767250018850798, 3.9236501639327361]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.9236443043, 4.9236440659 ]
-        focus: [ 2.4236443043, 3.4236443043 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -427,10 +427,10 @@ repository:
         rot: [ 0.0, 343.8399963379, 138.9467163086 ]
       zoom: 0.0
       dof:
+        blur: [2.0827955114297572, 7.3470614953420448]
+        focus: [3.0827955114297572, 5.3470614953420448]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.6256766319, 4.6256766319 ]
-        focus: [ 2.1256766319, 3.1256766319 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -442,10 +442,10 @@ repository:
         rot: [ 0.0, 351.7600097656, 246.0044555664 ]
       zoom: 0.0
       dof:
+        blur: [0, 5.5919486691190938]
+        focus: [0.75988555690745119, 3.5919486691190938]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.5919415951, 4.5919418335 ]
-        focus: [ 2.0919415951, 3.0919415951 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -472,10 +472,10 @@ repository:
         rot: [ 0.0, 310.5649108887, 227.3038940430 ]
       zoom: 0.0
       dof:
+        blur: [0, 6.2386816009862489]
+        focus: [0.75988555690745119, 4.2386816009862489]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 3.1437177658, 6.1437177658 ]
-        focus: [ 3.6437177658, 4.6437177658 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -487,10 +487,10 @@ repository:
         rot: [ 0.0, 355.8850097656, 62.9122314453 ]
       zoom: 0.0
       dof:
+        blur: [0, 6]
+        focus: [0, 4]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 2.8437676430, 5.8437676430 ]
-        focus: [ 3.3437676430, 4.3437676430 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -730,6 +730,10 @@ storyboard:
   section_storyboard_ui:
     # shot Shot1
     shot_1:
+      ##- actor.placement: [0.0, geralt, [ -148.2327117920, 34.8401603699, -11.1592407227 ], [ 0.0, 0.0, 47.5525588989 ]]
+      ##- actor.placement: [0.0, Baron_Edward, [ -150.0639038086, 36.8245124817, -11.1720581055 ], [ 0.0, 0.0, 224.3226013184 ]]
+      ##- actor.placement: [0.0, vampire_diva, [ -111.7371826172, -3.8554182053, -10.9002075195 ], [ 0.0, 0.0, 224.3226013184 ]]
+      
       - actor.equip.right: [0.0, geralt, steelsword]
       - actor.equip.right: [0.0, Baron_Edward, steelsword]
       - actor.pose: [0.0, geralt_High_Standing_Relaxed_Combat]
@@ -886,7 +890,7 @@ storyboard:
 
     shot_8e:
       - cam.blend.start: [0.25, cam_5_Shot5, smooth]
-      - cam.blend.end: [1.0, cam_7_Shot6b, smooth]
+      - cam.blend.end: [0.9, cam_7_Shot6b, smooth]
 
       - actor.lookat: [0.1, geralt, NONE]
       - actor.anim: 
@@ -902,6 +906,16 @@ dialogscript:
 
   section_start:
     - PAUSE: 0.0
+    - NEXT: script_change_weather
+
+  script_change_weather:
+    - SCRIPT:
+            function: NTR_ChangeWeatherQuest_S
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - weatherName: CNAME_WT_Rain_Storm
+                - blendTime: 0.0
+                - randomGen: false
+                - questPause: false
     - NEXT: script_music
 
   script_music:
@@ -966,4 +980,5 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+
 

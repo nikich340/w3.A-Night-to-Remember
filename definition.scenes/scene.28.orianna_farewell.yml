@@ -5,7 +5,7 @@ repository:
       template: "gameplay\\templates\\characters\\player\\player.w2ent"
 
     vampire_diva:
-      template: "dlc\\bob\\data\\quests\\secondary_npcs\\vampire_diva.w2ent"
+      template: "dlc\\dlcntr\\data\\entities\\orianna_human.w2ent"
       appearance: [ "oriana" ]
 
     POUCH_GERALT:
@@ -120,10 +120,10 @@ repository:
         rot: [ 0.0, 350.0549926758, 75.0661544800 ]
       #zoom: 1.0
       dof:
+        blur: [0, 7]
+        focus: [1, 5]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 4.6692552567, 7.6692552567 ]
-        focus: [ 5.1692552567, 6.1692552567 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -135,10 +135,10 @@ repository:
         rot: [ 0.0, 350.8800048828, 74.9561538696 ]
       #zoom: 1.0
       dof:
+        blur: [0.60032001092017984, 6.3467600743098389]
+        focus: [1.6003200109201798, 4.3467600743098389]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.3467600346, 5.3467597961 ]
-        focus: [ 2.8467600346, 3.8467600346 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -159,60 +159,105 @@ repository:
         tags: [ "ext" ]
 
     cam_6_Shot2_ori_closeup_+_gest:
-      fov: 25.0
+      fov: 30.0
       transform:
         pos: [ 1.9809212685, 15.2612075806, 0.7594299316 ]
         rot: [ 0.0, 359.5700073242, 170.1608581543 ]
       #zoom: 1.0
       dof:
+        blur: [0, 5.8973656442964693]
+        focus: [0.95656732386573062, 3.8973656442964697]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.0796320438, 4.0796318054 ]
-        focus: [ 1.5796320438, 2.5796320438 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
+        tags: [ "ext" ]
+
+    cam_6_Shot_close_orianna_exit_pan:
+      fov: 30.0
+      transform:
+        pos: [ 5.3962988853, 16.0421028137, 0.8002643585 ]
+        rot: [ 0.0, 355.5549926758, 139.5802001953 ]
+      zoom: 0.0
+      dof:
+        blur: [0.22352990791625826, 7.8220827951336291]
+        focus: [1.2235299079162583, 5.8220827951336291]
+        intensity: 0.25
+        aperture: [ 28.2495002747, 1.2700699568 ]
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_6_Shot_close_orianna_exit_pan2:
+      fov: 30.0
+      transform:
+        pos: [ 7.1588592529, 18.6126804352, 0.8002643585 ]
+        rot: [ 0.0, 355.5549926758, 139.5802001953 ]
+      zoom: 0.0
+      dof:
+        blur: [0.22352990791625826, 7.8220827951336291]
+        focus: [1.2235299079162583, 5.8220827951336291]
+        intensity: 0.25
+        aperture: [ 28.2495002747, 1.2700699568 ]
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_6_Shot_close_orianna_exit_pan3:
+      fov: 30.0
+      transform:
+        pos: [ 9.5852422714, 21.3977394104, 0.8002643585 ]
+        rot: [ 0.0, 357.5899963379, 142.3299865723 ]
+      zoom: 0.0
+      dof:
+        blur: [0.22352990791625826, 7.8220827951336291]
+        focus: [1.2235299079162583, 5.8220827951336291]
+        intensity: 0.25
+        aperture: [ 28.2495002747, 1.2700699568 ]
+      event_generator:
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_7_Shot2_geralt_closeup:
-      fov: 15.0
+      fov: 25.0
       transform:
-        pos: [ 3.3965053558, 12.9830379486, 1.0594291687 ]
-        rot: [ 0.0, 352.8600158691, 56.9986648560 ]
+        pos: [ 2.5834825039, 13.3175096512, 0.9002647400 ]
+        rot: [ 0.0, 354.6199951172, 52.9275512695 ]
       #zoom: 1.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 2.5406062603, 5.5406064987 ]
-        focus: [ 3.0406062603, 4.0406064987 ]
-        intensity: 0.2500000000
+        blur: [0, 5.7768038389979584]
+        focus: [0.91479545089769987, 3.7768038389979588]
+        intensity: 0.25
+        aperture: [ 28.2495002747, 1.2700699568 ]
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_12_Shot2_geralt_so_long2_cam:
-      fov: 15.0
+      fov: 30.0
       transform:
-        pos: [ 3.3965053558, 12.9830379486, 1.0594291687 ]
-        rot: [ 0.0, 353.2999877930, 66.3486709595 ]
+        pos: [ 2.9018030167, 14.9545078278, 0.8002662659 ]
+        rot: [ 0.0, 356.6824951172, 101.8774108887 ]
       #zoom: 1.0
       dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 1.5975835323, 4.5975837708 ]
-        focus: [ 2.0975835323, 3.0975835323 ]
-        intensity: 0.2500000000
+        blur: [0.0, 5.5110607466430679]
+        focus: [0.0, 3.5110607466430683]
+        intensity: 0.0
+        aperture: [ 28.2495002747, 1.2700699568 ]
       event_generator:
-        plane: "medium"
+        plane: "Medium"
         tags: [ "ext" ]
 
     cam_shot_pouch_ger:
-      fov: 40.0
+      fov: 30.0
       transform:
-        pos: [ 1.9707658291, 13.8334398270, 0.7002639771 ]
-        rot: [ 0.0, 357.2599792480, 40.2499389648 ]
-      zoom: 0.0
+        pos: [ 2.9018030167, 14.9545078278, 0.8002662659 ]
+        rot: [ 0.0, 356.6824951172, 101.8774108887 ]
+      #zoom: 1.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.0, 5.0 ]
-        focus: [ 1.0, 5.0 ]
+        blur: [ 1.4970934391, 4.4970932007 ]
+        focus: [ 1.9970934391, 2.9970934391 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -266,6 +311,15 @@ production:
 
       cam_6_Shot2_ori_closeup_+_gest:
         repo: "cam_6_Shot2_ori_closeup_+_gest"
+
+      cam_6_Shot_close_orianna_exit_pan:
+        repo: "cam_6_Shot_close_orianna_exit_pan"
+
+      cam_6_Shot_close_orianna_exit_pan2:
+        repo: "cam_6_Shot_close_orianna_exit_pan2"
+
+      cam_6_Shot_close_orianna_exit_pan3:
+        repo: "cam_6_Shot_close_orianna_exit_pan3"
 
       cam_7_Shot2_geralt_closeup:
         repo: "cam_7_Shot2_geralt_closeup"
@@ -454,8 +508,8 @@ storyboard:
     shot_3:
       - fade.in: [0.0, 0.75]
       - actor.hide: [0.0, POUCH_GERALT]
-      #- actor.placement: [0.0, geralt, [ 1.0632644892, 14.7847585678, -0.9016113281 ], [ 0.0, 0.0, 246.0399780273 ]]
-      #- actor.placement: [0.0, vampire_diva, [ 1.6130012274, 13.5968675613, -0.7265625000 ], [ 0.0, 0.0, 291.7725219727 ]]
+      ##- actor.placement: [0.0, geralt_dof, [ 1.0632644892, 14.7847585678, -0.9016113281 ], [ 0.0, 0.0, 246.0399780273 ]]
+      ##- actor.placement: [0.0, vampire_diva_dof, [ 1.6130012274, 13.5968675613, -0.7265625000 ], [ 0.0, 0.0, 291.7725219727 ]]
       - actor.pose: [0.0, vampire_diva_Low_Standing_Determined]
       - cam.blend.start: [0.0, cam_3_Shot1_cam1, rapid]
       - cam.blend.end: [1.0, cam_4_Shot1_cam2, smooth]
@@ -516,7 +570,7 @@ storyboard:
 
   section_storyboard_ui2:
     shot_8c:
-      - cam: [0.0, cam_shot_pouch_ger]
+      - cam: [0.0, cam_7_Shot2_geralt_closeup]
       - actor.pose: [0.5, vampire_diva_high_standing_determined_idle]
       - actor.lookat: 
           .@pos: [0.0, vampire_diva, geralt]
@@ -553,11 +607,39 @@ storyboard:
     shot_10:
       - cam: [0.0, cam_6_Shot2_ori_closeup_+_gest]
 
-      - actor.anim.mimic: [0.0, vampire_diva_geralt_reaction_eye_smile_face]
+      - actor.anim.mimic: 
+          .@pos: [0.0, vampire_diva_geralt_reaction_eye_smile_face]
+          clipend: 4.0
+          weight: 0.6
 
+    shot_10_2:
+      - cam.blend.start: [0.2, cam_6_Shot2_ori_closeup_+_gest, smooth]
+      - cam.blend.key: [0.9, cam_6_Shot_close_orianna_exit_pan]
+
+      - actor.lookat: [0.2, vampire_diva, NONE]
+      - actor.anim: # 4.133
+          actor: vampire_diva
+          .@pos: [0.0, anim_12941_high_standing_determined_exit_frontal]
+          blendin: 0.5
+          blendout: 0.633
+
+      - actor.placement.start: [0.846, vampire_diva, [ 1.6130012274, 13.5968675613, -0.7265625000 ], [ 0.0, 0.0, 291.7725219727 ], smooth]
+      - actor.placement.key: [1.0, vampire_diva, [ 4.4164538383, 14.7564945221, -0.7265625000 ], [ 0.0, 0.0, 291.7725219727 ]]
+
+      - actor.effect.start: [0.7, vampire_diva, mist]
+      - actor.effect.start: [0.9, vampire_diva, mist_fly]
+
+    shot_10_3:
+      - cam.blend.key: [0.7, cam_6_Shot_close_orianna_exit_pan2]
+      - actor.placement.key: [1.0, vampire_diva, [ 6.3167695999, 17.1710224152, -0.5 ], [ 0.0, 0.0, 291.7725219727 ]]
+      
+    shot_10_4:
+      - cam.blend.end: [0.6, cam_6_Shot_close_orianna_exit_pan3, smooth]
+      - actor.placement.end: [0.8, vampire_diva, [ 11.8333091736, 20.5810031891, -0.04 ], [ 0.0, 0.0, 289.8200378418 ], smooth]
+      
     # shot Shot2 geralt so long
     shot_11:
-      - cam: [0.0, cam_7_Shot2_geralt_closeup]
+      - cam: [0.0, cam_12_Shot2_geralt_so_long2_cam]
       - actor.anim.additive: 
           .@pos: [0.0, geralt_high_standing_determined_gesture_greeting_geralt_03]
           blendin: 0.5
@@ -565,18 +647,18 @@ storyboard:
 
     # shot Shot2 geralt so long2 cam
     shot_12:
-      - cam.blend.start: [0.0, cam_7_Shot2_geralt_closeup, smooth]
-      - cam.blend.end: [0.999, cam_12_Shot2_geralt_so_long2_cam, rapid]
+      #- cam.blend.start: [0.0, cam_7_Shot2_geralt_closeup, smooth]
+      #- cam.blend.end: [0.999, cam_12_Shot2_geralt_so_long2_cam, rapid]
       - actor.anim: 
           .@pos: [0.0, geralt_high_standing_determined_calm_exit_frontal]
           blendin: 0.5
           blendout: 0.0
-      - actor.anim.mimic: 
-          .@pos: [0.0, vampire_diva_happy_anim_face]
-          blendin: 0.0
+      #- actor.anim.mimic: 
+      #    .@pos: [0.0, vampire_diva_happy_anim_face]
+      #    blendin: 0.0
 
-      - actor.lookat: [0.2, geralt, NONE]
-      - fade.out: [0.88, 1.0, [0, 0, 0, 255]]
+      - actor.lookat: [0.1, geralt, NONE]
+      - fade.out: [0.8, 1.0, [0, 0, 0, 255]]
 
 dialogscript:
   player: "geralt"
@@ -584,12 +666,22 @@ dialogscript:
 
   section_start:
     - PAUSE: 0.0
+    - NEXT: script_change_weather
+
+  script_change_weather:
+    - SCRIPT:
+            function: NTR_ChangeWeatherQuest_S
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - weatherName: CNAME_WT_Mid_Clouds
+                - blendTime: 5.0
+                - randomGen: false
+                - questPause: false
     - NEXT: section_storyboard_ui
 
   section_storyboard_ui:
     - CUE: shot_3
     # (longest) anim: high_standing_determined_calm_enter_frontal
-    - PAUSE: 6.0
+    - PAUSE: 5.0
     # shot Shot1 cam2
     
     - CUE: shot_5
@@ -601,8 +693,10 @@ dialogscript:
     - vampire_diva: "2114670375|A witcher has slain a man to protect a monster. I'll admit, I'm impressed."
     # shot Shot2 geralt closeup
     - CUE: shot_7
-    # (longest) anim: high_standing_determined_gesture_both_hands_2
-    - geralt: "[3.1951325]0000458827|It was the lesser evil… I think."
+    - PAUSE: 0.25
+    #- geralt: "[3.1951325]0000458827|It was the lesser evil… I think."
+    - geralt: "0001153564|Had no choice."
+    - PAUSE: 0.25
     # shot Shot2 ori closeup + gest2
     - CUE: shot_8
     # (longest) anim: low_standing_determined_gesture_question_02
@@ -630,16 +724,26 @@ dialogscript:
     - CUE: shot_10
     # (longest) anim: geralt_reaction_eye_smile_face
     - vampire_diva: "2114670378|Good luck, Geralt of Rivia."
-    - PAUSE: 1.5
+    - PAUSE: 0.5
+
+    # fx smoke
+    - CUE: shot_10_2
+    - PAUSE: 4.133
+    - CUE: shot_10_3
+    - PAUSE: 3.0
+    - CUE: shot_10_4
+    - PAUSE: 3.5
+
     # shot Shot2 geralt so long
     - CUE: shot_11
     # (longest) anim: geralt_reaction_eye_smile_syanna_face
-    - geralt: "[0.882672]0001000192|So long."
+    - geralt: "0001000069|Farewell."
+    #- geralt: "[0.882672]0001000192|So long."
     #- PAUSE: 600.0
     # shot Shot2 geralt so long2 cam
     - CUE: shot_12
     # (longest) anim: happy_anim_face
-    - PAUSE: 8.4333
+    - PAUSE: 5.0
     - PAUSE: 0.5
     - NEXT: section_exit
 
@@ -647,6 +751,8 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+
+
 
 
 

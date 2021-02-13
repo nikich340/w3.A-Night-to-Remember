@@ -1,7 +1,7 @@
 repository:
   actors:
     toussaint_fisherman:
-      template: "dlc\\bob\\data\\gameplay\\community\\community_npcs\\vineyard\\toussaint_fisherman.w2ent"
+      template: "dlc\\dlcntr\\data\\entities\\toussaint_fisherman.w2ent"
       appearance: [ "bob_vineyard_13" ]
 
 production:
