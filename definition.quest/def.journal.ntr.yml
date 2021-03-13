@@ -6,27 +6,28 @@ journals:
       world: bob                      # optional, if empty every objective requires world
       level: 50
       description:
-        - regis_owl: After a bad nightmare, Geralt decided to go out and get some fresh air.<br>
-        - regis_owl2: There was a surprise waiting for Geralt outside - a letter that was probably brought by an owl sitting nearby. Who could use the bird as a postman?<br>
-        - regis_owl3: It turned out to be Regis. The vampire asked the witcher to find out about Orianna, and either help her overcome her monstrous weakness or.. take to extreme measures which Regis clearly trying to avoid out of fear for the lives of both his friends.<br>
-        - orphanage1: During the search of Orianna, Geralt went to the orphanage - the last place where he has seen her. However, instead of Orianna, he met a trio of thugs there. The bandits told Geralt about their leader, Baron Edward, who was looking for Orianna and could tell Geralt news about her.<br>
-        - orphanage_peaceful: Geralt was alarmed that the bandits were interested in the children from the orphanage, but he chose to mind his own business.<br>
-        - orphanage_win: Geralt was alarmed that the bandits were interested in the children from the orphanage. Fists persuaded them to reveal the details, and Geralt learned that the Baron is looking for his son, who was sent to the orphanage by coincidence.<br>
-        - orphanage_loose: Geralt was alarmed that the bandits were interested in the children from the orphanage. However, after trying to force the details out of them, Geralt failed and shamefully left the orphanage.<br>
-        - camp: In the bandit camp, Geralt met Baron Edward, who told him about a recent meeting with Orianna, during which his friend Alfred was killed. The Baron told Geralt about his motives and hired the witcher to kill Orianna and bring the boy to him safely. But first he had to find Orianna, so he went to investigate the place where Alfred was killed.<br>
-        - camp_amphitheatre: The witcher did as Baron asked and lifted the curse of the amphitheater.<br>
-        - town_and_river: Geralt tracked Orianna to a river, where she paid a fisherman to take her to the Cockatrice Inn. Now Geralt was going there, sensing that he was very close.<br>
-        - house: Geralt found a cozy house, where Orianna probably lived, but she was not at home that time. The witcher decided to take a moment to look around.<br>
-        - house_diary: White Wolf found Orianna's diary, which told him about the events happened to her since their last meeting. Geralt realized that she take care of 2 kids (Nieallan and Agneta) and it was not so obvious what do with Orianna..<br>
-        - orianna_killed: After a short conversation, Geralt did not deviate from the word given to the Baron and after the difficult battle managed to finish off the red-haired vampiress.<br>
-        - baron_leave: Geralt told the baron where the children were, and made sure that he would not leave the girl alone. After receiving the promised reward, Geralt went on his way to Corvo Bianco.<br>
-        - baron_killed_too: Geralt refused to tell the bandits where the children were. Furious Baron Edward challenged the witcher to a duel, that ended his story. Before his death, Edward ordered the bandits to leave Toussaint, and told Geralt to take his sword for the boy. Geralt took the orphaned children with him to Corvo Bianco, where they live to this day.<br>
-        - orianna_spared: After a long conversation, Geralt was able to convince Orianna to find the strength to give up her addiction to children's blood. After that, he let her go, thinking it best to leave the children under her care. Maybe she'll end up being a good mom?<br>
-        - baron_killed: The Baron was enraged by the witcher's decision, which led to bloodshed between them. Orianna, who, as it turned out, had been watching everything from afar, was surprised and even thanked Geralt for getting rid of the annoying "parent" of Nieallan.<br>
+        - regis_owl: "After the nightmare Geralt stepped outside to get some fresh air.<br>"
+        - regis_owl2: "There was a surprise waiting for Geralt - a letter from an owl. Who could be using the bird as a courier?<br>"
+        - regis_owl3: "The letter was from Regis; the vampire asked the witcher to investigate Orianna. He pleaded with Geralt to help Orianna overcome her monstrous tendencies, fearing for the safety of both his friends should Geralt fail to subdue her peacefully.<br>"
+        - orphanage1: "Geralt returned to the orphanage - the last place where he'd seen Orianna. In her place he encountered a trio of thugs. The men told Geralt about their leader Baron Edward, who might have information on her whereabouts.<br>"
+        - orphanage_peaceful: "Geralt was intrigued with common bandits looking for orphans, but he chose to mind his own business.<br>"
+        - orphanage_win: "Geralt was intrigued with common bandits looking for orphans. Fists persuaded them to reveal the details. Geralt learned about their leader Baron Edward, who might have information on her whereabouts. Baron Edward was looking for his son, who had lived at the orphanage.<br>"
+        - orphanage_loose: "Geralt was intrigued with common bandits looking for orphans. However Geralt failed in trying to force the details out of them and shamefully left the orphanage.<br>"
+        - camp: "After locating the bandit camp Geralt spoke with Baron Edward. While the Baron narrowly escaped with his life after confronting Orianna near her estate, his compatriot Alfred wasn't so lucky. The Baron hired the witcher to slay Orianna and return his son to him safely. Geralt accepted the contract and planned to investigate Orianna's estate to investigate the scene of Orianna's kill.<br>"
+        - camp_amphitheatre: "The witcher did as Baron asked and lifted the curse of the amphitheater.<br>"
+        - town_and_river: "Geralt tracked Orianna to a river, where she paid a fisherman to take her to the Cockatrice Inn. Geralt could sense his fateful encounter with Orianna was nearing.<br>"
+        - house: "The witcher found a cozy house which reeked of a familiar scent. It was empty, but clearly someone was living here. Geralt decided to take a moment to look around.<br>"
+        - house_diary: "He found Orianna's diary, which detailed her life since their last meeting. Geralt learned that she has been taking care of 2 children, Niellan and Agneta. The witcher now faces a difficult decision.<br>"
+        - orianna_killed: "After an unfruitful conversation, Geralt accomplished what Baron Edward asked of him. The witcher did his duty and slayed the red-haired vampire.<br>"
+        - baron_leave: "Geralt told the Baron where his son would be waiting for him, along with another child. Geralt demanded that Niellan musn't be separated from his only family Agneta. Baron Edward complied and would go on to take care of both children. After receiving the promised reward, Geralt returned home to Corvo Bianco. Did Geralt make the right decision, slaying a vampire who'd taken care of Niellan and Agneta? For the sake of them and other children, he can only hope so.<br>"
+        - baron_killed_too: "Geralt refused to tell the bandits where the children were. Geralt couldn't let these children be raised by deplorables such as bandits or vampires. Baron Edward furiously challenged the witcher to a duel, which was a grave mistake. Before his death, Edward ordered his men to leave Toussaint, and demanded that Geralt take his blade as a keepsake for Niellan. Geralt took the orphaned children with him to Corvo Bianco, to keep them safe while looking for a suitable home. Did Geralt make the right decision, killing a would-be father and stand-in mother? For the sake of the children, he can only hope so.<br>"
+        - orianna_spared: "Geralt was able to convince Orianna that she could live without feeding on the innocent. The witcher let her go on the condition that she will leave Toussaint in search of Regis. Perhaps this was the best solution for her.<br>"
+        - baron_killed: "The Baron was enraged by the witcher's decision to spare Orianna. The riverbank was covered in bloodshed on that night. Geralt betrayed his contract to kill, perhaps not dissimilar to Orianna. Did Geralt make the right decision, saving a vampire at the cost of so many humans? For the sake of Regis, he can only hope so.<br>"
+
       instructions:
         regis_owl:
           - out_home:
-              caption: "Go out of home for some fresh air."
+              caption: "Go outside for some fresh air."
           - take_letter:
               caption: "Take a letter near owl."
               mappins: regis_mail_pin
@@ -49,12 +50,12 @@ journals:
 
         camp_part:
           - go_camp:
-              caption: "Go to bandits' camp and talk with baron Edward."
+              caption: "Go to bandit camp and talk with Baron Edward."
               mappins: 
                 - [ camp_pin, 22 ]
 
           - check_amphitheatre:
-              caption: "Investigate amphitheatre near bandits' camp."
+              caption: "Investigate amphitheatre near bandit camp."
               mappins: 
                 - [ amphi_pin, 28 ]
 
@@ -89,13 +90,13 @@ journals:
                 - [ cemetary_pin2, 22 ]
 
           - talk_fisherman:
-              caption: "Ask fisherman about Orianna."
+              caption: "Ask fishermen about Orianna."
               mappins:
                 - [ fisher_pin, 11 ]
 
         river_part:
           - find_house:
-              caption: "Search the riverside near Cockatrice Inn."
+              caption: "Investigate the riverside near Cockatrice Inn."
               mappins:
                 - [ side_pin, 20 ]
 
@@ -105,7 +106,7 @@ journals:
                 - [ side_pin, 20 ]
 
           - check_house:
-              caption: "Use your Witcher Senses to investigate house."
+              caption: "Use your Witcher Senses to investigate the house."
               mappins:
                 - [ side_pin, 20 ]
 
@@ -122,3 +123,5 @@ journals:
 
           - kill_baron:
               caption: "Defeat Baron Edward."
+              mappins:
+                - [ fight_mappin, 45 ]

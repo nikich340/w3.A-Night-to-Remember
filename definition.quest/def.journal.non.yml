@@ -6,10 +6,10 @@ journals:
       world: bob                      # optional, if empty every objective requires world
       level: 50
       description:
-        - ntr_intro1: My old friend Geralt was back in the center of events. Although he did not remember how he was among the ruins of Tesham Mutna, at the moment witcher was busy something completely different - he felt the presence of a water hag, and something told him that this would be not an ordinary battle.<br/>
-        - ntr_intro2: Geralt won the battle with the monster, but not finally - the water hag escaped, sensing the danger of her miserable slimy life. The witcher decided to follow the footsteps of her blood and finish what was started.<br/>
-        - ntr_intro3: Investigating the water hag's tracks Geralt walked across Triss. He decided to talk with her.<br/>
-        - ntr_intro4: After some really crazy events Geralt realized it was a nightmare.<br/>
+        - ntr_intro1: "My old friend Geralt found himself at the center of a life or death plot filled with revenge and redemption. He couldn't say how he'd arrived at the ruins of Tesham Mutna, however it was no matter since the witcher was trailing a dangerous water hag.<br>"
+        - ntr_intro2: "Geralt defeated the monster, but not fatally - the water hag escaped, clinging to her miserable slimy life. The witcher tracked her blood to finish what he started.<br>"
+        - ntr_intro3: "While tracking the hag Geralt encountered Triss. What could she be doing here at such an odd hour?<br>"
+        - ntr_intro4: "After a bizarre sequence of horrible sights, Geralt finally woke from his wretched nightmare.<br>"
       instructions:
         start_quest:
           - wait_night:
