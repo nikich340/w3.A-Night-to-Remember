@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 1189, saved: 2021-01-31 21:28:45)
+# (version: 1204, saved: 2021-02-13 14:24:04)
 #
 ---
 structure:
@@ -149,6 +149,17 @@ structure:
           _fadein: false
           next: ".done"
         
+        scene.coward_phrase:
+          ".editor":
+            pos: [ 5265.0, 903.0 ]
+            in: [ fight_replic_coward ]
+            out: [ Output ]
+          scene: 17.baron_oneliners.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: false
+          next: ".done"
+        
         scene.house_found_comment:
           ".editor":
             pos: [ 795.0, 197.0 ]
@@ -264,6 +275,17 @@ structure:
           _fadein: true
           next.Output:
             - addfact.ntr_quest_completed
+        
+        scene.tyberious_replic:
+          ".editor":
+            pos: [ 5229.0, -327.0 ]
+            in: [ fight_tyberious ]
+            out: [ Output ]
+          scene: 17.baron_oneliners.yml
+          placement: bob/orianna
+          interruptable: true
+          _fadein: false
+          next: ".done"
         
         waituntil.1s:
           elapsed: "00:00:01"
@@ -1079,14 +1101,15 @@ structure:
         
         script.Tune_bandits:
           ".editor":
-            pos: [ 5225.0, -394.0 ]
+            pos: [ 5093.0, -413.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_SetRelativeLevel
           parameter:
             - tag: cname_ntr_baron_bandit
             - levelBonus: 0
-          next: ".done"
+          next:
+            - scene.tyberious_replic: fight_tyberious
         
         script.Unlock_front_door:
           ".editor":
@@ -1127,14 +1150,15 @@ structure:
           ".editor":
             pos: [ 5089.0, 729.0 ]
             in: [ In ]
-            out: [ Out ]
+            out: [ "False", "True" ]
           function: NTR_FactChecker
           parameter:
             - factName: ntr_fight_outside_area2
             - factCond: "=="
             - val: 1
-          next:
+          next.True:
             - script.DisplayHudMessage_2
+            - scene.coward_phrase: fight_replic_coward
         
         script.attach_diary:
           ".editor":
@@ -1677,7 +1701,7 @@ structure:
         
         spawn.fight_all_river:
           ".editor":
-            pos: [ 5048.0, -318.0 ]
+            pos: [ 4942.0, -305.0 ]
             hint: spawn-only
             in: []
             out: []

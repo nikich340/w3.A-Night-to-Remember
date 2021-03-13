@@ -1,5 +1,7 @@
 class CNTRBanditNPC extends CNTRCommonNPC {
     private var baronReplicCounter : int;
+    private var baronReplicPrev    : int;
+    default baronReplicPrev = -2;
 
 	protected function Attack( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity)
     {
@@ -65,11 +67,17 @@ class CNTRBanditNPC extends CNTRCommonNPC {
     function PlayBaronReplic() {
         var scene : CStoryScene;
 
+        baronReplicPrev = RandDifferent( baronReplicPrev, 4 );
+
         scene = (CStoryScene)LoadResource("dlc/dlcntr/data/scenes/17.baron_oneliners.w2scene", true);
-        theGame.GetStorySceneSystem().PlayScene(scene, "fight_replics");
+        theGame.GetStorySceneSystem().PlayScene(scene, "fight_replic" + IntToString(baronReplicPrev + 1));
     }
 	/*function PlayEffect( effectName : name, optional target : CNode  ) : bool {
 		//NTR_notify("Play: " + effectName + ", target: " + target);
 		return super.PlayEffect( effectName, target );
 	}*/
+}
+
+exec function baronReplic() {
+    ((CNTRBanditNPC)theGame.GetEntityByTag('ntr_baron_edward')).PlayBaronReplic();
 }

@@ -4,6 +4,10 @@ repository:
       template: "dlc\\dlcntr\\data\\entities\\baron_edward.w2ent"
       appearance: [ "bob_knight_15" ]
 
+    Bandit_crossbow:
+      template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
+      appearance: [ "__q703_nazairi_01" ]
+
 production:
   settings:
     sceneid: 1
@@ -26,9 +30,15 @@ production:
         appearance: "bob_knight_15"
         tags: [ "ntr_baron_edward" ]
 
+      Bandit_crossbow:
+        repo: "Bandit_crossbow"
+        #by_voicetag: true
+        appearance: "__q703_nazairi_01"
+        tags: [ "ntr_crossbow_bandit" ]
+
 dialogscript:
   player: "geralt"
-  actors: [ "Baron_Edward", "geralt" ]
+  actors: [ "Baron_Edward", "geralt", "Bandit_crossbow" ]
 
   section_start_camp_reminder:
     - Baron_Edward: "[3.1614]2114670625|Remember, Geralt, the boy mustn't be harmed."
@@ -40,8 +50,50 @@ dialogscript:
     - Baron_Edward: "[2.8768]2114670627|Then get to work! My son is in danger!"
     - NEXT: section_exit
 
+  section_start_fight_tyberious:
+    - RANDOM:
+      - section_fight_replic1_tyberious
+      - section_fight_replic2_tyberious
+
+  section_fight_replic1_tyberious:
+    - Bandit_crossbow: "[3.2095]2114670429|You, piece of shit, I'll kill you!"
+    - NEXT: section_exit
+
+  section_fight_replic2_tyberious:
+    - Bandit_crossbow: "[2.2836]2114670430|I'm gonna behead you, witcher!"
+    - NEXT: section_exit
+
+  section_start_fight_replic_coward:
+    - Baron_Edward: "[1.6000]2114670629|Where are you going, coward?"
+    #- geralt: "[1.6078753]0000381377|I'm going to kill you."
+    - geralt: "[1.8065383]0001105392|Shut up. I do what I want."
+    - NEXT: section_exit
+
+  section_start_fight_replic1:
+    - Baron_Edward: "[1.4186]2114670630|That the best you've got?"
+    - geralt: "[1.9628537]0001098120|Know what? You're pathetic."
+    - NEXT: section_exit
+
+  section_start_fight_replic2:
+    - Baron_Edward: "[1.4186]2114670630|That the best you've got?"
+    - geralt: "[1.2919765]0000577970|Let's dance."
+    - NEXT: section_exit
+
+  section_start_fight_replic3:
+    - Baron_Edward: "[1.1234]2114670628|Come on!"
+    - geralt: "[1.4908024]0000586927|You think you stand a chance?"
+    - NEXT: section_exit
+
+  section_start_fight_replic4:
+    - Baron_Edward: "[1.1234]2114670628|Come on!"
+    - geralt: "[1.3865415]0001054231|Time to end this."
+    - NEXT: section_exit
+
   section_exit:
     - EXIT
+
+
+
 
 
 
