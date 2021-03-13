@@ -1116,16 +1116,20 @@ storyboard:
       - actor.placement: [0.0, geralt, [ -167.7475128174, 5.2594757080, -11.1326293945 ], [ 0.0, 0.0, 1.4300765991 ]]
       - actor.placement: [0.0, Orianna_bruxa, [ -166.2909851074, 8.2624502182, -11.1190795898 ], [ 0.0, 0.0, 153.1199798584 ]]
       - cam: [0.0, cam_11_Shot2_drop_sword_sword7_cam]
+      - actor.lookat: 
+          .@pos: [0.5, Orianna_bruxa, [ -1.0758172274, 1.9365570545, 0.0665884018 ]]
+          turn: head
+          speed: 2.0
+      - actor.lookat: 
+          .@pos: [0.5, geralt, [ 1.4851540327, 0.3275219798, 0.1758085489 ]]
+          turn: head
+          speed: 2.0 # instant
 
     shot_6:
       - cam.blend.start: [0.0, cam_13_Shot4_ori_smile]
       - cam.blend.end: [0.999, cam_59_Shot4_ori_smile_2, rapid]
       - actor.lookat: 
-          .@pos: [0.0, Orianna_bruxa, [ -1.0758172274, 1.9365570545, 0.0665884018 ]]
-          turn: head
-          speed: 2.0
-      - actor.lookat: 
-          .@pos: [0.05, Orianna_bruxa, geralt]
+          .@pos: [0.0, Orianna_bruxa, geralt]
           turn: head
       - actor.anim.mimic: 
           .@pos: [0.0, Orianna_bruxa_geralt_neutral_gesture_smile_syanna_face]
@@ -1142,12 +1146,7 @@ storyboard:
       - cam: [0.0, cam_12_Shot3_ger]
       - actor.anim.mimic: [0.0, geralt_geralt_neutral_gesture_breath_closed_face]
       - actor.lookat: 
-          .@pos: [0.0, geralt, [ 1.4851540327, 0.3275219798, 0.1758085489 ]]
-          turn: head
-          speed: 2.0 # instant
-
-      - actor.lookat: 
-          .@pos: [0.05, geralt, Orianna_bruxa]
+          .@pos: [0.0, geralt, Orianna_bruxa]
           turn: head
 
     # walk
@@ -1158,6 +1157,7 @@ storyboard:
           blendin: 0.0
           blendout: 0.0
           clipfront: 0.7
+          clipend: 1.0
           stretch: 1.0
 
       - actor.anim:

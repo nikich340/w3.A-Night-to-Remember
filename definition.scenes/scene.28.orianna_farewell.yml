@@ -180,8 +180,8 @@ repository:
         rot: [ 0.0, 355.5549926758, 139.5802001953 ]
       zoom: 0.0
       dof:
-        blur: [0.22352990791625826, 7.8220827951336291]
-        focus: [1.2235299079162583, 5.8220827951336291]
+        blur: [0.0, 7.8220827951336291]
+        focus: [0.0, 5.8220827951336291]
         intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
       event_generator:
@@ -195,8 +195,8 @@ repository:
         rot: [ 0.0, 355.5549926758, 139.5802001953 ]
       zoom: 0.0
       dof:
-        blur: [0.22352990791625826, 7.8220827951336291]
-        focus: [1.2235299079162583, 5.8220827951336291]
+        blur: [0.0, 9.8220827951336291]
+        focus: [0.0, 7.8220827951336291]
         intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
       event_generator:
@@ -210,8 +210,8 @@ repository:
         rot: [ 0.0, 357.5899963379, 142.3299865723 ]
       zoom: 0.0
       dof:
-        blur: [0.22352990791625826, 7.8220827951336291]
-        focus: [1.2235299079162583, 5.8220827951336291]
+        blur: [0.0, 12.8220827951336291]
+        focus: [0.0, 10.8220827951336291]
         intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
       event_generator:
@@ -240,8 +240,8 @@ repository:
         rot: [ 0.0, 356.6824951172, 101.8774108887 ]
       #zoom: 1.0
       dof:
-        blur: [0.0, 5.5110607466430679]
-        focus: [0.0, 3.5110607466430683]
+        blur: [0.0, 105.5110607466430679]
+        focus: [0.0, 103.5110607466430683]
         intensity: 0.0
         aperture: [ 28.2495002747, 1.2700699568 ]
       event_generator:
@@ -553,19 +553,18 @@ storyboard:
           .@pos: [0.0, vampire_diva_low_standing_determined_gesture_question_02]
           blendin: 0.5
           blendout: 0.5
-
-    shot_8b:
-      - actor.pose: [0.5, vampire_diva_high_standing_determined_idle]
+      - actor.pose: [0.95, vampire_diva_high_standing_determined_idle]
       - actor.anim: 
-          .@pos: [0.0, vampire_diva_low_standing_determined_to_high_standing_determined]
+          .@pos: [0.75, vampire_diva_low_standing_determined_to_high_standing_determined]
           blendin: 0.5
           blendout: 0.5
 
+    shot_8b:
       - actor.anim.additive:
           actor: vampire_diva
-          .@pos: [1.0, anim_12649_high_standing_determined_gesture_give]
+          .@pos: [0.0, anim_12649_high_standing_determined_gesture_give]
           blendin: 0.5
-          clipend: 2.5
+          clipend: 2.3
           blendout: 0.0
 
   section_storyboard_ui2:
@@ -636,7 +635,10 @@ storyboard:
     shot_10_4:
       - cam.blend.end: [0.6, cam_6_Shot_close_orianna_exit_pan3, smooth]
       - actor.placement.end: [0.8, vampire_diva, [ 11.8333091736, 20.5810031891, -0.04 ], [ 0.0, 0.0, 289.8200378418 ], smooth]
-      
+      - actor.hide: [1.0, vampire_diva]
+      - actor.effect.stop: [1.0, vampire_diva, mist]
+      - actor.effect.stop: [1.0, vampire_diva, mist_fly]
+
     # shot Shot2 geralt so long
     shot_11:
       - cam: [0.0, cam_12_Shot2_geralt_so_long2_cam]
@@ -690,8 +692,7 @@ dialogscript:
     # shot Shot2 ori closeup + gest
     - CUE: shot_6
     # (longest) anim: low_standing_determined_gesture_question_01
-    - vampire_diva: "2114670375|A witcher has slain a man to protect a monster. I'll admit, I'm impressed."
-    # shot Shot2 geralt closeup
+    - vampire_diva: "[5.6197]2114670375|A witcher slaying a human to protect a monster. I'll admit, I'm impressed."
     - CUE: shot_7
     - PAUSE: 0.25
     #- geralt: "[3.1951325]0000458827|It was the lesser evil… I think."
@@ -700,10 +701,12 @@ dialogscript:
     # shot Shot2 ori closeup + gest2
     - CUE: shot_8
     # (longest) anim: low_standing_determined_gesture_question_02
-    - vampire_diva: "2114670376|I'm sure this… troublesome Baron Edward promised a sizable reward, right?"
+    - vampire_diva: "[7.2449]2114670376|Am I correct in assuming that this troublesome Baron Edward promised a most sizable reward?"
+    - PAUSE: 0.7
+
     - CUE: shot_8b
-    - vampire_diva: "2114670377|Here."
-    - PAUSE: 2.5
+    - vampire_diva: "[1.0044]2114670377|Here."
+    - PAUSE: 1.3
     - NEXT: script_give_coins_reward
 
   script_give_coins_reward:
@@ -723,8 +726,7 @@ dialogscript:
     # shot Shot2 ori closeup + smile
     - CUE: shot_10
     # (longest) anim: geralt_reaction_eye_smile_face
-    - vampire_diva: "2114670378|Good luck, Geralt of Rivia."
-    - PAUSE: 0.5
+    - vampire_diva: "[2.1553]2114670378|Good luck, Geralt of Rivia."
 
     # fx smoke
     - CUE: shot_10_2
@@ -737,7 +739,8 @@ dialogscript:
     # shot Shot2 geralt so long
     - CUE: shot_11
     # (longest) anim: geralt_reaction_eye_smile_syanna_face
-    - geralt: "0001000069|Farewell."
+    - geralt: "[1.7745]2114670379|Farewell, Orianna."
+    ##- geralt: "[0.78943527]0001000069|Farewell."
     #- geralt: "[0.882672]0001000192|So long."
     #- PAUSE: 600.0
     # shot Shot2 geralt so long2 cam
@@ -751,8 +754,4 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
-
-
-
-
-
+    

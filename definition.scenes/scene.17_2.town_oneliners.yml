@@ -37,8 +37,8 @@ production:
       city_man2:
         repo: "city_man2"
         by_voicetag: false
-        appearance: "bob_citizen_female_04"
-        tags: [ "bob_citizen_14" ]
+        appearance: "bob_citizen_14"
+        tags: [ "ntr_city_man2" ]
 
       city_woman2:
         repo: "city_woman2"
@@ -52,13 +52,17 @@ dialogscript:
 
   section_start_town_corpse:
     - geralt: "[4.2495]2114670654|Go home. I'm a witcher. Need to examine the body."
-    - city_woman2: "0001050133|Thanks be to Freya for sendin' ye, witcher!"
-    - city_man1: "2114670662|I've heard the guards are looking for Orianna."
-    - city_man2: "2114670663|I wish they'd caught this monster, or whoever she really is."
+    - city_woman2: "[2.6208043]0001050133|Thanks be to Freya for sendin' ye, witcher!"
+    - city_man1: "[2.6148]2114670662|I've heard the guards are looking for Orianna."
+    - city_man2: "[5.2229]2114670663|I wish they'd caught this monster, or whatever she really is."
     - NEXT: section_exit
 
   section_exit:
     - EXIT
+
+
+
+
 
 
 

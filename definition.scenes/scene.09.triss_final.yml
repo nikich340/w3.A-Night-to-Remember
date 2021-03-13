@@ -2654,12 +2654,12 @@ dialogscript:
     - CUE: shot_soul_no_init
     - geralt: "[0.94723827]0001003705|No."
     - CUE: shot_soul_no_mr
-    - mirror: "0001101345|A bit more enthusiasm, witcher. You know you just might enjoy yourself."
+    - mirror: "[5.355598]0001101345|A bit more enthusiasm, witcher. You know you just might enjoy yourself."
     - NEXT: section_choice_mirror
 
   section_mirror_yourdoing:
     - CUE: shot_yourdoing_init
-    - geralt: "[1.3771]2114670737|Is it your doing?"
+    - geralt: "[1.3217]2114670737|Is it your doing?"
     - CUE: shot_yourdoing_mr
     - mirror: "[3.79388]0001108117|Haha, you like it?"
     - CUE: shot_yourdoing_grlt2
@@ -2684,7 +2684,7 @@ dialogscript:
     - PAUSE: 2.5
     - CUE: shot_demon_close
     #- mirror: "[5.3767195]0001108178|Hahahaha… Point for me."
-    - mirror: "0001104211|At last, it's over."
+    - mirror: "[2.7216249]0001104211|At last, it's over."
     #- PAUSE: 1.0
     - CUE: shot_demon_very_close
     - mirror: "0001135556|Ouw se on coq é coq là sé rwa an lè pil fimié ay."
@@ -2731,3 +2731,5 @@ dialogscript:
     #- CAMERA_BLEND: 5.0
     - BLACKSCREEN: true
     - EXIT
+
+

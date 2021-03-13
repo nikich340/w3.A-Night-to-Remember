@@ -148,30 +148,30 @@ repository:
         tags: [ "ext" ]
 
     cam_5_Shot5_ori_dg:
-      fov: 25.0
+      fov: 17.0
       transform:
-        pos: [ -143.2846832275, 35.8250617981, -9.4960985184 ]
-        rot: [ 0.0, 356.1600036621, 109.7356567383 ]
+        pos: [ -142.8721618652, 35.8259925842, -9.5210981369 ]
+        rot: [ 0.0, 357.7825012207, 106.5206909180 ]
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 5.1781210899, 8.1781215668 ]
-        focus: [ 5.6781210899, 6.6781210899 ]
+        blur: [ 5.5843925476, 8.5843925476 ]
+        focus: [ 6.0843925476, 7.0843925476 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
 
     cam_6_Shot6_ger_dg:
-      fov: 25.0
+      fov: 18.0
       transform:
-        pos: [ -149.8035430908, 34.9167938232, -9.4710979462 ]
-        rot: [ 0.0, 355.3114624023, 264.5927429199 ]
+        pos: [ -150.0581665039, 34.8698654175, -9.4960985184 ]
+        rot: [ 0.0, 356.8475036621, 266.8178405762 ]
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 4.9459266663, 7.9459266663 ]
-        focus: [ 5.4459266663, 6.4459266663 ]
+        blur: [ 5.2564997673, 8.2565002441 ]
+        focus: [ 5.7564997673, 6.7564997673 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -628,30 +628,30 @@ repository:
         tags: [ "ext" ]
 
     cam_59_Shot5_ori_dg_upd_close:
-      fov: 20.0
+      fov: 10.0
       transform:
-        pos: [ -143.2602233887, 35.7541656494, -9.5460987091 ]
-        rot: [ 0.0, 356.9850158691, 107.5078735352 ]
+        pos: [ -142.2395324707, 35.9761466980, -9.5210981369 ]
+        rot: [ 0.0, 358.8275146484, 104.6781616211 ]
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 5.1842026711, 8.1842021942 ]
-        focus: [ 5.6842026711, 6.6842026711 ]
+        blur: [ 6.2161650658, 9.2161655426 ]
+        focus: [ 6.7161650658, 7.7161650658 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
 
     cam_60_Shot6_ger_dg_upd_close:
-      fov: 20.0
+      fov: 10.0
       transform:
-        pos: [ -149.9303283691, 34.8759231567, -9.4710979462 ]
-        rot: [ 0.0, 356.6039428711, 265.7198486328 ]
+        pos: [ -150.6838073730, 34.8449630737, -9.4960985184 ]
+        rot: [ 0.0, 358.2225036621, 269.3202209473 ]
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 4.9482364655, 7.9482364655 ]
-        focus: [ 5.4482364655, 6.4482364655 ]
+        blur: [ 5.9126343727, 8.9126338959 ]
+        focus: [ 6.4126343727, 7.4126343727 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -1066,6 +1066,7 @@ production:
     soundbanks:
       - monster_dettlaff_vampire
       - qu_ep2_701_dlg
+      - ntr_quest
 
 storyboard:
   defaults:
@@ -1151,7 +1152,7 @@ storyboard:
           blendout: 0.4
 
       - actor.anim: 
-          .@pos: [0.8276, orianna_human_high_standing_determined_exit_back]
+          .@pos: [0.791, orianna_human_high_standing_determined_exit_back]
           blendin: 0.5
           blendout: 0.0
           clipend: 2.5
@@ -1228,7 +1229,7 @@ storyboard:
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
       - actor.anim.additive:
           actor: geralt
-          .@pos: [0.0, anim_4044_high_standing_determined_gesture_shout_01]
+          .@pos: [0.5, anim_4044_high_standing_determined_gesture_shout_01]
           blendin: 0.5
           blendout: 0.5
 
@@ -1275,6 +1276,45 @@ storyboard:
 
     shot_fight3_oriana_morph:
       - actor.mimic: [0.0, orianna_vamp_focused]
+      - actor.sound: [0.0, orianna_vampire, Play_ntr_orianna_hiss1]
+      - actor.sound: [0.0, orianna_vampire, q701_bruxa_skin_morph]
+      - actor.lookat: [0.0, orianna_vampire, [ 0.0038613752, 0.4910137057, 1.5813558102 ]]
+      - actor.lookat: [0.7, orianna_vampire, geralt]
+
+    shot_fight4_geralt_draw_silver:
+      - actor.mimic: [0.0, geralt_disgust]
+      - cam: [0.0, cam_12_Shot_ger_draw_sword_cut]
+      - actor.equip.right: [0.25, geralt, silversword]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_7101_high_standing_determined_silver_to_gameplay_combat]
+          blendin: 0.5
+          blendout: 0.0
+          clipend: 4.0
+      - actor.anim.mimic: 
+          actor: geralt
+          .@pos: [0.1, mimicsanim_117_geralt_neutral_gesture_brows_down_face_nrml]
+          weight: 0.8
+          blendin: 0.5
+          blendout: 0.5
+      - actor.appearance: [0.5, orianna_vampire, orianna_vampire]
+      - actor.gamestate: [0.8, orianna_vampire]
+      - actor.pose: [0.9, orianna_vampire_idle_vampire]
+
+  section_fight2_v2:
+    shot_fight3_pre:
+      - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -13.1045913696 ], [ 0.0, 0.0, 274.4501037598 ]]
+      - actor.placement: [0.0, orianna_vampire, [ -149.1020660400, 34.5456390381, -11.1445922852 ], [ 0.0, 0.0, 282.7800292969 ]]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
+      - actor.lookat: [0.0, geralt, orianna_vampire]
+      - actor.lookat: [0.0, orianna_vampire, geralt]
+      - actor.placement: [0.0, geralt, [ -144.1563720703, 35.0813903809, -11.2680664063 ], [ 0.0, 0.0, 106.4800338745 ]]
+      - cam: [0.0, cam_11_Shot_ori_morph_shot]
+      - actor.mimic: [0.2, orianna_vamp_aggressive]
+
+    shot_fight3_oriana_morph:
+      - actor.mimic: [0.0, orianna_vamp_focused]
+      - actor.sound: [0.0, orianna_vampire, Play_ntr_orianna_hiss2]
       - actor.sound: [0.0, orianna_vampire, q701_bruxa_skin_morph]
       - actor.lookat: [0.0, orianna_vampire, [ 0.0038613752, 0.4910137057, 1.5813558102 ]]
       - actor.lookat: [0.7, orianna_vampire, geralt]
@@ -1355,12 +1395,12 @@ storyboard:
           weight: 0.7
       - actor.anim.additive:
           actor: orianna_human
-          .@pos: [0.0, anim_12450_add_gesture_question_03]
+          .@pos: [0.2, anim_12450_add_gesture_question_03]
           blendin: 0.5
           blendout: 0.5
 
     shot_try_peacefully_ger2:
-      - cam: [0.0, cam_60_Shot6_ger_dg_upd_close]
+      - cam: [0.0, cam_6_Shot6_ger_dg]
       - actor.anim.additive:
           actor: geralt
           .@pos: [0.5, anim_7014_high_standing_determined_gesture_exclamation_02]
@@ -1368,7 +1408,7 @@ storyboard:
           blendout: 0.5
 
     shot_try_peacefully_ori2:
-      - cam: [0.0, cam_59_Shot5_ori_dg_upd_close]
+      - cam: [0.0, cam_5_Shot5_ori_dg]
       - actor.anim.additive:
           actor: orianna_human
           .@pos: [0.0, anim_12431_add_gesture_explain_01]
@@ -1376,10 +1416,10 @@ storyboard:
           blendout: 0.5
 
     shot_try_peacefully_ger3:
-      - cam: [0.0, cam_6_Shot6_ger_dg]
+      - cam: [0.0, cam_60_Shot6_ger_dg_upd_close]
       - actor.anim.additive:
           actor: geralt
-          .@pos: [0.0, anim_7011_high_standing_determined_gesture_do_it]
+          .@pos: [0.35, anim_7011_high_standing_determined_gesture_do_it]
           blendin: 0.5
           blendout: 0.5
 
@@ -1387,7 +1427,7 @@ storyboard:
       - cam: [0.0, cam_59_Shot5_ori_dg_upd_close]
       - actor.anim.additive:
           actor: orianna_human
-          .@pos: [0.0, anim_12466_add_reaction_aggro_01]
+          .@pos: [0.25, anim_12466_add_reaction_aggro_01]
           blendin: 0.5
           blendout: 0.5
 
@@ -1395,7 +1435,14 @@ storyboard:
       - cam: [0.0, cam_60_Shot6_ger_dg_upd_close]
       - actor.anim.additive:
           actor: geralt
-          .@pos: [0.0, anim_7091_high_standing_determined_gesture_you]
+          .@pos: [0.4, anim_7091_high_standing_determined_gesture_you]
+          blendin: 0.5
+          blendout: 0.5
+
+    shot_try_peacefully_ger4_2:
+      - actor.anim.additive:
+          actor: geralt
+          .@pos: [0.25, anim_6715_add_gesture_slight_explain_05]
           blendin: 0.5
           blendout: 0.5
 
@@ -1403,7 +1450,7 @@ storyboard:
       - cam: [0.0, cam_59_Shot5_ori_dg_upd_close]
       - actor.anim.additive:
           actor: orianna_human
-          .@pos: [0.0, anim_12449_add_gesture_question_02]
+          .@pos: [0.5, anim_12449_add_gesture_question_02]
           blendin: 0.5
           blendout: 0.5
 
@@ -1411,7 +1458,7 @@ storyboard:
       - cam: [0.0, cam_60_Shot6_ger_dg_upd_close]
       - actor.anim.additive:
           actor: geralt
-          .@pos: [0.0, anim_7072_high_standing_determined_gesture_sure]
+          .@pos: [0.6, anim_7072_high_standing_determined_gesture_sure]
           blendin: 0.5
           blendout: 0.5
 
@@ -1419,7 +1466,20 @@ storyboard:
       - cam: [0.0, cam_5_Shot5_ori_dg]
       - actor.anim.additive:
           actor: orianna_human
-          .@pos: [1.0, anim_12457_add_gesture_shout_decline_01]
+          .@pos: [0.0, anim_12427_add_gesture_chuckle_01]
+          blendin: 0.5
+          blendout: 0.5
+
+      - actor.anim.additive:
+          actor: orianna_human
+          .@pos: [0.4, anim_12433_add_gesture_explain_03]
+          blendin: 0.5
+          blendout: 0.5
+    
+    shot_try_peacefully_ori5_2:
+      - actor.anim.additive:
+          actor: orianna_human
+          .@pos: [0.0, anim_12457_add_gesture_shout_decline_01]
           blendin: 0.5
           blendout: 0.5
 
@@ -1441,10 +1501,10 @@ storyboard:
       - actor.placement: [0.0, orianna_vampire, [ -144.6826934814, 19.7409744263, -15.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
       - actor.anim:
           actor: geralt # 8.4333
-          .@pos: [0.0, anim_6975_high_standing_determined_calm_exit_frontal]
-          blendin: 0.0
+          .@pos: [0.25, anim_6975_high_standing_determined_calm_exit_frontal]
+          blendin: 0.5
           blendout: 0.0
-          clipend: 2.5
+          clipend: 3.0
 
     shot_try_peacefully_ger6b:
       - actor.placement: [0.0, geralt, [ -147.7663269043, 34.1829681396, -11.1720581055 ], [ 0.0, 0.0, 77.5498886108 ]]
@@ -1511,37 +1571,56 @@ storyboard:
           actor: orianna_human # 7.7666
           .@pos: [0.5, anim_12665_high_standing_determined_gesture_show_hold]
           blendin: 0.0
-          blendout: 0.3
+          blendout: 0.2
           clipfront: 2.0
           clipend: 4.3
-          stretch: 6.0
+          stretch: 8.0
 
-    shot_try_peacefully_hide_letter:
+    shot_try_peacefully_hide_letter_old:
       - cam.blend.end: [0.0, cam_29_Shot_p3_read_ori_pan, smooth]
       - actor.lookat: [0.0, orianna_human, geralt]
-      - actor.anim.additive:
-          actor: orianna_human # 7.7666
-          .@pos: [0.0, anim_12665_high_standing_determined_gesture_show_hold]
+
+    shot_try_peacefully_ger7:
+      - cam: [0.0, cam_30_Shot_p3_ger]
+      - actor.anim:
+          actor: geralt
+          .@pos: [0.0, anim_6718_add_gesture_weight_shift_step_01]
           blendin: 0.5
           blendout: 0.5
-          clipfront: 4.0
-          #clipend: 4.0
-          #stretch: 5.0
 
-  section_try_peacefully5:
-    shot_try_peacefully_ger7:
-      - actor.pose: [0.0, geralt_high_standing_determined_idle]
-      - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -11.1445922852 ], [ 0.0, 0.0, 224.4501037598 ]]
-      - actor.placement: [0.0, geralt, [ -147.7663269043, 34.1829681396, -11.1720581055 ], [ 0.0, 0.0, 77.5498886108 ]]
-      - actor.placement: [0.0, orianna_vampire, [ -144.6826934814, 19.7409744263, -15.9053573608 ], [ 0.0, 0.0, 9.7900238037 ]]
-      
-      - cam: [0.0, cam_30_Shot_p3_ger]
+      - actor.anim.additive:
+          actor: geralt
+          .@pos: [0.75, anim_6705_add_gesture_question_04]
+          blendin: 0.5
+          blendout: 0.5
 
     shot_try_peacefully_ori7:
       - cam: [0.0, cam_29_Shot_p3_read_ori]
+      - actor.lookat: [0.85, orianna_human, [ 0.05, 0.11, 1.1753739119 ]]
+      - actor.anim.additive:
+          actor: orianna_human # 7.7666
+          .@pos: [0.7, anim_12665_high_standing_determined_gesture_show_hold]
+          blendin: 0.7
+          blendout: 0.5
+          #clipfront: 0.5
+
+      - actor.anim.mimic:
+          actor: orianna_human # 5.6 anim_12751_high_standing_sad_gesture_decline
+          .@pos: [0.0, mimicsanim_411_geralt_neutral_gesture_no_short_face]
+          blendin: 0.3
+          blendout: 0.3
+          stretch: 1.5  
+
+    shot_try_peacefully_hide_letter_new:
+      - actor.lookat: [0.0, orianna_human, geralt]
+      #- actor.anim.additive:
+      #    actor: orianna_human # 7.7666
+      #    .@pos: [0.0, anim_12665_high_standing_determined_gesture_show_hold]
+      #    blendin: 0.5
+      #    blendout: 0.5
+      #    clipfront: 4.0
 
     shot_try_peacefully_ori_think0:
-      - cam: [0.0, cam_29_Shot_p3_read_ori]
       - actor.lookat: [0.2, orianna_human, NONE]
       - actor.anim:
           actor: orianna_human # 4.5
@@ -1551,12 +1630,16 @@ storyboard:
           blendout: 0.0
           clipend: 4.0
 
+  section_try_peacefully5:
     shot_try_peacefully_ori_think1:
       - actor.placement: [0.0, geralt, [ -147.1423950195, 34.6580047607, -11.1720581055 ], [ 0.0, 0.0, 23.8697280884 ]]
       - actor.placement: [0.0, orianna_human, [ -153.7459716797, 41.3073158264, -11.3579711914 ], [ 0.0, 0.0, 45.3202285767 ]]
       - actor.pose: [0.0, orianna_human_High_Standing_Sad]
+      - actor.pose: [0.0, geralt_high_standing_determined_idle]
       - cam.blend.start: [0.0, cam_55_Shot_p3_think1a, rapid]
       - cam.blend.key: [0.7, cam_53_Shot_p3_think1b]
+      - actor.lookat: [0.0, orianna_human, NONE]
+      - actor.lookat: [0.0, geralt, orianna_human]
       - actor.anim: #duration 8.066667 sec
           .@pos: [0.0, orianna_human_high_standing_sad_enter_frontal]
           blendin: 0.0
@@ -1583,6 +1666,7 @@ storyboard:
           .@pos: [0.0, orianna_human, NONE]
       
     shot_try_peacefully_ori_think3:
+      - actor.sound: [0.0, orianna_human, Play_ntr_orianna_hiss2]
       - actor.lookat: [0.0, geralt, orianna_human]
       - actor.lookat: [0.0, orianna_human, NONE]
 
@@ -1648,9 +1732,20 @@ storyboard:
       - actor.anim.mimic: 
           actor: orianna_human
           .@pos: [0.4, mimicsanim_493_geralt_reaction_eye_smile_face]
-          blendin: 0.5
-          blendout: 0.5
+          blendin: 0.3
+          blendout: 0.3
           weight: 0.6
+          stretch: 1.0
+
+    shot_try_peacefully_ori_think6b:
+      - actor.lookat: [0.43, orianna_human, [ -0.4624748230, 2.8483762741, -0.3631718159 ]]
+
+    shot_try_peacefully_ori_think6c:
+      - actor.lookat: [0.0, orianna_human, NONE]
+      - actor.lookat: [0.9, orianna_human, [ -0.4624748230, 2.8483762741, -0.3631718159 ]]
+      
+    shot_try_peacefully_ori_think6d:
+      - actor.lookat: [0.95, orianna_human, NONE]
 
     shot_try_peacefully_ori_think7:
       - cam: [0.2, cam_61_Shot_p3_think1c]
@@ -1676,16 +1771,13 @@ storyboard:
           stretch: 1.2
           blendout: 0.4
 
-    #shot_try_peacefully_ori7b:
-    #  - cam: [0.0, cam_29_Shot_p3_read_ori]
-
-    shot_try_peacefully_ori7c:
+    shot_try_peacefully_ori7b:
       - actor.anim.additive:
-          actor: orianna_human # 4.6
+          actor: orianna_human
           .@pos: [0.0, anim_12751_high_standing_sad_gesture_decline]
           blendin: 0.5
           blendout: 0.5
-          stretch: 1.25    
+          stretch: 1.2   
 
     shot_try_peacefully_ger8:
       - cam: [0.0, cam_30_Shot_p3_ger]
@@ -1695,7 +1787,7 @@ storyboard:
           blendin: 0.5
           blendout: 0.5
           #weight: 0.75
-          #stretch: 1.25
+          stretch: 0.9
 
     shot_try_peacefully_ori8:
       ### gesture explain
@@ -1712,15 +1804,39 @@ storyboard:
           actor: geralt # 4.6
           .@pos: [0.0, anim_7067_high_standing_determined_gesture_shrug]
           blendin: 0.5
-          blendout: 0.5      
+          blendout: 0.5
 
-    shot_try_peacefully_ori9:
+    shot_try_peacefully_ori9_new:
       - cam: [0.0, cam_29_Shot_p3_read_ori]
       - actor.anim.additive:
           actor: orianna_human # 5.6
-          .@pos: [0.0, anim_12452_add_gesture_question_aggressive_01]
+          .@pos: [0.0, anim_12468_add_reaction_agreeing_nod_01]
+          blendin: 0.5
+          blendout: 0.5
+
+    shot_try_peacefully_ger9_new:
+      - cam: [0.0, cam_30_Shot_p3_ger]
+      - actor.anim.additive:
+          actor: geralt # 2.966
+          .@pos: [0.0, anim_7051_high_standing_determined_gesture_question_04]
+          blendin: 0.5
+          blendout: 0.5
+
+    shot_try_peacefully_ori9_new2:
+      - cam: [0.0, cam_29_Shot_p3_read_ori]
+      - actor.anim.additive:
+          actor: orianna_human # 5.6 anim_12751_high_standing_sad_gesture_decline
+          .@pos: [0.0, anim_12432_add_gesture_explain_02]
           blendin: 0.5
           blendout: 0.5      
+
+    #shot_try_peacefully_ori9:
+    #  - cam: [0.0, cam_29_Shot_p3_read_ori]
+    #  - actor.anim.additive:
+    #      actor: orianna_human # 5.6
+    #      .@pos: [0.0, anim_12452_add_gesture_question_aggressive_01]
+    #      blendin: 0.5
+    #      blendout: 0.5      
 
     shot_try_peacefully_ger10:
       - cam: [0.0, cam_30_Shot_p3_ger]
@@ -1733,11 +1849,11 @@ storyboard:
 
     shot_try_peacefully_ori10:
       - cam: [0.0, cam_29_Shot_p3_read_ori]
-      - actor.anim.additive:
-          actor: orianna_human # 5.6
-          .@pos: [0.0, anim_12468_add_reaction_agreeing_nod_01]
-          blendin: 0.5
-          blendout: 0.5  
+      #- actor.anim.additive:
+      #    actor: orianna_human # 5.6
+      #    .@pos: [0.0, anim_12468_add_reaction_agreeing_nod_01]
+      #    blendin: 0.5
+      #    blendout: 0.5  
 
     shot_try_peacefully_ori_leaving1:
       - actor.lookat: [0.3, orianna_human, NONE]
@@ -1806,25 +1922,27 @@ dialogscript:
     - CUE: shot_init
     - PAUSE: 1.0
     - CUE: shot_0
-    - orianna_human: "[9.998902]0001174593|Wolves asleepin' 'midst the trees, bats all aswayin' in the breeze…"
+    ##- orianna_human: "[9.998902]0001174593|Wolves asleepin' 'midst the trees, bats all aswayin' in the breeze…"
+    - orianna_human: "[9.8590]2114670458|Wolves asleepin' 'midst the trees, bats all aswayin' in the breeze…"
     - CUE: shot_1
-    - orianna_human: "[11.980957]0001176970|But one soul lies anxious, wide awake, fearin' all manner of ghouls, hags and wraiths…"
+    ##- orianna_human: "[11.980957]0001176970|But one soul lies anxious, wide awake, fearin' all manner of ghouls, hags and wraiths…"
+    - orianna_human: "[11.4429]2114670459|But one soul lies anxious, wide awake, fearin' all manner of ghouls, hags and wraiths…"
     # shot Shot4 to ger
     - CUE: shot_4
     - geralt: "[2.6539567]0000366968|Nice tune… Damn sad, though."
-    - orianna_human: "2114670944|Folk have forgotten it."
+    - orianna_human: "[1.7619]2114670944|Folk have forgotten it."
     - CUE: shot_4_shrug
-    - geralt: "[2.9005]2114670945|Got… other things on their mind."
+    - geralt: "[2.3943]2114670945|Got… other things on their mind."
     - CUE: shot_4_go
     - PAUSE: 2.0
     - CUE: shot_4_go2
-    - orianna_human: "2114670946|Things like me?"
+    - orianna_human: "[1.8957]2114670946|Things like me?"
     - PAUSE: 2.0
     - NEXT: section_choice_main
 
   section_choice_main:
     - CHOICE:
-      - choice: ["2114670940|I came to kill you.", section_pre_fight]
+      - choice: ["2114670940|Let us end this.", section_pre_fight]
         emphasize: true
       - choice: ["2114670941|No need in fight.", section_try_peacefully]
         emphasize: true
@@ -1832,19 +1950,20 @@ dialogscript:
   section_pre_fight:
     - CUE: shot_pre_fight1
     - PAUSE: 0.5
-    - geralt: "2114670947|It's time."
+    - geralt: "[1.0453]2114670947|It's time."
     - PAUSE: 0.5
     - NEXT: section_fight
 
   section_pre_fight_v2:
     - CUE: shot_pre_fight1_v2
     ## Not about to parley with monster
-    - geralt: "2114670976|Know what…? Don't feel like talking to you anymore."
-    - NEXT: section_fight
+    - geralt: "[2.1774]2114670976|Know what? You're right."
+    - geralt: "[2.2316]2114670450|Don't feel like talking to you anymore."
+    - NEXT: script_call_morph_forward_v2
 
   section_fight:
     - CUE: shot_fight1_ori_gesture
-    - orianna_human: "[3.0]2114670948|Well, no witcher's ever dead in his own bed."
+    - orianna_human: "[4.0153]2114670948|Well, no witcher's ever died in his own bed."
     - CUE: shot_fight2_ger_sceptic
     - PAUSE: 2.0
     - NEXT: script_call_morph_forward
@@ -1856,12 +1975,32 @@ dialogscript:
           - tag: CNAME_ntr_orianna_vampire
           - morphRatio: 1.0
           - blendTime: 1.1
-          - pauseBefore: 2.5
+          - pauseBefore: 1.9
     - NEXT: section_fight2
+
+  script_call_morph_forward_v2:
+    - SCRIPT:
+        function: NTR_MorphNPCTimer_S
+        parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+          - tag: CNAME_ntr_orianna_vampire
+          - morphRatio: 1.0
+          - blendTime: 1.1
+          - pauseBefore: 1.7
+    - NEXT: section_fight2_v2
 
   section_fight2:
     - CUE: shot_fight3_pre
-    - orianna_vampire: "[2.5]2114670949|You won't be an exception."
+    - orianna_vampire: "[1.9096]2114670949|You won't be an exception."
+    - CUE: shot_fight3_oriana_morph
+    - PAUSE: 1.5
+
+    - CUE: shot_fight4_geralt_draw_silver
+    - PAUSE: 4.0
+    - NEXT: script_music_beast
+
+  section_fight2_v2:
+    - CUE: shot_fight3_pre
+    - orianna_vampire: "[1.6910]2114670452|Goodbye, witcher…"
     - CUE: shot_fight3_oriana_morph
     - PAUSE: 1.5
 
@@ -1887,35 +2026,39 @@ dialogscript:
 
   section_try_peacefully:
     - CUE: shot_try_peacefully_init
-    - geralt: "2114670968|You've killed an innocent man who wanted to reunite the Baron with his son."
+    - geralt: "[3.1793]2114670968|You've killed a man who wanted to reunite a boy with his father."
 
     - CUE: shot_try_peacefully_ori1
-    - orianna_human: "2114670950|Well, the threat of a sword doesn't always bring out the best in me."
+    - orianna_human: "[3.8486]2114670950|Well, the threat of a sword doesn't always bring out the best in me."
 
     - CUE: shot_try_peacefully_ger2
-    - geralt: "2114670951|Alright, but what about the children… You are using them as a livestock!"
+    - geralt: "[4.3635]2114670951|Fair enough. But the children… You can't continue to use them as livestock."
 
     - CUE: shot_try_peacefully_ori2
-    - orianna_human: "2114670952|You know what I am. I can't resist the hunger."
+    - orianna_human: "[2.6529]2114670952|And who exactly are you to lecture me?"
     
     - CUE: shot_try_peacefully_ger3
-    - geralt: "2114670953|No, you can. I have read something interesting in your house…"
+    - geralt: "[5.9308]2114670953|I know this might sound strange but I want to help you. I've come across something interesting in your house…"
 
     - CUE: shot_try_peacefully_ori3
-    - orianna_human: "2114670954|Ha! So, you've been snooping around… Do I intrigue you that much, witcher?"
+    - orianna_human: "[5.2304]2114670954|So, you've been snooping around… Do I intrigue you that much, witcher?"
     
     - CUE: shot_try_peacefully_ger4
-    - geralt: "2114670955|Orianna, I know you don't want to be the same… person more."
+    - geralt: "[5.9308]2114670955|Orianna, your orphanage was destroyed. You've tried to rebuild it, but you're about to lose it all again."
+    - CUE: shot_try_peacefully_ger4_2
+    - geralt: "[5.1667]2114670451|I get the feeling you no longer consider these repetitive circumstances as minor inconveniences."
     
     - CUE: shot_try_peacefully_ori4
-    - orianna_human: "2114670956|You presume to understand me? After reading some my… musings?"
+    - orianna_human: "[5.9149]2114670956|So you've read a few meaningless musings and now you presume to understand me?"
     
     - CUE: shot_try_peacefully_ger5
-    - geralt: "2114670957|I helped some creatures before. And I want to help you too."
+    - geralt: "[4.7350]2114670957|I may not understand you, but I do know one thing. You don't have to drink blood."
     
     - CUE: shot_try_peacefully_ori5
-    - orianna_human: "2114670958|Geralt, I'm vampires. If I give up drinking blood, I will die…"
-    - orianna_human: "2114670969|You can't help me. Nobody can help me."
+    - orianna_human: "[8.9938]2114670958|Haha, such nonsense, witcher. Need I remind you of what I am? Drinking blood is essential to my survival."
+    - PAUSE: 0.25
+    - CUE: shot_try_peacefully_ori5_2
+    - orianna_human: "[3.1061]2114670969|You can't help me. No one can help me."
     
     - NEXT: section_choice_peaceful
 
@@ -1928,7 +2071,7 @@ dialogscript:
 
   section_try_peacefully2:
     - CUE: shot_try_peacefully_ger6a
-    - geralt: "[2.5]2114670979|Think mutual friend of us could."
+    - geralt: "[4.0036]2114670979|I may not be able to, but a mutual friend may be able to."
     - CUE: shot_try_peacefully_ger6b
     - PAUSE: 3.0
     - NEXT: script_call_attach_letter_geralt
@@ -1942,7 +2085,7 @@ dialogscript:
 
   section_try_peacefully3:
     - CUE: shot_try_peacefully_ger6c
-    - geralt: "[1.3998]2114670959|Take a look at this."
+    - geralt: "[1.1940]2114670959|Look at this."
     - PAUSE: 0.9
     - CUE: shot_try_peacefully_ger6d
     - PAUSE: 1.1
@@ -1965,11 +2108,25 @@ dialogscript:
   section_try_peacefully4:
     - CUE: shot_try_peacefully_ori6
     - PAUSE: 6.0
-    - orianna_human: "2114670960|Hmm. Regis, Regis… Awfully considerate as always."
-    - orianna_human: "2114670977|\"Remove herself from the confines of such primitive instincts\", interesting… He is sure that every of us is able to live without blood."
-    - CUE: shot_try_peacefully_hide_letter
+    - orianna_human: "[5.2690]2114670960|Hmm. Regis, Regis… Awfully considerate as always."
+    - orianna_human: "[8.0854]2114670977|"The act of drinking blood for sustenance is a mere myth", interesting… He seems certain…"The act of drinking blood for sustenance is a mere myth\", interesting… He seems certain…"
+    - CUE: shot_try_peacefully_hide_letter_old
+    - PAUSE: 1.0
+    - orianna_human: "[3.7820]2114670967|Well, I suppose he'd be upset if we tussled, wouldn't he?"
+    
+    - CUE: shot_try_peacefully_ger7
+    - geralt: "[6.1863]2114670971|Even if you kill me… Villagers, knights and other witchers will always come after you, and you know it."
+    
+    - CUE: shot_try_peacefully_ori7
+    - orianna_human: "[8.0957]2114670978|You've no idea what it's like to constantly fight to overcome your hunger, your nature. However.."
     - PAUSE: 2.0
-    - orianna_human: "2114670967|I suppose he'd be upset if we tussled, wouldn't he?"
+
+    - CUE: shot_try_peacefully_hide_letter_new
+    - orianna_human: "[1.2982]2114670972|Give me a moment."
+    - PAUSE: 1.0
+    - CUE: shot_try_peacefully_ori_think0
+    - PAUSE: 4.0
+
     - NEXT: script_call_remove_letter_orianna
 
   script_call_remove_letter_orianna:
@@ -1980,15 +2137,7 @@ dialogscript:
     - NEXT: section_try_peacefully5
 
   section_try_peacefully5:
-    - CUE: shot_try_peacefully_ger7
-    - geralt: "2114670971|You're not my friend, true. But not the enemy anymore. "
-    - geralt: "2114670978|It remains to do the last step - give up with blood-drinking. Like Regis did. And we'll part in peace."
-    - CUE: shot_try_peacefully_ori7
-    - orianna_human: "2114670972|Nice suggestion. But I have a lot to think about. Alone."
     # Orianna thinking
-
-    - CUE: shot_try_peacefully_ori_think0
-    - PAUSE: 4.0
     - CUE: shot_try_peacefully_ori_think1
     - PAUSE: 7.0
     - CUE: shot_try_peacefully_ori_think1b
@@ -2034,35 +2183,53 @@ dialogscript:
     #- CUE: shot_try_peacefully_ori_think5_uw
     #- PAUSE: 3.0
     - CUE: shot_try_peacefully_ori_think6
-    - PAUSE: 4.0
+    - PAUSE: 2.0
+    - CUE: shot_try_peacefully_ori_think6b
+    - orianna_human: "[14.2488]2114670453|One who comes from Gharasham must be strong in spirit, merciful and noble. Really, Regis? When we first met you took so much pride in attacking these feeble humans from above."
+    - PAUSE: 0.25
+    - CUE: shot_try_peacefully_ori_think6c
+    - orianna_human: "[8.8844]2114670454|And now it seems things have changed… apparently. Perhaps after all these centuries… it is finally time."
+    - PAUSE: 0.5
+    - CUE: shot_try_peacefully_ori_think6d
+    - orianna_human: "[1.8292]2114670455|All right, Regis."
+
     - CUE: shot_try_peacefully_ori_think7
     - PAUSE: 5.0
 
     - CUE: shot_try_peacefully_ori7a
     - PAUSE: 3.0
-    #- CUE: shot_try_peacefully_ori7b
-    - orianna_human: "2114670961|Very well then, I've made my decision - I won't feed on the children's blood again."
-    - CUE: shot_try_peacefully_ori7c
-    - orianna_human: "2114670962|But Niellan and Agneta will stay with me. I'm used to take care of them and… It will distract me from obsessive thoughts about hunger."
+    - orianna_human: "[1.6931]2114670961|I've made my decision."
+    - CUE: shot_try_peacefully_ori7b
+    - orianna_human: "[2.6156]2114670457|I vow never to feed on blood again."
+    #- CUE: shot_try_peacefully_ori7c
+    #- orianna_human: "2114670962|But Niellan and Agneta will stay with me. I'm used to take care of them and… It will distract me from obsessive thoughts about hunger."
     
     - CUE: shot_try_peacefully_ger8
-    - geralt: "2114670963|Leave children with you? What if you will break your vow?"
+    - PAUSE: 0.25
+    - geralt: "[1.8906]2114670963|Can I trust you to keep your vow?"
+    - PAUSE: 0.25
 
     - CUE: shot_try_peacefully_ori8
-    - orianna_human: "2114670964|Unlike your kind, we tend to keep our promises."
+    - orianna_human: "[3.7793]2114670964|Unlike your kind, witcher, we tend to keep our promises."
     
     - CUE: shot_try_peacefully_ger9
-    - geralt: "2114670973|Alright, I'll trust you, against my better judgment."
-    - geralt: "2114670974|But one day I'll visit children, and if I see any small scratch on them…"
+    - geralt: "[4.6770]2114670973|Alright. But you must leave Toussaint immediately. The guards are looking for you."
+    
+    - CUE: shot_try_peacefully_ori9_new
+    - orianna_human: "[4.1479]2114670974|I suppose it was inevitable.. I shall leave this place."
+    - PAUSE: 0.25
 
-    - CUE: shot_try_peacefully_ori9
-    - orianna_human: "2114670965|As you wish, Geralt. Not a hair on their heads shall come to any harm, I vow."
+    - CUE: shot_try_peacefully_ger9_new
+    - geralt: "[1.2288]2114670965|Where will you go?"
+
+    - CUE: shot_try_peacefully_ori9_new2
+    - orianna_human: "[3.3118]2114670456|The letter you gave me wasn't only meant for you, Geralt."
 
     - CUE: shot_try_peacefully_ger10
-    - geralt: "2114670975|Sure hope so. You can go then."
+    - geralt: "[2.6800]2114670975|I see. Well, good luck then."
 
     - CUE: shot_try_peacefully_ori10
-    - orianna_human: "2114670966|See you, White Wolf."
+    - orianna_human: "[6.2563]2114670966|I shall take my valuables and say goodbye to the children. Wait for me here, White Wolf."
 
     - CUE: shot_try_peacefully_ori_leaving1
     - PAUSE: 3.0
@@ -2086,5 +2253,9 @@ dialogscript:
     ###!!!- BLACKSCREEN: true
     - CAMERA_BLEND: 1.0
     - EXIT
+
+
+
+
 
 

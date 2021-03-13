@@ -209,7 +209,7 @@ production:
       Baron_Edward_aggressive:
         actor: Baron_Edward
         repo: aggressive
-        weight: 1.0
+        weight: 0.7
         duration: 1.0
 
       geralt_angry:

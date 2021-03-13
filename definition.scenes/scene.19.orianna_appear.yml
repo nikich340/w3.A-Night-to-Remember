@@ -177,14 +177,14 @@ repository:
     cam_1_Shot1:
       fov: 40.0
       transform:
-        pos: [ 9.2532882690, 2.6317772865, 3.7354717255 ]
-        rot: [ 0.0, 344.2525634766, 37.9511413574 ]
+        pos: [ 7.9360795021, 3.6529643536, 3.1354808807 ]
+        rot: [ 0.0, 346.5075683594, 50.8217468262 ]
       zoom: 0.0
       dof:
+        blur: [5.5276565552000001, 8.5276565552000001]
+        focus: [6.0276565552000001, 7.0276565552000001]
+        intensity: 0
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 7.4048862457, 10.4048862457 ]
-        focus: [ 7.9048862457, 8.9048862457 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -199,7 +199,7 @@ repository:
         aperture: [ 28.2495002747, 1.2700699568 ]
         blur: [ 1.8483004570, 4.8483004570 ]
         focus: [ 2.3483004570, 3.3483004570 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -207,14 +207,14 @@ repository:
     cam_3_Shot3c:
       fov: 40.0
       transform:
-        pos: [ 4.7340154648, 3.6294953823, 1.3105020523 ]
-        rot: [ 0.0, 351.6225585938, 57.6412048340 ]
+        pos: [ 4.4998569489, 2.9321200848, 1.2854938507 ]
+        rot: [ 0.0, 354.7850646973, 38.4726562500 ]
       zoom: 0.0
       dof:
+        blur: [1.2827395439488178, 13.03437810897136]
+        focus: [2.2827395439488178, 11.03437810897136]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 3.3257360458, 6.3257360458 ]
-        focus: [ 3.8257360458, 4.8257360458 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -229,7 +229,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 2.1387839317, 5.1387839317 ]
         focus: [ 2.6387839317, 3.6387839317 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -241,10 +241,10 @@ repository:
         rot: [ 0.0, 353.9050598145, 210.2636108398 ]
       zoom: 0.0
       dof:
+        blur: [4.8241629600999998, 7.8241629600999998]
+        focus: [5.3241629600999998, 6.3241629600999998]
+        intensity: 0
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 4.8241629601, 7.8241629601 ]
-        focus: [ 5.3241629601, 6.3241629601 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -259,7 +259,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 5.5214767456, 8.5214767456 ]
         focus: [ 6.0214767456, 7.0214767456 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -274,7 +274,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 3.5142107010, 6.5142107010 ]
         focus: [ 4.0142107010, 5.0142107010 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -289,7 +289,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 0.9204689264, 3.9204688072 ]
         focus: [ 1.4204689264, 2.4204688072 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -304,7 +304,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 2.1231894493, 5.1231894493 ]
         focus: [ 2.6231894493, 3.6231894493 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -319,7 +319,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 2.1231894493, 5.1231894493 ]
         focus: [ 2.6231894493, 3.6231894493 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -334,7 +334,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 5.0099959373, 8.0099964142 ]
         focus: [ 5.5099959373, 6.5099959373 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -349,7 +349,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 5.0099959373, 8.0099964142 ]
         focus: [ 5.5099959373, 6.5099959373 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -364,7 +364,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 5.0099959373, 8.0099964142 ]
         focus: [ 5.5099959373, 6.5099959373 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -379,7 +379,7 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 2.1497709751, 5.1497707367 ]
         focus: [ 2.6497709751, 3.6497709751 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -394,7 +394,7 @@ repository:
         aperture: [ 28.2495002747, 1.2700699568 ]
         blur: [ 1.1987180710, 4.1987180710 ]
         focus: [ 1.6987180710, 2.6987180710 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -409,22 +409,22 @@ repository:
         #aperture: [ 28.2500000000, 1.2699999809 ]
         blur: [ 0.9204689264, 3.9204688072 ]
         focus: [ 1.4204689264, 2.4204688072 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
 
     cam_17_Shot2a:
-      fov: 40.0
+      fov: 30.0
       transform:
-        pos: [ 3.6440258026, 6.7212586403, 1.4354953766 ]
-        rot: [ 0.0, 355.6925659180, 4.3462829590 ]
+        pos: [ 3.8617873192, 6.9138545990, 1.5354976654 ]
+        rot: [ 0.0, 352.0075683594, 34.0187072754 ]
       zoom: 0.0
       dof:
+        blur: [0, 9.5]
+        focus: [0, 7.5]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.4357659817, 4.4357662201 ]
-        focus: [ 1.9357659817, 2.9357659817 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -432,14 +432,14 @@ repository:
     cam_19_Shot3a:
       fov: 30.0
       transform:
-        pos: [ 3.1451630592, 8.7205085754, 1.4604978561 ]
-        rot: [ 0.0, 353.8225708008, 165.5512084961 ]
+        pos: [ 3.6835885048, 8.0796489716, 1.4354944229 ]
+        rot: [ 0.0, 354.3175964355, 147.1512145996 ]
       zoom: 0.0
       dof:
+        blur: [0, 8.3794293698907349]
+        focus: [0.81420669601195694, 6.3794293698907349]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 5.7465324402, 8.7465324402 ]
-        focus: [ 6.2465324402, 7.2465324402 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -447,14 +447,29 @@ repository:
     cam_21_Shot3d_pan:
       fov: 40.0
       transform:
-        pos: [ 4.7340154648, 3.6294953823, 1.2605028152 ]
-        rot: [ 0.0, 353.2450561523, 82.0065002441 ]
+        pos: [ 4.4998569489, 2.9321200848, 1.2854938507 ]
+        rot: [ 0.0, 354.5375671387, 65.9177551270 ]
       zoom: 0.0
       dof:
+        blur: [0.2827395439488178, 13.03437810897136]
+        focus: [1.2827395439488178, 11.03437810897136]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 2.2803380489, 5.2803382874 ]
-        focus: [ 2.7803380489, 3.7803380489 ]
-        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_18_corner_cam3:
+      fov: 12.0
+      transform:
+        pos: [ -8.3445558548, -5.3696613312, 1.1855049133 ]
+        rot: [ 0.0, 359.5425720215, 313.6348876953 ]
+      zoom: 0.0
+      dof:
+        blur: [0.0, 16.5159802730068]
+        focus: [0.0, 14.5159802730068]
+        intensity: 0.25
+        aperture: [ 28.2495002747, 1.2700699568 ]
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -466,10 +481,10 @@ repository:
         rot: [ 0.0, 354.5925903320, 194.3391418457 ]
       zoom: 0.0
       dof:
+        blur: [0, 6]
+        focus: [0, 4]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 2.8096506596, 5.8096504211 ]
-        focus: [ 3.3096506596, 4.3096504211 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -481,10 +496,10 @@ repository:
         rot: [ 0.0, 359.1850891113, 178.8052368164 ]
       zoom: 0.0
       dof:
+        blur: [0, 4.47687857583335]
+        focus: [0.4768785758333498, 2.47687857583335]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 0.8877595663, 3.8877596855 ]
-        focus: [ 1.3877595663, 2.3877596855 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -496,10 +511,10 @@ repository:
         rot: [ 0.0, 359.2675781250, 104.0608825684 ]
       zoom: 0.0
       dof:
+        blur: [0.6662094142071604, 5.6662094142071604]
+        focus: [1.6662094142071604, 3.6662094142071604]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 11.1615524292, 14.1615524292 ]
-        focus: [ 11.6615524292, 12.6615524292 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -514,7 +529,7 @@ repository:
         aperture: [ 28.2495002747, 1.2700699568 ]
         blur: [ 2.0626327991, 5.0626325607 ]
         focus: [ 2.5626327991, 3.5626327991 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -529,7 +544,7 @@ repository:
         aperture: [ 28.2495002747, 1.2700699568 ]
         blur: [ 2.0626327991, 5.0626325607 ]
         focus: [ 2.5626327991, 3.5626327991 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -544,7 +559,7 @@ repository:
         aperture: [ 28.2495002747, 1.2700699568 ]
         blur: [ 3.0800013542, 6.0800013542 ]
         focus: [ 3.5800013542, 4.5800013542 ]
-        intensity: 0.2500000000
+        intensity: 0.2
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -556,10 +571,10 @@ repository:
         rot: [ 0.0, 352.6400756836, 57.5579833984 ]
       zoom: 0.0
       dof:
+        blur: [0.22261663142494603, 10.228995558777381]
+        focus: [1.222616631424946, 8.2289955587773811]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 3.6947956085, 6.6947956085 ]
-        focus: [ 4.1947956085, 5.1947956085 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -571,40 +586,40 @@ repository:
         rot: [ 0.0, 352.2275695801, 36.6860046387 ]
       zoom: 0.0
       dof:
+        blur: [0.22261663142494603, 10.228995558777381]
+        focus: [1.222616631424946, 8.2289955587773811]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 3.6947956085, 6.6947956085 ]
-        focus: [ 4.1947956085, 5.1947956085 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
 
     cam_18_corner_cam1:
-      fov: 35.0
+      fov: 20.0
       transform:
-        pos: [ -7.9629173279, -5.0307612419, 1.4605007172 ]
-        rot: [ 0.0, 358.6075744629, 315.7524108887 ]
+        pos: [ -8.3445558548, -5.3696613312, 1.1855049133 ]
+        rot: [ 0.0, 358.5525817871, 315.9724426270 ]
       zoom: 0.0
       dof:
+        blur: [0, 16]
+        focus: [0, 14]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 11.8307762146, 14.8307762146 ]
-        focus: [ 12.3307762146, 13.3307762146 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
 
     cam_19_corner_cam2:
-      fov: 35.0
+      fov: 20.0
       transform:
-        pos: [ -7.9629173279, -5.0307612419, 1.4605007172 ]
-        rot: [ 0.0, 358.7450561523, 340.8047790527 ]
+        pos: [ -9.1374197006, -4.8455390930, 1.1855049133 ]
+        rot: [ 0.0, 358.6075744629, 328.3200988770 ]
       zoom: 0.0
       dof:
+        blur: [0, 16]
+        focus: [0, 14]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 2.5987665653, 5.5987663269 ]
-        focus: [ 3.0987665653, 4.0987663269 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -775,6 +790,9 @@ production:
 
       cam_19_corner_cam2:
         repo: "cam_19_corner_cam2"
+
+      cam_18_corner_cam3:
+        repo: "cam_18_corner_cam3"
 
     animations:
       niellan_low_standing_determined_enter_frontal_playing_happy:
@@ -1147,47 +1165,53 @@ storyboard:
 
   section_storyboard_ui:
     # shot Shot1
-    shot_1:
+    shot_1_init:
       - actor.mimic: [0.0, niellan_happy]
       - actor.mimic: [0.0, agneta_happy]
-      #- actor.placement: [0.0, niellan, [ 5.9528045654, 8.9630012512, -0.1018676758 ], [ 0.0, 0.0, 156.9700622559 ]]
-      #- actor.placement: [0.0, agneta, [ 4.7423534393, 10.2286128998, -0.1958007813 ], [ 0.0, 0.0, 167.0900878906 ]]
-      #- actor.placement: [0.0, Orianna_human, [ 5.0344357491, 8.7472534180, -0.1944580078 ], [ 0.0, 0.0, 160.5999145508 ]]
-      - actor.placement: [0.0, niellan, [ 6.9598698616, 10.2778863907, -0.1018676758 ], [ 0.0, 0.0, 180.7300415039 ]]
-      - actor.placement: [0.0, agneta, [ 5.9183020592, 12.1797447205, -0.2441406250 ], [ 0.0, 0.0, 176.3299255371 ]]
-      - actor.placement: [0.0, Orianna_human, [ 4.0523939133, 9.5786333084, -0.1944580078 ], [ 0.0, 0.0, 162.6900329590 ]]
+      - actor.hide: [0.0, niellan]
+      - actor.hide: [0.0, agneta]
+      - actor.hide: [0.0, Orianna_human]
+      - actor.placement: [0.0, niellan, [ 5.9528045654, 8.9630012512, -0.1018676758 ], [ 0.0, 0.0, 156.9700622559 ]]
+      - actor.placement: [0.0, agneta, [ 5.6756272316, 12.7741699219, -0.2766723633 ], [ 0.0, 0.0, 161.9201354980 ]]
+      - actor.placement: [0.0, Orianna_human, [ 4.9336438179, 9.2474298477, -0.1952514648 ], [ 0.0, 0.0, 105.2698135376 ]]
       
       - actor.equip.right: [0.0, niellan, Stick_01]
       - actor.equip.right: [0.0, agneta, doll]
+      - cam: [0.0, cam_1_Shot1]
+
+    shot_1:
+      - actor.show: [0.0, niellan]
+      - actor.show: [0.0, agneta]
+      - actor.show: [0.0, Orianna_human]
       - actor.sound: [0.1, niellan, work_child_1_laugh]
       - actor.sound: [0.8, niellan, work_child_1_laugh]
-      - cam: [0.0, cam_1_Shot1]
       - actor.anim: 
           .@pos: [0.0, niellan_low_standing_determined_enter_frontal_playing_happy]
           blendin: 0.0
           clipfront: 0.0
-          clipend: 2.3
+          clipend: 2.2
           blendout: 0.0
       - actor.anim: 
-          .@pos: [0.0, agneta_low_standing_determined_enter_frontal]
-          blendin: 0.0
+          actor: agneta
+          .@pos: [0.0, anim_3762_low_standing_determined_exit_frontal]
+          blendin: 0.3
           clipfront: 0.0
-          clipend: 2.3
-          blendout: 0.484
-          stretch: 0.826
-      - actor.anim: # 0.8
-          .@pos: [0.6522, agneta_ex_run]
-          blendin: 0.2
-          clipfront: 0.0
-          clipend: 0.4
+          clipend: 2.2
           blendout: 0.0
-          stretch: 2.0
+         # stretch: 0.826
+      #- actor.anim: # 0.8
+      #    .@pos: [0.6522, agneta_ex_run]
+      #    blendin: 0.2
+       #   clipfront: 0.0
+      #    clipend: 0.4
+      #    blendout: 0.0
+      #    stretch: 2.0
 
       - actor.anim: 
           .@pos: [0.0, Orianna_human_high_standing_determined_enter_frontal]
           blendin: 0.0
           clipfront: 0.0
-          clipend: 2.3
+          clipend: 2.2
           blendout: 0.0
       - actor.lookat: [0.0, Orianna_human, bob_horse_vehicle_no_interaction]
       - actor.lookat: [0.0, niellan, NONE]
@@ -1195,22 +1219,24 @@ storyboard:
 
     # shot Shot2a
     shot_2a:
-      - cam.blend.start: [0.0, cam_17_Shot2a, rapid]
+      - cam: [0.0, cam_17_Shot2a]
+      #- cam.blend.start: [0.0, cam_17_Shot2a, rapid]
 
       - actor.hide: [0.0, niellan]
-      - actor.placement: [0.0, agneta, [ 6.2102179527, 12.2720003128, -0.2166137695 ], [ 0.0, 0.0, 172.8102722168 ]]
+      - actor.hide: [0.0, agneta]
+      #- actor.placement: [0.0, agneta, [ 6.2102179527, 12.2720003128, -0.2166137695 ], [ 0.0, 0.0, 172.8102722168 ]]
       - actor.placement: [0.0, Orianna_human, [ 3.3838450909, 8.5124912262, -0.1944580078 ], [ 0.0, 0.0, 141.1299438477 ]]
 
-      - actor.anim: # 0.8s
-          .@pos: [0.0, agneta_ex_run]
-          blendin: 0.0
-          blendout: 0.0
-          stretch: 1.5
-      - actor.hide: [1.0, agneta]
+      #- actor.anim: # 0.8s
+      #    .@pos: [0.0, agneta_ex_run]
+      #    blendin: 0.0
+      #    blendout: 0.0
+      #    stretch: 1.5
+      #- actor.hide: [1.0, agneta]
       - actor.anim: 
           .@pos: [0.0, Orianna_human_high_standing_determined_enter_frontal]
           blendin: 0.0
-          clipfront: 0.0
+          clipfront: 1.5
           clipend: 5.0
           blendout: 0.5
 
@@ -1218,24 +1244,29 @@ storyboard:
       - actor.anim: 
           .@pos: [0.0, Orianna_human_high_standing_determined_gesture_pet_horse]
           blendin: 0.5
-          clipfront: 0.5
-          blendout: 0.0
-          clipend: 4.0
+          clipfront: 0.0
+          blendout: 0.5
+          clipend: 6.0
 
-      - cam.blend.end: [0.999, cam_15_Shot2b_pan, smooth]
+      #- cam.blend.end: [0.999, cam_15_Shot2b_pan, smooth]
 
     shot_2c:
-      - cam: [0.0, cam_2_Shot2c]
+      #- cam: [0.0, cam_2_Shot2c]
       - actor.anim: 
           .@pos: [0.0, Orianna_human_high_standing_determined_gesture_pet_horse]
-          blendin: 0.0
-          blendout: 0.5
+          blendin: 0.5
+          blendout: 0.7
           clipfront: 12.0
-          clipend: 16.0
+          clipend: 15.5
 
     shot_2d:
+      - actor.placement: [0.0, niellan, [ 0.4550155997, 2.7629373074, -0.2086791992 ], [ 0.0, 0.0, 248.7101745605 ]]
+      - actor.placement: [0.0, agneta, [ 1.7824206352, 3.4389028549, -0.1580810547 ], [ 0.0, 0.0, 167.0900878906 ]]
+      - actor.show: [0.0, niellan]
+      - actor.show: [0.0, agneta]
+
       - actor.placement.start: [0.0, Orianna_human, [ 3.3838450909, 8.5124912262, -0.1944580078 ], [ 0.0, 0.0, 141.1299438477 ], smooth]
-      - actor.placement.end: [0.5, Orianna_human, [ 3.3838450909, 8.5124912262, -0.1944580078 ], [ 0.0, 0.0, 101.1299438477 ], smooth]
+      - actor.placement.end: [0.5, Orianna_human, [ 3.3838450909, 8.5124912262, -0.1944580078 ], [ 0.0, 0.0, 91.1299438477 ], smooth]
       - actor.anim:
           actor: Orianna_human 
           .@pos: [0.0, anim_12485_add_walk_left_two_steps_turn_90_highborn]
@@ -1243,20 +1274,18 @@ storyboard:
           blendout: 0.0
           clipend: 2.5
 
-      - actor.lookat: [0.7, Orianna_human, agneta]
+      - actor.lookat: [0.5, Orianna_human, agneta]
       #- actor.lookat: 
       #    .@pos: [0.0, Orianna_human, [ -0.5438678265, 1.3482040167, 1.4415769577 ]]
       #    turn: body
 
     shot_3a:
-      - actor.placement: [0.0, niellan, [ 0.4550155997, 2.7629373074, -0.2086791992 ], [ 0.0, 0.0, 248.7101745605 ]]
-      - actor.placement: [0.0, agneta, [ 1.7824206352, 3.4389028549, -0.1580810547 ], [ 0.0, 0.0, 167.0900878906 ]]
-      - actor.placement: [0.0, Orianna_human, [ 3.2006738186, 7.8691148758, -0.2319335938 ], [ 0.0, 0.0, 170.5297851563 ]]
+      #- actor.placement: [0.0, Orianna_human, [ 3.2006738186, 7.8691148758, -0.2319335938 ], [ 0.0, 0.0, 170.5297851563 ]]
+      - actor.placement: [0.0, Orianna_human, [ 3.0837123394, 7.7300777435, -0.2406005859 ], [ 0.0, 0.0, 137.7199096680 ]]
+      
       - actor.lookat: 
           .@pos: [0.0, Orianna_human, agneta]
           speed: 2.0
-      - actor.show: [0.0, niellan]
-      - actor.show: [0.0, agneta]
       - cam: [0.0, cam_19_Shot3a]
       - actor.pose: [0.0, bob_horse_vehicle_no_interaction_horse_standing_idle02]
       - actor.hide: [0.0, bob_horse_vehicle_no_interaction]
@@ -1283,17 +1312,15 @@ storyboard:
           clipend: 2.0
           blendout: 0.0
 
-    shot_3c: # 7.0s
+    shot_3c_half1: # 3.5s
       - actor.show: [0.0, bob_horse_vehicle_no_interaction]
       - actor.placement: [0.0, Orianna_human, [ 0.9204126596, 4.7809562683, -0.3754882813 ], [ 0.0, 0.0, 32.0398559570 ]]
-      - actor.placement.start: [0.6143, Orianna_human, [ 0.9204126596, 4.7809562683, -0.3754882813 ], [ 0.0, 0.0, 32.0398559570 ], smooth]
-      - actor.placement.end: [0.999, Orianna_human, [ 0.9204126596, 4.7809562683, -0.1675172806 ], [ 0.0, 0.0, 32.0398559570 ], rapid]
-      #- actor.placement.end: [0.999, Orianna_human, [ 0.2943201661, 5.6363215446, 0.0675172806 ], [ 0.0, 0.0, 32.0398559570 ]]
+      - cam.blend.start: [0.0, cam_3_Shot3c, rapid]
       
       - actor.lookat: 
           .@pos: [0.0, Orianna_human, agneta]
           speed: 2.0
-      - actor.lookat: [0.2, Orianna_human, NONE]
+      - actor.lookat: [0.6, Orianna_human, NONE]
       - actor.anim: # 5.2s -> 6.24 (5.5)
           .@pos: [0.0, Orianna_human_high_standing_determined_enter_rightside]
           blendin: 0.0
@@ -1302,27 +1329,29 @@ storyboard:
           blendout: 0.41666
           stretch: 1.2
 
+    shot_3c_half2: # 3.5s
+      - actor.placement.start: [0.2286, Orianna_human, [ 0.9204126596, 4.7809562683, -0.3754882813 ], [ 0.0, 0.0, 32.0398559570 ], smooth]
+      - actor.placement.end: [0.999, Orianna_human, [ 0.9204126596, 4.7809562683, -0.1675172806 ], [ 0.0, 0.0, 32.0398559570 ], rapid]
       - actor.anim: # 6.4 s
           actor: Orianna_human
-          .@pos: [0.6143, anim_12503_add_walk_two_steps_forward_highborn]
+          .@pos: [0.2286, anim_12503_add_walk_two_steps_forward_highborn]
           blendin: 0.5
           clipfront: 0.5
           clipend: 3.2
           blendout: 0.0
           #stretch: 1.2
 
-      - cam.blend.start: [0.0, cam_3_Shot3c, rapid]
-      - cam.blend.end: [0.999, cam_21_Shot3d_pan, rapid]
+      - cam.blend.end: [0.2, cam_21_Shot3d_pan, smooth]
 
       - actor.anim: 
           actor: niellan
-          .@pos: [0.7143, anim_3684_add_walk_left_two_steps_turn_90]
+          .@pos: [0.4286, anim_3684_add_walk_left_two_steps_turn_90]
           blendin: 0.5
           blendout: 0.0
           clipend: 2.0
       - actor.anim: 
           actor: agneta
-          .@pos: [0.7857, anim_3689_add_walk_right_two_steps_turn_90]
+          .@pos: [0.5714, anim_3689_add_walk_right_two_steps_turn_90]
           blendin: 0.5
           blendout: 0.0
           clipend: 1.5
@@ -1426,7 +1455,7 @@ storyboard:
           .@pos: [0.0, anim_12501_add_walk_two_steps_back_highborn]
           blendin: 0.5
           blendout: 0.0
-          clipend: 4.0
+          clipend: 3.0
 
     shot_5c:
       - actor.lookat: [0.0, geralt, NONE]
@@ -1442,42 +1471,50 @@ storyboard:
           turn: head
           .@pos: [0.0, Orianna_human, [ -9.9987287521, 0.9431247711, 1.5436029434 ]]
 
-      - cam.blend.start: [0.0, cam_18_corner_cam1, smooth]
-      - cam.blend.end: [0.999, cam_19_corner_cam2, rapid]
+      - cam: [0.0, cam_18_corner_cam1]
+      - cam.blend.start: [0.1, cam_18_corner_cam1, smooth]
+      - cam.blend.end: [0.999, cam_19_corner_cam2, smooth]
       #- cam.blend.end: [0.999, cam_25_Shot5e_pan, rapid]
 
-    shot_5e:
-      - actor.placement.start: [0.0, Orianna_human, [ 1.2969343662, 2.7782123089, -0.2816772461 ], [ 0.0, 0.0, 15.0 ], smooth]
-      - actor.placement.end: [0.5, Orianna_human, [ 1.2969343662, 2.7782123089, -0.2816772461 ], [ 0.0, 0.0, 0.6599807739 ], smooth]
-      - cam: [0.0, cam_23_Shot5b]
-      - actor.lookat: [0.0, niellan, Orianna_human]
-      - actor.lookat: [0.0, agneta, Orianna_human]
+    shot_5d2:
+      - cam: [0.0, cam_18_corner_cam3]
 
-      - actor.mimic: [0.0, Orianna_nervous]
       - actor.anim.mimic: 
           .@pos: [0.0, Orianna_human_geralt_neutral_gesture_squint_face]
           blendin: 0.0
           clipfront: 1.5
           blendout: 0.5
-      - actor.lookat: [0.2, Orianna_human, niellan]
+
+      - actor.lookat: [0.0, niellan, Orianna_human]
+      - actor.lookat: [0.0, agneta, Orianna_human]
+
+    shot_5e:
+      #- actor.placement.start: [0.0, Orianna_human, [ 1.2969343662, 2.7782123089, -0.2816772461 ], [ 0.0, 0.0, 15.0 ], smooth]
+      #- actor.placement.end: [0.5, Orianna_human, [ 1.2969343662, 2.7782123089, -0.2816772461 ], [ 0.0, 0.0, 0.6599807739 ], smooth]
+      #- cam: [0.0, cam_23_Shot5b]
+      - actor.lookat: [0.0, Orianna_human, niellan]
       - actor.anim: #6.4
           actor: Orianna_human
           .@pos: [0.0, anim_12503_add_walk_two_steps_forward_highborn]
-          blendin: 0.0
-          clipfront: 0.9
-          clipend: 6.4
+          blendin: 0.5
+          clipfront: 0.5
+          clipend: 2.5
           blendout: 0.0
 
-    shot_6a:
-      - cam: [0.0, cam_28_Shot6b]
-      - actor.anim.additive: 
-          .@pos: [0.0, niellan_low_standing_determined_gesture_beckon]
-          blendin: 0.5
-          blendout: 0.5
+    #shot_6a:
+      #- cam: [0.0, cam_28_Shot6b]
+      #- actor.anim.additive: 
+      #    .@pos: [0.0, niellan_low_standing_determined_gesture_beckon]
+      #    blendin: 0.5
+      #    blendout: 0.5
 
     shot_6b:
       - actor.placement: [0.0, Orianna_human, [ 1.3518029451, 3.9313991070, -0.2816772461 ], [ 0.0, 0.0, 0.6599426270 ]]
+      - actor.lookat: 
+          speed: 2.0
+          .@pos: [0.0, Orianna_human, niellan]
       - cam: [0.0, cam_23_Shot5b]
+      - actor.mimic: [0.0, Orianna_nervous]
       - actor.anim.additive: 
           .@pos: [0.0, Orianna_human_add_gesture_explain_08]
           blendin: 0.5
@@ -1544,25 +1581,32 @@ dialogscript:
 
   section_storyboard_ui:
     # shot Shot1
+    - CUE: shot_1_init
+    - PAUSE: 3.0
     - CUE: shot_1
     # (longest) anim: low_standing_determined_enter_frontal_playing_happy
-    - PAUSE: 2.3
+    - PAUSE: 2.2
 
     - CUE: shot_2a
-    - PAUSE: 0.8
-    - PAUSE: 3.7
+    #- PAUSE: 0.8
+    - PAUSE: 3.5
     - CUE: shot_2b
-    ### - Orianna_human: "2114670939|Sweet thing."
-    - PAUSE: 3.5
+    - PAUSE: 2.7804
+    - Orianna_human: "[1.7196]2114670939|Sweet thing."
     - CUE: shot_2c
-    - PAUSE: 3.5
+    - PAUSE: 3.0
     - CUE: shot_2d
     - PAUSE: 2.5
 
+    ## USE IT - Orianna_human: "[1.0601]2114670936|Children!"
     - CUE: shot_3a
     - PAUSE: 4.0
-    - CUE: shot_3c
-    - PAUSE: 7.0
+    - CUE: shot_3c_half1
+    - PAUSE: 2.44
+    #- Orianna_human: "[1.0601]2114670936|Children!"
+    - PAUSE: 1.06
+    - CUE: shot_3c_half2
+    - PAUSE: 3.5
     - CUE: shot_3d
     - PAUSE: 1.2
 
@@ -1581,7 +1625,8 @@ dialogscript:
   section_storyboard_ui2:
     - CUE: shot_4a
     - PAUSE: 2.0 ## should be 4.0 in total
-    - Orianna_human: "2114670935|Here we are."
+    - Orianna_human: "[1.3399]2114670935|Here we are."
+    - PAUSE: 0.5
 
     - CUE: shot_4b
     - PAUSE: 1.5
@@ -1593,16 +1638,17 @@ dialogscript:
     - CUE: shot_5bb
     - PAUSE: 2.0
     - CUE: shot_5c
-    - PAUSE: 2.0
+    - PAUSE: 1.0
     - CUE: shot_5d
     - PAUSE: 6.0
+    - CUE: shot_5d2
+    - PAUSE: 0.5
+    - niellan: "[1.0000]2114670937|Come on!"
     - CUE: shot_5e
-    - PAUSE: 3.5
+    - PAUSE: 2.0
 
-    - CUE: shot_6a
-    - niellan: "[2.0]2114670937|Come on!"
     - CUE: shot_6b
-    - Orianna_human: "2114670938|It seems there's a matter I must attend to. Go on Niellan, you and Agneta get dinner started for me. I'll be home soon enough."
+    - Orianna_human: "[8.4204]2114670938|Children, it seems there's a matter I must attend to. Go on, Niellan, you and Agneta get dinner started. I'll be home soon enough."
     - PAUSE: 1.0
     - CUE: shot_6d
     - PAUSE: 8.0
@@ -1623,3 +1669,7 @@ dialogscript:
     - CAMERA_BLEND: 1.0
     ###!!!- BLACKSCREEN: true
     - EXIT
+
+
+
+

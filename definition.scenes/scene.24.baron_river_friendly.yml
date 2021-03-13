@@ -473,7 +473,7 @@ production:
       Baron_Edward_aggressive:
         actor: Baron_Edward
         repo: aggressive
-        weight: 1.0
+        weight: 0.7
         duration: 1.0
 
       geralt_angry:
@@ -1602,7 +1602,7 @@ dialogscript:
 
   section_agree:
     - CUE: shot_agree0_g
-    - geralt: "[5.3117]2114670336|The children are in that house. A young girl with a boy. Alive."
+    - geralt: "[4.0384]2114670336|The children are in that house. A young girl with a boy. Alive."
     - CUE: shot_agree0_b
     - Baron_Edward: "[3.4705]2114670348|Thank the heavens! My boy is okay…"
     - PAUSE: 0.53
@@ -1742,6 +1742,7 @@ dialogscript:
   section_exit_fight:
     - OUTPUT: fight
     - EXIT
+
 
 
 

@@ -1042,7 +1042,7 @@ storyboard:
       - actor.pose: [0.0, Bandit_camp_crossbow_high_standing_determined_idle]
       - actor.lookat: [0.0, geralt, Bandit_camp_crossbow]
       - actor.lookat: [0.0, Bandit_camp_crossbow, geralt]
-      - cam: [0.0, cam_1_Shot1]
+      - cAm: [0.0, cam_1_Shot1]
       - cam.blend.start: [0.0, cam_1_Shot1]
       - actor.anim: 
           .@pos: [0.0, geralt_high_standing_determined_enter_frontal]
@@ -1996,7 +1996,7 @@ dialogscript:
     # shot Shot3 ger
     - CUE: shot_3
     # (longest) anim: high_standing_determined_gesture_both_hands_stop
-    - geralt: "[4.3287]2114670879|I'm a witcher. Your friends sent me here. Gotta deal with the Baron."
+    - geralt: "[4.0500]2114670879|I'm a witcher. Your friends sent me here. Gotta deal with the Baron."
     # shot Shot4 ger meditate start
     - CUE: shot_3b
     - PAUSE: 0.5
@@ -2104,11 +2104,11 @@ dialogscript:
     - geralt: "[2.9229052]0001105154|Sound like common bandits. Any difference?"
 
     - CUE: shot_27_dg_baron
-    - Baron_Edward: "[4.3298]2114670889|Don't be so prejudiced, Geralt, we don't rob and kill the innocent."
+    - Baron_Edward: "[4.3298]2114670889|Don't be so prejudiced, Geralt, we don't rob and kill the innocent.."
 
     - CUE: shot_28_dg_geralt
     - PAUSE: 1.0
-    - geralt: "[2.9141]2114670890|I don't believe you. However I'm here about Orianna."
+    - geralt: "[3.2722]2114670890|I don't believe it. However I'm here about Orianna."
 
     - CUE: shot_29_dg_baron
     - Baron_Edward: "[5.3139]2114670891|Of course. This evil woman, she refuses to return something precious to me."
@@ -2417,6 +2417,7 @@ dialogscript:
 
   section_exit:
     - EXIT
+
 
 
 

@@ -1066,7 +1066,7 @@ storyboard:
           clipend: 8.5
 
     # shot Shot5 blood fall
-    shot_blood4_release2:
+    shot_blood4_release2+fall1:
       - actor.placement: [0.0, Agneta_girl, [ -17.5205574036, 8.6379594803, 0.4619760513 ], [ 0.0, 0.0, 316.7725830078 ]]
       - cam: [0.0, cam_5_Shot5_blood_fall]
       - actor.anim: 
@@ -1099,28 +1099,29 @@ storyboard:
           clipend: 10.9
           stretch: 0.8
 
-    # shot Shot5 blood fall2
-    shot_blood4_fall1:
-      - actor.placement: [0.0, Orianna_vampire, [ -5.6299977303, 1.2861597538, 0.4220142365 ], [ 0.0, 0.0, 160.1601867676 ]]
-      - actor.placement: [0.0, Agneta_girl, [ -5.4881029129, 0.0452868342, -0.0475711823 ], [ 0.0, 0.0, 49.0629577637 ]]
-      - actor.pose: [0.0, Agneta_girl_child_sleeping_r_sleepy_loop]
-      - cam: [0.0, cam_6_Shot5_blood_fall2]
+    ##shot_blood4_fall1:
+      - actor.placement: [0.302, Orianna_vampire, [ -5.6299977303, 1.2861597538, 0.4220142365 ], [ 0.0, 0.0, 160.1601867676 ]]
+      - actor.placement: [0.302, Agneta_girl, [ -5.4881029129, 0.0452868342, -0.0475711823 ], [ 0.0, 0.0, 49.0629577637 ]]
+      - actor.pose: [0.302, Agneta_girl_child_sleeping_r_sleepy_loop]
+      - cam: [0.302, cam_6_Shot5_blood_fall2]
       - actor.anim: 
-          .@pos: [0.0, Orianna_vampire_high_sitting_determined_to_high_standing_determined]
-          clipfront: 1.5
+          .@pos: [0.302, Orianna_vampire_high_sitting_determined_to_high_standing_determined]
+          clipfront: 1.6
           blendin: 0.0
           blendout: 0.0
+          stretch: 1.0
           #clipend: 5.0
-      - actor.lookat: [0.6, Orianna_vampire, Agneta_girl]
-      - actor.mimic: [0.0, Orianna_vampire_neutral]
+
+      - actor.lookat: [0.52, Orianna_vampire, Agneta_girl]
+      - actor.mimic: [0.302, Orianna_vampire_neutral]
       - actor.anim.mimic: 
-          .@pos: [0.8, Orianna_vampire_geralt_neutral_gesture_impatience_face]
+          .@pos: [0.55, Orianna_vampire_geralt_neutral_gesture_impatience_face]
           blendin: 0.5
           blendout: 0.5
           weight: 0.7
 
-    shot_blood4_fall2:
-      - cam: [0.0, cam_6_Shot5_blood_fall2]
+    #shot_blood4_fall2:
+    #  - cam: [0.0, cam_6_Shot5_blood_fall2]
       #- actor.anim.mimic: 
       #    .@pos: [0.0, Orianna_human_geralt_neutral_gesture_impatience_face]
       #    blendin: 0.5
@@ -1144,7 +1145,7 @@ storyboard:
           .@pos: [0.0, Orianna_vampire_afraid_anim_combined_face]
           blendin: 0.5
           blendout: 0.5
-          weight: 0.7
+          weight: 0.75
 
     # shot Shot5 blood to girl
     shot_blood4_fall_to_girl2:
@@ -1158,14 +1159,16 @@ storyboard:
           blendout: 0.4
 
     shot_blood4_fall_to_girl3:
-      - fade.out: [0.8333, 0.5, [255,255,255,255]]
-      - actor.sound: [1.0, Orianna_vampire, Stop_ntr_diary_feeding]
+      - actor.sound: [0.0, Orianna_vampire, Stop_ntr_diary_feeding]
       - actor.anim: # 7+
           actor: Orianna_vampire
           .@pos: [0.0, anim_14162_woman_work_searching_ground_loop_02]
           blendin: 0.4
           blendout: 0.0
           clipend: 3.0
+
+    shot_blood4_fall_to_girl4:
+      - fade.out: [0.0, 0.5, [255,255,255,255]]
 
     # shot Shot6 medic establish
     shot_medic_establish:
@@ -1212,42 +1215,48 @@ storyboard:
       
     # shot Shot6 dg boy
     shot_boy_dg1:
-      - cam: [0.0, cam_14_Shot6_dg_boy]
+      - cam: [0.0, cam_12_Shot6_dg_medic]
+      - cam: [0.523, cam_14_Shot6_dg_boy]
       - actor.anim:  #duration 7.9666667 sec
           blendin: 0.0
           blendout: 0.0
-          clipend: 3.0
+          clipend: 3.1423
           actor: Niellan_boy
-          .@pos: [0.0, anim_3737_low_standing_bored_gesture_lean_right]
-      - actor.anim:
-          actor: bob_medic
-          .@pos: [0.0, anim_6823_high_sitting_determined_to_high_standing_determined]
+          .@pos: [0.5, anim_3737_low_standing_bored_gesture_lean_right]
+      - actor.anim.additive: 
           blendin: 0.5
           blendout: 0.5
+          actor: bob_medic
+          .@pos: [0.0, anim_6809_high_sitting_determined_gesture_exclamation_1]
+      - actor.anim:
+          actor: bob_medic
+          .@pos: [0.5, anim_6823_high_sitting_determined_to_high_standing_determined]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.pose: [0.95, bob_medic_high_standing_determined_idle]
       - actor.anim.mimic:
           blendin: 0.5
           blendout: 0.5
           actor: Niellan_boy
           weight: 0.7
-          .@pos: [0.5, mimicsanim_495_geralt_reaction_grief_face]
+          .@pos: [0.9, mimicsanim_495_geralt_reaction_grief_face]
 
     # shot Shot6 dg boy2
     shot_boy_dg2:
       #- actor.placement: [0.0, Niellan_boy, [ -9.6970682144, 3.6480548382, 0.4388942719 ], [ 0.0, 0.0, 222.6398925781 ]]
       - cam: [0.0, cam_21_Shot6_dg_boy2]
-      - actor.pose: [0.3, bob_medic_high_standing_determined_idle]
       - actor.pose: [0.3, Orianna_human_High_Standing_Sad]
       - actor.anim: #duration 7.9666667 sec
           blendin: 0.0
           blendout: 0.0
-          clipfront: 2.3
+          clipfront: 2.4
           actor: Niellan_boy
           .@pos: [0.0, anim_3737_low_standing_bored_gesture_lean_right]
 
-      - cam: [1.0, cam_17_Shot6_dg_medic3]
+      - cam: [0.999, cam_17_Shot6_dg_medic3]
       - actor.anim.additive:
           actor: bob_medic
-          .@pos: [1.0, anim_6699_add_gesture_explain_10]
+          .@pos: [0.999, anim_6699_add_gesture_explain_10]
           blendin: 0.5
           blendout: 0.5
 
@@ -1272,13 +1281,13 @@ storyboard:
           blendin: 0.5
           blendout: 0.5
           actor: bob_medic
-          .@pos: [0.0, anim_6699_add_gesture_explain_10]
+          .@pos: [0.3, anim_6699_add_gesture_explain_10]
       - actor.anim:
           actor: bob_medic
-          .@pos: [0.8333, anim_6978_high_standing_determined_calm_exit_rightside]
+          .@pos: [0.9, anim_6978_high_standing_determined_calm_exit_rightside]
           blendin: 0.5
           blendout: 0.0
-          clipend: 3.0
+          clipend: 4.0
 
     shot_dg_medic4:
       - actor.lookat: [0.5, Orianna_human, Agneta_girl]
@@ -1386,16 +1395,11 @@ dialogscript:
     # (longest) anim: oriana:Root:cs704_diva_feeding
     - PAUSE: 1.4
 
-    # shot Shot5 blood fall
-    - CUE: shot_blood4_release2
-    # (longest) anim: oriana:Root:cs704_diva_feeding
-    - PAUSE: 1.76
-    # shot Shot5 blood fall2
-
-    - CUE: shot_blood4_fall1
-    - PAUSE: 2.1666
-    - CUE: shot_blood4_fall2
-    - Orianna_human: "[2.0]2114670440|Agneta?"
+    - CUE: shot_blood4_release2+fall1
+    ##- PAUSE: 1.76
+    - Orianna_vampire: "[5.8273]2114670440|Mmmmh… Agneta?"
+    ##- CUE: shot_blood4_fall1
+    ##- PAUSE: 2.1666
 
     - CUE: shot_blood4_fall3
     - PAUSE: 2.0
@@ -1406,34 +1410,38 @@ dialogscript:
     - CUE: shot_blood4_fall_to_girl2
     - PAUSE: 1.6333
     - CUE: shot_blood4_fall_to_girl3
-    - Orianna_human: "[3.0]2114670441|What have I done..."
-    - PAUSE: 0.25
+    - Orianna_vampire: "[1.2851]2114670441|What have I done…"
+    - PAUSE: 0.5
+
+    - CUE: shot_blood4_fall_to_girl4
+    - PAUSE: 0.5
+    - PAUSE: 0.5
 
     # shot Shot6 medic establish
     - CUE: shot_medic_establish
     # (longest) anim: afraid_anim_combined_face
     - PAUSE: 1.0
     - CUE: shot_medic_dg1
-    - bob_medic: "2114670442|The girl has a rapid heart rate and it seems that she has lost a significant amount of blood."
-    - bob_medic: "2114670443|You say she fell and hurt herself?"
+    - bob_medic: "[7.2592]2114670442|The girl has a rapid heart rate and it seems that she has lost a significant amount of blood."
+    - bob_medic: "[3.0775]2114670443|You say she fell and hurt herself?"
 
     - CUE: shot_ori_dg1
     - PAUSE: 0.5
-    - Orianna_human: "2114670444|In a way. Tell me, is she going to be alright?"
+    - Orianna_human: "[3.4636]2114670444|Something like that. Tell me, will she be alright?"
     - CUE: shot_boy_dg1
-    - bob_medic: "[3.0]2114670445|I'm afraid such injuries always leave consequences."
+    - bob_medic: "[6.2845]2114670445|I'm afraid such injuries have consequences. She may have a chance at recovery."
     - CUE: shot_boy_dg2
-    - PAUSE: 1.7
-    - bob_medic: "[4.0]2114670446|Let her drink more fluids and stay in bed."
+    - PAUSE: 1.5
+    - bob_medic: "[3.5275]2114670446|She must drink plenty of fluids and remain in bed."
 
     - CUE: shot_dg_ori2
     - PAUSE: 1.0
-    - Orianna_human: "2114670447|Thank you."
+    - Orianna_human: "[1.2524]2114670447|Thank you, doctor."
 
     - CUE: shot_dg_medic2
     - PAUSE: 0.5
     - CUE: shot_dg_medic3
-    - bob_medic: "[3.0]2114670448|Take good care of the girl. Another bleeding could be fatal for her."
+    - bob_medic: "[5.8794]2114670448|Take good care of the girl. Another injury like this could prove fatal."
     - CUE: shot_dg_medic4
     - PAUSE: 2.5
 
@@ -1447,7 +1455,7 @@ dialogscript:
 
     - CUE: shot_geralt_reads_finish
     #- geralt: "[3.3616]2114670660|Interesting… Regis might be right."
-    - geralt: "[6.0]2114670449|Interesting, she seems to hesitate, as though a prey to some sort of inward conflict…"
+    - geralt: "[5.4548]2114670449|Interesting, she seems to hesitate, as though she is experiencing some sort of inner conflict…"
     - CUE: shot_geralt_togame
     - PAUSE: 1.0
 
@@ -1456,6 +1464,9 @@ dialogscript:
   section_exit:
     #- CAMERA_BLEND: 2.0
     - EXIT
+
+
+
 
 
 

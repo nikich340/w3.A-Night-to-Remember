@@ -856,7 +856,7 @@ dialogscript:
     - CUE: shot_d2_band
     - fat_bandit: "[6.1891]2114670771|Our boss has questions for 'er about the orphanage and children."
     - CUE: shot_d3_ger
-    - geralt: "[3.4870]2114670772|The orphanage was attacked and almost none of the children survived."
+    - geralt: "[3.4579]2114670772|The orphanage was attacked and almost none of the children survived."
     - CUE: shot_d3_band
     - fat_bandit: "[8.6019]2114670773|Almost - nice word, so someone is alive. And we know for sure that Orianna herself is alive too."
     - fat_bandit: "[11.8571]2114670774|But she doesn't want to come here. So there's something wrong with here. We are few, and we guard the places where she used to be."
@@ -879,7 +879,7 @@ dialogscript:
 
   section_why_children:
     - CUE: shot_d4_ger
-    #- geralt: "[2.0485]2114670775|Why are you interested in the children?"
+    #- geralt: "[2.3782]2114670775|For what reason are you interested in the children?"
     - geralt: "[1.7511764]0000382555|What did you need the children for?"
     - CUE: shot_d4_band
     - fat_bandit: "[2.3133]2114670776|It's no concern of yours."
@@ -928,6 +928,7 @@ dialogscript:
   section_exit_normal:
     - OUTPUT: normal
     - EXIT
+
 
 
 
