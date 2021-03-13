@@ -15,7 +15,7 @@
 2114670653|00000000||Well, I should check the orphanage.
 2114670654|00000000||Go home. I'm a witcher. Need to examine the body.
 2114670662|00000000||I've heard the guards are looking for Orianna.
-2114670663|00000000||I wish they'd caught this monster, or whoever she really is.
+2114670663|00000000||I wish they'd caught this monster, or whatever she really is.
 2114670655|00000000||Woman turned back here.
 2114670656|00000000||Think she was looking for Regis. But he left.
 2114670657|00000000||Fishermen should know something.
@@ -66,7 +66,7 @@
 2114670758|00000000||It's a deal
 2114670759|00000000||Why are you interested in the children?
 ; 0000382555|00000000||What did you need the children for?
-2114670760|00000000||I'll ask again, polite like, and you'll answer, just as politely
+;2114670760|00000000||I'll ask again, polite like, and you'll answer, just as politely.
 2114670761|00000000||Orianna will kill you
 2114670762|00000000||Who the foek are you?!
 2114670763|00000000||Me? Drifter, stranger, mutant… Sometimes even by my name. Vampire of Rivia.
@@ -76,8 +76,8 @@
 ;   1094310|00000000||Geralt of Rivia. Witcher.
 2114670766|00000000||A witcher? So you know how to track down somebody, right?
 2114670767|00000000||Well, come in then, we've matters to discuss.
-2114670768|00000000||I am supposed to find a red-haired woman here.
-2114670784|00000000||I'm looking for a woman with red hair.
+;2114670768|00000000||I am supposed to find a red-haired woman here.
+2114670784|00000000||I'm looking for a red-haired woman.
 ;;; neuro-voiced I am supposed to find a red-haired woman here.
 2114670769|00000000||That's interesting. Because we're supposed to meet her too.
 2114670770|00000000||Why are you looking for her?
@@ -86,7 +86,7 @@
 2114670773|00000000||Almost - nice word, so someone is alive. And we know for sure that Orianna herself is alive too.
 2114670774|00000000||But she doesn't want to come here. So there's something wrong with here. We are few, and we guard the places where she used to be.
 2114670783|00000000||Perhaps you could help us, and then our leader Baron Edward will give you a decent reward.
-2114670775|00000000||Why are you interested in the children?
+2114670775|00000000||For what reason are you interested in the children?
 ; 0000382555|00000000||What did you need the children for?
 2114670776|00000000||It's no concern of yours.
 2114670777|00000000||Orianna will kill you. She is a monster, not a human. And only I can help. Meaning I need more information.
@@ -159,10 +159,8 @@
 2114670887|00000000||He's the famous Geralt of Rivia, no less.
 2114670888|00000000||My name is Edward, and I take care of these fine gentlemen…
 ;   1075517|00000000||Bandits?
-2114670889|00000000||Don't be so prejudiced, Geralt, we don't rob and kill the innocent.
-;;;2114670890|00000000||I don't believe it. I'm here about Orianna.
-2114670890|00000000||I don't believe you. However I'm here about Orianna.
-;;; neuro-voiced I don't believe it. However I'm here about Orianna.
+2114670889|00000000||Don't be so prejudiced, Geralt, we don't rob and kill the innocent..
+2114670890|00000000||I don't believe it. However I'm here about Orianna.
 2114670891|00000000||Of course. This evil woman, she refuses to return something precious to me.
 2114670892|00000000||That's why I'd like to contract your services, witcher. To kill that monster, and take back that which belongs to me.
 2114670893|00000000||The child.
@@ -265,60 +263,71 @@
 2114670939|00000000||Sweet thing.
 2114670935|00000000||Here we are.
 ; Sweet thing for horse
-2114670936|00000000||Lady Orianna…
+2114670936|00000000||Children!
 2114670937|00000000||Come on!
-2114670938|00000000||It seems there's a matter I must attend to. Go on Niellan, you and Agneta get dinner started for me. I'll be home soon enough.
+2114670938|00000000||Children, it seems there's a matter I must attend to. Go on, Niellan, you and Agneta get dinner started. I'll be home soon enough.
 ;
 ; scene 20 - orianna main
 ;
-2114670940|00000000||I came to kill you.
-2114670941|00000000||No need to fight.
+2114670458|00000000||Wolves asleepin' 'midst the trees, bats all aswayin' in the breeze…
+2114670459|00000000||But one soul lies anxious, wide awake, fearin' all manner of ghouls, hags and wraiths…
+2114670940|00000000||Let us end this.
+2114670941|00000000||We need to talk first.
 2114670942|00000000||[Show letter from Regis.]
 2114670943|00000000||Talked enough, let's fight.
+;
 ;   1174593|00000000||Wolves_asleepin'_'midst_the_trees__bats_all_aswayi
 ;   1176970|00000000||But_one_soul_lies_anxious__wide_awake__fearin'_all
 ;    366968|00000000||Nice_tune__Damn_sad__though_
 2114670944|00000000||Folk have forgotten it.
 2114670945|00000000||Got… other things on their mind.
 2114670946|00000000||Things like me?
-2114670976|00000000||Know what…? Don't feel like talking to you anymore.
 2114670947|00000000||It's time.
-2114670948|00000000||Well, no witcher's ever dead in his own bed.
+2114670948|00000000||Well, no witcher's ever died in his own bed.
 2114670949|00000000||You won't be an exception.
+;
 ;   1172302|00000000||We don't have to fight.
-2114670968|00000000||You've killed an innocent man who wanted to reunite the Baron with his son.
+2114670968|00000000||You've killed a man who wanted to reunite a boy with his father.
 2114670950|00000000||Well, the threat of a sword doesn't always bring out the best in me.
-2114670951|00000000||Alright, but what about the children… You are using them as a livestock!
-2114670952|00000000||You know what I am. I can't resist the hunger.
-2114670953|00000000||No, you can. I have read something interesting in your house…
-2114670954|00000000||Ha! So, you've been snooping around… Do I intrigue you that much, witcher?
-2114670955|00000000||Orianna, I know you don't want to be the same… person more.
-2114670956|00000000||You presume to understand me? After reading some my… musings?
-2114670957|00000000||I helped some creatures before. And I want to help you too.
-2114670958|00000000||Geralt, I'm vampires. If I give up drinking blood, I will die…
-2114670969|00000000||You can't help me. Nobody can help me.
+2114670951|00000000||Fair enough. But the children… You can't continue to use them as livestock.
+2114670952|00000000||And who exactly are you to lecture me?
+2114670953|00000000||I know this might sound strange but I want to help you. I've come across something interesting in your house…
+2114670954|00000000||So, you've been snooping around… Do I intrigue you that much, witcher?
+2114670955|00000000||Orianna, your orphanage was destroyed. You've tried to rebuild it, but you're about to lose it all again.
+;2114670451|00000000||I think somewhere deep inside, you don't want to be the same monster anymore.
+2114670451|00000000||I get the feeling you no longer consider these repetitive circumstances as minor inconveniences.
+2114670956|00000000||So you've read a few meaningless musings and now you presume to understand me?
+2114670957|00000000||I may not understand you, but I do know one thing. You don't have to drink blood.
+2114670958|00000000||Haha, such nonsense, witcher. Need I remind you of what I am? Drinking blood is essential to my survival.
+2114670969|00000000||You can't help me. No one can help me.
+2114670976|00000000||Know what? You're right.
+2114670450|00000000||Don't feel like talking to you anymore.
+2114670452|00000000||Goodbye, witcher…
+;
 ;   1007115|00000000||All right.
-2114670979|00000000||Think mutual friend of us could.
-2114670959|00000000||Take a look at this.
+2114670979|00000000||I may not be able to, but a mutual friend may be able to.
+2114670959|00000000||Look at this.
 2114670960|00000000||Hmm. Regis, Regis… Awfully considerate as always.
-2114670977|00000000||"Remove herself from the confines of such primitive instincts", interesting… He is sure that every of us is able to live without blood.
-2114670967|00000000||I suppose he'd be upset if we tussled, wouldn't he?
-;;;2114670971|00000000||I kill monsters, true - it's my job. But only when they threaten humans.
-;;;2114670978|00000000||If you change your attitude towards the children and refuse drinking the blood, I will spare your life.
-2114670971|00000000||You're not my friend, true. But not the enemy anymore. 
-2114670978|00000000||It remains to do the last step - give up with blood-drinking. Like Regis did. And we'll part in peace.
-;   1101409|00000000||Well, I probably wouldn't 'ave forced myself on you.
-2114670972|00000000||Nice suggestion. But I have a lot to think about. Alone.
-2114670961|00000000||Very well then, I've made my decision - I won't feed on the children's blood again.
-2114670962|00000000||But Niellan and Agneta will stay with me. I'm used to take care of them and… It will distract me from obsessive thoughts about hunger.
-2114670963|00000000||Leave children with you? What if you will break your vow?
-2114670964|00000000||Unlike your kind, we tend to keep our promises.
+2114670977|00000000||"The act of drinking blood for sustenance is a mere myth", interesting… He seems certain…
+2114670967|00000000||Well, I suppose he'd be upset if we tussled, wouldn't he?
+2114670971|00000000||Even if you kill me… Villagers, knights and other witchers will always come after you, and you know it.
+2114670978|00000000||You've no idea what it's like to constantly fight to overcome your hunger, your nature. However..
+2114670972|00000000||Give me a moment.
+2114670453|00000000||One who comes from Gharasham must be strong in spirit, merciful and noble. Really, Regis? When we first met you took so much pride in attacking these feeble humans from above.
+2114670454|00000000||And now it seems things have changed… apparently. Perhaps after all these centuries… it is finally time.
+2114670455|00000000||All right, Regis.
+2114670961|00000000||I've made my decision.
+2114670457|00000000||I vow never to feed on blood again.
+;;; (-) 2114670962|00000000||But Niellan and Agneta will stay with me. I'm used to take care of them and… It will distract me from obsessive thoughts about hunger.
+2114670963|00000000||Can I trust you to keep your vow?
+2114670964|00000000||Unlike your kind, witcher, we tend to keep our promises.
 ;   1027471|00000000||Hmm… Guess I believe you…
-2114670973|00000000||Alright, I'll trust you, against my better judgment.
-2114670974|00000000||But one day I'll visit children, and if I see any small scratch on them…
-2114670965|00000000||As you wish, Geralt. Not a hair on their heads shall come to any harm, I vow.
-2114670975|00000000||Sure hope so. You can go then.
-2114670966|00000000||See you, White Wolf.
+2114670973|00000000||Alright. But you must leave Toussaint immediately. The guards are looking for you.
+2114670974|00000000||I suppose it was inevitable.. I shall leave this place.
+2114670965|00000000||Where will you go?
+2114670456|00000000||The letter you gave me wasn't only meant for you, Geralt.
+2114670975|00000000||I see. Well, good luck then.
+2114670966|00000000||I shall take my valuables and say goodbye to the children. Wait for me here, White Wolf.
 ;
 ; scene 21 orianna to bruxa
 ;
@@ -407,11 +416,12 @@
 ;   1143303|00000000||What's the matter?
 2114670375|00000000||A witcher slaying a human to protect a monster. I'll admit, I'm impressed.
 ;    458827|00000000||It was the lesser evil… I think.
-2114670376|00000000||Am I correct in assuming that this troublesome Baron Edward promised a most sizable reward?
+;    0001153564|Had no choice.
+2114670376|00000000||Am I correct in assuming that this most troublesome Baron Edward promised a most sizable reward?
 2114670377|00000000||Here.
 ;   1066805|00000000||Mhm. Thanks a bunch.
 2114670378|00000000||Good luck, Geralt of Rivia.
-;;2114670379|00000000||So long, Orianna.
+2114670379|00000000||Farewell, Orianna.
 ;
 ; scene 29
 ;
@@ -420,7 +430,7 @@
 ;
 2114670390|00000000||Take care of 'em, Barnabas-Basil.
 2114670391|00000000||Oh, with great pleasure, sir.
-2114670392|00000000||Follow me, please.
+;; vanilla 2114670392|00000000||Follow me, please.
 ;
 ; scene 31
 ;
@@ -434,14 +444,14 @@
 ;
 ; scene 33
 ;
-2114670440|00000000||Agneta?
+2114670440|00000000||Mmmmh… Agneta?
 2114670441|00000000||What have I done…
 2114670442|00000000||The girl has a rapid heart rate and it seems that she has lost a significant amount of blood.
 2114670443|00000000||You say she fell and hurt herself?
-2114670444|00000000||In a way. Tell me, is she going to be alright?
+2114670444|00000000||Something like that. Tell me, will she be alright?
 2114670445|00000000||I'm afraid such injuries have consequences. She may have a chance at recovery.
 2114670446|00000000||She must drink plenty of fluids and remain in bed.
-2114670447|00000000||Thank you.
+2114670447|00000000||Thank you, doctor.
 2114670448|00000000||Take good care of the girl. Another injury like this could prove fatal.
 2114670449|00000000||Interesting, she seems to hesitate, as though she is experiencing some sort of inner conflict…
 ;

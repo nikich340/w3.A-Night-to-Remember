@@ -756,6 +756,19 @@ exec function orihum() {
 	ent.AddTag('vip');
 	ent.ApplyAppearance('orianna_human_morph');
 }
+exec function orihum2() {
+	var      template : CEntityTemplate;
+	var           pos : Vector;
+	var           ent : CEntity;
+	
+	template = (CEntityTemplate)LoadResource("dlc/dlcntr/data/entities/orianna_human.w2ent", true);
+	pos = thePlayer.GetWorldPosition() + VecRingRand(1.f,2.f);
+	ent = (CEntity)theGame.CreateEntity(template, pos);
+	ent.AddTag('oriana_test2');
+	ent.AddTag('ntr_orianna_human');
+	ent.AddTag('vip');
+	ent.ApplyAppearance('orianna_vampire_bloody_morph');
+}
 
 exec function barolg() {
 	var      template : CEntityTemplate;
@@ -769,6 +782,7 @@ exec function barolg() {
 	act = (CActor) ent;
 	act.AddTag('baron_test2');
 	act.AddTag('ntr_baron_edward');
+	act.AddTag('ntr_crossbow_bandit');
 	act.AddTag('vip');
 	act.ApplyAppearance('bob_knight_15');
 	act.SetTemporaryAttitudeGroup( 'friendly_to_player', AGP_Default );
