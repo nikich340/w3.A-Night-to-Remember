@@ -287,22 +287,27 @@ communities:
       bob_noble_female:
         template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_citizen\\bob_noble_female.w2ent"
         appearances: [ "bob_noble_female_19" ]
+        tags: [ "ntr_city_woman1" ]
 
       bob_citizen_female:
         template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_citizen\\bob_citizen_female.w2ent"
         appearances: [ "bob_citizen_female_04" ]
+        tags: [ "ntr_city_woman2" ]
 
       bob_citizen_poor:
         template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_citizen\\bob_citizen_poor.w2ent"
         appearances: [ "bob_citizen_poor_08" ]
+        tags: [ "ntr_city_man1" ]
 
       bob_citizen:
         template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_citizen\\bob_citizen.w2ent"
         appearances: [ "bob_citizen_14" ]
+        tags: [ "ntr_city_man2" ]
 
       bob_guard_lvl1_community:
         template: "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_guard\\community\\bob_guard_lvl1_community.w2ent"
         appearances: [ "bob_guard_lvl1_01" ]
+        tags: [ "ntr_city_guard" ]
 
     phases:
       folk_near_corpse:

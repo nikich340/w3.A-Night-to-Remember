@@ -24,8 +24,11 @@
 			<ShortName>ntr_quest</ShortName>
 			<Path>ntr_quest.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3200977165" Name="Play_ntr_baron_groan" />
 				<Event Id="2406263907" Name="Play_ntr_diary_feeding" />
 				<Event Id="1585213046" Name="Play_ntr_fangs_music" />
+				<Event Id="2497353476" Name="Play_ntr_orianna_hiss1" />
+				<Event Id="2497353479" Name="Play_ntr_orianna_hiss2" />
 				<Event Id="2452485250" Name="Play_ntr_trailer_music" />
 				<Event Id="477400357" Name="Stop_ntr_diary_feeding" />
 				<Event Id="164185520" Name="Stop_ntr_fangs_music" />
@@ -34,9 +37,21 @@
 			<IncludedDialogueEvents />
 			<ReferencedStreamedFiles />
 			<IncludedFullFiles>
+				<File Id="118519154" Language="SFX">
+					<ShortName>ntr_baron_groan.wav</ShortName>
+					<Path>sfx\ntr_baron_groan_db50bab0.wem</Path>
+				</File>
 				<File Id="560183360" Language="SFX">
 					<ShortName>ntr_fangs_music.wav</ShortName>
 					<Path>sfx\ntr_fangs_music_24458b38.wem</Path>
+				</File>
+				<File Id="445419137" Language="SFX">
+					<ShortName>ntr_orianna_hiss1.wav</ShortName>
+					<Path>sfx\ntr_orianna_hiss1_db50bab0.wem</Path>
+				</File>
+				<File Id="563471724" Language="SFX">
+					<ShortName>ntr_orianna_hiss2.wav</ShortName>
+					<Path>sfx\ntr_orianna_hiss2_db50bab0.wem</Path>
 				</File>
 				<File Id="683846544" Language="SFX">
 					<ShortName>ntr_trailer_music.wav</ShortName>

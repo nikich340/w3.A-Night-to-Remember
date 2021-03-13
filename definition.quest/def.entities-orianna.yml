@@ -32,6 +32,7 @@ templates:
           banksDependency:
             - monster_bruxa.bnk
             - monster_dettlaff_vampire.bnk
+            - qu_ep2_704_regis.bnk
 
     appearances:
       # bloody2 -> human bloody2
@@ -152,8 +153,31 @@ templates:
       voiceTag: "ORIANNA HUMAN"
       level: 50
       streamingDistance: 50
+      components:
+        CSoundEmitterComponent0:
+          ".type": CSoundEmitterComponent
+          maxDistance: 100.0
+          banksDependency:
+            - monster_bruxa.bnk
+            - monster_dettlaff_vampire.bnk
+            - qu_ep2_704_regis.bnk
 
     appearances:
+      orianna_half_vampire: # for logo
+        includedTemplates:
+          - dlc/dlcntr/data/entities/oriana/g_orianna_claws.w2ent
+          #- dlc/dlcntr/data/entities/oriana/body_03_wa__oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/body_01_wa__oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/h_03_wa__oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/i_01_wa_oriana.w2ent
+          - dlc/bob/data/characters/models/main_npc/oriana/c_01_wa__oriana.w2ent
+        voicetag: "ORIANNA HUMAN"
+        collapsedComponents:
+          - head
+          - h_03_wa__oriana
+          - he_02_wa__oriana
+          - hb_01_ma__orianna
+
       orianna_vampire_bloody_morph:
         includedTemplates:
           ##?- characters/models/crowd_npc/novigrad_citizen_woman/shoes/s_02_wa__novigrad_citizen.w2ent
@@ -191,6 +215,7 @@ templates:
           - face_morph
 
     usedAppearances:
+      - orianna_half_vampire
       - orianna_human_morph
       - orianna_vampire_bloody_morph
       - oriana
