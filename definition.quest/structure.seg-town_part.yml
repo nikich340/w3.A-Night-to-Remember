@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: town_part
 # 
-# (version: 1189, saved: 2021-01-31 21:28:45)
+# (version: 1204, saved: 2021-02-13 14:24:04)
 #
 ---
 structure:
@@ -33,15 +33,14 @@ structure:
         
         scene.geralt_to_folk_gp:
           ".editor":
-            pos: [ 534.454284668, 136.1072235107 ]
+            pos: [ 605.0, 48.0 ]
             in: [ town_corpse ]
             out: [ Output ]
-          scene: 03.geralt_oneliners.yml
+          scene: 17_2.town_oneliners.yml
           placement: bob/camp
           interruptable: true
           _fadein: false
-          next.Output:
-            - spawn.folk_far
+          next: ".done"
         
         scene.good_luck_by_fisherman:
           ".editor":
@@ -57,7 +56,7 @@ structure:
         
         scene.gp_corpse_comments:
           ".editor":
-            pos: [ 541.7042236328, -59.6877593994 ]
+            pos: [ 594.0, -150.0 ]
             in: [ examine_town_corpse ]
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
@@ -272,11 +271,12 @@ structure:
             - scene.geralt_to_folk_gp: town_corpse
             - waituntil.blood_scent_track
             - waituntil.corpse_examined
+            - waituntil.wait_5s_phrase
         
         waituntil.corpse_examined:
           examined: bob/alfred_corpse
           ".editor":
-            pos: [ 540.3942871094, 45.9179344177 ]
+            pos: [ 591.0, -30.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -406,6 +406,15 @@ structure:
             - mappin.scentpin2: Disable
             - mappin.scentpin3: Disable
             - mappin.scentpin4: Disable
+        
+        waituntil.wait_5s_phrase:
+          elapsed: "00:00:05"
+          ".editor":
+            pos: [ 590.0, 151.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - spawn.folk_far
         
         script.Desable_scent_focus:
           ".editor":
@@ -565,7 +574,7 @@ structure:
         
         spawn.folk_far:
           ".editor":
-            pos: [ 694.0952758789, 120.3538208008 ]
+            pos: [ 785.0, 48.0 ]
             hint: spawn-only
             in: []
             out: []
