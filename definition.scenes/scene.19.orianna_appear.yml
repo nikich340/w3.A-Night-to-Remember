@@ -595,31 +595,31 @@ repository:
         tags: [ "ext" ]
 
     cam_18_corner_cam1:
-      fov: 20.0
+      fov: 12.0
       transform:
         pos: [ -8.3445558548, -5.3696613312, 1.1855049133 ]
-        rot: [ 0.0, 358.5525817871, 315.9724426270 ]
+        rot: [ 0.0, 359.6250610352, 313.6899108887 ]
       zoom: 0.0
       dof:
-        blur: [0, 16]
-        focus: [0, 14]
-        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 12.1724958420, 15.1724958420 ]
+        focus: [ 12.6724958420, 13.6724958420 ]
+        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
 
     cam_19_corner_cam2:
-      fov: 20.0
+      fov: 12.0
       transform:
-        pos: [ -9.1374197006, -4.8455390930, 1.1855049133 ]
-        rot: [ 0.0, 358.6075744629, 328.3200988770 ]
+        pos: [ -8.9030876160, -4.8407516479, 1.1855049133 ]
+        rot: [ 0.0, 358.6350708008, 332.3629760742 ]
       zoom: 0.0
       dof:
-        blur: [0, 16]
-        focus: [0, 14]
-        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.5498840809, 5.5498838425 ]
+        focus: [ 3.0498840809, 4.0498838425 ]
+        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -1477,7 +1477,7 @@ storyboard:
       #- cam.blend.end: [0.999, cam_25_Shot5e_pan, rapid]
 
     shot_5d2:
-      - cam: [0.0, cam_18_corner_cam3]
+      - cam: [0.0, cam_18_corner_cam1]
 
       - actor.anim.mimic: 
           .@pos: [0.0, Orianna_human_geralt_neutral_gesture_squint_face]

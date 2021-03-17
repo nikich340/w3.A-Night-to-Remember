@@ -461,7 +461,7 @@ production:
         repo: "Orianna_vampire"
         #by_voicetag: true
         appearance: "orianna_vampire_bloody"
-        tags: [ "Orianna_vampire" ]
+        tags: [ "temp_orianna_vampire" ]
 
       Orianna_human:
         repo: "Orianna_human"
@@ -737,7 +737,7 @@ storyboard:
   defaults:
     placement:
       geralt: [[ -136.0120086670, 54.6269607544, -11.1443824768 ], [ 0.0, 0.0, 331.9499511719 ]]
-      Orianna_vampire: [[ -134.2037811279, 59.0072212219, -23.5891962051 ], [ 0.0, 0.0, 159.7198791504 ]]
+      Orianna_vampire: [[ -34.2037811279, 159.0072212219, -33.5891962051 ], [ 0.0, 0.0, 159.7198791504 ]]
       Orianna_human: [[ -134.1233978271, 57.1229362488, -11.1664104462 ], [ 0.0, 0.0, 111.3196716309 ]]
     #actor.pose:
       #geralt: geralt_High_Standing_Relaxed_Combat
