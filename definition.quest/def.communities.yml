@@ -244,14 +244,19 @@ communities:
           
   comm_orianna_human:
     actors:
-      orianna_human:
+      orianna_human_normal:
         template: "dlc\\dlcntr\\data\\entities\\orianna_human.w2ent"
-        appearances: [ "orianna_vampire_bloody_morph", "orianna_human_morph" ]
+        appearances: [ "orianna_human_morph" ]
+        tags: [ "ntr_orianna_human" ]
+
+      orianna_human_bloody:
+        template: "dlc\\dlcntr\\data\\entities\\orianna_human.w2ent"
+        appearances: [ "orianna_vampire_bloody_morph" ]
         tags: [ "ntr_orianna_human" ]
 
     phases:
       before_scene_to_bruxa:
-        orianna_human:
+        orianna_human_bloody:
           appearance: "orianna_vampire_bloody_morph"
           use_last_ap: false
           start_in_ap: false
@@ -259,7 +264,7 @@ communities:
           spawn_at: bob/house_orihum_spawn
 
       before_scene_peaceful:
-        orianna_human:
+        orianna_human_normal:
           appearance: "orianna_human_morph"
           use_last_ap: false
           start_in_ap: false
@@ -575,6 +580,8 @@ communities:
           use_last_ap: false
           start_in_ap: false
           spawn_at: bob/riverspawn_baron
+          #spawntimes:
+          #  "00:00": [1, false] # 1 actor, no respawn
 
         bandit_axe:
           attitude: hostile_to_player

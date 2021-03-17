@@ -16,10 +16,11 @@ templates:
 
       displayName: "Orianna"
       voiceTag: "ORIANNA BRUXA"
-      level: 50
+      level: 47
       streamingDistance: 50
       grantNoExperienceAfterKill: true
       tags:
+        - vip
         - HideHealthBarModule
       components:
         CSoundEmitterComponent0:
@@ -153,6 +154,8 @@ templates:
       voiceTag: "ORIANNA HUMAN"
       level: 50
       streamingDistance: 50
+      tags:
+        - vip
       components:
         CSoundEmitterComponent0:
           ".type": CSoundEmitterComponent
@@ -723,6 +726,7 @@ templates:
       streamingDistance: 50
       grantNoExperienceAfterKill: true
       tags:
+        - vip
         - HideHealthBarModule
 
     appearances:

@@ -5,7 +5,7 @@ templates:
   ### !!! dlc\dlcntr\data\entities\baron\npc_tactic_olgierd.w2behtree !!! ###
   baron_edward:
     includes:
-      - "dlc\\dlcntr\\data\\entities\\olgierd_base.w2ent"
+      - "dlc\\dlcntr\\data\\entities\\baron\\olgierd_base.w2ent"
       #- "dlc\\ep1\\data\\quests\\main_npcs\\olgierd.w2ent"
       #- "dlc\\dlcntr\\data\\entities\\knight_baron_base.w2ent"
       #- "dlc\\bob\\data\\characters\\npc_entities\\crowd_npc\\bob_knight\\bob_knight.w2ent"
@@ -22,7 +22,7 @@ templates:
         - olgierd_gpl
 
       grantNoExperienceAfterKill: true
-      level: 50
+      level: 45
 
     appearances:
       bob_knight_15:
@@ -112,7 +112,7 @@ templates:
         abilities:
           - DisableDismemberment
           - DisableFinishers
-          - InstantKillImmune
+          - ntr_baron_edward
 
     effects:
       cut_head_fx:
@@ -238,7 +238,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
-      level: 50
+      level: 45
 
     usedAppearances:
       - bob_thug_lvl2_03
@@ -252,7 +252,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
-      level: 50
+      level: 45
 
     usedAppearances:
       - bob_thug_lvl1_06
@@ -267,7 +267,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
-      level: 50
+      level: 45
 
     usedAppearances:
       - bob_raider_lvl1_03
@@ -281,7 +281,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
-      level: 50
+      level: 45
 
     usedAppearances:
       - bob_raider_lvl1_21
@@ -295,7 +295,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
-      level: 50
+      level: 45
 
     usedAppearances:
       - bob_raider_lvl1_07
@@ -308,7 +308,7 @@ templates:
       .type: "CNTRBanditNPC"
       #name: "IORWETH"
       displayName: "Baron's bandit"
-      level: 50
+      level: 45
 
     usedAppearances:
       - __q703_nazairi_01

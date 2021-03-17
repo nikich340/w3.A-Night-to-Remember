@@ -285,7 +285,7 @@ production:
         repo: "vampire_diva"
         #by_voicetag: true
         appearance: "oriana"
-        tags: [ "vampire_diva" ]
+        tags: [ "temp_orianna_human" ]
 
       POUCH_GERALT:
         repo: "POUCH_GERALT"

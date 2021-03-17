@@ -16,6 +16,7 @@ templates:
       NTR_factNearlyDead: "ntr_hag_intro_dead"
       NTR_avoidDeathEvent: true
       streamingDistance: 50
+      level: 50
 
     templateParams:
       - ".type": CCharacterStatsParam
