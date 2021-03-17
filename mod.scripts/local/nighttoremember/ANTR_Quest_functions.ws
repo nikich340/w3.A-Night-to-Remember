@@ -305,17 +305,50 @@ latent quest function NTR_TuneOriannaBruxa() {
 	level = GetWitcherPlayer().GetLevel() + 5;
 
 	NPC.SetAppearance('bruxa_monster_gameplay');
+	// OK - it will add MonsterLevelBonusArmored abls
 	NPC.SetLevel(level);
-	/*NPC.SetTemporaryAttitudeGroup( 'hostile_to_player', AGP_Default );
-	NPC.SetAttitude( thePlayer, AIA_Hostile );
-	thePlayer.SetAttitude( NPC, AIA_Hostile );*/
-
-	NPC.SetImmortalityMode( AIM_None, AIC_Combat );
-	NPC.SetImmortalityMode( AIM_None, AIC_Default );
-	NPC.SetImmortalityMode( AIM_None, AIC_Fistfight );
-	NPC.SetImmortalityMode( AIM_None, AIC_IsAttackableByPlayer );
-
 	NPC.SetHealthPerc( 0.5 );
+	NPC.SetNPCType(ENGT_Enemy);
+}
+latent quest function NTR_TuneOriannaVampire() {
+	var NPC          : CNewNPC;
+	var level, diff  : int;
+	NPC = (CNewNPC)theGame.GetNPCByTag('ntr_orianna_vampire');
+
+	if (!NPC) {
+		LogChannel('NTR_TuneOriannaVampire', "ERROR! Orianna vampire entity was not found!");
+		return;
+	}
+
+	level = GetWitcherPlayer().GetLevel();
+
+	NPC.SetAppearance('orianna_vampire');
+
+	diff = level - NPC.GetLevel();
+	if (diff > 0) {
+		LogChannel('NTR_TuneOriannaVampire', "+ " + diff + "levelBonus");
+		NPC.AddAbilityMultiple('ntr_mon_orianna_vampire_LevelBonus', diff);
+	}
+
+	NPC.SetNPCType(ENGT_Enemy);
+}
+latent quest function NTR_TuneBaronEdward() {
+	var NPC          : CNewNPC;
+	var level, diff  : int;
+	NPC = (CNewNPC)theGame.GetNPCByTag('ntr_baron_edward');
+
+	if (!NPC) {
+		LogChannel('NTR_TuneBaronEdward', "ERROR! Baron entity was not found!");
+		return;
+	}
+
+	level = GetWitcherPlayer().GetLevel();
+
+	diff = level - NPC.GetLevel();
+	if (diff > 0) {
+		LogChannel('NTR_TuneBaronEdward', "+ " + diff + "levelBonus");
+		NPC.AddAbilityMultiple('ntr_baron_edward_LevelBonus', diff);
+	}
 
 	NPC.SetNPCType(ENGT_Enemy);
 }
@@ -627,125 +660,6 @@ quest function NTR_SetRelativeLevel( tag : name, levelBonus : int ) {
 
 	for (i = 0; i < NPCs.Size(); i += 1 ) {	
 		NPCs[i].SetLevel(level);
-	}
-}
-// -------------------------------------------------------------------------------
-// Not good
-quest function NTR_TuneNPC( tag : name, level : int, optional attitude : string, optional mortality : string, optional finishers : bool, optional npcGroupType : string, optional scale : float ) {
-	var NPCs   : array <CNewNPC>;
-	var i      : int;
-	var meshh : CMovingPhysicalAgentComponent;
-	var meshhs : array<CComponent>;
-	var j : int;
-	
-	theGame.GetNPCsByTag(tag, NPCs);
-	theGame.GetGuiManager().ShowNotification("TUNE npcs by tag <" + tag + ">: " + NPCs.Size());
-	if (NPCs.Size() < 1) {
-		//theGame.GetGuiManager().ShowNotification("[ERROR] No NPCs found with tag <" + tag + ">");
-		LogChannel('NTR_TuneNPC', "[ERROR] No NPCs found with tag <" + tag + ">");
-		return;
-	}
-	if (level > 500) {
-		// 1005 = playerLvl + 5;
-		// 995 = playerLvl - 5
-		level = GetWitcherPlayer().GetLevel() + (level - 1000);
-		if (level < 1)
-			level = 1;
-	}
-	
-	for (i = 0; i < NPCs.Size(); i += 1 )
-	{	
-		/* SET LEVEL */
-		if (level > 0)
-			NPCs[i].SetLevel(level);
-		NPCs[i].RemoveAbilityAll('NPCDoNotGainBoost');
-		NPCs[i].RemoveAbilityAll('NPCLevelBonusDeadly');
-		NPCs[i].RemoveAbilityAll('VesemirDamage');
-		NPCs[i].RemoveAbilityAll('BurnIgnore');
-		NPCs[i].RemoveAbilityAll('_q403Follower');
-		if (finishers) {
-			NPCs[i].RemoveAbilityAll('DisableFinishers');
-			NPCs[i].RemoveAbilityAll('InstantKillImmune');
-		} else {
-			NPCs[i].AddAbility( 'DisableFinishers', false );
-			NPCs[i].AddAbility( 'InstantKillImmune', false );
-		}
-		
-		/* SET ATTITUDE TO PLAYER */
-		switch (attitude) {
-			case "Friendly":
-				NPCs[i].SetTemporaryAttitudeGroup( 'friendly_to_player', AGP_Default );
-				NPCs[i].SetAttitude( thePlayer, AIA_Friendly );
-				thePlayer.SetAttitude( NPCs[i], AIA_Friendly );
-				break;
-			case "Hostile":
-				NPCs[i].SetTemporaryAttitudeGroup( 'hostile_to_player', AGP_Default );
-				NPCs[i].SetAttitude( thePlayer, AIA_Hostile );
-				thePlayer.SetAttitude( NPCs[i], AIA_Hostile );
-				break;
-			case "Neutral":
-				NPCs[i].SetTemporaryAttitudeGroup( 'neutral_to_player', AGP_Default );
-				NPCs[i].SetAttitude( thePlayer, AIA_Neutral );
-				thePlayer.SetAttitude( NPCs[i], AIA_Neutral );
-				break;
-		}
-		
-		/* SET MORTALITY */
-		switch (mortality) {
-			case "None":
-				NPCs[i].SetImmortalityMode( AIM_None, AIC_Combat );
-				NPCs[i].SetImmortalityMode( AIM_None, AIC_Default );
-				NPCs[i].SetImmortalityMode( AIM_None, AIC_Fistfight );
-				NPCs[i].SetImmortalityMode( AIM_None, AIC_IsAttackableByPlayer );
-				break;
-			case "Unconscious":
-				NPCs[i].SetImmortalityMode( AIM_Unconscious, AIC_Combat );
-				NPCs[i].SetImmortalityMode( AIM_Unconscious, AIC_Default );
-				NPCs[i].SetImmortalityMode( AIM_Unconscious, AIC_Fistfight );
-				NPCs[i].SetImmortalityMode( AIM_Unconscious, AIC_IsAttackableByPlayer );
-				break;
-			case "Invulnerable":
-				NPCs[i].SetImmortalityMode( AIM_Invulnerable, AIC_Combat );
-				NPCs[i].SetImmortalityMode( AIM_Invulnerable, AIC_Default );
-				NPCs[i].SetImmortalityMode( AIM_Invulnerable, AIC_Fistfight );
-				NPCs[i].SetImmortalityMode( AIM_Invulnerable, AIC_IsAttackableByPlayer );
-				break;
-			case "Immortal":
-				NPCs[i].SetImmortalityMode( AIM_Immortal, AIC_Combat );
-				NPCs[i].SetImmortalityMode( AIM_Immortal, AIC_Default );
-				NPCs[i].SetImmortalityMode( AIM_Immortal, AIC_Fistfight );
-				NPCs[i].SetImmortalityMode( AIM_Immortal, AIC_IsAttackableByPlayer );
-				break;
-		}
-		
-		/* SET NPC TYPE GROUP */
-		switch(npcGroupType) {
-			case "ENGT_Commoner":
-				NPCs[i].SetNPCType(ENGT_Commoner);
-				break;
-			case "ENGT_Guard":
-				NPCs[i].SetNPCType(ENGT_Guard);
-				break;
-			case "ENGT_Quest":
-				NPCs[i].SetNPCType(ENGT_Quest);
-				break;
-			case "ENGT_Enemy":
-				NPCs[i].SetNPCType(ENGT_Enemy);
-				break;
-			
-		}
-		
-		/* SET SCALE (DANGER BUT FUNNY) */
-		if (scale > 0) {
-			meshhs = NPCs[i].GetComponentsByClassName('CMovingPhysicalAgentComponent');
-
-			for (j = 0; j < meshhs.Size(); j += 1) {
-				meshh = (CMovingPhysicalAgentComponent)meshhs[j];
-				if (meshh) {
-					meshh.SetScale(Vector(scale, scale, scale));
-				}
-			}
-		}
 	}
 }
 // --------------not working !!! NPC.TeleportToNode( node, applyRotation );-------------------------

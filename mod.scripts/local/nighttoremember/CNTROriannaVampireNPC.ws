@@ -25,8 +25,9 @@ class CNTROriannaVampireNPC extends CNTRCommonNPC {
             manager = (CMorphedMeshManagerComponent) components[j];
             if (manager) {
                 if (NTR_morphRatio.Size() < 1 || NTR_blendTime.Size() < 1) {
-                    LogChannel('CNTROriannaVampireNPC', "[ERROR] NULL morph ratio/time!");
+                    LogChannel('CNTROriannaVampireNPC', "[ERROR] NULL morph ratio/time stack!");
                 }
+                LogChannel('CNTROriannaVampireNPC', "[Info] Current morph ratio: " + manager.GetMorphBlend());
                 manager.SetMorphBlend( NTR_morphRatio[0], NTR_blendTime[0] );
                 LogChannel('CNTROriannaVampireNPC', "[OK] Morph component: " + manager + " to <" + NTR_morphRatio[0] + "> in " + NTR_blendTime[0] + " sec");
             

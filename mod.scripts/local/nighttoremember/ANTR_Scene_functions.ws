@@ -186,10 +186,10 @@ latent storyscene function NTR_MorphNPCTimer_S( player : CStoryScenePlayer, tag 
 		if (!npc) {
 			LogChannel('NTR_MorphNPCTimer_S', "[ERROR] NPC does not support timer morph: " + npcs[i]);
 		} else {
+			LogChannel('NTR_MorphNPCTimer_S', "[Info] Add morph timer for entity with app [" + npcs[i].GetAppearance() + "]");
 			npc.NTR_morphRatio.PushBack(morphRatio);
 			npc.NTR_blendTime.PushBack(blendTime);			
 			npc.AddTimer('morphMe', pauseBefore, false, , , , false);
-			//npc.AddTimer('morphMe', pauseBefore, false, , , , false);
 		}
 	}
 }
