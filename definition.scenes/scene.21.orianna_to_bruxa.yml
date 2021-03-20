@@ -219,13 +219,13 @@ repository:
     cam_8_Shot5_ger_times_pre:
       fov: 20.0
       transform:
-        pos: [ -133.5676269531, 54.4068984985, -9.4945926666 ]
-        rot: [ 0.0, 357.5350036621, 87.0297775269 ]
+        pos: [ -133.9509887695, 53.7567749023, -9.4470586777 ]
+        rot: [ 0.0, 356.8751831055, 62.3093338013 ]
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 0.9795935154, 14.9795932770 ]
-        focus: [ 1.4795935154, 13.4795935154 ]
+        blur: [ 1.8081896305, 4.8081893921 ]
+        focus: [ 2.3081896305, 3.3081896305 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -234,13 +234,13 @@ repository:
     cam_8_Shot5_ger_times:
       fov: 18.0
       transform:
-        pos: [ -133.7426300049, 54.4155731201, -9.4945926666 ]
-        rot: [ 0.0, 357.6999816895, 86.7547836304 ]
+        pos: [ -134.2613220215, 53.9192085266, -9.4470586777 ]
+        rot: [ 0.0, 356.9577026367, 62.3643264771 ]
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 0.8357157707, 14.8357157707 ]
-        focus: [ 1.3357157707, 13.3357157707 ]
+        blur: [ 1.5390455723, 4.5390453339 ]
+        focus: [ 2.0390455723, 3.0390455723 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -307,30 +307,30 @@ repository:
         tags: [ "ext" ]
 
     cam_13_Shot4_steps3_cam_pan:
-      fov: 20.0
+      fov: 30.0
       transform:
-        pos: [ -130.2764587402, 54.3516006470, -9.2720584869 ]
-        rot: [ 0.0, 355.0051879883, 91.0471572876 ]
-      #zoom: 1.0
-      dof:
-        #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 5.0397014618, 18.0397014618 ]
-        focus: [ 5.5397014618, 16.5397014618 ]
-        intensity: 0.2500000000
-      event_generator:
-        plane: "medium"
-        tags: [ "ext" ]
-
-    cam_14_Shot4_steps3_cam2:
-      fov: 20.0
-      transform:
-        pos: [ -134.3416900635, 49.5134544373, -9.5445919037 ]
-        rot: [ 0.0, 356.4349975586, 2.8249053955 ]
+        pos: [ -133.1417083740, 50.1526870728, -9.5470581055 ]
+        rot: [ 0.0, 355.0051879883, 15.0919876099 ]
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 6.4912433624, 19.4912433624 ]
-        focus: [ 6.9912433624, 17.9912433624 ]
+        blur: [ 5.3646211624, 8.3646211624 ]
+        focus: [ 5.8646211624, 6.8646211624 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_14_Shot4_steps3_cam2:
+      fov: 30.0
+      transform:
+        pos: [ -132.2882232666, 50.4334106445, -9.5470581055 ]
+        rot: [ 0.0, 355.3901977539, 22.5168457031 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 5.6725139618, 8.6725139618 ]
+        focus: [ 6.1725139618, 7.1725139618 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -352,15 +352,15 @@ repository:
         tags: [ "ext" ]
 
     cam_16_Shot4_steps3_cam2_pan:
-      fov: 20.0
+      fov: 30.0
       transform:
-        pos: [ -135.0151824951, 49.5349807739, -9.5445919037 ]
-        rot: [ 0.0, 356.7374877930, 353.0074768066 ]
+        pos: [ -133.1417083740, 50.1526870728, -9.5470581055 ]
+        rot: [ 0.0, 355.0051879883, 14.6519851685 ]
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 5.8694972992, 18.8694972992 ]
-        focus: [ 6.3694972992, 17.3694972992 ]
+        blur: [ 8.5362634659, 11.5362634659 ]
+        focus: [ 9.0362634659, 10.0362634659 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -879,18 +879,18 @@ storyboard:
       - cam.blend.start: [0.0, cam_8_Shot5_ger_times_pre, rapid]
       - actor.anim.mimic: 
           .@pos: [0.0, geralt_geralt_reaction_tired_face]
-          weight: 0.75
+          weight: 0.7
 
     shot_8_cam:
-      - cam.blend.end: [0.999, cam_8_Shot5_ger_times, smooth]
+      - cam.blend.end: [0.999, cam_8_Shot5_ger_times, rapid]
 
     # shot Shot6 ori smile
     shot_9:
       - cam: [0.0, cam_9_Shot6_ori_smile]
-      - actor.mimic: [0.1, orianna_neutral]
+      - actor.mimic: [0.2, orianna_neutral]
       - actor.anim.mimic: 
           .@pos: [0.0, Orianna_human_geralt_reaction_eye_smile_syanna_face]
-          weight: 0.75
+          weight: 0.8
       - actor.anim: 
           .@pos: [0.4, Orianna_human_add_walk_left_one_step_turn_90]
           blendin: 0.5

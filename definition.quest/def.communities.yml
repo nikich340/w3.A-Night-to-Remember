@@ -860,7 +860,7 @@ communities:
           appearance: triss    # [someappearance, only_on_spawn_bool]
           use_last_ap: false
           start_in_ap: false
-          #immortality: invulnerable
+          immortality: invulnerable
           attitude: friendly_to_player
           spawn_at: bob/triss_spawn
       fight:
@@ -868,7 +868,7 @@ communities:
           appearance: triss_monster    # [someappearance, only_on_spawn_bool]
           use_last_ap: false
           start_in_ap: false
-          #immortality: none
+          immortality: none
           attitude: hostile_to_player
           spawn_at: bob/triss_spawn
           guard: [ bob/magic_area, 0.0 ]

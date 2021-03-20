@@ -18,15 +18,11 @@ storyscene function NTR_UnequipItemFromSlot_S( player : CStoryScenePlayer, tag :
 		GetWitcherPlayer().UnequipItemFromSlot( SlotNameToEnum(slotName) );
 	} else {
 		theGame.GetNPCsByTag(tag, npcs);
-		NTR_notify("Founds npcs: " + npcs.Size());
+		NTR_notify("NTR_UnequipItemFromSlot_S [Info] Founds npcs: " + npcs.Size());
 		for (i = 0; i < npcs.Size(); i += 1) {
 			slotItem = npcs[i].GetInventory().GetItemFromSlot( slotName );
 			//if ( npcs[i].GetInventory().IsIdValid(slotItem) ) {
-			if ( npcs[i].UnequipItem( slotItem ) ) {
-				NTR_notify("Unmount success!");
-			} else {
-				NTR_notify("Unmount not success!");
-			}
+			npcs[i].UnequipItem( slotItem );
 		}
 	}
 }
@@ -98,7 +94,7 @@ latent storyscene function NTR_NegotiateMonsterHunt_S( player: CStoryScenePlayer
 	
 	ResetFactQuest(resultFact);
 	ret = NegotiateMonsterHunt( player, rewardName, questUniqueScriptTag, alwaysSuccessful, isItemReward );
-	//NTR_notify("[NTR_NegotiateMonsterHunt_S] Negotiate result = " + ret);
+	//NTR_notify("[NTR_NegotiateMonsterHunt_S] result = " + ret);
 	switch (ret) {
 		case TooMuch:
 			FactsAdd( resultFact, 1 ); // 1 if too much
@@ -179,14 +175,14 @@ latent storyscene function NTR_MorphNPCTimer_S( player : CStoryScenePlayer, tag 
 	
 	theGame.GetNPCsByTag(tag, npcs);
 	if (npcs.Size() == 0) {
-		LogChannel('NTR_MorphNPCTimer_S', "[ERROR] NPCs not found by tag <" + tag + ">");
+		NTR_notify("NTR_MorphNPCTimer_S: [ERROR] NPCs not found by tag <" + tag + ">");
 	}
 	for (i = 0; i < npcs.Size(); i += 1) {
 		npc = (CNTROriannaVampireNPC) npcs[i];
 		if (!npc) {
-			LogChannel('NTR_MorphNPCTimer_S', "[ERROR] NPC does not support timer morph: " + npcs[i]);
+			NTR_notify("NTR_MorphNPCTimer_S: [ERROR] NPC does not support timer morph: " + npcs[i]);
 		} else {
-			LogChannel('NTR_MorphNPCTimer_S', "[Info] Add morph timer for entity with app [" + npcs[i].GetAppearance() + "]");
+			NTR_notify("NTR_MorphNPCTimer_S: [Info] Add morph timer for entity with app [" + npcs[i].GetAppearance() + "]");
 			npc.NTR_morphRatio.PushBack(morphRatio);
 			npc.NTR_blendTime.PushBack(blendTime);			
 			npc.AddTimer('morphMe', pauseBefore, false, , , , false);

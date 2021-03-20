@@ -1,19 +1,20 @@
 #
 # quest structure root segment
 # 
-# (version: 1198, saved: 2021-02-03 11:50:41)
+# (version: 1257, saved: 2021-03-20 03:53:22)
 #
 ---
 structure:
   quest:
     blocks:
       start:
-        ".editor": [ -912.0, 480.0 ]
+        ".editor": [ -925.0, 479.0 ]
         next:
           - changelayers.hide_hide_hide_ALL
           - waituntil.wait_quest_allowed
-          - objective.Go_to_corvo_at_midnight: Activate
           - waituntil.3s
+          - objective.Go_to_corvo_at_midnight: Activate
+          - script.Show_debug_WARNING
       
       subsegment.FINALE:
         ".editor":
@@ -114,6 +115,15 @@ structure:
           - script.Lock_back_door_house
           - script.Lock_front_door
       
+      waituntil.2s_to_get_ready:
+        elapsed: "00:00:02"
+        ".editor":
+          pos: [ 24.0, 349.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - subsegment.intro_nightmare
+      
       waituntil.3s:
         elapsed: "00:00:03"
         ".editor":
@@ -122,15 +132,6 @@ structure:
           out: [ Out ]
         next:
           - waituntil.in_corvo_area
-      
-      waituntil.3s_to_get_ready:
-        elapsed: "00:00:03"
-        ".editor":
-          pos: [ 27.0, 373.0 ]
-          in: [ In ]
-          out: [ Out ]
-        next:
-          - subsegment.regis_mail
       
       waituntil.Wait_00_to_02:
         time: [ "00:00", "02:00" ]
@@ -164,7 +165,6 @@ structure:
           out: [ Out ]
         next:
           - script.is_in_range
-          - script.new_logmsg
       
       waituntil.inside_camp:
         inside: [ bob/camp_area, PLAYER ]
@@ -369,6 +369,14 @@ structure:
         next:
           - waituntil.1ss
       
+      script.Show_debug_WARNING:
+        ".editor":
+          pos: [ -1130.0, 661.0 ]
+          in: [ In ]
+          out: [ Out ]
+        function: NTR_DebugWarning
+        next: ".done"
+      
       script.Teleport_Orianna_horse:
         ".editor":
           pos: [ 978.0, 1216.0 ]
@@ -466,17 +474,6 @@ structure:
         next.True:
           - script.check_fact_allowed
       
-      script.new_logmsg:
-        ".editor":
-          pos: [ -305.0, 334.0 ]
-          in: [ In ]
-          out: [ Out ]
-        function: radLog
-        parameter:
-          - logChannel: cname_NTR
-          - msg: WORKS!
-        next: ".done"
-      
       script.sounds_dettlaff:
         ".editor":
           pos: [ 117.6712799072, 203.2845916748 ]
@@ -555,7 +552,6 @@ structure:
           - river
           - town_blood
           - riverside_combat_walls
-          - river_sword_loot
           - beach_doll
           - beach_orianna_dress
           - regis_mail_layer
@@ -584,7 +580,7 @@ structure:
           - spawn.Spawn_orianna_horse
           - waituntil.inside_camp
           - waituntil.2s
-          - waituntil.3s_to_get_ready
+          - waituntil.2s_to_get_ready
       
       changelayers.show_orphlayer:
         ".editor":
@@ -741,7 +737,7 @@ structure:
         next: ".done"
       
       objective.Go_to_corvo_at_midnight:
-        ".editor": [ -559.0, 654.0 ]
+        ".editor": [ -569.0, 659.0 ]
         objective: nightofnightmares/start_quest/wait_night
         notify: true
         track: true

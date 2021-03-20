@@ -1635,15 +1635,15 @@ dialogscript:
     - NEXT: section_agree_branch
 
   section_agree_branch:
-    - CHOICE:
-      - choice: ["2114670340|There's your payment… As I promised.", section_get_coins]
-        emphasize: true
-      - choice: ["2114670341|I know you're not", section_get_sword]
-        emphasize: true
-    #- NEXT:
-    #    condition: [ ntr_scenefact_coins, "=", 1 ]
-    #    on_true: section_get_coins
-    #    on_false: section_get_sword
+    #- CHOICE:
+    #  - choice: ["2114670340|There's your payment… As I promised.", section_get_coins]
+    #    emphasize: true
+    #  - choice: ["2114670341|I know you're not", section_get_sword]
+    #    emphasize: true
+    - NEXT:
+        condition: [ ntr_scenefact_coins, "=", 1 ]
+        on_true: section_get_coins
+        on_false: section_get_sword
 
   section_get_coins:
     - CUE: shot_coins1_b
@@ -1735,19 +1735,10 @@ dialogscript:
 
   section_exit_peaceful:
     - OUTPUT: peaceful
-    ###!!!- BLACKSCREEN: true
-    - CAMERA_BLEND: 1.0
+    - BLACKSCREEN: true
+    #- CAMERA_BLEND: 1.0
     - EXIT
 
   section_exit_fight:
     - OUTPUT: fight
     - EXIT
-
-
-
-
-
-
-
-
-

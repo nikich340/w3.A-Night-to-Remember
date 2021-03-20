@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 1232, saved: 2021-03-17 14:51:06)
+# (version: 1257, saved: 2021-03-20 03:53:22)
 #
 ---
 structure:
@@ -248,7 +248,7 @@ structure:
           interruptable: true
           _fadein: true
           next.Output:
-            - waituntil.2ss
+            - script.remove_swords
             - despawn.despawn_bandits_river_and_ori_horse
             - addfact.ntr_quest_baron_alive
         
@@ -279,7 +279,7 @@ structure:
         
         scene.tyberious_replic:
           ".editor":
-            pos: [ 4300.0, 213.525390625 ]
+            pos: [ 4501.0, 277.0 ]
             in: [ fight_tyberious ]
             out: [ Output ]
           scene: 17.baron_oneliners.yml
@@ -306,6 +306,15 @@ structure:
           next:
             - script.fact_check_fight
         
+        waituntil.1ss:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 4318.0, 210.0 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.tyberious_replic: fight_tyberious
+        
         waituntil.1ss_re:
           elapsed: "00:00:01"
           ".editor":
@@ -314,6 +323,16 @@ structure:
             out: [ Out ]
           next:
             - script.fact_check_fight_2
+        
+        waituntil.1ss_s:
+          elapsed: "00:00:01"
+          ".editor":
+            pos: [ 7300.0, 1069.775390625 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - scene.scene_31_ntr_completed: Input
+            - waituntil.2sss
         
         waituntil.1sss:
           elapsed: "00:00:01"
@@ -324,7 +343,6 @@ structure:
           next:
             - script.Play_baron_music
             - addfact.ntr_quest_baron_fight
-            - script.NTR_TuneBaronEdward
         
         waituntil.1ssss:
           elapsed: "00:00:01"
@@ -384,16 +402,6 @@ structure:
             - spawn.Spawn_orianna_vampire
             - spawn.spawn_human
         
-        waituntil.2ss:
-          elapsed: "00:00:02"
-          ".editor":
-            pos: [ 7300.0, 1069.775390625 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - scene.scene_31_ntr_completed: Input
-            - waituntil.2sss
-        
         waituntil.2sss:
           elapsed: "00:00:02"
           ".editor":
@@ -415,7 +423,7 @@ structure:
         waituntil.5s:
           elapsed: "00:00:05"
           ".editor":
-            pos: [ 10700.0, 1094.775390625 ]
+            pos: [ 10694.0, 1230.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -457,15 +465,6 @@ structure:
           next:
             - script.ntr_showcredits_5
         
-        waituntil.8s:
-          elapsed: "00:00:08"
-          ".editor":
-            pos: [ 8300.0, 1094.775390625 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - script.ntr_showcredits_1
-        
         waituntil.9s:
           elapsed: "00:00:09"
           ".editor":
@@ -474,6 +473,15 @@ structure:
             out: [ Out ]
           next:
             - script.ntr_showcredits_2
+        
+        waituntil.9ss:
+          elapsed: "00:00:09"
+          ".editor":
+            pos: [ 8300.0, 1094.775390625 ]
+            in: [ In ]
+            out: [ Out ]
+          next:
+            - script.ntr_showcredits_1
         
         waituntil.House_area:
           inside: [ bob/house_area, PLAYER ]
@@ -485,6 +493,7 @@ structure:
             - scene.house_found_comment: orianna_house_found
             - script.Unlock_front_door
             - addfact.ntr_quest_rivertrack_completed
+            - script.focus_diary
         
         waituntil.Notes_were_read:
           factdb: [ BookReadState_ntr_notices_orianna_notes, ">=", 1 ]
@@ -769,7 +778,6 @@ structure:
             - eventName: mus_loc_toussaint_general_cs_to_gmpl
             - saveType: SESB_ClearSaved
           next:
-            - changelayers.show_baron_sword_loot
             - script.NTR_SaveLock_unlock
             - script.hide_baron_indicator
             - despawn.despawn_bandits_river
@@ -971,14 +979,6 @@ structure:
             - lock: false
           next: ".done"
         
-        script.NTR_TuneBaronEdward:
-          ".editor":
-            pos: [ 6905.0, -79.0 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_TuneBaronEdward
-          next: ".done"
-        
         script.NTR_TuneOriannaVampire:
           ".editor":
             pos: [ 4108.0, 1015.0 ]
@@ -1029,11 +1029,12 @@ structure:
             - areaName: novigrad
             - eventName: mus_q601_combat_with_offir_soldiers
             - saveType: SESB_Save
-          next: ".done"
+          next:
+            - script.TuneBaronEdward
         
         script.Play_custom_fangs_music:
           ".editor":
-            pos: [ 4300.0, 513.525390625 ]
+            pos: [ 4300.0, 445.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlaySound
@@ -1046,7 +1047,7 @@ structure:
         
         script.Play_custom_fangs_music_2:
           ".editor":
-            pos: [ 4700.0, 513.525390625 ]
+            pos: [ 4701.0, 426.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlaySound
@@ -1056,21 +1057,9 @@ structure:
             - saveType: SESB_Save
           next: ".done"
         
-        script.Play_fangs_music:
-          ".editor":
-            pos: [ 3900.0, -336.474609375 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_PlayMusic
-          parameter:
-            - areaName: toussaint
-            - eventName: mus_q704_vampire_siege
-            - saveType: SESB_Save
-          next: ".done"
-        
         script.Play_gp_music:
           ".editor":
-            pos: [ 10900.0, 1094.775390625 ]
+            pos: [ 10905.0, 1226.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
@@ -1078,8 +1067,7 @@ structure:
             - areaName: toussaint
             - eventName: mus_loc_toussaint_general_cs_to_gmpl
             - saveType: SESB_ClearSaved
-          next:
-            - out
+          next: ".done"
         
         script.RESET_fact_baron_fight:
           ".editor":
@@ -1148,6 +1136,14 @@ structure:
             - saveType: SESB_ClearSaved
           next: ".done"
         
+        script.TuneBaronEdward:
+          ".editor":
+            pos: [ 7095.0, 14.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_TuneBaronEdward
+          next: ".done"
+        
         script.Tune_Orianna_bruxa:
           ".editor":
             pos: [ 4500.0, 613.525390625 ]
@@ -1167,7 +1163,7 @@ structure:
             - tag: cname_ntr_baron_bandit
             - levelBonus: 0
           next:
-            - scene.tyberious_replic: fight_tyberious
+            - waituntil.1ss
         
         script.Unlock_front_door:
           ".editor":
@@ -1367,6 +1363,18 @@ structure:
             - overrideCustomLogic: false
           next: ".done"
         
+        script.focus_diary:
+          ".editor":
+            pos: [ 1102.0, 1013.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FocusSetHighlight
+          parameter:
+            - tag: cname_ntr_orianna_notebook
+            - highlightType: FMV_Clue
+            - overrideCustomLogic: true
+          next: ".done"
+        
         script.force_kill_alive_bandits:
           ".editor":
             pos: [ 4100.0, -86.474609375 ]
@@ -1514,7 +1522,19 @@ structure:
             - effectName: cname_none
             - destoy: true
           next:
-            - waituntil.5s
+            - out
+        
+        script.remove_swords:
+          ".editor":
+            pos: [ 7105.0, 1150.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: UnequipPlayerItemsQuest
+          parameter:
+            - steelSword: true
+            - silverSword: true
+          next:
+            - waituntil.1ss_s
         
         script.reset_fact:
           ".editor":
@@ -1568,7 +1588,7 @@ structure:
           parameter:
             - areaName: toussaint
             - eventName: mus_q705_tw3_theme
-            - saveType: SESB_ClearSaved
+            - saveType: SESB_DontSave
           next: ".done"
         
         script.wait_05_s:
@@ -1585,7 +1605,7 @@ structure:
         
         changelayers.Show_orianna_children_layer:
           ".editor":
-            pos: [ 6300.0, -536.474609375 ]
+            pos: [ 6430.0, -271.0 ]
             hint: show-only
             in: []
             out: []
@@ -1636,7 +1656,7 @@ structure:
           hide:
             - orianna_house_music
           next:
-            - waituntil.2ss
+            - script.remove_swords
         
         changelayers.hide_walls:
           ".editor":
@@ -1675,19 +1695,6 @@ structure:
           world: bob
           show:
             - riverside_combat_walls
-          next: ".done"
-        
-        changelayers.show_baron_sword_loot:
-          ".editor":
-            pos: [ 7500.0, 619.775390625 ]
-            hint: show-only
-            in: []
-            out: []
-          sync: true
-          purge: false
-          world: bob
-          show:
-            - river_sword_loot
           next: ".done"
         
         changelayers.show_doll:
@@ -1801,7 +1808,7 @@ structure:
         
         spawn.spawn_children_and_orianna_house:
           ".editor":
-            pos: [ 6500.0, -536.474609375 ]
+            pos: [ 6665.0, -261.0 ]
             hint: spawn-only
             in: []
             out: []
@@ -2143,14 +2150,14 @@ structure:
           next:
             - questoutcome.NTR_outcome: Success
             - script.NTR_FactChecker_Baron_alive
-            - waituntil.8s
+            - waituntil.9ss
         
         addfact.ntr_quest_failed:
           ".editor": [ 7300.0, 469.775390625 ]
           value: [ ntr_quest_failed, 1 ]
           next:
             - questoutcome.NTR_outcome: Failure
-            - waituntil.8s
+            - waituntil.9ss
         
         addfact.ntr_quest_finale_started:
           ".editor": [ 2700.0, 293.212890625 ]

@@ -8,6 +8,10 @@ quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	return false;
 }*/
 
+quest function NTR_DebugWarning() {
+	theGame.GetGuiManager().ShowNotification("This is DEBUG version of NTR quest. Have fun :)");
+}
+
 latent quest function NTR_Wait(seconds : float) {
 	Sleep(seconds);
 }
@@ -71,9 +75,12 @@ quest function NTR_IsTimeRange(hours1 : int, minutes1 : int, hours2 : int, minut
 	return (hours1 * 60 + minutes1 <= minutes && minutes <= hours2 * 60 + minutes2);
 }
 
+function NTR_LocStringSupported(s : String) : bool {
+	return StrLen(s) > 0;
+}
 quest function NTR_CheckQuestConditions() {
 	var popup : CNTRPopupRequest;
-	var message : String;
+	var message, locString, locString2 : String;
 	var conditionIdx : int;
 	var selectedSpeech : String;
 	var selectedText   : String;
@@ -85,7 +92,15 @@ quest function NTR_CheckQuestConditions() {
 
 	if ( selectedSpeech != "EN" ) {
 		conditionIdx += 1;
-		message += conditionIdx + ") " + GetLocStringByKeyExt("ntr_language_unsupported") + " [" + selectedSpeech + "] " + GetLocStringByKeyExt("ntr_speech_unsupported");
+		locString = GetLocStringByKeyExt("ntr_language_unsupported");
+		if ( !NTR_LocStringSupported(locString) ) {
+			locString = "You are using unsupported";
+		}
+		locString2 = GetLocStringByKeyExt("ntr_speech_unsupported");
+		if ( !NTR_LocStringSupported(locString2) ) {
+			locString2 = "lanaguage for speech.<br>It is strongly recommended to change it to [EN], otherwise you will have muted scenes!<br><br>";
+		}
+		message += conditionIdx + ") " + locString  + " [" + selectedSpeech + "] " + locString2;
 	}
 
 	// barely
@@ -95,18 +110,36 @@ quest function NTR_CheckQuestConditions() {
 	}
 	if (FactsQuerySum("q704_orianas_part_done") < 1) {
 		conditionIdx += 1;
-		message += conditionIdx + ") " + GetLocStringByKeyExt("ntr_plot_unsupported");
+		locString = GetLocStringByKeyExt("ntr_plot_unsupported");
+		if ( !NTR_LocStringSupported(locString) ) {
+			locString = "You did not passed 'Blood Simple' Orianna's quest (Unseen Elder path) in Blood and Wine DLC.<br>It is strongly recommended to play (or watch) it before starting this quest to avoid spoilers and misunderstandings!<br><br>";
+		}
+		message += conditionIdx + ") " + locString;
 	}
 
 	if (message != "") {
-		message += GetLocStringByKeyExt("ntr_unsupported_action1");
-		message += GetLocStringByKeyExt("ntr_unsupported_action2");
-		popup = new CNTRPopupRequest in thePlayer;
+		locString = GetLocStringByKeyExt("ntr_unsupported_action1");
+		if ( !NTR_LocStringSupported(locString) ) {
+			locString = "* If you are not ready press ESCAPE and return here next night.<br>";
+		}
+		message += locString;
+
+		locString = GetLocStringByKeyExt("ntr_unsupported_action2");
+		if ( !NTR_LocStringSupported(locString) ) {
+			locString = "* If you want to proceed anyway press OK but you WERE WARNED!<br>";
+		}
+		message += locString;
+		//?popup = new CNTRPopupRequest in thePlayer;
+		locString2 = GetLocStringByKeyExt("ntr_language_unsupported_title");
+		if ( !NTR_LocStringSupported(locString2) ) {
+			locString2 = "WARNING!";
+		}
+
 		
 		// for next night
 		theGame.SetGameTime( theGame.GetGameTime() + GameTimeCreate(0, 2, 2, 0), true);
 		popup = new CNTRPopupRequest in thePlayer;
-		popup.open(GetLocStringByKeyExt("ntr_language_unsupported_title"), message, true, "ntr_quest_allowed");
+		popup.open(locString2, message, true, "ntr_quest_allowed");
 	} else {
 		FactsAdd("ntr_quest_allowed", 1);
 	}	
@@ -124,7 +157,7 @@ quest function NTR_ForceKillNPC(tag : name, playDeath : bool) {
 
 	theGame.GetNPCsByTag(tag, npcs);
 	for (i = 0; i < npcs.Size(); i += 1) {
-		NTR_notify("Kill: " + npcs[i]);
+		NTR_notify("NTR_ForceKillNPC: " + npcs[i]);
 		NTR_npc = (CNTRCommonNPC) npcs[i];
 		if (NTR_npc) {
 			NTR_npc.NTR_avoidDeathEvent = false;
@@ -179,81 +212,57 @@ quest function NTR_CreateAttachment_Q( id : int ) {
 		case 1: // bruxa bow 1
 			entityTag = 'ntr_orianna_bruxa';
 			attachmentTag = 'ntr_bruxa_arrow1';
-
-			// FIXME template = (CEntityTemplate)LoadResourceAsync("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
 			template = (CEntityTemplate)LoadResource("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
-			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
-			attachment.AddTag(attachmentTag);
-			entity = theGame.GetEntityByTag(entityTag);
 
 			slotName = 'blood_point';
 			relativePosition = Vector(0.05, 0.1, 0);
 			relativeRotation = EulerAngles(0, 200, 0);
-
-			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
-			//NTR_notify("attach = " + result);
 			break;
 
 		case 2: // bruxa bow 2 heart
 			entityTag = 'ntr_orianna_bruxa';
 			attachmentTag = 'ntr_bruxa_arrow2';
-
 			template = (CEntityTemplate)LoadResource("items/weapons/projectiles/arrows/bolt_01.w2ent", true);
-			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
-			attachment.AddTag(attachmentTag);
-			entity = theGame.GetEntityByTag(entityTag);
-
+			
 			slotName = 'blood_point';
 			relativePosition = Vector(0.05, 0.03, 0.07);
 			relativeRotation = EulerAngles(-5, 210, 0);
-
-			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
-			//NTR_notify("attach = " + result);
 			break;
 		case 3:
+			entityTag = 'PLAYER';
 			attachmentTag = 'ntr_geralt_letter_stamped';
-
 			template = (CEntityTemplate)LoadResource("dlc\bob\data\items\quest_items\q705\q705_item__assasination_letter_closed_small.w2ent", true);
-			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
-			attachment.AddTag(attachmentTag);
 
 			slotName = 'r_weapon';
 			relativePosition = Vector(0.03, 0.01, 0.05);
 			relativeRotation = EulerAngles(100.0, 0.0, 0.0);
-
-			result = attachment.CreateAttachment(thePlayer, slotName, relativePosition, relativeRotation);
 			break;
 		case 4:
 			entityTag = 'ntr_orianna_human';
 			attachmentTag = 'ntr_orianna_letter_opened';
-
 			template = (CEntityTemplate)LoadResource("dlc\bob\data\items\quest_items\q705\q705_item__comercial_poster_stamped.w2ent", true);
-			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
-			attachment.AddTag(attachmentTag);
-			entity = theGame.GetEntityByTag(entityTag);
 
 			slotName = 'r_weapon';
 			relativePosition = Vector(0.22, 0.08, 0.0);
 			relativeRotation = EulerAngles(0, 120, 90);
-
-			result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
 			break;
-
 		case 5:
+			entityTag = 'PLAYER';
 			attachmentTag = 'ntr_geralt_orianna_diary';
-
 			template = (CEntityTemplate)LoadResource("dlc\dlcntr\data\entities\notebook_actor.w2ent", true);
-			attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
-			attachment.AddTag(attachmentTag);
-			entity = theGame.GetEntityByTag(entityTag);
 
 			slotName = 'l_weapon';
 			relativePosition = Vector(0, 0, 0);
 			relativeRotation = EulerAngles(0, 0, 0);
-
-			result = attachment.CreateAttachment(thePlayer, slotName, relativePosition, relativeRotation);
 			break;
 	}
+	attachment = theGame.CreateEntity(template, thePlayer.GetWorldPosition(), thePlayer.GetWorldRotation());
+	attachment.AddTag(attachmentTag);
+	entity = theGame.GetEntityByTag(entityTag);
+	if (!entity) {
+		NTR_notify("NTR_CreateAttachment_Q: [ERROR] " + entityTag + " not found!");
+	}
+	result = attachment.CreateAttachment(entity, slotName, relativePosition, relativeRotation);
 }
 
 quest function NTR_releaseOriannaBruxa() {
@@ -274,7 +283,7 @@ quest function NTR_SaveLock(lock : bool) {
 		saveLockId = FactsQuerySum("ntr_save_lock_id");
 		theGame.ReleaseNoSaveLock( saveLockId );
 	} else {
-		NTR_notify("ERROR! Save lock id wasn't set!");
+		NTR_notify("NTR_SaveLock: [ERROR] Save lock id wasn't set!");
 	}
 }
 quest function NTR_SaveGame(type : string, slot : int) {
@@ -293,13 +302,13 @@ quest function NTR_SaveGame(type : string, slot : int) {
 			break;
 	}
 }
-latent quest function NTR_TuneOriannaBruxa() {
+quest function NTR_TuneOriannaBruxa() {
 	var NPC    : CNewNPC;
 	var level  : int;
 	NPC = (CNewNPC)theGame.GetNPCByTag('ntr_orianna_bruxa');
 
 	if (!NPC) {
-		LogChannel('NTR_TuneOriannaBruxa', "ERROR! Orianna bruxa entity was not found!");
+		NTR_notify("NTR_TuneOriannaBruxa: [ERROR] Orianna bruxa entity was not found!");
 	}
 
 	level = GetWitcherPlayer().GetLevel() + 5;
@@ -310,13 +319,13 @@ latent quest function NTR_TuneOriannaBruxa() {
 	NPC.SetHealthPerc( 0.5 );
 	NPC.SetNPCType(ENGT_Enemy);
 }
-latent quest function NTR_TuneOriannaVampire() {
+quest function NTR_TuneOriannaVampire() {
 	var NPC          : CNewNPC;
 	var level, diff  : int;
 	NPC = (CNewNPC)theGame.GetNPCByTag('ntr_orianna_vampire');
 
 	if (!NPC) {
-		LogChannel('NTR_TuneOriannaVampire', "ERROR! Orianna vampire entity was not found!");
+		NTR_notify("NTR_TuneOriannaVampire: [ERROR] Orianna vampire entity was not found!");
 		return;
 	}
 
@@ -325,28 +334,28 @@ latent quest function NTR_TuneOriannaVampire() {
 	NPC.SetAppearance('orianna_vampire');
 
 	diff = level - NPC.GetLevel();
+	NTR_notify("NTR_TuneOriannaVampire: [Info] diff = " + diff);
 	if (diff > 0) {
-		LogChannel('NTR_TuneOriannaVampire', "+ " + diff + "levelBonus");
 		NPC.AddAbilityMultiple('ntr_mon_orianna_vampire_LevelBonus', diff);
 	}
 
 	NPC.SetNPCType(ENGT_Enemy);
 }
-latent quest function NTR_TuneBaronEdward() {
+quest function NTR_TuneBaronEdward() {
 	var NPC          : CNewNPC;
 	var level, diff  : int;
 	NPC = (CNewNPC)theGame.GetNPCByTag('ntr_baron_edward');
 
 	if (!NPC) {
-		LogChannel('NTR_TuneBaronEdward', "ERROR! Baron entity was not found!");
+		NTR_notify("NTR_TuneBaronEdward: [ERROR] Baron entity was not found!");
 		return;
 	}
 
 	level = GetWitcherPlayer().GetLevel();
 
 	diff = level - NPC.GetLevel();
+	NTR_notify("NTR_TuneOriannaVampire: [Info] diff = " + diff);
 	if (diff > 0) {
-		LogChannel('NTR_TuneBaronEdward', "+ " + diff + "levelBonus");
 		NPC.AddAbilityMultiple('ntr_baron_edward_LevelBonus', diff);
 	}
 
@@ -422,7 +431,7 @@ quest function NTR_UnhideActorsInRange(range : float)  {
                 }
             }
             if (hidden) {
-            	LogChannel('UnhideInRange', "UNHIDE: " + actor);
+            	NTR_notify("UnhideInRange: UNHIDE " + actor);
             	actor.RemoveTag('ntr_hidden_actor');
             	actor.SetVisibility(true);
             	actor.SetGameplayVisibility(true);
@@ -435,7 +444,7 @@ quest function NTR_UnhideActorsInRange(range : float)  {
         
     }
 
-    LogChannel('NTR', "Done UnhideActorsInRange: " + range);
+    NTR_notify("Done UnhideActorsInRange: " + range);
 }
 
 quest function NTR_FocusEffect( actionType : string, effectName : name, effectEntityTag : name, duration : float ) {
@@ -479,7 +488,7 @@ quest function NTR_FactChecker(factName : string, factCond : string, val : int) 
 			ret = (factVal < val);
 			break;
 	}
-	//theGame.GetGuiManager().ShowNotification("factVal = " + factVal + ", supposed val = " + val + ", ret=" + ret);
+	//NTR_notify("factVal = " + factVal + ", supposed val = " + val + ", ret=" + ret);
 	return ret;
 }
 
@@ -591,7 +600,7 @@ quest function NTR_DoorChangeState(tag : name, newState : string, optional keyIt
 quest function NTR_PlaySound( bankName : string, eventName : string, optional saveType : string ) {
 	if ( !theSound.SoundIsBankLoaded(bankName) ) {
 		theSound.SoundLoadBank(bankName, true);
-		NTR_notify("Bank [" + bankName + "] was not loaded!");
+		NTR_notify("NTR_PlaySound: [Warning] Bank <" + bankName + "> was not loaded!");
 	}
 	//NTR_notify("Play Sound: bnk [" + bankName + "], event [" + eventName + "]");
 
@@ -650,8 +659,7 @@ quest function NTR_SetRelativeLevel( tag : name, levelBonus : int ) {
 
 	theGame.GetNPCsByTag(tag, NPCs);
 	if (NPCs.Size() < 1) {
-		//theGame.GetGuiManager().ShowNotification("[ERROR] No NPCs found with tag <" + tag + ">");
-		LogChannel('NTR_SetRelativeLevel', "[ERROR] No NPCs found with tag <" + tag + ">");
+		NTR_notify("NTR_SetRelativeLevel [ERROR] No NPCs found with tag <" + tag + ">!");
 		return;
 	}
 	level = GetWitcherPlayer().GetLevel() + levelBonus;
@@ -674,11 +682,11 @@ quest function NTR_teleportToNode( tag : CName, tagNode : CName, optional applyR
 	node = theGame.GetNodeByTag( tagNode );
 
 	if (!NPC) {
-		LogChannel('NTR_teleportNPCs', "[ERROR] Entity <" + tag + "> not found!");
+		NTR_notify("NTR_teleportNPCs [ERROR] Entity <" + tag + "> not found!");
 		return;
 	}
 	if (!node) {
-		LogChannel('NTR_teleportNPCs', "[ERROR] Node <" + tagNode + "> not found!");
+		NTR_notify("NTR_teleportNPCs [ERROR] Node <" + tagNode + "> not found!");
 		return;
 	}
 
@@ -689,7 +697,6 @@ quest function NTR_teleportToNode( tag : CName, tagNode : CName, optional applyR
 	} else {
 		NPC.Teleport(pos);
 	}
-	LogChannel('NTR_teleportNPCs', "[OK] Teleport npc <" + tag + "> to node <" + tagNode + ">");
 }
 // ------------------- preset values to teleport Triss in sphere during battle ---------------------------
 latent quest function NTR_teleportTriss( tag : CName) {	
@@ -702,7 +709,7 @@ latent quest function NTR_teleportTriss( tag : CName) {
 	
 	trissNPC = theGame.GetNPCByTag(tag);
 	if (!trissNPC) {
-		LogChannel('NTR_teleportTriss', "[ERROR] Triss NPC not found! Requested tag <" + tag + ">");
+		NTR_notify("NTR_teleportTriss [ERROR] Triss NPC not found! Requested tag <" + tag + ">");
 	}
 	trissNPC.ActionPlaySlotAnimationAsync( 'GAMEPLAY_SLOT', 'woman_sorceress_teleport_lp', 0.2, 0.2 );
 	trissNPC.PlayEffect('teleport_out');
@@ -737,4 +744,124 @@ latent quest function NTR_teleportTriss( tag : CName) {
 			break;
 	}
 	trissNPC.PlayEffect('teleport_in');
+}
+
+// -------------------------------------------------------------------------------
+// Not good
+quest function NTR_TuneNPC( tag : name, level : int, optional attitude : string, optional mortality : string, optional finishers : bool, optional npcGroupType : string, optional scale : float ) {
+	var NPCs   : array <CNewNPC>;
+	var i      : int;
+	var meshh : CMovingPhysicalAgentComponent;
+	var meshhs : array<CComponent>;
+	var j : int;
+	
+	theGame.GetNPCsByTag(tag, NPCs);
+	NTR_notify("TUNE npcs by tag <" + tag + ">: " + NPCs.Size());
+	if (NPCs.Size() < 1) {
+		//theGame.GetGuiManager().ShowNotification("[ERROR] No NPCs found with tag <" + tag + ">");
+		NTR_notify("NTR_TuneNPC: [ERROR] No NPCs found with tag <" + tag + ">");
+		return;
+	}
+	if (level > 500) {
+		// 1005 = playerLvl + 5;
+		// 995 = playerLvl - 5
+		level = GetWitcherPlayer().GetLevel() + (level - 1000);
+		if (level < 1)
+			level = 1;
+	}
+	
+	for (i = 0; i < NPCs.Size(); i += 1 )
+	{	
+		// SET LEVEL
+		if (level > 0)
+			NPCs[i].SetLevel(level);
+		NPCs[i].RemoveAbilityAll('NPCDoNotGainBoost');
+		NPCs[i].RemoveAbilityAll('NPCLevelBonusDeadly');
+		NPCs[i].RemoveAbilityAll('VesemirDamage');
+		NPCs[i].RemoveAbilityAll('BurnIgnore');
+		NPCs[i].RemoveAbilityAll('_q403Follower');
+		if (finishers) {
+			NPCs[i].RemoveAbilityAll('DisableFinishers');
+			NPCs[i].RemoveAbilityAll('InstantKillImmune');
+		} else {
+			NPCs[i].AddAbility( 'DisableFinishers', false );
+			NPCs[i].AddAbility( 'InstantKillImmune', false );
+		}
+		
+		// SET ATTITUDE TO PLAYER
+		switch (attitude) {
+			case "Friendly":
+				NPCs[i].SetTemporaryAttitudeGroup( 'friendly_to_player', AGP_Default );
+				NPCs[i].SetAttitude( thePlayer, AIA_Friendly );
+				thePlayer.SetAttitude( NPCs[i], AIA_Friendly );
+				break;
+			case "Hostile":
+				NPCs[i].SetTemporaryAttitudeGroup( 'hostile_to_player', AGP_Default );
+				NPCs[i].SetAttitude( thePlayer, AIA_Hostile );
+				thePlayer.SetAttitude( NPCs[i], AIA_Hostile );
+				break;
+			case "Neutral":
+				NPCs[i].SetTemporaryAttitudeGroup( 'neutral_to_player', AGP_Default );
+				NPCs[i].SetAttitude( thePlayer, AIA_Neutral );
+				thePlayer.SetAttitude( NPCs[i], AIA_Neutral );
+				break;
+		}
+		
+		// SET MORTALITY
+		switch (mortality) {
+			case "None":
+				NPCs[i].SetImmortalityMode( AIM_None, AIC_Combat );
+				NPCs[i].SetImmortalityMode( AIM_None, AIC_Default );
+				NPCs[i].SetImmortalityMode( AIM_None, AIC_Fistfight );
+				NPCs[i].SetImmortalityMode( AIM_None, AIC_IsAttackableByPlayer );
+				break;
+			case "Unconscious":
+				NPCs[i].SetImmortalityMode( AIM_Unconscious, AIC_Combat );
+				NPCs[i].SetImmortalityMode( AIM_Unconscious, AIC_Default );
+				NPCs[i].SetImmortalityMode( AIM_Unconscious, AIC_Fistfight );
+				NPCs[i].SetImmortalityMode( AIM_Unconscious, AIC_IsAttackableByPlayer );
+				break;
+			case "Invulnerable":
+				NPCs[i].SetImmortalityMode( AIM_Invulnerable, AIC_Combat );
+				NPCs[i].SetImmortalityMode( AIM_Invulnerable, AIC_Default );
+				NPCs[i].SetImmortalityMode( AIM_Invulnerable, AIC_Fistfight );
+				NPCs[i].SetImmortalityMode( AIM_Invulnerable, AIC_IsAttackableByPlayer );
+				break;
+			case "Immortal":
+				NPCs[i].SetImmortalityMode( AIM_Immortal, AIC_Combat );
+				NPCs[i].SetImmortalityMode( AIM_Immortal, AIC_Default );
+				NPCs[i].SetImmortalityMode( AIM_Immortal, AIC_Fistfight );
+				NPCs[i].SetImmortalityMode( AIM_Immortal, AIC_IsAttackableByPlayer );
+				break;
+		}
+		
+		// SET NPC TYPE GROUP
+		switch(npcGroupType) {
+			case "ENGT_Commoner":
+				NPCs[i].SetNPCType(ENGT_Commoner);
+				break;
+			case "ENGT_Guard":
+				NPCs[i].SetNPCType(ENGT_Guard);
+				break;
+			case "ENGT_Quest":
+				NPCs[i].SetNPCType(ENGT_Quest);
+				break;
+			case "ENGT_Enemy":
+				NPCs[i].SetNPCType(ENGT_Enemy);
+				break;
+			
+		}
+		
+		// SET SCALE (DANGER BUT FUNNY)
+		if (scale > 0) {
+			meshhs = NPCs[i].GetComponentsByClassName('CMovingPhysicalAgentComponent');
+
+			for (j = 0; j < meshhs.Size(); j += 1) {
+				meshh = (CMovingPhysicalAgentComponent)meshhs[j];
+				if (meshh) {
+					meshh.SetScale(Vector(scale, scale, scale));
+				}
+			}
+		}
+	}
 }

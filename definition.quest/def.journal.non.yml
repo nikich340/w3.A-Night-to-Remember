@@ -1,7 +1,7 @@
 journals:
   quests:
     nightofnightmares:
-      title: "A Night of Nightmares"
+      title: "A Night of Nightmares (DEBUG)"
       type: "Side"
       world: bob                      # optional, if empty every objective requires world
       level: 50
@@ -13,7 +13,7 @@ journals:
       instructions:
         start_quest:
           - wait_night:
-              caption: "Wait until midnight in Corvo Byanko."
+              caption: "Wait until midnight in Corvo Bianco."
               mappins:
                 - [ corvo_pin, 11 ]
         intro_hag:

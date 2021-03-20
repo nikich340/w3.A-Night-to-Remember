@@ -523,7 +523,7 @@ production:
         repo: "vampire_diva"
         #by_voicetag: true
         appearance: "oriana"
-        tags: [ "vampire_diva" ]
+        tags: [ "temp_vampire_diva" ]
 
     cameras:
       cam_1_Shot1:
@@ -977,8 +977,8 @@ dialogscript:
     - NEXT: section_exit
 
   section_exit:
-    ###!!!- BLACKSCREEN: true
-    - CAMERA_BLEND: 1.0
+    - BLACKSCREEN: true
+    #- CAMERA_BLEND: 1.0
     - EXIT
 
 

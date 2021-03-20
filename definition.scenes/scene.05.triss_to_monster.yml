@@ -678,12 +678,12 @@ storyboard:
 
     # shot triss magic to yen (cloned)
     shot_7:
-      - actor.anim.mimic: [0.0, triss_monster_geralt_neutral_gesture_smile_face]
+      - actor.anim.mimic: [0.3, triss_monster_geralt_neutral_gesture_smile_face]
       - actor.effect.stop: [0.1, triss_monster, q502_teleport_disappear]
       - actor.lookat: [0.0, triss_monster, geralt]
       - actor.lookat: [0.0, geralt, triss_monster]
-      - cam.blend.start: [0.0, cam_7_triss_magic_to_yen__cloned_]
-      - cam.blend.end: [1.0, cam_9_triss_you_dont_like_me]
+      #- cam.blend.start: [0.0, cam_7_triss_magic_to_yen__cloned_]
+      - cam: [0.0, cam_9_triss_you_dont_like_me]
 
     # shot grlt triss stop
     shot_8:
@@ -824,7 +824,3 @@ dialogscript:
 
   section_exit:
     - EXIT
-
-
-
-

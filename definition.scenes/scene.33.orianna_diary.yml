@@ -295,16 +295,16 @@ repository:
         tags: [ "ext" ]
 
     cam_13_Shot6_dg_orianna:
-      fov: 28.0
+      fov: 20.0
       transform:
-        pos: [ -2.9150178432, 2.7493448257, 1.6111526489 ]
-        rot: [ 0.0, 2.2650284767, 137.1339111328 ]
+        pos: [ -2.6330180168, 2.9627263546, 1.6111526489 ]
+        rot: [ 0.0, 2.5125279427, 133.4495239258 ]
       zoom: 0.0
       dof:
-        blur: [1.4270419880803149, 6.4270419880803153]
-        focus: [2.4270419880803149, 4.4270419880803153]
-        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 2.7607033253, 5.7607030869 ]
+        focus: [ 3.2607033253, 4.2607030869 ]
+        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -1304,6 +1304,12 @@ storyboard:
     shot_dg_ori4:
       - cam.blend.start: [0.0, cam_20_Shot6_dg_orianna4_close, rapid]
       - cam.blend.end: [1.0, cam_22_Shot6_dg_orianna4_close_pan, rapid]
+      - actor.anim:
+          actor: Orianna_human
+          blendin: 0.5
+          #stretch: 1.0
+          .@pos: [0.5, anim_12752_high_standing_sad_gesture_shows_way_out]
+
       - actor.anim.mimic: 
           actor: Orianna_human
           blendin: 1.5
@@ -1464,10 +1470,3 @@ dialogscript:
   section_exit:
     #- CAMERA_BLEND: 2.0
     - EXIT
-
-
-
-
-
-
-

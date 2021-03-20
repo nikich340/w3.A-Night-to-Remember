@@ -180,7 +180,7 @@ repository:
     cam_9_shot_sky:
       fov: 45.0
       transform:
-        pos: [ -372.8728332520, 1366.3715820313, -49.2231597900 ]
+        pos: [ -372.8728332520, 1366.3715820313, -48.7231597900 ]
         rot: [ 0.0, 348.1850585938, 20.7697753906 ]
       #zoom: 1.0
       dof:
@@ -435,7 +435,7 @@ storyboard:
     shot_2:
       - actor.anim: 
           .@pos: [0.0, geralt_low_lying_down_happy_sleeping_wake_up_to_low_sitting_sad]
-          clipend: 8.0
+          clipend: 10.0
       - actor.pose: [0.75, geralt_Low_Sitting_Sad]
 
     # shot shot sitting
@@ -523,7 +523,7 @@ dialogscript:
     # shot shot wakeup
     - CUE: shot_2
     # (longest) anim: low_lying_down_happy_sleeping_wake_up_to_low_sitting_sad
-    - PAUSE: 8.0
+    - PAUSE: 10.0
     # shot shot sitting
     - CUE: shot_3a
     - geralt: "[2.5379393]0001075881|Damn… What a dream."

@@ -2108,7 +2108,7 @@ dialogscript:
 
     - CUE: shot_28_dg_geralt
     - PAUSE: 1.0
-    - geralt: "[3.2722]2114670890|I don't believe it. However I'm here about Orianna."
+    - geralt: "[3.3302]2114670890|I don't believe it. However I'm here about Orianna."
 
     - CUE: shot_29_dg_baron
     - Baron_Edward: "[5.3139]2114670891|Of course. This evil woman, she refuses to return something precious to me."
@@ -2124,7 +2124,7 @@ dialogscript:
     - CUE: shot_29_dg_baron3
     - Baron_Edward: "[2.2623]2114670406|Have my men already told you about the boy?"
     - NEXT:
-        condition: [ ntr_baron_story_known_REMOVE, "!=", 1 ]
+        condition: [ "ntr_baron_story_known", "!=", 1 ]
         on_true: section_choice_geralt_child
         on_false: section_about_child
 
@@ -2246,7 +2246,7 @@ dialogscript:
         emphasize: true
       - choice: ["2114670869|Picked bad place to hide.", section_bad_place]
         single_use: true
-        condition: [ poi_gor_a_10_boss_killed, "!=", 1 ]
+        condition: [ "poi_gor_a_10_boss_killed", "<", 1 ]
 
   section_bad_place:
     - CUE: shot_bad_place_g1
@@ -2417,6 +2417,7 @@ dialogscript:
 
   section_exit:
     - EXIT
+
 
 
 

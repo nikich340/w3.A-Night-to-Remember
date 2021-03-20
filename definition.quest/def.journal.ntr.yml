@@ -1,7 +1,7 @@
 journals:
   quests:
     nighttoremember:
-      title: "A Night to Remember"
+      title: "A Night to Remember (DEBUG)"
       type: "Side"
       world: bob                      # optional, if empty every objective requires world
       level: 50
@@ -55,7 +55,7 @@ journals:
                 - [ camp_pin, 22 ]
 
           - check_amphitheatre:
-              caption: "Investigate amphitheatre near bandit camp."
+              caption: "[Optional] Investigate amphitheatre near bandit camp."
               mappins: 
                 - [ amphi_pin, 28 ]
 

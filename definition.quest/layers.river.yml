@@ -266,16 +266,16 @@ layers:
 
       play_puddle_river2: [ -283.6643066406, -516.3144531250, -0.4463500977, 132.0799255371, "play_child/kneel_c_playing_puddle_jt" ]
 
-  river_sword_loot:
-    world: "bob"
-    #context: ""
-    interactiveEntities:
-      baron_sword: 
-        template: "W3AnimatedContainer:baron_sword"
-        pos: [ -205.3459930420, -594.5869750977, 0.2922460139 ]
-        rot: [ 0.0, 90.0, 286.2200012207 ]
-        valid_interactions: [ Loot ]
-        tags: [ "ntr_baron_sword" ] 
+  #river_sword_loot:
+  #  world: "bob"
+  #  #context: ""
+  #  interactiveEntities:
+  #    baron_sword: 
+  #      template: "W3AnimatedContainer:baron_sword"
+  #      pos: [ -205.3459930420, -594.5869750977, 0.2922460139 ]
+  #      rot: [ 0.0, 90.0, 286.2200012207 ]
+  #      valid_interactions: [ Loot ]
+  #      tags: [ "ntr_baron_sword" ] 
 
   river_bandits:
     world: "bob"
@@ -453,6 +453,31 @@ layers:
         rot: [ 0.0, 0.0, 33.6599998474 ]
 
     statics:
+      bruxa_book: 
+        template: "W3AnimatedContainer:dlc\\bob\\data\\gameplay\\interactive_fluff_books\\books_bestiary\\ep2_bestiary_bruxa_book.w2ent"
+        pos: [ -184.7056274414, -447.0335388184, 12.8556423187 ]
+        rot: [ 0.0, 0.0, -236.9400024414 ]
+
+      #human_husbandry_book: 
+      #  template: "W3AnimatedContainer:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q702_hunt\\entities\\q702_breeding_humans.w2ent"
+      #  pos: [ -185.6435089111, -447.6509094238, 13.5156574249 ]
+      #  rot: [ 90.0, 0.0, 394.8799743652 ]
+
+      human_husbandry2_book: 
+        template: "W3AnimatedContainer:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q702_hunt\\entities\\q702_cage_breeding_humans.w2ent"
+        pos: [ -185.4770050049, -447.5620117188, 13.5190000534 ]
+        rot: [ 90.0, 0.0, 394.8799743652 ]
+
+      regis_biography_book: 
+        template: "W3AnimatedContainer:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q702_hunt\\entities\\q702_regis_biography.w2ent"
+        pos: [ -185.6243133545, -447.7240295410, 13.2556514740 ]
+        rot: [ 0.0, 90.0, 136.1600036621 ]
+
+      regis_sentences_book: 
+        template: "W3AnimatedContainer:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q702_hunt\\entities\\q702_regis_sentences.w2ent"
+        pos: [ -185.6660003662, -447.7615661621, 13.2556514740 ]
+        rot: [ 0.0, 90.0, 136.1600341797 ]
+
       soup_plate: 
         template: "CEntity:items\\work\\soup_bowl\\model\\soup_bowl.w2ent"
         pos: [ -190.3115081787, -445.7427978516, 12.3380298615 ]
@@ -816,122 +841,312 @@ layers:
           noweapon: true
           factsonfound:
             - ntr_orianna_side_footprints_found 
-
-    statics:
+            
       orianna_footprints_gen_017:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -200.03752, -594.78778, 0.28095 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_018:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -200.29694, -593.69183, 0.25250 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_019:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -200.54686, -592.66113, 0.22259 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_020:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -200.76888, -591.59302, 0.19995 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_021:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -201.13994, -590.64667, 0.17560 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_022:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -201.47832, -589.69550, 0.14020 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_023:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -201.73299, -588.63214, 0.14929 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_024:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -201.97339, -587.66675, 0.16266 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_025:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -202.28387, -586.67822, 0.18091 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_026:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -202.61752, -585.75983, 0.19727 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_027:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -202.73746, -584.84320, 0.18848 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_028:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -203.04356, -583.82416, 0.14477 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_029:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -203.27364, -582.85919, 0.14020 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_030:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -203.63937, -581.88355, 0.14703 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_031:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -204.02664, -580.97858, 0.12122 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_032:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -204.39238, -580.00293, 0.12909 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_033:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -204.76910, -578.96228, 0.16034 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_034:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -205.09680, -578.01379, 0.20343 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
       orianna_footprints_gen_035:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]
         pos: [ -205.46252, -577.03827, 0.16431 ]
         rot: [ 0.00000, 0.00000, 203.28005 ]
+        .preset: .MonsterClue
+        valid_interactions: [examine]
+        settings:
+          anim: InspectLow
+          duration: 2.0
+          commentary: FreshTracks
+          enabled: true
+          noweapon: true
+          factsonfound:
+            - ntr_orianna_side_footprints_found
 
+    statics:
       orianna_footprints_gen_036:
         template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\entities\\q703_clue_dirt_footprints.w2ent"
         tags: [ "ntr_orianna_footprints_to_house" ]

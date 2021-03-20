@@ -94,13 +94,13 @@ class CNTRWitcherSword extends CWitcherSword
 
     function activateAceroEffect( activate : Bool ) {
         if ( activate && !aceroEffectActive ) {
-            //NTR_notify("[sword] ACTIVATE!");
+            NTR_notify("activateAceroEffect: ACTIVATE!");
             aceroEffectActive = true;
 
             useFakeOil();
             PlayEffect('acero_charged');
         } else if ( !activate && aceroEffectActive ) {
-            //NTR_notify("[sword] DEACTIVATE!");
+            NTR_notify("activateAceroEffect: DEACTIVATE!");
             aceroEffectActive = false;
 
             removeFakeOil();

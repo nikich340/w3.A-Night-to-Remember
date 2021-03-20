@@ -847,7 +847,7 @@ dialogscript:
   section_storyboard_ui4:
     - CUE: shot_d1_ger
     #- geralt: "[2.7000]2114670768|I am supposed to find a red-haired woman here."
-    - geralt: "2114670784|I am looking for..."
+    - geralt: "[2.1228]2114670784|I'm looking for a red-haired woman."
     # shot shot8 bandit
     - CUE: shot_d1_band
     - fat_bandit: "[5.3720]2114670769|That's interesting. Because we're supposed to meet her too."
@@ -928,6 +928,7 @@ dialogscript:
   section_exit_normal:
     - OUTPUT: normal
     - EXIT
+
 
 
 

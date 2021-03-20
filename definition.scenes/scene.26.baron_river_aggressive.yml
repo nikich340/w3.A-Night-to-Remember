@@ -206,6 +206,12 @@ production:
 
   assets:
     mimics:
+      Baron_Edward_angry:
+        actor: Baron_Edward
+        repo: angry
+        weight: 0.7
+        duration: 1.0
+
       Baron_Edward_aggressive:
         actor: Baron_Edward
         repo: aggressive
@@ -698,7 +704,7 @@ storyboard:
           blendin: 0.5
           blendout: 0.5
       - actor.pose: [0.6, Baron_Edward_high_standing_determined_idle]
-      - actor.mimic: [0.0, Baron_Edward_aggressive]
+      - actor.mimic: [0.0, Baron_Edward_angry]
       
     # shot cam geralt gest you
     shot_9_treat:
@@ -721,6 +727,7 @@ storyboard:
       - actor.gamestate: [0.0, Bandit_camp_axe]
       - actor.gamestate: [0.0, Bandit_crossbow]
       
+      - actor.mimic: [0.0, Baron_Edward_aggressive]
       - actor.anim.additive: 
           .@pos: [0.0, Baron_Edward_add_gesture_point_forward]
           blendin: 0.5

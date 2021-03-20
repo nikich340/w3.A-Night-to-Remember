@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 1113, saved: 2020-12-20 23:24:06)
+# (version: 1257, saved: 2021-03-20 03:53:22)
 #
 ---
 structure:
@@ -391,7 +391,7 @@ structure:
             - seconds: 0.5
           next:
             - script.play_music_combat_triss
-            - script.tune_triss
+            - script.set_triss_level
         
         script.hide_triss_indicator:
           ".editor":
@@ -455,6 +455,18 @@ structure:
             - saveType: SESB_Save
           next: ".done"
         
+        script.set_triss_level:
+          ".editor":
+            pos: [ 4746.0, 543.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_SetRelativeLevel
+          parameter:
+            - tag: cname_ntr_triss_monster
+            - levelBonus: -25
+          next:
+            - waituntil.half_dead
+        
         script.teleport_triss:
           ".editor":
             pos: [ 4796.4770507812, -151.8672180176 ]
@@ -508,31 +520,6 @@ structure:
           parameter:
             - tag: cname_ntr_hag_intro
             - level: -5
-          next: ".done"
-        
-        script.tune_triss:
-          ".editor":
-            pos: [ 4736.0, 532.0 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_TuneNPC
-          parameter:
-            - tag: cname_ntr_triss_monster
-            - level: 975
-            - attitude: Hostile
-            - immortality: None
-          next:
-            - waituntil.half_dead
-        
-        script.tune_triss_power:
-          ".editor":
-            pos: [ 5151.0, 611.0 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_SetRelativeLevel
-          parameter:
-            - tag: cname_ntr_triss_monster
-            - levelBonus: 0
           next: ".done"
         
         script.wait_05s:

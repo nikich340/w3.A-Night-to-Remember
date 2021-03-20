@@ -95,10 +95,10 @@ repository:
         rot: [ 0.0, 3.0900051594, 67.9102783203 ]
       #zoom: 1.0
       dof:
+        blur: [6, 102]
+        focus: [7, 100]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 4.8093800545, 7.8093800545 ]
-        focus: [ 5.3093800545, 6.3093800545 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -110,10 +110,10 @@ repository:
         rot: [ 0.0, 1.0, 97.9942016602 ]
       #zoom: 1.0
       dof:
+        blur: [3.8093772618638679, 16.508888408700511]
+        focus: [4.8093772618638679, 14.508888408700511]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 4.8093800545, 7.8093800545 ]
-        focus: [ 5.3093800545, 6.3093800545 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -125,10 +125,10 @@ repository:
         rot: [ 0.0, 1.3300051689, 100.1390991211 ]
       #zoom: 1.0
       dof:
+        blur: [2.8942976327822638, 17.6237563059777]
+        focus: [3.8942976327822638, 15.623756305977698]
+        intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
-        blur: [ 3.8942933083, 6.8942933083 ]
-        focus: [ 4.3942933083, 5.3942933083 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "medium"
         tags: [ "ext" ]
@@ -680,10 +680,10 @@ repository:
         rot: [ 0.0, 358.1675109863, 236.7583618164 ]
       zoom: 0.0
       dof:
+        blur: [1.067504574879059, 11.767095937658171]
+        focus: [2.067504574879059, 9.767095937658171]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 2.0675032139, 5.0675029755 ]
-        focus: [ 2.5675032139, 3.5675032139 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -695,10 +695,10 @@ repository:
         rot: [ 0.0, 358.2225036621, 250.2593383789 ]
       zoom: 0.0
       dof:
+        blur: [4.1212420931787985, 23.120778977769767]
+        focus: [5.1212420931787985, 21.120778977769767]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 7.7671051025, 10.7671051025 ]
-        focus: [ 8.2671051025, 9.2671051025 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -725,10 +725,10 @@ repository:
         rot: [ 0.0, 355.9400024414, 104.8601989746 ]
       zoom: 0.0
       dof:
+        blur: [0.84282603474314088, 5.8428260347431404]
+        focus: [1.8428260347431409, 3.8428260347431409]
+        intensity: 0.25
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.8762154579, 4.8762154579 ]
-        focus: [ 2.3762154579, 3.3762154579 ]
-        intensity: 0.2500000000
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -1415,11 +1415,11 @@ storyboard:
       - cam.blend.start: [0.0, cam_65_Shot4_to_ger_upd_v2, rapid]
       - actor.lookat: [0.0, geralt, orianna_human]
       #- actor.anim.additive: [0.2, geralt_high_standing_aggressive_gesture_left_hand_flick_1]
-      - actor.anim.additive:
-          actor: orianna_human
-          .@pos: [0.8, anim_6737_add_reaction_sigh_01]
-          blendin: 0.5
-          blendout: 0.5
+      #- actor.anim.additive:
+      #    actor: orianna_human
+      #    .@pos: [0.8, anim_6737_add_reaction_sigh_01]
+      #    blendin: 0.5
+      #    blendout: 0.5
 
     shot_4_shrug:
       - actor.anim.additive:
@@ -2276,7 +2276,7 @@ dialogscript:
     # shot Shot4 to ger
     - CUE: shot_4
     - geralt: "[2.6539567]0000366968|Nice tune… Damn sad, though."
-    - orianna_human: "[1.7619]2114670944|Folk have forgotten it."
+    - orianna_human: "[1.7756]2114670944|Folk have forgotten it."
     - CUE: shot_4_shrug
     - geralt: "[2.3943]2114670945|Got… other things on their mind."
     - CUE: shot_4_go
@@ -2292,7 +2292,8 @@ dialogscript:
         emphasize: true
       - choice: ["2114670941|No need in fight.", section_try_peacefully]
         emphasize: true
-      - TIME_LIMIT: 20.0
+        condition: ["BookReadState_ntr_notices_orianna_notes", "=", 1]
+      #- TIME_LIMIT: 20.0
 
   section_pre_fight:
     - CUE: shot_pre_fight1
@@ -2337,7 +2338,7 @@ dialogscript:
 
   section_fight2:
     - CUE: shot_fight3_pre
-    - orianna_vampire: "[1.9096]2114670949|You won't be an exception."
+    - orianna_vampire: "[1.9094]2114670949|You won't be an exception."
     - CUE: shot_fight3_oriana_morph
     - PAUSE: 1.5
 
@@ -2376,7 +2377,7 @@ dialogscript:
     - geralt: "[3.1793]2114670968|You've killed a man who wanted to reunite a boy with his father."
 
     - CUE: shot_try_peacefully_ori1
-    - orianna_human: "[3.8486]2114670950|Well, the threat of a sword doesn't always bring out the best in me."
+    - orianna_human: "[3.8484]2114670950|Well, the threat of a sword doesn't always bring out the best in me."
     - PAUSE: 0.25
 
     - CUE: shot_try_peacefully_ger2
@@ -2395,8 +2396,9 @@ dialogscript:
 
     - CUE: shot_try_peacefully_ger4
     - geralt: "[5.9308]2114670955|Orianna, your orphanage was destroyed. You've tried to rebuild it, but you're about to lose it all again."
+    - PAUSE: 0.25
     - CUE: shot_try_peacefully_ger4_2
-    - geralt: "[5.1667]2114670451|I get the feeling you no longer consider these repetitive circumstances as minor inconveniences."
+    - geralt: "[5.1298]2114670451|I get the feeling you no longer consider these repetitive circumstances as minor inconveniences."
     - PAUSE: 0.5
 
     - CUE: shot_try_peacefully_ori4
@@ -2419,7 +2421,7 @@ dialogscript:
         emphasize: true
       - choice: ["2114670943|Talked enough, let's fight.", section_pre_fight_v2]
         emphasize: true
-      - TIME_LIMIT: 20.0
+      #- TIME_LIMIT: 20.0
 
   section_try_peacefully2:
     - CUE: shot_try_peacefully_ger6a
@@ -2462,7 +2464,7 @@ dialogscript:
     - PAUSE: 4.5
     - orianna_human: "[5.2690]2114670960|Hmm. Regis, Regis… Awfully considerate as always."
     - CUE: shot_try_peacefully_ori6_2
-    - orianna_human: "[8.0854]2114670977|\"The act of drinking blood for sustenance is a mere myth\", interesting… He seems certain…"
+    - orianna_human: "[8.0854]2114670977|The act.."
     - CUE: shot_try_peacefully_hide_letter_old
     - PAUSE: 1.0
     - orianna_human: "[3.7820]2114670967|Well, I suppose he'd be upset if we tussled, wouldn't he?"
@@ -2601,6 +2603,9 @@ dialogscript:
 
   section_exit_peaceful:
     - OUTPUT: peaceful
-    ###!!!- BLACKSCREEN: true
-    - CAMERA_BLEND: 1.0
+    - BLACKSCREEN: true
+    #- CAMERA_BLEND: 1.0
     - EXIT
+
+
+

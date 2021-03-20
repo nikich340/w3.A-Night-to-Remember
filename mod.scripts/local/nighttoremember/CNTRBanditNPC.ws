@@ -72,10 +72,6 @@ class CNTRBanditNPC extends CNTRCommonNPC {
         scene = (CStoryScene)LoadResource("dlc/dlcntr/data/scenes/17.baron_oneliners.w2scene", true);
         theGame.GetStorySceneSystem().PlayScene(scene, "fight_replic" + IntToString(baronReplicPrev + 1));
     }
-	/*function PlayEffect( effectName : name, optional target : CNode  ) : bool {
-		//NTR_notify("Play: " + effectName + ", target: " + target);
-		return super.PlayEffect( effectName, target );
-	}*/
 }
 
 exec function baronReplic() {

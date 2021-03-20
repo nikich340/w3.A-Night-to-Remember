@@ -1789,6 +1789,7 @@ storyboard:
       - cam: [0.0, cam_1_Shot1_triss]
       - actor.equip.right: [0.0, geralt, steelsword]
       - actor.effect.start: [0.0, triss_monster, q502_teleport_disappear]
+      - actor.effect.stop: [0.0, triss_monster, hand_fx]
       - actor.anim: 
           .@pos: [0.0, triss_monster_scared_start]
           blendout: 0.3

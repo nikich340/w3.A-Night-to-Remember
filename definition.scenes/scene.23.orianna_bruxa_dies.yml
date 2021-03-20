@@ -1228,7 +1228,7 @@ storyboard:
           blendin: 0.4
           blendout: 0.4
 
-      - actor.pose: [0.9, Orianna_bruxa_bruxa_crawl_loop]
+      - actor.pose: [0.9, Orianna_bruxa_bruxa_crawl_loop_slow]
 
     shot_12:
       - cam: [0.0, cam_24_Shot6_crossbowr]
@@ -1238,13 +1238,14 @@ storyboard:
           blendin: 0.0
           clipend: 3.5
           blendout: 0.7
+          stretch: 2.0
 
       - actor.pose: [0.5, geralt_man_geralt_gabriel_aim_idle_rp]
       - actor.placement.start: [0.0, Orianna_bruxa, [ -162.1031646729, 14.2332229614, -11.0387573242 ], [ 0.0, 0.0, 154.4401550293 ]]
       ### 4
       #- actor.placement.end: [1.0, Orianna_bruxa, [ -157.8590240479, 24.6972064972, -11.0896921158 ], [ 0.0, 0.0, 154.4401550293 ]]
       ### 5
-      - actor.placement.end: [1.0, Orianna_bruxa, [ -156.7319641113, 27.0538616180, -11.0896606445 ], [ 0.0, 0.0, 154.4401550293 ]]
+      - actor.placement.end: [0.999, Orianna_bruxa, [ -156.7319641113, 27.0538616180, -11.0896606445 ], [ 0.0, 0.0, 154.4401550293 ]]
       
     shot_13:
       - cam.blend.start: [0.0, cam_27_Shot6_crossbow_gp_bolt_init2, rapid]
@@ -1485,7 +1486,7 @@ dialogscript:
 
     # get bow
     - CUE: shot_12
-    - PAUSE: 3.5
+    - PAUSE: 7.0
 
     - CUE: shot_13
     - PAUSE: 3.0

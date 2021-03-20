@@ -569,7 +569,7 @@ storyboard:
       - actor.anim: 
           .@pos: [0.0, geralt_high_standing_determined_calm_enter_frontal]
           blendout: 0.5
-          clipfront: 3.43
+          clipfront: 4.0
       - actor.equip.right: [0.0, toussaint_fisherman, Fishing_rod]
       - actor.lookat: [0.0, geralt, [ 1.4765067101, 2.5431234837, 1.1232190132 ]]
       - actor.lookat: [0.0, toussaint_fisherman, [ 0.7242193222, 4.3288574219, 0.1091415882 ]]
@@ -830,7 +830,7 @@ dialogscript:
   section_storyboard_ui:
     # shot geralt walk
     - CUE: shot_1
-    - PAUSE: 5.0
+    - PAUSE: 2.5
     # shot geralt ask
     - CUE: shot_2
     - geralt: "[1.8268262]0001124989|Good day. Fish biting?"

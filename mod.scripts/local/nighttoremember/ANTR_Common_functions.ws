@@ -1,5 +1,5 @@
 function NTR_notify(msg : string) {
-	theGame.GetGuiManager().ShowNotification(msg);
+	// debug only! theGame.GetGuiManager().ShowNotification(msg);
     LogChannel('NTR_MOD', msg);
 }
 // -------------------------------------------------
@@ -17,9 +17,8 @@ function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, accept
     for (i = 0; i < entities.Size(); i += 1) {
         actor = (CActor)entities[i];
         if (actor) {
-            LogChannel('HideInRange', "actor " + actor);
+            NTR_notify("NTR_HideActorsInRange: actor " + actor);
             if (!actor.IsAlive()) {
-            	LogChannel('HideInRange', " * actor " + actor);
             	continue;
             }
 
@@ -37,7 +36,7 @@ function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, accept
             }
 
             for (t = 0; t < tags.Size(); t += 1) {
-                LogChannel('HideInRange', "> tag: " + tags[t]);
+                //NTR_notify("NTR_HideActorsInRange: > tag: " + tags[t]);
                 for (j = 0; j < acceptedTags.Size(); j += 1) {
                     if (tags[t] == acceptedTags[j]) {
                         accepted = true;
@@ -47,10 +46,10 @@ function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, accept
             }
             if (!accepted) {
             	if (killIfHostile && ((actor.HasAttitudeTowards(thePlayer) && actor.GetAttitude(thePlayer) == AIA_Hostile) || actor.GetAttitudeGroup() == 'AG_nightwraith' || actor.GetAttitudeGroup() == 'hostile_to_player')) {
-            		LogChannel('HideInRange', " x KILL");
+            		//LogChannel('HideInRange', " x KILL");
             		actor.OnCutsceneDeath();
             	} else {
-	            	LogChannel('HideInRange', " + HIDE");
+	            	//LogChannel('HideInRange', " + HIDE");
 	            	actor.AddTag('ntr_hidden_actor');
 	            	actor.SetVisibility(false);
 	            	actor.SetGameplayVisibility(false);
@@ -63,7 +62,7 @@ function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, accept
         }
     }
 
-    LogChannel('NTR', "Done HideActorsInRange: " + range);
+    NTR_notify("NTR_HideActorsInRange: Done for range: " + range);
 }
 // ------------ Morph all npc components at once (advanced variant) ------------------
 function NTR_MorphNPC( tag : name, morphRatio : float, blendTime : float ) {
@@ -74,47 +73,19 @@ function NTR_MorphNPC( tag : name, morphRatio : float, blendTime : float ) {
 	
 	theGame.GetNPCsByTag(tag, npcs);
 	if (npcs.Size() == 0) {
-		LogChannel('NTR_MorphNPC', "[ERROR] NPCs not found by tag <" + tag + ">");
+		NTR_notify("NTR_MorphNPC: [ERROR] NPCs not found by tag <" + tag + ">");
 	}
 	for (i = 0; i < npcs.Size(); i += 1) {
 		components = npcs[i].GetComponentsByClassName('CMorphedMeshManagerComponent');
 		if (components.Size() == 0) {
-			LogChannel('NTR_MorphNPC', "Not found morph managers");
+			NTR_notify("NTR_MorphNPC: [ERROR] Not found morph managers");
 		}
 		for (j = 0; j < components.Size(); j += 1) {
 			manager = (CMorphedMeshManagerComponent) components[j];
 			if (manager) {
 				manager.SetMorphBlend( morphRatio, blendTime );
-				LogChannel('NTR_MorphNPC', "[OK] Morph component: " + manager + " to <" + morphRatio + "> in " + blendTime + " sec");
+				NTR_notify("NTR_MorphNPC: [OK] Morph component: " + manager + " to <" + morphRatio + "> in " + blendTime + " sec, app: " + npcs[i].GetAppearance());
 			}
 		}
 	}
 }
-/*
-areaName = "novigrad", "skellige", "kaer_morhen", "prolog_village", 
-	"wyzima_castle", "island_of_mist", "spiral", "no_mans_land", "toussaint" 
-	(from which area you want to play music)
-	NMLand = novigrad!!!
-*/
-exec function playMusic( areaName : string, eventName : string, optional saveType : string ) {
-	NTR_PlayMusic(areaName, eventName, saveType);
-}
-// -------------------------------------------------
-exec function playBank( bankName : string ) {
-	if (!theSound.SoundIsBankLoaded(bankName)) {
-		theSound.SoundLoadBank(bankName, true);
-		theGame.GetGuiManager().ShowNotification("Bank loaded");
-	} else {
-		theGame.GetGuiManager().ShowNotification("Bank was already loaded");
-	}
-}
-
-exec function playEventPlayer( eventName : string ) {
-	thePlayer.SoundEvent(eventName);
-}
-
-exec function playEvent( bankName : string, eventName : string, optional saveType : string ) {
-    NTR_PlaySound( bankName, eventName, saveType );
-}
-//playEvent(ntr_quest.bnk, Play_ntr_fangs_music, SESB_ClearSaved)
-//playEvent(ntr_quest.bnk, Play_ntr_trailer_music, SESB_ClearSaved)

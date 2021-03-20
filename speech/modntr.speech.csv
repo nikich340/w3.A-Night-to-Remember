@@ -373,8 +373,8 @@
 2114670343|00000000||I challenge you to a duel! You and I!
 2114670344|00000000||Goodbye, witcher. And… Thank you.
 2114670345|00000000||Take care of it, in her name.
-2114670346|00000000||How long has he been here?
-2114670347|00000000||About an hour. Saw…
+2114670346|00000000||How long has he been here? (ask Jato where's voiceline)
+2114670347|00000000||About an hour. Saw… (ask Jato where's voiceline)
 2114670348|00000000||Thank the heavens! My boy is okay…
 2114670349|00000000||There was no need to be so difficult Geralt. Anyways…
 2114670350|00000000||What about the girl? You'll look after her?
@@ -454,7 +454,3 @@
 2114670447|00000000||Thank you, doctor.
 2114670448|00000000||Take good care of the girl. Another injury like this could prove fatal.
 2114670449|00000000||Interesting, she seems to hesitate, as though she is experiencing some sort of inner conflict…
-;
-;
-2114670990|00000000||Here is Johnny!
-2114670991|00000000||Noooo!
