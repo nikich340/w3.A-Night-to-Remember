@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 1257, saved: 2021-03-20 03:53:22)
+# (version: 1296, saved: 2021-03-26 01:24:31)
 #
 ---
 structure:
@@ -14,7 +14,7 @@ structure:
           - waituntil.wait_quest_allowed
           - waituntil.3s
           - objective.Go_to_corvo_at_midnight: Activate
-          - script.Show_debug_WARNING
+          - script.new_ntr_factchecker
       
       subsegment.FINALE:
         ".editor":
@@ -108,7 +108,7 @@ structure:
       waituntil.2s:
         elapsed: "00:00:02"
         ".editor":
-          pos: [ 72.0, 532.0 ]
+          pos: [ -142.0, 757.0 ]
           in: [ In ]
           out: [ Out ]
         next:
@@ -202,6 +202,33 @@ structure:
           out: [ Out ]
         next:
           - addfact.del_fact11
+      
+      waituntil.ntr_flowdebug_1:
+        factdb: [ ntr_flowdebug_1, ">=", 1 ]
+        ".editor":
+          pos: [ 218.0, 557.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - changelayers.show_orphlayer
+      
+      waituntil.ntr_flowdebug_2:
+        factdb: [ ntr_flowdebug_2, ">=", 1 ]
+        ".editor":
+          pos: [ 431.0, 600.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - changelayers.show_town_blood
+      
+      waituntil.ntr_flowdebug_3:
+        factdb: [ ntr_flowdebug_3, ">=", 1 ]
+        ".editor":
+          pos: [ 504.6666564941, 668.8888549805 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - changelayers.show_river
       
       waituntil.ntr_quest_amphitheatre_active:
         factdb: [ ntr_quest_amphitheatre_active, ">=", 1 ]
@@ -338,9 +365,17 @@ structure:
         next.False:
           - waituntil.outside_area
       
+      script.FixCampHorses:
+        ".editor":
+          pos: [ 1131.0, 949.0 ]
+          in: [ In ]
+          out: [ Out ]
+        function: NTR_FixCampHorses
+        next: ".done"
+      
       script.Lock_back_door_house:
         ".editor":
-          pos: [ 238.8543701172, 526.2079467773 ]
+          pos: [ 28.0, 722.0 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_DoorChangeState
@@ -351,7 +386,7 @@ structure:
       
       script.Lock_front_door:
         ".editor":
-          pos: [ 209.4376220703, 617.6387939453 ]
+          pos: [ 9.0, 861.0 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_DoorChangeState
@@ -369,12 +404,14 @@ structure:
         next:
           - waituntil.1ss
       
-      script.Show_debug_WARNING:
+      script.NTR_DebugWarning_2:
         ".editor":
-          pos: [ -1130.0, 661.0 ]
+          pos: [ -761.0756835938, 635.8004150391 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_DebugWarning
+        parameter:
+          - str: "[FAIL] ep2 story NOT completed!"
         next: ".done"
       
       script.Teleport_Orianna_horse:
@@ -414,10 +451,7 @@ structure:
           - factCond: "=="
           - val: 1
         next.False:
-          - script.teleport_horse1
-          - script.teleport_horse2
-          - script.teleport_horse3
-          - script.teleport_horse_baron
+          - script.FixCampHorses
       
       script.check_camp_removed3:
         ".editor":
@@ -474,60 +508,37 @@ structure:
         next.True:
           - script.check_fact_allowed
       
+      script.new_ntr_debugwarning:
+        ".editor":
+          pos: [ -751.0, 729.0 ]
+          in: [ In ]
+          out: [ Out ]
+        function: NTR_DebugWarning
+        parameter:
+          - str: "[OK] ep2 story COMPLETED!"
+        next: ".done"
+      
+      script.new_ntr_factchecker:
+        ".editor":
+          pos: [ -933.0, 682.0 ]
+          in: [ In ]
+          out: [ "False", "True" ]
+        function: NTR_FactChecker
+        parameter:
+          - factName: ep2_main_story_done
+          - factCond: ">="
+          - val: 1
+        next.False:
+          - script.NTR_DebugWarning_2
+        next.True:
+          - script.new_ntr_debugwarning
+      
       script.sounds_dettlaff:
         ".editor":
           pos: [ 117.6712799072, 203.2845916748 ]
           in: [ In ]
           out: [ Out ]
         function: playSoundsCustom
-        next: ".done"
-      
-      script.teleport_horse1:
-        ".editor":
-          pos: [ 1176.0, 984.0 ]
-          in: [ In ]
-          out: [ Out ]
-        function: NTR_teleportToNode
-        parameter:
-          - tag: cname_ntr_camp_horse1
-          - tagNode: cname_ntr_bob_horse1_parked_ap
-          - applyRotation: true
-        next: ".done"
-      
-      script.teleport_horse2:
-        ".editor":
-          pos: [ 1192.2021484375, 1072.3410644531 ]
-          in: [ In ]
-          out: [ Out ]
-        function: NTR_teleportToNode
-        parameter:
-          - tag: cname_ntr_camp_horse2
-          - tagNode: cname_ntr_bob_horse2_parked_ap
-          - applyRotation: true
-        next: ".done"
-      
-      script.teleport_horse3:
-        ".editor":
-          pos: [ 1202.3704833984, 1153.1068115234 ]
-          in: [ In ]
-          out: [ Out ]
-        function: NTR_teleportToNode
-        parameter:
-          - tag: cname_ntr_camp_horse3
-          - tagNode: cname_ntr_bob_horse3_parked_ap
-          - applyRotation: true
-        next: ".done"
-      
-      script.teleport_horse_baron:
-        ".editor":
-          pos: [ 1205.6477050781, 1231.9954833984 ]
-          in: [ In ]
-          out: [ Out ]
-        function: NTR_teleportToNode
-        parameter:
-          - tag: cname_ntr_camp_horse_baron
-          - tagNode: cname_ntr_bob_horse_baron_parked_ap
-          - applyRotation: true
         next: ".done"
       
       changelayers.hide_hide_hide_ALL:
@@ -581,6 +592,9 @@ structure:
           - waituntil.inside_camp
           - waituntil.2s
           - waituntil.2s_to_get_ready
+          - waituntil.ntr_flowdebug_1
+          - waituntil.ntr_flowdebug_2
+          - waituntil.ntr_flowdebug_3
       
       changelayers.show_orphlayer:
         ".editor":

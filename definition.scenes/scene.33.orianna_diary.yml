@@ -934,6 +934,10 @@ storyboard:
           .@pos: [0.0, anim_11113_high_standing_hold_book_determined_gesture_read]
 
     shot_blood1:
+      - env.blendin:
+          .@pos: [0.0, dlc/bob/data/environment/definitions/cave/cave_catacombs.env, 0.0]
+          blendFactor: 1.0
+
       - fade.in: [0.0, 0.5]
       #- actor.sound: [0.0, Orianna_vampire, Play_ntr_diary_feeding]
       - actor.hide: [0.0, geralt]
@@ -1321,6 +1325,7 @@ storyboard:
 
     # shot Shot0 geralt togame
     shot_geralt_reads_finish:
+      - env.blendout: [0.0, dlc/bob/data/environment/definitions/cave/cave_catacombs.env, 0.0]
       - fade.in: [0.0, 0.5]
       - actor.show: [0.0, geralt]
       - actor.show: [0.0, diary]
@@ -1367,6 +1372,16 @@ dialogscript:
 
   section_start:
     - PAUSE: 0.0
+    - NEXT: script_music_diva
+
+  script_music_diva:
+    - SCRIPT:
+            function: NTR_PlayMusicScene
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - areaName: "toussaint"
+                #- eventName: "mus_cs704_diva_feeding"
+                - eventName: "mus_mq7017_ambient_dark"
+                - saveType: "SESB_ClearSaved"
     - NEXT: section_storyboard_ui
 
   #script_call_attach_diary:

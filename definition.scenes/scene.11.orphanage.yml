@@ -905,7 +905,7 @@ dialogscript:
     - CUE: shot_d6_ger
     - geralt: "[5.5173635]0001117735|I'll ask again, polite like, and you'll answer, just as politely."
     - CUE: shot_d6_band
-    - fat_bandit: "[9.3580]2114670779|Would ya look at that lads, vagrant mutt's givin' us orders. Needs to know 'is place… Fuck 'im up!"
+    - fat_bandit: "[9.3580]2114670779|Would ya look at that lads, vagrant mutt's givin' us orders… Needs to know 'is place! Fuck 'im up!"
     - CUE: shot_10
     - bandit_2: "[2.49471]0001156640|We'll break your legs, vagrant!"
     - NEXT: section_exit_fistfight
@@ -928,6 +928,7 @@ dialogscript:
   section_exit_normal:
     - OUTPUT: normal
     - EXIT
+
 
 
 

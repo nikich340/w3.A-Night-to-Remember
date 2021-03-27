@@ -530,7 +530,7 @@ dialogscript:
     - CUE: shot_8_ger_listen
     - Big_bandit: "[5.4793]2114670807|But we didn't manage to find neither the boy nor Orianna."
     - CUE: shot_9_band
-    - Big_bandit: "[9.4864]2114670808|Since that vampire attack the orphanage has been abandoned… All that remains now is a mess and a pile children's corpses."
+    - Big_bandit: "[9.4864]2114670808|Since that vampire attack the orphanage has been abandoned. All that remains now is a mess and a pile children's corpses…"
     - Big_bandit: "[12.3582]2114670809|The Baron was quite upset. But then we learned that Orianna is alive and in perfect health - people saw her in the city with the wee boy."
     - CUE: shot_10_ger_listen2
     - Big_bandit: "[17.5940]2114670810|The Baron is certain that this is his son, and very much wants to find this woman. However she is… elusive, everyone knows her, but where she is - no one seems to know."
@@ -553,6 +553,7 @@ dialogscript:
   section_exit:
     #- CAMERA_BLEND: 1.0
     - EXIT
+
 
 
 

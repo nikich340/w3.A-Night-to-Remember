@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: intro_nightmare
 # 
-# (version: 1257, saved: 2021-03-20 03:53:22)
+# (version: 1296, saved: 2021-03-26 01:24:31)
 #
 ---
 structure:
@@ -46,7 +46,7 @@ structure:
         
         scene.04_triss_appear:
           ".editor":
-            pos: [ 3495.0, 595.0 ]
+            pos: [ 3495.0, 601.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 04.triss_appear.yml
@@ -58,6 +58,7 @@ structure:
             - objective.talk_triss: Activate
             - waituntil.wait_contact_triss
             - journal.journal_entry_3: Activate
+            - objective.blood_tracks: Success
         
         scene.05_triss_to_monster:
           ".editor":
@@ -111,7 +112,7 @@ structure:
         
         scene.gp_wall:
           ".editor":
-            pos: [ 3132.0, 578.0 ]
+            pos: [ 3124.0, 639.0 ]
             in: [ hag_wall ]
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
@@ -119,10 +120,8 @@ structure:
           interruptable: false
           _fadein: false
           next.Output:
-            - objective.blood_tracks: Success
-            - waituntil.triss_found_area
             - objective.behind_wall: Activate
-            - script.play_music_invest_suspense
+            - objective.blood_tracks: Success
         
         waituntil.Triss_out:
           outside: [ bob/magic_area, ntr_triss_monster ]
@@ -136,22 +135,26 @@ structure:
         waituntil.bloodarea1:
           inside: [ bob/bloodarea1, PLAYER ]
           ".editor":
-            pos: [ 2300.0, 225.0 ]
+            pos: [ 2249.0, 376.0 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - mappin.bloodpin2: Enable
+            - waituntil.bloodarea2
             - mappin.bloodpin1: Disable
+            - mappin.bloodpin2: Enable
         
         waituntil.bloodarea2:
           inside: [ bob/bloodarea2, PLAYER ]
           ".editor":
-            pos: [ 2590.0, 422.0 ]
+            pos: [ 2558.0, 378.0 ]
             in: [ In ]
             out: [ Out ]
           next:
             - mappin.bloodpin2: Disable
             - mappin.bloodpin3: Enable
+            - spawn.spawn_triss_normal
+            - script.play_music_invest_suspense
+            - waituntil.triss_found_area
         
         waituntil.half_dead:
           factdb: [ ntr_intro_triss_half, ">=", 1 ]
@@ -194,7 +197,7 @@ structure:
         waituntil.triss_found_area:
           inside: [ bob/triss_found, PLAYER ]
           ".editor":
-            pos: [ 3330.0, 512.0 ]
+            pos: [ 3117.0, 458.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -222,11 +225,10 @@ structure:
         waituntil.wait_blood_examined:
           examined: bob/blood_on_wall
           ".editor":
-            pos: [ 2952.0, 520.0 ]
+            pos: [ 2939.0, 538.0 ]
             in: [ In ]
             out: [ Out ]
           next:
-            - spawn.spawn_triss_normal
             - scene.gp_wall: hag_wall
         
         waituntil.wait_contact_triss:
@@ -259,6 +261,20 @@ structure:
             - script.Stop_triss_effects
             - changelayers.hide_barrier
             - objective.fight_triss: Success
+        
+        script.Heal_player:
+          ".editor":
+            pos: [ 6557.0, 632.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: SetHealthQuest
+          parameter:
+            - targetTag: cname_PLAYER
+            - healthPerc: 100
+            - relative: false
+            - shouldPlayHitParticle: false
+          next:
+            - script.SetPlayerToxicity
         
         script.Kill_banshee:
           ".editor":
@@ -312,6 +328,19 @@ structure:
             - slot: 0
           next:
             - script.half_sec
+        
+        script.SetPlayerToxicity:
+          ".editor":
+            pos: [ 6718.0, 507.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: SetPlayerToxicity
+          parameter:
+            - percents: 0
+            - points: 0.0
+            - relative: false
+          next:
+            - out
         
         script.Stop_triss_effects:
           ".editor":
@@ -445,7 +474,7 @@ structure:
         
         script.play_music_invest_suspense:
           ".editor":
-            pos: [ 3327.0, 402.0 ]
+            pos: [ 2855.0, 190.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_PlayMusic
@@ -561,9 +590,8 @@ structure:
             - after_hag
           next:
             - objective.blood_tracks: Activate
+            - waituntil.bloodarea1
             - mappin.bloodpin1: Enable
-            - mappin.bloodpin2: Disable
-            - mappin.bloodpin3: Disable
         
         changelayers.show_magic:
           ".editor":
@@ -607,7 +635,7 @@ structure:
         
         spawn.spawn_triss_normal:
           ".editor":
-            pos: [ 3125.0, 435.0 ]
+            pos: [ 2872.0, 334.0 ]
             hint: spawn-only
             in: []
             out: []
@@ -686,7 +714,7 @@ structure:
           next: ".done"
         
         journal.journal_entry_3:
-          ".editor": [ 3801.0, 859.0 ]
+          ".editor": [ 3811.0, 879.0 ]
           entry: quests/nightofnightmares/ntr_intro3
           notify: true
           next: ".done"
@@ -699,14 +727,14 @@ structure:
           next: ".done"
         
         objective.behind_wall:
-          ".editor": [ 3332.0, 776.0 ]
+          ".editor": [ 3327.0, 899.0 ]
           objective: nightofnightmares/intro_hag/blood_tracks_wall
           notify: true
           track: true
           next: ".done"
         
         objective.blood_tracks:
-          ".editor": [ 2473.0, 775.0 ]
+          ".editor": [ 2807.0, 904.0 ]
           objective: nightofnightmares/intro_hag/blood_tracks
           notify: true
           track: true
@@ -727,19 +755,17 @@ structure:
           next: ".done"
         
         mappin.bloodpin1:
-          ".editor": [ 2100.0, 225.0 ]
+          ".editor": [ 2221.0, 657.0 ]
           mappin: nightofnightmares/intro_hag/blood_tracks/bloodpin1
-          next:
-            - waituntil.bloodarea1
+          next: ".done"
         
         mappin.bloodpin2:
-          ".editor": [ 2385.0, 557.0 ]
+          ".editor": [ 2459.0, 672.0 ]
           mappin: nightofnightmares/intro_hag/blood_tracks/bloodpin2
-          next:
-            - waituntil.bloodarea2
+          next: ".done"
         
         mappin.bloodpin3:
-          ".editor": [ 2737.0, 570.0 ]
+          ".editor": [ 2731.0, 645.0 ]
           mappin: nightofnightmares/intro_hag/blood_tracks/bloodpin3
           next:
             - waituntil.wait_blood_examined
@@ -761,7 +787,7 @@ structure:
           ".editor": [ 6397.0, 552.0 ]
           value: [ ntr_quest_intro_completed, 1 ]
           next:
-            - out
+            - script.Heal_player
         
         addfact.ntr_quest_started:
           ".editor": [ 1117.0, 588.0 ]
@@ -769,6 +795,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 6572.0, 631.0 ]
+          ".editor": [ 6886.0, 625.0 ]
           next: ".done"
         

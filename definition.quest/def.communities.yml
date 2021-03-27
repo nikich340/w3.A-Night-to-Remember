@@ -240,7 +240,8 @@ communities:
           attitude: AG_grave_hag
           spawn_at: bob/hag_spawn
           #level: 50
-          immortality: none
+          immortality: AIM_None
+          guard: [ bob/hag_area, 5.0 ]
           
   comm_orianna_human:
     actors:
@@ -478,7 +479,7 @@ communities:
         baron_edward:
           add_tags: [ "olgierd" ]
           attitude: hostile_to_player
-          immortality: none
+          immortality: AIM_None
           use_last_ap: false
           start_in_ap: false
           spawn_at: bob/river_spawn1
@@ -576,47 +577,57 @@ communities:
         baron_edward:
           add_tags: [ "olgierd" ]
           attitude: hostile_to_player
-          immortality: none
+          immortality: AIM_None
           use_last_ap: false
           start_in_ap: false
           spawn_at: bob/riverspawn_baron
-          #spawntimes:
-          #  "00:00": [1, false] # 1 actor, no respawn
+          spawntimes:
+            "00:00": [1, false] # 1 actor, no respawn
 
         bandit_axe:
           attitude: hostile_to_player
-          immortality: none
+          immortality: AIM_None
           use_last_ap: false
           start_in_ap: false
           spawn_at: bob/riverspawn_axe
+          spawntimes:
+            "00:00": [1, false] # 1 actor, no respawn
 
         bandit_sword:
           attitude: hostile_to_player
-          immortality: none
+          immortality: AIM_None
           use_last_ap: false
           start_in_ap: false
           spawn_at: bob/riverspawn_sword
+          spawntimes:
+            "00:00": [1, false] # 1 actor, no respawn
 
         bandit_spear:
           attitude: hostile_to_player
-          immortality: none
+          immortality: AIM_None
           use_last_ap: false
           start_in_ap: false
           spawn_at: bob/riverspawn_spear
+          spawntimes:
+            "00:00": [1, false] # 1 actor, no respawn
 
         fat_bandit:
           attitude: hostile_to_player
-          immortality: none
+          immortality: AIM_None
           use_last_ap: false
           start_in_ap: false
           spawn_at: bob/riverspawn_fat
+          spawntimes:
+            "00:00": [1, false] # 1 actor, no respawn
 
         crossbow_bandit:
           attitude: hostile_to_player
-          immortality: none
+          immortality: AIM_None
           use_last_ap: false
           start_in_ap: false
           spawn_at: bob/riverspawn_poor
+          spawntimes:
+            "00:00": [1, false] # 1 actor, no respawn
 
   comm_camp_bandit_axe_night:
     actors:
@@ -868,7 +879,7 @@ communities:
           appearance: triss_monster    # [someappearance, only_on_spawn_bool]
           use_last_ap: false
           start_in_ap: false
-          immortality: none
+          immortality: AIM_None
           attitude: hostile_to_player
           spawn_at: bob/triss_spawn
           guard: [ bob/magic_area, 0.0 ]

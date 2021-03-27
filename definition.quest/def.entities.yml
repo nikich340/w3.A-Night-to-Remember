@@ -155,7 +155,7 @@ templates:
                 ".type": CFXTrack
                 trackItems:
                   - ".type": CFXTrackItemParticles
-                    timeDuration: 9.0
+                    timeDuration: 7.0
                     particleSystem: "dlc\\dlcntr\\data\\fx\\ntr_credits_1.w2p"
                     spawner:
                       ".type": CFXSimpleSpawner
@@ -180,7 +180,7 @@ templates:
                       - [ 1.0, 1.0, 1.0 ]
             isExpanded: true
             trackGroupColor: [ 180, 203, 204, 100 ]
-        length: 9.0
+        length: 7.0
         showDistance: 150.0
       ntr_credits_2:
         ".type": CFXDefinition

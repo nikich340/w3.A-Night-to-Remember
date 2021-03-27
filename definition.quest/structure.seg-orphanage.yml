@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: orphanage
 # 
-# (version: 1257, saved: 2021-03-20 03:53:22)
+# (version: 1296, saved: 2021-03-26 01:24:31)
 #
 ---
 structure:
@@ -27,7 +27,7 @@ structure:
         
         scene.gp_scene:
           ".editor":
-            pos: [ 2046.0, -319.0 ]
+            pos: [ 2117.0, -365.0 ]
             in: [ after_orphanage ]
             out: [ Output ]
           scene: 13.gameplay_orphanage.yml
@@ -71,7 +71,6 @@ structure:
             - script.reset_win_fact
             - journal.entry_loose: Activate
             - objective.defeat_bandits: Failure
-            - script.Steal_money
         
         scene.scene_win:
           ".editor":
@@ -350,6 +349,15 @@ structure:
             - activate: true
           next: ".done"
         
+        script.new_ntr_halfsec:
+          ".editor":
+            pos: [ 1983.0, -283.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_Halfsec
+          next:
+            - scene.gp_scene: after_orphanage
+        
         script.player_fistfight:
           ".editor":
             pos: [ 1187.1884765625, 383.6393127441 ]
@@ -477,17 +485,6 @@ structure:
           next:
             - journal.entry_orphanage_peaceful: Activate
         
-        script.wait_05_ss:
-          ".editor":
-            pos: [ 1872.0, -257.0 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_Wait
-          parameter:
-            - seconds: 0.5
-          next:
-            - scene.gp_scene: after_orphanage
-        
         spawn.bandits_normal_comm:
           ".editor":
             pos: [ 2133.7387695312, -86.3081283569 ]
@@ -515,7 +512,7 @@ structure:
           entry: quests/nighttoremember/orphanage_loose
           notify: true
           next:
-            - script.wait_05_ss
+            - addfact.ntr_quest_orphanage_completed
         
         journal.entry_orph_common:
           ".editor": [ 1564.0, 155.0 ]
@@ -528,14 +525,14 @@ structure:
           entry: quests/nighttoremember/orphanage_peaceful
           notify: true
           next:
-            - script.wait_05_ss
+            - addfact.ntr_quest_orphanage_completed
         
         journal.entry_win:
           ".editor": [ 1820.0, -126.0 ]
           entry: quests/nighttoremember/orphanage_win
           notify: true
           next:
-            - script.wait_05_ss
+            - script.new_ntr_halfsec
         
         objective.Go_orphanage:
           ".editor": [ 78.0, 425.0 ]
@@ -569,7 +566,7 @@ structure:
           next: ".done"
         
         addfact.ntr_quest_orphanage_completed:
-          ".editor": [ 2251.0, -259.0 ]
+          ".editor": [ 2258.0, -263.0 ]
           value: [ ntr_quest_orphanage_completed, 1 ]
           next:
             - out

@@ -1051,6 +1051,7 @@ storyboard:
   section_storyboard_ui:
     # shot Shot1 cam1
     shot_1:
+      - actor.effect.start: [0.0, Orianna_bruxa, appear]
       - prop.placement: [0.0, witcher_crossbow_lvl7, [ -168.5621643066, 6.9380402565, -19.6555137634 ], [ 353.0975036621, 355.2424926758, 340.1174316406 ]]
       - prop.placement: [0.0, mq7006_item_aerondight_sword, [ -167.5621643066, 6.9380402565, -19.6555137634 ], [ 353.0975036621, 355.2424926758, 340.1174316406 ]]
       - prop.placement: [0.0, knife_to_play, [ -166.5621643066, 6.9380402565, -19.6555137634 ], [ 353.0975036621, 355.2424926758, 340.1174316406 ]]
@@ -1238,7 +1239,7 @@ storyboard:
           blendin: 0.0
           clipend: 3.5
           blendout: 0.7
-          stretch: 2.0
+          stretch: 1.6
 
       - actor.pose: [0.5, geralt_man_geralt_gabriel_aim_idle_rp]
       - actor.placement.start: [0.0, Orianna_bruxa, [ -162.1031646729, 14.2332229614, -11.0387573242 ], [ 0.0, 0.0, 154.4401550293 ]]
@@ -1486,7 +1487,7 @@ dialogscript:
 
     # get bow
     - CUE: shot_12
-    - PAUSE: 7.0
+    - PAUSE: 5.6
 
     - CUE: shot_13
     - PAUSE: 3.0

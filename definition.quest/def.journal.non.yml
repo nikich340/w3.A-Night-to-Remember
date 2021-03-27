@@ -1,7 +1,7 @@
 journals:
   quests:
     nightofnightmares:
-      title: "A Night of Nightmares (DEBUG)"
+      title: "A Night of Nightmares (DEBUG v4)"
       type: "Side"
       world: bob                      # optional, if empty every objective requires world
       level: 50
@@ -20,7 +20,7 @@ journals:
           - kill_hag:
               caption: "Kill water hag."
               mappins:
-                - [ bloodpin1, 15 ]
+                - [ hag_pin, 15 ]
           - blood_tracks:
               caption: "Use your Witcher Senses to follow the hag's tracks."
               mappins:

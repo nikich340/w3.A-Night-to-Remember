@@ -151,6 +151,134 @@ templates:
           - ".type": SBehaviorGraphInstanceSlot
             instanceName: StoryScene
             graph: gameplay\behaviors\pc\behaviorgraph\pc_dialog.w2beh
+
+    effects:
+      mist_fly_new:
+        ".type": CFXDefinition
+        trackGroups:
+          sounds:
+            ".type": CFXTrackGroup
+            tracks:
+              sfx:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemSoundEvent
+                    timeBegin: 0.0234577991
+                    soundEventName: q704_regis_mistform_LP
+                    speed: 5.0
+                  - ".type": CFXTrackItemSoundEvent
+                    timeBegin: 0.5747160912
+                    soundEventName: q704_regis_mistform_LP_stop
+                    speed: 5.0
+            isExpanded: true
+            trackGroupColor: [ 245, 166, 165, 100 ]
+          particle:
+            ".type": CFXTrackGroup
+            tracks:
+              end:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemMaterialOverride
+                    timeBegin: 0.400000006
+                    timeDuration: 0.200000003
+                    material: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\dettlaff_transparent.w2mg"
+                    drawOriginal: true
+                    interpolation:
+                      - [ 1.0, 0.0, 1.0, 1.0 ]
+                      - [ 0.9259259105, 0.0, 1.0, 1.0 ]
+                      - [ 0.8518518209, 0.0, 1.0, 1.0 ]
+                      - [ 0.7777777314, 0.0, 1.0, 1.0 ]
+                      - [ 0.7037036419, 0.0, 1.0, 1.0 ]
+                      - [ 0.629629612, 0.0, 1.0, 1.0 ]
+                      - [ 0.5555555224, 0.0, 1.0, 1.0 ]
+                      - [ 0.4814814925, 0.0, 1.0, 1.0 ]
+                      - [ 0.4074073434, 0.0, 1.0, 1.0 ]
+                      - [ 0.3333333135, 0.0, 1.0, 1.0 ]
+                      - [ 0.2592592239, 0.0, 1.0, 1.0 ]
+                      - [ 0.1851851344, 0.0, 1.0, 1.0 ]
+                      - [ 0.1111110449, 0.0, 1.0, 1.0 ]
+                      - [ 0.037037015, 0.0, 1.0, 1.0 ]
+                      - [ 0.0, 0.0, 1.0, 1.0 ]
+                      - [ 0.0, 0.0, 1.0, 1.0 ]
+                  - ".type": CFXTrackItemMaterialOverride
+                    timeDuration: 0.200000003
+                    material: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\dettlaff_transparent.w2mg"
+                    interpolation:
+                      - [ 0.0, 1.0, 1.0, 0.0 ]
+                      - [ 0.0, 1.0, 1.0, 0.0666666701 ]
+                      - [ 0.0, 1.0, 1.0, 0.1333333403 ]
+                      - [ 0.0, 1.0, 1.0, 0.2000000179 ]
+                      - [ 0.0, 1.0, 1.0, 0.2666666806 ]
+                      - [ 0.0, 1.0, 1.0, 0.3333333433 ]
+                      - [ 0.0, 1.0, 1.0, 0.400000006 ]
+                      - [ 0.0, 1.0, 1.0, 0.4666666687 ]
+                      - [ 0.0, 1.0, 1.0, 0.5333333611 ]
+                      - [ 0.0, 1.0, 1.0, 0.6000000238 ]
+                      - [ 0.0, 1.0, 1.0, 0.6666666865 ]
+                      - [ 0.0, 1.0, 1.0, 0.7333333492 ]
+                      - [ 0.0, 1.0, 1.0, 0.8000000119 ]
+                      - [ 0.0, 1.0, 1.0, 0.8666666746 ]
+                      - [ 0.0, 1.0, 1.0, 0.9333333373 ]
+                      - [ 0.0, 1.0, 1.0, 1.0 ]
+                  - ".type": CFXTrackItemMaterialOverride
+                    timeBegin: 0.200000003
+                    timeDuration: 0.200000003
+                    material: "dlc\\bob\\data\\fx\\monsters\\dettlaff\\dettlaff_transparent.w2mg"
+                    interpolation:
+                      - [ 0.0, 1.0, 1.0, 0.0 ]
+                      - [ 0.0, 1.0, 1.0, 0.0666666701 ]
+                      - [ 0.0, 1.0, 1.0, 0.1333333403 ]
+                      - [ 0.0, 1.0, 1.0, 0.2000000179 ]
+                      - [ 0.0, 1.0, 1.0, 0.2666666806 ]
+                      - [ 0.0, 1.0, 1.0, 0.3333333433 ]
+                      - [ 0.0, 1.0, 1.0, 0.400000006 ]
+                      - [ 0.0, 1.0, 1.0, 0.4666666687 ]
+                      - [ 0.0, 1.0, 1.0, 0.5333333611 ]
+                      - [ 0.0, 1.0, 1.0, 0.6000000238 ]
+                      - [ 0.0, 1.0, 1.0, 0.6666666865 ]
+                      - [ 0.0, 1.0, 1.0, 0.7333333492 ]
+                      - [ 0.0, 1.0, 1.0, 0.8000000119 ]
+                      - [ 0.0, 1.0, 1.0, 0.8666666746 ]
+                      - [ 0.0, 1.0, 1.0, 0.9333333373 ]
+                      - [ 0.0, 1.0, 1.0, 1.0 ]
+              start:
+                ".type": CFXTrack
+                trackItems:
+                  - ".type": CFXTrackItemParticles
+                    timeBegin: 0.1845654249
+                    timeDuration: 0.6000000238
+                    particleSystem: "dlc\\bob\\data\\fx\\characters\\regis\\regis_puff_02.w2p"
+                    spawner:
+                      ".type": CFXSimpleSpawner
+                      boneNames:
+                        - torso2
+                        - pelvis
+                    interpolation:
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 1.0, 1.0, 1.0 ]
+                      - [ 0.9389070272, 1.0, 0.9283961058 ]
+                      - [ 0.8215435743, 1.0, 0.812346518 ]
+                      - [ 0.7041802406, 1.0, 0.6962970495 ]
+                      - [ 0.5868168473, 1.0, 0.5802475214 ]
+                      - [ 0.469453454, 1.0, 0.4641979933 ]
+                      - [ 0.3520901203, 1.0, 0.3481484652 ]
+                      - [ 0.234726727, 1.0, 0.2320989966 ]
+                      - [ 0.1173633933, 1.0, 0.1160494089 ]
+                      - [ 0.0, 1.0, 0.0 ]
+              after:
+                ".type": CFXTrack
+            isExpanded: true
+            trackGroupColor: [ 171, 182, 241, 100 ]
+        length: 4.0120925903
+        loopStart: 0.200000003
+        loopEnd: 0.400000006
+        showDistance: 200.0
+        isLooped: true
             
   dettlaff_vampire_extra_fx:
     includes:

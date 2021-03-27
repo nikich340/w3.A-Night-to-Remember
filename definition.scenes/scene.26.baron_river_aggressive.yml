@@ -792,7 +792,7 @@ dialogscript:
     # shot cam baron gest both hands
     - CUE: shot_6_bullshit
     # (longest) anim: high_standing_aggressive_gesture_both_hands_1
-    - Baron_Edward: "[3.4453]2114670361|Bullshit! I hired you to kill her!"
+    - Baron_Edward: "[3.5390]2114670361|Bullshit! I hired you to kill her!"
     # shot cam baron gest point ground
     - CUE: shot_7_changed_mind
     # (longest) anim: high_standing_aggressive_gesture_left_hand_point_down
@@ -819,6 +819,7 @@ dialogscript:
 
   section_exit:
     - EXIT
+
 
 
 

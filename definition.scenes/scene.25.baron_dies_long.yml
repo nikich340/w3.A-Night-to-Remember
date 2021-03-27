@@ -1682,7 +1682,7 @@ dialogscript:
     - CUE: shot_5b_baron1
     - Baron_Edward: "[7.1703]2114670422|*Cough* Aaaaaah… No!"
     - PAUSE: 0.5
-    - Baron_Edward: "[5.3163]2114670423|This is my sin, and it dies here with me!"
+    - Baron_Edward: "[5.7818]2114670423|This is my sin, and it dies here with me!"
 
     - CUE: shot_5b_tyberious
     - PAUSE: 1.0
@@ -1776,5 +1776,6 @@ dialogscript:
     - BLACKSCREEN: true
     #- CAMERA_BLEND: 1.0
     - EXIT
+
 
 

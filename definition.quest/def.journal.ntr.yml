@@ -1,7 +1,7 @@
 journals:
   quests:
     nighttoremember:
-      title: "A Night to Remember (DEBUG)"
+      title: "A Night to Remember (DEBUG v4)"
       type: "Side"
       world: bob                      # optional, if empty every objective requires world
       level: 50
@@ -106,9 +106,10 @@ journals:
                 - [ side_pin, 20 ]
 
           - check_house:
-              caption: "Use your Witcher Senses to investigate the house."
-              mappins:
-                - [ side_pin, 20 ]
+              caption: "[Optional] Use your Witcher Senses to investigate the house."
+
+          - read_orianna_diary:
+              caption: "[Optional] Read Orianna's diary."
 
           - wait_outside:
               caption: "Wait for Orianna outside the house."

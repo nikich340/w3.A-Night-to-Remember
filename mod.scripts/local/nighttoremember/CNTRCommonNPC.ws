@@ -4,6 +4,7 @@ class CNTRCommonNPC extends CNewNPC {
     editable saved var       NTR_factOnDeath : String;
     editable saved var    NTR_factNearlyDead : String;
     editable saved var   NTR_avoidDeathEvent : Bool;
+    default NTR_avoidDeathEvent = false;
 
     editable saved var NTR_animationMultiplier : float;
     saved var             NTR_slowdownCauserId : int;
@@ -13,7 +14,6 @@ class CNTRCommonNPC extends CNewNPC {
     event OnSpawned( spawnData : SEntitySpawnData )	{
 		super.OnSpawned( spawnData );
 		FactsAdd(NTR_factOnSpawn, 1);
-
 	}
 	event OnTakeDamage( action : W3DamageAction ) {
 		super.OnTakeDamage( action );

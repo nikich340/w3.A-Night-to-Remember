@@ -2024,6 +2024,11 @@ dialogscript:
             parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
                 - days: 0
                 - hours: 3
+    - NEXT: script_fix_horses
+
+  script_fix_horses:
+    - SCRIPT:
+            function: NTR_FixCampHorses_S
     - NEXT: script_timelapse_label
 
   #script_change_weather:
@@ -2041,7 +2046,7 @@ dialogscript:
             function: NTR_ShowTimeLapse_S
             parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
                 - showTime: 3.0
-                - timeLapseMessageKey: "ntr_sometime_later"
+                - timeLapseMessageKey: "cinematic_text_some_time_later"
                 #- timeLapseAdditionalMessageKey: "item_name_ntr_notices_regis_letter"
     - NEXT: section_storyboard_ui2
 
@@ -2104,14 +2109,14 @@ dialogscript:
     - geralt: "[2.9229052]0001105154|Sound like common bandits. Any difference?"
 
     - CUE: shot_27_dg_baron
-    - Baron_Edward: "[4.3298]2114670889|Don't be so prejudiced, Geralt, we don't rob and kill the innocent.."
+    - Baron_Edward: "[4.3298]2114670889|Don't be so prejudiced, Geralt, we don't rob and kill the innocent."
 
     - CUE: shot_28_dg_geralt
     - PAUSE: 1.0
     - geralt: "[3.3302]2114670890|I don't believe it. However I'm here about Orianna."
 
     - CUE: shot_29_dg_baron
-    - Baron_Edward: "[5.3139]2114670891|Of course. This evil woman, she refuses to return something precious to me."
+    - Baron_Edward: "[5.3139]2114670891|Of course. This evil woman, she refuses to return something precious to me…"
     - PAUSE: 0.5
     - CUE: shot_29_dg_baron1
     - Baron_Edward: "[6.2181]2114670892|That's why I'd like to contract your services, witcher. To kill that monster, and take back that which belongs to me."
@@ -2124,7 +2129,7 @@ dialogscript:
     - CUE: shot_29_dg_baron3
     - Baron_Edward: "[2.2623]2114670406|Have my men already told you about the boy?"
     - NEXT:
-        condition: [ "ntr_baron_story_known", "!=", 1 ]
+        condition: [ "ntr_baron_story_known", "=", 1 ]
         on_true: section_choice_geralt_child
         on_false: section_about_child
 
@@ -2181,7 +2186,7 @@ dialogscript:
 
   section_baron_story:
     - CUE: shot_baron_story_loved_once
-    - Baron_Edward: "[1.5473]2114670400|I loved a woman once…."
+    - Baron_Edward: "[1.5473]2114670400|I loved a woman once…"
     - PAUSE: 1.0
 
     - CUE: shot_baron_story_was_born
@@ -2201,7 +2206,7 @@ dialogscript:
     - PAUSE: 0.5
 
     - CUE: shot_baron_story_were_happy
-    - Baron_Edward: "[5.3274]2114670414|We fell in love… We had a son together, and we were happy, for a time."
+    - Baron_Edward: "[5.3274]2114670414|We fell in love… We had a son together, and we were happy, for a time…"
     - PAUSE: 0.5
 
     - CUE: shot_baron_story_word_broke
@@ -2221,7 +2226,7 @@ dialogscript:
     - PAUSE: 1.0
 
     - CUE: shot_baron_story_never_should
-    - Baron_Edward: "[2.7583]2114670419|I never should have left her alone in that city."
+    - Baron_Edward: "[2.7583]2114670419|I never should have left her alone in that city!"
 
     - CUE: shot_baron_story_never_should_geralt_pause
     - PAUSE: 1.5
@@ -2417,27 +2422,4 @@ dialogscript:
 
   section_exit:
     - EXIT
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

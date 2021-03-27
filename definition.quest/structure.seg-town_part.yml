@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: town_part
 # 
-# (version: 1257, saved: 2021-03-20 03:53:22)
+# (version: 1296, saved: 2021-03-26 01:24:31)
 #
 ---
 structure:
@@ -15,11 +15,10 @@ structure:
             - waituntil.corpse_area
             - addfact.scent_enabled_0
             - spawn.spawn_folk
-            - waituntil.REM
         
         scene.Comeon_roach:
           ".editor":
-            pos: [ 2143.42578125, 614.3525390625 ]
+            pos: [ 2146.0, 582.0 ]
             in: [ horse_tracks ]
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
@@ -52,7 +51,7 @@ structure:
           interruptable: true
           _fadein: false
           next.Output:
-            - script.Unhide_actors
+            - journal.entry_river: Activate
         
         scene.gp_corpse_comments:
           ".editor":
@@ -80,7 +79,7 @@ structure:
         
         scene.tracks_back_comment:
           ".editor":
-            pos: [ 3482.2294921875, 73.1410369873 ]
+            pos: [ 3328.0, 98.0 ]
             in: [ cemetery_footprints_end ]
             out: [ Output ]
           scene: 03.geralt_oneliners.yml
@@ -103,9 +102,9 @@ structure:
             - objective.follow_footprints: Success
             - despawn.despawn_folk
             - interaction.Scene_to_fisherman: Input
-            - script.disable_scent
+            - script.disable_scent_fact
             - addfact.ntr_quest_town_completed
-            - script.Desable_scent_focus
+            - script.Disable_scent_focus
         
         scene.woman_footprints_comment:
           ".editor":
@@ -160,15 +159,6 @@ structure:
           next:
             - scene.good_luck_by_fisherman: good_luck
         
-        waituntil.1ssss:
-          elapsed: "00:00:01"
-          ".editor":
-            pos: [ 4060.7436523438, 401.7828369141 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - scene.tracks_end_comment: fisher_footprints_end
-        
         waituntil.2s:
           elapsed: "00:00:02"
           ".editor":
@@ -177,26 +167,6 @@ structure:
             out: [ Out ]
           next:
             - script.checkpoint
-        
-        waituntil.2sss:
-          elapsed: "00:00:02"
-          ".editor":
-            pos: [ 3334.8288574219, 138.3325653076 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - scene.tracks_back_comment: cemetery_footprints_end
-        
-        waituntil.REM:
-          elapsed: "00:00:02"
-          ".editor":
-            pos: [ 2825.6123046875, 1070.9028320312 ]
-            in: [ In ]
-            out: [ Out ]
-          next:
-            - changelayers.show_fisher
-            - waituntil.cemetery3
-            - changelayers.show_cemetery
         
         waituntil.blood_scent_track:
           examined: bob/blood_track1
@@ -226,7 +196,8 @@ structure:
           next:
             - waituntil.cemetery1
             - changelayers.show_fisher
-            - waituntil.2sss
+            - scene.tracks_back_comment: cemetery_footprints_end
+            - script.Disable_fisherman_encounter
         
         waituntil.cemetery1:
           inside: [ bob/cemetary_area_1, PLAYER ]
@@ -249,7 +220,6 @@ structure:
             - waituntil.cemetery3
             - mappin.cemetery_footprints1: Disable
             - mappin.cemetery_footprints2: Enable
-            - script.HideActors_FishermanScene
         
         waituntil.cemetery3:
           inside: [ bob/cemetary_area_3, PLAYER ]
@@ -416,7 +386,18 @@ structure:
           next:
             - spawn.folk_far
         
-        script.Desable_scent_focus:
+        script.Disable_fisherman_encounter:
+          ".editor":
+            pos: [ 3524.0, 216.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_SwitchEncounter
+          parameter:
+            - tag: cname_shop_20_fishermans_hut_alchemist_enc
+            - enable: false
+          next: ".done"
+        
+        script.Disable_scent_focus:
           ".editor":
             pos: [ 4304.7001953125, 202.8877716064 ]
             in: [ In ]
@@ -428,6 +409,18 @@ structure:
             - effectEntityTag: cname_ntr_orianna_scents
             - duration: -1.0
           next: ".done"
+        
+        script.Enable_fisherman_encounter:
+          ".editor":
+            pos: [ 5034.0, 525.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_SwitchEncounter
+          parameter:
+            - tag: cname_shop_20_fishermans_hut_alchemist_enc
+            - enable: true
+          next:
+            - out
         
         script.FOcus_clue_horse_tracks:
           ".editor":
@@ -466,14 +459,13 @@ structure:
         
         script.Unhide_actors:
           ".editor":
-            pos: [ 4787.0, 549.0 ]
+            pos: [ 4811.0, 584.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_UnhideActorsInRange
           parameter:
-            - range: 40.0
-          next:
-            - journal.entry_river: Activate
+            - range: 50.0
+          next: ".done"
         
         script.call_roach:
           ".editor":
@@ -495,7 +487,7 @@ structure:
           next:
             - waituntil.wait_1s
         
-        script.disable_scent:
+        script.disable_scent_fact:
           ".editor":
             pos: [ 4312.0, 305.0 ]
             in: [ In ]
@@ -520,7 +512,7 @@ structure:
         
         script.focus_clue_footprints_fisher:
           ".editor":
-            pos: [ 3511.9633789062, 170.1964111328 ]
+            pos: [ 3532.0, 124.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_FocusSetHighlight
@@ -560,7 +552,7 @@ structure:
         
         changelayers.show_fisher:
           ".editor":
-            pos: [ 3342.7106933594, 246.954864502 ]
+            pos: [ 3345.0, 192.0 ]
             hint: show-only
             in: []
             out: []
@@ -606,11 +598,11 @@ structure:
             - changelayers.hide_town_blood
         
         journal.entry_river:
-          ".editor": [ 4961.0, 434.0 ]
+          ".editor": [ 4856.0, 431.0 ]
           entry: quests/nighttoremember/town_and_river
           notify: true
           next:
-            - out
+            - script.Enable_fisherman_encounter
         
         objective.Follow_horse:
           ".editor": [ 2417.6806640625, 688.1245117188 ]
@@ -620,7 +612,7 @@ structure:
           next: ".done"
         
         objective.Follow_scent:
-          ".editor": [ 1503.5432128906, 633.7072143555 ]
+          ".editor": [ 1475.0, 809.0 ]
           objective: nighttoremember/town_part/follow_scent
           notify: true
           track: false
@@ -713,7 +705,7 @@ structure:
           next: ".done"
         
         addfact.ntr_footprints_to_fisher_1:
-          ".editor": [ 3672.0, 119.0 ]
+          ".editor": [ 3673.0, 40.0 ]
           value: [ ntr_footprints_to_fisher_enabled, 1 ]
           next: ".done"
         
@@ -738,6 +730,6 @@ structure:
           next: ".done"
         
         out:
-          ".editor": [ 5113.0, 540.0 ]
+          ".editor": [ 5198.0, 428.0 ]
           next: ".done"
         

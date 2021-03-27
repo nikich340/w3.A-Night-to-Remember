@@ -8,8 +8,22 @@ quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	return false;
 }*/
 
-quest function NTR_DebugWarning() {
-	theGame.GetGuiManager().ShowNotification("This is DEBUG version of NTR quest. Have fun :)");
+exec function NTR_Flow( val : int ) {
+	switch (val) {
+		case 1:
+			FactsAdd( "ntr_flowdebug_1", 1 );
+			break;
+		case 2:
+			FactsAdd( "ntr_flowdebug_2", 1 );
+			break;
+		case 3:
+			FactsAdd( "ntr_flowdebug_3", 1 );
+			break;
+	}
+}
+
+quest function NTR_DebugWarning(str : String) {
+	theGame.GetGuiManager().ShowNotification(str);
 }
 
 latent quest function NTR_Wait(seconds : float) {
@@ -19,6 +33,21 @@ latent quest function NTR_Wait(seconds : float) {
 latent quest function NTR_Halfsec() {
 	Sleep(0.5f);
 	return;
+}
+
+quest function NTR_SwitchEncounter(tag : name, enable: bool) {
+	var encounter : CEncounter;
+	encounter = (CEncounter)theGame.GetEntityByTag( tag ); // shop_20_fishermans_hut_alchemist_enc
+	if (encounter) {
+		encounter.EnableEncounter(enable);
+		NTR_notify("[Info] switch encounter <" + tag + "> to: " + enable);
+		if (!enable) {
+			encounter.ForceDespawnDetached();
+			// or encounter.LeaveArea() ?
+		} else {
+			encounter.EnterArea();
+		}
+	}
 }
 
 latent quest function NTR_ShowCredits(effectName : name, destoy : Bool) {
@@ -44,6 +73,13 @@ latent quest function NTR_ShowCredits(effectName : name, destoy : Bool) {
 
 	logo.StopAllEffects();
 	logo.PlayEffect(effectName);
+}
+
+quest function NTR_FixCampHorses() {
+	NTR_teleportToNode('ntr_camp_horse1', 'ntr_bob_horse1_parked_ap', true);
+	NTR_teleportToNode('ntr_camp_horse2', 'ntr_bob_horse2_parked_ap', true);
+	NTR_teleportToNode('ntr_camp_horse3', 'ntr_bob_horse3_parked_ap', true);
+	NTR_teleportToNode('ntr_camp_horse_baron', 'ntr_bob_horse_baron_parked_ap', true);
 }
 
 quest function NTR_IsContainersEmpty(tag : name) : Bool {
@@ -354,7 +390,7 @@ quest function NTR_TuneBaronEdward() {
 	level = GetWitcherPlayer().GetLevel();
 
 	diff = level - NPC.GetLevel();
-	NTR_notify("NTR_TuneOriannaVampire: [Info] diff = " + diff);
+	NTR_notify("NTR_TuneBaronEdward: [Info] diff = " + diff + "player="+GetWitcherPlayer().GetLevel()+", npc="+NPC.GetLevel());
 	if (diff > 0) {
 		NPC.AddAbilityMultiple('ntr_baron_edward_LevelBonus', diff);
 	}
@@ -365,40 +401,46 @@ quest function NTR_TuneBaronEdward() {
 quest function NTR_HideActorsFishermanScene() {
     var acceptedTags : array<name>;
     var acceptedVoicetags : array<name>;
-    var killIfHostile : bool;
+    var onlyKillIfHostile : bool;
 
     acceptedTags.PushBack('PLAYER');
+    acceptedTags.PushBack('PLAYER_horse');
+    acceptedTags.PushBack('playerHorse');
     acceptedTags.PushBack('ntr_fisherman');
     acceptedVoicetags.PushBack('VAMPIRE DIVA');
-    killIfHostile = false;
+    onlyKillIfHostile = false;
 
-    NTR_HideActorsInRange(50.0, acceptedTags, acceptedVoicetags, killIfHostile);
+    NTR_HideActorsInRange(50.0, acceptedTags, acceptedVoicetags, onlyKillIfHostile);
 }
 
 quest function NTR_HideActorsHagScene() {
     var acceptedTags : array<name>;
     var acceptedVoicetags : array<name>;
-    var killIfHostile : bool;
+    var onlyKillIfHostile : bool;
 
     acceptedTags.PushBack('PLAYER');
+    acceptedTags.PushBack('PLAYER_horse');
+    acceptedTags.PushBack('playerHorse');
     acceptedTags.PushBack('ntr_hag_intro');
     acceptedVoicetags.PushBack('CELINA MONSTER');
-    killIfHostile = true;
+    onlyKillIfHostile = true;
 
-    NTR_HideActorsInRange(50.0, acceptedTags, acceptedVoicetags, killIfHostile);
+    NTR_HideActorsInRange(50.0, acceptedTags, acceptedVoicetags, onlyKillIfHostile);
 }
 
 quest function NTR_HideActorsCampScene() {
     var acceptedTags : array<name>;
     var acceptedVoicetags : array<name>;
-    var killIfHostile : bool;
+    var onlyKillIfHostile : bool;
 
     acceptedTags.PushBack('PLAYER');
+    acceptedTags.PushBack('PLAYER_horse');
+    acceptedTags.PushBack('playerHorse');
     acceptedTags.PushBack('ntr_camp_horses');
     acceptedTags.PushBack('ntr_camp_bandits');
-    killIfHostile = true;
+    onlyKillIfHostile = true;
 
-    NTR_HideActorsInRange(50.0, acceptedTags, acceptedVoicetags, killIfHostile);
+    NTR_HideActorsInRange(50.0, acceptedTags, acceptedVoicetags, onlyKillIfHostile);
 }
 
 quest function NTR_UnhideActorsInRange(range : float)  {
@@ -408,7 +450,6 @@ quest function NTR_UnhideActorsInRange(range : float)  {
     var tags                 : array<name>;
     var hidden               : bool;
 
-    range = 15.0;
     maxEntities = 1000;
     FindGameplayEntitiesInRange(entities, thePlayer, range, maxEntities);
             

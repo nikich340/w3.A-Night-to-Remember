@@ -1558,6 +1558,15 @@ dialogscript:
 
   section_start:
     - PAUSE: 0.0
+    - NEXT: script_music_diva
+
+  script_music_diva:
+    - SCRIPT:
+            function: NTR_PlayMusicScene
+            parameter:                  # parameters are matched by names (case sensitive: must match the defined params in the script exactly). order not important
+                - areaName: "toussaint"
+                - eventName: "mus_cs704_diva_feeding"
+                - saveType: "SESB_ClearSaved"
     - NEXT: script_close_door
 
   script_close_door:
@@ -1592,7 +1601,7 @@ dialogscript:
     - PAUSE: 3.5
     - CUE: shot_2b
     - PAUSE: 2.7804
-    - Orianna_human: "[1.7196]2114670939|Sweet thing."
+    - Orianna_human: "[1.7195]2114670939|Sweet thing."
     - CUE: shot_2c
     - PAUSE: 3.0
     - CUE: shot_2d
@@ -1669,6 +1678,7 @@ dialogscript:
     #- CAMERA_BLEND: 1.0
     - BLACKSCREEN: true
     - EXIT
+
 
 
 

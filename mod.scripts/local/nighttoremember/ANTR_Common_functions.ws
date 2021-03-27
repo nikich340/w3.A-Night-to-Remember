@@ -3,7 +3,7 @@ function NTR_notify(msg : string) {
     LogChannel('NTR_MOD', msg);
 }
 // -------------------------------------------------
-function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, acceptedVoicetags: array<name>, killIfHostile : bool)  {
+function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, acceptedVoicetags: array<name>, onlyKillIfHostile : bool)  {
     var entities             : array<CGameplayEntity>;
     var actor                : CActor;
     var i, j, t, maxEntities : int;
@@ -45,9 +45,11 @@ function NTR_HideActorsInRange(range : float, acceptedTags : array<name>, accept
                 }
             }
             if (!accepted) {
-            	if (killIfHostile && ((actor.HasAttitudeTowards(thePlayer) && actor.GetAttitude(thePlayer) == AIA_Hostile) || actor.GetAttitudeGroup() == 'AG_nightwraith' || actor.GetAttitudeGroup() == 'hostile_to_player')) {
-            		//LogChannel('HideInRange', " x KILL");
-            		actor.OnCutsceneDeath();
+            	if (onlyKillIfHostile) {
+					if ((actor.HasAttitudeTowards(thePlayer) && actor.GetAttitude(thePlayer) == AIA_Hostile) || actor.GetAttitudeGroup() == 'AG_nightwraith' || actor.GetAttitudeGroup() == 'hostile_to_player') {
+						//LogChannel('HideInRange', " x KILL");
+						actor.OnCutsceneDeath();
+					}
             	} else {
 	            	//LogChannel('HideInRange', " + HIDE");
 	            	actor.AddTag('ntr_hidden_actor');

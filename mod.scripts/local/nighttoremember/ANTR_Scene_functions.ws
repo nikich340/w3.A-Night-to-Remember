@@ -26,12 +26,34 @@ storyscene function NTR_UnequipItemFromSlot_S( player : CStoryScenePlayer, tag :
 		}
 	}
 }
+
 storyscene function NTR_TimeScale_S( player : CStoryScenePlayer, timeScale : float ) {
 	SetTimeScaleQuest(timeScale);
 }
 
+storyscene function NTR_AvoidHourRange_S( player : CStoryScenePlayer, hourMin : int, hourMax : int ) {
+	var time : GameTime;
+	var hours, hoursShift : int;
+	time = theGame.GetGameTime();
+	hours = GameTimeHours( time );
+	if (hours >= hourMax || hours <= hourMin)
+		return;
+	else {
+		if (hours <= (hourMax - hourMax) / 2) {
+			hoursShift = 24 - (hours - hourMin);
+		} else {
+			hoursShift = hourMax - hours;
+		}
+		theGame.SetGameTime( theGame.GetGameTime() + GameTimeCreate(0, hoursShift, 0, 0), true);
+	}		
+}
+
 storyscene function NTR_RemoveAttachment_S( player : CStoryScenePlayer, id : int ) {
 	NTR_RemoveAttachment_Q( id );
+}
+
+storyscene function NTR_FixCampHorses_S( player : CStoryScenePlayer ) {
+	NTR_FixCampHorses();
 }
 latent storyscene function NTR_CreateAttachment_S( player : CStoryScenePlayer, id : int ) {
 	NTR_CreateAttachment_Q( id );

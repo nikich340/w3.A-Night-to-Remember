@@ -712,6 +712,7 @@ templates:
         loopEnd: 0.400000006
         showDistance: 200.0
         isLooped: true
+  
   # "higher" form
   orianna_vampire:
     includes:
@@ -720,6 +721,7 @@ templates:
     entityObject:
       .type: "CNTROriannaVampireNPC"
       NTR_factOnHalfHealth: "ntr_orianna_vampire_halfhealth"
+      NTR_avoidDeathEvent: true
       displayName: "Orianna"
       voiceTag: "ORIANNA VAMPIRE"
       level: 50

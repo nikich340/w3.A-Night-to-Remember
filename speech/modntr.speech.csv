@@ -35,8 +35,8 @@
 ;
 ; scene 9 - nightmare final
 ;
-2114670720|00000000||[Kill]
-2114670721|00000000||[Spare]
+2114670720|00000000||[Kill.]
+2114670721|00000000||[Spare.]
 2114670722|00000000||Is it your doing?
 2114670723|00000000||Fuck you!
 2114670724|00000000||Help me, and I'll return the favor.
@@ -60,14 +60,14 @@
 ;
 ; scene 11 orphanage main
 ;
-2114670755|00000000||A witcher
-2114670756|00000000||Just a traveler
-2114670757|00000000||Vampire of Rivia
-2114670758|00000000||It's a deal
+2114670755|00000000||A witcher.
+2114670756|00000000||Just a traveler.
+2114670757|00000000||Vampire of Rivia.
+2114670758|00000000||It's a deal.
 2114670759|00000000||Why are you interested in the children?
 ; 0000382555|00000000||What did you need the children for?
 ;2114670760|00000000||I'll ask again, polite like, and you'll answer, just as politely.
-2114670761|00000000||Orianna will kill you
+2114670761|00000000||Orianna will kill you.
 2114670762|00000000||Who the foek are you?!
 2114670763|00000000||Me? Drifter, stranger, mutant… Sometimes even by my name. Vampire of Rivia.
 2114670764|00000000||Very funny, you cretin…
@@ -92,7 +92,7 @@
 2114670777|00000000||Orianna will kill you. She is a monster, not a human. And only I can help. Meaning I need more information.
 2114670778|00000000||I've not got all the answers, talk with our leader about it.
 ;   1117735|00000000||I'll ask again, polite like, and you'll answer, just as politely.
-2114670779|00000000||Would ya look at that lads, vagrant mutt's givin' us orders. Needs to know 'is place… Fuck 'im up!
+2114670779|00000000||Would ya look at that lads, vagrant mutt's givin' us orders… Needs to know 'is place! Fuck 'im up!
 ;2114670780|00000000||Three against one - you're dead already.
 2114670781|00000000||It's a deal. Where can I find him?
 2114670782|00000000||We have pitched camp on the banks of the lake known as Seidhe Llygad, near an ancient amphitheater.
@@ -120,7 +120,7 @@
 2114670805|00000000||Well, I can't say that the Baron liked that girl much, as he left her here. However he recently said we must visit Toussaint again.
 2114670806|00000000||We came here and found out that she had died of some illness about a year ago. And the boy was sent to an orphanage, to this Orianna.
 2114670807|00000000||But we didn't manage to find neither the boy nor Orianna.
-2114670808|00000000||Since that vampire attack the orphanage has been abandoned… All that remains now is a mess and a pile children's corpses.
+2114670808|00000000||Since that vampire attack the orphanage has been abandoned. All that remains now is a mess and a pile children's corpses…
 2114670809|00000000||The Baron was quite upset. But then we learned that Orianna is alive and in perfect health - people saw her in the city with the wee boy.
 2114670810|00000000||The Baron is certain that this is his son, and very much wants to find this woman. However she is… elusive, everyone knows her, but where she is - no one seems to know.
 2114670811|00000000||So we divided into groups and now watching for places where she may appear.
@@ -159,11 +159,11 @@
 2114670887|00000000||He's the famous Geralt of Rivia, no less.
 2114670888|00000000||My name is Edward, and I take care of these fine gentlemen…
 ;   1075517|00000000||Bandits?
-2114670889|00000000||Don't be so prejudiced, Geralt, we don't rob and kill the innocent..
+2114670889|00000000||Don't be so prejudiced, Geralt, we don't rob and kill the innocent.
 2114670890|00000000||I don't believe it. However I'm here about Orianna.
-2114670891|00000000||Of course. This evil woman, she refuses to return something precious to me.
+2114670891|00000000||Of course. This evil woman, she refuses to return something precious to me…
 2114670892|00000000||That's why I'd like to contract your services, witcher. To kill that monster, and take back that which belongs to me.
-2114670893|00000000||The child.
+2114670893|00000000||The child..
 2114670894|00000000||Huh, I should've known you'd already figured it out. I'd expect nothing less from a witcher…
 2114670406|00000000||Have my men already told you about the boy?
 ;
@@ -183,17 +183,17 @@
 ;;;0001105762|00000000||No, I've never loved. (option)
 ;;;0001105762|00000000||No. Haven't loved. Now let's get to the point.
 ;
-2114670400|00000000||I loved a woman once….
+2114670400|00000000||I loved a woman once…
 2114670401|00000000||I was born a commoner, but I was gifted with a blade.
 2114670411|00000000||After proving myself in battle, the Duke of Toussaint knighted me as a young man.
 2114670412|00000000||It was quite a spectacle, all the nobles wanted to meet the low-born Knight.
 2114670413|00000000||That's how I met her, the only one who didn't care about all that.
-2114670414|00000000||We fell in love… We had a son together, and we were happy, for a time.
+2114670414|00000000||We fell in love… We had a son together, and we were happy, for a time…
 2114670415|00000000||When word broke that she bore a child to a commoner, outside of wedlock…
 2114670416|00000000||I fled Beauclair that very night, and I made her promise to say the child was against her will.
 2114670417|00000000||She broke our promise. Her family quickly fell out of favor. They lost everything because of me.
 2114670418|00000000||A few months ago, I received word that she had fallen ill, and our child had been orphaned…
-2114670419|00000000||I never should have left her alone in that city.
+2114670419|00000000||I never should have left her alone in that city!
 2114670420|00000000||After all of these years of regret… I need to do right by her and take care of our son.
 2114670421|00000000||What do you say witcher? Will you take the job, and return my boy?
 ;
@@ -236,9 +236,9 @@
 ;
 ; scene 18
 ;
-2114670915|00000000||I will pay
-2114670916|00000000||You will help me for free
-2114670917|00000000||I want to help that woman
+2114670915|00000000||I will pay.
+2114670916|00000000||You will help me for free.
+2114670917|00000000||I want to help that woman.
 ;   1124989|00000000||Good day. Fish biting?
 2114670918|00000000||I catch more when it's raining.
 2114670919|00000000||Did you see a red-haired woman here? Left this site by boat, recently.
@@ -347,7 +347,7 @@
 2114670323|00000000||I'm glad to hear it… She got what she deserved.
 2114670324|00000000||Now tell me, where's my boy?
 2114670325|00000000||I don't know where he is.
-2114670326|00000000||You take me for a fool? You think my men didn't see your conversation with her!?
+2114670326|00000000||You take me for a fool? You think my men didn't see you speaking with her!?
 2114670327|00000000||I'll give you one more chance.
 ;   1068309|00000000||Your son is dead.
 ;;;2114670328|00000000||Where is his body?

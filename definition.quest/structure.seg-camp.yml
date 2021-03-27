@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: camp
 # 
-# (version: 1257, saved: 2021-03-20 03:53:22)
+# (version: 1296, saved: 2021-03-26 01:24:31)
 #
 ---
 structure:
@@ -75,8 +75,8 @@ structure:
             out: [ Out ]
           next:
             - spawn.spawn_baron_on_beach
-            - script.fade_out_1s
-            - script.hideactorscampscene
+            - script.fade_out_05s
+            - script.HideActorsCampScene
         
         waituntil.wait_1s:
           elapsed: "00:00:01"
@@ -87,25 +87,34 @@ structure:
           next:
             - scene.scene_16: Input
         
-        script.fade_out_1s:
+        script.FixCampHorses:
+          ".editor":
+            pos: [ 991.0, 174.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FixCampHorses
+          next: ".done"
+        
+        script.HideActorsCampScene:
+          ".editor":
+            pos: [ 842.0, 241.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_HideActorsCampScene
+          next:
+            - script.FixCampHorses
+        
+        script.fade_out_05s:
           ".editor":
             pos: [ 813.0, 18.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_FadeOutQuest
           parameter:
-            - fadeTime: 1.0
+            - fadeTime: 0.5
             - r: 0
             - g: 0
             - b: 0
-          next: ".done"
-        
-        script.hideactorscampscene:
-          ".editor":
-            pos: [ 835.0, 239.0 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_HideActorsCampScene
           next: ".done"
         
         spawn.spawn_baron_in_ususal:

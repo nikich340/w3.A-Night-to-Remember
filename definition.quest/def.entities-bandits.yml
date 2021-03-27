@@ -231,13 +231,14 @@ templates:
 
   baron_bandit_big:
     includes:
-      - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q703_all_for_one\\characters\\exchange_point_bandits\\q703_exchange_point_bandit_melee_sword.w2ent"
+      - "dlc\\dlcntr\\data\\entities\\q703_big_bandit_base_no_oneliners.w2ent"
 
     entityObject:
       .type: "CNTRBanditNPC"
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
+      NTR_avoidDeathEvent: false
       level: 45
 
     usedAppearances:
@@ -252,6 +253,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
+      NTR_avoidDeathEvent: false
       level: 45
 
     usedAppearances:
@@ -267,6 +269,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
+      NTR_avoidDeathEvent: false
       level: 45
 
     usedAppearances:
@@ -281,6 +284,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
+      NTR_avoidDeathEvent: false
       level: 45
 
     usedAppearances:
@@ -295,6 +299,7 @@ templates:
       #name: "IORWETH"
       displayName: "Baron's bandit"
       NTR_factOnDeath: "ntr_bandit_dead"
+      NTR_avoidDeathEvent: false
       level: 45
 
     usedAppearances:
@@ -308,6 +313,8 @@ templates:
       .type: "CNTRBanditNPC"
       #name: "IORWETH"
       displayName: "Baron's bandit"
+      NTR_factOnDeath: "ntr_bandit_dead"
+      NTR_avoidDeathEvent: false
       level: 45
 
     usedAppearances:

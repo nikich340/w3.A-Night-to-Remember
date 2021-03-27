@@ -3,6 +3,15 @@ class CNTRBanditNPC extends CNTRCommonNPC {
     private var baronReplicPrev    : int;
     default baronReplicPrev = -2;
 
+
+    event OnSpawned( spawnData : SEntitySpawnData ) {
+        if ( HasTag('ntr_baron_bandit') && FactsQuerySum("ntr_quest_baron_fight") ) {
+            NTR_notify("[BAD] seems resurrecting.. alive="+IsAlive() + ", immortality="+GetImmortalityMode());
+        }
+        NTR_notify("[Info] Spawning ntr bandit: " + this);
+        super.OnSpawned( spawnData );
+    }
+
 	protected function Attack( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity)
     {
         var action : W3Action_Attack;
@@ -34,10 +43,15 @@ class CNTRBanditNPC extends CNTRCommonNPC {
         }
     }
     event OnDeath( damageAction : W3DamageAction  )	{
+        NTR_notify("DEATH1: alive="+IsAlive() + ", immortality="+GetImmortalityMode() + ", " + this);
     	if (IsInFistFightMiniGame()) {
 			FactsAdd("ntr_fisfight_defeat");
 		}
 		super.OnDeath( damageAction );
+        if ( HasTag('ntr_baron_bandit') && FactsQuerySum("ntr_quest_baron_fight") > 0 ) {
+            this.Kill('ntr_fix_bandits', true);
+        }
+        NTR_notify("DEATH2: alive="+IsAlive() + ", immortality="+GetImmortalityMode() + ", " + this);
 	}
 	event OnTakeDamage( action : W3DamageAction ) {
 		if (IsInFistFightMiniGame()) {

@@ -819,13 +819,15 @@ dialogscript:
 
   section_start:
     - PAUSE: 0.0
-    - NEXT: section_storyboard_ui
+  #  - NEXT: script_settime
 
-  #script_hide_actors:
+  #script_settime:
   #    - SCRIPT:
-  #        function: NTR_HideActorsFishermanScene_S
-
-  #    - NEXT: section_storyboard_ui
+  #        function: NTR_AvoidHourRange_S
+  #        parameter:
+  #            - hourMin: 5
+  #            - hourMax: 20
+    - NEXT: section_storyboard_ui
 
   section_storyboard_ui:
     # shot geralt walk

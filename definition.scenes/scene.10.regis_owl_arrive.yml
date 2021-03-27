@@ -442,7 +442,8 @@ storyboard:
     shot_3a:
       #- cam: [0.0, cam_3_shot_sitting]
       - cam: [0.0, cam_4_shot_sitting2]
-      - actor.placement: [0.0, geralt, [ -423.4845886230, 1306.4843750000, -90.7299804688 ], [ 0.0, 0.0, 228.6600341797 ]]
+      ## OLD BED - actor.placement: [0.0, geralt, [ -423.4845886230, 1306.4843750000, -90.7299804688 ], [ 0.0, 0.0, 228.6600341797 ]]
+      - actor.placement: [0.0, geralt, [ -423.3863830566, 1306.3837890625, -90.7200012207 ], [ 0.0, 0.0, 228.6600341797 ]]
       - actor.anim: 
           .@pos: [0.6, geralt_low_sitting_sad_gesture_head_up]
           blendin: 0.5

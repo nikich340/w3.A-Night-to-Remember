@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: finale
 # 
-# (version: 1257, saved: 2021-03-20 03:53:22)
+# (version: 1296, saved: 2021-03-26 01:24:31)
 #
 ---
 structure:
@@ -41,12 +41,12 @@ structure:
           _fadein: false
           next.Output:
             - script.Heal_Player
-            - script.NTR_releaseOriannaBruxa
             - journal.orianna_killed_entry: Activate
+            - scene.24_baron_river_friendly: Input
         
         scene.24_baron_river_friendly:
           ".editor":
-            pos: [ 5900.0, 663.525390625 ]
+            pos: [ 5865.0, 669.0 ]
             in: [ Input ]
             out: [ fight, peaceful ]
           scene: 24.baron_river_friendly.yml
@@ -56,8 +56,10 @@ structure:
           next.fight:
             - spawn.spawn_hostile_baron
             - waituntil.Wait_baron_dead
+            - script.NTR_releaseOriannaBruxa
           next.peaceful:
             - settime.02_30_t
+            - script.NTR_releaseOriannaBruxa
         
         scene.25_baron_dies_long:
           ".editor":
@@ -74,7 +76,7 @@ structure:
         
         scene.26_baron_river_aggressive:
           ".editor":
-            pos: [ 3700.0, 63.525390625 ]
+            pos: [ 3528.0, 21.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 26.baron_river_aggressive.yml
@@ -89,7 +91,7 @@ structure:
         
         scene.28_orianna_farewell:
           ".editor":
-            pos: [ 4700.0, 113.525390625 ]
+            pos: [ 4692.0, 112.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 28.orianna_farewell.yml
@@ -111,11 +113,11 @@ structure:
           _fadein: false
           next.Output:
             - script.remove_att
-            - journal.entry_diary: Activate
+            - journal.diary_entry: Activate
         
         scene.KILL_SCENE:
           ".editor":
-            pos: [ 4300.0, 1563.525390625 ]
+            pos: [ 4321.0, 1771.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 22.orianna_kills_geralt.yml
@@ -124,6 +126,7 @@ structure:
           _fadein: false
           next.Output:
             - script.Kill_Player
+            - despawn.despawn_vampire_bruxa
         
         scene.ORIANNA_comment_ADD_AREA_INSIDE_HOUSE:
           ".editor":
@@ -178,7 +181,7 @@ structure:
         
         scene.main_20_orianna_scene:
           ".editor":
-            pos: [ 3300.0, 776.025390625 ]
+            pos: [ 3240.0, 755.0 ]
             in: [ Input ]
             out: [ fight, peaceful ]
           scene: 20.orianna_main.yml
@@ -194,10 +197,11 @@ structure:
             - changelayers.show_walls_1
             - despawn.despawn_orihum
           next.peaceful:
-            - journal.entry_ori_spared: Activate
+            - scene.26_baron_river_aggressive: Input
             - despawn.despawn_vampire
             - despawn.despawn_orihum
             - objective.wait_outside: Success
+            - journal.entry_ori_spared: Activate
         
         scene.outside_comment:
           ".editor":
@@ -209,7 +213,6 @@ structure:
           interruptable: true
           _fadein: false
           next.Output:
-            - objective.Check_house: Success
             - objective.wait_outside: Activate
         
         scene.scene_19_orianna_appear:
@@ -227,7 +230,7 @@ structure:
         
         scene.scene_27_baron_dies_short:
           ".editor":
-            pos: [ 4500.0, 113.525390625 ]
+            pos: [ 4493.0, 121.0 ]
             in: [ Input ]
             out: [ Output ]
           scene: 27.baron_dies_short.yml
@@ -309,7 +312,7 @@ structure:
         waituntil.1ss:
           elapsed: "00:00:01"
           ".editor":
-            pos: [ 4318.0, 210.0 ]
+            pos: [ 4324.0, 235.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -318,7 +321,7 @@ structure:
         waituntil.1ss_re:
           elapsed: "00:00:01"
           ".editor":
-            pos: [ 7100.0, 369.775390625 ]
+            pos: [ 7058.0, 349.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -465,8 +468,8 @@ structure:
           next:
             - script.ntr_showcredits_5
         
-        waituntil.9s:
-          elapsed: "00:00:09"
+        waituntil.7ss:
+          elapsed: "00:00:07"
           ".editor":
             pos: [ 8700.0, 1094.775390625 ]
             in: [ In ]
@@ -474,8 +477,8 @@ structure:
           next:
             - script.ntr_showcredits_2
         
-        waituntil.9ss:
-          elapsed: "00:00:09"
+        waituntil.8ss:
+          elapsed: "00:00:08"
           ".editor":
             pos: [ 8300.0, 1094.775390625 ]
             in: [ In ]
@@ -493,7 +496,6 @@ structure:
             - scene.house_found_comment: orianna_house_found
             - script.Unlock_front_door
             - addfact.ntr_quest_rivertrack_completed
-            - script.focus_diary
         
         waituntil.Notes_were_read:
           factdb: [ BookReadState_ntr_notices_orianna_notes, ">=", 1 ]
@@ -503,6 +505,7 @@ structure:
             out: [ Out ]
           next:
             - script.check_if_quest_started
+            - objective.Check_house: Success
         
         waituntil.Outside_room:
           outside: [ bob/room_area, PLAYER ]
@@ -567,7 +570,7 @@ structure:
         waituntil.inside_fight_area:
           inside: [ bob/fight_area, PLAYER ]
           ".editor":
-            pos: [ 4100.0, 1663.525390625 ]
+            pos: [ 4107.0, 1590.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -576,7 +579,7 @@ structure:
         waituntil.inside_fight_area_2:
           inside: [ bob/fight_area, PLAYER ]
           ".editor":
-            pos: [ 7100.0, 569.775390625 ]
+            pos: [ 7125.0, 475.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -603,7 +606,7 @@ structure:
         waituntil.outside_fight_area_2:
           outside: [ bob/fight_area, PLAYER ]
           ".editor":
-            pos: [ 6500.0, 344.775390625 ]
+            pos: [ 6550.0, 428.0 ]
             in: [ In ]
             out: [ Out ]
           next:
@@ -726,6 +729,18 @@ structure:
           parameter:
             - localisedStringKey: cname_ntr_outside_fight_warning
             - localizedStringID: 0
+          next: ".done"
+        
+        script.FMV_focus_diary:
+          ".editor":
+            pos: [ 1102.0, 1013.0 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_FocusSetHighlight
+          parameter:
+            - tag: cname_ntr_orianna_notebook
+            - highlightType: FMV_Clue
+            - overrideCustomLogic: true
           next: ".done"
         
         script.FadeOut2:
@@ -854,7 +869,7 @@ structure:
         
         script.Kill_Player:
           ".editor":
-            pos: [ 4500.0, 1563.525390625 ]
+            pos: [ 4530.0, 1680.0 ]
             in: [ In ]
             out: [ Out ]
           function: KillPlayer
@@ -937,7 +952,7 @@ structure:
         
         script.NTR_SaveGame2:
           ".editor":
-            pos: [ 3500.0, 1088.525390625 ]
+            pos: [ 3530.0, 1023.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_SaveGame
@@ -989,12 +1004,11 @@ structure:
         
         script.NTR_releaseOriannaBruxa:
           ".editor":
-            pos: [ 5700.0, 663.525390625 ]
+            pos: [ 6104.0, 591.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_releaseOriannaBruxa
-          next:
-            - scene.24_baron_river_friendly: Input
+          next: ".done"
         
         script.Orianna_fight_indicator:
           ".editor":
@@ -1091,7 +1105,7 @@ structure:
         
         script.Set_monster_scene_app:
           ".editor":
-            pos: [ 4100.0, 1563.525390625 ]
+            pos: [ 4110.0, 1719.0 ]
             in: [ In ]
             out: [ Out ]
           function: AppearanceChange
@@ -1155,7 +1169,7 @@ structure:
         
         script.Tune_bandits:
           ".editor":
-            pos: [ 4105.0, 227.0 ]
+            pos: [ 4113.0, 239.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_SetRelativeLevel
@@ -1252,7 +1266,6 @@ structure:
             - waituntil.inside_fight_area
           next.True:
             - script.Set_monster_scene_app
-            - despawn.despawn_vampire_bruxa
         
         script.branch_fact_7_2:
           ".editor":
@@ -1268,7 +1281,7 @@ structure:
             - waituntil.1ss_re
             - waituntil.inside_fight_area_2
           next.True:
-            - despawn.Despawn_band
+            - addfact.ntr_quest_failed
         
         script.check_if_quest_started:
           ".editor":
@@ -1314,7 +1327,7 @@ structure:
         
         script.fact_check_fight_2:
           ".editor":
-            pos: [ 7300.0, 369.775390625 ]
+            pos: [ 7282.0, 381.0 ]
             in: [ In ]
             out: [ "False", "True" ]
           function: NTR_FactChecker
@@ -1363,18 +1376,6 @@ structure:
             - overrideCustomLogic: false
           next: ".done"
         
-        script.focus_diary:
-          ".editor":
-            pos: [ 1102.0, 1013.0 ]
-            in: [ In ]
-            out: [ Out ]
-          function: NTR_FocusSetHighlight
-          parameter:
-            - tag: cname_ntr_orianna_notebook
-            - highlightType: FMV_Clue
-            - overrideCustomLogic: true
-          next: ".done"
-        
         script.force_kill_alive_bandits:
           ".editor":
             pos: [ 4100.0, -86.474609375 ]
@@ -1397,9 +1398,22 @@ structure:
             - bossTag: cname_ntr_baron_edward
           next: ".done"
         
+        script.ntr_diary_read:
+          ".editor":
+            pos: [ 1971.0, 720.0 ]
+            in: [ In ]
+            out: [ "False", "True" ]
+          function: NTR_FactChecker
+          parameter:
+            - factName: BookReadState_ntr_notices_orianna_notes
+            - factCond: "=="
+            - val: 1
+          next.False:
+            - objective.Check_house: Failure
+        
         script.ntr_diary_scene_active_check:
           ".editor":
-            pos: [ 2300.0, 193.212890625 ]
+            pos: [ 2300.0, 198.0 ]
             in: [ In ]
             out: [ "False", "True" ]
           function: NTR_FactChecker
@@ -1416,7 +1430,7 @@ structure:
         
         script.ntr_diary_scene_active_check1:
           ".editor":
-            pos: [ 1900.0, 93.212890625 ]
+            pos: [ 1873.0, 42.0 ]
             in: [ In ]
             out: [ "False", "True" ]
           function: NTR_FactChecker
@@ -1451,7 +1465,7 @@ structure:
             - effectName: cname_ntr_credits_1
             - destoy: false
           next:
-            - waituntil.9s
+            - waituntil.7ss
         
         script.ntr_showcredits_2:
           ".editor":
@@ -1538,7 +1552,7 @@ structure:
         
         script.reset_fact:
           ".editor":
-            pos: [ 4300.0, 1663.525390625 ]
+            pos: [ 4313.0, 1593.0 ]
             in: [ In ]
             out: [ Out ]
           function: ResetFactQuest
@@ -1548,7 +1562,7 @@ structure:
         
         script.reset_fact_2:
           ".editor":
-            pos: [ 7300.0, 569.775390625 ]
+            pos: [ 7319.0, 476.0 ]
             in: [ In ]
             out: [ Out ]
           function: ResetFactQuest
@@ -1725,7 +1739,7 @@ structure:
         
         changelayers.show_walls_1:
           ".editor":
-            pos: [ 3500.0, 163.525390625 ]
+            pos: [ 3512.0, 230.0 ]
             hint: show-only
             in: []
             out: []
@@ -1879,17 +1893,15 @@ structure:
           next:
             - spawn.river_in_inn
         
-        despawn.Despawn_band:
+        despawn.Despawn_band_DISABLED:
           ".editor":
-            pos: [ 7100.0, 469.775390625 ]
+            pos: [ 7387.0, 167.0 ]
             hint: despawn-only
             in: []
             out: []
           spawnsets:
             - comm_bandits_river
-          next:
-            - script.Gameplay_music
-            - addfact.ntr_quest_failed
+          next: ".done"
         
         despawn.despawn_bandits_river:
           ".editor":
@@ -1934,7 +1946,7 @@ structure:
         
         despawn.despawn_vampire_bruxa:
           ".editor":
-            pos: [ 4100.0, 1763.525390625 ]
+            pos: [ 4550.0, 1839.0 ]
             hint: despawn-only
             in: []
             out: []
@@ -1961,6 +1973,12 @@ structure:
           notify: true
           next: ".done"
         
+        journal.diary_entry:
+          ".editor": [ 2700.0, 876.025390625 ]
+          entry: quests/nighttoremember/house_diary
+          notify: true
+          next: ".done"
+        
         journal.entry_baron_alive:
           ".editor": [ 8100.0, 994.775390625 ]
           entry: quests/nighttoremember/baron_leave
@@ -1974,12 +1992,6 @@ structure:
           notify: true
           next:
             - journal.baron_dead_ori_spared_entry: Activate
-        
-        journal.entry_diary:
-          ".editor": [ 2700.0, 876.025390625 ]
-          entry: quests/nighttoremember/house_diary
-          notify: true
-          next: ".done"
         
         journal.entry_house:
           ".editor": [ 1300.0, 709.619140625 ]
@@ -1995,11 +2007,10 @@ structure:
             - journal.baron_all_dead_entry: Activate
         
         journal.entry_ori_spared:
-          ".editor": [ 3500.0, 63.525390625 ]
+          ".editor": [ 3541.0, 95.0 ]
           entry: quests/nighttoremember/orianna_spared
           notify: true
-          next:
-            - scene.26_baron_river_aggressive: Input
+          next: ".done"
         
         journal.orianna_killed_entry:
           ".editor": [ 5700.0, 463.525390625 ]
@@ -2008,7 +2019,7 @@ structure:
           next: ".done"
         
         objective.Check_house:
-          ".editor": [ 2300.0, 1176.025390625 ]
+          ".editor": [ 1729.0, 1221.0 ]
           objective: nighttoremember/river_part/check_house
           notify: true
           track: true
@@ -2077,7 +2088,7 @@ structure:
             - changelayers.hide_walls1
         
         settime.01_30_t:
-          ".editor": [ 4300.0, 113.525390625 ]
+          ".editor": [ 4274.0, 134.0 ]
           time: "01:30"
           next:
             - scene.scene_27_baron_dies_short: Input
@@ -2107,6 +2118,7 @@ structure:
           next:
             - waituntil.2s
             - scene.scene_19_orianna_appear: Input
+            - script.ntr_diary_read
         
         settime.set_23t30:
           ".editor": [ 3100.0, 369.775390625 ]
@@ -2150,14 +2162,15 @@ structure:
           next:
             - questoutcome.NTR_outcome: Success
             - script.NTR_FactChecker_Baron_alive
-            - waituntil.9ss
+            - waituntil.8ss
         
         addfact.ntr_quest_failed:
-          ".editor": [ 7300.0, 469.775390625 ]
+          ".editor": [ 7135.0, 621.0 ]
           value: [ ntr_quest_failed, 1 ]
           next:
             - questoutcome.NTR_outcome: Failure
-            - waituntil.9ss
+            - waituntil.8ss
+            - script.Gameplay_music
         
         addfact.ntr_quest_finale_started:
           ".editor": [ 2700.0, 293.212890625 ]
@@ -2165,12 +2178,12 @@ structure:
           next: ".done"
         
         addfact.ntr_quest_orianna_alive:
-          ".editor": [ 4900.0, 113.525390625 ]
+          ".editor": [ 4903.0, 107.0 ]
           value: [ ntr_quest_orianna_alive, 1 ]
           next: ".done"
         
         addfact.ntr_quest_orianna_fight:
-          ".editor": [ 3500.0, 263.525390625 ]
+          ".editor": [ 3456.0, 702.0 ]
           value: [ ntr_quest_orianna_fight, 1 ]
           next: ".done"
         

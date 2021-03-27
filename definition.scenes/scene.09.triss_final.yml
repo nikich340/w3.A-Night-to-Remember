@@ -2071,7 +2071,7 @@ storyboard:
 
     # shot Shot21 vampires fly 4
     shot_27:
-      - actor.effect.start: [0.0, regis, mist_fly]
+      - actor.effect.start: [0.0, regis, mist_fly_new]
       - actor.effect.start: [0.0, detlaff, mist_fly]
       - cam.blend.end: [0.999, cam_24_Shot21_vampires_fly_4, rapid]
       - prop.placement.end: [0.999, vampire_vison, [ -5.3536396027, 1.3803710938, 1.6077728271 ], [0.0, 0.0, 0.0]]
@@ -2093,7 +2093,7 @@ storyboard:
       - actor.placement.end: [0.5, detlaff, [ -4.3018493652, 5.1730957031, -0.2921752930 ], [ 0.0, 0.0, 0.0 ]]
       - actor.pose: [0.0, regis_high_standing_determined_idle]
       - actor.pose: [0.0, detlaff_high_standing_determined_idle]
-      - actor.effect.stop: [0.6, regis, mist_fly]
+      - actor.effect.stop: [0.6, regis, mist_fly_new]
       - actor.effect.stop: [0.6, detlaff, mist_fly]
       #- actor.effect.stop: [0.3, regis, mist_fly]
       #- actor.effect.stop: [0.3, detlaff, smoke_movings]
@@ -2194,11 +2194,11 @@ storyboard:
       - actor.sound: [0.0, mirror, monster_dettlaff_monster_construct_beating_heart_vfx_LP]
       - cam: [0.0, cam_33_Shot_mirror_heart_keycam2]
       - actor.lookat: [0.6, geralt, mirror]
-      - cam.blend.start: [1.0, cam_33_Shot_mirror_heart_keycam2]
+      - cam.blend.start: [0.999, cam_33_Shot_mirror_heart_keycam2]
 
     # shot Shot mirror heart
     shot_43:
-      - cam.blend.end: [1.0, cam_34_Shot_mirror_heart]
+      - cam.blend.end: [0.999, cam_34_Shot_mirror_heart]
 
     # shot Shot mirror close
     shot_44:
@@ -2355,13 +2355,17 @@ storyboard:
       - actor.lookat: [0.0, mirror, geralt]
       - actor.lookat: [0.0, geralt, mirror]
       - cam: [0.0, cam_41_Shot_mirror_demon_very_close_smile]
-      - cam.blend.start: [0.9, cam_42_Shot_mirror_grlt_pain_start1]
       - actor.anim.mimic: 
           actor: mirror
           .@pos: [0.0, mimicsanim_9_geralt_happiness_gesture_smile_face]
           weight: 0.6
           blendin: 0.5000000000
           blendout: 0.5000000000
+      - cam.blend.start: [0.9, cam_42_Shot_mirror_grlt_pain_start1]
+      - env.blendin:
+          .@pos: [0.9, environment/definitions/env_nomansland/nml_global/env_nml_swamps_v1.env, 2.0]
+          #.@pos: [0.9, dlc/ep1/data/environment/definitions/in_progress/q605/q605_hell_red_blockout_mansion.env, 2.0]
+          blendFactor: 0.8
 
     # shot Shot mirror grlt pain mark
     shot_pain_start:
@@ -2376,6 +2380,7 @@ storyboard:
       - actor.anim: 
           actor: geralt
           .@pos: [0.0, anim_8407_man_kneeling_on_floor_in_pain_start]
+          blendin: 0.3
           blendout: 0.23
 
     shot_pain_loop:
@@ -2385,7 +2390,7 @@ storyboard:
           blendin: 0.23
           blendout: 0.3
           clipend: 7.6
-      - cam.blend.end: [1.0, cam_52_Shot_mirror_grlt_pain_start4]
+      - cam.blend.end: [0.999, cam_52_Shot_mirror_grlt_pain_start4]
 
     shot_demon_very_close2:
       - cam: [0.0, cam_41_Shot_mirror_demon_very_close_smile]
@@ -2401,6 +2406,7 @@ storyboard:
     shot_pain_end:
       #- actor.placement: [0.0, unseen, [ -3.8350543976, 8.5053710938, -0.2921752930 ], [ 0.0, 0.0, 257.1499938965 ]]
       - actor.anim.mimic: [0.0, geralt_geralt_neutral_gesture_death_longer_face]
+      - env.blendout: [0.999, environment/definitions/env_nomansland/nml_global/env_nml_swamps_v1.env, 3.0]
       - anim:
           actor: geralt
           .@pos: [0.0, anim_8408_man_kneeling_on_floor_in_pain_stop_01]
@@ -2447,7 +2453,7 @@ storyboard:
       - actor.effect.start: [0.05, geralt, heavy_hit]
       - actor.sound: [0.1, geralt, grunt_vo_death]
       - fade.out: [0.855, 1.0, [0, 0, 0, 255]]
-
+      
 dialogscript:
   player: "geralt"
   actors: [ "geralt", "triss_monster", "Eredin_vesemir", "Eredin_vesemir2", "Azar_Javed", "Iorweth", "regis", "detlaff", "mirror", "unseen" ]
@@ -2541,11 +2547,13 @@ dialogscript:
     - CUE: shot_15
     - Eredin_vesemir: "[2.9975786]0001040839|This is the end, Geralt."
     - CUE: shot_16
-    - PAUSE: 2.0
+    - PAUSE: 1.5
     - geralt: "[1.8422]2114670729|I must be out of my mind…"
     - CUE: shot_17
-    - geralt: "[0.66788405]0001075169|Vesemir!"
-    - PAUSE: 0.5
+    - PAUSE: 0.25
+    #- geralt: "0001075169|Vesemir!"
+    - geralt: "0001076929|Vesemir."
+    - PAUSE: 0.25
     #- Eredin_vesemir: "[3.3156197]0000534728|Hahahaha… As you will."
     - Eredin_vesemir2: "[1.3952225]0001058454|Draw your sword, Geralt."
     - CUE: shot_18
@@ -2612,7 +2620,7 @@ dialogscript:
     - PAUSE: 1.67
     # shot Shot mirror heart keycam
     - CUE: shot_41
-    - PAUSE: 4.0
+    - PAUSE: 2.0
     # shot Shot mirror heart
     - CUE: shot_43
     - PAUSE: 3.0
@@ -2646,7 +2654,7 @@ dialogscript:
 
   section_mirror_soul_yes:
     - CUE: shot_soul_yes_init
-    - geralt: "[0.95819706]0000433763|Yes."
+    - geralt: "[0.8192673]0001049930|Yes."
     - CUE: shot_soul_yes_mr
     - mirror: "[7.2947516]0001103255|No, Geralt, you don't. This one time I shall spare you and not grant your wish."
     - NEXT: section_choice_mirror
@@ -2732,5 +2740,3 @@ dialogscript:
     #- CAMERA_BLEND: 5.0
     - BLACKSCREEN: true
     - EXIT
-
-
