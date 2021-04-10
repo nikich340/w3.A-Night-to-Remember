@@ -756,8 +756,8 @@ repository:
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.0435724258, 4.0435724258 ]
-        focus: [ 1.5435724258, 2.5435724258 ]
+        blur: [ 0.0, 5.0435724258 ]
+        focus: [ 0.0, 4.5435724258 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -771,8 +771,8 @@ repository:
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 5.4011597633, 8.4011592865 ]
-        focus: [ 5.9011597633, 6.9011597633 ]
+        blur: [ 2.4011597633, 8.4011592865 ]
+        focus: [ 3.9011597633, 6.9011597633 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -786,8 +786,8 @@ repository:
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 5.5230193138, 8.5230197906 ]
-        focus: [ 6.0230193138, 7.0230193138 ]
+        blur: [ 2.5230193138, 8.5230197906 ]
+        focus: [ 3.0230193138, 7.0230193138 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -801,8 +801,8 @@ repository:
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.6597108841, 4.6597108841 ]
-        focus: [ 2.1597108841, 3.1597108841 ]
+        blur: [ 0.0, 4.6597108841 ]
+        focus: [ 0.0, 3.1597108841 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -816,8 +816,8 @@ repository:
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.8897576332, 4.8897576332 ]
-        focus: [ 2.3897576332, 3.3897576332 ]
+        blur: [ 0.0, 4.8897576332 ]
+        focus: [ 0.0, 3.3897576332 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -831,8 +831,8 @@ repository:
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.2175953388, 4.2175951004 ]
-        focus: [ 1.7175953388, 2.7175953388 ]
+        blur: [ 0.0, 4.2175951004 ]
+        focus: [ 0.0, 2.7175953388 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -846,8 +846,8 @@ repository:
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.3193995953, 4.3193998337 ]
-        focus: [ 1.8193995953, 2.8193995953 ]
+        blur: [ 0.0, 4.3193998337 ]
+        focus: [ 0.0, 2.8193995953 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -861,8 +861,8 @@ repository:
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 0.7133624554, 3.7133624554 ]
-        focus: [ 1.2133624554, 2.2133624554 ]
+        blur: [ 0.0, 5.7133624554 ]
+        focus: [ 0.0, 4.2133624554 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -876,8 +876,8 @@ repository:
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 0.7268373966, 3.7268373966 ]
-        focus: [ 1.2268373966, 2.2268373966 ]
+        blur: [ 0.0, 5.7133624554 ]
+        focus: [ 0.0, 4.2133624554 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -891,8 +891,8 @@ repository:
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 1.4360058308, 4.4360055923 ]
-        focus: [ 1.9360058308, 2.9360058308 ]
+        blur: [ 0.0, 4.4360055923 ]
+        focus: [ 0.0, 2.9360058308 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -906,8 +906,8 @@ repository:
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 2.2073061466, 5.2073059082 ]
-        focus: [ 2.7073061466, 3.7073061466 ]
+        blur: [ 1.2073061466, 5.2073059082 ]
+        focus: [ 1.7073061466, 3.7073061466 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -923,7 +923,7 @@ repository:
         aperture: [ 28.2495002747, 1.2700699568 ]
         blur: [ 2.7571206093, 5.7571206093 ]
         focus: [ 3.2571206093, 4.2571206093 ]
-        intensity: 0.2500000000
+        intensity: 0.1
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -938,7 +938,7 @@ repository:
         aperture: [ 28.2495002747, 1.2700699568 ]
         blur: [ 2.7571206093, 5.7571206093 ]
         focus: [ 3.2571206093, 4.2571206093 ]
-        intensity: 0.2500000000
+        intensity: 0.0
       event_generator:
         plane: "Medium"
         tags: [ "ext" ]
@@ -1586,7 +1586,7 @@ storyboard:
       - actor.pose: [0.9, orianna_vampire_idle_vampire]
 
   section_fight2_v2:
-    shot_fight3_pre:
+    shot_fight3_pre2:
       - actor.placement: [0.0, orianna_human, [ -149.0923614502, 34.5125274658, -13.1045913696 ], [ 0.0, 0.0, 274.4501037598 ]]
       - actor.placement: [0.0, orianna_vampire, [ -149.1020660400, 34.5456390381, -11.1445922852 ], [ 0.0, 0.0, 282.7800292969 ]]
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
@@ -1598,14 +1598,14 @@ storyboard:
       - cam: [0.0, cam_1_you_wont_be]
       - actor.mimic: [0.2, orianna_vamp_aggressive]
 
-    shot_fight3_oriana_morph:
+    shot_fight3_oriana_morph2:
       - actor.mimic: [0.0, orianna_vamp_focused]
       - actor.sound: [0.0, orianna_vampire, Play_ntr_orianna_hiss2]
       - actor.sound: [0.0, orianna_vampire, q701_bruxa_skin_morph]
       - actor.lookat: [0.0, orianna_vampire, [ 0.0038613752, 0.4910137057, 1.5813558102 ]]
       - actor.lookat: [0.7, orianna_vampire, geralt]
 
-    shot_fight4_geralt_draw_silver:
+    shot_fight4_geralt_draw_silver2:
       - actor.mimic: [0.0, geralt_disgust]
       #- cam: [0.0, cam_12_Shot_ger_draw_sword_cut]
       - cam: [0.0, cam_11_geralt_sword]
@@ -2347,12 +2347,12 @@ dialogscript:
     - NEXT: script_music_beast
 
   section_fight2_v2:
-    - CUE: shot_fight3_pre
+    - CUE: shot_fight3_pre2
     - orianna_vampire: "[1.6910]2114670452|Goodbye, witcher…"
-    - CUE: shot_fight3_oriana_morph
+    - CUE: shot_fight3_oriana_morph2
     - PAUSE: 1.5
 
-    - CUE: shot_fight4_geralt_draw_silver
+    - CUE: shot_fight4_geralt_draw_silver2
     - PAUSE: 4.0
     - NEXT: script_music_beast
 
@@ -2544,6 +2544,7 @@ dialogscript:
     - orianna_human: "[1.8292]2114670455|All right, Regis."
     - CUE: shot_try_peacefully_ori_think6f
     - PAUSE: 3.0
+    - PAUSE: 1.0
 
     #- CUE: shot_try_peacefully_ori_think7
     #- PAUSE: 5.0

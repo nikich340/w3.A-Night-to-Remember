@@ -15,7 +15,7 @@ SET SCENEID=
 
 SET SCENE_TIMELINE_START=
 SET SCENE_TIMELINE_END=
-SET SCENE_TIMELINE_ZOOM=1.0
+SET SCENE_TIMELINE_ZOOM=5.0
 
 SET INTERACTIVE_BUILD=0
 :: auto execution of every step that is needed (strings, etc)
@@ -25,3 +25,5 @@ SET ENCODE_SCENES=1
 SET START_GAME=0
 
 call "%DIR_PROJECT_BIN%\build.bat"
+
+pause

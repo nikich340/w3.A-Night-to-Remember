@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: regis_mail
 # 
-# (version: 1296, saved: 2021-03-26 01:24:31)
+# (version: 1340, saved: 2021-04-04 23:18:46)
 #
 ---
 structure:
@@ -98,7 +98,7 @@ structure:
             - objective.Fresh_air: Success
             - objective.Take_letter: Activate
             - scene.gp_using_owl: using_owl
-            - script.iscontainersempty
+            - script.Has_letter_check
         
         script.05s:
           ".editor":
@@ -109,6 +109,22 @@ structure:
           parameter:
             - seconds: 0.5
           next: ".done"
+        
+        script.Has_letter_check:
+          ".editor":
+            pos: [ 1350.0, 325.0 ]
+            in: [ In ]
+            out: [ "False", "True" ]
+          function: NTR_HasItem
+          parameter:
+            - itemName: cname_ntr_notices_regis_letter
+          next.False:
+            - script.wait_05s
+          next.True:
+            - objective.Take_letter: Success
+            - objective.Read_letter: Activate
+            - waituntil.Letter_read
+            - changelayers.hide_mail_layer
         
         script.Set_FMV_Clue_for_mail:
           ".editor":
@@ -133,32 +149,16 @@ structure:
           next:
             - waituntil.1s
         
-        script.iscontainersempty:
-          ".editor":
-            pos: [ 1381.0, 292.0 ]
-            in: [ In ]
-            out: [ "False", "True" ]
-          function: NTR_IsContainersEmpty
-          parameter:
-            - tag: cname_ntr_regis_mail
-          next.False:
-            - script.wait_05s
-          next.True:
-            - waituntil.Letter_read
-            - objective.Read_letter: Activate
-            - objective.Take_letter: Success
-            - changelayers.hide_mail_layer
-        
         script.wait_05s:
           ".editor":
-            pos: [ 1390.0, 182.0 ]
+            pos: [ 1368.0, 159.0 ]
             in: [ In ]
             out: [ Out ]
           function: NTR_Wait
           parameter:
             - seconds: 0.5
           next:
-            - script.iscontainersempty
+            - script.Has_letter_check
         
         changelayers.hide_mail_layer:
           ".editor":

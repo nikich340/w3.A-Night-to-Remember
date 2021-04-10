@@ -1,12 +1,12 @@
      |     |ntr_language_check|1
      |     |ntr_language_unsupported_title|WARNING!
      |     |ntr_language_unsupported|You are using unsupported
-     |     |ntr_speech_unsupported|lanaguage for speech.<br>It is strongly recommended to change it to [EN], otherwise you will have muted scenes!<br><br>
-     |     |ntr_plot_unsupported|You did not passed 'Blood Simple' Orianna's quest (Unseen Elder path) in Blood and Wine DLC.<br>It is strongly recommended to play (or watch) it before starting this quest to avoid spoilers and misunderstandings!<br><br>
+     |     |ntr_speech_unsupported|lanaguage for speech.<br>It is STRONGLY recommended to change it to [EN], otherwise you will have MUTED scenes with JERKED animations and WITHOUT lipsync!!<br><br>
+     |     |ntr_plot_unsupported|You did not passed 'Blood Simple' Orianna's quest (Unseen Elder path) in Blood and Wine DLC.<br>It is recommended to play (or watch) it before starting this quest to avoid spoilers and misunderstandings!<br><br>
      |     |ntr_unsupported_action1|* If you are not ready press ESCAPE and return here next night.<br>
      |     |ntr_unsupported_action2|* If you want to proceed anyway press OK but you WERE WARNED!<br>
 ;     |     |ntr_sometime_later|Some time later… - use "cinematic_text_some_time_later" instead
 	 |     |ntr_outside_fight_warning|Warning! Return to battle area, otherwise…
 	 |     |item_name_ntr_acero_sword|Margot
-	 |     |item_desc_ntr_acero_sword|Margot steel sword made by Jato.
+	 |     |item_desc_ntr_acero_sword|Steeped in sorrow. Margot only awakens when the heavens cry.<br>Made by Jato.
 	 |     |item_name_ntr_acero_fake_oil|Rain power

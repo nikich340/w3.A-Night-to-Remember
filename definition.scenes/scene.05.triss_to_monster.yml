@@ -741,7 +741,7 @@ storyboard:
       - actor.placement: [0.0, geralt, [ -9.2644720078, 19.3120117188, -0.7247009277 ], [ 0.0, 0.0, 48.6200218201 ]]
       - cam: [0.0, cam_13_grlt]
       - actor.anim: [0.0, geralt_high_standing_determined_steel_to_gameplay_combat]
-      - actor.equip.right: [0.3, geralt, steelsword]
+      - actor.equip.right: [0.25, geralt, steelsword]
 
     # shot to gp
     shot_14:

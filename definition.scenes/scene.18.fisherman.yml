@@ -632,17 +632,19 @@ storyboard:
     # shot shot axii
     shot_axii:
       #- actor.placement: [0.0, geralt, [ 393.2528686523, -618.8033447266, -34.5093231201 ], [ 0.0, 0.0, 22.3783416748 ]]
-      - cam: [0.0, cam_7_shot_axii]
+      - cam: [0.0, cam_5_shot_menu_def_impatient_mimic]
       - prop.placement: [0.0, pc_axii, [ 392.7203063965, -618.6346435547, -33.1614761353 ], [ 0.0, 0.0, 334.8099975586 ]]
       - actor.anim:
-          actor: geralt
+          actor: geralt # 3.333
           .@pos: [0.0, anim_339_high_standing_determined_turn_45_left]
           blendin: 0.5
-          blendout: 0.5
+          blendout: 0.0
 
-      - actor.placement.start: [0.37733, geralt, [ 393.1834411621, -618.8201904297, -34.5093231201 ], [ 0.0, 0.0, 29.9683418274 ], smooth]
-      - actor.placement.end: [0.444, geralt, [ 393.1317443848, -618.7708740234, -34.5093231201 ], [ 0.0, 0.0, 74.9683418274 ], smooth]
-      
+      #- actor.placement.start: [0.37733, geralt, [ 393.1834411621, -618.8201904297, -34.5093231201 ], [ 0.0, 0.0, 29.9683418274 ], smooth]
+      #- actor.placement.end: [0.444, geralt, [ 393.1317443848, -618.7708740234, -34.5093231201 ], [ 0.0, 0.0, 74.9683418274 ], smooth]
+      - actor.placement: [0.444, geralt, [ 393.1317443848, -618.7708740234, -34.5093231201 ], [ 0.0, 0.0, 74.9683418274 ]]
+      - cam: [0.444, cam_7_shot_axii]
+
       - actor.anim.additive:  
           .@pos: [0.6, geralt_high_standing_determined_gesture_axii_open_right]
           blendin: 0.3

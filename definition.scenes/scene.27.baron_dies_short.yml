@@ -525,6 +525,13 @@ production:
         appearance: "oriana"
         tags: [ "temp_vampire_diva" ]
 
+    mimics:
+      orianna_sad:
+          actor: vampire_diva
+          repo: sad
+          weight: 0.3
+          duration: 1.0
+
     cameras:
       cam_1_Shot1:
         repo: "cam_1_Shot1"
@@ -798,6 +805,7 @@ storyboard:
           .@pos: [0.0, Baron_Edward_man_finisher_dlc_head_rp]
           clipfront: 1.5
           clipend: 4.6
+      - actor.mimic: [0.5, orianna_sad]
 
     shot_ori_reaction:
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
@@ -815,12 +823,19 @@ storyboard:
       #- cam.blend.start: [0.0, cam_1_Shot0_another_cam1, rapid]
       #- cam.blend.end: [0.999, cam_2_Shot0_another_cam2, rapid]
       - cam: [0.0, cam_1_Shot1_orianna]
-      - actor.anim.mimic: 
-          .@pos: [0.0, vampire_diva_geralt_neutral_gesture_suprised_worried_face]
-          blendin: 0.2
-          blendout: 0.3
-          weight: 0.6
-          stretch: 1.5
+      - actor.anim.mimic:
+          actor: vampire_diva
+          .@pos: [0.0, mimicsanim_424_geralt_neutral_gesture_really_face]
+          blendin: 0.5
+          blendout: 0.5
+          stretch: 1.0
+          weight: 0.9
+      #- actor.anim.mimic: 
+      #    .@pos: [0.0, vampire_diva_geralt_neutral_gesture_suprised_worried_face]
+      #    blendin: 0.2
+      #    blendout: 0.3
+      #    weight: 0.6
+      #    stretch: 1.5
 
       - actor.anim:
           actor: vampire_diva
@@ -846,21 +861,23 @@ storyboard:
       - actor.anim:
           .@pos: [0.0, geralt_geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined]
           blendin: 0.5
-          blendout: 0.5
-          clipend: 6.0
+          blendout: 0.0
+          clipend: 5.0
 
     shot_8aa:
-      - actor.unequip.right: [0.75, geralt]
+      - actor.unequip.right: [0.85, geralt]
 
-    shot_8b:     
+    shot_8b:    
+      - cam: [0.0, cam_4_Shot4] 
       - actor.anim: 
           actor: geralt
           .@pos: [0.0, anim_7107_high_standing_determined_to_high_kneeling_determined]
-          blendin: 0.5
+          blendin: 0.0
+          clipfront: 1.0
           blendout: 0.5
 
     shot_8c:
-      - cam: [0.0, cam_4_Shot4]
+      #- cam: [0.0, cam_4_Shot4]
       - actor.sound: [0.66, geralt, dialog_sword_take]
       - actor.sound: [0.6, geralt, q701_taking_sword_from_body]
       - actor.anim: 
@@ -881,6 +898,7 @@ storyboard:
           actor: geralt
           .@pos: [0.0, anim_6772_high_kneeling_determined_to_high_standing_determined]
           blendin: 0.0
+          clipfront: 0.5
           blendout: 0.5
 
       - actor.anim: 
@@ -951,10 +969,10 @@ dialogscript:
     - geralt: "[1.3167018]0000458655|You asked for it…"
     #- PAUSE: 1000.0
     - CUE: shot_8aa
-    - PAUSE: 4.18
+    - PAUSE: 3.6833
 
     - CUE: shot_8b
-    - PAUSE: 3.4
+    - PAUSE: 2.4
 
     - CUE: shot_8c
     - PAUSE: 3.0

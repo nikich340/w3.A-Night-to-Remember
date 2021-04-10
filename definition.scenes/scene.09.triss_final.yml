@@ -2490,7 +2490,7 @@ dialogscript:
               emphasize: true
             - choice: ["2114670721|[Spare]", section_spare_triss]
               emphasize: true
-            - TIME_LIMIT: 5.0
+            - TIME_LIMIT: 7.0
 
   section_kill_triss: 
     # shot Shot4a kill
@@ -2551,8 +2551,8 @@ dialogscript:
     - geralt: "[1.8422]2114670729|I must be out of my mind…"
     - CUE: shot_17
     - PAUSE: 0.25
-    #- geralt: "0001075169|Vesemir!"
-    - geralt: "0001076929|Vesemir."
+    #- geralt: "[0.66788405]0001075169|Vesemir!"
+    - geralt: "[0.9205552]0001076929|Vesemir."
     - PAUSE: 0.25
     #- Eredin_vesemir: "[3.3156197]0000534728|Hahahaha… As you will."
     - Eredin_vesemir2: "[1.3952225]0001058454|Draw your sword, Geralt."
@@ -2740,3 +2740,4 @@ dialogscript:
     #- CAMERA_BLEND: 5.0
     - BLACKSCREEN: true
     - EXIT
+

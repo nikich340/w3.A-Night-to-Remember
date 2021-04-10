@@ -246,6 +246,7 @@ exec function sc(num : int, optional input : String) {
 	sceneNames.PushBack("31.ntr_completed.w2scene");
 	sceneNames.PushBack("32.orianna_oneliners.w2scene");
 	sceneNames.PushBack("33.orianna_diary.w2scene");
+	sceneNames.PushBack("25b.baron_dies_long_with_ori.w2scene");
 	
 	if (input == null) {
 		input = "Input";

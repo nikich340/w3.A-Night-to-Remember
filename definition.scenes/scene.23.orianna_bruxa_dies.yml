@@ -1051,7 +1051,9 @@ storyboard:
   section_storyboard_ui:
     # shot Shot1 cam1
     shot_1:
+      - actor.effect.start: [0.0, Orianna_bruxa, appear_safe_mode]
       - actor.effect.start: [0.0, Orianna_bruxa, appear]
+      - actor.effect.stop: [0.0, Orianna_bruxa, disappear]
       - prop.placement: [0.0, witcher_crossbow_lvl7, [ -168.5621643066, 6.9380402565, -19.6555137634 ], [ 353.0975036621, 355.2424926758, 340.1174316406 ]]
       - prop.placement: [0.0, mq7006_item_aerondight_sword, [ -167.5621643066, 6.9380402565, -19.6555137634 ], [ 353.0975036621, 355.2424926758, 340.1174316406 ]]
       - prop.placement: [0.0, knife_to_play, [ -166.5621643066, 6.9380402565, -19.6555137634 ], [ 353.0975036621, 355.2424926758, 340.1174316406 ]]

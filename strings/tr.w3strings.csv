@@ -1,0 +1,400 @@
+;meta[language=en]
+; id      |key(hex)|key(str)| text
+2114670013|00000000||Agneta
+2114670014|00000000||Niellan
+2114670015|00000000||Eredin
+2114670016|00000000||Triss
+2114670017|00000000||Baron Edward
+2114670018|00000000||Baron'un haydutu
+2114670019|00000000||Baron'un haydutu
+2114670020|00000000||Baron'un haydutu
+2114670021|00000000||Baron'un haydutu
+2114670022|00000000||Baron'un haydutu
+2114670023|00000000||Baron'un haydutu
+2114670024|00000000||Su cadısı
+2114670025|00000000||Orianna
+2114670026|00000000||Orianna
+2114670027|00000000||Orianna
+2114670028|00000000||Orianna'yı ararken Geralt, sıradan korsanlara benzeyen bir grup "asil insanın" lideri olan Baron Edward ile tanıştı. Görünüşe rağmen, Baron Edward trajik bir durumdan rahatsız olan onurlu bir adam izlenimi verdi. <br> <br> Ne yazık ki ölen sevgilisiyle yeniden bir araya gelmek için Toussaint'e geldi. Şimdi Baron, Orianna'nın yetimhanesine götürülen oğlunu bulmaya kararlıydı. Orianna, çocuğu "gerçek babaya" vermeye istekli değildi ve hatta astı Alfred'i öldürdü. Baron Edward, Witcher'dan kızıl saçlı şeytanın intikamını almak için yardım istedi.<br><br>
+2114670029|00000000||Baron başlangıçta Geralt'ın Orianna'yı öldürmesinden memnundu, ancak Geralt onu kendi oğlu Niellan'ı büyütmeye uygun olmadığını ilan ettikten sonra öfkelendi. Baron Edward, Witcher'ı düelloya davet ederek asilce olsa da büyükl bir hata yaptı. Ölümünden önce oğlu için dökülen kanın sona ermesini istedi. Son nefesinde Geralt'tan kılıcını oğlunun yadigarı olarak almasını istedi. <br> <br>
+2114670030|00000000||Baron, Geralt'ın Orianna'yı öldürmesinden memnun kaldı ve oğlunun zarar görmediğini öğrendiğinde minnettar oldu. Orianna'nın sadece oğlunu değil bir kızı da barındırdığını öğrenince şaşırdı. Geralt'a çocukları birbirlerinden ayırmayacağına söz verdi. Baron Edward, söz verilen ödülü Witcher'a verdi ve Toussaint'i çocuklarla birlikte terk etti. <br> <br>
+2114670031|00000000||Baron, Witcher'ın Orianna'nın zarar görmeden gitmesine izin vermesine çok kızmıştı. Baron ve adamları öfkeyle saldırdı ve Geralt, kumu kanlarıyla boyamak zorunda kaldı. Bu, Baron Edward ve grubu için hikayenin sonuydu. <br> <br>
+2114670032|00000000||Baron, Witcher'ın Orianna'nın zarar görmeden gitmesine izin vermesine çok kızmıştı. Baron ve adamları öfkeyle saldırdı ve Geralt, kumu kanlarıyla boyamak zorunda kaldı. Bu, Baron Edward ve grubu için hikayenin sonuydu. Sağ kolu Tyberius liderliğindeki çete Toussaint'ten ayrıldı. <br> <br>
+2114670033|00000000||Baron Edward
+2114670034|00000000||MOD questgroup_ntr Quests
+2114670035|00000000||Cadının izlerini takip etmek için Efsunger Duyularını kullan.
+2114670036|00000000||Duvarın arkasındaki yeri kontrol et.
+2114670037|00000000||Su cadısını öldür.
+2114670038|00000000||Triss'i yen.
+2114670039|00000000||Triss ile konuş.
+2114670040|00000000||Corvo Bianco'da gece yarısına kadar bekleyin.
+2114670041|00000000||Eski dostum Geralt, kendisini intikam ve kefaretle dolu bir ölüm kalım planının merkezinde buldu. Tesham Mutna harabelerine nasıl vardığını söyleyemedi, ancak Witcher  tehlikeli bir su cadısnın peşinde koştuğu için önemli değildi.
+2114670042|00000000||Geralt canavarı mağlup etti, ama öldüremedil - su cadısı, sefil sümüksü hayatına yapışarak kaçtı. Witcherı başladığı işi bitirmek için onun kanının izini sürdü.
+2114670043|00000000||Geralt su cadısını  takip ederken, Triss'le karşılaştı. Bu saatte burada ne arıyor olabilir? <br>
+2114670044|00000000||Tuhaf bir dizi korkunç manzaranın ardından Geralt sonunda sefil kabusundan uyandı.
+2114670045|00000000||Kabusların Gecesi
+2114670046|00000000||(İsteğe bağlı) Haydut kampının yakınındaki amfitiyatroyu araştır.
+2114670047|00000000||Haydut kampına gidin ve Baron Edward ile konuş.
+2114670048|00000000||Haydutları yumruk dövüşünde yen.
+2114670049|00000000||Orianna'nın odasına bak.
+2114670050|00000000||Orianna'nın yetimhanesine bak.
+2114670051|00000000||Biraz temiz hava almak için dışarı çık.
+2114670052|00000000||Mektubu oku.
+2114670053|00000000||Baykuşun yanındaki mektubu al.
+2114670054|00000000||(İsteğe bağlı) Evi araştırmak için Wfsungerr Duyularını kullan.
+2114670055|00000000||Horozbaş hanı yakınındaki nehir kenarını araştırın.
+2114670056|00000000||Efsunger Duyularınızı kullanarak ayak izlerini takip edin.
+2114670057|00000000||Baron'un adamlarını yen.
+2114670058|00000000||Baron Edward'ı yen.
+2114670059|00000000||Orianna'yı yen.
+2114670060|00000000||(İsteğe bağlı) Orianna'nın günlüğünü oku.
+2114670061|00000000||Orianna'yı evin dışında bekle.
+2114670062|00000000||Efsunger Duyularınızı kullanarak ayak izlerini takip et.
+2114670063|00000000||Efsunger Duyularınızı kullanarak at izlerini takip et.
+2114670064|00000000||Efsunger Duyularınızı kullanarak parfüm kokusunu takip et.
+2114670065|00000000||Orianna'nın evinin yakınındaki ipuçlarını araştır.
+2114670066|00000000||Balıkçıya Orianna'yı sor.
+2114670067|00000000||Baron, Witcher'ın Orianna'yı bağışlama kararına öfkelendi. Nehir kıyısı o gece kanla kaplandı. Geralt kontratına ihanet etti, belki de Oriannadan farklı değildir. Geralt, insan pahasına bir vampiri kurtararak doğru kararı verdi mi? Regis uğruna, bunu ancak umabilir. <br>
+2114670068|00000000||Geralt, haydutlara çocukların nerede olduğunu söylemeyi reddetti. Witcher, bu çocukların haydutlar veya vampirler gibi acınacak durumdaki kişiler tarafından yetiştirilmesine izin veremezdi. Baron Edward, Witcher'a öfkeyle meydan okudu, bu büyük bir hataydı. Ölümünden önce Edward, adamlarına Toussaint'i terk etmelerini emretti ve Geralt'ın kılıcını Niellan için bir hatıra olarak almasını istedi. Witcher, yetim çocukları uygun bir ev ararken onları güvende tutmak için Corvo Bianco'ya götürdü. Geralt, olası bir baba ve vekil bir anneyi öldürerek doğru kararı verdi mi? Çocukların iyiliği için, bunu ancak umabilir. <br>
+2114670069|00000000||Geralt, Baron'a oğlunun başka bir çocukla birlikte onu nerede bekleyeceğini söyledi. Witcher, Niellan'ın tek ailesi Agneta'dan ayrılmamasını istedi. Baron Edward dediğini yapacak ve her iki çocuğa da bakmaya devam edecekti. Söz verilen ödülü aldıktan sonra Geralt, Corvo Bianco'ya evine döndü. Geralt, Niellan ve Agneta ile ilgilenen bir vampiri öldürerek doğru kararı verdi mi? Onlar ve diğer çocuklar uğruna, bunu ancak umabilir. <br>
+2114670070|00000000||Haydut kampını bulduktan sonra Geralt, Baron Edward ile konuştu. Baron, malikanesinin yakınında Orianna ile yüzleştikten sonra hayata kıl payı kurtulurken, yurttaşı Alfred o kadar şanslı değildi. Baron, Witcher'ı Orianna'yı öldürmesi ve oğlunu sağ salim ona iade etmesi için tuttu. Geralt sözleşmeyi kabul etti ve Orianna'nın öldürüldüğü yeri araştırmak için Orianna'nın malikanesine gitmeyi planladı.<br>
+2114670071|00000000||Witcher, Baron'un istediği gibi yaptı ve amfitiyatronun lanetli olduğunu öğrendi. Geralt bu laneti kaldırmaya karar verdi. <br>
+2114670072|00000000||Witcher, tanıdık bir koku kokan rahat bir ev buldu. Boştu ama belli ki burada biri yaşıyordu. Geralt biraz etrafına bakmaya karar verdi. <br>
+2114670073|00000000||Orianna'nın son buluşmalarından bu yana hayatını detaylandıran günlüğünü buldu. Geralt, Niellan ve Agneta adında 2 çocuğa baktığını öğrendi. Witcher şimdi zor bir kararla karşı karşıyadır.
+2114670074|00000000||Verimsiz bir konuşmanın ardından Geralt, Baron Edward'ın ondan istediğini yaptı. Witcher görevini yaptı ve kızıl saçlı vampiri öldürdü.
+2114670075|00000000||Geralt, Orianna'yı masumları beslemeden yaşayabileceğine ikna edebildi. Witcher'ı, Regis'i aramak için Toussaint'i terk etmesi şartıyla gitmesine izin verdi. Belki de bu onun için en iyi çözümdü.
+2114670076|00000000||Geralt, Orianna'yı gördüğü son yer olan yetimhaneye döndü. Onun yerinde üçlü bir haydut grubuyla karşılaştı. Adamlar Geralt'a yerini Baron Edward'dan öğrendiklerini söylediler.
+2114670077|00000000||Geralt, yetim arayan sıradan haydutlarla ilgileniyordu. Ancak witcher, ayrıntıları onlardan öğrenmeyi başaramadı ve utanç verici bir şekilde yetimhaneden ayrıldı. <br>
+2114670078|00000000||Geralt, yetim arayan sıradan haydutlarla ilgileniyordu, ancak kendi işine bakmayı seçti.
+2114670079|00000000||Geralt, yetim arayan sıradan haydutlarla ilgileniyordu. Yumrukları onları ayrıntıları açıklamaya ikna etti. Witcher, Baron Edward'ın yetimhanede yaşayan oğlunu aradığını öğrendi.
+2114670080|00000000||Kabustan sonra Geralt biraz temiz hava almak için dışarı çıktı.
+2114670081|00000000||Baykuştan bir mektup alan Geralt'ı bekleyen bir sürpriz vardı. Kuşu kurye olarak kim kullanıyor olabilir? <br>
+2114670082|00000000||Mektup Regis'tendi; vampir, witcher'ın Orianna'yı araştırmasını istedi. Geralt'a, Orianna'nın canavarca eğilimlerinin üstesinden gelmesine yardım etmesi için yalvardı ve Geralt'ın onu barışçıl bir şekilde bastıramaması durumunda her iki arkadaşının da güvenliğinden korktu.
+2114670083|00000000||Geralt, Orianna'yı bir nehre kadar takip etti ve burada bir balıkçıya onu Horozbaş hanı'na götürmesi için para ödedi. Witcher, Orianna ile kaderindeki karşılaşmasının yaklaştığını hissedebiliyordu.
+2114670084|00000000||Unutulmayacak bir gece
+2114670085|8ef7a089||Orianna'nın günlüğü
+2114670086|5fbc890f||Zarif el yazısıyla yazılmış günlük.
+2114670087|2a054b23||26 Haziran <br> Detlaff'ın, insanların bizim standartlarımıza uymayacağını nasıl kavrayamadığını bir kez daha kanıtlaması beni şaşırtmamalı. Sadece bir ölümlünün eylemleri için tüm şehre gazabını salmak, zayıflıktan başka bir şey ortaya çıkarmaz. Bizim türümüz için ne utanç verici. <br> Belki de tüm bu yanma ve yıkımın ortasında, Regis ve büyücüsü Detlaff'ı en azından geçici olarak akla getirmek için ilham alabilirdi. Sanırım Arnaud ve çocuklar, işler düzelene kadar yetimhanede bulunmamdan faydalanabilirler. Oraya gideceğim. <br> <br> 27 Haziran <br> Ölüm .. yıkım .. her yerde kan .. çocuklarım… Tarif edemem. Bu yer Garkain'i etkiliyor. Dettlaff çok ileri gitti. Tek rahatlığım Niellan'ın hayatta kalması. O şimdi benimle ve varlığım onu ​​sakinleştiriyor. Biraz kanı da acıtmazdı. <br> Garip bir şey… Geralt of Rivia buradaki yolculuğumda bana katıldı. Görünüşe göre onu yine ilgilendiriyor. Görünmez'i aramak için çabucak ayrıldı, bu yüzden merak ediyorum, benden ne isteyebilir ki? Neden göremiyorum. Çocuklarıma çok iyi baktım, besledim, hediyeler verdim. Bu adil bir ticaret. Her şeye rağmen, bir gün döneceğini söyledi, ama bu beni Regis'in ona sırrımızı açıklamasından daha az rahatsız ediyor. Sadece koşulların çok kötü olduğunu varsayabilirim. <br> Görünüşe göre Dettlaff durdurulmuş ve Vampirler geri çekilmiştir. Yine sessiz. Regis'in yaptığından eminim. Arkadaşımın bu kadar değişmesi şaşırtıcı. Görünüşe göre, eğer insanlar uğruna kendi hayatını riske atmaya istekli olsaydı, İnsanlar onun üzerinde derin bir etkiye sahipti. Belki de Dettlaff'ın çocukluğunun zıddıdır. Türümüze böyle bir ihanet, ağır sonuçlar doğuracaktır. İnsanlarla yaşamak için ödediğimiz bedel. Burada bizim için hiçbir şey kalmadı. Oğlan için yeni bir ev bulmalıyım. <br> <br> 29 Haziran <br> Şehrin dışında mütevazı bir ev buldum. Görünüşe göre burada iyi anlaşacağız. Yetimhane hakkında aptalca söylentilerin yayıldığını duymuştum. Onları çabucak yok etmek için ne gerekiyorsa yapmalıyım. Düşünmeyi bırakamasam da, cadı doğamı düşese ifşa etmiş olabilir mi - bundan şüpheliyim, ancak en azından şimdilik şehirden uzak durmak en iyisi olabilir. Sırların ve asaletin görkemli yaşamından oldukça yoruldum. <br> <br> 14 Temmuz <br> Bugün yatak odasını temizliyordum ve bu notları buldum, onları birkaç hafta önce yazmış olmalıyım. <br> İle O kanlı gecenin hatıraları yavaş yavaş kayboluyor ve şehir restore ediliyor, buradaki sakin hayatın tadını çıkarmak için büyüyorum. Niellan burayı, özellikle de yakınlardaki nehri seviyor. Gerçi o korkunç Dev Kırkayak saldırısından beri (şükürler olsun ki çoğunu öldürdüm, ama en sevdiğim elbisenin yırtılmasının sonucu olmadan) oraya gitmek istediğinde ona eşlik etmeye karar verdim. Benim gözetimim altındayken tehlikede olması için hiçbir sebep yok. Sanırım bir terzi bulacağım. O elbiseyi gerçekten beğendim. <br> <br> 19 Temmuz <br> Bugün Niellan ile nehir kenarında yürürken, bir teknede korkmuş bir kızla karşılaştık. Babasının cesedinin yanında oturuyordu. Niellan ona tipik insani empatik merakla yaklaştı. Agneta'nın (adı) hikayesine göre, babasının katilleri ya Boğuculardı ya da belki bir sazdı. O zaman Niellan bana öyle yalvaran bir şekilde baktı ki onu orada bırakamazdım. Elbette biraz kan çeşidinde yanlış bir şey yok, ama .. onun bakışları… Daha fazla kanın kabul etmem için ana motivasyonum olup olmadığı konusundaki belirsiz düşünceden rahatsız oldum. Tuhaf bir düşünce. <br> <br> 23 Temmuz <br> Bugün Agneta'nın kanından biraz tatmak istedim ve normalde babası için ağlayan bir çocuk beni hiç rahatsız etmiyor. Bu sefer farklıydı. Acaba ... sempati duymam mümkün olabilir mi? Ah ne kadar saçma. Belki Regis bana ulaştı… ya da daha çok, baş ağrılarım için beni zavallı eczacının sattığı o kokuşmuş karışım… <br> <br> 28 Temmuz <br> Agneta, yemek yapmakta yararlı oldu, çünkü yemeklerim çok şey bırakıyor ama çocuklar şikayet etmez. Bugün Agneta'yı pazara götürmek istedim, ancak Niellan işler için geride kalmayı reddetti. Görünüşe göre bu ikisi hırsız kadar kalınlaştı. <br> Umursamıyorum. Şakaları oldukça eğlenceli. Belki bu akşamki kan yemeğini unuturum. Onları beslendikten sonra oluşan sessiz uyuşukluğun üstünden oynarken seyretmeyi sevindirici buluyorum. <br> <br> 1 Ağustos <br> Yüzyıllardır süren insan çiftçiliği deneyimi birden bire buharlaştı. Bir insanın sınırlarını belirlemek zor değil ve yine de bu gün görünüşe göre anlamsızlaştım. <br> Durmam gerektiğini biliyordum ama yine de tamamen açlıktan güçlüydüm… Kanı çok zengindi, çok tazeydi. İçimdeki bu şey "daha fazla ... daha fazla !!" dedi, gerçi o kadar ihtiyacım yoktu .. gerçekten. Ancak, bu ilkel dürtü Agneta'nın neredeyse hayatına mal oldu. Onu öldürmem aptallık olurdu… Açıkça kaynağımızı korumalıyız ve ayrıca… Onun işinden zevk alıyorum .. <br> Saygılarımızla.., akılsız bir canavara dönüştüm ve bu bir daha olmamalı. Doktor, daha fazla kan kaybının ölümcül olacağı konusunda uyarıyor. Böyle aptallığı tekrar etmemeye özen göstereceğim. Lütfen Agneta, beni bırakma… <br> <br> 4 Ağustos <br> Oldukça hareketli bir gün. İki aptal mülkümün yakınında bana saldırmaya karar verdi. Bir adam, bu "Baron Edward", Neillan'ın babası olduğunu iddia ediyor. Sayısız yıl sonra aniden böylesine gülünç iddialarla ortaya çıkan bir insana inanmıyorum. Neilan'ın annesi öldü ve o zamandan beri haklı olarak onun tek koruyucusu oldum. Bu İnsanların onurları yok. Bu Baron, arkadaşının ölümcül kaderiyle karşılaşmadığı için minnettar olmalı. Yine de, burada devam eden varlığım artık risk altında olabilir. Gizlilikten çok yoruldum. <br> Olumlu tarafta, Agneta iyi iyileşiyor. Çocukların güneşin serin esintisi ve sıcaklığıyla suya sıçramasını izlemek bana daha sessiz günleri hatırlatıyor. Beni açlıktan da uzaklaştırmış görünüyor. Bununla birlikte, ne kadar uzun süre çekimser kalırsam, arzuyu kontrol etme yeteneğimden o kadar az emin olduğumdan korkuyorum. Korkarım eğer çok güçlenirse yapmayabilirim… belki küçük kontrollü yemekler… Regis'in bu tür konulardaki görüşünü gerçekten özlüyorum. <br>
+2114670088|783685e6||Gizemli mektup
+2114670089|f28f74a0||Baykuş tarafından teslim edilen imzasız mektup.
+2114670090|bc0037e6||Sevgili Geralt, <br> <br> Bu mektubun sizi ve sevdiklerinizi sağlıklı bulmasını içtenlikle umuyorum. <br> Bildiğin gibi, kendimi Toussaint'ten oldukça uzaklara götürdüm, ancak düşüncelerim zamansız bir şekilde onun Kırsal kesminde takılı kalıyor. <br> Sana kızıl saçlı ortak bir tanıdığımızın kaderi hakkında henüz çok geç olmadığını ümit ederek şimdi yazıyorum. Senden bir iyilik istemeliyim dostum. <br> Ondan istediğim kadarını sana anlatmak için uygun fırsatı bulamasam da (ve yetimhanedeki deneyiminiz kesinlikle herhangi bir arzu imasını engellemiştir. ona aşinalığımın ayrıntılarını öğrenmek için) Onun aslında benim için hala değerli olduğunu söylüyorum. Bu nedenle, seçtiği canavarca yoldan uzaklaştırılma olasılığı varsa, bunu yapmasına yardımcı olmanın bir yolunu bulmanı rica ediyorum. Sana kendi talihsiz geçmişimi hatırlatmalıyım, yine de böyle zamanlardan bahsetmekten utanıyorum. <br> En samimi görüşüm, kan içmek için kan içme eyleminin sadece bir efsane olduğu. Pek çok vampiri bu tür davranışlara sürükleyen en temel içgüdülerden kaynaklanan bir eylemdir. Bununla birlikte, Orianna'nın kendisini bu tür ilkel içgüdülerin sınırlarından kurtaracak kadar yeterli karakter gücüne sahip olduğundan eminim. <br> Ve eğer tüm olasılıklar tüketmişse… Geralt, sana yalvarıyorum, lütfen dikkatli ol. Muazzam miktarda deneyime sahip ve şimdiden bir witcher'ı alt etti. Gerçekten yıllarca yaşayan, nefes alan, yakın arkadaşım olarak kalmanı tercih ediyorum. <br> Zamanı geldiğinde (ve mütevazı isteğimin ışığında) kesinlikle en iyi kararı vereceğini inancım tam. <Br > <br> Saygılarımla, sadık dostun R. <br>
+2114670091|bd660a9c||Unutulmayacak bir gece.
+2114670092|81f51226||MOD: A Night to Remember
+2114670093|69bce25a||MOD: A Night to Remember
+2114670094|d445f694||1
+2114670095|fd578b5a||UYARI!
+2114670096|07dfdac1||Desteklenmeyeni kullanıyorsunuz
+2114670097|20da720b||konuşma dili. <be> Bunu [EN] olarak değiştirmeniz şiddetle tavsiye edilir, aksi takdirde sessiz sahneleriniz olur! <br> <br>
+2114670098|a97c404a||Blood and Wine DLC'sinde Orianna'nın 'Blood Simple' görevini (Unseen Elder yolu) geçmediniz. <br> Spoiler ve yanlış anlamalardan kaçınmak için bu göreve başlamadan önce oynamanız (veya izlemeniz) şiddetle tavsiye edilir! <br> <br >
+2114670099|3433575e||* Hazır değilseniz, ESCAPE tuşuna basın ve sonraki gece buraya dönün. <br>
+2114670100|3433575f||* Yine de devam etmek istiyorsanız Tamam'a basın ama UYARILDINIZ! <br>
+2114670101|913b04c0||Uyarı! savaş alanına dönün yoksa...
+2114670102|9402a6a3||Margot
+2114670103|b8715ea9||Jato tarafından yapılan Margot çelik kılıç.
+2114670104|46ba2782||Yağmur gücü
+2114670300|00000000||Zaman değişti.
+2114670301|00000000||Geçmişte. Hiçbir para miktarı bir witcher'ı bu sözleşmeyi almaya ikna edemezdi.
+2114670315|00000000||Çocuklar o evde.
+2114670316|00000000||Onunla kendim ilgileneceğim.
+2114670317|00000000||Oğlun öldü.
+2114670318|00000000||Bilmiyorum.
+2114670321|00000000||Hey, witcher!
+2114670322|00000000||Hâlâ nefes alıyor musun?
+2114670323|00000000||Bunu duyduğuma sevindim… Hak ettiğini aldı.
+2114670324|00000000||Şimdi söyle bana, oğlum nerede?
+2114670325|00000000||Nerede olduğunu bilmiyorum.
+2114670326|00000000||Beni aptal yerine mi koyuyorsun? Adamlarımın seni onunla konuşurken görmediğini mi düşünüyorsun?
+2114670327|00000000||Sana bir şans daha vereceğim.
+2114670329|00000000||Hmmm… şey… şey…
+2114670332|00000000||Onunla kendim ilgileneceğim.
+2114670333|00000000||Şaka mı bu?
+2114670334|00000000||Sıradan haydutlarsınız. S,ze güvenmiyorum
+2114670335|00000000||Yoluma çıktığına pişman olacaksın!
+2114670336|00000000||Çocuklar o evde. Bir erkekle genç bir kız. Canlı.
+2114670337|00000000||Pekala, yapacağım.
+2114670338|00000000||Elbette öyle umuyorum. İşte tavsiyem, onlara gösterme.
+2114670339|00000000||Keşke Neillan gerçek annesini tanıyabilseydi… Görünüşe göre yollarımız burada ayrılıyor, Geralt.
+2114670340|00000000||İşte ödemen… Söz verdiğim gibi.
+2114670341|00000000||Madeni paramla ilgilenmediğini biliyorum… ama aklımda başka bir şey var.
+2114670342|00000000||Bana Margot tarafından verildi… Neillan'ın annesi. Güçlüdür ama üzüntüyle lanetlenmiş.
+2114670343|00000000||Seni düelloya davet ediyorum! Sen ve ben!
+2114670344|00000000||Hoşçakal witcher. Ve teşekkür ederim.
+2114670345|00000000||Onun adına ilgilen.
+2114670346|00000000||Ne kadar zamandır burada?
+2114670347|00000000||Yaklaşık bir saat. Onları konuşurken gördüm ...
+2114670348|00000000||Tanrıya şükür! Oğlum iyi ...
+2114670349|00000000||Bu kadar zor olmasına gerek yoktu Geralt. Neyse…
+2114670350|00000000||Ya kız? Ona bakacak mısın?
+2114670355|00000000||Hayır…
+2114670356|00000000||İyi seçim.
+2114670358|00000000||Seni öldüreceğim witcher!
+2114670360|00000000||Ne oldu witcher? Sen bir korkak mısın? Neden gitmesine izin verdin ?!
+2114670361|00000000||Saçmalık! Seni onu öldürmen için tuttum!
+2114670362|00000000||Kendimi sana açıklamama gerek yok.
+2114670363|00000000||Yani sen bir korkaksın ve bir hainsin!
+2114670364|00000000||Bana ihanet edenlere ne olur biliyor musun?
+2114670365|00000000||Öldür onu!
+2114670366|00000000||Yani sen bir yalancısın ve bir korkaksın.
+2114670367|00000000||Önce seninle ilgileneceğiz ve sonra o kaltağı kendim avlayacağım.
+2114670368|00000000||Bu adamları duydun mu? Büyücü, bizden ... barışçıl bir şekilde ayrılmamızı istedi.
+2114670369|00000000||* Gül * O kadar kolay olacağını düşünmedin, değil mi? Küçük bir numara mı?
+2114670370|00000000||Oğluma ne yaptın ?!
+2114670375|00000000||Bir canavarı korumak için bir insanı öldüren bir witcher. Kabul ediyorum, etkilendim.
+2114670376|00000000||Bu en belalı Baron Edward'ın çok büyük bir ödül vaat ettiğini varsaymakta haklı mıyım?
+2114670377|00000000||İşte
+2114670378|00000000||Bol şans, Rivia'lı Geralt.
+2114670379|00000000||Elveda, Orianna.
+2114670390|00000000||Onlara iyi bak Barnabas-Basil.
+2114670391|00000000||Oh, büyük bir zevkle, efendim.
+2114670400|00000000||Bir zamanlar bir kadını sevmiştim ...
+2114670401|00000000||Sıradan biri olarak doğdum ama bir kılıçla ödüllendirildim.
+2114670402|00000000||Rahat bırak beni.
+2114670403|00000000||Kulağım tamamen sende.
+2114670404|00000000||Beni o kadar mı özledin?
+2114670405|00000000||Tekrar teşekkür ederim Witcher. Anlayışınız ve yardımınız için.
+2114670406|00000000||Adamlarım sana çocuktan bahsetti mi?
+2114670407|00000000||Doğal olarak. Öyleyse hikayeyi atlayabiliriz. İşi alacak mısın?
+2114670408|00000000||Hakkımda söylediği tüm tuhaf hikayeleri düşünürsek buna inanmak zor.
+2114670409|00000000||Önemli değil, sana gerçeği söyleyeceğim.
+2114670410|00000000||Hiç birini gerçekten sevdin mi Witcher?
+2114670411|00000000||Savaşta kendimi kanıtladıktan sonra, Toussaint Dükü beni genç bir adam olarak şövalye yaptı.
+2114670412|00000000||Oldukça büyük bir gösteriydi, tüm soylular alt seviyeden Şövalye ile tanışmak istedi.
+2114670413|00000000||Onunla böyle tanıştım, bütün bunları umursamayan tek kişi.
+2114670414|00000000||Aşık olduk ... Bir oğlumuz oldu ve bir süre mutluyduk ...
+2114670415|00000000||Bir çocuğu evlilik dışı, halktan birine doğurduğu haberi geldiğinde ...
+2114670416|00000000||O gece Beauclair'den kaçtım ve ona çocuğun iradesine aykırı olduğunu söyleyeceğine söz verdim.
+2114670417|00000000||Sözümüzü tutmadı. Ailesi hızla gözden düştü. Benim yüzümden her şeyini kaybettiler.
+2114670418|00000000||Birkaç ay önce hastalandığına ve çocuğumuzun yetim kaldığına dair haber aldım ...
+2114670419|00000000||Onu o şehirde asla yalnız bırakmamalıydım!
+2114670420|00000000||Bunca yıl pişmanlık duyduktan sonra… Ona doğru yapmalı ve oğlumuza bakmalıyım.
+2114670421|00000000||Witcher ne diyorsun? İşi alıp oğlumu geri verecek misin?
+2114670422|00000000||* Öksürük * Aaaaaah… Hayır!
+2114670423|00000000||Bu benim günahım ve burada benimle birlikte ölüyor!
+2114670424|00000000||* Öksürük * Tyberious, adamları al ve bu sefil diyardan git.
+2114670425|00000000||Git! Seni kendim öldürmeden önce!
+2114670426|00000000||Ve sen… Bu kılıcı alacaksın… ve oğlum için güvende tutacaksın.
+2114670427|00000000||Kılıç… Margot… Ona söyleyeceksin… Adı Margot…
+2114670428|00000000||Margot… Çok üzgünüm… Seni yüzüstü bıraktım…
+2114670429|00000000||Sen, bok parçası, seni öldüreceğim!
+2114670430|00000000||Kafanı keseceğim Witcher!
+2114670431|00000000||Üzgünüm Edward ...
+2114670440|00000000||Mmmmh… Agneta?
+2114670441|00000000||Ben ne yaptım…
+2114670442|00000000||Kızın kalp atışı hızlı ve önemli miktarda kan kaybetmiş gibi görünüyor.
+2114670443|00000000||Düştüğünü ve kendine zarar verdiğini mi söylüyorsun?
+2114670444|00000000||Bunun gibi bir şey. Söyleyin, o iyi olacak mı?
+2114670445|00000000||Korkarım bu tür yaralanmaların sonuçları vardır. İyileşme şansı olabilir.
+2114670446|00000000||Bol sıvı içmeli ve yatakta kalmalı.
+2114670447|00000000||Teşekkürler doktor.
+2114670448|00000000||Kıza iyi bak. Bunun gibi başka bir yaralanma ölümcül olabilir.
+2114670449|00000000||İlginç, sanki bir tür iç çatışma yaşıyormuş gibi tereddüt ediyor gibi görünüyor ...
+2114670450|00000000||Artık seninle konuşmak istemiyorum.
+2114670451|00000000||Bu tekrarlayan durumları artık küçük rahatsızlıklar olarak görmediğiniz hissine kapılıyorum.
+2114670452|00000000||Hoşçakal, Witcher ...
+2114670453|00000000||Gharasham'dan gelen kişi güçlü, merhametli ve asil olmalıdır. Gerçekten mi Regis? İlk tanıştığımızda, bu zayıf insanlara yukarıdan saldırmaktan çok gurur duyuyordun.
+2114670454|00000000||Ve şimdi görünüşe göre işler değişmiş görünüyor. Belki de bunca yüzyıldan sonra… nihayet zamanı gelmiştir.
+2114670455|00000000||Pekala, Regis.
+2114670456|00000000||Bana verdiğin mektup sadece senin için değildi Geralt.
+2114670457|00000000||Bir daha asla kanla beslenmeyeceğime yemin ederim.
+2114670458|00000000||Kurtlar ağaçların arasında uyuyor, yarasalar esintide geziniyor ...
+2114670459|00000000||Ama bir ruh endişeli, tamamen uyanık yatar, her tür gulyabaniden, cadıdan ve hayaletden korkar ...
+2114670625|00000000||Unutma Geralt, çocuk zarar görmemeli.
+2114670626|00000000||Orianna'yı buldun mu?
+2114670627|00000000||O zaman işe koyul! Oğlum tehlikede!
+2114670628|00000000||Haydi!
+2114670629|00000000||Nereye gidiyorsun korkak?
+2114670630|00000000||Sahip olduğunun en iyisi bu mu?
+2114670631|00000000||Neden gitmesine izin verdiğini anlıyorum.
+2114670650|00000000||Biraz temiz hava almam lazım.
+2114670651|00000000||Mektup mu?
+2114670652|00000000||Regis… Sadece kavgadan kaçınmaya, onu korumaya çalışıyordum.
+2114670653|00000000||Yetimhaneyi kontrol etmeliyim.
+2114670654|00000000||Eve git. Ben bir Witcher'ım Vücudu incelemem gerekiyor.
+2114670655|00000000||Kadın buraya döndü.
+2114670656|00000000||Regis'i aradığını sanıyordum. Ama gitti.
+2114670657|00000000||Balıkçı bir şeyler biliyor olabilir.
+2114670658|00000000||İzler bu eve çıkıyor.
+2114670659|00000000||Eve yerleşilmiş görünüyor… Yine de ona dair iz yok. Sanırım etrafa bakacağım.
+2114670660|00000000||İlginç… Regis haklı olabilir.
+2114670661|00000000||Saklanmalı, işlerin nasıl sonuçlanacağına bakmalı ...
+2114670662|00000000||Muhafızların Orianna'yı aradığını duydum.
+2114670663|00000000||Keşke bu canavarı ya da gerçekte her neyse onu yakalasalar.
+2114670700|00000000||Triss ?! Onunla konuşmalıyım.
+2114670705|00000000||Bizi düşünüyordum.
+2114670706|00000000||O konu hakkında…
+2114670707|00000000||Ben Yennefer değilim Geralt. Ama Yennefer gibi olabilirim!
+2114670708|00000000||Ne düşünüyorsun?
+2114670709|00000000||Beni sevmiyorsun.
+2114670710|00000000||Tek bir kelime ve acıyla uluyacaksın!
+2114670711|00000000||Ben senin kabusunum!
+2114670720|00000000||[Öldür.]
+2114670721|00000000||[Bağışla.]
+2114670722|00000000||Bunları sen mi yapıyorsun?
+2114670723|00000000||Siktir git!
+2114670724|00000000||Bana yardım et, iyiliğini geri vereyim.
+2114670725|00000000||Evet.
+2114670726|00000000||Hayır.
+2114670727|00000000||Geralt, lütfen ...
+2114670729|00000000||Aklımı kaçırmış olmalıyım ...
+2114670730|00000000||Seni uyardım. Rüzgarın tersine işemek felakete yol açar diye.
+2114670731|00000000||Bu sefer bir kasırgaya işedin.
+2114670732|00000000||Aptalca bir şey yaparsanız, sizi bal ile kaplı bir karınca yuvasına bağlar. Fırtına binicilerinin bile seni rahatlıkla duyabileceği kadar çığlıklar attırırım.
+2114670733|00000000||Hayalet misiniz?
+2114670734|00000000||Üzgünüm, dostum…
+2114670735|00000000||Bunun için ruhunu vermek ister misin?
+2114670736|00000000||O zaman ihtiyacım olan şey sende yok.
+2114670737|00000000||Yok mu?
+2114670738|00000000||Yani diyorsun ki, bekliyorum ve yine bekliyorum ve hiçbir şey ...
+2114670739|00000000||Siktir git!
+2114670740|00000000||Ölümcül hata.
+2114670755|00000000||Bir witcher.
+2114670756|00000000||Sadece bir gezgin.
+2114670757|00000000||Rivia'lı Vampir.
+2114670758|00000000||Anlaştık.
+2114670759|00000000||Neden çocuklarla ilgileniyorsun?
+2114670761|00000000||Orianna seni öldürecek.
+2114670762|00000000||Sen de kimsin lan?!
+2114670763|00000000||Ben mi? Serseri, yabancı, mutant… beni bu isimlerle çağırırlar. Ama ben Rivia'lı Vampir.
+2114670764|00000000||Çok komik, seni aptal ...
+2114670765|00000000||Sadece bir gezginim diyorsun ha… Ve bu sırtındaki iki kılıç mı? Onları da kullanabiliyorsun gibi görünüyor.
+2114670766|00000000||Bir witcher mı? Yani birini nasıl bulacağınızı biliyorsunuz, değil mi?
+2114670767|00000000||O zaman içeri gel, tartışmamız gereken konular var.
+2114670769|00000000||bak bu İlginç. Çünkü bizim de onunla konuşmamız gerekiyor.
+2114670770|00000000||Neden onu arıyorsunuz?
+2114670771|00000000||Patronumuzun ona yetimhane ve çocuklar hakkında soruları var.
+2114670772|00000000||Yetimhane saldırıya uğradı ve çocukların neredeyse hiçbiri hayatta kalmadı.
+2114670773|00000000||Neredeyse - çok güzel bir kelime, yani birisi yaşıyor. Ve Orianna'nın da hayatta olduğundan kesinlikle eminiz.
+2114670774|00000000||Ama buraya gelmek istemiyor. Yani burada bir sorun var. Biz baya azız ve onun olduğu yerleri koruyoruz.
+2114670775|00000000||Çocuklarla hangi nedenle ilgileniyorsunuz?
+2114670776|00000000||Bu seni ilgilendirmez.
+2114670777|00000000||Orianna seni öldürecek. O bir canavar, insan değil. Ve sadece ben yardım edebilirim. Yani daha fazla bilgiye ihtiyacım var.
+2114670778|00000000||Bende her şeyi bilmiyorum, bunun hakkında liderimizle konuş.
+2114670779|00000000||Şu delikanlıya bak hele, serseri mutt bize emir veriyor… Bunun yerinini bilmesi gerekiyor! Sikelim şunu!
+2114670781|00000000||Anlaştık. Onu nerede bulabilirim?
+2114670782|00000000||Seidhe Llygad olarak bilinen gölün kıyısında, antik bir amfitiyatro yakınında kamp kurduk.
+2114670783|00000000||Belki bize yardım edebilirsin, o zaman liderimiz Baron Edward sana makul bir ödül verecektir.
+2114670784|00000000||Kızıl saçlı bir kadın arıyorum.
+2114670790|00000000||Hahaha, çekil serseri!
+2114670791|00000000||Yardım etmeye karar verirsen - kampımız Seidhe Llygad olarak bilinen gölün kıyısında, antik bir amfitiyatro yakınında.
+2114670795|00000000||İlginç. Vampirin pençelerinde bir haydutun oğlu ...
+2114670796|00000000||Mırıldanmanın nesi var? Git ve Baron ile konuş.
+2114670800|00000000||Cevap verecek misin?
+2114670801|00000000||Baron mutlu olmayacak… Pekala, size bildiklerimi söyleyeceğim.
+2114670802|00000000||Yıllar önce liderimiz Baron Edward, güzel bir kızla tanıştığı Toussaint'i ziyaret etti.
+2114670803|00000000||Ve bir çocuk dünyaya geldi
+2114670804|00000000||Baron bizimle birlikte Nilfgaard taburları tarafından itlaf edildiğimiz uzak diyarlara gitti.
+2114670805|00000000||Baron'un onu burada bıraktığı için o kızı çok sevdiğini söyleyemem. Ancak geçenlerde Toussaint'i tekrar ziyaret etmemiz gerektiğini söyledi.
+2114670806|00000000||Buraya geldik ve yaklaşık bir yıl önce bazı hastalıklardan öldüğünü öğrendik. Ve çocuk bir yetimhaneye, Orianna'ya gönderildi.
+2114670807|00000000||Ama ne çocuğu ne de Orianna'yı bulmayı başaramadık.
+2114670808|00000000||Vampir saldırısından beri yetimhane terk edildi. Şimdi geriye kalan tek şey bir karmaşa ve bir yığın çocuk cesedi ...
+2114670809|00000000||Baron oldukça üzgündü. Ama sonra Orianna'nın hayatta ve mükemmel bir sağlıkta olduğunu öğrendik - insanlar onu şehirde küçük çocukla gördüler.
+2114670810|00000000||Baron, onun oğlu olduğundan emin ve bu kadını bulmayı çok istiyor. Yine de… zor, herkes onu tanıyor, ama nerede olduğunu - kimse bilmiyor gibi görünüyor.
+2114670811|00000000||Bu yüzden gruplara ayrıldık ve şimdi görünebileceği yerleri izledik.
+2114670812|00000000||Dürüst olmak gerekirse, burada oturup beklemekten çok yoruldum… Bize yardım etmenin bir yolunu bulursan, çok memnun oluruz!
+2114670813|00000000||Şimdi anlıyorum. Bu bir anlaşma.
+2114670814|00000000||O zaman Baron ile konuşmalısın.
+2114670869|00000000||Saklanmak için kötü bir yer seçmiş.
+2114670870|00000000||Ücretim hakkında konuşalım.
+2114670871|00000000||Bunu bedavaya yapacağım.
+2114670872|00000000||Haydutlar için çalışmıyorum.
+2114670873|00000000||Çocuk?
+2114670874|00000000||Katılıyorum.
+2114670875|00000000||Katılmıyorum
+2114670877|00000000||Defol, serseri. Burada senin için hiçbir şey yok.
+2114670878|00000000||Dur bakalım orada! Ne arıyorsun?
+2114670879|00000000||Ben bir Witcher'ım. Arkadaşların beni buraya gönderdi. Baron ile anlaşmalıyız.
+2114670880|00000000||Pekala. Baron şu anda Beauclair'de, yakında dönecek. Burada biraz bekleyin.
+2114670881|00000000||Selamlar Baron! Haber var mı? Alfred nerede?
+2114670882|00000000||O gitti. Orianna onu öldürdü.
+2114670883|00000000||Ne?! Ama nasıl? Bana ne olduğunu anlat.
+2114670884|00000000||O sadece bir kadın değil. Belki bir cadı… ya da bir canavar… Ben de ne olduğundan tam olarak emin değilim.
+2114670885|00000000||Ve kim… Bir Witcher? Huh, seni bize gönderen kader olmalı.
+2114670886|00000000||Aslında senin arkadaşındı. Ben Geralt.
+2114670887|00000000||O, Rivia'nın ünlü Geralt'ı, daha az değil.
+2114670888|00000000||Benim adım Edward. Bu iyi beylere ben bakarım ...
+2114670889|00000000||Bu kadar önyargılı olma Geralt, masumları soyup öldürmeyiz.
+2114670890|00000000||Pek inanmıyorum Ben Orianna için buradayım.
+2114670891|00000000||Elbette. Bu kötü kadın, oldukça değerli bir şey çaldı.
+2114670892|00000000||Bu yüzden hizmetlerine karşılık kontrat yapmak istiyorum, Witcher. O canavarı öldürüp bana ait olanı geri alman için.
+2114670893|00000000||Çocuk..
+2114670894|00000000||Huh, zaten çözdüğünü bilmeliydim. Bir Witcher'dan daha azını beklemiyordum ...
+2114670895|00000000||Haydutlar için çalışmıyorum.
+2114670896|00000000||Biz sıradan haydutlar değiliz, ama konu bu değil.
+2114670897|00000000||Bir baba olarak yardımını istiyorum… Ve seni cömertçe ödüllendirebilirim.
+2114670898|00000000||Kral Radovid olsan bile bu kadar ödeyemezdim!
+2114670899|00000000||Bu biraz yüksek, Witcher.
+2114670900|00000000||Teşekkür ederim Witcher. Sana borcumu ödeyeceğim.
+2114670901|00000000||Sabrım tükendi! Teklifimi kabul edeceksin - 3000 oren ya da buradan defol git!
+2114670902|00000000||Fikrini değiştirdin mi Witcher?
+2114670903|00000000||Alçakça bir cevap verdi, bu yüzden Alfred kılıcını işaret etti.
+2114670904|00000000||Asil bir amaç için savaşıyorsun. Ama oğlumu geri verirsen… Sana borcumu ödemenin bir yolunu bulurum.
+2114670905|00000000||Ama daha fazla bilgiye ihtiyacım var. Arkadaşın… Ona ne oldu?
+2114670906|00000000||Orianna'nın arazisinin dışında bir pusu kurduk.
+2114670907|00000000||Alfred ve ben onu gidecek yeri kalmıyacak şekilde köşeye sıkıştırdık. Oğluma ne yaptığını sordum.
+2114670908|00000000||Birdenbire ortadan kayboldu. Ve Alfred… Onun kanıyla kaplıydım. Yapabileceğim hiçbir şey yoktu!
+2114670909|00000000||Nasıl bir yaratık böyle bir şey yapabilir?
+2114670910|00000000||Bir çeşit vampir olmalı.
+2114670911|00000000||Vampir mi? Geralt, oğlum tehlikede. Sen benim tek umudumsun!
+2114670912|00000000||Pekala, bakalım onu bulabilecek miyim.
+2114670913|00000000||Hatalı değilsin. Bazı tuhaf sesler duyduk… O yönde, amfi tiyatrodan.
+2114670914|00000000||Adamlarıma bundan uzak durmalarını söyledim. Bakabilirsen çok güzel olurdu.
+2114670915|00000000||Ödeyeceğim.
+2114670916|00000000||Bana bedava yardım edeceksin.
+2114670917|00000000||O kadına yardım etmek istiyorum.
+2114670918|00000000||Yağmur yağdığında daha çok yakalarım.
+2114670919|00000000||Burada kızıl saçlı bir kadın gördün mü? Yakın zamanda bu bölgeden tekneyle ayrıldı.
+2114670920|00000000||Belkş öyle. Belki değil. Bana birkaç altın ver ve hatırlamaya çalışayım.
+2114670921|00000000||Sırtında kılıçlar yerine bir çantan ot olsaydı sana inanırdım.
+2114670922|00000000||Evet, yardım edeceğim. Nezaketsiz ...
+2114670923|00000000||Oh, bugün servete rastladığım için şanslıyım.
+2114670924|00000000||Pekala… dinle.
+2114670925|00000000||Kadın mezarlığın yanından o yönden geldi.
+2114670926|00000000||Onu nehirden geçirmem için bana iyi bir miktar ödedi.
+2114670927|00000000||Gergin ve kirliydi ama ona bir şey sormadım.
+2114670928|00000000||Onu Horozbaş hanı'in yakınına bıraktım.
+2114670929|00000000||Tek kelime etmeden tekneden atladı ...
+2114670932|00000000||Sana iyi şanslar!
+2114670935|00000000||Buradayız.
+2114670936|00000000||Çocuklar!
+2114670937|00000000||Haydi!
+2114670938|00000000||Çocuklar, ilgilenmem gereken bir konu var gibi görünüyor. Haydi Niellan, sen ve Agneta yemeğe başlayın. Yakında evde olacağım.
+2114670939|00000000||Tatlı şey.
+2114670940|00000000||Hadi şu işi bitirelim.
+2114670941|00000000||Önce konuşmalıyız.
+2114670942|00000000||[Regis'ten gelen mektubu göster.]
+2114670943|00000000||Yeterince konuştuk, hadi savaşalım.
+2114670944|00000000||Halk bunu unuttu.
+2114670945|00000000||Kafalarında… başka şeyler var.
+2114670946|00000000||Benim gibi şeyler?
+2114670947|00000000||Zamanı geldi.
+2114670948|00000000||Hiçbir Witcher kendi yatağında ölmemeli.
+2114670949|00000000||Bir istisna olmayacaksın.
+2114670950|00000000||Şey, bir kılıçlı tehdit her zaman içimdeki en iyi şeyi ortaya çıkarmaz.
+2114670951|00000000||Yeterince adil. Ama çocuklar… Onları damızlık olarak kullanmaya devam edemezsiniz.
+2114670952|00000000||Ve bana öğüt verecek olana bak.
+2114670953|00000000||Bunun garip gelebileceğini biliyorum ama sana yardım etmek istiyorum. Evinde ilginç bir şeye rastladım ...
+2114670954|00000000||Eee, etrafı karıştırıyorsun… Seni bu kadar çok mu meraklandırıyorum, Witcher?
+2114670955|00000000||Orianna, yetimhanen yok edildi. Yeniden inşa etmeyi denedin, ama hepsini tekrar kaybetmek üzeresin.
+2114670956|00000000||Yani birkaç anlamsız düşünce okudun ve şimdi beni anladığını mı varsayıyorsun?
+2114670957|00000000||Seni anlamayabilirim ama bir şey biliyorum. Kan içmek zorunda değilsin.
+2114670958|00000000||Haha, çok saçma, Witcher. Sana ne olduğumu hatırlatmama gerek var mı? Kan içmek hayatta kalmam için çok önemli.
+2114670959|00000000||Şuna bak.
+2114670960|00000000||Hmm. Regis, Regis… Her zamanki gibi son derece düşünceli.
+2114670961|00000000||Kararımı verdim.
+2114670963|00000000||Sözünü tutacağına güvenebilir miyim?
+2114670964|00000000||Senin türünden farklı olarak Witcher, biz verdiğimiz sözleri tutma eğilimindeyiz.
+2114670965|00000000||Nereye gidiyorsun?
+2114670966|00000000||Değerli eşyalarımı alıp çocuklara veda edeceğim. Beni burada bekle Ak Kurt.
+2114670967|00000000||Sanırım boğuşursak üzülür, değil mi?
+2114670968|00000000||Bir çocuğu babasıyla yeniden birleştirmek isteyen bir adamı öldürdün.
+2114670969|00000000||Bana yardım edemezsin Bana kimse yardım edemez.
+2114670970|00000000||Kahretsin…
+2114670971|00000000||Beni öldürsen bile… Köylüler, şövalyeler ve diğer büyücüler her zaman peşinize düşecek ve bunu biliyorsunuz.
+2114670972|00000000||Bana bir dakika ver.
+2114670973|00000000||Peki. Ama Toussaint'i derhal terk etmelisiniz. Muhafızlar sizi arıyor.
+2114670974|00000000||Sanırım kaçınılmazdı .. Burayı terk edeceğim.
+2114670975|00000000||Anlıyorum. O halde iyi şanslar.
+2114670976|00000000||Biliyor musun? Haklısın.
+2114670977|00000000||"Besin için kan içme eylemi sadece bir efsanedir", ilginç ... Kesin görünüyor ...
+2114670978|00000000||Açlığınızı, doğanızı yenmek için sürekli savaşmanın nasıl bir şey olduğunu bilemezsiniz. Ancak..
+2114670979|00000000||Yapamayabilirim ama ortak bir arkadaş bunu yapabilir.

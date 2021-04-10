@@ -684,7 +684,7 @@ storyboard:
           stretch: 1800.0 # 60 s
 
     shot_1b:
-      - fade.out: [0.25, 0.5]
+      - fade.out: [0.5, 1.0]
       - actor.lookat: [0.5, Baron_Edward, geralt]
 
     shot_1c:
@@ -944,7 +944,7 @@ storyboard:
           .@pos: [0.0, mimicsanim_448_geralt_neutral_gesture_what_did_you_say_face]
           blendin: 0.5
           blendout: 0.5
-          weight: 1.0
+          weight: 0.9
       #- actor.lookat: [0.1, geralt, [ 0.3212506175, 0.8390676379, 1.1915197372 ]]
 
     shot_refuse2_g:
@@ -1502,9 +1502,9 @@ dialogscript:
   section_storyboard_ui:
     # shot shot1 sky
     - CUE: shot_1a
-    - Baron_Edward: "[2.5]2114670346|How long has he been here?"
+    - Baron_Edward: "[1.9581]2114670346|How long has he been here?"
     - CUE: shot_1b
-    - Bandit_crossbow: "[2.5]2114670347|About an hour. Saw…"
+    - Bandit_crossbow: "[2.6160]2114670347|About an hour. I saw them speaking…"
     # (longest) anim: bruxa_death_back
     - CUE: shot_1c
     - Baron_Edward: "[2.4454]2114670321|Hey, witcher!"
@@ -1569,7 +1569,7 @@ dialogscript:
     - CUE: shot_dont_know_g
     - geralt: "[1.6466]2114670325|I don't know where he is."
     - CUE: shot_dont_know_b
-    - Baron_Edward: "[6.1890]2114670326|You take me for a fool? You think my men didn't see your conversation with her!?"
+    - Baron_Edward: "[6.1890]2114670326|You take me for a fool? You think my men didn't see you speaking with her!?"
     - Baron_Edward: "[2.3223]2114670327|I'll give you one more chance."
     - NEXT: section_choice_main
 
@@ -1742,3 +1742,4 @@ dialogscript:
   section_exit_fight:
     - OUTPUT: fight
     - EXIT
+

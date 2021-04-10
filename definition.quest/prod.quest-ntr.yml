@@ -1,7 +1,7 @@
 #
 # production settings
 # 
-# (version: 1296, saved: 2021-03-26 01:24:31)
+# (version: 1340, saved: 2021-04-04 23:18:46)
 #
 ---
 production:
@@ -10,10 +10,10 @@ production:
     caption: A Night to Remember
     menuvisibile: true
     enabled: true
-    storesdata: false
+    storesdata: true
     strings-idspace: 4670
     strings-idstart: 13
-    version: 1296
+    version: 1340
     mounters:
       - ".type": CR4ResourceDefinitionsDLCMounter
         resourceDefinitionXmlFilePath: "dlc\\dlcntr\\data\\gameplay\\globals\\resources\\gameplay.xml"

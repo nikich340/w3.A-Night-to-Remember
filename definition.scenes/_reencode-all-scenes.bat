@@ -10,6 +10,8 @@ rem ---------------------------------------------------
 SET PATCH_MODE=0
 
 SET ENCODE_SCENES=1
-SET START_GAME=0
+SET START_GAME=1
 
 call "%DIR_PROJECT_BIN%\build.bat"
+
+pause

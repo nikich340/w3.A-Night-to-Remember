@@ -1,20 +1,18 @@
 #
 # quest structure root segment
 # 
-# (version: 1296, saved: 2021-03-26 01:24:31)
+# (version: 1340, saved: 2021-04-04 23:18:46)
 #
 ---
 structure:
   quest:
     blocks:
       start:
-        ".editor": [ -925.0, 479.0 ]
+        ".editor": [ -1222.0, 497.0 ]
         next:
           - changelayers.hide_hide_hide_ALL
-          - waituntil.wait_quest_allowed
-          - waituntil.3s
-          - objective.Go_to_corvo_at_midnight: Activate
           - script.new_ntr_factchecker
+          - waituntil.wait_ep2_main_story_done
       
       subsegment.FINALE:
         ".editor":
@@ -149,7 +147,7 @@ structure:
           out: [ done, fail ]
         conditions:
           done:
-            factdb: [ poi_gor_a_10_boss_killed, ">=", 1 ]
+            factdb: [ poi_gor_a_10_puzzle_done, ">=", 1 ]
           fail:
             factdb: [ ntr_quest_finale_started, ">=", 1 ]
         next.done:
@@ -206,11 +204,10 @@ structure:
       waituntil.ntr_flowdebug_1:
         factdb: [ ntr_flowdebug_1, ">=", 1 ]
         ".editor":
-          pos: [ 218.0, 557.0 ]
+          pos: [ 329.0, 535.0 ]
           in: [ In ]
           out: [ Out ]
-        next:
-          - changelayers.show_orphlayer
+        next: ".done"
       
       waituntil.ntr_flowdebug_2:
         factdb: [ ntr_flowdebug_2, ">=", 1 ]
@@ -218,17 +215,15 @@ structure:
           pos: [ 431.0, 600.0 ]
           in: [ In ]
           out: [ Out ]
-        next:
-          - changelayers.show_town_blood
+        next: ".done"
       
       waituntil.ntr_flowdebug_3:
         factdb: [ ntr_flowdebug_3, ">=", 1 ]
         ".editor":
-          pos: [ 504.6666564941, 668.8888549805 ]
+          pos: [ 548.0, 666.0 ]
           in: [ In ]
           out: [ Out ]
-        next:
-          - changelayers.show_river
+        next: ".done"
       
       waituntil.ntr_quest_amphitheatre_active:
         factdb: [ ntr_quest_amphitheatre_active, ">=", 1 ]
@@ -285,6 +280,17 @@ structure:
         next:
           - spawnsets.camp_axe_day
       
+      waituntil.wait_ep2_main_story_done:
+        factdb: [ ep2_main_story_done, ">=", 1 ]
+        ".editor":
+          pos: [ -874.0, 473.0 ]
+          in: [ In ]
+          out: [ Out ]
+        next:
+          - objective.Go_to_corvo_at_midnight: Activate
+          - waituntil.3s
+          - waituntil.wait_quest_allowed
+      
       waituntil.wait_night:
         time: [ "00:00", "08:00" ]
         ".editor":
@@ -297,7 +303,7 @@ structure:
       waituntil.wait_quest_allowed:
         factdb: [ ntr_quest_allowed, ">=", 1 ]
         ".editor":
-          pos: [ -315.0, 467.0 ]
+          pos: [ -275.0, 478.0 ]
           in: [ In ]
           out: [ Out ]
         next:
@@ -406,12 +412,12 @@ structure:
       
       script.NTR_DebugWarning_2:
         ".editor":
-          pos: [ -761.0756835938, 635.8004150391 ]
+          pos: [ -934.0, 119.0 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_DebugWarning
         parameter:
-          - str: "[FAIL] ep2 story NOT completed!"
+          - str: Blood and Wine DLC main story is NOT completed! Failed to start NTR quest.
         next: ".done"
       
       script.Teleport_Orianna_horse:
@@ -510,7 +516,7 @@ structure:
       
       script.new_ntr_debugwarning:
         ".editor":
-          pos: [ -751.0, 729.0 ]
+          pos: [ -902.0, 307.0 ]
           in: [ In ]
           out: [ Out ]
         function: NTR_DebugWarning
@@ -520,7 +526,7 @@ structure:
       
       script.new_ntr_factchecker:
         ".editor":
-          pos: [ -933.0, 682.0 ]
+          pos: [ -1067.0, 244.0 ]
           in: [ In ]
           out: [ "False", "True" ]
         function: NTR_FactChecker
@@ -530,8 +536,6 @@ structure:
           - val: 1
         next.False:
           - script.NTR_DebugWarning_2
-        next.True:
-          - script.new_ntr_debugwarning
       
       script.sounds_dettlaff:
         ".editor":
@@ -567,6 +571,7 @@ structure:
           - beach_orianna_dress
           - regis_mail_layer
           - orianna_house_books_layer
+          - beach_orianna_dress_fake_fix_build
         next: ".done"
       
       changelayers.show_camp_house_main:
@@ -592,9 +597,6 @@ structure:
           - waituntil.inside_camp
           - waituntil.2s
           - waituntil.2s_to_get_ready
-          - waituntil.ntr_flowdebug_1
-          - waituntil.ntr_flowdebug_2
-          - waituntil.ntr_flowdebug_3
       
       changelayers.show_orphlayer:
         ".editor":

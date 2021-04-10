@@ -8,6 +8,15 @@ quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	return false;
 }*/
 
+/*exec function getA() {
+	NTR_notify("mq7006_wisdom = " + FactsQuerySum("mq7006_wisdom"));
+	NTR_notify("mq7006_wisdom_added_gor_a_10 = " + FactsQuerySum("mq7006_wisdom_added_gor_a_10"));
+	NTR_notify("poi_gor_a_10_candle_ignited = " + FactsQuerySum("poi_gor_a_10_candle_ignited"));
+	NTR_notify("poi_gor_a_10_opened = " + FactsQuerySum("poi_gor_a_10_opened"));
+	NTR_notify("poi_gor_a_10_wisdom_fail = " + FactsQuerySum("poi_gor_a_10_wisdom_fail"));
+	NTR_notify("poi_gor_a_10_puzzle_done = " + FactsQuerySum("poi_gor_a_10_puzzle_done"));
+}
+
 exec function NTR_Flow( val : int ) {
 	switch (val) {
 		case 1:
@@ -20,7 +29,7 @@ exec function NTR_Flow( val : int ) {
 			FactsAdd( "ntr_flowdebug_3", 1 );
 			break;
 	}
-}
+}*/
 
 quest function NTR_DebugWarning(str : String) {
 	theGame.GetGuiManager().ShowNotification(str);
@@ -82,6 +91,13 @@ quest function NTR_FixCampHorses() {
 	NTR_teleportToNode('ntr_camp_horse_baron', 'ntr_bob_horse_baron_parked_ap', true);
 }
 
+quest function NTR_HasItem(itemName : name) : Bool {
+	var quantity : int;
+
+	quantity = GetWitcherPlayer().GetInventory().GetItemQuantityByName(itemName);
+	return (quantity >= 1);
+}
+
 quest function NTR_IsContainersEmpty(tag : name) : Bool {
 	var entities : array<CEntity>;
 	var container : W3Container;
@@ -134,7 +150,7 @@ quest function NTR_CheckQuestConditions() {
 		}
 		locString2 = GetLocStringByKeyExt("ntr_speech_unsupported");
 		if ( !NTR_LocStringSupported(locString2) ) {
-			locString2 = "lanaguage for speech.<br>It is strongly recommended to change it to [EN], otherwise you will have muted scenes!<br><br>";
+			locString2 = "lanaguage for speech.<br>It is STRONGLY recommended to change it to [EN], otherwise you will have MUTED scenes with JERKED animations and WITHOUT lipsync!!<br><br>";
 		}
 		message += conditionIdx + ") " + locString  + " [" + selectedSpeech + "] " + locString2;
 	}
@@ -142,13 +158,13 @@ quest function NTR_CheckQuestConditions() {
 	// barely
 	if ( StrFindFirst(GetLocStringByKeyExt("ntr_language_check"), "1") < 0 ) {
 		conditionIdx += 1;
-		message += conditionIdx + ") You are using unsupported [" + selectedText + "] lanaguage for text.<br>It is strongly recommended to change it to [EN], otherwise you will have missed text in scenes!<br><br>";
+		message += conditionIdx + ") You are using unsupported [" + selectedText + "] lanaguage for text.<br>It is STRONGLY recommended to change it to [EN], otherwise you will have MISSED text in scenes!<br><br>";
 	}
 	if (FactsQuerySum("q704_orianas_part_done") < 1) {
 		conditionIdx += 1;
 		locString = GetLocStringByKeyExt("ntr_plot_unsupported");
 		if ( !NTR_LocStringSupported(locString) ) {
-			locString = "You did not passed 'Blood Simple' Orianna's quest (Unseen Elder path) in Blood and Wine DLC.<br>It is strongly recommended to play (or watch) it before starting this quest to avoid spoilers and misunderstandings!<br><br>";
+			locString = "You did not passed 'Blood Simple' Orianna's quest (Unseen Elder path) in Blood and Wine DLC.<br>It is recommended to play (or watch) it before starting this quest to avoid spoilers and misunderstandings!<br><br>";
 		}
 		message += conditionIdx + ") " + locString;
 	}

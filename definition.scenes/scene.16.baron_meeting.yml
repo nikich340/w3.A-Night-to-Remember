@@ -400,8 +400,8 @@ repository:
         rot: [ 0.0, 345.7100219727, 346.8163146973 ]
       #zoom: 1.0
       dof:
-        blur: [0.24688082856967153, 7.3735960317590514]
-        focus: [1.2468808285696715, 5.3735960317590514]
+        blur: [0.0, 7.3735960317590514]
+        focus: [0.0, 5.3735960317590514]
         intensity: 0.25
         #aperture: [ 28.2500000000, 1.2699999809 ]
       event_generator:
@@ -678,6 +678,21 @@ repository:
         plane: "Medium"
         tags: [ "ext" ]
 
+    cam_47_bandit_cut:
+      fov: 30.0
+      transform:
+        pos: [ -1.5992431641, -4.8643798828, 1.7257919312 ]
+        rot: [ 0.0, 356.4899902344, 128.0050659180 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 1.7196426392, 4.7196426392 ]
+        focus: [ 2.2196426392, 3.2196426392 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
 production:
   settings:
     sceneid: 1
@@ -855,6 +870,9 @@ production:
 
       cam_46_Shot5_dg_baron_fire_pan:
         repo: "cam_46_Shot5_dg_baron_fire_pan"
+
+      cam_47_bandit_cut:
+        repo: "cam_47_bandit_cut"
 
     animations:
       geralt_high_standing_determined_enter_frontal:
@@ -1040,8 +1058,8 @@ storyboard:
       - actor.placement: [0.0, Bandit_camp_crossbow, [ 3.8784790039, 7.2084960938, 0.2436523438 ], [ 0.0, 0.0, 65.2299880981 ]]
       - actor.pose: [0.0, geralt_high_standing_determined_idle]
       - actor.pose: [0.0, Bandit_camp_crossbow_high_standing_determined_idle]
-      - actor.lookat: [0.0, geralt, Bandit_camp_crossbow]
-      - actor.lookat: [0.0, Bandit_camp_crossbow, geralt]
+      - actor.lookat: [0.01, geralt, Bandit_camp_crossbow]
+      - actor.lookat: [0.01, Bandit_camp_crossbow, geralt]
       - cAm: [0.0, cam_1_Shot1]
       - cam.blend.start: [0.0, cam_1_Shot1]
       - actor.anim: 
@@ -1223,13 +1241,13 @@ storyboard:
       - actor.placement: [0.25, Baron_Edward, [ 3.5122680664, 8.5169677734, 0.0526733398 ], [ 0.0, 0.0, 240.1000213623 ]]
       - actor.anim.additive: 
           actor: Baron_Edward
-          .@pos: [0.4, anim_7310_high_standing_sad_gesture_right_hand_1]
+          .@pos: [0.6, anim_7310_high_standing_sad_gesture_right_hand_1]
           blendin: 0.5
           blendout: 0.5
 
       - actor.anim: 
           actor: Baron_Edward # 4.0s left
-          .@pos: [0.6276, anim_7299_high_standing_sad_exit_rightside]
+          .@pos: [0.728, anim_7299_high_standing_sad_exit_rightside]
           blendin: 0.5
           blendout: 0.0
           clipend: 6.2
@@ -1256,12 +1274,12 @@ storyboard:
           .@pos: [0.0, anim_6970_high_standing_determined_calm_enter_frontal]
           blendin: 0.0
           blendout: 0.0
-          clipend: 5.1827
+          clipend: 5.114
       - actor.anim: 
           actor: Baron_Edward
           .@pos: [0.0, anim_7292_high_standing_sad_enter_frontal]
           clipfront: 1.0
-          clipend: 6.1827
+          clipend: 6.114
           blendin: 0.0
           blendout: 0.0
 
@@ -1280,6 +1298,7 @@ storyboard:
           actor: bandit_spear # 11s
           .@pos: [0.0, anim_9353_man_work_standing_playing_knife_loop_02]
           blendin: 0.0
+          clipfront: 1.0
           blendout: 0.0
 
       - actor.anim: 
@@ -1314,8 +1333,8 @@ storyboard:
 
           #.@pos: [0.0, mimicsanim_412_geralt_neutral_gesture_nod_face]
 
-    #shot_26_dg_geralt1:
-    #  - cam: [0.0, cam_41_Shot5_dg_geralt_mid]
+    shot_26_dg_geralt1:
+      - cam: [0.3, cam_47_bandit_cut]
 
     shot_26_dg_geralt2:
       - cam: [0.0, cam_41_Shot5_dg_geralt_mid]
@@ -1347,6 +1366,11 @@ storyboard:
           blendin: 0.5
           blendout: 0.5
           weight: 0.5
+
+      - actor.lookat: [0.8, Baron_Edward, NONE]
+
+    shot_29_dg_baron_pause:
+      - actor.lookat: [0.8, Baron_Edward, geralt]
 
     shot_29_dg_baron1:
       - actor.anim.additive: 
@@ -2075,49 +2099,50 @@ dialogscript:
     - CUE: shot_15_baron_sore
     - PAUSE: 0.5
     #- CUE: shot_15_geralt_goes
-    - Baron_Edward: "[6.0830]2114670882|He is gone. Orianna killed him."
+    - Baron_Edward: "[5.2228]2114670882|He is gone. Orianna killed him."
     - CUE: shot_16_bow
     - Bandit_camp_crossbow: "[5.6552]2114670883|What?! But… How? Tell me what happened."
     - CUE: shot_17_baron
-    - Baron_Edward: "[7.9200]2114670884|She is not just a woman. Maybe a witch or a monster… I'm not entirely sure what happened myself."
+    - Baron_Edward: "[9.1238]2114670884|She is not just a woman. Maybe a witch… or a monster… I'm not entirely sure what happened myself."
     - CUE: shot_17_bow
     - Bandit_camp_crossbow: "[2.0757]2114670970|Oh, shit…"
     #- CUE: shot_17_baron_to_geralt
     - CUE: shot_19a
-    - Baron_Edward: "[5.9080]2114670885|And who is th… A witcher? It must be destiny that sent you to us."
+    - Baron_Edward: "[8.0912]2114670885|And who is th… A witcher? Huh, it must be destiny that sent you to us."
     - CUE: shot_19b
     - geralt: "[3.3741]2114670886|Actually, it was your friends. I'm Geralt."
     - PAUSE: 0.6259
 
     - CUE: shot_21a
     # (longest) anim: high_standing_sad_enter_frontal
-    - Baron_Edward: "[2.8627]2114670887|He's the famous Geralt of Rivia, no less."
-    - PAUSE: 0.5
+    - Baron_Edward: "[3.2941]2114670887|He's the famous Geralt of Rivia, no less."
+    - PAUSE: 0.25
     - geralt: "[1.3201959]0001111833|Uh… yeah."
     - CUE: shot_21b
-    - PAUSE: 0.5
+    - PAUSE: 0.25
     - CUE: shot_22a
     - geralt: "[0.84463936]0001046996|What about you?"
 
     - CUE: shot_22b
-    - Baron_Edward: "[3.7150]2114670888|My name is Edward, and I take care of these fine gentlemen…"
+    - Baron_Edward: "[3.6631]2114670888|My name is Edward. I take care of these fine gentlemen…"
 
-    #- CUE: shot_26_dg_geralt1
+    - CUE: shot_26_dg_geralt1
     - PAUSE: 2.5
     - CUE: shot_26_dg_geralt2
     #- geralt: "[0.8091046]0001075517|Bandits?"
     - geralt: "[2.9229052]0001105154|Sound like common bandits. Any difference?"
 
     - CUE: shot_27_dg_baron
-    - Baron_Edward: "[4.3298]2114670889|Don't be so prejudiced, Geralt, we don't rob and kill the innocent."
+    - Baron_Edward: "[4.3051]2114670889|Don't be so prejudiced, Geralt, we don't rob and kill the innocent."
 
     - CUE: shot_28_dg_geralt
     - PAUSE: 1.0
     - geralt: "[3.3302]2114670890|I don't believe it. However I'm here about Orianna."
 
     - CUE: shot_29_dg_baron
-    - Baron_Edward: "[5.3139]2114670891|Of course. This evil woman, she refuses to return something precious to me…"
-    - PAUSE: 0.5
+    - Baron_Edward: "[5.6425]2114670891|Of course. This evil woman, she has stolen something quite precious."
+    - CUE: shot_29_dg_baron_pause
+    - PAUSE: 1.5
     - CUE: shot_29_dg_baron1
     - Baron_Edward: "[6.2181]2114670892|That's why I'd like to contract your services, witcher. To kill that monster, and take back that which belongs to me."
     
@@ -2166,7 +2191,7 @@ dialogscript:
         emphasize: true
       - choice: ["0001105762|No, I've never loved.", section_not_loved]
         emphasize: true
-      - choice: ["0001105756|You don't give a shit.", section_maybe_loved]
+      - choice: ["0000573046|Not your concern.", section_maybe_loved]
         emphasize: true
 
   section_loved:
@@ -2251,7 +2276,8 @@ dialogscript:
         emphasize: true
       - choice: ["2114670869|Picked bad place to hide.", section_bad_place]
         single_use: true
-        condition: [ "poi_gor_a_10_boss_killed", "<", 1 ]
+        condition: [ "poi_gor_a_10_puzzle_done", "<", 1 ]
+        #condition: [ "poi_gor_a_10_boss_killed", "<", 1 ]
 
   section_bad_place:
     - CUE: shot_bad_place_g1
@@ -2422,4 +2448,5 @@ dialogscript:
 
   section_exit:
     - EXIT
+
 

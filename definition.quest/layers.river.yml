@@ -176,16 +176,19 @@ layers:
       play_sword: [ -358.7968139648, -803.6117553711, 30.4079589844, -59.8400115967, "play_child/stand_c_play_sword_01_dynamic_jt" ]
 
       sleep_boy: 
-        pos: [ -398.5410156250, -803.7573242188, 39.2146263123 ]
-        rot: [ 0.0, 0.0, 79.8599319458 ]
-        action: "resting_child/lie_mwdc_sleep_bed_l_new_jt"
+        pos: [ -382.1492614746, -774.8413696289, 35.2145996094 ]
+        rot: [ 0.0, 0.0, -31.2400112152 ]
+        action: "play_child/lie_mwdc_sleep_ground_jt"
         ignoreCollisions: false
 
       sleep_girl: 
-        pos: [ -397.5088500977, -804.3970947266, 39.2146263123 ]
-        rot: [ 0.0, 0.0, 96.7999038696 ]
+        #pos: [ -382.8001403809, -774.2817382813, 35.2339477539 ]
+        #pos: [ -382.9024963379, -774.3652343750, 34.6620521545 ]
+        #pos: [ -382.6, -774.1, 35.1 ]
+        pos: [ -382.486, -774.216, 35.16 ]
+        rot: [ 0.0, 0.0, -229.8999938965 ]
         action: "resting_child/lie_mwdc_sleep_bed_l_new_dress_jt"
-        ignoreCollisions: false
+        ignoreCollisions: true
 
   orianna_house_children: 
     world: "bob"
@@ -313,11 +316,18 @@ layers:
 
     interactiveEntities:
       beach_trailer_doll: 
-        template: "CEntity:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\entities\\q704_trailer_doll.w2ent"
-        pos: [ -204.3219604492, -596.7793579102, 0.2775268555 ]
-        rot: [ 0.0, 90.0, 2.8600111008 ]
-        valid_interactions: [ Examine ]
-        tags: [ "ntr_beach_doll" ]  
+        ".type": CNTRVoicedClue
+        transform: 
+          pos: [ -204.3219604492, -596.7793579102, 0.2775268555 ]
+          rot: [ 0.0, 90.0, 2.8600111008 ]
+        template: "CNTRVoicedClue:orianna_clue_doll"
+        isReusable: true
+        isInteractive: true
+        interactionAnim: PEA_InspectLow
+        interactionAnimTime: 2.0
+        valid_interactions: [examine]
+        stringId: 560930
+        npcTag: PLAYER
 
   orianna_house_music:
     world: "bob"
@@ -351,16 +361,32 @@ layers:
               - mus_loc_toussaint_general_cs_to_gmpl
             priorityParameterMusic: true  
 
+  beach_orianna_dress_fake_fix_build:
+    world: "bob"
+
+    statics:
+      dress_fake_fix_build: 
+        template: "CEntity:dlc\\dlcntr\\data\\entities\\oriana_dress\\orianna_dress_lying_03.w2ent"
+        pos: [ -184.7056274414, -447.0335388184, -10.8556423187 ]
+        rot: [ 0.0, 0.0, -236.9400024414 ]
+
   beach_orianna_dress:
     world: "bob"
 
     interactiveEntities:
       beach_lying_dress: 
-        template: "CEntity:dlc\\dlcntr\\data\\entities\\oriana_dress\\orianna_dress_lying_03.w2ent"
-        pos: [ -222.0980072021, -580.3480224609, 0.5529999733 ]
-        rot: [ 0.0, 0.0, 108.6800003052 ]
-        valid_interactions: [ Examine ]
-        tags: [ "ntr_beach_dress" ]
+        ".type": CNTRVoicedClue
+        transform: 
+          pos: [ -222.0980072021, -580.3480224609, 0.5529999733 ]
+          rot: [ 0.0, 0.0, 108.6800003052 ]
+        template: "CNTRVoicedClue:orianna_clue_dress"
+        isReusable: true
+        isInteractive: true
+        interactionAnim: PEA_InspectLow
+        interactionAnimTime: 2.0
+        valid_interactions: [examine]
+        stringId: 560930
+        npcTag: PLAYER
 
   orianna_house: 
     world: "bob"
@@ -452,6 +478,30 @@ layers:
         pos: [ -186.6250000000, -448.6799926758, 11.3 ]
         rot: [ 0.0, 0.0, 33.6599998474 ]
 
+    interactiveEntities:
+      orianna_perfume: 
+        #.preset: .MonsterClue
+        ".type": CNTRVoicedClue
+        transform: 
+          pos: [ -181.1298675537, -445.6137390137, 12.6301002502 ]
+          rot: [ 0.0, 0.0, 300.9602966309 ]
+        template: "CNTRVoicedClue:orianna_clue_perfume"
+        isReusable: true
+        isInteractive: true
+        interactionAnim: PEA_SmellMid
+        interactionAnimTime: 2.8
+        valid_interactions: [examine]
+        stringId: 1172622
+        npcTag: PLAYER
+        #settings:
+        #  anim: SmellHigh
+        #  duration: 3.0
+        #  #commentary: aLotOfBlood
+        #  enabled: true
+        #  noweapon: true
+        #  #factsonfound:
+        #  #  - ntr_orianna_scent_found
+
     statics:
       bruxa_book: 
         template: "W3AnimatedContainer:dlc\\bob\\data\\gameplay\\interactive_fluff_books\\books_bestiary\\ep2_bestiary_bruxa_book.w2ent"
@@ -515,11 +565,6 @@ layers:
         pos: [ -186.6250000000, -448.6799926758, 11.3000001907 ]
         rot: [ 0.0, 0.0, 33.6599998474 ]
         scale: [ 0.0, 0.0, 0.0 ]
-
-      orianna_perfume: 
-        template: "W3MonsterClue:dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704b_fairy_tale\\entities\\bedroom_clues\\q704_ft_perfume.w2ent"
-        pos: [ -181.1298675537, -445.6137390137, 12.6301002502 ]
-        rot: [ 0.0, 0.0, 300.9602966309 ]
 
       toy_on_board: 
         template: "CEntity:dlc\\bob\\data\\environment\\decorations\\gameplay\\generic\\decoration_set\\toys\\deco_gen_toy_knight_a.w2ent"
@@ -804,7 +849,7 @@ layers:
         settings:
           anim: InspectLow
           duration: 2.0
-          commentary: FreshTracks
+          commentary: FollowingTracks
           enabled: true
           noweapon: true
           factsonfound:
@@ -836,7 +881,7 @@ layers:
         settings:
           anim: InspectLow
           duration: 2.0
-          commentary: FreshTracks
+          commentary: FollowingTracks
           enabled: true
           noweapon: true
           factsonfound:
@@ -868,7 +913,7 @@ layers:
         settings:
           anim: InspectLow
           duration: 2.0
-          commentary: FreshTracks
+          commentary: FollowingTracks
           enabled: true
           noweapon: true
           factsonfound:
@@ -900,7 +945,7 @@ layers:
         settings:
           anim: InspectLow
           duration: 2.0
-          commentary: FreshTracks
+          commentary: FollowingTracks
           enabled: true
           noweapon: true
           factsonfound:
@@ -932,7 +977,7 @@ layers:
         settings:
           anim: InspectLow
           duration: 2.0
-          commentary: FreshTracks
+          commentary: FollowingTracks
           enabled: true
           noweapon: true
           factsonfound:
@@ -964,7 +1009,7 @@ layers:
         settings:
           anim: InspectLow
           duration: 2.0
-          commentary: FreshTracks
+          commentary: FollowingTracks
           enabled: true
           noweapon: true
           factsonfound:
@@ -996,7 +1041,7 @@ layers:
         settings:
           anim: InspectLow
           duration: 2.0
-          commentary: FreshTracks
+          commentary: FollowingTracks
           enabled: true
           noweapon: true
           factsonfound:
@@ -1028,7 +1073,7 @@ layers:
         settings:
           anim: InspectLow
           duration: 2.0
-          commentary: FreshTracks
+          commentary: FollowingTracks
           enabled: true
           noweapon: true
           factsonfound:
@@ -1060,7 +1105,7 @@ layers:
         settings:
           anim: InspectLow
           duration: 2.0
-          commentary: FreshTracks
+          commentary: FollowingTracks
           enabled: true
           noweapon: true
           factsonfound:
@@ -1092,7 +1137,7 @@ layers:
         settings:
           anim: InspectLow
           duration: 2.0
-          commentary: FreshTracks
+          commentary: FollowingTracks
           enabled: true
           noweapon: true
           factsonfound:
@@ -1124,7 +1169,7 @@ layers:
         settings:
           anim: InspectLow
           duration: 2.0
-          commentary: FreshTracks
+          commentary: FollowingTracks
           enabled: true
           noweapon: true
           factsonfound:

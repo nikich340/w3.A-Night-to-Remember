@@ -1,4 +1,181 @@
 communities:
+  comm_bandits_river:
+    actors:
+      baron_edward:
+        template: "dlc\\dlcntr\\data\\entities\\baron_edward.w2ent"
+        appearances: [ "bob_knight_15" ]
+        tags: [ "ntr_baron_edward" ]
+
+      bandit_axe:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_axe.w2ent"
+        appearances: [ "bob_raider_lvl1_03" ]
+        tags: [ "ntr_camp_bandit_axe", "ntr_baron_bandit" ]
+
+      bandit_sword:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_sword.w2ent"
+        appearances: [ "bob_raider_lvl1_21" ]
+        tags: [ "ntr_camp_bandit_sword", "ntr_baron_bandit" ]
+
+      bandit_spear:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_spear.w2ent"
+        appearances: [ "bob_raider_lvl1_07" ]
+        tags: [ "ntr_camp_bandit_spear", "ntr_baron_bandit" ]
+
+      fat_bandit:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_big.w2ent"
+        appearances: [ "bob_thug_lvl2_03" ]
+        tags: [ "ntr_fat_bandit", "ntr_baron_bandit" ]
+
+      crossbow_bandit:
+        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
+        appearances: [ "__q703_nazairi_01" ]
+        tags: [ "ntr_crossbow_bandit", "ntr_baron_bandit" ]
+
+    phases:
+      before_scene:
+        baron_edward:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: humans
+          immortality: invulnerable
+          spawn_at: bob/inn_spawn1
+        bandit_axe:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: humans
+          immortality: invulnerable
+          spawn_at: bob/inn_spawn2
+
+        bandit_sword:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: humans
+          immortality: invulnerable
+          spawn_at: bob/inn_spawn3
+        bandit_spear:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: humans
+          immortality: invulnerable
+          spawn_at: bob/inn_spawn4
+        fat_bandit:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: humans
+          immortality: invulnerable
+          spawn_at: bob/inn_spawn5
+        crossbow_bandit:
+          use_last_ap: false
+          start_in_ap: false
+          attitude: humans
+          immortality: invulnerable
+          spawn_at: bob/inn_spawn6
+
+      fight_only_baron:
+        baron_edward:
+          add_tags: [ "olgierd" ]
+          attitude: hostile_to_player
+          immortality: AIM_None
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/river_spawn1
+
+        bandit_axe:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/river_torch1
+
+        bandit_sword:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/river_upset1
+
+        bandit_spear:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/river_cheer1
+
+        fat_bandit:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/river_cheer2
+
+        crossbow_bandit:
+          attitude: humans
+          immortality: invulnerable
+          use_last_ap: true
+          start_in_ap: true
+          actionpoints:
+            "00:00": bob/river_upset2
+
+      fight_all:
+        baron_edward:
+          add_tags: [ "olgierd" ]
+          attitude: hostile_to_player
+          immortality: AIM_None
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_baron
+          spawntimes:
+            "00:00": [1, false] # 1 actor, no respawn
+
+        bandit_axe:
+          attitude: hostile_to_player
+          immortality: AIM_None
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_axe
+          spawntimes:
+            "00:00": [1, false] # 1 actor, no respawn
+
+        bandit_sword:
+          attitude: hostile_to_player
+          immortality: AIM_None
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_sword
+          spawntimes:
+            "00:00": [1, false] # 1 actor, no respawn
+
+        bandit_spear:
+          attitude: hostile_to_player
+          immortality: AIM_None
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_spear
+          spawntimes:
+            "00:00": [1, false] # 1 actor, no respawn
+
+        fat_bandit:
+          attitude: hostile_to_player
+          immortality: AIM_None
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_fat
+          spawntimes:
+            "00:00": [1, false] # 1 actor, no respawn
+
+        crossbow_bandit:
+          attitude: hostile_to_player
+          immortality: AIM_None
+          use_last_ap: false
+          start_in_ap: false
+          spawn_at: bob/riverspawn_poor
+          spawntimes:
+            "00:00": [1, false] # 1 actor, no respawn
+
   comm_children:
     actors:
       niellan:
@@ -391,7 +568,7 @@ communities:
       fisherman:
         template: "dlc\\dlcntr\\data\\entities\\toussaint_fisherman.w2ent"
         appearances: [ "bob_vineyard_13" ]
-        tags: [ "ntr_fisherman", "vip" ]
+        tags: [ "ntr_fisherman" ]
 
     phases:
       usual:
@@ -402,233 +579,7 @@ communities:
           start_in_ap: true
           actionpoints:
             "00:00": bob/fisherman_sit_fishing
-
-  comm_bandits_river:
-    actors:
-      baron_edward:
-        template: "dlc\\dlcntr\\data\\entities\\baron_edward.w2ent"
-        appearances: [ "bob_knight_15" ]
-        tags: [ "ntr_baron_edward" ]
-
-      bandit_axe:
-        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_axe.w2ent"
-        appearances: [ "bob_raider_lvl1_03" ]
-        tags: [ "ntr_camp_bandit_axe", "ntr_baron_bandit" ]
-
-      bandit_sword:
-        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_sword.w2ent"
-        appearances: [ "bob_raider_lvl1_21" ]
-        tags: [ "ntr_camp_bandit_sword", "ntr_baron_bandit" ]
-
-      bandit_spear:
-        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_spear.w2ent"
-        appearances: [ "bob_raider_lvl1_07" ]
-        tags: [ "ntr_camp_bandit_spear", "ntr_baron_bandit" ]
-
-      fat_bandit:
-        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_big.w2ent"
-        appearances: [ "bob_thug_lvl2_03" ]
-        tags: [ "ntr_fat_bandit", "ntr_baron_bandit" ]
-
-      crossbow_bandit:
-        template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
-        appearances: [ "__q703_nazairi_01" ]
-        tags: [ "ntr_crossbow_bandit", "ntr_baron_bandit" ]
-
-    phases:
-      before_scene:
-        baron_edward:
-          use_last_ap: false
-          start_in_ap: false
-          attitude: humans
-          immortality: invulnerable
-          spawn_at: bob/inn_spawn1
-        bandit_axe:
-          use_last_ap: false
-          start_in_ap: false
-          attitude: humans
-          immortality: invulnerable
-          spawn_at: bob/inn_spawn2
-
-        bandit_sword:
-          use_last_ap: false
-          start_in_ap: false
-          attitude: humans
-          immortality: invulnerable
-          spawn_at: bob/inn_spawn3
-        bandit_spear:
-          use_last_ap: false
-          start_in_ap: false
-          attitude: humans
-          immortality: invulnerable
-          spawn_at: bob/inn_spawn4
-        fat_bandit:
-          use_last_ap: false
-          start_in_ap: false
-          attitude: humans
-          immortality: invulnerable
-          spawn_at: bob/inn_spawn5
-        crossbow_bandit:
-          use_last_ap: false
-          start_in_ap: false
-          attitude: humans
-          immortality: invulnerable
-          spawn_at: bob/inn_spawn6
-
-      fight_only_baron:
-        baron_edward:
-          add_tags: [ "olgierd" ]
-          attitude: hostile_to_player
-          immortality: AIM_None
-          use_last_ap: false
-          start_in_ap: false
-          spawn_at: bob/river_spawn1
-
-        bandit_axe:
-          attitude: humans
-          immortality: invulnerable
-          use_last_ap: true
-          start_in_ap: true
-          actionpoints:
-            "00:00": bob/river_torch1
-
-        bandit_sword:
-          attitude: humans
-          immortality: invulnerable
-          use_last_ap: true
-          start_in_ap: true
-          actionpoints:
-            "00:00": bob/river_upset1
-
-        bandit_spear:
-          attitude: humans
-          immortality: invulnerable
-          use_last_ap: true
-          start_in_ap: true
-          actionpoints:
-            "00:00": bob/river_cheer1
-
-        fat_bandit:
-          attitude: humans
-          immortality: invulnerable
-          use_last_ap: true
-          start_in_ap: true
-          actionpoints:
-            "00:00": bob/river_cheer2
-
-        crossbow_bandit:
-          attitude: humans
-          immortality: invulnerable
-          use_last_ap: true
-          start_in_ap: true
-          actionpoints:
-            "00:00": bob/river_upset2
-
-      fight_only_baron_run_bandits:
-        baron_edward:
-          add_tags: [ "olgierd" ]
-          attitude: hostile_to_player
-          immortality: none
-          use_last_ap: false
-          start_in_ap: false
-          spawn_at: bob/riverspawn_baron
-
-        bandit_axe:
-          attitude: humans
-          immortality: invulnerable
-          use_last_ap: false
-          start_in_ap: false
-          actionpoints:
-            "00:00": bob/riverrun_point1
-
-        bandit_sword:
-          attitude: humans
-          immortality: invulnerable
-          use_last_ap: false
-          start_in_ap: true
-          actionpoints:
-            "00:00": bob/riverrun_point2
-
-        bandit_spear:
-          attitude: humans
-          immortality: invulnerable
-          use_last_ap: true
-          start_in_ap: false
-          actionpoints:
-            "00:00": bob/riverrun_point3
-
-        fat_bandit:
-          attitude: humans
-          immortality: invulnerable
-          use_last_ap: true
-          start_in_ap: true
-          actionpoints:
-            "00:00": bob/riverrun_point4
-
-        crossbow_bandit:
-          attitude: humans
-          immortality: invulnerable
-          use_last_ap: false
-          start_in_ap: false
-          actionpoints:
-            "00:00": bob/riverrun_point5
-
-      fight_all:
-        baron_edward:
-          add_tags: [ "olgierd" ]
-          attitude: hostile_to_player
-          immortality: AIM_None
-          use_last_ap: false
-          start_in_ap: false
-          spawn_at: bob/riverspawn_baron
-          spawntimes:
-            "00:00": [1, false] # 1 actor, no respawn
-
-        bandit_axe:
-          attitude: hostile_to_player
-          immortality: AIM_None
-          use_last_ap: false
-          start_in_ap: false
-          spawn_at: bob/riverspawn_axe
-          spawntimes:
-            "00:00": [1, false] # 1 actor, no respawn
-
-        bandit_sword:
-          attitude: hostile_to_player
-          immortality: AIM_None
-          use_last_ap: false
-          start_in_ap: false
-          spawn_at: bob/riverspawn_sword
-          spawntimes:
-            "00:00": [1, false] # 1 actor, no respawn
-
-        bandit_spear:
-          attitude: hostile_to_player
-          immortality: AIM_None
-          use_last_ap: false
-          start_in_ap: false
-          spawn_at: bob/riverspawn_spear
-          spawntimes:
-            "00:00": [1, false] # 1 actor, no respawn
-
-        fat_bandit:
-          attitude: hostile_to_player
-          immortality: AIM_None
-          use_last_ap: false
-          start_in_ap: false
-          spawn_at: bob/riverspawn_fat
-          spawntimes:
-            "00:00": [1, false] # 1 actor, no respawn
-
-        crossbow_bandit:
-          attitude: hostile_to_player
-          immortality: AIM_None
-          use_last_ap: false
-          start_in_ap: false
-          spawn_at: bob/riverspawn_poor
-          spawntimes:
-            "00:00": [1, false] # 1 actor, no respawn
-
+            
   comm_camp_bandit_axe_night:
     actors:
       bandit_axe:
@@ -678,7 +629,7 @@ communities:
         template: "dlc\\dlcntr\\data\\entities\\baron_edward.w2ent"
         appearances: [ "bob_knight_15" ]
         #appearances: [ "bob_raider_lvl2_02" ]
-        tags: [ "ntr_baron_edward", "ntr_camp_bandits" ]
+        tags: [ "ntr_baron_edward", "ntr_camp_bandits", "vip" ]
 
       horse_baron:
         template: "dlc\\bob\\data\\characters\\npc_entities\\animals\\horse\\bob_horse_vehicle_no_interaction.w2ent"
@@ -863,7 +814,7 @@ communities:
     actors:
       triss_monster:
         template: dlc/dlcntr/data/entities/triss_monster.w2ent
-        tags: [ "ntr_triss_monster" ]
+        tags: [ "ntr_triss_monster", "vip" ]
         
     phases:
       normal:

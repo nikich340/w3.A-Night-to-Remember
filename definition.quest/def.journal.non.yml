@@ -1,7 +1,7 @@
 journals:
   quests:
     nightofnightmares:
-      title: "A Night of Nightmares (DEBUG v4)"
+      title: "A Night of Nightmares"
       type: "Side"
       world: bob                      # optional, if empty every objective requires world
       level: 50
@@ -18,7 +18,7 @@ journals:
                 - [ corvo_pin, 11 ]
         intro_hag:
           - kill_hag:
-              caption: "Kill water hag."
+              caption: "Kill the water hag."
               mappins:
                 - [ hag_pin, 15 ]
           - blood_tracks:

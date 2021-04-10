@@ -2,6 +2,36 @@
 # definition of entities
 #
 templates:
+  orianna_clue_perfume:
+    includes:
+      - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704b_fairy_tale\\entities\\bedroom_clues\\q704_ft_perfume.w2ent"
+    entityObject:
+      ".type": CNTRVoicedClue
+
+  orianna_clue_dress:
+    includes:
+      - "dlc\\dlcntr\\data\\entities\\oriana_dress\\orianna_dress_lying_03.w2ent"
+    entityObject:
+      ".type": CNTRVoicedClue
+      components:
+        InteractiveClue:
+          ".type": CInteractionComponent
+          transform:
+            pos: [ 0.0, 0.0, 0.15 ]
+          actionName: Examine
+
+  orianna_clue_doll:
+    includes:
+      - "dlc\\bob\\data\\quests\\main_quests\\quest_files\\q704_truth\\entities\\q704_trailer_doll.w2ent"
+    entityObject:
+      ".type": CNTRVoicedClue
+      components:
+        InteractiveClue:
+          ".type": CInteractionComponent
+          transform:
+            pos: [ 0.0, 0.0, 0.15 ]
+          actionName: Examine
+
   baron_sword:
     includes:
       - gameplay\containers\container_template.w2ent

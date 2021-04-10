@@ -152,16 +152,16 @@
 2114670882|00000000||He is gone. Orianna killed him.
 2114670883|00000000||What?! But… How? Tell me what happened.
 2114670970|00000000||Oh, shit…
-2114670884|00000000||She is not just a woman. Maybe a witch or a monster… I'm not entirely sure what happened myself.
-2114670885|00000000||And who is th… A witcher? It must be destiny that sent you to us.
+2114670884|00000000||She is not just a woman. Maybe a witch… or a monster… I'm not entirely sure what happened myself.
+2114670885|00000000||And who is th… A witcher? Huh, it must be destiny that sent you to us.
 2114670886|00000000||Actually, it was your friends. I'm Geralt.
 ;;; neuro-voice Actually, it was your friends. My name is Geralt.
 2114670887|00000000||He's the famous Geralt of Rivia, no less.
-2114670888|00000000||My name is Edward, and I take care of these fine gentlemen…
+2114670888|00000000||My name is Edward. I take care of these fine gentlemen…
 ;   1075517|00000000||Bandits?
 2114670889|00000000||Don't be so prejudiced, Geralt, we don't rob and kill the innocent.
 2114670890|00000000||I don't believe it. However I'm here about Orianna.
-2114670891|00000000||Of course. This evil woman, she refuses to return something precious to me…
+2114670891|00000000||Of course. This evil woman, she has stolen something quite precious.
 2114670892|00000000||That's why I'd like to contract your services, witcher. To kill that monster, and take back that which belongs to me.
 2114670893|00000000||The child..
 2114670894|00000000||Huh, I should've known you'd already figured it out. I'd expect nothing less from a witcher…
@@ -373,8 +373,8 @@
 2114670343|00000000||I challenge you to a duel! You and I!
 2114670344|00000000||Goodbye, witcher. And… Thank you.
 2114670345|00000000||Take care of it, in her name.
-2114670346|00000000||How long has he been here? (ask Jato where's voiceline)
-2114670347|00000000||About an hour. Saw… (ask Jato where's voiceline)
+2114670346|00000000||How long has he been here?
+2114670347|00000000||About an hour. I saw them speaking…
 2114670348|00000000||Thank the heavens! My boy is okay…
 2114670349|00000000||There was no need to be so difficult Geralt. Anyways…
 2114670350|00000000||What about the girl? You'll look after her?
@@ -390,6 +390,7 @@
 2114670423|00000000||This is my sin, and it dies here with me!
 2114670424|00000000||*Cough* Tyberious, take the men, and get out of this wretched land.
 2114670425|00000000||Go! 'Fore I kill you myself!
+2114670431|00000000||I'm sorry, Edward…
 2114670426|00000000||And you… You will take this blade… and keep it safe for my son.
 2114670427|00000000||The blade… Margot… You will tell him… It's name is Margot…
 2114670428|00000000||Margot… I'm so sorry… I failed you…
@@ -406,6 +407,12 @@
 2114670364|00000000||Do you know what happens to those who betray me?
 ;    490004|00000000||That a threat?
 2114670365|00000000||Kill him!
+2114670366|00000000||So you're a liar, and a coward.
+2114670367|00000000||First we'll take care of you and then I'll hunt that bitch myself.
+2114670368|00000000||Did you hear that men? The witcher has demanded that we leave… peacefully.
+;2114670369|00000000||Ha ha ha ha ha ha ha ha. Ha ha ha ha. You didn't think it would be that easy, did you? A little trick?
+2114670369|00000000||*Laugh* You didn't think it would be that easy, did you? A little trick?
+2114670370|00000000||What have you done with my boy?!
 2114670429|00000000||You, piece of shit, I'll kill you!
 2114670430|00000000||I'm gonna behead you, witcher!
 ;

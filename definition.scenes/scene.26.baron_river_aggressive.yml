@@ -28,6 +28,10 @@ repository:
       template: "dlc\\dlcntr\\data\\entities\\baron_bandit_crossbow.w2ent"
       appearance: [ "__q703_nazairi_01" ]
 
+  props:
+    pc_axii:
+      template: "gameplay\\templates\\signs\\pc_axii.w2ent"
+      
   animations:
     anim_337_high_standing_determined_turn_180_left_casual:
       animation: "high_standing_determined_turn_180_left_casual"
@@ -179,15 +183,45 @@ repository:
         tags: [ "ext" ]
 
     cam_13_cam_geralt_togame:
-      fov: 35.0
+      fov: 40.0
       transform:
-        pos: [ -163.1970672607, 37.7705688477, -9.8238420486 ]
-        rot: [ 0.0, 355.7749938965, 252.7997741699 ]
+        pos: [ -158.7619628906, 35.7101364136, -9.8514118195 ]
+        rot: [ 0.0, 354.7849731445, 348.7183227539 ]
       zoom: 0.0
       dof:
         aperture: [ 28.2495002747, 1.2700699568 ]
-        blur: [ 4.7663598061, 7.7663598061 ]
-        focus: [ 5.2663598061, 6.2663598061 ]
+        blur: [ 0.0, 10.3760051727 ]
+        focus: [ 0.0, 8.8760051727 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_5_Shot_axii_ger_close:
+      fov: 10.0
+      transform:
+        pos: [ -158.6723480225, 34.2524795532, -9.5264120102 ]
+        rot: [ 0.0, 355.0049743652, 359.3880310059 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.0, 5.8319854736 ]
+        focus: [ 0.0, 4.3319854736 ]
+        intensity: 0.2500000000
+      event_generator:
+        plane: "Medium"
+        tags: [ "ext" ]
+
+    cam_6_Shot_axii_bar_close:
+      fov: 10.0
+      transform:
+        pos: [ -159.7142639160, 37.8704490662, -9.7014112473 ]
+        rot: [ 0.0, 0.3674843013, 209.0177917480 ]
+      zoom: 0.0
+      dof:
+        aperture: [ 28.2495002747, 1.2700699568 ]
+        blur: [ 0.0, 5.5699253082 ]
+        focus: [ 0.0, 4.0699253082 ]
         intensity: 0.2500000000
       event_generator:
         plane: "Medium"
@@ -209,13 +243,37 @@ production:
       Baron_Edward_angry:
         actor: Baron_Edward
         repo: angry
-        weight: 0.7
+        weight: 0.8
         duration: 1.0
 
       Baron_Edward_aggressive:
         actor: Baron_Edward
         repo: aggressive
-        weight: 0.7
+        weight: 1.0
+        duration: 1.0
+
+      Baron_Edward_slight_aggressive:
+        actor: Baron_Edward
+        repo: aggressive
+        weight: 0.5
+        duration: 1.0
+
+      Baron_Edward_slight_happy:
+        actor: Baron_Edward
+        repo: happy
+        weight: 0.3
+        duration: 1.0
+
+      geralt_slight_happy:
+        actor: geralt
+        repo: happy
+        weight: 0.3
+        duration: 1.0
+
+      geralt_slight_angry:
+        actor: geralt
+        repo: angry
+        weight: 0.4
         duration: 1.0
 
       geralt_angry:
@@ -266,6 +324,10 @@ production:
         appearance: "__q703_nazairi_01"
         tags: [ "ntr_crossbow_bandit" ]
 
+    props:
+      pc_axii:
+        repo: "pc_axii"
+
     cameras:
       cam_1_eyes_open:
         repo: "cam_1_eyes_open"
@@ -281,6 +343,12 @@ production:
 
       cam_13_cam_geralt_togame:
         repo: "cam_13_cam_geralt_togame"
+
+      cam_5_Shot_axii_ger_close:
+        repo: "cam_5_Shot_axii_ger_close"
+
+      cam_6_Shot_axii_bar_close:
+        repo: "cam_6_Shot_axii_bar_close"
 
     animations:
       geralt_high_standing_determined_turn_180_left_casual:
@@ -546,12 +614,24 @@ production:
         repo: "pose_0_high_standing_determined_idle"
 
 storyboard:
-  #defaults:
-    #placement:
-      #geralt: [[ -158.8057098389, 37.4670944214, -11.4799804688 ], [ 0.0, 0.0, 38.8299331665 ]]
-
-    #actor.pose:
-      #geralt: geralt_high_standing_determined_idle
+  defaults:
+    placement:
+      geralt: [[ -158.8057098389, 37.4670944214, -11.4799804688 ], [ 0.0, 0.0, 202.9499816895 ]]
+      Baron_Edward: [[ -158.3189392090, 35.0936851501, -11.3368530273 ], [ 0.0, 0.0, 12.4300155640 ]]
+      Big_bandit: [[ -157.2901000977, 32.2021827698, -11.2332153320 ], [ 0.0, 0.0, 11.6599960327 ]]
+      Bandit_camp_axe: [[ -159.5366363525, 34.5762405396, -11.3785400391 ], [ 0.0, 0.0, 350.2099914551 ]]
+      Bandit_camp_sword: [[ -158.8108520508, 33.1164550781, -11.2819213867 ], [ 0.0, 0.0, 347.2399902344 ]]
+      Bandit_camp_spear: [[ -156.1526489258, 35.0238037109, -11.1720581055 ], [ 0.0, 0.0, 71.4999771118 ]]
+      Bandit_crossbow: [[ -156.1406555176, 33.2613143921, -11.1720581055 ], [ 0.0, 0.0, 20.0200042725 ]]
+      pc_axii: [[ -158.4987487793, 36.9143524170, -9.9805555344 ], [ 0.0, 0.0, 0.0 ]]
+      
+    actor.pose:
+      geralt: geralt_high_standing_determined_idle
+      Baron_Edward: Baron_Edward_High_Standing_Aggressive
+      Big_bandit: Big_bandit_High_Standing_Determined
+      Bandit_camp_axe: Bandit_camp_axe_High_Standing_Aggressive
+      Bandit_camp_sword: Bandit_camp_sword_man_idle_torch
+      Bandit_crossbow: Bandit_crossbow_man_idle_torch
 
   section_storyboard_ui:
     # shot eyes open
@@ -563,14 +643,8 @@ storyboard:
       - actor.placement: [0.0, Bandit_camp_sword, [ -158.8983459473, 33.9732475281, -15.3093872070 ], [ 0.0, 0.0, 356.4799804688 ]]
       - actor.placement: [0.0, Bandit_camp_spear, [ -156.1526489258, 35.0238037109, -15.1720581055 ], [ 0.0, 0.0, 71.4999771118 ]]
       - actor.placement: [0.0, Bandit_crossbow, [ -156.1406555176, 33.2613143921, -15.1720581055 ], [ 0.0, 0.0, 20.0200042725 ]]
-      - actor.pose: [0.0, Baron_Edward_High_Standing_Aggressive]
-      - actor.pose: [0.0, Big_bandit_High_Standing_Determined]
-      - actor.pose: [0.0, Bandit_camp_axe_High_Standing_Aggressive]
-      - actor.pose: [0.0, Bandit_camp_sword_man_idle_torch]
-      - actor.pose: [0.0, Bandit_crossbow_man_idle_torch]
 
       - actor.placement: [0.0, geralt, [ -158.8057098389, 37.4670944214, -11.4799804688 ], [ 0.0, 0.0, 38.8299331665 ]]
-      - actor.pose: [0.0, geralt_high_standing_determined_idle]
       - actor.lookat: [0.0, geralt, NONE]
       - cam: [0.0, cam_1_eyes_open]
       - actor.anim.mimic: 
@@ -674,6 +748,13 @@ storyboard:
     # shot cam baron gest both hands
     shot_6_bullshit:
       - cam: [0.0, cam_4_cam_baron]
+      - actor.anim:
+          actor: Baron_Edward
+          #.@pos: [0.0, anim_6719_add_gesture_weight_shift_step_02]
+          .@pos: [0.3, anim_6925_high_standing_aggressive_gesture_left_hand_wave_1]
+          blendin: 0.5
+          blendout: 0.5
+
       - actor.anim.mimic:
           actor: Baron_Edward
           .@pos: [0.0, mimicsanim_448_geralt_neutral_gesture_what_did_you_say_face]
@@ -684,48 +765,225 @@ storyboard:
     # shot cam baron gest point ground
     shot_7_changed_mind:
       - actor.anim.mimic: [0.0, geralt_geralt_neutral_no_contempt_face]
-      - actor.anim.additive:
-          .@pos: [1.0, geralt_high_standing_determined_gesture_decline]
-          blendin: 0.5
-          blendout: 0.5
       - cam: [0.0, cam_5_cam_geralt]
 
-    # shot cam geralt gest decline
-    shot_8_traitor1:
-      - cam: [0.0, cam_4_cam_baron]
-      - actor.anim.additive:
-          .@pos: [0.5, Baron_Edward_high_standing_aggressive_gesture_left_hand_point_down]
+    shot_7_changed_mind2:
+      - cam: [0.0, cam_5_Shot_axii_ger_close]
+      #- actor.anim.additive:
+      #    .@pos: [0.0, geralt_high_standing_determined_gesture_decline]
+      #    blendin: 0.5
+      #    blendout: 0.5
+
+    shot_7_done_with_my_son:
+      - cam: [0.0, cam_6_Shot_axii_bar_close]
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.4, mimicsanim_117_geralt_neutral_gesture_brows_down_face_nrml]
+          blendin: 0.5
+          blendout: 0.5
+  
+  section_choice_boy:
+    CHOICE_1:
+      - cam: [0.0, cam_5_cam_geralt]
+
+  section_son_myself:
+    shot_son_myself_ger1:
+      - cam: [0.0, cam_5_cam_geralt]
+      - actor.anim.additive: 
+          actor: geralt
+          .@pos: [0.0, anim_7036_high_standing_determined_gesture_me]
           blendin: 0.5
           blendout: 0.5
 
-    shot_8_traitor2:
-      - actor.anim: 
-          .@pos: [0.2, Baron_Edward_high_standing_aggressive_to_high_standing_determined]
+    shot_son_myself_bar1:
+      - cam: [0.0, cam_4_cam_baron]
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_448_geralt_neutral_gesture_what_did_you_say_face]
           blendin: 0.5
           blendout: 0.5
-      - actor.pose: [0.6, Baron_Edward_high_standing_determined_idle]
-      - actor.mimic: [0.0, Baron_Edward_angry]
-      
-    # shot cam geralt gest you
-    shot_9_treat:
+          weight: 0.9
+
+    shot_son_myself_ger2:
+      - cam: [0.0, cam_5_Shot_axii_ger_close]
+      - actor.anim.mimic:
+          actor: geralt
+          .@pos: [0.0, mimicsanim_117_geralt_neutral_gesture_brows_down_face_nrml]
+          blendin: 0.5
+          blendout: 0.5
+          weight: 0.7
       - actor.anim.additive: 
-          .@pos: [0.0, geralt_high_standing_determined_gesture_you]
+          actor: geralt
+          .@pos: [0.0, anim_7010_high_standing_determined_gesture_decline]
+          blendin: 0.5
+          blendout: 0.5
+
+    shot_son_myself_bar2:
+      - cam: [0.0, cam_6_Shot_axii_bar_close]
+      - actor.mimic: [0.0, Baron_Edward_aggressive]
+      - actor.anim:
+          actor: Baron_Edward
+          .@pos: [0.0, Baron_Edward_high_standing_aggressive_to_high_standing_determined]
+          blendin: 0.5
+          blendout: 0.5
+
+      - actor.pose: [0.5, Baron_Edward_high_standing_determined_idle]
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_440_geralt_neutral_gesture_squint_face]
+          blendin: 0.5
+          blendout: 0.5
+          weight: 0.8
+
+    shot_son_myself_ger3:
+      - cam: [0.0, cam_5_cam_geralt]
+      - actor.mimic: [0.0, geralt_angry]
+      - actor.anim.mimic: 
+          actor: geralt
+          .@pos: [0.0, mimicsanim_140_geralt_neutral_question_problem_face]
+          blendin: 0.5
+          blendout: 0.5
+          weight: 0.8
+
+    shot_son_myself_bar3:
+      - cam: [0.0, cam_4_cam_baron]      
+      - actor.anim:
+          actor: Baron_Edward
+          .@pos: [0.0, anim_7069_high_standing_determined_gesture_step_back]
+          blendin: 0.5
+          blendout: 0.0
+          clipend: 3.7
+      - actor.anim.additive: 
+          .@pos: [0.0, Baron_Edward_add_gesture_point_forward]
           blendin: 0.5
           blendout: 0.5
           stretch: 0.8
 
-      - cam: [0.0, cam_5_cam_geralt]
-      - actor.mimic: [0.0, geralt_angry]
+    shot_son_myself_draw_steel:
+      - cam: [0.0, cam_13_cam_geralt_togame]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_7102_high_standing_determined_steel_to_gameplay_combat]
+          blendin: 0.5
+          blendout: 0.0
+          clipend: 4.0
+      - actor.equip.right: [0.25, geralt, steelsword]
+      - actor.placement: [0.5, Baron_Edward, [ -158.1316528320, 34.3376884460, -11.2987060547 ], [ 0.0, 0.0, 8.5799942017 ]]
 
-    # shot cam geralt gest greetings
-    shot_10:
-      - cam: [0.0, cam_4_cam_baron]
+    shot_son_myself_togame:
       - actor.gamestate: [0.0, Baron_Edward]
       - actor.gamestate: [0.0, Big_bandit]
       - actor.gamestate: [0.0, Bandit_camp_spear]
       - actor.gamestate: [0.0, Bandit_camp_sword]
       - actor.gamestate: [0.0, Bandit_camp_axe]
       - actor.gamestate: [0.0, Bandit_crossbow]
+      - actor.gamestate: 
+          .@pos: [0.0, Baron_Edward]
+          behavior: Combat1HandedSword
+      - cam.blend.togame: [0.0, cam_4_cam_baron]
+      - actor.gamestate: [0.0, geralt, DrawSteel]
+
+  section_son_trick:
+    shot_son_trick_ger1_axii:
+      - cam: [0.0, cam_5_cam_geralt]
+      - actor.anim.additive:  
+          actor: geralt
+          .@pos: [0.0, anim_6997_high_standing_determined_gesture_axii_open_left]
+          blendin: 0.5
+          blendout: 0.5
+      - prop.placement: [0.0, pc_axii, [ -158.4987487793, 36.9143524170, -9.9805555344 ], [ 0.0, 0.0, 0.0 ]]
+      - prop.effect.start: [0.35, pc_axii, axii_cutscene]
+      - actor.effect.start: [0.9, Baron_Edward, axii_confusion]
+
+    shot_son_trick_bar1:
+      - cam: [0.0, cam_4_cam_baron]
+      - actor.lookat: [0.45, Baron_Edward, Bandit_camp_spear]
+      - actor.lookat: [0.9, Baron_Edward, geralt]
+
+      - actor.anim:
+          .@pos: [0.05, Baron_Edward_high_standing_aggressive_to_high_standing_determined]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.pose: [0.5, Baron_Edward_high_standing_determined_idle]
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_380_geralt_neutral_gesture_axii_face]
+          blendin: 0.5
+          blendout: 0.5
+
+      - actor.mimic: [0.1, Baron_Edward_slight_happy]
+
+      - cam: [0.8, cam_5_Shot_axii_ger_close]
+      - actor.mimic: [0.85, geralt_slight_happy]
+      - actor.anim.mimic:
+          actor: geralt
+          .@pos: [0.8, mimicsanim_378_geralt_neutral_gesture_agreement_face]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.effect.stop: [0.9, Baron_Edward, axii_confusion]
+
+    shot_son_trick_bar2:
+      - cam: [0.3, cam_6_Shot_axii_bar_close]
+      - actor.mimic: [0.1, geralt_slight_angry]
+      #- actor.anim.additive:
+      #    actor: Baron_Edward
+      #    .@pos: [0.0, anim_6732_add_reaction_laugh_01]
+      #    blendin: 0.5
+      #    blendout: 0.5
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.3, mimicsanim_403_geralt_neutral_gesture_laughter_face]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.anim.additive:
+          actor: Baron_Edward
+          .@pos: [0.35, anim_6732_add_reaction_laugh_01]
+          blendin: 0.5
+          blendout: 0.5
+          stretch: 1.25
+
+      - actor.anim.mimic:
+          actor: Bandit_crossbow
+          .@pos: [0.35, mimicsanim_112_geralt_happiness_gesture_smile_face]
+          blendin: 0.3
+          blendout: 0.3
+          stretch: 2.0
+          weight: 0.4
+
+      - actor.anim.mimic:
+          actor: Big_bandit
+          .@pos: [0.4, mimicsanim_112_geralt_happiness_gesture_smile_face]
+          blendin: 0.3
+          blendout: 0.3
+          stretch: 2.0
+          weight: 0.5
+
+      - actor.mimic: [0.6, Baron_Edward_slight_aggressive]
+
+    shot_son_trick_ger2:
+      - cam: [0.0, cam_5_Shot_axii_ger_close]
+      - actor.mimic: [0.0, geralt_angry]
+      - actor.anim:
+          actor: Baron_Edward
+          .@pos: [0.0, anim_7069_high_standing_determined_gesture_step_back]
+          blendin: 0.5
+          blendout: 0.0
+          clipend: 3.1
+
+      - actor.anim.mimic:
+          actor: geralt
+          .@pos: [0.0, mimicsanim_487_geralt_reaction_annoyed_face]
+          blendin: 0.5
+          blendout: 0.5
+
+    shot_son_trick_bar3:
+      - cam: [0.0, cam_4_cam_baron]
+      #- actor.gamestate: [0.0, Baron_Edward]
+      #- actor.gamestate: [0.0, Big_bandit]
+      #- actor.gamestate: [0.0, Bandit_camp_spear]
+      #- actor.gamestate: [0.0, Bandit_camp_sword]
+      #- actor.gamestate: [0.0, Bandit_camp_axe]
+      #- actor.gamestate: [0.0, Bandit_crossbow]
       
       - actor.mimic: [0.0, Baron_Edward_aggressive]
       - actor.anim.additive: 
@@ -734,15 +992,113 @@ storyboard:
           blendout: 0.5
           stretch: 0.8
 
-    # shot cam baron high stand point you
-    shot_togame:
+    shot_son_trick_draw_steel:
+      - cam: [0.0, cam_13_cam_geralt_togame]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_7102_high_standing_determined_steel_to_gameplay_combat]
+          blendin: 0.5
+          blendout: 0.0
+          clipend: 4.0
+      - actor.equip.right: [0.25, geralt, steelsword]
+      - actor.placement: [0.5, Baron_Edward, [ -158.1316528320, 34.3376884460, -11.2987060547 ], [ 0.0, 0.0, 8.5799942017 ]]
+
+    shot_son_trick_togame:
+      - actor.gamestate: [0.0, Baron_Edward]
+      - actor.gamestate: [0.0, Big_bandit]
+      - actor.gamestate: [0.0, Bandit_camp_spear]
+      - actor.gamestate: [0.0, Bandit_camp_sword]
+      - actor.gamestate: [0.0, Bandit_camp_axe]
+      - actor.gamestate: [0.0, Bandit_crossbow]
+      - actor.gamestate: 
+          .@pos: [0.0, Baron_Edward]
+          behavior: Combat1HandedSword
       - cam.blend.togame: [0.0, cam_4_cam_baron]
       - actor.gamestate: [0.0, geralt, DrawSteel]
-      #- cam.blend.togame: [0.0, cam_13_cam_geralt_togame]
+
+  section_son_dead:
+    shot_son_dead_ger1:
+      - cam: [0.0, cam_5_cam_geralt]
+      - actor.anim.mimic: # 2.533
+          actor: geralt
+          .@pos: [0.0, mimicsanim_124_geralt_neutral_gesture_diasppointment_face]
+          blendin: 0.5
+          blendout: 0.5
+
+    shot_son_dead_bar0:
+      - cam: [0.0, cam_4_cam_baron]
+      - actor.mimic: [0.0, Baron_Edward_slight_aggressive]
+
+    shot_son_dead_bar1:
+      - actor.anim:
+          actor: Baron_Edward
+          .@pos: [0.0, Baron_Edward_high_standing_aggressive_to_high_standing_determined]
+          blendin: 0.5
+          blendout: 0.5
+      - actor.anim.mimic:
+          actor: Baron_Edward
+          .@pos: [0.0, mimicsanim_440_geralt_neutral_gesture_squint_face]
+          blendin: 0.5
+          blendout: 0.5
+          weight: 0.8
+      - actor.pose: [0.5, Baron_Edward_high_standing_determined_idle]
+
+    shot_son_dead_bar2:
+      - cam: [0.0, cam_6_Shot_axii_bar_close]
+      - actor.mimic: [0.0, Baron_Edward_aggressive]
+      - actor.anim:
+          actor: Baron_Edward
+          .@pos: [0.7, anim_7069_high_standing_determined_gesture_step_back]
+          blendin: 0.5
+          blendout: 0.0
+          clipend: 6.0
+
+    shot_son_dead_ger2:
+      - cam: [0.0, cam_5_Shot_axii_ger_close]
+      - actor.anim.mimic:
+          actor: geralt
+          .@pos: [0.0, mimicsanim_487_geralt_reaction_annoyed_face]
+          blendin: 0.5
+          blendout: 0.5
+
+    shot_son_dead_bar3:
+      - cam: [0.0, cam_4_cam_baron]
+      - actor.anim.additive: 
+          .@pos: [0.0, Baron_Edward_add_gesture_point_forward]
+          blendin: 0.5
+          blendout: 0.5
+          stretch: 0.8
+
+    shot_son_dead_draw_steel:
+      - cam: [0.0, cam_13_cam_geralt_togame]
+      - actor.mimic: [0.0, geralt_angry]
+      - actor.anim: 
+          actor: geralt
+          .@pos: [0.0, anim_7102_high_standing_determined_steel_to_gameplay_combat]
+          blendin: 0.5
+          blendout: 0.0
+          clipend: 4.0
+      - actor.equip.right: [0.25, geralt, steelsword]
+      - actor.placement: [0.5, Baron_Edward, [ -158.1316528320, 34.3376884460, -11.2987060547 ], [ 0.0, 0.0, 8.5799942017 ]]
+
+    shot_son_dead_togame:
+      - actor.gamestate: [0.0, Baron_Edward]
+      - actor.gamestate: [0.0, Big_bandit]
+      - actor.gamestate: [0.0, Bandit_camp_spear]
+      - actor.gamestate: [0.0, Bandit_camp_sword]
+      - actor.gamestate: [0.0, Bandit_camp_axe]
+      - actor.gamestate: [0.0, Bandit_crossbow]
+      - actor.gamestate: 
+          .@pos: [0.0, Baron_Edward]
+          behavior: Combat1HandedSword
+      - cam.blend.togame: [0.0, cam_4_cam_baron]
+      - actor.gamestate: [0.0, geralt, DrawSteel]
+
 
 dialogscript:
   player: "geralt"
   actors: [ "geralt", "Baron_Edward", "Big_bandit", "Bandit_camp_axe", "Bandit_camp_sword", "Bandit_camp_spear", "Bandit_crossbow" ]
+  props: [ "pc_axii" ]
 
   section_start:
     - PAUSE: 0.0
@@ -797,33 +1153,104 @@ dialogscript:
     - CUE: shot_7_changed_mind
     # (longest) anim: high_standing_aggressive_gesture_left_hand_point_down
     - geralt: "[2.329335]0001181655|Mhm. But I changed my mind."
+    - CUE: shot_7_changed_mind2
     - geralt: "[2.3129]2114670362|I don't have to explain myself to you."
-    # shot cam geralt gest decline
-    - CUE: shot_8_traitor1
-    - Baron_Edward: "[3.2287]2114670363|So you're a coward, and a traitor!"
-    - PAUSE: 0.5
-    - CUE: shot_8_traitor2
-    - Baron_Edward: "[3.0577]2114670364|Do you know what happens to those who betray me?"
 
-    - CUE: shot_9_treat
+    - CUE: shot_7_done_with_my_son
+    - Baron_Edward: "[3.8150]2114670370|What have you done with my boy?!"
+    - NEXT: section_choice_boy
+
+  section_choice_boy:
+    - CHOICE:
+        - choice: ["2114670332|I'll take care of him myself.", script_setfact_duel]
+          emphasize: true
+        - choice: ["0001068309|Your son is dead.", section_son_dead]
+          emphasize: true
+        - choice: ["0000368353|Get out of here. Now.", section_son_trick, axii]
+          emphasize: true
+        - TIME_LIMIT: 10.0
+
+  script_setfact_duel:
+    - SCRIPT:
+        function: AddFact_S
+        parameter:
+          - factName: ntr_quest_baron_duel
+          - value: 1
+          - validFor: 0
+    - NEXT: section_son_myself
+
+  section_son_myself:
+    - CUE: shot_son_myself_ger1
+    - geralt: "[2.0879]2114670332|I'll take care of him myself."
+    - CUE: shot_son_myself_bar1
+    - Baron_Edward: "[2.4100]2114670333|Is that supposed to be a joke?"
+    - CUE: shot_son_myself_ger2
+    - geralt: "[3.3848]2114670334|You're common bandits. I don't trust you."
+    - CUE: shot_son_myself_bar2
+    - Baron_Edward: "[2.7658]2114670335|You'll regret that you got in my way!"
+
+    - CUE: shot_son_myself_ger3
     - geralt: "[1.0785826]0000490004|That a threat?"
-    - PAUSE: 0.5
+    - CUE: shot_son_myself_bar3
+    - Baron_Edward: "[3.6340]2114670343|I challenge you to a duel! You and I!"
 
-    - CUE: shot_10
-    - Baron_Edward: "[1.0418]2114670365|Kill him!"
-    - PAUSE: 0.5
+    - CUE: shot_son_myself_draw_steel
+    - PAUSE: 4.0
+    #- PAUSE: 1.0
+    - CUE: shot_son_myself_togame
+    - PAUSE: 1.0
+    - NEXT: section_exit_duel
 
-    - CUE: shot_togame
-    - PAUSE: 2.0
-    - NEXT: section_exit
-
-  section_exit:
+  section_exit_duel:
+    - OUTPUT: duel
     - EXIT
 
+  section_son_dead:
+    - CUE: shot_son_dead_ger1
+    - geralt: "[1.283596]0001068309|Your son is dead."
 
+    - CUE: shot_son_dead_bar0
+    - PAUSE: 1.5
+    - CUE: shot_son_dead_bar1
+    - Baron_Edward: "[2.9268]2114670366|So you're a liar, and a coward."
+    - CUE: shot_son_dead_bar2
+    - Baron_Edward: "[5.2968]2114670367|First we'll take care of you and then I'll hunt that bitch myself."
 
+    - CUE: shot_son_dead_ger2
+    - PAUSE: 1.5
 
+    - CUE: shot_son_dead_bar3
+    - Baron_Edward: "[1.0418]2114670365|Kill him!"
+    - CUE: shot_son_dead_draw_steel
+    - PAUSE: 4.0
 
+    - CUE: shot_son_dead_togame
+    - PAUSE: 1.0
+    - NEXT: section_exit_brawl
 
+  section_son_trick:
+    - CUE: shot_son_trick_ger1_axii
+    - geralt: "[4.048042]0001002134|Collect your friends and go. On your best behavior, now."
 
+    - CUE: shot_son_trick_bar1
+    - Baron_Edward: "[6.3318]2114670368|Did you hear that men? The witcher has demanded that we leave… peacefully."
+    - PAUSE: 1.0
+    - CUE: shot_son_trick_bar2
+    - Baron_Edward: "[12.7375]2114670369|*Laugh* You didn't think it would be that easy, did you? A little trick?"
+
+    - CUE: shot_son_trick_ger2
+    - PAUSE: 1.5
+
+    - CUE: shot_son_trick_bar3
+    - Baron_Edward: "[1.0418]2114670365|Kill him!"
+    - CUE: shot_son_trick_draw_steel
+    - PAUSE: 4.0
+
+    - CUE: shot_son_trick_togame
+    - PAUSE: 1.0
+    - NEXT: section_exit_brawl
+
+  section_exit_brawl:
+    - OUTPUT: brawl
+    - EXIT
 
