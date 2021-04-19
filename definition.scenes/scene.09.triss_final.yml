@@ -1872,14 +1872,14 @@ storyboard:
           blendin: 0.3
           blendout: 0.5
       - actor.anim: 
-          .@pos: [0.9, triss_monster_scared_end]
+          .@pos: [0.49, triss_monster_scared_end]
           blendin: 0.2
           blendout: 0.2
           stretch: 1.5
+      - actor.pose: [0.77, triss_monster_High_Standing_Neutral]
 
     shot_6_2:
-      - actor.pose: [0.2, triss_monster_High_Standing_Neutral]
-      - actor.unequip.right: [0.8, geralt]
+      - actor.unequip.right: [0.66, geralt]
     # shot Shot4b laugh
     shot_7:
       - cam: [0.0, cam_7_Shot4b_laugh]
@@ -2512,9 +2512,11 @@ dialogscript:
     # shot Shot4b spare
     - CUE: shot_6
     # (longest) anim: geralt_after_combat_idle_sheathe_steel_sword_to_high_standing_determined
-    - geralt: "[1.1783265]0000591259|Tell me what happened."
+    #- geralt: "[1.1783265]0000591259|Tell me what happened."
+    - geralt: "[2.1685]0000500903|You have to tell me what's going on."
+    
     - CUE: shot_6_2
-    - PAUSE: 2.5
+    - PAUSE: 1.51
     # shot Shot4b laugh
     - CUE: shot_7
     - triss_monster: "[1.9990963]0001000680|Hahahah."
@@ -2525,7 +2527,7 @@ dialogscript:
     - PAUSE: 2.5000000000
     - CUE: shot_10_spare
     - PAUSE: 0.5
-    - geralt: "[1.4899675]0000380709|What the hell was that?"
+    - geralt: "[1.25257]0001108011|What the hell was that?"
     - PAUSE: 0.5
     - CUE: shot_11_spare
     - PAUSE: 6.8

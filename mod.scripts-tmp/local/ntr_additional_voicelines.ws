@@ -25,7 +25,7 @@ function ntr_addExtraLines_1(category: String, out lines: array<SSbUiExtraLines>
     lines.PushBack(SSbUiExtraLines(2114670336, category, "group 1", "The_children_are_in_that_house__A_young_girl_with_", 4.0384));
     lines.PushBack(SSbUiExtraLines(2114670337, category, "group 1", "All_right__I_will_", 2));
     lines.PushBack(SSbUiExtraLines(2114670338, category, "group 1", "Sure_hope_so__Here's_my_advice__don't_show_it_to_t", 4.287));
-    lines.PushBack(SSbUiExtraLines(2114670339, category, "group 1", "I_wish_Neillan_could_have_known_his_real_mother__I", 6.76));
+    lines.PushBack(SSbUiExtraLines(2114670339, category, "group 1", "I_wish_Niellan_could_have_known_his_real_mother__I", 6.76));
     lines.PushBack(SSbUiExtraLines(2114670340, category, "group 1", "There's_your_payment__As_I_promised_", 2.9387));
     lines.PushBack(SSbUiExtraLines(2114670341, category, "group 1", "I_know_you're_not_interested_in_my_coin__but_I_hav", 5.0827));
     lines.PushBack(SSbUiExtraLines(2114670342, category, "group 1", "It_was_given_to_me_by_Margot__Neillan's_mother__It", 6.9407));

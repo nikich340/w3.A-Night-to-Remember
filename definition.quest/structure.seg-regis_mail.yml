@@ -1,7 +1,7 @@
 #
 # quest structure subsegment: regis_mail
 # 
-# (version: 1340, saved: 2021-04-04 23:18:46)
+# (version: 1359, saved: 2021-04-18 01:17:17)
 #
 ---
 structure:
@@ -11,7 +11,7 @@ structure:
         in:
           ".editor": [ -41.0, 180.0 ]
           next:
-            - script.Undress_geralt
+            - script.Correctly_undress_Geralt
         
         scene.10_scene:
           ".editor":
@@ -110,6 +110,15 @@ structure:
             - seconds: 0.5
           next: ".done"
         
+        script.Correctly_undress_Geralt:
+          ".editor":
+            pos: [ 139.9050292969, 251.6430358887 ]
+            in: [ In ]
+            out: [ Out ]
+          function: NTR_UndressGeralt
+          next:
+            - waituntil.1s
+        
         script.Has_letter_check:
           ".editor":
             pos: [ 1350.0, 325.0 ]
@@ -140,14 +149,22 @@ structure:
         
         script.Undress_geralt:
           ".editor":
-            pos: [ 142.0, 290.0 ]
+            pos: [ 148.0, 425.0 ]
             in: [ In ]
             out: [ Out ]
           function: UnequipPlayerItemsQuest
           parameter:
-            - all: true
-          next:
-            - waituntil.1s
+            - steelSword: true
+            - silverSword: true
+            - chestArmor: true
+            - boots: true
+            - gloves: true
+            - pants: true
+            - crossbow: true
+            - all: false
+            - bombs: false
+            - potions: false
+          next: ".done"
         
         script.wait_05s:
           ".editor":

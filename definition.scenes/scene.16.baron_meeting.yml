@@ -2276,7 +2276,7 @@ dialogscript:
         emphasize: true
       - choice: ["2114670869|Picked bad place to hide.", section_bad_place]
         single_use: true
-        condition: [ "poi_gor_a_10_puzzle_done", "<", 1 ]
+        condition: [ "BookReadState_poi_gor_a_10_note", "<", 1 ]
         #condition: [ "poi_gor_a_10_boss_killed", "<", 1 ]
 
   section_bad_place:

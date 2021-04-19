@@ -20,6 +20,21 @@ exec function encTest(enable: bool) {
 		}
 	}
 }
+exec function debugBaron(optional force : int) {
+	var           npc : CNewNPC;
+
+
+	npc = (CNewNPC)theGame.GetNPCByTag('ntr_baron_edward');
+
+	NTR_notify("GetImmortalityMode = " + npc.GetImmortalityMode());
+	npc.LogAllAbilities();
+	if (force == 1)
+		npc.ForceVulnerable();
+	else if  (force == 2)
+		npc.Kill('dieee', 1);
+	else if (force == 3)
+		npc.abilityManager.OnOwnerRevived();
+}
 
 exec function testHorse() {
 	HorseWhistle();
@@ -309,7 +324,7 @@ exec function addAbl( tag : name, abl : name, optional remove : bool ) {
 	if ( npc.HasAbility(abl) )
 		NTR_notify("Has ability: " + abl);
 	if ( remove )
-		npc.RemoveAbility(abl);
+		npc.RemoveAbilityAll(abl);
 	else
 		npc.AddAbility(abl);
 }

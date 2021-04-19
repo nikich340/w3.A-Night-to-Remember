@@ -1,5 +1,6 @@
 #-- Radish Quest UI (auto-log) - W2LAYER DUMP -------------------------------------------------
 layers: 
+  vanilla_bob_corvo_chair: levels\bob\locations\vineyards\east\corvo_bianco\q705_epilog\garden_chair
   after_hag: 
     world: "bob"
     #context: ""

@@ -1,7 +1,7 @@
 #
 # quest structure root segment
 # 
-# (version: 1340, saved: 2021-04-04 23:18:46)
+# (version: 1359, saved: 2021-04-18 01:17:17)
 #
 ---
 structure:
@@ -147,7 +147,7 @@ structure:
           out: [ done, fail ]
         conditions:
           done:
-            factdb: [ poi_gor_a_10_puzzle_done, ">=", 1 ]
+            factdb: [ BookReadState_poi_gor_a_10_note, ">=", 1 ]
           fail:
             factdb: [ ntr_quest_finale_started, ">=", 1 ]
         next.done:

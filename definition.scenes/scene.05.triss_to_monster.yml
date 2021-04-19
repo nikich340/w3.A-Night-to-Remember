@@ -774,7 +774,7 @@ dialogscript:
     # (longest) anim: high_standing_determined_gesture_greeting_01: 2.866667
     # shot grlt looking cam
     - CUE: shot_4
-    - geralt: "[1.4869741]0000562397|What're you doing here?"
+    - geralt: "[1.99837]0001021004|Huh. What are you doing here?"
     #- PAUSE: 2.8666665554
     # shot triss looking cam
     - CUE: shot_5

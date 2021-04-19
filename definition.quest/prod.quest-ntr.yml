@@ -1,7 +1,7 @@
 #
 # production settings
 # 
-# (version: 1340, saved: 2021-04-04 23:18:46)
+# (version: 1359, saved: 2021-04-18 01:17:17)
 #
 ---
 production:
@@ -13,7 +13,7 @@ production:
     storesdata: true
     strings-idspace: 4670
     strings-idstart: 13
-    version: 1340
+    version: 1359
     mounters:
       - ".type": CR4ResourceDefinitionsDLCMounter
         resourceDefinitionXmlFilePath: "dlc\\dlcntr\\data\\gameplay\\globals\\resources\\gameplay.xml"

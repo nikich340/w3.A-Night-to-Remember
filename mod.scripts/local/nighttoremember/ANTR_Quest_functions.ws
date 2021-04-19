@@ -7,6 +7,11 @@ quest function NTR_BookReadChecker(bookName : name, factName : string) : bool {
 	}
 	return false;
 }*/
+quest function NTR_UndressGeralt() {
+	var excludedItems : array <SItemNameProperty>;
+
+	UnequipPlayerItemsQuest(1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, excludedItems, 0, 0, 0);
+}
 
 /*exec function getA() {
 	NTR_notify("mq7006_wisdom = " + FactsQuerySum("mq7006_wisdom"));
@@ -30,6 +35,11 @@ exec function NTR_Flow( val : int ) {
 			break;
 	}
 }*/
+
+exec function NTR_FixBaron() {
+	FactsAdd("ntr_fix_baron", 1);
+	NTR_notify("Fixing Baron..");
+}
 
 quest function NTR_DebugWarning(str : String) {
 	theGame.GetGuiManager().ShowNotification(str);
@@ -368,8 +378,8 @@ quest function NTR_TuneOriannaBruxa() {
 	NPC.SetAppearance('bruxa_monster_gameplay');
 	// OK - it will add MonsterLevelBonusArmored abls
 	NPC.SetLevel(level);
-	NPC.SetHealthPerc( 0.5 );
 	NPC.SetNPCType(ENGT_Enemy);
+	NPC.SetHealthPerc( 0.5 );
 }
 quest function NTR_TuneOriannaVampire() {
 	var NPC          : CNewNPC;

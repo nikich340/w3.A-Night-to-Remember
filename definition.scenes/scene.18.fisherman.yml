@@ -925,7 +925,8 @@ dialogscript:
     - CUE: shot_fadein
     - PAUSE: 1.0
     - CUE: shot_togame
-    - geralt: "[3.0865357]0001029815|Hm, interesting. Thanks."
+    #- geralt: "[3.0865357]0001029815|Hm, interesting. Thanks."
+    - geralt: "0001064801|Mhm. Thanks for your help."
     - NEXT: section_exit
 
   section_exit:

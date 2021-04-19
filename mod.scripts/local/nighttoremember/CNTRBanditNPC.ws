@@ -1,8 +1,36 @@
 class CNTRBanditNPC extends CNTRCommonNPC {
+    private var baronHitCounter : int;
     private var baronReplicCounter : int;
     private var baronReplicPrev    : int;
     default baronReplicPrev = -2;
 
+    public function ReactToBeingHit(damageAction : W3DamageAction, optional buffNotApplied : bool) : bool {
+        var isBlocked : bool;
+        var attackAction            : W3Action_Attack;
+
+        attackAction = (W3Action_Attack)damageAction;
+        isBlocked = attackAction && (attackAction.IsParried() || attackAction.IsCountered() || attackAction.WasDodged());
+
+        if ( HasTag('ntr_baron_edward') && GetMaxHealth() < 0 && !isBlocked ) {
+            baronHitCounter += 1;
+            
+            /* DIRTY FIX IF BARON HAS BUGGED STATS (NG+) */
+            if ( baronHitCounter >= 40) {
+                FactsAdd("ntr_baron_edward_dead", 1);
+            } else {
+                theGame.GetGuiManager().ShowNotification(baronHitCounter + "/40");
+            }
+        }
+        //theGame.GetGuiManager().ShowNotification("ReactToBeingHit: " + damageAction.DealsAnyDamage() + ", blocked: " + isBlocked);
+        /*NTR_notify("ReactToBeingHit = " + ret);
+        NTR_notify("damaveValue = " + damaveValue + ", anyDamage="+damageAction.DealsAnyDamage());
+        NTR_notify("totalHealth = " + totalHealth);
+        NTR_notify("curHealth = " + curHealth);
+        NTR_notify("healthLossToForceLand_perc = " + healthLossToForceLand_perc.valueBase);
+        NTR_notify("abilityManager.UsedHPType() = " + abilityManager.UsedHPType());*/
+        
+        return super.ReactToBeingHit(damageAction, buffNotApplied);
+    }
 
     event OnSpawned( spawnData : SEntitySpawnData ) {
         super.OnSpawned( spawnData );
@@ -11,6 +39,7 @@ class CNTRBanditNPC extends CNTRCommonNPC {
             //this.EnterKnockedUnconscious();
             this.Kill('ntr_fix_bandits', true);
         }
+        baronHitCounter = 0;
     }
 
 	protected function Attack( hitTarget : CGameplayEntity, animData : CPreAttackEventData, weaponId : SItemUniqueId, parried : bool, countered : bool, parriedBy : array<CActor>, attackAnimationName : name, hitTime : float, weaponEntity : CItemEntity)
@@ -34,8 +63,8 @@ class CNTRBanditNPC extends CNTRCommonNPC {
             LogChannel('NTR_MOD', "GetSoundAttackType: " + action.GetSoundAttackType() );
             LogChannel('NTR_MOD', "GetAttackName: " + action.GetAttackName() );
             LogChannel('NTR_MOD', "GetAttackTypeName: " + action.GetAttackTypeName() );
-            LogChannel('NTR_MOD', "GetHitTime: " + action.GetAttackAnimName() );
-            */
+            LogChannel('NTR_MOD', "GetHitTime: " + action.GetAttackAnimName() );*/
+            
 
             delete action;
             if (thePlayer.GetHealth() < 1.0) {
@@ -55,6 +84,7 @@ class CNTRBanditNPC extends CNTRCommonNPC {
         NTR_notify("DEATH: alive=" + IsAlive() + ", immortality=" + GetImmortalityMode() + ", " + this);
 	}
 	event OnTakeDamage( action : W3DamageAction ) {
+        NTR_notify("Damage taken: " + action.processedDmg.vitalityDamage);
 		if (IsInFistFightMiniGame()) {
 			if (action.processedDmg.vitalityDamage > 1.0 && action.processedDmg.vitalityDamage < 0.1 * GetMaxHealth())
 				action.processedDmg.vitalityDamage += 0.1 * GetMaxHealth();

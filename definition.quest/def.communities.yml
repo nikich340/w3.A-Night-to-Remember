@@ -37,38 +37,38 @@ communities:
           use_last_ap: false
           start_in_ap: false
           attitude: humans
-          immortality: invulnerable
+          immortality: AIM_None
           spawn_at: bob/inn_spawn1
         bandit_axe:
           use_last_ap: false
           start_in_ap: false
           attitude: humans
-          immortality: invulnerable
+          immortality: AIM_None
           spawn_at: bob/inn_spawn2
 
         bandit_sword:
           use_last_ap: false
           start_in_ap: false
           attitude: humans
-          immortality: invulnerable
+          immortality: AIM_None
           spawn_at: bob/inn_spawn3
         bandit_spear:
           use_last_ap: false
           start_in_ap: false
           attitude: humans
-          immortality: invulnerable
+          immortality: AIM_None
           spawn_at: bob/inn_spawn4
         fat_bandit:
           use_last_ap: false
           start_in_ap: false
           attitude: humans
-          immortality: invulnerable
+          immortality: AIM_None
           spawn_at: bob/inn_spawn5
         crossbow_bandit:
           use_last_ap: false
           start_in_ap: false
           attitude: humans
-          immortality: invulnerable
+          immortality: AIM_None
           spawn_at: bob/inn_spawn6
 
       fight_only_baron:
@@ -325,6 +325,7 @@ communities:
           appearance: "bruxa_monster_gameplay"
           use_last_ap: false
           start_in_ap: false
+          immortality: AIM_None
           attitude: AG_VAMPIRE
           spawn_at: bob/beach_bruxa_spawn
           guard: [ bob/orianna_guard, 0.0 ]
